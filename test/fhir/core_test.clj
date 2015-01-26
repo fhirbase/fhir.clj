@@ -17,19 +17,22 @@
              (required? mt))  (conj acc [:missed-element pth])
         :else  acc))
 
-(deftest meta-test
-  (testing "find-meta"
-    (is (= (fc/find-meta [:Patient :name :use])
-           {:$attrs {:path [:HumanName :use] :ord 3 :type [:code] :max "1" :min 0}}))
-
-    (is (= (:$attrs (fc/find-meta [:Patient :name]))
-           {:path [:Patient :name], :ord 49, :type [:HumanName], :max "*", :min 0})))
-
+(deftest reduce-resource
   (testing "resource-reduce"
     (is
       (= 3 (count (fc/reduce-resource pt validate))))))
 
+(def ptm (fc/zip-meta {:resourceType "Patient" :name {:text "My name" :family ["a" "b"]}}))
+
+(deftest zip-meta
+  (testing "zip-meta"
+    (is
+      (is (= 27 (count (get-in ptm [:Patient 1])))))))
+
+
 (comment
   ;;example
   (def pt (fu/read-json "examples/pt.json"))
-  (fc/reduce-resource pt validate))
+  (fc/reduce-resource pt validate)
+  (doseq [[k [m v]] (second (:Patient ptm))]
+    (println m " - " v)))

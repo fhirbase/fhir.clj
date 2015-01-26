@@ -85,3 +85,19 @@
           make-nested
           (get k)))
     profiles))
+
+(defn- get-type [m]
+  (get-in m [:$attrs :type 0]))
+
+(defn find-meta
+  "Looking meta information from profiles for path"
+  [[y & ys]]
+  (loop [[x & xs] ys obj (get idx y)]
+    (cond
+      ;; found
+      (nil? x) obj
+      (and (map? obj) (contains? obj x)) (recur xs (get obj x))
+      ;; if no next key look for type and switch to complex type search
+      (get-type obj) (find-meta (concat [(get-type obj) x] xs))
+      ;; meta information not found
+      :else nil)))
