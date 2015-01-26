@@ -1,5 +1,7 @@
 # fhir.clj
 
+[![Build Status](https://travis-ci.org/fhirbase/fhir.clj.svg)](https://travis-ci.org/fhirbase/fhir.clj)
+
 FHIR client implementation in clojure
 
 ## Usage
