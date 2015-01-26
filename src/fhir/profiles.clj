@@ -21,11 +21,12 @@
   (mapv #(keyword (:code %)) (:type el)))
 
 (defn process-elems [els]
-  (mapv
-    (fn [e]
-      (merge e {:path (get-path (:path e))
-                :type (get-types e)}))
-    els))
+  (into [] (map-indexed
+             (fn [idx e]
+               (merge e {:path (get-path (:path e))
+                         :type (get-types e)
+                         :ord idx }))
+             els)))
 
 (defn poly-type? [e]
   (re-seq #"\[x]" (name (last (:path e)))))
@@ -51,13 +52,12 @@
 
 (defn make-nested [els]
   (loop [[x & xs] els
-         ord 0
          acc {}]
     (if x
       (let [pt  (:path x)
-            mt  (merge (select-keys x [:min :max :type]) {:ord ord :path pt})
+            mt  (merge (select-keys x [:min :max :type :ord]) {:path pt})
             acc (update-in acc pt (fn [a]  (merge (or a {}) {:$attrs mt})))]
-        (recur xs (inc ord)  acc))
+        (recur xs acc))
       acc)))
 
 (defn mreduce [f m]

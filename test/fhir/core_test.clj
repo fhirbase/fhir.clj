@@ -34,5 +34,6 @@
   ;;example
   (def pt (fu/read-json "examples/pt.json"))
   (fc/reduce-resource pt validate)
-  (doseq [[k [m v]] (second (:Patient ptm))]
-    (println m " - " v)))
+  (def ptm (fc/zip-meta {:resourceType "Patient" :name {:text "My name" :family ["a" "b"]}}))
+  (sort-by #(:ord (first %))
+    (map (fn [[k [m v]]] [m v] ) (second (:Patient ptm)))))

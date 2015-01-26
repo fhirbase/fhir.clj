@@ -9,4 +9,4 @@
            {:$attrs {:path [:HumanName :use] :ord 3 :type [:code] :max "1" :min 0}}))
 
     (is (= (:$attrs (fp/find-meta [:Patient :name]))
-           {:path [:Patient :name], :ord 49, :type [:HumanName], :max "*", :min 0}))))
+           {:path [:Patient :name], :ord 18, :type [:HumanName], :max "*", :min 0}))))
