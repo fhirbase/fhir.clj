@@ -12,19 +12,19 @@
   "name": "Patient",
   "publisher": "HL7 FHIR Project (Patient Administration)",
   "telecom": [
-    {
-      "system": "url",
-      "value": "http://hl7.org/fhir"
-    },
-    {
-      "system": "url",
-      "value": "http://www.hl7.org/Special/committees/pafm/index.cfm"
-    }
+  {
+    "system": "url",
+    "value": "http://hl7.org/fhir"
+  },
+  {
+    "system": "url",
+    "value": "http://www.hl7.org/Special/committees/pafm/index.cfm"
+  }
   ],
-  "description": "Base Profile for Patient Resource",
-  "status": "draft",
-  "date": "2014-12-17T07:34:47.613+00:00",
-  "mapping": [
+    "description": "Base Profile for Patient Resource",
+    "status": "draft",
+    "date": "2014-12-17T07:34:47.613+00:00",
+    "mapping": [
     {
       "identity": "rim",
       "uri": "http://hl7.org/v3",
@@ -41,9 +41,10 @@
       "name": "LOINC"
     }
   ],
-  "type": "Patient",
-  "snapshot": {
-    "element": [
+    "type": "Patient",
+    "snapshot":
+    {
+      "element": [
       {
         "path": "Patient",
         "short": "Information about a person or animal receiving health care services",
@@ -51,19 +52,19 @@
         "requirements": "Tracking patient is the center of the healthcare process.",
         "synonym": [
           "SubjectOfCare Client Resident"
-        ],
+          ],
         "min": 1,
         "max": "1",
         "isSummary": false,
         "mapping": [
-          {
-            "identity": "rim",
-            "map": "Patient[classCode=PAT]"
-          },
-          {
-            "identity": "rim",
-            "map": "Patient[classCode=PAT]"
-          }
+        {
+          "identity": "rim",
+          "map": "Patient[classCode=PAT]"
+        },
+        {
+          "identity": "rim",
+          "map": "Patient[classCode=PAT]"
+        }
         ]
       },
       {
@@ -74,11 +75,11 @@
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "id"
-          }
+        {
+          "code": "id"
+        }
         ],
-        "isSummary": false
+          "isSummary": false
       },
       {
         "path": "Patient.meta",
@@ -92,18 +93,18 @@
         "path": "Patient.meta.id",
         "representation": [
           "xmlAttr"
-        ],
+          ],
         "short": "xml:id (or equivalent in JSON)",
         "formal": "unique id for the element within a resource (for internal references).",
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "id"
-          }
+        {
+          "code": "id"
+        }
         ],
-        "isSummary": false,
-        "mapping": [
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "rim",
             "map": "n/a"
@@ -121,17 +122,17 @@
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "synonym": [
           "extensions",
-          "user content"
-        ],
+        "user content"
+          ],
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "Extension"
-          }
+        {
+          "code": "Extension"
+        }
         ],
-        "isSummary": false,
-        "mapping": [
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "rim",
             "map": "n/a"
@@ -149,18 +150,18 @@
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "synonym": [
           "extensions",
-          "user content",
-          "modifiers"
-        ],
+        "user content",
+        "modifiers"
+          ],
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "Extension"
-          }
+        {
+          "code": "Extension"
+        }
         ],
-        "isSummary": false,
-        "mapping": [
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "rim",
             "map": "N/A"
@@ -179,11 +180,11 @@
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "id"
-          }
+        {
+          "code": "id"
+        }
         ],
-        "isSummary": false
+          "isSummary": false
       },
       {
         "path": "Patient.meta.lastUpdated",
@@ -193,11 +194,11 @@
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "instant"
-          }
+        {
+          "code": "instant"
+        }
         ],
-        "isSummary": false
+          "isSummary": false
       },
       {
         "path": "Patient.meta.profile",
@@ -207,11 +208,11 @@
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "uri"
-          }
+        {
+          "code": "uri"
+        }
         ],
-        "isSummary": false
+          "isSummary": false
       },
       {
         "path": "Patient.meta.security",
@@ -221,11 +222,11 @@
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "Coding"
-          }
+        {
+          "code": "Coding"
+        }
         ],
-        "isSummary": false
+          "isSummary": false
       },
       {
         "path": "Patient.meta.tag",
@@ -235,11 +236,11 @@
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "Coding"
-          }
+        {
+          "code": "Coding"
+        }
         ],
-        "isSummary": false
+          "isSummary": false
       },
       {
         "path": "Patient.implicitRules",
@@ -249,12 +250,12 @@
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "uri"
-          }
+        {
+          "code": "uri"
+        }
         ],
-        "isModifier": true,
-        "isSummary": false
+          "isModifier": true,
+          "isSummary": false
       },
       {
         "path": "Patient.language",
@@ -264,18 +265,18 @@
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "isSummary": false,
-        "binding": {
-          "name": "Language",
-          "isExtensible": false,
-          "conformance": "required",
-          "description": "A human language",
-          "referenceUri": "http://tools.ietf.org/html/bcp47"
+        {
+          "code": "code"
         }
+        ],
+          "isSummary": false,
+          "binding": {
+            "name": "Language",
+            "isExtensible": false,
+            "conformance": "required",
+            "description": "A human language",
+            "referenceUri": "http://tools.ietf.org/html/bcp47"
+          }
       },
       {
         "path": "Patient.text",
@@ -284,22 +285,22 @@
         "comments": "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative.",
         "synonym": [
           "narrative",
-          "html",
-          "xhtml",
-          "display"
-        ],
+        "html",
+        "xhtml",
+        "display"
+          ],
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "Narrative"
-          }
+        {
+          "code": "Narrative"
+        }
         ],
-        "condition": [
-          "1"
-        ],
-        "isSummary": false,
-        "mapping": [
+          "condition": [
+            "1"
+            ],
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "rim",
             "map": "Act.text?"
@@ -317,18 +318,18 @@
         "comments": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
         "synonym": [
           "inline resources",
-          "anonymous resources",
-          "contained resources"
-        ],
+        "anonymous resources",
+        "contained resources"
+          ],
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "Resource"
-          }
+        {
+          "code": "Resource"
+        }
         ],
-        "isSummary": false,
-        "mapping": [
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "rim",
             "map": "N/A"
@@ -346,17 +347,17 @@
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "synonym": [
           "extensions",
-          "user content"
-        ],
+        "user content"
+          ],
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "Extension"
-          }
+        {
+          "code": "Extension"
+        }
         ],
-        "isSummary": false,
-        "mapping": [
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "rim",
             "map": "N/A"
@@ -374,17 +375,17 @@
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "synonym": [
           "extensions",
-          "user content"
-        ],
+        "user content"
+          ],
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "Extension"
-          }
+        {
+          "code": "Extension"
+        }
         ],
-        "isSummary": false,
-        "mapping": [
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "rim",
             "map": "N/A"
@@ -403,12 +404,12 @@
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "Identifier"
-          }
+        {
+          "code": "Identifier"
+        }
         ],
-        "isSummary": true,
-        "mapping": [
+          "isSummary": true,
+          "mapping": [
           {
             "identity": "v2",
             "map": "PID-3"
@@ -436,12 +437,12 @@
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "HumanName"
-          }
+        {
+          "code": "HumanName"
+        }
         ],
-        "isSummary": true,
-        "mapping": [
+          "isSummary": true,
+          "mapping": [
           {
             "identity": "v2",
             "map": "PID-5, PID-9"
@@ -469,12 +470,12 @@
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "ContactPoint"
-          }
+        {
+          "code": "ContactPoint"
+        }
         ],
-        "isSummary": true,
-        "mapping": [
+          "isSummary": true,
+          "mapping": [
           {
             "identity": "v2",
             "map": "PID-13, PID-14, PID-40"
@@ -502,21 +503,21 @@
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "code"
-          }
+        {
+          "code": "code"
+        }
         ],
-        "isSummary": true,
-        "binding": {
-          "name": "AdministrativeGender",
-          "isExtensible": false,
-          "conformance": "required",
-          "description": "The gender of a person used for administrative purposes",
-          "referenceReference": {
-            "reference": "http://hl7.org/fhir/vs/administrative-gender"
-          }
-        },
-        "mapping": [
+          "isSummary": true,
+          "binding": {
+            "name": "AdministrativeGender",
+            "isExtensible": false,
+            "conformance": "required",
+            "description": "The gender of a person used for administrative purposes",
+            "referenceReference": {
+              "reference": "http://hl7.org/fhir/vs/administrative-gender"
+            }
+          },
+          "mapping": [
           {
             "identity": "v2",
             "map": "PID-8"
@@ -544,12 +545,12 @@
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "date"
-          }
+        {
+          "code": "date"
+        }
         ],
-        "isSummary": true,
-        "mapping": [
+          "isSummary": true,
+          "mapping": [
           {
             "identity": "loinc",
             "map": "21112-8"
@@ -585,16 +586,16 @@
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "boolean"
-          },
-          {
-            "code": "dateTime"
-          }
+        {
+          "code": "boolean"
+        },
+        {
+          "code": "dateTime"
+        }
         ],
-        "isModifier": true,
-        "isSummary": true,
-        "mapping": [
+          "isModifier": true,
+          "isSummary": true,
+          "mapping": [
           {
             "identity": "v2",
             "map": "PID-30\r (bool) and PID-29 (datetime)"
@@ -622,12 +623,12 @@
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "Address"
-          }
+        {
+          "code": "Address"
+        }
         ],
-        "isSummary": true,
-        "mapping": [
+          "isSummary": true,
+          "mapping": [
           {
             "identity": "v2",
             "map": "PID-11"
@@ -654,21 +655,21 @@
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "CodeableConcept"
-          }
+        {
+          "code": "CodeableConcept"
+        }
         ],
-        "isSummary": true,
-        "binding": {
-          "name": "MaritalStatus",
-          "isExtensible": true,
-          "conformance": "preferred",
-          "description": "The domestic partnership status of a person",
-          "referenceReference": {
-            "reference": "http://hl7.org/fhir/vs/marital-status"
-          }
-        },
-        "mapping": [
+          "isSummary": true,
+          "binding": {
+            "name": "MaritalStatus",
+            "isExtensible": true,
+            "conformance": "preferred",
+            "description": "The domestic partnership status of a person",
+            "referenceReference": {
+              "reference": "http://hl7.org/fhir/vs/marital-status"
+            }
+          },
+          "mapping": [
           {
             "identity": "v2",
             "map": "PID-16"
@@ -695,15 +696,15 @@
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "boolean"
-          },
-          {
-            "code": "integer"
-          }
+        {
+          "code": "boolean"
+        },
+        {
+          "code": "integer"
+        }
         ],
-        "isSummary": true,
-        "mapping": [
+          "isSummary": true,
+          "mapping": [
           {
             "identity": "v2",
             "map": "PID-24 (bool), PID-25 (integer)"
@@ -730,12 +731,12 @@
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "Attachment"
-          }
+        {
+          "code": "Attachment"
+        }
         ],
-        "isSummary": false,
-        "mapping": [
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "v2",
             "map": "OBX-5 - needs a profile"
@@ -763,16 +764,16 @@
         "min": 0,
         "max": "*",
         "constraint": [
-          {
-            "key": "1",
-            "name": "ContactNeedsDetails",
-            "severity": "error",
-            "human": "SHALL at least contain a contact's details or a reference to an organization",
-            "xpath": "f:name or f:telecom or f:address or f:organization"
-          }
+        {
+          "key": "1",
+          "name": "ContactNeedsDetails",
+          "severity": "error",
+          "human": "SHALL at least contain a contact's details or a reference to an organization",
+          "xpath": "f:name or f:telecom or f:address or f:organization"
+        }
         ],
-        "isSummary": false,
-        "mapping": [
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "rim",
             "map": "player[classCode=PSN|ANM and determinerCode=INSTANCE]/scopedRole[classCode=CON]"
@@ -787,18 +788,18 @@
         "path": "Patient.contact.id",
         "representation": [
           "xmlAttr"
-        ],
+          ],
         "short": "xml:id (or equivalent in JSON)",
         "formal": "unique id for the element within a resource (for internal references).",
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "id"
-          }
+        {
+          "code": "id"
+        }
         ],
-        "isSummary": false,
-        "mapping": [
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "rim",
             "map": "n/a"
@@ -816,17 +817,17 @@
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "synonym": [
           "extensions",
-          "user content"
-        ],
+        "user content"
+          ],
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "Extension"
-          }
+        {
+          "code": "Extension"
+        }
         ],
-        "isSummary": false,
-        "mapping": [
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "rim",
             "map": "n/a"
@@ -844,18 +845,18 @@
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "synonym": [
           "extensions",
-          "user content",
-          "modifiers"
-        ],
+        "user content",
+        "modifiers"
+          ],
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "Extension"
-          }
+        {
+          "code": "Extension"
+        }
         ],
-        "isSummary": false,
-        "mapping": [
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "rim",
             "map": "N/A"
@@ -874,21 +875,21 @@
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "CodeableConcept"
-          }
+        {
+          "code": "CodeableConcept"
+        }
         ],
-        "isSummary": false,
-        "binding": {
-          "name": "ContactRelationship",
-          "isExtensible": true,
-          "conformance": "preferred",
-          "description": "The nature of the relationship between a patient and a contact person for that patient",
-          "referenceReference": {
-            "reference": "http://hl7.org/fhir/vs/patient-contact-relationship"
-          }
-        },
-        "mapping": [
+          "isSummary": false,
+          "binding": {
+            "name": "ContactRelationship",
+            "isExtensible": true,
+            "conformance": "preferred",
+            "description": "The nature of the relationship between a patient and a contact person for that patient",
+            "referenceReference": {
+              "reference": "http://hl7.org/fhir/vs/patient-contact-relationship"
+            }
+          },
+          "mapping": [
           {
             "identity": "v2",
             "map": "NK1-7, NK1-3"
@@ -915,12 +916,12 @@
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "HumanName"
-          }
+        {
+          "code": "HumanName"
+        }
         ],
-        "isSummary": false,
-        "mapping": [
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "v2",
             "map": "NK1-2"
@@ -948,12 +949,12 @@
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "ContactPoint"
-          }
+        {
+          "code": "ContactPoint"
+        }
         ],
-        "isSummary": false,
-        "mapping": [
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "v2",
             "map": "NK1-5, NK1-6, NK1-40"
@@ -980,12 +981,12 @@
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "Address"
-          }
+        {
+          "code": "Address"
+        }
         ],
-        "isSummary": false,
-        "mapping": [
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "v2",
             "map": "NK1-4"
@@ -1012,21 +1013,21 @@
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "code"
-          }
+        {
+          "code": "code"
+        }
         ],
-        "isSummary": false,
-        "binding": {
-          "name": "AdministrativeGender",
-          "isExtensible": false,
-          "conformance": "required",
-          "description": "The gender of a person used for administrative purposes",
-          "referenceReference": {
-            "reference": "http://hl7.org/fhir/vs/administrative-gender"
-          }
-        },
-        "mapping": [
+          "isSummary": false,
+          "binding": {
+            "name": "AdministrativeGender",
+            "isExtensible": false,
+            "conformance": "required",
+            "description": "The gender of a person used for administrative purposes",
+            "referenceReference": {
+              "reference": "http://hl7.org/fhir/vs/administrative-gender"
+            }
+          },
+          "mapping": [
           {
             "identity": "v2",
             "map": "NK1-15"
@@ -1053,16 +1054,16 @@
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "Reference",
-            "profile": "http://hl7.org/fhir/Profile/Organization"
-          }
+        {
+          "code": "Reference",
+          "profile": "http://hl7.org/fhir/Profile/Organization"
+        }
         ],
-        "condition": [
-          "1"
-        ],
-        "isSummary": false,
-        "mapping": [
+          "condition": [
+            "1"
+            ],
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "v2",
             "map": "NK1-13, NK1-30, NK1-31, NK1-32, NK1-41"
@@ -1088,11 +1089,11 @@
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "Period"
-          }
+        {
+          "code": "Period"
+        }
         ],
-        "isSummary": false
+          "isSummary": false
       },
       {
         "path": "Patient.animal",
@@ -1105,32 +1106,32 @@
         "isModifier": true,
         "isSummary": true,
         "mapping": [
-          {
-            "identity": "rim",
-            "map": "player[classCode=ANM]"
-          },
-          {
-            "identity": "rim",
-            "map": "player[classCode=ANM]"
-          }
+        {
+          "identity": "rim",
+          "map": "player[classCode=ANM]"
+        },
+        {
+          "identity": "rim",
+          "map": "player[classCode=ANM]"
+        }
         ]
       },
       {
         "path": "Patient.animal.id",
         "representation": [
           "xmlAttr"
-        ],
+          ],
         "short": "xml:id (or equivalent in JSON)",
         "formal": "unique id for the element within a resource (for internal references).",
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "id"
-          }
+        {
+          "code": "id"
+        }
         ],
-        "isSummary": false,
-        "mapping": [
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "rim",
             "map": "n/a"
@@ -1148,17 +1149,17 @@
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "synonym": [
           "extensions",
-          "user content"
-        ],
+        "user content"
+          ],
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "Extension"
-          }
+        {
+          "code": "Extension"
+        }
         ],
-        "isSummary": false,
-        "mapping": [
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "rim",
             "map": "n/a"
@@ -1176,18 +1177,18 @@
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "synonym": [
           "extensions",
-          "user content",
-          "modifiers"
-        ],
+        "user content",
+        "modifiers"
+          ],
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "Extension"
-          }
+        {
+          "code": "Extension"
+        }
         ],
-        "isSummary": false,
-        "mapping": [
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "rim",
             "map": "N/A"
@@ -1207,21 +1208,21 @@
         "min": 1,
         "max": "1",
         "type": [
-          {
-            "code": "CodeableConcept"
-          }
+        {
+          "code": "CodeableConcept"
+        }
         ],
-        "isSummary": true,
-        "binding": {
-          "name": "AnimalSpecies",
-          "isExtensible": true,
-          "conformance": "example",
-          "description": "The species of an animal",
-          "referenceReference": {
-            "reference": "http://hl7.org/fhir/vs/animal-species"
-          }
-        },
-        "mapping": [
+          "isSummary": true,
+          "binding": {
+            "name": "AnimalSpecies",
+            "isExtensible": true,
+            "conformance": "example",
+            "description": "The species of an animal",
+            "referenceReference": {
+              "reference": "http://hl7.org/fhir/vs/animal-species"
+            }
+          },
+          "mapping": [
           {
             "identity": "v2",
             "map": "PID-35"
@@ -1248,21 +1249,21 @@
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "CodeableConcept"
-          }
+        {
+          "code": "CodeableConcept"
+        }
         ],
-        "isSummary": true,
-        "binding": {
-          "name": "AnimalBreed",
-          "isExtensible": true,
-          "conformance": "example",
-          "description": "The breed of an animal",
-          "referenceReference": {
-            "reference": "http://hl7.org/fhir/vs/animal-breeds"
-          }
-        },
-        "mapping": [
+          "isSummary": true,
+          "binding": {
+            "name": "AnimalBreed",
+            "isExtensible": true,
+            "conformance": "example",
+            "description": "The breed of an animal",
+            "referenceReference": {
+              "reference": "http://hl7.org/fhir/vs/animal-breeds"
+            }
+          },
+          "mapping": [
           {
             "identity": "v2",
             "map": "PID-37"
@@ -1289,21 +1290,21 @@
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "CodeableConcept"
-          }
+        {
+          "code": "CodeableConcept"
+        }
         ],
-        "isSummary": true,
-        "binding": {
-          "name": "AnimalGenderStatus",
-          "isExtensible": true,
-          "conformance": "example",
-          "description": "The state of the animal's reproductive organs",
-          "referenceReference": {
-            "reference": "http://hl7.org/fhir/vs/animal-genderstatus"
-          }
-        },
-        "mapping": [
+          "isSummary": true,
+          "binding": {
+            "name": "AnimalGenderStatus",
+            "isExtensible": true,
+            "conformance": "example",
+            "description": "The state of the animal's reproductive organs",
+            "referenceReference": {
+              "reference": "http://hl7.org/fhir/vs/animal-genderstatus"
+            }
+          },
+          "mapping": [
           {
             "identity": "v2",
             "map": "N/A"
@@ -1331,19 +1332,19 @@
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "CodeableConcept"
-          }
+        {
+          "code": "CodeableConcept"
+        }
         ],
-        "isSummary": false,
-        "binding": {
-          "name": "Language",
-          "isExtensible": false,
-          "conformance": "required",
-          "description": "A human language",
-          "referenceUri": "http://tools.ietf.org/html/bcp47"
-        },
-        "mapping": [
+          "isSummary": false,
+          "binding": {
+            "name": "Language",
+            "isExtensible": false,
+            "conformance": "required",
+            "description": "A human language",
+            "referenceUri": "http://tools.ietf.org/html/bcp47"
+          },
+          "mapping": [
           {
             "identity": "v2",
             "map": "LAN-2"
@@ -1369,17 +1370,17 @@
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "Reference",
-            "profile": "http://hl7.org/fhir/Profile/Organization"
-          },
-          {
-            "code": "Reference",
-            "profile": "http://hl7.org/fhir/Profile/Practitioner"
-          }
+        {
+          "code": "Reference",
+          "profile": "http://hl7.org/fhir/Profile/Organization"
+        },
+        {
+          "code": "Reference",
+          "profile": "http://hl7.org/fhir/Profile/Practitioner"
+        }
         ],
-        "isSummary": false,
-        "mapping": [
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "rim",
             "map": "subjectOf.CareEvent.performer.AssignedEntity"
@@ -1398,13 +1399,13 @@
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "Reference",
-            "profile": "http://hl7.org/fhir/Profile/Organization"
-          }
+        {
+          "code": "Reference",
+          "profile": "http://hl7.org/fhir/Profile/Organization"
+        }
         ],
-        "isSummary": true,
-        "mapping": [
+          "isSummary": true,
+          "mapping": [
           {
             "identity": "rim",
             "map": "scoper"
@@ -1426,32 +1427,32 @@
         "isModifier": true,
         "isSummary": true,
         "mapping": [
-          {
-            "identity": "rim",
-            "map": "outboundLink"
-          },
-          {
-            "identity": "rim",
-            "map": "outboundLink"
-          }
+        {
+          "identity": "rim",
+          "map": "outboundLink"
+        },
+        {
+          "identity": "rim",
+          "map": "outboundLink"
+        }
         ]
       },
       {
         "path": "Patient.link.id",
         "representation": [
           "xmlAttr"
-        ],
+          ],
         "short": "xml:id (or equivalent in JSON)",
         "formal": "unique id for the element within a resource (for internal references).",
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "id"
-          }
+        {
+          "code": "id"
+        }
         ],
-        "isSummary": false,
-        "mapping": [
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "rim",
             "map": "n/a"
@@ -1469,17 +1470,17 @@
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "synonym": [
           "extensions",
-          "user content"
-        ],
+        "user content"
+          ],
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "Extension"
-          }
+        {
+          "code": "Extension"
+        }
         ],
-        "isSummary": false,
-        "mapping": [
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "rim",
             "map": "n/a"
@@ -1497,18 +1498,18 @@
         "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "synonym": [
           "extensions",
-          "user content",
-          "modifiers"
-        ],
+        "user content",
+        "modifiers"
+          ],
         "min": 0,
         "max": "*",
         "type": [
-          {
-            "code": "Extension"
-          }
+        {
+          "code": "Extension"
+        }
         ],
-        "isSummary": false,
-        "mapping": [
+          "isSummary": false,
+          "mapping": [
           {
             "identity": "rim",
             "map": "N/A"
@@ -1526,14 +1527,14 @@
         "min": 1,
         "max": "1",
         "type": [
-          {
-            "code": "Reference",
-            "profile": "http://hl7.org/fhir/Profile/Patient"
-          }
+        {
+          "code": "Reference",
+          "profile": "http://hl7.org/fhir/Profile/Patient"
+        }
         ],
-        "isModifier": true,
-        "isSummary": true,
-        "mapping": [
+          "isModifier": true,
+          "isSummary": true,
+          "mapping": [
           {
             "identity": "v2",
             "map": "PID-3, MRG-1"
@@ -1559,22 +1560,22 @@
         "min": 1,
         "max": "1",
         "type": [
-          {
-            "code": "code"
-          }
+        {
+          "code": "code"
+        }
         ],
-        "isModifier": true,
-        "isSummary": true,
-        "binding": {
-          "name": "LinkType",
-          "isExtensible": false,
-          "conformance": "required",
-          "description": "The type of link between this patient resource and another patient resource.",
-          "referenceReference": {
-            "reference": "http://hl7.org/fhir/vs/link-type"
-          }
-        },
-        "mapping": [
+          "isModifier": true,
+          "isSummary": true,
+          "binding": {
+            "name": "LinkType",
+            "isExtensible": false,
+            "conformance": "required",
+            "description": "The type of link between this patient resource and another patient resource.",
+            "referenceReference": {
+              "reference": "http://hl7.org/fhir/vs/link-type"
+            }
+          },
+          "mapping": [
           {
             "identity": "rim",
             "map": "typeCode"
@@ -1594,14 +1595,14 @@
         "min": 0,
         "max": "1",
         "type": [
-          {
-            "code": "boolean"
-          }
+        {
+          "code": "boolean"
+        }
         ],
-        "defaultValueBoolean": true,
-        "isModifier": true,
-        "isSummary": true,
-        "mapping": [
+          "defaultValueBoolean": true,
+          "isModifier": true,
+          "isSummary": true,
+          "mapping": [
           {
             "identity": "rim",
             "map": "statusCode"
@@ -1612,1000 +1613,6 @@
           }
         ]
       }
-    ]
-  },
-  "differential": {
-    "element": [
-      {
-        "path": "Patient",
-        "short": "Information about a person or animal receiving health care services",
-        "formal": "Demographics and other administrative information about a person or animal receiving care or other health-related services.",
-        "requirements": "Tracking patient is the center of the healthcare process.",
-        "synonym": [
-          "SubjectOfCare Client Resident"
-        ],
-        "min": 1,
-        "max": "1",
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "Patient[classCode=PAT]"
-          },
-          {
-            "identity": "rim",
-            "map": "Patient[classCode=PAT]"
-          }
-        ]
-      },
-      {
-        "path": "Patient.identifier",
-        "short": "An identifier for the person as this patient",
-        "formal": "An identifier that applies to this person as a patient.",
-        "requirements": "Patients are almost always assigned specific numerical identifiers.",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Identifier"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "PID-3"
-          },
-          {
-            "identity": "rim",
-            "map": "id"
-          },
-          {
-            "identity": "v2",
-            "map": "PID-3"
-          },
-          {
-            "identity": "rim",
-            "map": "id"
-          }
-        ]
-      },
-      {
-        "path": "Patient.name",
-        "short": "A name associated with the patient",
-        "formal": "A name associated with the individual.",
-        "comments": "Person may have multiple names with different uses or applicable periods.For animals, the name is a \"HumanName\" in the sense that is assigned and used by humans and has the same patterns.",
-        "requirements": "Need to be able to track the person by multiple names. Examples are your official name and a partner name.",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "HumanName"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "PID-5, PID-9"
-          },
-          {
-            "identity": "rim",
-            "map": "name"
-          },
-          {
-            "identity": "v2",
-            "map": "PID-5, PID-9"
-          },
-          {
-            "identity": "rim",
-            "map": "name"
-          }
-        ]
-      },
-      {
-        "path": "Patient.telecom",
-        "short": "A contact detail for the individual",
-        "formal": "A contact detail (e.g. a telephone number or an email address) by which the individual may be contacted.",
-        "comments": "Person may have multiple ways to be contacted with different uses or applicable periods. \rMay need to have options for contacting the person urgently and also to help with identification. The address may not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone).",
-        "requirements": "People have (primary) ways to contact them in some way such as phone, email.",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "ContactPoint"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "PID-13, PID-14, PID-40"
-          },
-          {
-            "identity": "rim",
-            "map": "telecom"
-          },
-          {
-            "identity": "v2",
-            "map": "PID-13, PID-14, PID-40"
-          },
-          {
-            "identity": "rim",
-            "map": "telecom"
-          }
-        ]
-      },
-      {
-        "path": "Patient.gender",
-        "short": "male | female | other | unknown",
-        "formal": "Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes.",
-        "comments": "The gender may not match the biological sex as determined by genetics, or the individual's preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than M and F, though the vast majority of systems and contexts only support M and F.",
-        "requirements": "Needed for identification of the individual, in combination with (at least) name and birth date. Gender of individual drives many clinical processes.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "name": "AdministrativeGender",
-          "isExtensible": false,
-          "conformance": "required",
-          "description": "The gender of a person used for administrative purposes",
-          "referenceReference": {
-            "reference": "http://hl7.org/fhir/vs/administrative-gender"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "PID-8"
-          },
-          {
-            "identity": "rim",
-            "map": "player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender"
-          },
-          {
-            "identity": "v2",
-            "map": "PID-8"
-          },
-          {
-            "identity": "rim",
-            "map": "player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender"
-          }
-        ]
-      },
-      {
-        "path": "Patient.birthDate",
-        "short": "The date and time of birth for the individual",
-        "formal": "The date and time of birth for the individual.",
-        "comments": "At least an estimated year should be provided as a guess if the real dob is unknown.",
-        "requirements": "Age of the individual drives many clinical processes. Next to the common use case of capturing someone birth date, also in some common cases time is registered.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "date"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "loinc",
-            "map": "21112-8"
-          },
-          {
-            "identity": "v2",
-            "map": "PID-7"
-          },
-          {
-            "identity": "rim",
-            "map": "player[classCode=PSN|ANM and determinerCode=INSTANCE]/birthTime"
-          },
-          {
-            "identity": "loinc",
-            "map": "21112-8"
-          },
-          {
-            "identity": "v2",
-            "map": "PID-7"
-          },
-          {
-            "identity": "rim",
-            "map": "player[classCode=PSN|ANM and determinerCode=INSTANCE]/birthTime"
-          }
-        ]
-      },
-      {
-        "path": "Patient.deceased[x]",
-        "short": "Indicates if the individual is deceased or not",
-        "formal": "Indicates if the individual is deceased or not.",
-        "comments": "If there's no value in the instance it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive.",
-        "requirements": "The fact that a patient is deceased influences the clinical process. Also, in human communication and relation management it is necessary to know whether the person is alive.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "boolean"
-          },
-          {
-            "code": "dateTime"
-          }
-        ],
-        "isModifier": true,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "PID-30\r (bool) and PID-29 (datetime)"
-          },
-          {
-            "identity": "rim",
-            "map": "player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedInd,\rplayer[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedTime"
-          },
-          {
-            "identity": "v2",
-            "map": "PID-30\r (bool) and PID-29 (datetime)"
-          },
-          {
-            "identity": "rim",
-            "map": "player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedInd,\rplayer[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedTime"
-          }
-        ]
-      },
-      {
-        "path": "Patient.address",
-        "short": "Addresses for the individual",
-        "formal": "Addresses for the individual.",
-        "comments": "Person may have multiple addresses with different uses or applicable periods.",
-        "requirements": "May need to keep track of persons addresses for contacting, billing or reporting requirements and also to help with identification.",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Address"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "PID-11"
-          },
-          {
-            "identity": "rim",
-            "map": "addr"
-          },
-          {
-            "identity": "v2",
-            "map": "PID-11"
-          },
-          {
-            "identity": "rim",
-            "map": "addr"
-          }
-        ]
-      },
-      {
-        "path": "Patient.maritalStatus",
-        "short": "Marital (civil) status of a person",
-        "formal": "This field contains a patient's most recent marital (civil) status.",
-        "requirements": "Most, if not all systems capture it.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "name": "MaritalStatus",
-          "isExtensible": true,
-          "conformance": "preferred",
-          "description": "The domestic partnership status of a person",
-          "referenceReference": {
-            "reference": "http://hl7.org/fhir/vs/marital-status"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "PID-16"
-          },
-          {
-            "identity": "rim",
-            "map": "player[classCode=PSN]/maritalStatusCode"
-          },
-          {
-            "identity": "v2",
-            "map": "PID-16"
-          },
-          {
-            "identity": "rim",
-            "map": "player[classCode=PSN]/maritalStatusCode"
-          }
-        ]
-      },
-      {
-        "path": "Patient.multipleBirth[x]",
-        "short": "Whether patient is part of a multiple birth",
-        "formal": "Indicates whether the patient is part of a multiple or indicates the actual birth order.",
-        "requirements": "For disambiguation of multiple-birth children, especially relevant where the care provider doesn't meet the patient, such as labs.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "boolean"
-          },
-          {
-            "code": "integer"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "PID-24 (bool), PID-25 (integer)"
-          },
-          {
-            "identity": "rim",
-            "map": "player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthInd, \rplayer[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthOrderNumber"
-          },
-          {
-            "identity": "v2",
-            "map": "PID-24 (bool), PID-25 (integer)"
-          },
-          {
-            "identity": "rim",
-            "map": "player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthInd, \rplayer[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthOrderNumber"
-          }
-        ]
-      },
-      {
-        "path": "Patient.photo",
-        "short": "Image of the person",
-        "formal": "Image of the person.",
-        "requirements": "Many EHR systems have the capability to capture an image of the patient. Fits with newer social media usage too.",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Attachment"
-          }
-        ],
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "OBX-5 - needs a profile"
-          },
-          {
-            "identity": "rim",
-            "map": "player[classCode=PSN|ANM and determinerCode=INSTANCE]/desc"
-          },
-          {
-            "identity": "v2",
-            "map": "OBX-5 - needs a profile"
-          },
-          {
-            "identity": "rim",
-            "map": "player[classCode=PSN|ANM and determinerCode=INSTANCE]/desc"
-          }
-        ]
-      },
-      {
-        "path": "Patient.contact",
-        "short": "A contact party (e.g. guardian, partner, friend) for the patient",
-        "formal": "A contact party (e.g. guardian, partner, friend) for the patient.",
-        "comments": "Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact.",
-        "requirements": "Need to track people you can contact about the patient.",
-        "min": 0,
-        "max": "*",
-        "constraint": [
-          {
-            "key": "1",
-            "name": "ContactNeedsDetails",
-            "severity": "error",
-            "human": "SHALL at least contain a contact's details or a reference to an organization",
-            "xpath": "f:name or f:telecom or f:address or f:organization"
-          }
-        ],
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "player[classCode=PSN|ANM and determinerCode=INSTANCE]/scopedRole[classCode=CON]"
-          },
-          {
-            "identity": "rim",
-            "map": "player[classCode=PSN|ANM and determinerCode=INSTANCE]/scopedRole[classCode=CON]"
-          }
-        ]
-      },
-      {
-        "path": "Patient.contact.relationship",
-        "short": "The kind of relationship",
-        "formal": "The nature of the relationship between the patient and the contact person.",
-        "requirements": "Used to determine which contact person is the most relevant to approach, depending on circumstances.",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "isSummary": false,
-        "binding": {
-          "name": "ContactRelationship",
-          "isExtensible": true,
-          "conformance": "preferred",
-          "description": "The nature of the relationship between a patient and a contact person for that patient",
-          "referenceReference": {
-            "reference": "http://hl7.org/fhir/vs/patient-contact-relationship"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "NK1-7, NK1-3"
-          },
-          {
-            "identity": "rim",
-            "map": "code"
-          },
-          {
-            "identity": "v2",
-            "map": "NK1-7, NK1-3"
-          },
-          {
-            "identity": "rim",
-            "map": "code"
-          }
-        ]
-      },
-      {
-        "path": "Patient.contact.name",
-        "short": "A name associated with the person",
-        "formal": "A name associated with the person.",
-        "requirements": "Contact persons need to be identified by name, but it is uncommon to need details about multiple other names for that person.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "HumanName"
-          }
-        ],
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "NK1-2"
-          },
-          {
-            "identity": "rim",
-            "map": "name"
-          },
-          {
-            "identity": "v2",
-            "map": "NK1-2"
-          },
-          {
-            "identity": "rim",
-            "map": "name"
-          }
-        ]
-      },
-      {
-        "path": "Patient.contact.telecom",
-        "short": "A contact detail for the person",
-        "formal": "A contact detail for the person, e.g. a telephone number or an email address.",
-        "comments": "Person may have multiple ways to be contacted with different uses or applicable periods. \rMay need to have options for contacting the person urgently, and also to help with identification.",
-        "requirements": "People have (primary) ways to contact them in some way such as phone, email.",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "ContactPoint"
-          }
-        ],
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "NK1-5, NK1-6, NK1-40"
-          },
-          {
-            "identity": "rim",
-            "map": "telecom"
-          },
-          {
-            "identity": "v2",
-            "map": "NK1-5, NK1-6, NK1-40"
-          },
-          {
-            "identity": "rim",
-            "map": "telecom"
-          }
-        ]
-      },
-      {
-        "path": "Patient.contact.address",
-        "short": "Address for the contact person",
-        "formal": "Address for the contact person.",
-        "requirements": "Need to keep track where the contact person can be contacted per postal mail or visited.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Address"
-          }
-        ],
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "NK1-4"
-          },
-          {
-            "identity": "rim",
-            "map": "addr"
-          },
-          {
-            "identity": "v2",
-            "map": "NK1-4"
-          },
-          {
-            "identity": "rim",
-            "map": "addr"
-          }
-        ]
-      },
-      {
-        "path": "Patient.contact.gender",
-        "short": "male | female | other | unknown",
-        "formal": "Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes.",
-        "requirements": "Needed to address the person correctly.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "isSummary": false,
-        "binding": {
-          "name": "AdministrativeGender",
-          "isExtensible": false,
-          "conformance": "required",
-          "description": "The gender of a person used for administrative purposes",
-          "referenceReference": {
-            "reference": "http://hl7.org/fhir/vs/administrative-gender"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "NK1-15"
-          },
-          {
-            "identity": "rim",
-            "map": "player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender"
-          },
-          {
-            "identity": "v2",
-            "map": "NK1-15"
-          },
-          {
-            "identity": "rim",
-            "map": "player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender"
-          }
-        ]
-      },
-      {
-        "path": "Patient.contact.organization",
-        "short": "Organization that is associated with the contact",
-        "formal": "Organization on behalf of which the contact is acting or for which the contact is working.",
-        "requirements": "For guardians or business related contacts, the organization is relevant.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "profile": "http://hl7.org/fhir/Profile/Organization"
-          }
-        ],
-        "condition": [
-          "1"
-        ],
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "NK1-13, NK1-30, NK1-31, NK1-32, NK1-41"
-          },
-          {
-            "identity": "rim",
-            "map": "scoper"
-          },
-          {
-            "identity": "v2",
-            "map": "NK1-13, NK1-30, NK1-31, NK1-32, NK1-41"
-          },
-          {
-            "identity": "rim",
-            "map": "scoper"
-          }
-        ]
-      },
-      {
-        "path": "Patient.contact.period",
-        "short": "The period during which this person or organization is valid to be contacted relating to this patient",
-        "formal": "The period during which this person or organization is valid to be contacted relating to this patient.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Period"
-          }
-        ],
-        "isSummary": false
-      },
-      {
-        "path": "Patient.animal",
-        "short": "If this patient is an animal (non-human)",
-        "formal": "This element has a value if the patient is an animal.",
-        "comments": "The animal element is labeled \"Is Modifier\" since patients may be non-human. Systems SHALL either handle patient details appropriately (e.g. inform users patient is not human) or reject non-human patient records.",
-        "requirements": "Many clinical systems are extended to care for animal patients as well as human.",
-        "min": 0,
-        "max": "1",
-        "isModifier": true,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "player[classCode=ANM]"
-          },
-          {
-            "identity": "rim",
-            "map": "player[classCode=ANM]"
-          }
-        ]
-      },
-      {
-        "path": "Patient.animal.species",
-        "short": "E.g. Dog, Cow",
-        "formal": "Identifies the high level categorization of the kind of animal.",
-        "comments": "If the patient is non-human, at least a species SHALL be specified.",
-        "requirements": "Need to know what kind of animal.",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "name": "AnimalSpecies",
-          "isExtensible": true,
-          "conformance": "example",
-          "description": "The species of an animal",
-          "referenceReference": {
-            "reference": "http://hl7.org/fhir/vs/animal-species"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "PID-35"
-          },
-          {
-            "identity": "rim",
-            "map": "code"
-          },
-          {
-            "identity": "v2",
-            "map": "PID-35"
-          },
-          {
-            "identity": "rim",
-            "map": "code"
-          }
-        ]
-      },
-      {
-        "path": "Patient.animal.breed",
-        "short": "E.g. Poodle, Angus",
-        "formal": "Identifies the detailed categorization of the kind of animal.",
-        "requirements": "May need to know the specific kind within the species.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "name": "AnimalBreed",
-          "isExtensible": true,
-          "conformance": "example",
-          "description": "The breed of an animal",
-          "referenceReference": {
-            "reference": "http://hl7.org/fhir/vs/animal-breeds"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "PID-37"
-          },
-          {
-            "identity": "rim",
-            "map": "playedRole[classCode=GEN]/scoper[classCode=ANM, determinerCode=KIND]/code"
-          },
-          {
-            "identity": "v2",
-            "map": "PID-37"
-          },
-          {
-            "identity": "rim",
-            "map": "playedRole[classCode=GEN]/scoper[classCode=ANM, determinerCode=KIND]/code"
-          }
-        ]
-      },
-      {
-        "path": "Patient.animal.genderStatus",
-        "short": "E.g. Neutered, Intact",
-        "formal": "Indicates the current state of the animal's reproductive organs.",
-        "requirements": "Gender status can affect housing and animal behavior.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "isSummary": true,
-        "binding": {
-          "name": "AnimalGenderStatus",
-          "isExtensible": true,
-          "conformance": "example",
-          "description": "The state of the animal's reproductive organs",
-          "referenceReference": {
-            "reference": "http://hl7.org/fhir/vs/animal-genderstatus"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "N/A"
-          },
-          {
-            "identity": "rim",
-            "map": "genderStatusCode"
-          },
-          {
-            "identity": "v2",
-            "map": "N/A"
-          },
-          {
-            "identity": "rim",
-            "map": "genderStatusCode"
-          }
-        ]
-      },
-      {
-        "path": "Patient.communication",
-        "short": "Languages which may be used to communicate with the patient about his or her health",
-        "formal": "Languages which may be used to communicate with the patient about his or her health.",
-        "comments": "If no language is specified, this *implies* that the default local language is spoken.\rFor animals, language is not a relevant field, and should be absent from the instance.",
-        "requirements": "If a patient does not speak the local language, interpreters may be required, so languages spoken is an important things to keep track of both for patient and other persons of interest.",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "isSummary": false,
-        "binding": {
-          "name": "Language",
-          "isExtensible": false,
-          "conformance": "required",
-          "description": "A human language",
-          "referenceUri": "http://tools.ietf.org/html/bcp47"
-        },
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "LAN-2"
-          },
-          {
-            "identity": "rim",
-            "map": "player[classCode=PSN|ANM and determinerCode=INSTANCE]/languageCommunication/code"
-          },
-          {
-            "identity": "v2",
-            "map": "LAN-2"
-          },
-          {
-            "identity": "rim",
-            "map": "player[classCode=PSN|ANM and determinerCode=INSTANCE]/languageCommunication/code"
-          }
-        ]
-      },
-      {
-        "path": "Patient.careProvider",
-        "short": "Patient's nominated care provider",
-        "formal": "Patient's nominated care provider.",
-        "min": 0,
-        "max": "*",
-        "type": [
-          {
-            "code": "Reference",
-            "profile": "http://hl7.org/fhir/Profile/Organization"
-          },
-          {
-            "code": "Reference",
-            "profile": "http://hl7.org/fhir/Profile/Practitioner"
-          }
-        ],
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "subjectOf.CareEvent.performer.AssignedEntity"
-          },
-          {
-            "identity": "rim",
-            "map": "subjectOf.CareEvent.performer.AssignedEntity"
-          }
-        ]
-      },
-      {
-        "path": "Patient.managingOrganization",
-        "short": "Organization that is the custodian of the patient record",
-        "formal": "Organization that is the custodian of the patient record.",
-        "requirements": "Need to know who recognizes this patient record, manages and updates it.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "profile": "http://hl7.org/fhir/Profile/Organization"
-          }
-        ],
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "scoper"
-          },
-          {
-            "identity": "rim",
-            "map": "scoper"
-          }
-        ]
-      },
-      {
-        "path": "Patient.link",
-        "short": "Link to another patient resource that concerns the same actual person",
-        "formal": "Link to another patient resource that concerns the same actual person.",
-        "comments": "There is no assumption that linked patient records have mutual links.",
-        "requirements": "There are multiple usecases: * Duplicate patient records due to the clerical errors associated with the difficulties of identifying humans consistently, and * Distribution of patient information across multiple servers.",
-        "min": 0,
-        "max": "*",
-        "isModifier": true,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "outboundLink"
-          },
-          {
-            "identity": "rim",
-            "map": "outboundLink"
-          }
-        ]
-      },
-      {
-        "path": "Patient.link.other",
-        "short": "The other patient resource that the link refers to",
-        "formal": "The other patient resource that the link refers to.",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Reference",
-            "profile": "http://hl7.org/fhir/Profile/Patient"
-          }
-        ],
-        "isModifier": true,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "v2",
-            "map": "PID-3, MRG-1"
-          },
-          {
-            "identity": "rim",
-            "map": "id"
-          },
-          {
-            "identity": "v2",
-            "map": "PID-3, MRG-1"
-          },
-          {
-            "identity": "rim",
-            "map": "id"
-          }
-        ]
-      },
-      {
-        "path": "Patient.link.type",
-        "short": "replace | refer | seealso - type of link",
-        "formal": "The type of link between this patient resource and another patient resource.",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "isModifier": true,
-        "isSummary": true,
-        "binding": {
-          "name": "LinkType",
-          "isExtensible": false,
-          "conformance": "required",
-          "description": "The type of link between this patient resource and another patient resource.",
-          "referenceReference": {
-            "reference": "http://hl7.org/fhir/vs/link-type"
-          }
-        },
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "typeCode"
-          },
-          {
-            "identity": "rim",
-            "map": "typeCode"
-          }
-        ]
-      },
-      {
-        "path": "Patient.active",
-        "short": "Whether this patient's record is in active use",
-        "formal": "Whether this patient record is in active use.",
-        "comments": "Default is true. If a record is inactive, and linked to an active record, then future patient/person/record updates should occur on the other patient.",
-        "requirements": "Need to be able to mark a patient record as not to be used because it was created in error.",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ],
-        "defaultValueBoolean": true,
-        "isModifier": true,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "statusCode"
-          },
-          {
-            "identity": "rim",
-            "map": "statusCode"
-          }
-        ]
-      }
-    ]
-  }
+      ]
+    }
 }

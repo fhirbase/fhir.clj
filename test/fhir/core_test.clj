@@ -1,6 +1,6 @@
 (ns fhir.core-test
   (:require [clojure.test :refer :all]
-            [fhir.core :refer :all]))
+            [fhir.core :as fc]))
 
 (deftest a-test
   (testing "FIXME, I fail."

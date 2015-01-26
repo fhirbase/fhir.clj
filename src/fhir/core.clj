@@ -1,38 +1,51 @@
 (ns fhir.core
   (:require
     [clojure.string :as cs]
-    [cheshire.core :as json]))
+    [clojure.set :as cset]
+    [fhir.types :as ft]
+    [cheshire.core :as json]
+    [fhir.profiles :as fp]))
 
-(def pt-json (slurp "profiles/patient.json"))
+(defn find-meta
+  "Looking meta information from profiles for path"
+  [pth]
+  (let [obj (get fp/idx (first pth))
+        pth (rest pth)]
+    (loop [[x & xs] pth obj obj]
+      (if (nil? x) obj
+        (if (and (map? obj) (contains? obj x))
+          (recur xs (get obj x))
+          (if-let [tp (get-in obj [:$attrs :type 0])]
+            (find-meta (concat [tp x] xs))
+            nil))))))
 
-(def pt-prof (json/parse-string pt-json keyword))
-(def els (get-in pt-prof [:snapshot :element]))
-(def el (nth els 5))
+(defn all-keys [mt obj]
+  (cset/union (set (keys mt)) (set (keys obj))))
 
-(defn get-path [x] (->> (cs/split (:path x) #"\.")
-                        (mapv keyword)))
-(def els-idx
-  (reduce #(assoc %1 (get-path %2) %2) {} els))
+(defn walk-resource
+  "walk resource recursively and collect accumulator by f"
+  [obj pth f acc]
+  (let [-meta (find-meta pth)
+        accc (f acc pth obj -meta)]
+    (cond
+      (map? obj)  (reduce
+                    (fn [a k] (walk-resource (get obj k) (conj pth k) f a))
+                    accc
+                    (all-keys -meta obj))
+      (vector? obj) (reduce (fn [a v] (walk-resource v pth f a)) accc obj)
+      :else accc)))
 
-(println (keys els-idx))
+(defn reduce-resource [obj f]
+  (walk-resource obj [(keyword (:resourceType obj))] f []))
 
-(defn walk [m path profile]
-  (cond
-    (map? m)    (doseq [[k,v] m] (walk v (conj path k) profile))
-    (vector? m) (doseq [v m] (walk v path profile))
-    :else (do
-            (println path (get profile path))
-            (when-not (get profile path)
-              (println "Extra key" path)))))
 
-(defn validate-structure [m profile]
-   (walk m [(keyword (:resourceType m))] profile))
+(comment
+  (def pt (fp/read-json "examples/pt.json"))
 
-(validate-structure {:resourceType "Patient"
-           :extra "ups"
-           :name "ups"
-           :name [{:given  ["name"]
-                   :family ["name"]}]}
-          els-idx)
+  (reduce-resource pt (fn [acc pth v mt]
+                        (cond (nil? mt) (conj acc (str "Unexpected element: " pth " value " v))
+                              (and (nil? v) (= (get-in mt [:$attrs :min]) 1))  (conj acc (str "Missed key " pth))
+                              :else  acc)))
 
-;;(build pt-profile)
+  (println "meta:" (find-meta [:Patient :address :use]) "End")
+  (println "meta:" (find-meta [:Patient :deceasedBoolean]) "End"))
