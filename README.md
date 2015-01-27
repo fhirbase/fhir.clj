@@ -21,7 +21,11 @@ FHIR client implementation in clojure.
 (require '[fhir.core :as fhir])
 
 (def pt
-  (fhir/parse "{\"resourceType\": \"Patient\", \"name\": [{\"text\":\"Smith\"}], "active": true}"))
+  (fhir/parse "
+   {\"resourceType\": \"Patient\",
+    \"name\": [{\"text\":\"Smith\"}],
+    \"active\": true}
+  "))
 
 (fhir/validate pt)
 ;;=> [errors]
@@ -29,7 +33,7 @@ FHIR client implementation in clojure.
 (fhir/serialize pt :xml)
 ;;=> <Patient> <name><text value="Smith"/></name><active value="true"></Patient>
 
-(fhir/resource {:resourceType "Patient" :name {:text "Smith" :family "Eric}})
+(fhir/resource {:resourceType "Patient" :name {:text "Smith" :family "Eric"}})
 ;;=> {:resourceType "Patient" :name [{:text "Smith" :family ["Eric"]}]}
 
 ```
