@@ -1,6 +1,8 @@
 (ns fhir.format
   (:require [fhir.core :as fc]
             [clojure.xml :as cx]
+            [fhir.profiles :as fp]
+            [clojure.edn :as ce]
             [clojure.stacktrace :as cs]
             [cheshire.core :as json]
             [clojure.zip :as cz]))
@@ -46,10 +48,61 @@
 (defn parse-xml [s]
   (cx/parse (stream s)))
 
-(defn from-json [s]
-  (json/parse-string s keyword))
+
+(defn coerce-primitive [-meta value]
+  (if-let [tp (get-in -meta [:$attrs :type 0])]
+    (if (string? value)
+      (cond
+        (= tp :boolean) (ce/read-string value)
+        :else value)
+      value)
+    value))
+
+(defn coerce-resource [res pth]
+  (cond
+    (map? res) (reduce (fn [acc [k v]]
+                         (let [-meta (fp/find-meta (conj pth k))
+                               mult (= "*" (get-in -meta [:$attrs :max]))]
+                           (assoc acc k
+                                  (if (and mult (not (vector? v)))
+                                    [(coerce-resource v (conj pth k))]
+                                    (coerce-resource v (conj pth k)))))
+                         ) {} res)
+    (vector? res) (mapv #(coerce-resource % pth) res)
+    :else (coerce-primitive (fp/find-meta pth) res)))
+
+(defn from-xml-recur [content]
+  (reduce
+    (fn [acc node]
+      (let [attr (:tag node)
+            prev-value (get acc attr)
+            value (if (:content node)
+                    (from-xml-recur (:content node))
+                    (get-in node [:attrs :value]))]
+        (update-in acc [attr]
+                   (fn [v]
+                     (cond
+                       (nil? v) value
+                       (vector? v) (conj v value)
+                       :else [v value])))))
+    {} content))
+
+
+;;; PUBLIC API
 
 (defn to-json [res] res)
+
+(defn from-json [s]
+  (let [res (json/parse-string s keyword)
+        res-nm (keyword (:resourceType res)) ]
+    (assoc (coerce-resource res [res-nm]) :resourceType (name res-nm))))
+
+(defn from-xml [s]
+  (let [xml (parse-xml s)
+        res-nm (:tag xml)
+        res    (from-xml-recur (:content xml))]
+    (assoc (coerce-resource res [res-nm]) :resourceType (name res-nm))))
+
 
 (defn to-xml [res]
   (let [res-nm (:resourceType res)

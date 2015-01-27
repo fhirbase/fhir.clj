@@ -26,17 +26,23 @@
 (def pt2 (ff/from-json (slurp "test/fhir/patient-example-f001-pieter.json")))
 (def pt2-xml (slurp "test/fhir/patient-example-f001-pieter.xml"))
 
-
-(deftest more-tests
+(deftest to-xml
   (is
     (=
      (ff/parse-xml (ff/to-xml pt2))
      (ff/parse-xml pt2-xml))))
 
+(deftest from-xml
+  (is
+    (= pt2 (ff/from-xml pt2-xml))))
+
 (comment
   (cd/diff
     (ff/parse-xml (ff/to-xml pt2))
     (ff/parse-xml pt2-xml))
+  (cd/diff
+    pt2 (ff/from-xml pt2-xml))
+  (ff/from-xml pt2-xml)
   (spit "/tmp/ups.xml" (ff/to-xml pt2))
   (get-in (fc/zip-meta pt2) [:Patient :maritalStatus])
   (get-in (fc/zip-meta pt2) [:Patient :gender])
