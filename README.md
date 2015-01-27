@@ -1,8 +1,9 @@
 # fhir.clj
 
-[![Build Status](https://travis-ci.org/fhirbase/fhir.clj.svg)](https://travis-ci.org/fhirbase/fhir.clj)
+[![Build Status](https://travis-ci.org/fhirbase/fhir.clj.svg)](https://travis-ci.org/fhirbase/fhir.clj) [![Dependency Status](https://www.versioneye.com/user/projects/54c823486c63105469000026/badge.svg?style=flat)](https://www.versioneye.com/user/projects/54c823486c63105469000026)
 
 [![Clojars Project](http://clojars.org/fhir/latest-version.svg)](http://clojars.org/fhir)
+
 
 FHIR client implementation in clojure.
 
