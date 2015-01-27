@@ -27,8 +27,7 @@
 (deftest zip-meta
   (testing "zip-meta"
     (is
-      (is (= 27 (count (get-in ptm [:Patient 1])))))))
-
+      (is (= 27 (count (get-in ptm [:Patient])))))))
 
 (comment
   ;;example

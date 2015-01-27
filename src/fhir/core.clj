@@ -25,17 +25,19 @@
   (let [init-pth [(keyword (:resourceType obj))]]
     (reduce-recur (dissoc obj :resourceType) init-pth  f [])))
 
-
 (defn zip-meta-recur [obj pth]
   (let [-meta (fp/find-meta pth)
         -attrs (:$attrs -meta)
         reduce-map (fn [acc k]
-                     (assoc acc k (zip-meta-recur (get obj k) (conj pth k))))]
+                     (let [epth (conj pth k)
+                           v (get obj k)
+                           emeta (fp/find-meta epth)]
+                       (assoc acc k [emeta (zip-meta-recur v epth)])))]
     (cond
       (map? obj) (let [all-keys (all-keys -meta obj)]
-                   [-attrs (reduce reduce-map {} all-keys)])
-      (vector? obj) [-attrs (mapv #(zip-meta-recur % pth) obj)]
-      :else [-attrs obj])))
+                   (reduce reduce-map {} all-keys))
+      (vector? obj) (mapv #(zip-meta-recur % pth) obj)
+      :else obj)))
 
 (defn zip-meta [obj]
   (let [res-nm (keyword (:resourceType obj))
