@@ -49,7 +49,7 @@
        (dissoc (ff/from-xml (slurp "test/fixtures/xml/dateTime.profile.xml")) :text))))
 
 ;; TODO turn into tests
-(doseq  [f (fs/glob "test/fixtures/xml/*.xml")]
+(doseq  [f (take 100 (fs/glob "test/fixtures/xml/*.xml"))]
   (let [json-file (str "test/fixtures/json/" (fs/base-name f ".xml") ".json")]
     (if (fs/exists? json-file)
       (let [from-xml (ff/from-xml (slurp (.getAbsolutePath f)))
@@ -58,4 +58,3 @@
         (diffo
           (dissoc from-xml :text)
           (dissoc from-json :text))))))
-

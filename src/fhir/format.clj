@@ -113,7 +113,7 @@
         res    (from-xml-recur (:content xml))]
     (assoc (coerce-resource res [res-nm]) :resourceType (name res-nm))))
 
-
+;; could this be done without zip meta
 (defn to-xml [res]
   (let [res-nm (:resourceType res)
         zres (fc/zip-meta res)

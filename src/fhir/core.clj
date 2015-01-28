@@ -3,11 +3,9 @@
     [clojure.set :as cset]
     [fhir.profiles :as fp]))
 
-
-(defn all-keys [mt obj]
-  (disj (cset/union (set (keys mt))
-                    (set (keys obj)))
-        :$attrs))
+(defn all-keys [a b]
+  (-> (set (mapcat keys [a b]))
+      (disj :$attrs)))
 
 (defn- reduce-recur
   "walk resource recursively and collect accumulator by (f acc path value meta-info)"
