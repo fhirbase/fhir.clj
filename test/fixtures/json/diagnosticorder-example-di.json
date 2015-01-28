@@ -1,0 +1,35 @@
+{
+  "resourceType": "DiagnosticOrder",
+  "id": "di",
+  "text": {
+    "status": "generated",
+    "div": "<div>\n      \n      <p>Chest CT - ordered May 8, 2013 by Dr. Adam Careful</p>\n    \n    </div>"
+  },
+  "subject": {
+    "reference": "Patient/dicom"
+  },
+  "orderer": {
+    "reference": "Practitioner/example",
+    "display": "Dr. Adam Careful"
+  },
+  "status": "requested",
+  "event": [
+    {
+      "status": "requested",
+      "dateTime": "2013-05-08T09:33:27"
+    }
+  ],
+  "item": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "24627-2"
+          }
+        ],
+        "text": "Chest CT"
+      }
+    }
+  ]
+}

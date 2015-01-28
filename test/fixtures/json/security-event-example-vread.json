@@ -1,0 +1,57 @@
+{
+  "resourceType": "SecurityEvent",
+  "id": "example-rest",
+  "event": {
+    "type": {
+      "coding": [
+        {
+          "system": "http://hl7.org/fhir/security-event-type",
+          "code": "rest",
+          "display": "Restful Operation"
+        }
+      ]
+    },
+    "subtype": [
+      {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/restful-interaction",
+            "code": "vread",
+            "display": "vread"
+          }
+        ]
+      }
+    ],
+    "action": "R",
+    "dateTime": "2013-06-20T23:42:24Z",
+    "outcome": "0"
+  },
+  "participant": [
+    {
+      "userId": "95",
+      "altId": "601847123",
+      "name": "Grahame Grieve",
+      "requestor": true
+    }
+  ],
+  "source": {
+    "site": "Cloud",
+    "identifier": "hl7connect.healthintersections.com.au",
+    "type": [
+      {
+        "system": "http://hl7.org/fhir/security-source-type",
+        "code": "3",
+        "display": "Web Server"
+      }
+    ]
+  },
+  "object": [
+    {
+      "reference": {
+        "reference": "Patient/example/_history/1"
+      },
+      "type": "2",
+      "lifecycle": "6"
+    }
+  ]
+}

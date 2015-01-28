@@ -1,0 +1,236 @@
+{
+  "resourceType": "Bundle",
+  "id": "xds",
+  "meta": {
+    "lastUpdated": "2013-07-01T13:11:33Z"
+  },
+  "type": "transaction",
+  "base": "cid:123@healthintersections.com.au",
+  "entry": [
+    {
+      "status": "create",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "a1",
+        "meta": {
+          "lastUpdated": "2013-07-01T13:11:33Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div>\n            <a href=\"http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32\">Document: urn:oid:129.6.58.92.88336</a>undefined, created 24/12/2005</div>"
+        },
+        "http://hl7.org/fhir/Profile/xds-profile#practiceSettingCode": [
+          {
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://ihe.net/connectathon/practiceSettingCodes",
+                  "code": "General Medicine",
+                  "display": "General Medicine"
+                }
+              ]
+            }
+          }
+        ],
+        "masterIdentifier": {
+          "system": "urn:ietf:rfc:3986",
+          "value": "urn:oid:129.6.58.92.88336"
+        },
+        "subject": {
+          "reference": "cid:123@healthintersections.com.au/Patient/a2"
+        },
+        "type": {
+          "coding": [
+            {
+              "system": "http://ihe.net/connectathon/classCodes",
+              "code": "History and Physical",
+              "display": "History and Physical"
+            }
+          ]
+        },
+        "author": [
+          {
+            "reference": "cid:123@healthintersections.com.au/Practitioner/a3"
+          },
+          {
+            "reference": "cid:123@healthintersections.com.au/Practitioner/a4"
+          }
+        ],
+        "created": "2005-12-24",
+        "indexed": "2013-07-01T23:11:33+10:00",
+        "status": "current",
+        "description": "Physical",
+        "primaryLanguage": "en-us",
+        "mimeType": "text/plain",
+        "format": [
+          "urn:oid:1.3.6.1.4.1.19376.1.5.3.1.1.16.1.4"
+        ],
+        "location": "http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32",
+        "context": {
+          "period": {
+            "start": "2004-12-23T08:00:00",
+            "end": "2004-12-23T08:01:00"
+          }
+        }
+      }
+    },
+    {
+      "status": "match",
+      "search": "Patient?identifier=http://acme.org/xds/patients!89765a87b",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "a2",
+        "meta": {
+          "lastUpdated": "2013-07-01T13:11:33Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div>Person DOE, John, M, dob: 27/05/1956</div>"
+        },
+        "identifier": [
+          {
+            "system": "usual",
+            "value": "MRN"
+          }
+        ],
+        "name": [
+          {
+            "use": "usual",
+            "text": "DOE, John",
+            "family": [
+              "Doe"
+            ],
+            "given": [
+              "John"
+            ]
+          }
+        ],
+        "birthDate": "1956-05-27"
+      }
+    },
+    {
+      "status": "create",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "a3",
+        "meta": {
+          "lastUpdated": "2013-07-01T13:11:33Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div>Author Gerald Smitty @ Cleveland Clinic</div>"
+        },
+        "http://hl7.org/fhir/Profile/xds-profile#author-institution-repeats": [
+          {
+            "valueReference": {
+              "display": "Parma Community"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "label": "usual"
+          }
+        ],
+        "name": {
+          "use": "usual",
+          "family": [
+            "Smitty"
+          ],
+          "given": [
+            "Gerald"
+          ]
+        },
+        "organization": {
+          "display": "Cleveland Clinic"
+        },
+        "role": [
+          {
+            "coding": [
+              {
+                "code": "Attending"
+              }
+            ]
+          }
+        ],
+        "specialty": [
+          {
+            "coding": [
+              {
+                "code": "Orthopedic"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "status": "create",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "a4",
+        "meta": {
+          "lastUpdated": "2013-07-01T13:11:33Z"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div>Author Person @ Cleveland Clinic</div>"
+        },
+        "http://hl7.org/fhir/Profile/xds-profile#author-institution-repeats": [
+          {
+            "valueReference": {
+              "display": "Berea Community"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "usual"
+          }
+        ],
+        "name": {
+          "use": "usual",
+          "family": [
+            "Dopplemeyer"
+          ],
+          "given": [
+            "Sherry"
+          ]
+        },
+        "organization": {
+          "display": "Cleveland Clinic"
+        },
+        "role": [
+          {
+            "coding": [
+              {
+                "code": "Primary Surgon"
+              }
+            ]
+          }
+        ],
+        "specialty": [
+          {
+            "coding": [
+              {
+                "code": "Orthopedic"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "status": "update",
+      "resource": {
+        "resourceType": "Binary",
+        "id": "1e404af3-077f-4bee-b7a6-a9be97e1ce32",
+        "meta": {
+          "lastUpdated": "2013-07-01T13:11:33Z"
+        },
+        "contentType": "text/plain",
+        "content": "YXNkYXNkYXNkYXNkYXNk"
+      }
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "resourceType": "Procedure",
+  "id": "f003",
+  "patient": {
+    "reference": "Patient/f001",
+    "display": "P. van de Heuvel"
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "172960003",
+        "display": "Incision of retropharyngeal abscess"
+      }
+    ]
+  },
+  "bodySite": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "83030008",
+          "display": "Retropharyngeal area"
+        }
+      ]
+    }
+  ],
+  "indication": [
+    {
+      "text": "abcess in retropharyngeal area"
+    }
+  ],
+  "performer": [
+    {
+      "person": {
+        "reference": "Practitioner/f001",
+        "display": "E.M.J.M. van den broek"
+      },
+      "role": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.15.111",
+            "code": "01.000",
+            "display": "Arts"
+          }
+        ],
+        "text": "Care role"
+      }
+    }
+  ],
+  "date": {
+    "start": "2013-03-24T09:30:10+01:00",
+    "end": "2013-03-24T10:30:10+01:00"
+  },
+  "encounter": {
+    "reference": "Encounter/f003"
+  },
+  "outcome": "removal of the retropharyngeal abscess",
+  "report": [
+    {
+      "reference": "DiagnosticReport/f001",
+      "display": "Lab results blood test"
+    }
+  ],
+  "followUp": "described in care plan"
+}

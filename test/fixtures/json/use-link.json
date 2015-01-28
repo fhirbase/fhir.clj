@@ -1,0 +1,59 @@
+{
+  "resourceType": "ValueSet",
+  "id": "use-link",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 4 concepts</p><h2>Use</h2><p>Complete, proposed, exploratory, other</p><p>This value set defines its own terms in the system http://hl7.org/fhir/use-link</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>complete<a name=\"complete\"> </a></td><td>The treatment is complete and this represents a Claim for the services.</td></tr><tr><td>proposed<a name=\"proposed\"> </a></td><td>The treatment is proposed and this represents a Pre-authorization for the services.</td></tr><tr><td>exploratory<a name=\"exploratory\"> </a></td><td>The treatment is proposed and this represents a Pre-determination for the services.</td></tr><tr><td>other<a name=\"other\"> </a></td><td>A locally defined or otherwise resolved status.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.460"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/use-link",
+  "name": "Use",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Complete, proposed, exploratory, other",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.493+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.460"
+      }
+    ],
+    "system": "http://hl7.org/fhir/use-link",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "complete",
+        "definition": "The treatment is complete and this represents a Claim for the services."
+      },
+      {
+        "code": "proposed",
+        "definition": "The treatment is proposed and this represents a Pre-authorization for the services."
+      },
+      {
+        "code": "exploratory",
+        "definition": "The treatment is proposed and this represents a Pre-determination for the services."
+      },
+      {
+        "code": "other",
+        "definition": "A locally defined or otherwise resolved status."
+      }
+    ]
+  }
+}

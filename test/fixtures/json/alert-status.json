@@ -1,0 +1,55 @@
+{
+  "resourceType": "ValueSet",
+  "id": "alert-status",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 3 concepts</p><h2>AlertStatus</h2><p>Indicates whether this alert is active and needs to be displayed to a user, or whether it is no longer needed or entered in error</p><p>This value set defines its own terms in the system http://hl7.org/fhir/alert-status</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>active<a name=\"active\"> </a></td><td>A current alert that should be displayed to a user. A system may use the category to determine which roles should view the alert.</td></tr><tr><td>inactive<a name=\"inactive\"> </a></td><td>The alert does not need to be displayed any more.</td></tr><tr><td>entered in error<a name=\"enteredinerror\"> </a></td><td>The alert was added in error, and should no longer be displayed.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.208"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/alert-status",
+  "name": "AlertStatus",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Indicates whether this alert is active and needs to be displayed to a user, or whether it is no longer needed or entered in error",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.496+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.208"
+      }
+    ],
+    "system": "http://hl7.org/fhir/alert-status",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "active",
+        "definition": "A current alert that should be displayed to a user. A system may use the category to determine which roles should view the alert."
+      },
+      {
+        "code": "inactive",
+        "definition": "The alert does not need to be displayed any more."
+      },
+      {
+        "code": "entered in error",
+        "definition": "The alert was added in error, and should no longer be displayed."
+      }
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "resourceType": "Observation",
+  "id": "satO2",
+  "text": {
+    "status": "generated",
+    "div": "<div>Dec 04 2014: Oxygen saturation 95% (normal)</div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/relatedDeviceMetric": [
+    {
+      "valueReference": {
+        "reference": "DeviceMetric/example"
+      }
+    }
+  ],
+  "name": {
+    "coding": [
+      {
+        "system": "https://rtmms.nist.gov",
+        "code": "150456",
+        "display": "MDC_PULS_OXIM_SAT_O2"
+      }
+    ]
+  },
+  "valueQuantity": {
+    "value": 95,
+    "units": "percent",
+    "system": "https://rtmms.nist.gov",
+    "code": "262688"
+  },
+  "interpretation": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/v2/0078",
+        "code": "N",
+        "display": "normal"
+      }
+    ]
+  },
+  "appliesDateTime": "2014-12-05T09:30:10+01:00",
+  "status": "final",
+  "reliability": "ok",
+  "identifier": {
+    "system": "http://goodcare.org/observation/id",
+    "value": "o1223435-10"
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "performer": [
+    {
+      "reference": "Device/ihe-pcd"
+    }
+  ],
+  "referenceRange": [
+    {
+      "low": {
+        "value": 90,
+        "units": "percent",
+        "system": "https://rtmms.nist.gov",
+        "code": "262688"
+      },
+      "high": {
+        "value": 99,
+        "units": "percent",
+        "system": "https://rtmms.nist.gov",
+        "code": "262688"
+      }
+    }
+  ]
+}

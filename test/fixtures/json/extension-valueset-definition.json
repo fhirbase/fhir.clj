@@ -1,0 +1,31 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "valueset-definition",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/valueset-definition",
+  "name": "A definition for this code",
+  "display": "Definition",
+  "publisher": "HL7",
+  "description": "A display name that describes the meaning of this code when used as part of this value set.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "contextType": "resource",
+  "context": [
+    "ValueSet.compose.include.concept"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "A definition for this code",
+      "formal": "A display name that describes the meaning of this code when used as part of this value set.",
+      "comments": "This is provided for when the source code system doesn't actually provide a definition (there are many such). Providing an definition for a code should not be done where the underlying code system provides a definition.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

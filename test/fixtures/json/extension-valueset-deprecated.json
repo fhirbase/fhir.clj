@@ -1,0 +1,32 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "valueset-deprecated",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/valueset-deprecated",
+  "name": "Whether the concept has been deprecated",
+  "display": "Deprecated",
+  "publisher": "HL7",
+  "description": "Set to true of the concept has been deprecated (still can be used, but soon to be withdrawn).",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "contextType": "resource",
+  "context": [
+    "ValueSet.define.concept",
+    "ValueSet.define.concept.concept",
+    ".concept.concept"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Whether the concept has been deprecated",
+      "formal": "Set to true of the concept has been deprecated (still can be used, but soon to be withdrawn).",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

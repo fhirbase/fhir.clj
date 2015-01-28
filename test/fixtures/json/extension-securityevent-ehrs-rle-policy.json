@@ -1,0 +1,57 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "securityevent-ehrs-rle-policy",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/securityevent-ehrs-rle-policy",
+  "name": "Policy or plan th eactivity was defined by",
+  "publisher": "Health Level Seven, Inc. - EHR WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/special/committees/ehr.html"
+    }
+  ],
+  "description": "Policy or plan the event was defined by. Typically, a single event may have multiple applicable policy documents, such as patient consent, guarantor funding, etc.",
+  "status": "draft",
+  "date": "2014-12-04",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "resource",
+  "context": [
+    "SecurityEvent.event"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Policy or plan th eactivity was defined by",
+      "formal": "Policy or plan the event was defined by. Typically, a single event may have multiple applicable policy documents, such as patient consent, guarantor funding, etc.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isSummary": false,
+      "mapping": [
+        {
+          "identity": "v2",
+          "map": "N/A"
+        },
+        {
+          "identity": "rim",
+          "map": ".targetOf[typeCode=SUBJ].source[classCode=POLICY, moodCode=EVN]"
+        }
+      ]
+    }
+  ]
+}

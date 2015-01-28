@@ -1,0 +1,47 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-supply-item",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 2 concepts</p><h2>Supply Item Type</h2><p>This value sets refers to a specific supply item</p><p>This value set defines its own terms in the system http://hl7.org/fhir/supply-item-type</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>medication<a name=\"medication\"> </a></td><td>Medication</td><td>Supply is a kind of medication.</td></tr><tr><td>device<a name=\"device\"> </a></td><td>Device</td><td>What is supplied (or requested) is a device</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.262"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/supply-item",
+  "name": "Supply Item Type",
+  "publisher": "FHIR Project team",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "This value sets refers to a specific supply item",
+  "status": "draft",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:null"
+      }
+    ],
+    "system": "http://hl7.org/fhir/supply-item-type",
+    "concept": [
+      {
+        "code": "medication",
+        "display": "Medication",
+        "definition": "Supply is a kind of medication."
+      },
+      {
+        "code": "device",
+        "display": "Device",
+        "definition": "What is supplied (or requested) is a device"
+      }
+    ]
+  }
+}

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OperationDefinition xmlns="http://hl7.org/fhir">
+  <id value="Profile-questionnaire"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>Build Questionnaire</h2>
+      <p>OPERATION: questionnaire</p>
+      <div>
+        <p>Generates a 
+          <a href="Questionnaire">Questionnaire</a> instance  based on a specified 
+          <a href="Profile">Profile</a>, creating questions for each core element or extension element found in the profile.
+          <br/>
+        </p>
+
+        <p>If the operation is not called at the instance level, one of the 
+          <em>identifier</em>, 
+          <em>profile</em> or 
+          <em>url</em> &#39;in&#39; parameters must be provided.  (If called at the instance level, these parameters will be ignored.  If more than one is specified, servers may raise an error or may resolve with the parameter of their choice.)
+        </p>
+
+        <p>The response will contain a 
+          <a href="Questionnaire">Questionnaire</a> instance based on the specified 
+          <a href="Profile">Profile</a> and/or an 
+          <a href="OperationOutcome">OperationOutcome</a> resource with errors or warnings.
+        </p>
+
+        <p>Nested groups are used to handle complex structures and data types.  If the &#39;supportedOnly&#39; parameter is set to true, only those elements marked as &quot;must support&quot; will be included.</p>
+
+        <p>This operation is intended to enable auto-generation of simple interfaces for arbitrary profiles.  The &#39;questionnaire&#39; approach to data entry has limitations that will make it less optimal than custom-defined interfaces.  However, this function may be useful for simple applications or for systems that wish to support &quot;non-core&quot; resources with minimal development effort.</p>
+
+      </div>
+      <p>URL: [base]/Profile/$questionnaire</p>
+      <p>URL: [base]/Profile/[id]/$questionnaire</p>
+      <p>Parameters</p>
+      <table class="grid">
+        <tr>
+          <td>
+            <b>Use</b>
+          </td>
+          <td>
+            <b>Name</b>
+          </td>
+          <td>
+            <b>Cardinality</b>
+          </td>
+          <td>
+            <b>Type</b>
+          </td>
+          <td>
+            <b>Documentation</b>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>identifier</td>
+          <td>0..1</td>
+          <td>uri</td>
+          <td>
+            <div>
+              <p>A logical profile identifier (i.e. &#39;Profile.identifier&#39;&#39;). The server must know the profile or be able to retrieve it from other known repositories.</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>profile</td>
+          <td>0..1</td>
+          <td>token</td>
+          <td>
+            <div>
+              <p>The 
+                <a href="Profile">Profile</a> is provided directly as part of the request. Servers may choose not to accept profiles in this fashion
+              </p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>url</td>
+          <td>0..1</td>
+          <td>uri</td>
+          <td>
+            <div>
+              <p>The profile&#39;s official url (i.e. &#39;Profile.url&#39;). The server must know the profile or be able to retrieve it from other known repositories.</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>supportedOnly</td>
+          <td>0..1</td>
+          <td>boolean</td>
+          <td>
+            <div>
+              <p>If true, the questionnaire will only include those elements marked as &quot;mustSupport=&#39;true&#39;&quot; in the profile.</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>OUT</td>
+          <td>return</td>
+          <td>1..1</td>
+          <td>Questionnaire</td>
+          <td>
+            <div>
+              <p>The questionnaire form generated based on the profile.</p>
+
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div>
+        <p>
+          <strong>Open Issue</strong>: Ideally, extensions should be populated in the generated 
+          <a href="Questionnaire">Questionnaire</a> that will support taking 
+          <a href="QuestionnaireAnswers">QuestionnaireAnswers</a> resources generated from the Questionnaire and turning them back into the appropriate resources.
+        </p>
+
+      </div>
+    </div>
+  </text>
+  <identifier value="http://hl7.org/fhir/OperationDefinition/Profile-questionnaire"/>
+  <title value="Build Questionnaire"/>
+  <publisher value="HL7 (FHIR Project)"/>
+  <telecom>
+    <system value="url"/>
+    <value value="http://hl7.org/fhir"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="fhir@lists.hl7.org"/>
+  </telecom>
+  <description value="Generates a [[[Questionnaire]]] instance  based on a specified [[[Profile]]], creating questions for each core element or extension element found in the profile.  
+
+If the operation is not called at the instance level, one of the *identifier*, *profile* or *url* &#39;in&#39; parameters must be provided.  (If called at the instance level, these parameters will be ignored.  If more than one is specified, servers may raise an error or may resolve with the parameter of their choice.)
+
+The response will contain a [[[Questionnaire]]] instance based on the specified [[[Profile]]] and/or an [[[OperationOutcome]]] resource with errors or warnings.
+
+Nested groups are used to handle complex structures and data types.  If the &#39;supportedOnly&#39; parameter is set to true, only those elements marked as &quot;must support&quot; will be included.
+
+This operation is intended to enable auto-generation of simple interfaces for arbitrary profiles.  The &#39;questionnaire&#39; approach to data entry has limitations that will make it less optimal than custom-defined interfaces.  However, this function may be useful for simple applications or for systems that wish to support &quot;non-core&quot; resources with minimal development effort."/>
+  <status value="draft"/>
+  <date value="2014-12-12T13:17:44.755+11:00"/>
+  <kind value="operation"/>
+  <name value="questionnaire"/>
+  <notes value="**Open Issue**: Ideally, extensions should be populated in the generated [[[Questionnaire]]] that will support taking [[[QuestionnaireAnswers]]] resources generated from the Questionnaire and turning them back into the appropriate resources."/>
+  <system value="false"/>
+  <type value="Profile"/>
+  <instance value="true"/>
+  <parameter>
+    <name value="identifier"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="A logical profile identifier (i.e. &#39;Profile.identifier&#39;&#39;). The server must know the profile or be able to retrieve it from other known repositories."/>
+    <type value="uri"/>
+  </parameter>
+  <parameter>
+    <name value="profile"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="The [[[Profile]]] is provided directly as part of the request. Servers may choose not to accept profiles in this fashion"/>
+    <type value="token"/>
+  </parameter>
+  <parameter>
+    <name value="url"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="The profile&#39;s official url (i.e. &#39;Profile.url&#39;). The server must know the profile or be able to retrieve it from other known repositories."/>
+    <type value="uri"/>
+  </parameter>
+  <parameter>
+    <name value="supportedOnly"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="If true, the questionnaire will only include those elements marked as &quot;mustSupport=&#39;true&#39;&quot; in the profile."/>
+    <type value="boolean"/>
+  </parameter>
+  <parameter>
+    <name value="return"/>
+    <use value="out"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="The questionnaire form generated based on the profile."/>
+    <type value="Questionnaire"/>
+  </parameter>
+</OperationDefinition>

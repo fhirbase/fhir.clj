@@ -1,0 +1,31 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "valueset-label",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/valueset-label",
+  "name": "E.g. \"(a)\", \"1.\", etc.",
+  "publisher": "HL7",
+  "description": "The label to list in front of a code when presenting a list of possible values in a questionnaire-like fashion.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "contextType": "resource",
+  "context": [
+    "ValueSet.compose.include.concept",
+    "ValueSet.define.concept",
+    "ValueSet.expansion.contains"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "E.g. \"(a)\", \"1.\", etc.",
+      "formal": "The label to list in front of a code when presenting a list of possible values in a questionnaire-like fashion.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

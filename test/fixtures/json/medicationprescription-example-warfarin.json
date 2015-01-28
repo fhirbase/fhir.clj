@@ -1,0 +1,74 @@
+{
+  "resourceType": "MedicationPrescription",
+  "id": "warfarin",
+  "text": {
+    "status": "generated",
+    "div": "<div>\n      \n      <p>Warfarin 1 MG TAB - Take as directed, by mouth</p>\n      \n      <p>Dispense 100 tablets, 1 refill</p>\n      \n      <p>Prescribed by Dr. Adam Careful on Jan. 5, 2014</p>\n    \n    </div>"
+  },
+  "contained": [
+    {
+      "resourceType": "Medication",
+      "id": "1",
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.6.73",
+            "code": "B01AA03",
+            "display": "Warfarin 1 MG TAB"
+          }
+        ]
+      }
+    }
+  ],
+  "dateWritten": "2014-01-05",
+  "status": "active",
+  "patient": {
+    "reference": "Patient/example"
+  },
+  "prescriber": {
+    "reference": "Practitioner/example",
+    "display": "Dr. Adam Careful"
+  },
+  "reasonCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "49436004"
+      }
+    ]
+  },
+  "medication": {
+    "reference": "#1"
+  },
+  "dosageInstruction": [
+    {
+      "additionalInstructions": {
+        "text": "Take as directed"
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "394899003",
+            "display": "oral administration of treatment"
+          }
+        ]
+      }
+    }
+  ],
+  "dispense": {
+    "numberOfRepeatsAllowed": 2,
+    "quantity": {
+      "value": 100,
+      "units": "tablets",
+      "system": "http://hl7.org/fhir/v3/orderableDrugForm",
+      "code": "TAB"
+    },
+    "expectedSupplyDuration": {
+      "value": 60,
+      "units": "days",
+      "system": "http://unitsofmeasure.org",
+      "code": "d"
+    }
+  }
+}

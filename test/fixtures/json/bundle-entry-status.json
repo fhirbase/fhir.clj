@@ -1,0 +1,63 @@
+{
+  "resourceType": "ValueSet",
+  "id": "bundle-entry-status",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 4 concepts</p><h2>BundleEntryStatus</h2><p>The status of a resource in the bundle. Used for search (to differentiate between resources included as a match, and resources included as an _include), and for transactions (create/update/delete)</p><p>This value set defines its own terms in the system http://hl7.org/fhir/bundle-entry-status</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>create<a name=\"create\"> </a></td><td>Create</td><td>Transaction: perform a create operation on this resource.</td></tr><tr><td>update<a name=\"update\"> </a></td><td>Update</td><td>Transaction: perform an update operation on this resource.</td></tr><tr><td>match<a name=\"match\"> </a></td><td>Match</td><td>Transaction: look for this resource using the search url provided. If there's no match, create it. Search: this resource is returned because it matches the search criteria.</td></tr><tr><td>include<a name=\"include\"> </a></td><td>Include</td><td>Search: this resource is returned because it meets an _include criteria.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.494"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/bundle-entry-status",
+  "name": "BundleEntryStatus",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "The status of a resource in the bundle. Used for search (to differentiate between resources included as a match, and resources included as an _include), and for transactions (create/update/delete)",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.488+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.494"
+      }
+    ],
+    "system": "http://hl7.org/fhir/bundle-entry-status",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "create",
+        "display": "Create",
+        "definition": "Transaction: perform a create operation on this resource."
+      },
+      {
+        "code": "update",
+        "display": "Update",
+        "definition": "Transaction: perform an update operation on this resource."
+      },
+      {
+        "code": "match",
+        "display": "Match",
+        "definition": "Transaction: look for this resource using the search url provided. If there's no match, create it. Search: this resource is returned because it matches the search criteria."
+      },
+      {
+        "code": "include",
+        "display": "Include",
+        "definition": "Search: this resource is returned because it meets an _include criteria."
+      }
+    ]
+  }
+}

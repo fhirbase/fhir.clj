@@ -1,0 +1,1227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Profile xmlns="http://hl7.org/fhir">
+  <id value="cqf-medicationadministration-notgiven-cqf-ma-notgiven"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">to do</div>
+  </text>
+  <url value="http://hl7.org/fhir/Profile/cqf-medicationadministration-notgiven-cqf-ma-notgiven"/>
+  <name value="Clinical Quality Framework (CQF) Medication Administration Not Given Profile"/>
+  <publisher value="Health Level Seven, Inc. - CQI WG"/>
+  <telecom>
+    <system value="url"/>
+    <value value="http://hl7.org/special/committees/CQI"/>
+  </telecom>
+  <description value="Profile of medication administration for decision support/quality metrics, representing the case where a prescribed medication was not given to the patient.  Indicates which elements must be supported by CQF rules and measure engines. : Clinical Quality Framework (CQF) Medication Administration Not Given Profile"/>
+  <status value="draft"/>
+  <date value="2014-10-28"/>
+  <type value="MedicationAdministration"/>
+  <base value="http://hl7.org/fhir/Profile/MedicationAdministration"/>
+  <snapshot>
+    <element>
+      <path value="MedicationAdministration"/>
+      <name value="cqf-ma-notgiven"/>
+      <short value="Profile of MedicationAdministration for clinical quality rules and measures for medications that were NOT administered. Includes a reason the medication was not given."/>
+      <formal value="Profile of MedicationAdministration for clinical quality rules and measures for medications that were NOT administered. Includes a reason the medication was not given."/>
+      <min value="1"/>
+      <max value="1"/>
+      <constraint>
+        <key value="2"/>
+        <name value="Not given reason"/>
+        <severity value="error"/>
+        <human value="Reason not given is only permitted if wasNotGiven is true"/>
+        <xpath value="not(exists(f:reasonNotGiven)) or f:wasNotGiven=&#39;true&#39;"/>
+      </constraint>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="SubstanceAdministration"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="SubstanceAdministration"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.id"/>
+      <short value="Logical id of this artefact"/>
+      <formal value="The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes."/>
+      <comments value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.meta"/>
+      <short value="Metadata about the resource"/>
+      <formal value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.meta.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.meta.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.meta.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.meta.versionId"/>
+      <short value="Version specific identifier"/>
+      <formal value="The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted."/>
+      <comments value="The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.meta.lastUpdated"/>
+      <short value="When the resource version last changed"/>
+      <formal value="When the resource last changed - e.g. when the version changed."/>
+      <comments value="This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="instant"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.meta.profile"/>
+      <short value="Profiles this resource claims to conform to"/>
+      <formal value="A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url."/>
+      <comments value="It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.meta.security"/>
+      <short value="Security Labels applied to this resource"/>
+      <formal value="Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure."/>
+      <comments value="The security labels can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.meta.tag"/>
+      <short value="Tags applied"/>
+      <formal value="Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource."/>
+      <comments value="The tags can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.implicitRules"/>
+      <short value="A set of rules under which this content was created"/>
+      <formal value="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content."/>
+      <comments value="Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.language"/>
+      <short value="Language of the resource content"/>
+      <formal value="The base language in which the resource is written."/>
+      <comments value="Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource
+
+Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="Language"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="A human language"/>
+        <referenceUri value="http://tools.ietf.org/html/bcp47"/>
+      </binding>
+    </element>
+    <element>
+      <path value="MedicationAdministration.text"/>
+      <short value="Text summary of the resource, for human interpretation"/>
+      <formal value="A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."/>
+      <comments value="Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."/>
+      <synonym value="narrative"/>
+      <synonym value="html"/>
+      <synonym value="xhtml"/>
+      <synonym value="display"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Narrative"/>
+      </type>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.contained"/>
+      <short value="Contained, inline Resources"/>
+      <formal value="These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope."/>
+      <comments value="This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."/>
+      <synonym value="inline resources"/>
+      <synonym value="anonymous resources"/>
+      <synonym value="contained resources"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Resource"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.identifier"/>
+      <short value="External identifier"/>
+      <formal value="External identifier - FHIR will generate its own internal IDs (probably URLs) which do not need to be explicitly managed by the resource.  The identifier here is one that would be used by another non-FHIR system - for example an automated medication pump would provide a record each time it operated; an administration while the patient was off the ward might be made with a different system and entered after the event.  Particularly important if these records have to be updated."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXA-25-Administered Barcode Identifier? (V2 def&#39;n of RXA-25 refers to the &#39;give&#39; occurrence; appears not to discuss &#39;administer&#39; cardinality which would seem to be 0..*)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="id"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXA-25-Administered Barcode Identifier? (V2 def&#39;n of RXA-25 refers to the &#39;give&#39; occurrence; appears not to discuss &#39;administer&#39; cardinality which would seem to be 0..*)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.status"/>
+      <short value="in progress | on hold | completed | entered in error | stopped"/>
+      <formal value="Will generally be set to show that the administration has been completed.  For some long running administrations such as infusions it is possible for an administration to be started but not completed or it may be paused while some other process is under way."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <fixedCode value="suspended, aborted"/>
+      <mustSupport value="true"/>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="MedicationAdministrationStatus"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="A set of codes indicating the current status of a MedicationAdministration"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/medication-admin-status"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXA-20-Completion Status"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="statusCode"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXA-20-Completion Status"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="statusCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.patient"/>
+      <short value="Who received medication?"/>
+      <formal value="The person or animal to whom the medication was given."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Patient"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-3-Patient ID List"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="subject-&gt;Patient"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-3-Patient ID List"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="subject-&gt;Patient"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.practitioner"/>
+      <short value="Who administered substance?"/>
+      <formal value="The individual who was responsible for giving the medication to the patient."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Practitioner"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXA-10-Administering Provider / PRT-5-Participation Person: PRT-4-Participation=&#39;AP&#39; (RXA-10 is deprecated)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="performer-&gt;Role"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXA-10-Administering Provider / PRT-5-Participation Person: PRT-4-Participation=&#39;AP&#39; (RXA-10 is deprecated)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="performer-&gt;Role"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.encounter"/>
+      <short value="Encounter administered as part of"/>
+      <formal value="The visit or admission the or other contact between patient and health care provider the medication administration was performed as part of."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Encounter"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PV1-19-Visit Number"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="component-&gt;EncounterEvent"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PV1-19-Visit Number"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="component-&gt;EncounterEvent"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.prescription"/>
+      <short value="Order administration performed against"/>
+      <formal value="The original request, instruction or authority to perform the administration."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/MedicationPrescription"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="ORC-3-Filler Order Number / ORC-2-Placer Order Number"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="InFullfillmentOf-&gt;SubstanceAdministration"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="ORC-3-Filler Order Number / ORC-2-Placer Order Number"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="InFullfillmentOf-&gt;SubstanceAdministration"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.wasNotGiven"/>
+      <short value="True if medication not administered"/>
+      <formal value="Set this to true if the record is saying that the medication was NOT administered."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <fixedBoolean value="true"/>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXA-20-Completion Status=&#39;NA&#39;"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="actionNegationInd"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXA-20-Completion Status=&#39;NA&#39;"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="actionNegationInd"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.reasonNotGiven"/>
+      <short value="Reason administration not performed"/>
+      <formal value="A code indicating why the administration was not performed."/>
+      <comments value="This field should be required (i.e. card=1..*)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <condition value="2"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="MedicationAdministrationNegationReason"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="A set of codes indicating the reason why the MedicationAdministration is negated."/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/reason-medication-not-given-codes"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXA-9-Administration Notes:RXA-20-Completion Status=&#39;NA&#39;"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Reason-&gt;Observation-&gt;Value"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXA-9-Administration Notes:RXA-20-Completion Status=&#39;NA&#39;"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Reason-&gt;Observation-&gt;Value"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.effectiveTime[x]"/>
+      <short value="Start and end time of administration"/>
+      <formal value="An interval of time during which the administration took place.  For many administrations, such as swallowing a tablet the lower and upper values of the interval will be the same."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="Period"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXA-3-Date/Time Start of Administration / RXA-4-Date/Time End of Administration"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="effectiveTime"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXA-3-Date/Time Start of Administration / RXA-4-Date/Time End of Administration"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="effectiveTime"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.medication"/>
+      <short value="What was administered?"/>
+      <formal value="Identifies the medication that was administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications."/>
+      <comments value="Note: do not use Medication.name to describe the administered medication. When the only available information is a text description of the medication, Medication.code.text should be used."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Medication"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXA-5-Administered Code"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Consumeable-&gt;AdministerableMedication"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXA-5-Administered Code"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Consumeable-&gt;AdministerableMedication"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.device"/>
+      <short value="Device used to administer"/>
+      <formal value="The device used in administering the medication to the patient.  E.g. a particular infusion pump."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Device"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PRT-10-Participation Device"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="device-&gt;Access  OR device-&gt;AssignedDevice"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PRT-10-Participation Device"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="device-&gt;Access  OR device-&gt;AssignedDevice"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.dosage"/>
+      <short value="Medicine administration instructions to the patient/carer"/>
+      <formal value="Provides details of how much of the medication was administered."/>
+      <min value="0"/>
+      <max value="*"/>
+      <constraint>
+        <key value="1"/>
+        <name value="Dose"/>
+        <severity value="error"/>
+        <human value="SHALL have at least one of dosage.quantity and dosage.rate"/>
+        <xpath value="exists(f:quantity) or exists(f:rate)"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="component-&gt;SubstanceAdministrationEvent"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="component-&gt;SubstanceAdministrationEvent"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.dosage.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.dosage.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.dosage.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.dosage.timing[x]"/>
+      <short value="When dose(s) were given"/>
+      <formal value="The timing schedule for giving the medication to the patient.  This may be a single time point (using dateTime) or it may be a start and end dateTime (Period)."/>
+      <comments value="This is generally only relevant if the administration record represents a summary of multiple administrations."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="Period"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RAS:TQ1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="effectiveTime[TS or IVL_TS)"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RAS:TQ1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="effectiveTime[TS or IVL_TS)"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.dosage.asNeeded[x]"/>
+      <short value="Take &quot;as needed&quot; f(or x)"/>
+      <formal value="If set to true or if specified as a CodeableConcept, indicates that the medication is only taken when needed within the specified schedule rather than at every scheduled dose.  If a CodeableConcept is present, it indicates the pre-condition for taking the Medication."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="MedicationAsNeededReason"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="A coded concept identifying the pre-condition that should hold prior to consuming a medication dose.  For example &quot;pain&quot;, &quot;30 minutes prior to sexual intercourse&quot;, &quot;on flare-up&quot;, etc."/>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value="boolean: precondition.negationInd (inversed - so negationInd = true means asNeeded=false
+
+CodeableConcept: precondition.observationEventCriterion[code=&quot;Assertion&quot;].value"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="boolean: precondition.negationInd (inversed - so negationInd = true means asNeeded=false
+
+CodeableConcept: precondition.observationEventCriterion[code=&quot;Assertion&quot;].value"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.dosage.site"/>
+      <short value="Body site administered to"/>
+      <formal value="A coded specification of the anatomic site where the medication first entered the body.  E.g. &quot;left arm&quot;."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="MedicationAdministrationSite"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="A coded concept describing the site location the medicine enters into or onto the body"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/approach-site-codes"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXR-2-Administration Site"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="approachSiteCode"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXR-2-Administration Site"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="approachSiteCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.dosage.route"/>
+      <short value="Path of substance into body"/>
+      <formal value="A code specifying the route or physiological path of administration of a therapeutic agent into or onto the patient.   E.g. topical, intravenous, etc."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="RouteOfAdministration"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject."/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/route-codes"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXR-1-Route"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="routeCode"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXR-1-Route"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="routeCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.dosage.method"/>
+      <short value="How drug was administered"/>
+      <formal value="A coded value indicating the method by which the medication was introduced into or onto the body. Most commonly used for injections.  Examples:  Slow Push; Deep IV.
+
+Terminologies used often pre-coordinate this term with the route and or form of administration."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="MedicationAdministrationMethod"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="A coded concept describing the technique by which the medicine is administered"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/administration-method-codes"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXR-4-Administration Method"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="methodCode"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXR-4-Administration Method"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="methodCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.dosage.quantity"/>
+      <short value="Amount administered in one dose"/>
+      <formal value="The amount of the medication given at one administration event.   Use this value when the administration is essentially an instantaneous event such as a swallowing a tablet or giving an injection."/>
+      <comments value="If the administration is not instantaneous (rate is present or timing has a duration), this can be specified to convey the total amount administered over period of time of a single administration (as indicated by schedule)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXA-6-Administered Amount / RXA-7.1-Administered Units.code / RXA-7.3-Administered Units.name of coding system (uri&lt;-&gt;code system mapping required)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="doseQuantity"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXA-6-Administered Amount / RXA-7.1-Administered Units.code / RXA-7.3-Administered Units.name of coding system (uri&lt;-&gt;code system mapping required)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="doseQuantity"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.dosage.rate"/>
+      <short value="Dose quantity per unit of time"/>
+      <formal value="Identifies the speed with which the medication was introduced into the patient. Typically the rate for an infusion e.g. 200ml in 2 hours.  May also expressed as a rate per unit of time such as 100ml per hour - the duration is then not specified, or is specified in the quantity."/>
+      <comments value="If the rate changes over time, each change should be captured as a distinct &quot;dosage&quot; repetition.  This element should *not* be used to convey an average rate."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Ratio"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXA-12-Administered Per (Time Unit)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="rateQuantity"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXA-12-Administered Per (Time Unit)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="rateQuantity"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="MedicationAdministration.dosage.maxDosePerPeriod"/>
+      <short value="Total dose that was consumed per unit of time"/>
+      <formal value="The maximum total quantity of a therapeutic substance that was administered to the patient over the specified period of time. E.g. 1000mg in 24 hours."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Ratio"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXE-4-Give Amount - Maximum / RXE-5-Give Units"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="maxDoseQuantity"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="RXE-4-Give Amount - Maximum / RXE-5-Give Units"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="maxDoseQuantity"/>
+      </mapping>
+    </element>
+  </snapshot>
+  <differential>
+    <element>
+      <path value="MedicationAdministration"/>
+      <name value="cqf-ma-notgiven"/>
+      <short value="Profile of MedicationAdministration for clinical quality rules and measures for medications that were NOT administered. Includes a reason the medication was not given."/>
+      <formal value="Profile of MedicationAdministration for clinical quality rules and measures for medications that were NOT administered. Includes a reason the medication was not given."/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.status"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <fixedCode value="suspended, aborted"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.patient"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Patient"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.practitioner"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Practitioner"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.encounter"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Encounter"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.prescription"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/MedicationPrescription"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.wasNotGiven"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <fixedBoolean value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.reasonNotGiven"/>
+      <comments value="This field should be required (i.e. card=1..*)."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.effectiveTime[x]"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="Period"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.medication"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Medication"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.device"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Device"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.dosage"/>
+      <min value="0"/>
+      <max value="*"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.dosage.timing[x]"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <type>
+        <code value="Period"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.dosage.asNeeded[x]"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.dosage.site"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.dosage.route"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.dosage.method"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.dosage.quantity"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.dosage.rate"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Ratio"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="MedicationAdministration.dosage.maxDosePerPeriod"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Ratio"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</Profile>

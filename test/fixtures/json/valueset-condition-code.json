@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-condition-code",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div>\n      <p>This value set includes all SNOMED CT clinical findings (concepts with an is-a relationship with 404684003)</p>\n    </div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.313"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/condition-code",
+  "name": "Condition/Problem/Diagnosis Codes",
+  "publisher": "FHIR Project team",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "Example value set for Condition/Problem/Diagnosis codes",
+  "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement",
+  "status": "draft",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "404684003"
+          }
+        ]
+      }
+    ]
+  }
+}

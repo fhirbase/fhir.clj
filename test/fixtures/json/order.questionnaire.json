@@ -1,0 +1,674 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "vs2",
+      "identifier": "urn:uuid:2d4ebe5c-d946-4c40-8432-e7ecd316d586",
+      "name": "Type options for Order.target",
+      "description": "Type options for Order.target",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:21:18.579+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Organization",
+            "display": "Organization"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Device",
+            "display": "Device"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Practitioner",
+            "display": "Practitioner"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs3",
+      "identifier": "urn:uuid:5e2c7cae-cda6-4eab-b649-e630f4fdb65e",
+      "name": "Type options for Order.reason[x]",
+      "description": "Type options for Order.reason[x]",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:21:18.579+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "CodeableConcept",
+            "display": "CodeableConcept"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Any",
+            "display": "Any"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (Orders and Observations)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "A request to perform an action."
+      }
+    ],
+    "linkId": "Order",
+    "title": "A request to perform an action",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "Order.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Order.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "Order.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Order.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Order.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Order.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Order.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "Order.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Order.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "Order.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Order.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Order.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Order.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Order.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Order.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "Order.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Order.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "Order.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Order.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "Order.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "Order.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Identifiers assigned to this order by the orderer or by the receiver."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Identifier"
+          }
+        ],
+        "linkId": "Order.identifier",
+        "text": "Identifiers assigned to this order by the orderer or by the receiver",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Order.identifier.label",
+            "text": "label:",
+            "type": "string"
+          },
+          {
+            "linkId": "Order.identifier.system",
+            "text": "system:",
+            "type": "string"
+          },
+          {
+            "linkId": "Order.identifier.value",
+            "text": "value:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "When the order was made."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "datetime"
+          }
+        ],
+        "linkId": "Order.date",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Order.date.value",
+            "text": "When the order was made",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Patient this order is about. May be left blank if the request reference identifies the patient, or if the request is not associated with a patient."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "Order.subject",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "Order.subject.value",
+            "text": "Patient this order is about",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Who initiated the order."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "Order.source",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "Order.source.value",
+            "text": "Who initiated the order",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Who is intended to fulfill the order."
+          }
+        ],
+        "linkId": "Order.target",
+        "text": "Who is intended to fulfill the order",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Order.target._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs2"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Order.target._Organization",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Order.target._Organization.value",
+                    "text": "Organization",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Order.target._Device",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Device?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Order.target._Device.value",
+                    "text": "Device",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Order.target._Practitioner",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Order.target._Practitioner.value",
+                    "text": "Practitioner",
+                    "type": "reference"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Text - why the order was made."
+          }
+        ],
+        "linkId": "Order.reason[x]",
+        "text": "Text - why the order was made",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Order.reason[x]._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs3"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "CodeableConcept"
+                  }
+                ],
+                "linkId": "Order.reason[x]._CodeableConcept",
+                "text": "CodeableConcept",
+                "question": [
+                  {
+                    "linkId": "Order.reason[x]._CodeableConcept.coding",
+                    "text": "code:",
+                    "type": "open-choice"
+                  },
+                  {
+                    "linkId": "Order.reason[x]._CodeableConcept.text",
+                    "text": "text:",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Order.reason[x]._Any",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Order.reason[x]._Any.value",
+                    "text": "Any",
+                    "type": "reference"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "If required by policy. Reference will be constrained when suitable targets exist."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "Order.authority",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "Order.authority.value",
+            "text": "If required by policy",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "When order should be fulfilled."
+          }
+        ],
+        "linkId": "Order.when",
+        "title": "When order should be fulfilled",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Order.when.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Order.when.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Code specifies when request should be done. The code may simply be a priority code. This is usually a local code agreed in the context of the ordering workflow."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "Order.when.code",
+            "text": "Code specifies when request should be done. The code may simply be a priority code",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Order.when.code.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "Order.when.code.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A formal schedule."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Schedule"
+              }
+            ],
+            "linkId": "Order.when.schedule",
+            "text": "A formal schedule",
+            "repeats": true
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "What action is being ordered."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "Order.detail",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "Order.detail.value",
+            "text": "What action is being ordered",
+            "type": "reference"
+          }
+        ]
+      }
+    ]
+  }
+}

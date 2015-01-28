@@ -1,0 +1,29 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "valueset-display",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/valueset-display",
+  "name": "Display value for the code",
+  "publisher": "HL7",
+  "description": "The display name for the code.  I.e. ValueSet.define.concept.display (or its equivalent).",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "contextType": "resource",
+  "context": [
+    "ValueSet.compose.include.concept"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Display value for the code",
+      "formal": "The display name for the code.  I.e. ValueSet.define.concept.display (or its equivalent).",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

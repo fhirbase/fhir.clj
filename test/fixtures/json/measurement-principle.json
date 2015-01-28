@@ -1,0 +1,98 @@
+{
+  "resourceType": "ValueSet",
+  "id": "measurement-principle",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 11 concepts</p><h2>Measmnt-Principle</h2><p>Different measurement principle supported by the device</p><p>This value set defines its own terms in the system http://hl7.org/fhir/measurement-principle</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>other<a name=\"other\"> </a></td><td>msp-other</td><td>Measurement principle isn't in the list.</td></tr><tr><td>chemical<a name=\"chemical\"> </a></td><td>msp-chemical</td><td>Measurement is done using chemical.</td></tr><tr><td>electrical<a name=\"electrical\"> </a></td><td>msp-electrical</td><td>Measurement is done using electrical.</td></tr><tr><td>impedance<a name=\"impedance\"> </a></td><td>msp-impedance</td><td>Measurement is done using impedance.</td></tr><tr><td>nuclear<a name=\"nuclear\"> </a></td><td>msp-nuclear</td><td>Measurement is done using nuclear.</td></tr><tr><td>optical<a name=\"optical\"> </a></td><td>msp-optical</td><td>Measurement is done using optical.</td></tr><tr><td>thermal<a name=\"thermal\"> </a></td><td>msp-thermal</td><td>Measurement is done using thermal.</td></tr><tr><td>biological<a name=\"biological\"> </a></td><td>msp-biological</td><td>Measurement is done using biological.</td></tr><tr><td>mechanical<a name=\"mechanical\"> </a></td><td>msp-mechanical</td><td>Measurement is done using mechanical.</td></tr><tr><td>acoustical<a name=\"acoustical\"> </a></td><td>msp-acoustical</td><td>Measurement is done using acoustical.</td></tr><tr><td>manual<a name=\"manual\"> </a></td><td>msp-manual</td><td>Measurement is done using manual.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.512"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/measurement-principle",
+  "name": "Measmnt-Principle",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Different measurement principle supported by the device",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.490+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.512"
+      }
+    ],
+    "system": "http://hl7.org/fhir/measurement-principle",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "other",
+        "display": "msp-other",
+        "definition": "Measurement principle isn't in the list."
+      },
+      {
+        "code": "chemical",
+        "display": "msp-chemical",
+        "definition": "Measurement is done using chemical."
+      },
+      {
+        "code": "electrical",
+        "display": "msp-electrical",
+        "definition": "Measurement is done using electrical."
+      },
+      {
+        "code": "impedance",
+        "display": "msp-impedance",
+        "definition": "Measurement is done using impedance."
+      },
+      {
+        "code": "nuclear",
+        "display": "msp-nuclear",
+        "definition": "Measurement is done using nuclear."
+      },
+      {
+        "code": "optical",
+        "display": "msp-optical",
+        "definition": "Measurement is done using optical."
+      },
+      {
+        "code": "thermal",
+        "display": "msp-thermal",
+        "definition": "Measurement is done using thermal."
+      },
+      {
+        "code": "biological",
+        "display": "msp-biological",
+        "definition": "Measurement is done using biological."
+      },
+      {
+        "code": "mechanical",
+        "display": "msp-mechanical",
+        "definition": "Measurement is done using mechanical."
+      },
+      {
+        "code": "acoustical",
+        "display": "msp-acoustical",
+        "definition": "Measurement is done using acoustical."
+      },
+      {
+        "code": "manual",
+        "display": "msp-manual",
+        "definition": "Measurement is done using manual."
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "resourceType": "ValueSet",
+  "id": "metric-calibration-state",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 4 concepts</p><h2>DeviceMetricCalibrationState</h2><p>Describes the state of a metric calibration</p><p>This value set defines its own terms in the system http://hl7.org/fhir/metric-calibration-state</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>not-calibrated<a name=\"not-calibrated\"> </a></td><td>The metric has not been calibrated.</td></tr><tr><td>calibration-required<a name=\"calibration-required\"> </a></td><td>The metric needs to be calibrated.</td></tr><tr><td>calibrated<a name=\"calibrated\"> </a></td><td>The metric has been calibrated.</td></tr><tr><td>unspecified<a name=\"unspecified\"> </a></td><td>The state of calibration of this metric is unspecified.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.537"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/metric-calibration-state",
+  "name": "DeviceMetricCalibrationState",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Describes the state of a metric calibration",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.490+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.537"
+      }
+    ],
+    "system": "http://hl7.org/fhir/metric-calibration-state",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "not-calibrated",
+        "definition": "The metric has not been calibrated."
+      },
+      {
+        "code": "calibration-required",
+        "definition": "The metric needs to be calibrated."
+      },
+      {
+        "code": "calibrated",
+        "definition": "The metric has been calibrated."
+      },
+      {
+        "code": "unspecified",
+        "definition": "The state of calibration of this metric is unspecified."
+      }
+    ]
+  }
+}

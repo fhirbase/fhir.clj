@@ -1,0 +1,72 @@
+{
+  "resourceType": "DeviceComponent",
+  "id": "example",
+  "text": {
+    "status": "generated",
+    "div": "<div>\n\t\t\t\n      <p>Example of a simple MDS from a pulse oximeter containment tree</p>\n\t\t\n    </div>"
+  },
+  "contained": [
+    {
+      "resourceType": "Device",
+      "id": "d1",
+      "identifier": [
+        {
+          "label": "Serial Number",
+          "value": "ID 13.1"
+        },
+        {
+          "label": "Global Medical Device Nomenclature",
+          "system": "urn:std:iso:11073:10101",
+          "value": "2000"
+        }
+      ],
+      "type": {
+        "coding": [
+          {
+            "system": "urn:std:iso:11073:10101",
+            "code": "2000",
+            "display": "MDC_DEV_ANALY_SAT_O2_MDS"
+          }
+        ]
+      },
+      "manufacturer": "Center4MI",
+      "model": "2-0-14"
+    }
+  ],
+  "type": {
+    "coding": [
+      {
+        "system": "urn:std:iso:11073:10101",
+        "code": "2000",
+        "display": "MDC_DEV_ANALY_SAT_O2_MDS"
+      }
+    ]
+  },
+  "identifier": {
+    "label": "Handle ID",
+    "value": "0"
+  },
+  "lastSystemChange": "2014-10-07T14:45:00",
+  "source": {
+    "reference": "#d1"
+  },
+  "operationalStatus": [
+    {
+      "coding": [
+        {
+          "system": "urn:std:iso:11073:10101",
+          "code": "0",
+          "display": "disconnected"
+        }
+      ]
+    }
+  ],
+  "languageCode": {
+    "coding": [
+      {
+        "system": "http://tools.ietf.org/html/bcp47",
+        "code": "en-US"
+      }
+    ]
+  }
+}

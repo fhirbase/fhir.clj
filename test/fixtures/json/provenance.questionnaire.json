@@ -1,0 +1,666 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (FHIR Management Group)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "Provenance information that describes the activity that led to the creation of a set of resources. This information can be used to help determine their reliability or trace where the information in them came from. The focus of the provenance resource is record keeping, audit and traceability, and not explicit statements of clinical significance."
+      }
+    ],
+    "linkId": "Provenance",
+    "title": "Who, What, When for a set of resources",
+    "text": "Some parties may be duplicated between the target resource and its provenance.  For instance, the prescriber is usually (but not always) the author of the prescription resource. This resource is defined with close consideration for W3C Provenance.",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "Provenance.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Provenance.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "Provenance.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Provenance.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Provenance.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Provenance.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Provenance.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "Provenance.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Provenance.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "Provenance.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Provenance.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Provenance.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Provenance.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Provenance.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Provenance.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "Provenance.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Provenance.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "Provenance.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Provenance.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "Provenance.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "Provenance.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The Reference(s) that were generated by  the activity described in this resource. A provenance can point to more than one target if multiple resources were created/updated by the same activity. Target references are usually version specific, but may not be, if a version has not been assigned or if the provenance information is part of the set of resources being maintained (i.e. a document). When using the RESTful API, the identity of the resource may not be known (especially not the version specific one); the client may either submit the resource first, and then the provenance, or it may submit both using a single transaction. See the notes on transaction for further discussion."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "Provenance.target",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "Provenance.target.value",
+            "text": "Target Reference(s) (usually version specific)",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The period during which the activity occurred. The period can be a little arbitrary; where possible, the time should correspond to human assessment of the activity time."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Period"
+          }
+        ],
+        "linkId": "Provenance.period",
+        "text": "When the activity occurred",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Provenance.period.low",
+            "text": "start:",
+            "type": "dateTime"
+          },
+          {
+            "linkId": "Provenance.period.end",
+            "text": "end:",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The instant of time at which the activity was recorded. This can be a little different from the time stamp on the resource if there is a delay between recording the event and updating the provenance and target resource."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "instant"
+          }
+        ],
+        "linkId": "Provenance.recorded",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Provenance.recorded.value",
+            "text": "When the activity was recorded / updated",
+            "type": "instant"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The reason that the activity was taking place."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "Provenance.reason",
+        "text": "Reason the activity is occurring",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Provenance.reason.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "Provenance.reason.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Where the activity occurred, if relevant."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "Provenance.location",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Location?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "Provenance.location.value",
+            "text": "Where the activity occurred, if relevant",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Policy or plan the activity was defined by. Typically, a single activity may have multiple applicable policy documents, such as patient consent, guarantor funding, etc."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "Provenance.policy",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Provenance.policy.value",
+            "text": "Policy or plan the activity was defined by",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "An agent takes a role in an activity such that the agent can be assigned some degree of responsibility for the activity taking place. An agent can be a person, a piece of software, an inanimate object, an organization, or other entities that may be ascribed responsibility."
+          }
+        ],
+        "linkId": "Provenance.agent",
+        "title": "Person, organization, records, etc. involved in creating resource",
+        "text": "Several agents may be associated (i.e. has some responsibility for an activity) with an activity and vice-versa.",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Provenance.agent.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Provenance.agent.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The role that the participant played."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Provenance.agent.role",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Provenance.agent.role.value",
+                "text": "e.g. author | overseer | enterer | attester | source | cc: +",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The type of the participant. If the type is \"Resource\" then the resource itself was the participant. If the type is a type of resource, then the entity identified by the resource is the participant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Provenance.agent.type",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Provenance.agent.type.value",
+                "text": "e.g. Resource | Person | Application | Record | Document +",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Identity of participant. May be a logical or physical uri and maybe absolute or relative. identity may be a reference to a resource or to something else, depending on the type."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "Provenance.agent.reference",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Provenance.agent.reference.value",
+                "text": "Identity of agent (urn or url)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Human-readable description of the participant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Provenance.agent.display",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Provenance.agent.display.value",
+                "text": "Human description of participant",
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "An entity used in this activity."
+          }
+        ],
+        "linkId": "Provenance.entity",
+        "title": "An entity used in this activity",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Provenance.entity.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Provenance.entity.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "How the entity was used during the activity."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "code"
+              }
+            ],
+            "linkId": "Provenance.entity.role",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Provenance.entity.role.value",
+                "text": "role",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The type of the entity. If the entity is a resource, then this is a resource type. If the type is \"resource\" then the resource itself was the participant. If the type is a type of resource, then the entity identified by the resource is the participant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Provenance.entity.type",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Provenance.entity.type.value",
+                "text": "Resource Type, or something else",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Identity of participant. May be a logical or physical uri and maybe absolute or relative. identity may be a reference to a resource or to something else, depending on the type."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "Provenance.entity.reference",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Provenance.entity.reference.value",
+                "text": "Identity of participant (urn or url)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Human-readable description of the entity."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Provenance.entity.display",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Provenance.entity.display.value",
+                "text": "Human description of participant",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The entity is attributed to an agent to express the agent's responsibility for that entity, possibly along with other agents. This description can be understood as shorthand for saying that the agent was responsible for the activity which generated the entity."
+              }
+            ],
+            "linkId": "Provenance.entity.agent",
+            "title": "Entity is attributed to this agent"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A digital signature on the target Reference(s). The signature should match a Provenance.agent.reference in the provenance resource. The signature is only added to support checking cryptographic integrity of the resource, and not to represent workflow and clinical aspects of the signing process, or to support non-repudiation. Whether the content is XML or JSON, the representation is as a base64 of the XML signature of the resource."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "Provenance.integritySignature",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Provenance.integritySignature.value",
+            "text": "Base64 signature (DigSig) - integrity check",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "uslabcc-practitioner",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/uslabcc-practitioner",
+  "name": "Copy to practitioner",
+  "display": "CC",
+  "publisher": "HL7 International - Orders and Observations WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org"
+    }
+  ],
+  "description": "Non-ordering practitioner, to whom the orderer instructs the recipient to send the results of the request.",
+  "status": "draft",
+  "date": "2014-11-17",
+  "contextType": "resource",
+  "context": [
+    "DiagnosticOrder"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Copy to practitioner",
+      "formal": "Non-ordering practitioner, to whom the orderer instructs the recipient to send the results of the request.",
+      "comments": "create type for each resource.",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "profile": "http://hl7.org/fhir/Profile/Practitioner"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

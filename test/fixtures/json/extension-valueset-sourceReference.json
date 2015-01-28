@@ -1,0 +1,30 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "valueset-sourceReference",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/valueset-sourceReference",
+  "name": "Where did this content come from",
+  "publisher": "HL7",
+  "description": "This text is intended to act as a citation to work done elsewhere that is not part of the current stewarding process where the referenced source is in some way a basis of the current value set definition.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "contextType": "resource",
+  "context": [
+    "ValueSet"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Where did this content come from",
+      "formal": "This text is intended to act as a citation to work done elsewhere that is not part of the current stewarding process where the referenced source is in some way a basis of the current value set definition.",
+      "comments": "This is not intended to be a direct link to another value set. It is only intended to support a link or textual description that indicates related material for the value set.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

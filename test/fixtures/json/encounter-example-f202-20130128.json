@@ -1,0 +1,62 @@
+{
+  "resourceType": "Encounter",
+  "id": "f202",
+  "identifier": [
+    {
+      "use": "temp",
+      "label": "Roel's encounter on January 28th, 2013",
+      "value": "Encounter_Roel_20130128"
+    }
+  ],
+  "status": "finished",
+  "class": "outpatient",
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "367336001",
+          "display": "Chemotherapy"
+        }
+      ]
+    }
+  ],
+  "patient": {
+    "reference": "Patient/f201",
+    "display": "Roel"
+  },
+  "participant": [
+    {
+      "individual": {
+        "reference": "Practitioner/f201"
+      }
+    }
+  ],
+  "length": {
+    "value": 56,
+    "units": "minutes",
+    "system": "http://snomed.info/sct",
+    "code": "258701004"
+  },
+  "reason": {
+    "text": "The patient is treated for a tumor."
+  },
+  "indication": [
+    {
+      "reference": "Procedure/f201",
+      "display": "Roel's TPF chemotherapy on January 28th, 2013"
+    }
+  ],
+  "priority": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "103391001",
+        "display": "Urgent"
+      }
+    ]
+  },
+  "serviceProvider": {
+    "reference": "Organization/f201"
+  }
+}

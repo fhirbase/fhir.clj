@@ -1,0 +1,35 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-report-names",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div>\n      This value set includes all LOINC codes (TODO: narrow this further - diagnostic codes, panels only)\n    <hr/><p>This value set does not contain a fixed number of concepts</p><h2>LOINC Diagnostic Report Codes</h2><p>This value set includes all the LOINC codes which relate to Diagnostic Observations</p><p><b>Copyright Statement:</b> This content from LOINC&reg; is copyright &copy; 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use</p><p>This value set includes codes defined in other code systems, using the following rules:</p><ul><li>Include all codes defined in http://loinc.org</li></ul></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.58"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/report-names",
+  "name": "LOINC Diagnostic Report Codes",
+  "publisher": "FHIR Project team",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "This value set includes all the LOINC codes which relate to Diagnostic Observations",
+  "copyright": "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use",
+  "status": "draft",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org"
+      }
+    ]
+  }
+}

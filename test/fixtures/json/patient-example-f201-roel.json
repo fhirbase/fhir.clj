@@ -1,0 +1,128 @@
+{
+  "resourceType": "Patient",
+  "id": "f201",
+  "identifier": [
+    {
+      "use": "official",
+      "label": "BSN",
+      "system": "urn:oid:2.16.840.1.113883.2.4.6.3",
+      "value": "123456789"
+    },
+    {
+      "use": "official",
+      "label": "BSN",
+      "system": "urn:oid:2.16.840.1.113883.2.4.6.3",
+      "value": "123456789"
+    }
+  ],
+  "name": [
+    {
+      "use": "official",
+      "text": "Roel",
+      "family": [
+        "Bor"
+      ],
+      "given": [
+        "Roelof Olaf"
+      ],
+      "prefix": [
+        "Drs."
+      ],
+      "suffix": [
+        "PDEng."
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "+31612345678",
+      "use": "mobile"
+    },
+    {
+      "system": "phone",
+      "value": "+31201234567",
+      "use": "home"
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1960-03-13",
+  "deceasedBoolean": false,
+  "address": [
+    {
+      "use": "home",
+      "line": [
+        "Bos en Lommerplein 280"
+      ],
+      "city": "Amsterdam",
+      "postalCode": "1055RW",
+      "country": "NLD"
+    }
+  ],
+  "maritalStatus": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "36629006",
+        "display": "Legally married"
+      },
+      {
+        "system": "http://hl7.org/fhir/v3/MaritalStatus",
+        "code": "M"
+      }
+    ]
+  },
+  "multipleBirthBoolean": false,
+  "photo": [
+    {
+      "contentType": "image/jpeg",
+      "url": "binary/@f006"
+    }
+  ],
+  "contact": [
+    {
+      "relationship": [
+        {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "127850001",
+              "display": "Wife"
+            },
+            {
+              "system": "http://hl7.org/fhir/patient-contact-relationship",
+              "code": "partner"
+            }
+          ]
+        }
+      ],
+      "name": {
+        "use": "usual",
+        "text": "Ariadne Bor-Jansma"
+      },
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "+31201234567",
+          "use": "home"
+        }
+      ]
+    }
+  ],
+  "communication": [
+    {
+      "coding": [
+        {
+          "system": "urn:std:iso:639-1",
+          "code": "nl-NL",
+          "display": "Dutch"
+        }
+      ]
+    }
+  ],
+  "managingOrganization": {
+    "reference": "Organization/f201",
+    "display": "AUMC"
+  },
+  "active": true
+}

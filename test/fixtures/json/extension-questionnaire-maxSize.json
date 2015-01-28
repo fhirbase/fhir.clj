@@ -1,0 +1,36 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "questionnaire-maxSize",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/questionnaire-maxSize",
+  "name": "Max size in MB",
+  "publisher": "HL7",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://www.hl7.org"
+    }
+  ],
+  "description": "For attachment answers, indicates the maximum size an attachment provided in response to a question can be.",
+  "status": "draft",
+  "date": "2013-07-04",
+  "contextType": "resource",
+  "context": [
+    "Questionnaire.group.question"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Max size in MB",
+      "formal": "For attachment answers, indicates the maximum size an attachment provided in response to a question can be.",
+      "comments": "This extension only has meaning if the question.type = Attachment.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "decimal"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

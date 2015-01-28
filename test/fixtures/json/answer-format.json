@@ -1,0 +1,99 @@
+{
+  "resourceType": "ValueSet",
+  "id": "answer-format",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 14 concepts</p><h2>AnswerFormat</h2><p>The expected format of an answer</p><p>This value set defines its own terms in the system http://hl7.org/fhir/answer-format</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>boolean<a name=\"boolean\"> </a></td><td>Answer is a yes/no answer.</td></tr><tr><td>decimal<a name=\"decimal\"> </a></td><td>Answer is a floating point number.</td></tr><tr><td>integer<a name=\"integer\"> </a></td><td>Answer is an integer.</td></tr><tr><td>date<a name=\"date\"> </a></td><td>Answer is a date.</td></tr><tr><td>dateTime<a name=\"dateTime\"> </a></td><td>Answer is a date and time.</td></tr><tr><td>instant<a name=\"instant\"> </a></td><td>Answer is a system timestamp.</td></tr><tr><td>time<a name=\"time\"> </a></td><td>Answer is a time independent of date.</td></tr><tr><td>string<a name=\"string\"> </a></td><td>Answer is a short (few words to short sentence) free-text entry.</td></tr><tr><td>text<a name=\"text\"> </a></td><td>Answer is a long (potentially multi-paragram) free-text entry.</td></tr><tr><td>choice<a name=\"choice\"> </a></td><td>Answer is a choice from a list of options.</td></tr><tr><td>open-choice<a name=\"open-choice\"> </a></td><td>Answer is a choice from a list of options or a free-text entry.</td></tr><tr><td>attachment<a name=\"attachment\"> </a></td><td>Answer is binary content such as a image, PDF, etc.</td></tr><tr><td>reference<a name=\"reference\"> </a></td><td>Answer is a reference to another resource (practitioner, organization, etc.).</td></tr><tr><td>quantity<a name=\"quantity\"> </a></td><td>Answer is a combination of a numeric value and unit.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.254"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/answer-format",
+  "name": "AnswerFormat",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "The expected format of an answer",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.493+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.254"
+      }
+    ],
+    "system": "http://hl7.org/fhir/answer-format",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "boolean",
+        "definition": "Answer is a yes/no answer."
+      },
+      {
+        "code": "decimal",
+        "definition": "Answer is a floating point number."
+      },
+      {
+        "code": "integer",
+        "definition": "Answer is an integer."
+      },
+      {
+        "code": "date",
+        "definition": "Answer is a date."
+      },
+      {
+        "code": "dateTime",
+        "definition": "Answer is a date and time."
+      },
+      {
+        "code": "instant",
+        "definition": "Answer is a system timestamp."
+      },
+      {
+        "code": "time",
+        "definition": "Answer is a time independent of date."
+      },
+      {
+        "code": "string",
+        "definition": "Answer is a short (few words to short sentence) free-text entry."
+      },
+      {
+        "code": "text",
+        "definition": "Answer is a long (potentially multi-paragram) free-text entry."
+      },
+      {
+        "code": "choice",
+        "definition": "Answer is a choice from a list of options."
+      },
+      {
+        "code": "open-choice",
+        "definition": "Answer is a choice from a list of options or a free-text entry."
+      },
+      {
+        "code": "attachment",
+        "definition": "Answer is binary content such as a image, PDF, etc."
+      },
+      {
+        "code": "reference",
+        "definition": "Answer is a reference to another resource (practitioner, organization, etc.)."
+      },
+      {
+        "code": "quantity",
+        "definition": "Answer is a combination of a numeric value and unit."
+      }
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "resourceType": "MedicationPrescription",
+  "id": "f005",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "http://www.bmc.nl/portal/prescriptions",
+      "value": "order9823343"
+    }
+  ],
+  "dateWritten": "2011-05-01",
+  "status": "active",
+  "patient": {
+    "reference": "Patient/f001",
+    "display": "P. van den Heuvel"
+  },
+  "prescriber": {
+    "reference": "Practitioner/f007",
+    "display": "S.M. Heps"
+  },
+  "encounter": {
+    "reference": "Encounter/f001",
+    "display": "encounter who leads to this priscription"
+  },
+  "reasonCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "38341003",
+        "display": "High blood pressure"
+      }
+    ]
+  },
+  "medication": {
+    "reference": "Medication/f005",
+    "display": "prescribed medication"
+  },
+  "dosageInstruction": [
+    {
+      "scheduledTiming": {
+        "event": [
+          {
+            "start": "2011-05-01"
+          }
+        ],
+        "repeat": {
+          "frequency": 1,
+          "duration": 1,
+          "units": "d"
+        }
+      },
+      "site": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "181220002",
+            "display": "Entire oral cavity"
+          }
+        ]
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "386359008",
+            "display": "Administration of drug or medicament via oral route"
+          }
+        ]
+      },
+      "doseQuantity": {
+        "value": 5,
+        "units": "mg",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg"
+      }
+    }
+  ],
+  "dispense": {
+    "validityPeriod": {
+      "start": "2011-05-01"
+    },
+    "quantity": {
+      "value": 28,
+      "system": "http://snomed.info/sct",
+      "code": "46992007"
+    }
+  }
+}

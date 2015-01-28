@@ -1,0 +1,627 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (FHIR Management Group)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "A container for a group of resources."
+      }
+    ],
+    "linkId": "Bundle",
+    "title": "Contains a group of resources",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "Bundle.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Bundle.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "Bundle.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Bundle.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Bundle.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Bundle.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Bundle.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "Bundle.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Bundle.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "Bundle.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Bundle.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Bundle.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Bundle.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Bundle.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Bundle.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "Bundle.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Bundle.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "Bundle.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Bundle.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Indicates the purpose of this bundle- how it was intended to be used. It's possible to use a bundle for other purposes (e.g. a document can be accepted as a transaction). This is primarily defined so that there can be specific rules for some of the bundle types."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "Bundle.type",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Bundle.type.value",
+            "text": "type",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base URL for the service that provided these resources. All relative URLs are relative to this one (equivalent to xml:base)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "Bundle.base",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Bundle.base.value",
+            "text": "Stated Base URL",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "If a set of search matches, this is the total number of matches for the search (as opposed to the number of results in this bundle). Only used if the bundle is a search result set."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "integer"
+          }
+        ],
+        "linkId": "Bundle.total",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Bundle.total.value",
+            "text": "If search, the total number of matches",
+            "type": "integer"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A series of links that provide context to this bundle."
+          }
+        ],
+        "linkId": "Bundle.link",
+        "title": "Links related to this Bundle",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Bundle.link.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Bundle.link.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A name which details the functional use for this link - see [[http://www.iana.org/assignments/link-relations/link-relations.xhtml]]."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Bundle.link.relation",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Bundle.link.relation.value",
+                "text": "http://www.iana.org/assignments/link-relations/link-relations.xhtml",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The reference details for the link."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "Bundle.link.url",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Bundle.link.url.value",
+                "text": "Reference details for the link",
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "An entry in a bundle resource - will either contain a resource, or a deleted entry (transaction and history bundles only)."
+          }
+        ],
+        "linkId": "Bundle.entry",
+        "title": "Entry in the bundle - will have deleted or resource",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Bundle.entry.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Bundle.entry.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The Base URL for the resource, if different to the base URL specified for the bundle as a whole. This allows bundles to be composed of resources from multiple servers (collated search, documents etc)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "Bundle.entry.base",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Bundle.entry.base.value",
+                "text": "Base URL, if different to bundle base",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The status of a resource in the bundle. Used for search (to differentiate between resources included as a match, and resources included as an _include), for history (deleted resources), and for transactions (create/update/delete)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "code"
+              }
+            ],
+            "linkId": "Bundle.entry.status",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Bundle.entry.status.value",
+                "text": "status",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Search URL for this resource when processing a transaction (see transaction documentation)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "Bundle.entry.search",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Bundle.entry.search.value",
+                "text": "Search URL (see transaction)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When searching, the server's search ranking score for the entry. Servers are not required to return a ranking score."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "decimal"
+              }
+            ],
+            "linkId": "Bundle.entry.score",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Bundle.entry.score.value",
+                "text": "Search ranking (between 0 and 1)",
+                "type": "decimal"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "If this is an entry that represents a deleted resource. Only used when the bundle is a transaction or a history type. See RESTful API documentation for further information."
+              }
+            ],
+            "linkId": "Bundle.entry.deleted",
+            "title": "If this is a deleted resource (transaction/history)",
+            "group": [
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "unique id for the element within a resource (for internal references)."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "Bundle.entry.deleted.id",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "Bundle.entry.deleted.id.value",
+                    "text": "xml:id (or equivalent in JSON)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The type of resource that was deleted (required to construct the identity)."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "code"
+                  }
+                ],
+                "linkId": "Bundle.entry.deleted.type",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "Bundle.entry.deleted.type.value",
+                    "text": "type",
+                    "type": "choice"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The id of the resource that was deleted. This would naturally be called \"id\" but this is not allowed (would clash with @id on all elements0."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "Bundle.entry.deleted.resourceId",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "Bundle.entry.deleted.resourceId.value",
+                    "text": "Id of resource that was deleted",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Version id for releted resource."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "Bundle.entry.deleted.versionId",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "Bundle.entry.deleted.versionId.value",
+                    "text": "Version id for releted resource",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The date/time that the resource was deleted."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "instant"
+                  }
+                ],
+                "linkId": "Bundle.entry.deleted.instant",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "Bundle.entry.deleted.instant.value",
+                    "text": "When the resource was deleted",
+                    "type": "instant"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The Resources for the entry."
+              }
+            ],
+            "linkId": "Bundle.entry.resource",
+            "text": "Resources in this bundle",
+            "repeats": true
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "XML Digital Signature - base64 encoded. This is base 64 encoded to address issues with json/xml."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "binary"
+          }
+        ],
+        "linkId": "Bundle.signature",
+        "text": "XML Digital Signature (base64 encoded)",
+        "repeats": true
+      }
+    ]
+  }
+}

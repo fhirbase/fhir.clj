@@ -1,0 +1,59 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "goal-common-target",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/goal-common-target",
+  "name": "Target for Goal",
+  "publisher": "Health Level Seven, Inc. - FHIR WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/special/committees/fhir"
+    }
+  ],
+  "description": "Target for Goal.",
+  "status": "draft",
+  "date": "2014-12-07",
+  "contextType": "resource",
+  "context": [
+    "Goal"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Target for Goal",
+      "formal": "Target for Goal.",
+      "min": 0,
+      "max": "*",
+      "isSummary": false
+    },
+    {
+      "path": "Extension.measure",
+      "short": "Measurable clinical attribute",
+      "formal": "The parameter whose value is being tracked.  E.g., body weight, blood pressure, hemoglobin A1c level.",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isSummary": false
+    },
+    {
+      "path": "Extension.detail",
+      "short": "Target value of the clinical attribute",
+      "formal": "The target value range of the focus to be achieved to signify the fulfillment of the goal, e.g., 150 pounds, 7.0%. Either the high or low or both values of the range can be specified. When a low value is missing, it indicates that the goal is achieved at any focus value at or below the high value. Similarly, if the high value is missing, it indicates that the goal is achieved at any focus value at or above the low value.",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "Range"
+        },
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

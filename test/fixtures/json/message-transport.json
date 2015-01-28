@@ -1,0 +1,55 @@
+{
+  "resourceType": "ValueSet",
+  "id": "message-transport",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 3 concepts</p><h2>MessageTransport</h2><p>The protocol used for message transport</p><p>This value set defines its own terms in the system http://hl7.org/fhir/message-transport</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>http<a name=\"http\"> </a></td><td>The application sends or receives messages using HTTP POST (may be over http or https).</td></tr><tr><td>ftp<a name=\"ftp\"> </a></td><td>The application sends or receives messages using File Transfer Protocol.</td></tr><tr><td>mllp<a name=\"mllp\"> </a></td><td>The application sends or receivers messages using HL7's Minimal Lower Level Protocol.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.46"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/message-transport",
+  "name": "MessageTransport",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "The protocol used for message transport",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.494+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.46"
+      }
+    ],
+    "system": "http://hl7.org/fhir/message-transport",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "http",
+        "definition": "The application sends or receives messages using HTTP POST (may be over http or https)."
+      },
+      {
+        "code": "ftp",
+        "definition": "The application sends or receives messages using File Transfer Protocol."
+      },
+      {
+        "code": "mllp",
+        "definition": "The application sends or receivers messages using HL7's Minimal Lower Level Protocol."
+      }
+    ]
+  }
+}

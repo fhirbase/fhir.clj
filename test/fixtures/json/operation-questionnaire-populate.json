@@ -1,0 +1,82 @@
+{
+  "resourceType": "OperationDefinition",
+  "id": "Questionnaire-populate",
+  "text": {
+    "status": "generated",
+    "div": "<div><h2>Populate Questionnaire</h2><p>OPERATION: populate</p><div><p>Generates a <a href=\"QuestionnaireAnswers\">QuestionnaireAnswers</a> instance  based on a specified <a href=\"Questionnaire\">Questionnaire</a>, filling in answers to questions where possible based on information provided as part of the operation or already known by the server about the subject of the <a href=\"Questionnaire\">Questionnaire</a>.</p>\n<p>If the operation is not called at the instance level, one of the identifier or questionnaire 'in' parameters must be provided.  (If called at the instance level, these parameters will be ignored.)</p>\n<p>The response will contain a <a href=\"QuestionnaireAnswers\">QuestionnaireAnswers</a> instance based on the specified <a href=\"Questionnaire\">Questionnaire</a> and/or an <a href=\"OperationOutcome\">OperationOutcome</a> resource with errors or warnings.</p>\n<p>The <a href=\"QuestionnaireAnswers\">QuestionnaireAnswers</a> instance will be populated with an unanswered set of questions following the group and question structure of the specified <a href=\"Questionnaire\">Questionnaire</a>.  If  <em>content</em> parameters were specified or the <em>local</em> parameter was set to true, some of the questions may have answers filled in as well.  In the case of repeating questions or groups, typically only one repetition will be provided unless answer values exist that would support populating multiple repetitions.</p>\n<p>Population of the <a href=\"QuestionnaireAnswers\">QuestionnaireAnswers</a> with appropriate data is dependent on the questions and/or groups in the <a href=\"Questionnaire\">Questionnaire</a> having metadata that allows the server to recognize the questions.  This might be through <em>Questionnaire.group.question.code</em> or through extensions such as the [[http://hl7.org/fhir/ExtensionDefinition/questionnaire-deReference|deReference]] extension.</p>\n</div><p>URL: [base]/Questionnaire/$populate</p><p>URL: [base]/Questionnaire/[id]/$populate</p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>identifier</td><td>0..1</td><td>uri</td><td><div><p>A logical questionnaire identifier (i.e. ''Questionnaire.identifier''). The server must know the questionnaire or be able to retrieve it from other known repositories.</p>\n</div></td></tr><tr><td>IN</td><td>questionnaire</td><td>0..1</td><td>Questionnaire</td><td><div><p>The <a href=\"Questionnaire\">Questionnaire</a> is provided directly as part of the request. Servers may choose not to accept questionnaires in this fashion</p>\n</div></td></tr><tr><td>IN</td><td>subject</td><td>1..1</td><td>Any</td><td><div><p>The resource that is to be the <em>QuestionnaireAnswers.subject</em>. The <a href=\"QuestionnaireAnswers\">QuestionnaireAnswers</a> instance will reference the provided subject.  In addition, if the <em>local</em> parameter is set to true, server information about the specified subject will be used to populate the instance.</p>\n</div></td></tr><tr><td>IN</td><td>content</td><td>0..*</td><td>string</td><td><div><p>Resources containing information to be used to help populate the <a href=\"QuestionnaireAnswers\">QuestionnaireAnswers</a>.  These may be FHIR resources or may be Binaries containing FHIR documents, CDA documents or other source materials.  Servers may not support all possible source materials and may ignore materials they do not recognize.  (They MAY provide warnings if ignoring submitted resources.)</p>\n</div></td></tr><tr><td>IN</td><td>local</td><td>0..1</td><td>boolean</td><td><div><p>If specified and set to 'true' (and the server is capable), the server should use what resources and other knowledge it has about the referenced subject when pre-populating answers to questions.</p>\n</div></td></tr><tr><td>OUT</td><td>return</td><td>1..1</td><td>QuestionnaireAnswers</td><td><div><p>The partially (or fully)-populated set of answers for the specified Questionnaire</p>\n</div></td></tr></table><div><p>While it is theoretically possible for a <a href=\"QuestionnaireAnswers\">QuestionnaireAnswers</a> instance to be completely auto-populated and submitted without human review, the intention of this transaction is merely to reduce redundant data entry.  A client <strong>SHOULD</strong> ensure that a human submitter has an opportunity to review the auto-populated answers to confirm correctness as well as to complete or expand on information provided by the auto-population process.</p>\n<p>Complex form designs with conditional logic or tight constraints on cardinalities may be challenging to auto-populate.  A server MAY choose to traverse the questionnaire as if it were a human respondant, answering only those questions that are enabled based on previously answered questions.  However doing so may result in minimal population.  Alternatively, systems may choose to populate all known answers, independent of dependencies and other constraints.  This may cause questions to be answered that should not be answered.  It will be up to the client to appropriately prune the final populated questionnaire once human review has taken place.</p>\n<p>Invoking this operation with the ''content'' parameter may involve the disclosure of personally identifiable healthcare information to the system which is performing the population process.  No such disclosures should be made unless the system on which the operation is being invoked is a &quot;trusted&quot; system and appropriate agreements are in place to protect the confidentiality of any information shared with that system.</p>\n</div></div>"
+  },
+  "identifier": "http://hl7.org/fhir/OperationDefinition/Questionnaire-populate",
+  "title": "Populate Questionnaire",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Generates a [[[QuestionnaireAnswers]]] instance  based on a specified [[[Questionnaire]]], filling in answers to questions where possible based on information provided as part of the operation or already known by the server about the subject of the [[[Questionnaire]]].\n\nIf the operation is not called at the instance level, one of the identifier or questionnaire 'in' parameters must be provided.  (If called at the instance level, these parameters will be ignored.)\n\nThe response will contain a [[[QuestionnaireAnswers]]] instance based on the specified [[[Questionnaire]]] and/or an [[[OperationOutcome]]] resource with errors or warnings.\n\nThe [[[QuestionnaireAnswers]]] instance will be populated with an unanswered set of questions following the group and question structure of the specified [[[Questionnaire]]].  If  *content* parameters were specified or the *local* parameter was set to true, some of the questions may have answers filled in as well.  In the case of repeating questions or groups, typically only one repetition will be provided unless answer values exist that would support populating multiple repetitions.\n\nPopulation of the [[[QuestionnaireAnswers]]] with appropriate data is dependent on the questions and/or groups in the [[[Questionnaire]]] having metadata that allows the server to recognize the questions.  This might be through *Questionnaire.group.question.code* or through extensions such as the [[http://hl7.org/fhir/ExtensionDefinition/questionnaire-deReference|deReference]] extension.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "kind": "operation",
+  "name": "populate",
+  "notes": "While it is theoretically possible for a [[[QuestionnaireAnswers]]] instance to be completely auto-populated and submitted without human review, the intention of this transaction is merely to reduce redundant data entry.  A client **SHOULD** ensure that a human submitter has an opportunity to review the auto-populated answers to confirm correctness as well as to complete or expand on information provided by the auto-population process.\n\nComplex form designs with conditional logic or tight constraints on cardinalities may be challenging to auto-populate.  A server MAY choose to traverse the questionnaire as if it were a human respondant, answering only those questions that are enabled based on previously answered questions.  However doing so may result in minimal population.  Alternatively, systems may choose to populate all known answers, independent of dependencies and other constraints.  This may cause questions to be answered that should not be answered.  It will be up to the client to appropriately prune the final populated questionnaire once human review has taken place.\n\nInvoking this operation with the ''content'' parameter may involve the disclosure of personally identifiable healthcare information to the system which is performing the population process.  No such disclosures should be made unless the system on which the operation is being invoked is a \"trusted\" system and appropriate agreements are in place to protect the confidentiality of any information shared with that system.",
+  "system": false,
+  "type": [
+    "Questionnaire"
+  ],
+  "instance": true,
+  "parameter": [
+    {
+      "name": "identifier",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "A logical questionnaire identifier (i.e. ''Questionnaire.identifier''). The server must know the questionnaire or be able to retrieve it from other known repositories.",
+      "type": "uri"
+    },
+    {
+      "name": "questionnaire",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "The [[[Questionnaire]]] is provided directly as part of the request. Servers may choose not to accept questionnaires in this fashion",
+      "type": "Questionnaire"
+    },
+    {
+      "name": "subject",
+      "use": "in",
+      "min": 1,
+      "max": "1",
+      "documentation": "The resource that is to be the *QuestionnaireAnswers.subject*. The [[[QuestionnaireAnswers]]] instance will reference the provided subject.  In addition, if the *local* parameter is set to true, server information about the specified subject will be used to populate the instance.",
+      "type": "Any"
+    },
+    {
+      "name": "content",
+      "use": "in",
+      "min": 0,
+      "max": "*",
+      "documentation": "Resources containing information to be used to help populate the [[[QuestionnaireAnswers]]].  These may be FHIR resources or may be Binaries containing FHIR documents, CDA documents or other source materials.  Servers may not support all possible source materials and may ignore materials they do not recognize.  (They MAY provide warnings if ignoring submitted resources.)",
+      "type": "string"
+    },
+    {
+      "name": "local",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "If specified and set to 'true' (and the server is capable), the server should use what resources and other knowledge it has about the referenced subject when pre-populating answers to questions.",
+      "type": "boolean"
+    },
+    {
+      "name": "return",
+      "use": "out",
+      "min": 1,
+      "max": "1",
+      "documentation": "The partially (or fully)-populated set of answers for the specified Questionnaire",
+      "type": "QuestionnaireAnswers"
+    }
+  ]
+}

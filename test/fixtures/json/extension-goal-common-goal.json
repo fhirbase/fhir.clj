@@ -1,0 +1,36 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "goal-common-goal",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/goal-common-goal",
+  "name": "Associated goal",
+  "publisher": "Health Level Seven, Inc. - FHIR WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/special/committees/fhir"
+    }
+  ],
+  "description": "The goal associated with the request.",
+  "status": "draft",
+  "date": "2014-12-07",
+  "contextType": "resource",
+  "context": [
+    "Any"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Associated goal",
+      "formal": "The goal associated with the request.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "profile": "http://hl7.org/fhir/Profile/Goal"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

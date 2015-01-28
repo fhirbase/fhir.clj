@@ -1,0 +1,55 @@
+{
+  "resourceType": "ValueSet",
+  "id": "participantrequired",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 3 concepts</p><h2>ParticipantRequired</h2><p>Is the Participant required to attend the appointment</p><p>This value set defines its own terms in the system http://hl7.org/fhir/participantrequired</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>required<a name=\"required\"> </a></td><td>The participant is required to attend the appointment.</td></tr><tr><td>optional<a name=\"optional\"> </a></td><td>The participant may optionally attend the appointment.</td></tr><tr><td>information-only<a name=\"information-only\"> </a></td><td>The participant is not required to attend the appointment (appointment is about them, not for them).</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.362"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/participantrequired",
+  "name": "ParticipantRequired",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Is the Participant required to attend the appointment",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.488+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.362"
+      }
+    ],
+    "system": "http://hl7.org/fhir/participantrequired",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "required",
+        "definition": "The participant is required to attend the appointment."
+      },
+      {
+        "code": "optional",
+        "definition": "The participant may optionally attend the appointment."
+      },
+      {
+        "code": "information-only",
+        "definition": "The participant is not required to attend the appointment (appointment is about them, not for them)."
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "valueset-systemName",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/valueset-systemName",
+  "name": "Code system name",
+  "publisher": "HL7",
+  "description": "The human-readable name for the code system.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "contextType": "resource",
+  "context": [
+    "ValueSet.compose.include"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Code system name",
+      "formal": "The human-readable name for the code system.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "resourceType": "ValueSet",
+  "id": "max-occurs",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 1 concepts</p><h2>MaxOccurs</h2><p>Flags an element as having unlimited repetitions</p><p>This value set defines its own terms in the system http://hl7.org/fhir/max-occurs</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>*<a name=\".42\"> </a></td><td>Element can repeat an unlimited number of times.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.389"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/max-occurs",
+  "name": "MaxOccurs",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Flags an element as having unlimited repetitions",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.497+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.389"
+      }
+    ],
+    "system": "http://hl7.org/fhir/max-occurs",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "*",
+        "definition": "Element can repeat an unlimited number of times."
+      }
+    ]
+  }
+}

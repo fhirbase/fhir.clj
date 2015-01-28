@@ -1,0 +1,512 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (Orders and Observations)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "A homogeneous material with a definite composition."
+      }
+    ],
+    "linkId": "Substance",
+    "title": "A homogeneous material with a definite composition",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "Substance.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Substance.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "Substance.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Substance.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Substance.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Substance.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Substance.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "Substance.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Substance.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "Substance.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Substance.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Substance.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Substance.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Substance.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Substance.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "Substance.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Substance.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "Substance.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Substance.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "Substance.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "Substance.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A code (or set of codes) that identify this substance. This could be a reference to an externally defined code.  It could also be a locally assigned code (e.g. a formulary),  optionally with translations to the standard drug codes."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "Substance.type",
+        "text": "What kind of substance this is",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Substance.type.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "Substance.type.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A description of the substance - its appearance, handling requirements, and other usage notes."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "Substance.description",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Substance.description.value",
+            "text": "Textual description of the substance, comments",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Substance may be used to describe a kind of substance, or a specific package/container of the substance: an instance."
+          }
+        ],
+        "linkId": "Substance.instance",
+        "title": "If this describes a specific package/container of the substance",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Substance.instance.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Substance.instance.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Identifier associated with the package/container (usually a label affixed directly)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Identifier"
+              }
+            ],
+            "linkId": "Substance.instance.identifier",
+            "text": "Identifier of the package/container",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Substance.instance.identifier.label",
+                "text": "label:",
+                "type": "string"
+              },
+              {
+                "linkId": "Substance.instance.identifier.system",
+                "text": "system:",
+                "type": "string"
+              },
+              {
+                "linkId": "Substance.instance.identifier.value",
+                "text": "value:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the substance is no longer valid to use. For some substances, a single arbitrary date is used for expiry."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "datetime"
+              }
+            ],
+            "linkId": "Substance.instance.expiry",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Substance.instance.expiry.value",
+                "text": "When no longer valid to use",
+                "type": "dateTime"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The amount of the substance."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Quantity"
+              }
+            ],
+            "linkId": "Substance.instance.quantity",
+            "text": "Amount of substance in the package",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Substance.instance.quantity.comparator",
+                "text": "comp:",
+                "type": "choice"
+              },
+              {
+                "linkId": "Substance.instance.quantity.value",
+                "text": "value:",
+                "type": "decimal"
+              },
+              {
+                "linkId": "Substance.instance.quantity.units",
+                "text": "units:",
+                "type": "string"
+              },
+              {
+                "linkId": "Substance.instance.quantity.code",
+                "text": "coded units:",
+                "type": "string"
+              },
+              {
+                "linkId": "Substance.instance.quantity.system",
+                "text": "units system:",
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A substance can be composed of other substances."
+          }
+        ],
+        "linkId": "Substance.ingredient",
+        "title": "Composition information about the substance",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Substance.ingredient.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Substance.ingredient.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The amount of the ingredient in the substance - a concentration ratio."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Ratio"
+              }
+            ],
+            "linkId": "Substance.ingredient.quantity",
+            "text": "Optional amount (concentration)",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Substance.ingredient.quantity.numerator",
+                "text": "numerator:",
+                "type": "decimal"
+              },
+              {
+                "linkId": "Substance.ingredient.quantity.denominator",
+                "text": "denominator:",
+                "type": "decimal"
+              },
+              {
+                "linkId": "Substance.ingredient.quantity.units",
+                "text": "units:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Another substance that is a component of this substance."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "Substance.ingredient.substance",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Substance?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "Substance.ingredient.substance.value",
+                "text": "A component of the substance",
+                "type": "reference"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

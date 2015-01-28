@@ -1,0 +1,67 @@
+{
+  "resourceType": "CarePlan",
+  "id": "f003",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "http://www.bmc.nl/zorgportal/identifiers/careplans",
+      "value": "CP3953"
+    }
+  ],
+  "patient": {
+    "reference": "Patient/f001",
+    "display": "P. van de Heuvel"
+  },
+  "status": "completed",
+  "period": {
+    "start": "2013-03-08T09:00:10+01:00",
+    "end": "2013-03-08T09:30:10+01:00"
+  },
+  "modified": "2013-06-27T09:30:10+01:00",
+  "concern": [
+    {
+      "reference": "Condition/f201",
+      "display": "?????"
+    }
+  ],
+  "participant": [
+    {
+      "member": {
+        "reference": "Practitioner/f001",
+        "display": "E.M. van den broek"
+      }
+    }
+  ],
+  "goal": [
+    {
+      "description": "Retropharyngeal abscess removal",
+      "status": "achieved",
+      "notes": "goal accomplished without complications"
+    }
+  ],
+  "activity": [
+    {
+      "status": "completed",
+      "prohibited": true,
+      "simple": {
+        "category": "procedure",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "172960003",
+              "display": "Incision of retropharyngeal abscess"
+            }
+          ]
+        },
+        "scheduledString": "2011-06-27T09:30:10+01:00",
+        "performer": [
+          {
+            "reference": "Practitioner/f001",
+            "display": "E.M. van den broek"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "resourceType": "Procedure",
+  "id": "f001",
+  "patient": {
+    "reference": "Patient/f001",
+    "display": "P. van de Heuvel"
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "34068001",
+        "display": "Heart valve replacement"
+      }
+    ]
+  },
+  "bodySite": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "17401000",
+          "display": "Heart valve structure"
+        }
+      ]
+    }
+  ],
+  "indication": [
+    {
+      "text": "Heart valve disorder"
+    }
+  ],
+  "performer": [
+    {
+      "person": {
+        "reference": "Practitioner/f002",
+        "display": "P. Voigt"
+      },
+      "role": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.15.111",
+            "code": "01.000",
+            "display": "Arts"
+          }
+        ],
+        "text": "Care role"
+      }
+    }
+  ],
+  "date": {
+    "start": "2011-06-26",
+    "end": "2011-06-27"
+  },
+  "encounter": {
+    "reference": "Encounter/f001"
+  },
+  "outcome": "improved blood circulation",
+  "report": [
+    {
+      "reference": "DiagnosticReport/f001",
+      "display": "Lab results blood test"
+    }
+  ],
+  "followUp": "described in care plan"
+}

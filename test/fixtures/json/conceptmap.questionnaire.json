@@ -1,0 +1,984 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "vs2",
+      "identifier": "urn:uuid:16a769d1-6516-47a4-9d37-4438e5fce769",
+      "name": "Type options for ConceptMap.source[x]",
+      "description": "Type options for ConceptMap.source[x]",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:19:26.974+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "uri",
+            "display": "uri"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "ValueSet",
+            "display": "ValueSet"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Profile",
+            "display": "Profile"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs3",
+      "identifier": "urn:uuid:7eeb580c-51e5-4aea-9ccc-8e77b9db9c49",
+      "name": "Type options for ConceptMap.target[x]",
+      "description": "Type options for ConceptMap.target[x]",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:19:26.974+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "uri",
+            "display": "uri"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "ValueSet",
+            "display": "ValueSet"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Profile",
+            "display": "Profile"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (Vocabulary)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "A statement of relationships from one set of concepts to one or more other concepts - either code systems or data elements, or classes in class models."
+      }
+    ],
+    "linkId": "ConceptMap",
+    "title": "A map from one set of concepts to one or more other concepts",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "ConceptMap.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ConceptMap.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "ConceptMap.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ConceptMap.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ConceptMap.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ConceptMap.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ConceptMap.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "ConceptMap.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ConceptMap.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "ConceptMap.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ConceptMap.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "ConceptMap.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ConceptMap.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "ConceptMap.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ConceptMap.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "ConceptMap.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ConceptMap.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "ConceptMap.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ConceptMap.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "ConceptMap.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "ConceptMap.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The identifier that is used to identify this concept map when it is referenced in a specification, model, design or an instance (should be globally unique OID, UUID, or URI)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "ConceptMap.identifier",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ConceptMap.identifier.value",
+            "text": "Logical id to reference this concept map",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The identifier that is used to identify this version of the concept map when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the profile author manually and the value should be a timestamp. There may be multiple resource versions of the concept map that have this same identifier."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "ConceptMap.version",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ConceptMap.version.value",
+            "text": "Logical id for this version of the concept map",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A free text natural language name describing the concept map. Not expected to be unique."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "ConceptMap.name",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ConceptMap.name.value",
+            "text": "Informal name for this concept map",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The name of the individual or organization that published the concept map. Usually an organization, but may be an individual. This item SHOULD be populated unless the information is available from context."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "ConceptMap.publisher",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ConceptMap.publisher.value",
+            "text": "Name of the publisher (Organization or individual)",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Contacts of the publisher to assist a user in finding and communicating with the publisher. May be a web site, an email address, a telephone number (tel:), etc."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "ContactPoint"
+          }
+        ],
+        "linkId": "ConceptMap.telecom",
+        "text": "Contact information of the publisher",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ConceptMap.telecom.system",
+            "text": "type:",
+            "type": "choice"
+          },
+          {
+            "linkId": "ConceptMap.telecom.value",
+            "text": "value:",
+            "type": "string"
+          },
+          {
+            "linkId": "ConceptMap.telecom.use",
+            "text": "use:",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A free text natural language description of the use of the concept map - reason for definition, conditions of use, etc. The description is not intended to describe the semantics of the concept map. The description should capture its intended use, which is needed for ensuring integrity for its use in models across future changes."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "ConceptMap.description",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ConceptMap.description.value",
+            "text": "Human language description of the concept map",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A copyright statement relating to the concept map and/or its contents. Frequently, the copyright differs between the concept map, and codes that are included. The copyright statement should clearly differentiate between these when required."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "ConceptMap.copyright",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ConceptMap.copyright.value",
+            "text": "About the concept map or its content",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The status of the concept map. Allows filtering of ConceptMaps that are appropriate for use."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "ConceptMap.status",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ConceptMap.status.value",
+            "text": "status",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "This ConceptMap was authored for testing purposes (or education/evaluation/marketing), and is not intended to be used for genuine usage. Allows filtering of ConceptMaps that are appropriate for use."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "boolean"
+          }
+        ],
+        "linkId": "ConceptMap.experimental",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ConceptMap.experimental.value",
+            "text": "If for testing purposes, not real usage",
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The date that the concept map status was last changed. Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the concept map."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "datetime"
+          }
+        ],
+        "linkId": "ConceptMap.date",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ConceptMap.date.value",
+            "text": "Date for given status",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The source value set that specifies the concepts that are being mapped. Should be a version specific reference."
+          }
+        ],
+        "linkId": "ConceptMap.source[x]",
+        "text": "Identifies the source of the concepts which are being mapped",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ConceptMap.source[x]._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs2"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "uri"
+                  }
+                ],
+                "linkId": "ConceptMap.source[x]._uri",
+                "question": [
+                  {
+                    "linkId": "ConceptMap.source[x]._uri.value",
+                    "text": "uri",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "ConceptMap.source[x]._ValueSet",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/ValueSet?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "ConceptMap.source[x]._ValueSet.value",
+                    "text": "ValueSet",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "ConceptMap.source[x]._Profile",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Profile?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "ConceptMap.source[x]._Profile.value",
+                    "text": "Profile",
+                    "type": "reference"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The target value set provides context to the mappings. Note that the mapping is made between concepts, not between value sets, but the value set provides important context about how the concept mapping choices are made."
+          }
+        ],
+        "linkId": "ConceptMap.target[x]",
+        "text": "Provides context to the mappings",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ConceptMap.target[x]._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs3"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "uri"
+                  }
+                ],
+                "linkId": "ConceptMap.target[x]._uri",
+                "question": [
+                  {
+                    "linkId": "ConceptMap.target[x]._uri.value",
+                    "text": "uri",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "ConceptMap.target[x]._ValueSet",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/ValueSet?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "ConceptMap.target[x]._ValueSet.value",
+                    "text": "ValueSet",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "ConceptMap.target[x]._Profile",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Profile?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "ConceptMap.target[x]._Profile.value",
+                    "text": "Profile",
+                    "type": "reference"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Mappings for an individual concept in the source to one or more concepts in the target."
+          }
+        ],
+        "linkId": "ConceptMap.element",
+        "title": "Mappings for a concept from the source set",
+        "text": "Generally, the ideal is that there would only be one mapping for each concept in the source value set, but a given concept may be mapped mutliple times with different comments or dependencies.",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ConceptMap.element.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ConceptMap.element.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Code System (if the source is a value value set that crosses more than one code system)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "ConceptMap.element.codeSystem",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ConceptMap.element.codeSystem.value",
+                "text": "Code System (if value set crosses code systems)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Identity (code or path) or the element/item being mapped."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "code"
+              }
+            ],
+            "linkId": "ConceptMap.element.code",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ConceptMap.element.code.value",
+                "text": "code",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A set of additional dependencies for this mapping to hold. This mapping is only applicable if the specified element can be resolved, and it has the specified value."
+              }
+            ],
+            "linkId": "ConceptMap.element.dependsOn",
+            "title": "Other elements required for this mapping (from context)",
+            "repeats": true,
+            "group": [
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "unique id for the element within a resource (for internal references)."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "ConceptMap.element.dependsOn.id",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ConceptMap.element.dependsOn.id.value",
+                    "text": "xml:id (or equivalent in JSON)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "A reference to a specific concept that holds a coded value. This can be an element in a FHIR resource, or a specific reference to a data element in a different specification (e.g. v2) or a general reference to a kind of data field, or a reference to a value set with an appropriately narrow definition."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "uri"
+                  }
+                ],
+                "linkId": "ConceptMap.element.dependsOn.element",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ConceptMap.element.dependsOn.element.value",
+                    "text": "Reference to element/field/valueset mapping depends on",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The code system of the dependency code (if the source/dependency is a value set that cross code systems)."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "uri"
+                  }
+                ],
+                "linkId": "ConceptMap.element.dependsOn.codeSystem",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ConceptMap.element.dependsOn.codeSystem.value",
+                    "text": "Code System (if necessary)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Identity (code or path) or the element/item that the map depends on / refers to."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "ConceptMap.element.dependsOn.code",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ConceptMap.element.dependsOn.code.value",
+                    "text": "Value of the referenced element",
+                    "type": "string"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A concept from the target value set that this concept maps to."
+              }
+            ],
+            "linkId": "ConceptMap.element.map",
+            "title": "Target of this map",
+            "text": "Ideally there would only be one map, with equal or equivalent mapping. But multiple maps are allowed for several narrower options, or to assert that other concepts are unmatched.",
+            "repeats": true,
+            "group": [
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "unique id for the element within a resource (for internal references)."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "ConceptMap.element.map.id",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ConceptMap.element.map.id.value",
+                    "text": "xml:id (or equivalent in JSON)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The code system of the target code (if the target is a value set that cross code systems). Should be a version specific reference."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "uri"
+                  }
+                ],
+                "linkId": "ConceptMap.element.map.codeSystem",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ConceptMap.element.map.codeSystem.value",
+                    "text": "System of the target (if necessary)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Identity (code or path) or the element/item that the map refers to."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "code"
+                  }
+                ],
+                "linkId": "ConceptMap.element.map.code",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ConceptMap.element.map.code.value",
+                    "text": "code",
+                    "type": "choice"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The equivalence between the source and target concepts (counting for the dependencies and products). The equivalence is read from source to target (e.g. the source is 'wider' than the target."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "code"
+                  }
+                ],
+                "linkId": "ConceptMap.element.map.equivalence",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ConceptMap.element.map.equivalence.value",
+                    "text": "equivalence",
+                    "type": "choice"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "A description of status/issues in mapping that conveys additional information not represented in  the structured data."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "ConceptMap.element.map.comments",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ConceptMap.element.map.comments.value",
+                    "text": "Description of status/issues in mapping",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "A set of additional outcomes from this mapping to other elements. To properly execute this mapping, the specified element must be mapped to some data element or source that is in context. The mapping may still be useful without a place for the additional data elements, but the equivalence cannot be relied on."
+                  }
+                ],
+                "linkId": "ConceptMap.element.map.product",
+                "title": "Other concepts that this mapping also produces",
+                "repeats": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

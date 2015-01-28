@@ -1,0 +1,36 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "ldl-chol-calculated",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/ldl-chol-calculated",
+  "name": "LDL is Calculated",
+  "publisher": "Grahame Grieve",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "grahame@healthintersections.com.au"
+    }
+  ],
+  "description": "True if the LDL value is calculated from Chol, Trig, and HDLC.",
+  "status": "draft",
+  "date": "2012-05-12",
+  "contextType": "resource",
+  "context": [
+    "Observation"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "LDL is Calculated",
+      "formal": "True if the LDL value is calculated from Chol, Trig, and HDLC.",
+      "comments": "It's definitely better that whether the LDL was calculated or not comes from the LOINC code. But this is defined to exercise the extension machinery in the publication tooling, and to make this comment. Actually, the location is odd too - it would probably be on the root observation, but this is for testing purposes.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

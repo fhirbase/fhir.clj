@@ -1,0 +1,44 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-relatedperson-relationshiptype",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set does not contain a fixed number of concepts</p><h2>PatientRelationshipType</h2><p>A set of codes that can be used to indicate the relationship between a Patient and a RelatedPerson.</p><p>This value set includes codes defined in other code systems, using the following rules:</p><ul><li>Import all the codes that are part of <a href=\"valueset-patient-contact-relationship.html\">http://hl7.org/fhir/vs/patient-contact-relationship</a></li><li>Include codes from <a href=\"v3/RoleCode/index.html\">http://hl7.org/fhir/v3/RoleCode</a> where concept  is-a  <a href=\"v3/RoleCode/index.html#_PersonalRelationshipRoleType\">_PersonalRelationshipRoleType</a></li></ul></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.251"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/relatedperson-relationshiptype",
+  "name": "PatientRelationshipType",
+  "publisher": "FHIR Project team",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "A set of codes that can be used to indicate the relationship between a Patient and a RelatedPerson.",
+  "status": "draft",
+  "compose": {
+    "import": [
+      "http://hl7.org/fhir/vs/patient-contact-relationship"
+    ],
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/v3/RoleCode",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "_PersonalRelationshipRoleType"
+          }
+        ]
+      }
+    ]
+  }
+}

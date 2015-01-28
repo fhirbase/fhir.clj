@@ -1,0 +1,759 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Profile xmlns="http://hl7.org/fhir">
+  <id value="supply-ccda-nonmedsupplyactivity-ccdanonmedsupplyactivity"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">to do</div>
+  </text>
+  <url value="http://hl7.org/fhir/Profile/supply-ccda-nonmedsupplyactivity-ccdanonmedsupplyactivity"/>
+  <name value="CCDA Non-Medicinal Supply Activity"/>
+  <publisher value="HL7 International - Orders and Observations WG"/>
+  <telecom>
+    <system value="url"/>
+    <value value="http://hl7.org"/>
+  </telecom>
+  <description value="CCDA Non-Medicinal Supply Activity template to FHIR Profile mapping : CCDA Non-Medicinal Supply Activity"/>
+  <status value="draft"/>
+  <date value="2014-11-08"/>
+  <type value="Supply"/>
+  <base value="http://hl7.org/fhir/Profile/Supply"/>
+  <snapshot>
+    <element>
+      <path value="Supply"/>
+      <name value="CCDANonMedSupplyActivity"/>
+      <short value="A supply -  request and provision"/>
+      <formal value="A supply - a  request for something, and provision of what is supplied."/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Supply[moodCode=RQO]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Supply[moodCode=RQO]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.id"/>
+      <short value="Logical id of this artefact"/>
+      <formal value="The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes."/>
+      <comments value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Supply.meta"/>
+      <short value="Metadata about the resource"/>
+      <formal value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Supply.meta.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.meta.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.meta.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.meta.versionId"/>
+      <short value="Version specific identifier"/>
+      <formal value="The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted."/>
+      <comments value="The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Supply.meta.lastUpdated"/>
+      <short value="When the resource version last changed"/>
+      <formal value="When the resource last changed - e.g. when the version changed."/>
+      <comments value="This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="instant"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Supply.meta.profile"/>
+      <short value="Profiles this resource claims to conform to"/>
+      <formal value="A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url."/>
+      <comments value="It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Supply.meta.security"/>
+      <short value="Security Labels applied to this resource"/>
+      <formal value="Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure."/>
+      <comments value="The security labels can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Supply.meta.tag"/>
+      <short value="Tags applied"/>
+      <formal value="Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource."/>
+      <comments value="The tags can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Supply.implicitRules"/>
+      <short value="A set of rules under which this content was created"/>
+      <formal value="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content."/>
+      <comments value="Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Supply.language"/>
+      <short value="Language of the resource content"/>
+      <formal value="The base language in which the resource is written."/>
+      <comments value="Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource
+
+Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="Language"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="A human language"/>
+        <referenceUri value="http://tools.ietf.org/html/bcp47"/>
+      </binding>
+    </element>
+    <element>
+      <path value="Supply.text"/>
+      <short value="Text summary of the resource, for human interpretation"/>
+      <formal value="A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."/>
+      <comments value="Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."/>
+      <synonym value="narrative"/>
+      <synonym value="html"/>
+      <synonym value="xhtml"/>
+      <synonym value="display"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Narrative"/>
+      </type>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.contained"/>
+      <short value="Contained, inline Resources"/>
+      <formal value="These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope."/>
+      <comments value="This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."/>
+      <synonym value="inline resources"/>
+      <synonym value="anonymous resources"/>
+      <synonym value="contained resources"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Resource"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.kind"/>
+      <short value="The kind of supply (central, non-stock, etc)"/>
+      <formal value="Category of supply, e.g.  central, non-stock, etc. This is used to support work flows associated with the supply process."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="SupplyKind"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="Category of supply"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/supply-kind"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.identifier"/>
+      <short value="Unique identifier"/>
+      <formal value="Unique identifier for this supply request."/>
+      <comments value="This is assigned by the orderer, and used to refer to this order in other external standards."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.status"/>
+      <short value="requested | dispensed | received | failed | cancelled"/>
+      <formal value="Status of the supply request."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <fixedCode value="dispensed"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="SupplyStatus"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="Status of the supply"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/valueset-supply-status"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode, also existence of fulfillment events"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode, also existence of fulfillment events"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.orderedItem"/>
+      <short value="Medication, Substance, or Device requested to be supplied"/>
+      <formal value="The item that is requested to be supplied."/>
+      <comments value="Note that there&#39;s a difference between a prescription - an instruction to take a medication, along with a (sometimes) implicit supply, and an explicit request to supply, with no explicit instructions."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Medication"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Substance"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Device"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=PRD].role"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=PRD].role"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.patient"/>
+      <short value="Patient for whom the item is supplied"/>
+      <formal value="A link to a resource representing the person whom the ordered item is for."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Patient"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].role"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].role"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.dispense"/>
+      <short value="Supply details"/>
+      <formal value="Indicates the details of the dispense event such as the days supply and quantity of a supply dispensed."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=FLFS].source[classCode=SPLY, moodCode=EVN]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=FLFS].source[classCode=SPLY, moodCode=EVN]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.dispense.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.dispense.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.dispense.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.dispense.identifier"/>
+      <short value="External identifier"/>
+      <formal value="Identifier assigned by the dispensing facility when the item(s) is dispensed."/>
+      <comments value="This is assigned by the dispenser, and used to refer to this order in other external standards."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.dispense.status"/>
+      <short value="in progress | dispensed | abandoned"/>
+      <formal value="A code specifying the state of the dispense event."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="SupplyDispenseStatus"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="Status of the dispense"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/valueset-supply-dispense-status"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode, also existence of fulfillment events"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode, also existence of fulfillment events"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.dispense.type"/>
+      <short value="Category of dispense event"/>
+      <formal value="Indicates the type of dispensing event that is performed. Examples include: Trial Fill, Completion of Trial, Partial Fill, Emergency Fill, Samples, etc."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="SupplyItemType"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="The actual item being supplied"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/supply-item"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.dispense.quantity"/>
+      <short value="Amount dispensed"/>
+      <formal value="The amount of supply that has been dispensed. Includes unit of measure."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".quantity"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".quantity"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.dispense.suppliedItem"/>
+      <short value="Medication, Substance, or Device supplied"/>
+      <formal value="Identifies the medication or substance or device being dispensed. This is either a link to a resource representing the details of the item or a simple attribute carrying a code that identifies the item from a known list."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Medication"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Substance"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Device"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=PRD].role"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=PRD].role"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.dispense.supplier"/>
+      <short value="Dispenser"/>
+      <formal value="The individual responsible for dispensing the medication, supplier or device."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Practitioner"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=PFM].role"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=PFM].role"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.dispense.whenPrepared"/>
+      <short value="Dispensing time"/>
+      <formal value="The time the dispense event occurred."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Period"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime.low"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime.low"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.dispense.whenHandedOver"/>
+      <short value="Handover time"/>
+      <formal value="The time the dispensed item was sent or handed to the patient (or agent)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Period"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime.high"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime.high"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.dispense.destination"/>
+      <short value="Where the Supply was sent"/>
+      <formal value="Identification of the facility/location where the Supply was shipped to, as part of the dispense event."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Location"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=DST].role"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=DST].role"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Supply.dispense.receiver"/>
+      <short value="Who collected the Supply"/>
+      <formal value="Identifies the person who picked up the Supply."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Practitioner"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=RCV].role"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=RCV].role"/>
+      </mapping>
+    </element>
+  </snapshot>
+  <differential>
+    <element>
+      <path value="Supply"/>
+      <name value="CCDANonMedSupplyActivity"/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Supply.status"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <fixedCode value="dispensed"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</Profile>

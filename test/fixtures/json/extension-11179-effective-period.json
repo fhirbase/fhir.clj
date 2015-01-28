@@ -1,0 +1,67 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "11179-effective-period",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/11179-effective-period",
+  "name": "When data element is \"valid\"",
+  "display": "Effective time",
+  "publisher": "Health Level Seven",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org"
+    }
+  ],
+  "description": "Identifies the date on which the element became (or is expected to become) active and the date on which the element became (or is expected to become) retired.",
+  "status": "draft",
+  "date": "2014-04-21",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    },
+    {
+      "identity": "iso11179",
+      "uri": "http://metadata-standards.org/11179/",
+      "name": "ISO 11179"
+    }
+  ],
+  "contextType": "resource",
+  "context": [
+    "DataElement"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "When data element is \"valid\"",
+      "formal": "Identifies the date on which the element became (or is expected to become) active and the date on which the element became (or is expected to become) retired.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Period"
+        }
+      ],
+      "isSummary": false,
+      "mapping": [
+        {
+          "identity": "v2",
+          "map": "N/A"
+        },
+        {
+          "identity": "rim",
+          "map": "N/A"
+        },
+        {
+          "identity": "iso11179",
+          "map": "start = Registration_State.effective_date\nend = Registration_State.until_date"
+        }
+      ]
+    }
+  ]
+}

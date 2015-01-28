@@ -1,0 +1,35 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "openEHR-exposureDescription",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/openEHR-exposureDescription",
+  "name": "Text description about exposure to the Substance",
+  "publisher": "Health Level Seven, Inc / openEHR project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org"
+    }
+  ],
+  "description": "Text description about exposure to the Substance.",
+  "status": "draft",
+  "date": "2014-10-09",
+  "contextType": "resource",
+  "context": [
+    "AllergyIntolerance.event"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Text description about exposure to the Substance",
+      "formal": "Text description about exposure to the Substance.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

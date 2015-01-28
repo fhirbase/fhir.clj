@@ -1,0 +1,989 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "vs2",
+      "identifier": "urn:uuid:c47d7e8d-d52a-40bc-894c-cb770839cc72",
+      "name": "Type options for Reversal.request",
+      "description": "Type options for Reversal.request",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:22:21.137+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "OralHealthClaim",
+            "display": "OralHealthClaim"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "PharmacyClaim",
+            "display": "PharmacyClaim"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "VisionClaim",
+            "display": "VisionClaim"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "ProfessionalClaim",
+            "display": "ProfessionalClaim"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "InstitutionalClaim",
+            "display": "InstitutionalClaim"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "SupportingDocumentation",
+            "display": "SupportingDocumentation"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs3",
+      "identifier": "urn:uuid:ba00f643-9839-4a08-be7b-78871b02dea8",
+      "name": "Type options for Reversal.response",
+      "description": "Type options for Reversal.response",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:22:21.137+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "ClaimResponse",
+            "display": "ClaimResponse"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "StatusResponse",
+            "display": "StatusResponse"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (Financial Management)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "This resource provides the request and response details for the request for which all actions are to be reversed or terminated."
+      }
+    ],
+    "linkId": "Reversal",
+    "title": "Reversal request",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "Reversal.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Reversal.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "Reversal.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Reversal.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Reversal.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Reversal.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Reversal.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "Reversal.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Reversal.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "Reversal.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Reversal.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Reversal.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Reversal.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Reversal.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Reversal.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "Reversal.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Reversal.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "Reversal.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Reversal.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "Reversal.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "Reversal.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The Response Business Identifier."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Identifier"
+          }
+        ],
+        "linkId": "Reversal.identifier",
+        "text": "Business Identifier",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Reversal.identifier.label",
+            "text": "label:",
+            "type": "string"
+          },
+          {
+            "linkId": "Reversal.identifier.system",
+            "text": "system:",
+            "type": "string"
+          },
+          {
+            "linkId": "Reversal.identifier.value",
+            "text": "value:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The version of the style of resource contents. This should be mapped to the allowable profiles for this and supporting resources."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "Reversal.ruleset",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Reversal.ruleset.value",
+            "text": "Resource version",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The style (standard) and version of the original material which was converted into this resource."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "Reversal.originalRuleset",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Reversal.originalRuleset.value",
+            "text": "Original version",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The date when this resource was created."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "datetime"
+          }
+        ],
+        "linkId": "Reversal.created",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Reversal.created.value",
+            "text": "Creation date",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The Insurer who is target  of the request."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "Reversal.target",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "Reversal.target.value",
+            "text": "Insurer",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The practitioner who is responsible for the services rendered to the patient."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "Reversal.provider",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "Reversal.provider.value",
+            "text": "Responsible practitioner",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The organization which is responsible for the services rendered to the patient."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "Reversal.organization",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "Reversal.organization.value",
+            "text": "Responsible organization",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Reference of resource to reverse."
+          }
+        ],
+        "linkId": "Reversal.request",
+        "text": "Request reference",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Reversal.request._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs2"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Reversal.request._OralHealthClaim",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/OralHealthClaim?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Reversal.request._OralHealthClaim.value",
+                    "text": "OralHealthClaim",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Reversal.request._PharmacyClaim",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/PharmacyClaim?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Reversal.request._PharmacyClaim.value",
+                    "text": "PharmacyClaim",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Reversal.request._VisionClaim",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/VisionClaim?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Reversal.request._VisionClaim.value",
+                    "text": "VisionClaim",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Reversal.request._ProfessionalClaim",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/ProfessionalClaim?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Reversal.request._ProfessionalClaim.value",
+                    "text": "ProfessionalClaim",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Reversal.request._InstitutionalClaim",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/InstitutionalClaim?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Reversal.request._InstitutionalClaim.value",
+                    "text": "InstitutionalClaim",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Reversal.request._SupportingDocumentation",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/SupportingDocumentation?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Reversal.request._SupportingDocumentation.value",
+                    "text": "SupportingDocumentation",
+                    "type": "reference"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Reference of response to resource to reverse."
+          }
+        ],
+        "linkId": "Reversal.response",
+        "text": "Response reference",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Reversal.response._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs3"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Reversal.response._ClaimResponse",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/ClaimResponse?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Reversal.response._ClaimResponse.value",
+                    "text": "ClaimResponse",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Reversal.response._StatusResponse",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/StatusResponse?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Reversal.response._StatusResponse.value",
+                    "text": "StatusResponse",
+                    "type": "reference"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Payee information supplied for matching purposes."
+          }
+        ],
+        "linkId": "Reversal.payee",
+        "title": "Payee",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Reversal.payee.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Reversal.payee.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Party to be reimbursed: Subscriber, provider, other."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Reversal.payee.type",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Reversal.payee.type.value",
+                "text": "Payee Type",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The provider who is to be reimbursed for the claim (the party to whom any benefit is assigned)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "Reversal.payee.provider",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "Reversal.payee.provider.value",
+                "text": "Provider who is the payee",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The organization who is to be reimbursed for the claim (the party to whom any benefit is assigned)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "Reversal.payee.organization",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "Reversal.payee.organization.value",
+                "text": "Organization who is the payee",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The person other than the subscriber who is to be reimbursed for the claim (the party to whom any benefit is assigned)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "Reversal.payee.person",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "Reversal.payee.person.value",
+                "text": "Other person who is the payee",
+                "type": "reference"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Financial instrument by which payment information for health care."
+          }
+        ],
+        "linkId": "Reversal.coverage",
+        "title": "Insurance or medical plan",
+        "required": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Reversal.coverage.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Reversal.coverage.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A service line item."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "integer"
+              }
+            ],
+            "linkId": "Reversal.coverage.sequence",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Reversal.coverage.sequence.value",
+                "text": "Service instance",
+                "type": "integer"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The instance number of the Coverage which is the focus for adjudication, that is the Coverage to which the claim is to be adjudicated against."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "boolean"
+              }
+            ],
+            "linkId": "Reversal.coverage.focal",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Reversal.coverage.focal.value",
+                "text": "Is the focal Coverage",
+                "type": "boolean"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Reference to the program or plan identification, underwriter or payor."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "Reversal.coverage.coverage",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Coverage?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "Reversal.coverage.coverage.value",
+                "text": "Insurance information",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The contract number of a business agreement which describes the terms and conditions."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Reversal.coverage.businessArrangement",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Reversal.coverage.businessArrangement.value",
+                "text": "Business agreement",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The relationship of the patient to the subscriber."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Reversal.coverage.relationship",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Reversal.coverage.relationship.value",
+                "text": "Patient relationship to subscriber",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "If true remove all history excluding audit."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "boolean"
+          }
+        ],
+        "linkId": "Reversal.nullify",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Reversal.nullify.value",
+            "text": "Nullify",
+            "type": "boolean"
+          }
+        ]
+      }
+    ]
+  }
+}

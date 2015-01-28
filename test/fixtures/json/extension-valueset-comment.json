@@ -1,0 +1,50 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "valueset-comment",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/valueset-comment",
+  "name": "Human-specified notes and other documentation",
+  "publisher": "HL7",
+  "description": "Each comment is a time-stamped entry of arbitrary length that is not editable except by anyone in the author group.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "contextType": "resource",
+  "context": [
+    "ValueSet"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Human-specified notes and other documentation",
+      "formal": "Each comment is a time-stamped entry of arbitrary length that is not editable except by anyone in the author group.",
+      "min": 0,
+      "max": "*",
+      "isSummary": false
+    },
+    {
+      "path": "Extension.content",
+      "short": "Remarks or other text",
+      "formal": "Comments created about the value set.",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isSummary": false
+    },
+    {
+      "path": "Extension.timestamp",
+      "short": "When the comment was created",
+      "formal": "Time the comment was recorded.",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "instant"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

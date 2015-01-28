@@ -1,0 +1,44 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "cda-inFulFillmentOf",
+  "meta": {
+    "lastUpdated": "2014-11-05T20:31:00Z"
+  },
+  "url": "http://hl7.org/fhir/ExtensionDefinition/cda-inFulFillmentOf",
+  "name": "CDA In Fulfillment of",
+  "publisher": "HL7 FHIR Project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "Standard Profile for CDA R2 on FHIR",
+  "status": "draft",
+  "date": "2014-11-05",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "resource",
+  "context": [
+    "Composition"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Indicates an order that this document is created to fulfill",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "profile": "#inFulFillmentOfDiagnosticOrder"
+        }
+      ]
+    }
+  ]
+}

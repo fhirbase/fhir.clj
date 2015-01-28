@@ -1,0 +1,60 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-animal-genderstatus",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 2 concepts</p><h2>GenderStatus</h2><p> This example value set defines a set of codes that can be used to indicate the current state of the      animal's reproductive organs.</p><p>This value set defines its own terms in the system http://hl7.org/fhir/animal-genderstatus</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>neutered<a name=\"neutered\"> </a></td><td>Neutered</td><td>The animal has been castrated and is infertile</td></tr><tr><td>intact<a name=\"intact\"> </a></td><td>Intact</td><td>The animals reproductive organs are intact</td></tr></table><p><b>Additional Language Displays</b></p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>nl</b></td></tr><tr><td>neutered</td><td>gesteriliseerd</td></tr><tr><td>intact</td><td>intact</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.131"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/animal-genderstatus",
+  "name": "GenderStatus",
+  "publisher": "FHIR Project team",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": " This example value set defines a set of codes that can be used to indicate the current state of the      animal's reproductive organs.",
+  "status": "draft",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:null"
+      }
+    ],
+    "system": "http://hl7.org/fhir/animal-genderstatus",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "neutered",
+        "display": "Neutered",
+        "definition": "The animal has been castrated and is infertile",
+        "designation": [
+          {
+            "language": "nl",
+            "value": "gesteriliseerd"
+          }
+        ]
+      },
+      {
+        "code": "intact",
+        "display": "Intact",
+        "definition": "The animals reproductive organs are intact",
+        "designation": [
+          {
+            "language": "nl",
+            "value": "intact"
+          }
+        ]
+      }
+    ]
+  }
+}

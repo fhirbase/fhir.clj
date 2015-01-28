@@ -1,0 +1,62 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-risk-probability",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 5 concepts</p><h2>Risk Probability</h2><p>Codes representing the likelihood of a particular outcome in a risk assessment</p><p>This value set defines its own terms in the system http://hl7.org/fhir/risk-probability</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>negligible<a name=\"negligible\"> </a></td><td>negligible likelihood</td><td>The specified outcome is exceptionally unlikely</td></tr><tr><td>low<a name=\"low\"> </a></td><td>low likelihood</td><td>The specified outcome is possible but unlikely</td></tr><tr><td>moderate<a name=\"moderate\"> </a></td><td>moderate likelihood</td><td>The specified outcome has a reasonable likelihood of occurrence</td></tr><tr><td>high<a name=\"high\"> </a></td><td>high likelihood</td><td>The specified outcome is more likely to occur than not</td></tr><tr><td>certain<a name=\"certain\"> </a></td><td>certain</td><td>The specified outcome is effectively guaranteed</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.405"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/risk-probability",
+  "name": "Risk Probability",
+  "publisher": "FHIR Project team",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "Codes representing the likelihood of a particular outcome in a risk assessment",
+  "status": "draft",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:null"
+      }
+    ],
+    "system": "http://hl7.org/fhir/risk-probability",
+    "concept": [
+      {
+        "code": "negligible",
+        "display": "negligible likelihood",
+        "definition": "The specified outcome is exceptionally unlikely"
+      },
+      {
+        "code": "low",
+        "display": "low likelihood",
+        "definition": "The specified outcome is possible but unlikely"
+      },
+      {
+        "code": "moderate",
+        "display": "moderate likelihood",
+        "definition": "The specified outcome has a reasonable likelihood of occurrence"
+      },
+      {
+        "code": "high",
+        "display": "high likelihood",
+        "definition": "The specified outcome is more likely to occur than not"
+      },
+      {
+        "code": "certain",
+        "display": "certain",
+        "definition": "The specified outcome is effectively guaranteed"
+      }
+    ]
+  }
+}

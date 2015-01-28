@@ -1,0 +1,68 @@
+{
+  "resourceType": "Patient",
+  "id": "uslab-example1",
+  "text": {
+    "status": "generated",
+    "div": "<div>\n\t\t\t\n\t\t\t\n      <ul>\n\t\t\t\t\n        <li>file: patient-uslab-example1.xml</li>\n\t\t\t\t\n        <li> id: uslab-example1</li>\n\t\t\t\t\n        <li> Name: USLab Patient Example1 </li>\n\t\t\t\t\n        <li>Description: USLab Patient Profile Canonical Example: Todd Lerr</li>\n\t\t\t\n      </ul>\n\t\t\n    </div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/us-core-race": [
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "2106-3"
+          }
+        ]
+      }
+    }
+  ],
+  "http://hl7.org/fhir/ExtensionDefinition/us-core-ethnicity": [
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "2135-2"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "use": "usual",
+      "system": "urn:oid:2.16.840.1.113883.3.72.5.30.2",
+      "value": "18547545"
+    }
+  ],
+  "name": [
+    {
+      "use": "official",
+      "family": [
+        "Lerr"
+      ],
+      "given": [
+        "Todd",
+        "G."
+      ],
+      "suffix": [
+        "Jr"
+      ]
+    }
+  ],
+  "gender": "male",
+  "birthDate": "2012-06-07",
+  "deceasedBoolean": false,
+  "address": [
+    {
+      "use": "home",
+      "line": [
+        "123 North 102nd Street",
+        "Apt 4d"
+      ],
+      "city": "Harrisburg",
+      "state": "PA",
+      "postalCode": "17102",
+      "country": "USA"
+    }
+  ]
+}

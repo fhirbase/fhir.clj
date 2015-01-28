@@ -1,0 +1,68 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "11179-permitted-value-valueset",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/11179-permitted-value-valueset",
+  "name": "Permitted values",
+  "display": "Permitted Values",
+  "publisher": "Health Level Seven",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org"
+    }
+  ],
+  "description": "Allows expressing the value set that must be stored internally by the system (as distinct from the base value set which defines values for exchange).",
+  "status": "draft",
+  "date": "2014-04-21",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    },
+    {
+      "identity": "iso11179",
+      "uri": "http://metadata-standards.org/11179/",
+      "name": "ISO 11179"
+    }
+  ],
+  "contextType": "resource",
+  "context": [
+    "DataElement.binding.valueSet"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Permitted values",
+      "formal": "Allows expressing the value set that must be stored internally by the system (as distinct from the base value set which defines values for exchange).",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "profile": "http://hl7.org/fhir/Profile/ValueSet"
+        }
+      ],
+      "isSummary": false,
+      "mapping": [
+        {
+          "identity": "v2",
+          "map": "N/A"
+        },
+        {
+          "identity": "rim",
+          "map": "N/A"
+        },
+        {
+          "identity": "iso11179",
+          "map": "Data_Element.data_element_domain.member"
+        }
+      ]
+    }
+  ]
+}

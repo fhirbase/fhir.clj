@@ -1,0 +1,38 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "questionnaire-hidden",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/questionnaire-hidden",
+  "name": "Don't display to user",
+  "publisher": "HL7",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://www.hl7.org"
+    }
+  ],
+  "description": "If true, indicates that the containing group or question should not be displayed to the user for data entry.",
+  "status": "draft",
+  "date": "2013-07-04",
+  "contextType": "resource",
+  "context": [
+    "Questionnaire.group",
+    "Questionnaire.group.group",
+    "Questionnaire.group.question"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Don't display to user",
+      "formal": "If true, indicates that the containing group or question should not be displayed to the user for data entry.",
+      "comments": "Some questionnaires may have questions that represent calculated values or internal \"fixed\" metadata.  These elements need to be included with the answers, but should not be displayed to the user.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

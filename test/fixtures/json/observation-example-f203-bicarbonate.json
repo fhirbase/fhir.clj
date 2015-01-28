@@ -1,0 +1,78 @@
+{
+  "resourceType": "Observation",
+  "id": "f203",
+  "name": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "365722008",
+        "display": "Bicarbonate level"
+      }
+    ]
+  },
+  "valueQuantity": {
+    "value": 28,
+    "units": "mmol/L",
+    "system": "http://snomed.info/sct",
+    "code": "258813002"
+  },
+  "interpretation": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "166698001",
+        "display": "Serum bicarbonate level normal"
+      },
+      {
+        "system": "http://hl7.org/fhir/v2/0078",
+        "code": "N"
+      }
+    ]
+  },
+  "issued": "2013-04-04T14:34:00+01:00",
+  "status": "final",
+  "reliability": "ok",
+  "method": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "271239003",
+        "display": "Serum bicarbonate measurement"
+      }
+    ]
+  },
+  "identifier": {
+    "label": "Bicarbonaat value of Roel on April 2013 - 03720",
+    "system": "https://intranet.aumc.nl/labvalues",
+    "value": "1304-03720-Bicarbonate"
+  },
+  "subject": {
+    "reference": "Patient/f201",
+    "display": "Roel"
+  },
+  "performer": [
+    {
+      "reference": "Practitioner/f202",
+      "display": "Luigi Maas"
+    }
+  ],
+  "referenceRange": [
+    {
+      "low": {
+        "value": 22
+      },
+      "high": {
+        "value": 29
+      },
+      "meaning": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/referencerange-meaning",
+            "code": "normal",
+            "display": "Normal Range"
+          }
+        ]
+      }
+    }
+  ]
+}

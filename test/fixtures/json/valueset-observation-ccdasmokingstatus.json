@@ -1,0 +1,56 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-observation-ccdasmokingstatus",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 6 concepts</p><h2>Smoking Status</h2><p>This value set indicates the current smoking status of a patient. The vocabulary selected for this value set is the best approximation of the statuses in Meaningful Use (MU) Stage 1. The smoking status value set includes a special code to communicate if the smoking status is unknown</p><p><b>Copyright Statement:</b> This value set includes content from SNOMED CT, which is copyright &copy; 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement</p><p>This value set includes codes defined in other code systems, using the following rules:</p><ul><li>Include these codes as defined in http://snomed.info/sct<table><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td>449868002</td><td>Smokes tobacco daily (finding)</td><td/></tr><tr><td>428041000124106</td><td/><td/></tr><tr><td>8517006</td><td>Ex-smoker (finding)</td><td/></tr><tr><td>266919005</td><td>Never smoked tobacco (finding)</td><td/></tr><tr><td>77176002</td><td>Smoker (finding)</td><td/></tr><tr><td>266927001</td><td>Tobacco smoking consumption unknown (finding)</td><td/></tr></table></li></ul></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.427"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/observation-ccdasmokingstatus",
+  "name": "Smoking Status",
+  "publisher": "FHIR OO CDA Template team",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "This value set indicates the current smoking status of a patient. The vocabulary selected for this value set is the best approximation of the statuses in Meaningful Use (MU) Stage 1. The smoking status value set includes a special code to communicate if the smoking status is unknown",
+  "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement",
+  "status": "active",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "version": "http://snomed.info/sct/US1000124/version/20140901",
+        "concept": [
+          {
+            "code": "449868002"
+          },
+          {
+            "code": "428041000124106"
+          },
+          {
+            "code": "8517006"
+          },
+          {
+            "code": "266919005"
+          },
+          {
+            "code": "77176002"
+          },
+          {
+            "code": "266927001"
+          }
+        ]
+      }
+    ]
+  }
+}

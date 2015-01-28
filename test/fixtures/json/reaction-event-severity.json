@@ -1,0 +1,58 @@
+{
+  "resourceType": "ValueSet",
+  "id": "reaction-event-severity",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 3 concepts</p><h2>AllergyIntoleranceSeverity</h2><p>Clinical assessment of the severity of a reaction event as a whole, potentially considering multiple different manifestations</p><p>This value set defines its own terms in the system http://hl7.org/fhir/reaction-event-severity</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>mild<a name=\"mild\"> </a></td><td>Mild</td><td>Causes mild physiological effects.</td></tr><tr><td>moderate<a name=\"moderate\"> </a></td><td>Moderate</td><td>Causes moderate physiological effects.</td></tr><tr><td>severe<a name=\"severe\"> </a></td><td>Severe</td><td>Causes severe physiological effects.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.483"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/reaction-event-severity",
+  "name": "AllergyIntoleranceSeverity",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Clinical assessment of the severity of a reaction event as a whole, potentially considering multiple different manifestations",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.493+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.483"
+      }
+    ],
+    "system": "http://hl7.org/fhir/reaction-event-severity",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "mild",
+        "display": "Mild",
+        "definition": "Causes mild physiological effects."
+      },
+      {
+        "code": "moderate",
+        "display": "Moderate",
+        "definition": "Causes moderate physiological effects."
+      },
+      {
+        "code": "severe",
+        "display": "Severe",
+        "definition": "Causes severe physiological effects."
+      }
+    ]
+  }
+}

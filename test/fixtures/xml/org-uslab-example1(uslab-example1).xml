@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="uslab-example1"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+			
+      <ul>
+				
+        <li>file: org-uslab-example1.xml</li>
+				
+        <li> id: uslab-example1</li>
+				
+        <li> Name: USLab Organization Example1 </li>
+				
+        <li>Description: USLab Ordering Organization Profile Canonical Example: University Hospital</li>
+			
+      </ul>
+		
+    </div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <label value="NPI"/>
+    <value value="1235349085"/>
+    <assigner>
+      <reference value="https://nppes.cms.hhs.gov/NPPES/"/>
+      <display value="The Centers for Medicare and Medicaid Services (CMS) National Plan and Provider Enumeration System (NPPES)"/>
+    </assigner>
+  </identifier>
+  <name value="University Hospital"/>
+  <telecom>
+    <system value="phone"/>
+    <value value="(+1) 555-227-1234"/>
+  </telecom>
+  <telecom>
+    <system value="fax"/>
+    <value value="(+1) 555-227-6622"/>
+  </telecom>
+  <address><!--  EH  repllace temporariy to pass build
+		<extension url="http://hl7.org/fhir/ExtensionDefinition/us-core-county">
+			<extension url="http://hl7.org/fhir/ExtensionDefinition/iso21090-SC-coding">
+				<valueCoding>
+					<system value="https://www.census.gov/geo/reference"/>
+					<code value="42043"/>
+				</valueCoding>
+			</extension>
+		</extension>
+  --><!--   EH replace with example.org temporarily to pass validation
+<extension url="http://hl7.org/fhir/ExtensionDefinition/us-core-county">
+			<extension url="http://hl7.org/fhir/ExtensionDefinition/iso21090-SC-coding">
+  -->
+    <extension url="http://example.org/us-core-county">
+      <extension url="http://example.org//iso21090-SC-coding">
+        <valueCoding>
+          <system value="https://www.census.gov/geo/reference"/>
+          <code value="42043"/>
+        </valueCoding>
+      </extension>
+    </extension>
+    <use value="work"/>
+    <line value="Firstcare Way"/>
+    <line value="Building 1"/>
+    <city value="Harrisburg"/>
+    <state value="PA"/>
+    <postalCode value="17111"/>
+    <country value="USA"/>
+  </address>
+</Organization>

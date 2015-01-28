@@ -1,0 +1,45 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "uslabspecimenrejectreason",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/uslabspecimenrejectreason",
+  "name": "Specimen Rejection Reason",
+  "display": "Specimen Rejection Reason",
+  "publisher": "HL7 International - Orders and Observations WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org"
+    }
+  ],
+  "description": "This extension describes the reason if a test is cancelled for specimen related reason.",
+  "status": "draft",
+  "date": "2014-11-17",
+  "contextType": "resource",
+  "context": [
+    "Observation"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Specimen Rejection Reason",
+      "formal": "This extension describes the reason if a test is cancelled for specimen related reason.",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isSummary": false,
+      "binding": {
+        "name": "USLabSpecimenRejection",
+        "isExtensible": true,
+        "conformance": "required",
+        "description": "Specimen Rejection Reasons codes for identifying why a test was not performed.",
+        "referenceReference": {
+          "reference": "http://hl7.org/fhir/vs/obs-uslab-spec-reject"
+        }
+      }
+    }
+  ]
+}

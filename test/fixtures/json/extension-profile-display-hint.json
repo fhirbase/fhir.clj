@@ -1,0 +1,36 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "profile-display-hint",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/profile-display-hint",
+  "name": "Hinting information for the narrative generator",
+  "publisher": "Health Level Seven, Inc. - [WG Name] WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/special/committees/FHIR"
+    }
+  ],
+  "description": "Hinting information for the narrative generator - a series of name: value; pairs.",
+  "status": "draft",
+  "date": "2014-01-31",
+  "contextType": "datatype",
+  "context": [
+    "ElementDefinition"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Hinting information for the narrative generator",
+      "formal": "Hinting information for the narrative generator - a series of name: value; pairs.",
+      "comments": "known names: default (default value - don't represent if this value).",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

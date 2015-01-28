@@ -1,0 +1,75 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "minValue",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/minValue",
+  "name": "Must be >= this value",
+  "publisher": "HL7 FHIR project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "The inclusive lower bound on the range of allowed values for the data element.",
+  "status": "draft",
+  "date": "2014-04-27",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "resource",
+  "context": [
+    "DataElement",
+    "Questionnaire.group.question",
+    "Profile.structure.element.definition"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Must be >= this value",
+      "formal": "The inclusive lower bound on the range of allowed values for the data element.",
+      "comments": "Data type specified must be the same as the data type for the data element.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "date"
+        },
+        {
+          "code": "dateTime"
+        },
+        {
+          "code": "time"
+        },
+        {
+          "code": "instant"
+        },
+        {
+          "code": "decimal"
+        },
+        {
+          "code": "integer"
+        }
+      ],
+      "isSummary": false,
+      "mapping": [
+        {
+          "identity": "v2",
+          "map": "N/A"
+        },
+        {
+          "identity": "rim",
+          "map": "N/A (MIF-level)"
+        }
+      ]
+    }
+  ]
+}

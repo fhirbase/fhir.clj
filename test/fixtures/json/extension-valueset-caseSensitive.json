@@ -1,0 +1,30 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "valueset-caseSensitive",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/valueset-caseSensitive",
+  "name": "If code is case sensitive",
+  "publisher": "HL7",
+  "description": "If this a case sensitive code.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "contextType": "resource",
+  "context": [
+    "ValueSet.expansion.contains"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "If code is case sensitive",
+      "formal": "If this a case sensitive code.",
+      "comments": "See comments on ValueSet.define.caseSensitive. Systems should generally assume case sensitivity when dealing with expansions, and only consider case sensitivity when matching existing codes.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

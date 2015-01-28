@@ -1,0 +1,29 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "valueset-systemRef",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/valueset-systemRef",
+  "name": "Where to find code system",
+  "publisher": "HL7",
+  "description": "The formal URI for the code system.  I.e. ValueSet.define.system (or its equivalent).",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "contextType": "resource",
+  "context": [
+    "ValueSet.compose.include"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Where to find code system",
+      "formal": "The formal URI for the code system.  I.e. ValueSet.define.system (or its equivalent).",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

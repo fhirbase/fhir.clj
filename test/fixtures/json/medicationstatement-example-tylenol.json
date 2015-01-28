@@ -1,0 +1,93 @@
+{
+  "resourceType": "MedicationStatement",
+  "id": "tylenol",
+  "text": {
+    "status": "generated",
+    "div": "<div>\n      \n      <p>500 mg Acetaminophen tablet 1/day, PRN since 2010</p>\n    \n    </div>"
+  },
+  "contained": [
+    {
+      "resourceType": "Substance",
+      "id": "1",
+      "type": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.5.1103",
+            "code": "270"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "Medication",
+      "id": "2",
+      "name": "ACETAMINOPHEN",
+      "code": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.6.73",
+            "code": "N02BE01"
+          }
+        ]
+      },
+      "product": {
+        "form": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/v3/MaterialForm",
+              "code": "TAB",
+              "display": "tablet"
+            }
+          ]
+        },
+        "ingredient": [
+          {
+            "item": {
+              "reference": "#1"
+            },
+            "amount": {
+              "numerator": {
+                "value": 500,
+                "system": "http://unitsofmeasure.org",
+                "code": "mg"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "patient": {
+    "reference": "Patient/example"
+  },
+  "whenGiven": {
+    "start": "2010"
+  },
+  "medication": {
+    "reference": "#2"
+  },
+  "dosage": [
+    {
+      "schedule": {
+        "repeat": {
+          "frequency": 1,
+          "duration": 1,
+          "units": "d"
+        }
+      },
+      "asNeededBoolean": true,
+      "route": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "394899003",
+            "display": "oral administration of treatment"
+          }
+        ]
+      },
+      "quantity": {
+        "value": 1
+      }
+    }
+  ]
+}

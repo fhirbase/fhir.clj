@@ -1,0 +1,30 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "provenance",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/provenance",
+  "name": "Most recent change",
+  "publisher": "HL7",
+  "description": "Provides the provenance record associated with the most recent update of the resource.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "contextType": "resource",
+  "context": [
+    "*"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Most recent change",
+      "formal": "Provides the provenance record associated with the most recent update of the resource.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "profile": "http://hl7.org/fhir/Profile/Provenance"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

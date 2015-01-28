@@ -1,0 +1,1449 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "vs2",
+      "identifier": "urn:uuid:5dc4ab1e-0d13-4492-8cd5-e278233283c2",
+      "name": "Type options for Observation.value[x]",
+      "description": "Type options for Observation.value[x]",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:21:14.008+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Quantity",
+            "display": "Quantity"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "CodeableConcept",
+            "display": "CodeableConcept"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Attachment",
+            "display": "Attachment"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Ratio",
+            "display": "Ratio"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "dateTime",
+            "display": "dateTime"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Period",
+            "display": "Period"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "SampledData",
+            "display": "SampledData"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "string",
+            "display": "string"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "time",
+            "display": "time"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs3",
+      "identifier": "urn:uuid:e4634feb-21dc-4a0a-81b2-b1f0333889c5",
+      "name": "Type options for Observation.applies[x]",
+      "description": "Type options for Observation.applies[x]",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:21:14.008+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "dateTime",
+            "display": "dateTime"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Period",
+            "display": "Period"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs4",
+      "identifier": "urn:uuid:38100505-0090-4fed-9529-74d766f5501a",
+      "name": "Type options for Observation.subject",
+      "description": "Type options for Observation.subject",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:21:14.008+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Patient",
+            "display": "Patient"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Group",
+            "display": "Group"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Device",
+            "display": "Device"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Location",
+            "display": "Location"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs5",
+      "identifier": "urn:uuid:99694c3d-432d-47fb-b94d-d17a770d9079",
+      "name": "Type options for Observation.performer",
+      "description": "Type options for Observation.performer",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:21:14.008+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Practitioner",
+            "display": "Practitioner"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Device",
+            "display": "Device"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Organization",
+            "display": "Organization"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Patient",
+            "display": "Patient"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "RelatedPerson",
+            "display": "RelatedPerson"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (Orders and Observations)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "Measurements and simple assertions made about a patient, device or other subject."
+      }
+    ],
+    "linkId": "Observation",
+    "title": "Measurements and simple assertions",
+    "text": "Used for simple observations such as device measurements, laboratory atomic results, vital signs, height, weight, smoking status, comments, etc.  Other resources are used to provide context for observations such as Lab reports, etc.",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "Observation.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Observation.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "Observation.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Observation.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Observation.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Observation.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Observation.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "Observation.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Observation.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "Observation.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Observation.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Observation.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Observation.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Observation.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Observation.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "Observation.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Observation.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "Observation.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Observation.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "Observation.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "Observation.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Describes what was observed. Sometimes this is called the observation \"code\"."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "Observation.name",
+        "text": "Type of observation (code / type)",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Observation.name.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "Observation.name.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The information determined as a result of making the observation, if the information has a simple value. Normally, an observation will have either a value or a set of related observations. A few observations (e.g. apgar store) may have both a value and related observations (for apgar, the observations from which the measure is derived). If a value is present, the datatype for this element should be determined by Observation.name. A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.name defines a coded value.   For boolean values use valueCodeableConcept and select codes from <http://hl7.org/fhir/v2/vs/0136> (These \"yes/no\" concepts can be mapped to the display name \"true/false\" or other mutually exclusive terms that may be needed\").  The element, Observation.value[x], has a variable name depending on the type as follows: valueQuantity, valueCodeableConcept, valueRatio, valueChoice, valuePeriod, valueSampleData, or valueString (The name format is \"'value' + the type name\" with a capital on the first letter of the type)."
+          }
+        ],
+        "linkId": "Observation.value[x]",
+        "text": "Actual result",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Observation.value[x]._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs2"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Quantity"
+                  }
+                ],
+                "linkId": "Observation.value[x]._Quantity",
+                "text": "Quantity",
+                "question": [
+                  {
+                    "linkId": "Observation.value[x]._Quantity.comparator",
+                    "text": "comp:",
+                    "type": "choice"
+                  },
+                  {
+                    "linkId": "Observation.value[x]._Quantity.value",
+                    "text": "value:",
+                    "type": "decimal"
+                  },
+                  {
+                    "linkId": "Observation.value[x]._Quantity.units",
+                    "text": "units:",
+                    "type": "string"
+                  },
+                  {
+                    "linkId": "Observation.value[x]._Quantity.code",
+                    "text": "coded units:",
+                    "type": "string"
+                  },
+                  {
+                    "linkId": "Observation.value[x]._Quantity.system",
+                    "text": "units system:",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "CodeableConcept"
+                  }
+                ],
+                "linkId": "Observation.value[x]._CodeableConcept",
+                "text": "CodeableConcept",
+                "question": [
+                  {
+                    "linkId": "Observation.value[x]._CodeableConcept.coding",
+                    "text": "code:",
+                    "type": "open-choice"
+                  },
+                  {
+                    "linkId": "Observation.value[x]._CodeableConcept.text",
+                    "text": "text:",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Attachment"
+                  }
+                ],
+                "linkId": "Observation.value[x]._Attachment",
+                "text": "Attachment"
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Ratio"
+                  }
+                ],
+                "linkId": "Observation.value[x]._Ratio",
+                "text": "Ratio",
+                "question": [
+                  {
+                    "linkId": "Observation.value[x]._Ratio.numerator",
+                    "text": "numerator:",
+                    "type": "decimal"
+                  },
+                  {
+                    "linkId": "Observation.value[x]._Ratio.denominator",
+                    "text": "denominator:",
+                    "type": "decimal"
+                  },
+                  {
+                    "linkId": "Observation.value[x]._Ratio.units",
+                    "text": "units:",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "datetime"
+                  }
+                ],
+                "linkId": "Observation.value[x]._dateTime",
+                "question": [
+                  {
+                    "linkId": "Observation.value[x]._dateTime.value",
+                    "text": "dateTime",
+                    "type": "dateTime"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Period"
+                  }
+                ],
+                "linkId": "Observation.value[x]._Period",
+                "text": "Period",
+                "question": [
+                  {
+                    "linkId": "Observation.value[x]._Period.low",
+                    "text": "start:",
+                    "type": "dateTime"
+                  },
+                  {
+                    "linkId": "Observation.value[x]._Period.end",
+                    "text": "end:",
+                    "type": "dateTime"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "SampledData"
+                  }
+                ],
+                "linkId": "Observation.value[x]._SampledData",
+                "text": "SampledData"
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "Observation.value[x]._string",
+                "question": [
+                  {
+                    "linkId": "Observation.value[x]._string.value",
+                    "text": "string",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "time"
+                  }
+                ],
+                "linkId": "Observation.value[x]._time",
+                "question": [
+                  {
+                    "linkId": "Observation.value[x]._time.value",
+                    "text": "time",
+                    "type": "time"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Provides a reason why the expected value in the element Observation.value[x] is missing. \"Null\" or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  For example, measurement values for a serology test could be  \"detected\", \"not detected\", \"inconclusive\", or  \"test not done\".   The alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values.  For example, the dataAbsentReason code \"error\" could be used when the measurement was not completed.  Because of these options, use-case agreements are required to interpret general observations for exceptional values."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "Observation.dataAbsentReason",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Observation.dataAbsentReason.value",
+            "text": "data absent reason",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The assessment made based on the result of the observation."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "Observation.interpretation",
+        "text": "High, low, normal, etc.",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Observation.interpretation.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "Observation.interpretation.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "May include statements about significant, unexpected or unreliable values, or information about the source of the value where this may be relevant to the interpretation of the result."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "Observation.comments",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Observation.comments.value",
+            "text": "Comments about result",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the \"physiologically relevant time\". This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself. At least a date should be present unless this observation is a historical report."
+          }
+        ],
+        "linkId": "Observation.applies[x]",
+        "text": "Physiologically Relevant time/time-period for observation",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Observation.applies[x]._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs3"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "datetime"
+                  }
+                ],
+                "linkId": "Observation.applies[x]._dateTime",
+                "question": [
+                  {
+                    "linkId": "Observation.applies[x]._dateTime.value",
+                    "text": "dateTime",
+                    "type": "dateTime"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Period"
+                  }
+                ],
+                "linkId": "Observation.applies[x]._Period",
+                "text": "Period",
+                "question": [
+                  {
+                    "linkId": "Observation.applies[x]._Period.low",
+                    "text": "start:",
+                    "type": "dateTime"
+                  },
+                  {
+                    "linkId": "Observation.applies[x]._Period.end",
+                    "text": "end:",
+                    "type": "dateTime"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The date and time this observation was made available. Updated when the result is updated."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "instant"
+          }
+        ],
+        "linkId": "Observation.issued",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Observation.issued.value",
+            "text": "Date/Time this was made available",
+            "type": "instant"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The status of the result value."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "Observation.status",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Observation.status.value",
+            "text": "status",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "An estimate of the degree to which quality issues have impacted on the value reported. Note that in most contexts, unreliable results are not recorded, deleted, or otherwise excluded, but it's not always possible to exclude them from the record.  If the reliability indicator is present, interpreters of a result, whether human or machine, should always either be aware of the status or prevented from using the observation without being unaware that the reliability is not \"ok\"."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "Observation.reliability",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Observation.reliability.value",
+            "text": "reliability",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Indicates the site on the subject's body where the observation was made ( i.e. the target site). Only used if not implicit in code found in Observation.name."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "Observation.bodySite",
+        "text": "Observed body part",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Observation.bodySite.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "Observation.bodySite.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Indicates the mechanism used to perform the observation. Only used if not implicit in code for Observation.name."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "Observation.method",
+        "text": "How it was done",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Observation.method.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "Observation.method.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A unique identifier for the simple observation."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Identifier"
+          }
+        ],
+        "linkId": "Observation.identifier",
+        "text": "Unique Id for this particular observation",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Observation.identifier.label",
+            "text": "label:",
+            "type": "string"
+          },
+          {
+            "linkId": "Observation.identifier.system",
+            "text": "system:",
+            "type": "string"
+          },
+          {
+            "linkId": "Observation.identifier.value",
+            "text": "value:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The patient, or group of patients, location, or device whose characteristics (direct or indirect) are described by the observation and into whose record the observation is placed.  Comments: Indirect characteristics may be those of a specimen, fetus,\nother observer (for example a relative or EMT), or any observation made about the subject. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated.  If the target of the observation is different than the subject, the general extension (http://hl7.org/fhir/ExtensionDefinition/indirectTarget) can  be used."
+          }
+        ],
+        "linkId": "Observation.subject",
+        "text": "Who and/or what this is about",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Observation.subject._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs4"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Observation.subject._Patient",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Observation.subject._Patient.value",
+                    "text": "Patient",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Observation.subject._Group",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Group?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Observation.subject._Group.value",
+                    "text": "Group",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Observation.subject._Device",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Device?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Observation.subject._Device.value",
+                    "text": "Device",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Observation.subject._Location",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Location?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Observation.subject._Location.value",
+                    "text": "Location",
+                    "type": "reference"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The specimen that was used when this observation was made. Observations are not made on specimens themselves; they are made on a subject, but usually by the means of a specimen. Note that although specimens are often involved, they are not always tracked and reported explicitly. Also note that observation resources are often used in contexts that track the specimen explicitly (e.g. Diagnostic Report)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "Observation.specimen",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Specimen?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "Observation.specimen.value",
+            "text": "Specimen used for this observation",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Who was responsible for asserting the observed value as \"true\". This would only be \"Device\" if the device is responsible for the measurement, not to capture the device used by a human to make the measurement.  (The latter could be captured as an extension.)."
+          }
+        ],
+        "linkId": "Observation.performer",
+        "text": "Who did the observation",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Observation.performer._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs5"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Observation.performer._Practitioner",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Observation.performer._Practitioner.value",
+                    "text": "Practitioner",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Observation.performer._Device",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Device?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Observation.performer._Device.value",
+                    "text": "Device",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Observation.performer._Organization",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Observation.performer._Organization.value",
+                    "text": "Organization",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Observation.performer._Patient",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Observation.performer._Patient.value",
+                    "text": "Patient",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Observation.performer._RelatedPerson",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/RelatedPerson?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Observation.performer._RelatedPerson.value",
+                    "text": "RelatedPerson",
+                    "type": "reference"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The healthcare event  ( e.g. a patient and healthcare provider interaction ) that relates to this observation."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "Observation.encounter",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Encounter?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "Observation.encounter.value",
+            "text": "Healthcare event related to the observation",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Guidance on how to interpret the value by comparison to a normal or recommended range."
+          }
+        ],
+        "linkId": "Observation.referenceRange",
+        "title": "Provides guide for interpretation",
+        "text": "Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g. specific to the patient's age, gender, weight and other factors), but this may not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Observation.referenceRange.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Observation.referenceRange.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The value of the low bound of the reference range. If this is omitted, the low bound of the reference range is assumed to be meaningless. E.g. <2.3. Do not use the comparator for < or >."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Quantity"
+              }
+            ],
+            "linkId": "Observation.referenceRange.low",
+            "text": "Low Range, if relevant",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Observation.referenceRange.low.comparator",
+                "text": "comp:",
+                "type": "choice"
+              },
+              {
+                "linkId": "Observation.referenceRange.low.value",
+                "text": "value:",
+                "type": "decimal"
+              },
+              {
+                "linkId": "Observation.referenceRange.low.units",
+                "text": "units:",
+                "type": "string"
+              },
+              {
+                "linkId": "Observation.referenceRange.low.code",
+                "text": "coded units:",
+                "type": "string"
+              },
+              {
+                "linkId": "Observation.referenceRange.low.system",
+                "text": "units system:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The value of the high bound of the reference range. If this is omitted, the high bound of the reference range is assumed to be meaningless. E.g. >5. Do not use the comparator for < or >."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Quantity"
+              }
+            ],
+            "linkId": "Observation.referenceRange.high",
+            "text": "High Range, if relevant",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Observation.referenceRange.high.comparator",
+                "text": "comp:",
+                "type": "choice"
+              },
+              {
+                "linkId": "Observation.referenceRange.high.value",
+                "text": "value:",
+                "type": "decimal"
+              },
+              {
+                "linkId": "Observation.referenceRange.high.units",
+                "text": "units:",
+                "type": "string"
+              },
+              {
+                "linkId": "Observation.referenceRange.high.code",
+                "text": "coded units:",
+                "type": "string"
+              },
+              {
+                "linkId": "Observation.referenceRange.high.system",
+                "text": "units system:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Code for the meaning of the reference range. This SHOULD be populated if there is more than one range."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "Observation.referenceRange.meaning",
+            "text": "Indicates the meaning/use of this range of this range",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Observation.referenceRange.meaning.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "Observation.referenceRange.meaning.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Range"
+              }
+            ],
+            "linkId": "Observation.referenceRange.age",
+            "text": "Applicable age range, if relevant",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Observation.referenceRange.age.low",
+                "text": "low:",
+                "type": "decimal"
+              },
+              {
+                "linkId": "Observation.referenceRange.age.high",
+                "text": "high:",
+                "type": "decimal"
+              },
+              {
+                "linkId": "Observation.referenceRange.age.units",
+                "text": "units:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Text based reference range in an observation which may be used when a quantitative range is not appropriate for an observation.  An example would be a reference value of \"Negative\" or a list or table of 'normals'."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Observation.referenceRange.text",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Observation.referenceRange.text.value",
+                "text": "Text based reference range in an observation",
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Related observations - either components, or previous observations, or statements of derivation."
+          }
+        ],
+        "linkId": "Observation.related",
+        "title": "Observations related to this observation",
+        "text": "Normally, an observation will have either a value or a set of related observations. A few observations (e.g. apgar store) may have both a value and related observations (for apgar, the observations from which the measure is derived).",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Observation.related.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Observation.related.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A code specifying the kind of relationship that exists with the target observation. A relationship type SHOULD be provided. If the relationship type is \"COMP\" (composed), then the observation should not be displayed/interpreted in the absence of the related observations."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "code"
+              }
+            ],
+            "linkId": "Observation.related.type",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Observation.related.type.value",
+                "text": "type",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A reference to the observation that is related to this observation."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "Observation.related.target",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Observation?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "Observation.related.target.value",
+                "text": "Observation that is related to this one",
+                "type": "reference"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "resourceType": "MedicationPrescription",
+  "id": "f002",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "http://www.bmc.nl/portal/prescriptions",
+      "value": "order9837343"
+    }
+  ],
+  "dateWritten": "2013-04-08",
+  "status": "active",
+  "patient": {
+    "reference": "Patient/f001",
+    "display": "P. van den Heuvel"
+  },
+  "prescriber": {
+    "reference": "Practitioner/f006",
+    "display": "R.A. van den Berk"
+  },
+  "encounter": {
+    "reference": "Encounter/f001",
+    "display": "encounter who leads to this priscription"
+  },
+  "reasonCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "28036006",
+        "display": "High density lipoprotein cholesterol level"
+      }
+    ]
+  },
+  "medication": {
+    "reference": "Medication/f002",
+    "display": "prescribed medication"
+  },
+  "dosageInstruction": [
+    {
+      "scheduledTiming": {
+        "event": [
+          {
+            "start": "2013-08-04"
+          }
+        ],
+        "repeat": {
+          "frequency": 1,
+          "duration": 1,
+          "units": "d"
+        }
+      },
+      "site": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "181220002",
+            "display": "Entire oral cavity"
+          }
+        ]
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "386359008",
+            "display": "Administration of drug or medicament via oral route"
+          }
+        ]
+      },
+      "doseQuantity": {
+        "value": 10,
+        "units": "mg",
+        "system": "http://unitsofmeasure.org",
+        "code": "mg"
+      }
+    }
+  ],
+  "dispense": {
+    "validityPeriod": {
+      "start": "2013-04-08"
+    },
+    "quantity": {
+      "value": 90,
+      "system": "http://snomed.info/sct",
+      "code": "46992007"
+    }
+  }
+}

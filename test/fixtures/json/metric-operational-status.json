@@ -1,0 +1,55 @@
+{
+  "resourceType": "ValueSet",
+  "id": "metric-operational-status",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 3 concepts</p><h2>DeviceMetricOperationalState</h2><p>Describes the operational status of the DeviceMetric</p><p>This value set defines its own terms in the system http://hl7.org/fhir/metric-operational-status</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>on<a name=\"on\"> </a></td><td>The DeviceMetric is operating and will generate DeviceObservations.</td></tr><tr><td>off<a name=\"off\"> </a></td><td>The DeviceMetric is not operating.</td></tr><tr><td>standby<a name=\"standby\"> </a></td><td>The DeviceMetric is operating, but will not generate any DeviceObservations.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.534"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/metric-operational-status",
+  "name": "DeviceMetricOperationalState",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Describes the operational status of the DeviceMetric",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.491+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.534"
+      }
+    ],
+    "system": "http://hl7.org/fhir/metric-operational-status",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "on",
+        "definition": "The DeviceMetric is operating and will generate DeviceObservations."
+      },
+      {
+        "code": "off",
+        "definition": "The DeviceMetric is not operating."
+      },
+      {
+        "code": "standby",
+        "definition": "The DeviceMetric is operating, but will not generate any DeviceObservations."
+      }
+    ]
+  }
+}

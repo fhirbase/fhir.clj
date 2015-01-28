@@ -1,0 +1,75 @@
+{
+  "resourceType": "ValueSet",
+  "id": "goal-status",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 8 concepts</p><h2>GoalStatus</h2><p>Indicates whether the goal has been met and is still being targeted</p><p>This value set defines its own terms in the system http://hl7.org/fhir/goal-status</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>proposed<a name=\"proposed\"> </a></td><td>A goal is proposed for this patient.</td></tr><tr><td>planned<a name=\"planned\"> </a></td><td>A goal is planned for this patient.</td></tr><tr><td>in progress<a name=\"inprogress\"> </a></td><td>The goal is being sought but has not yet been reached.  (Also applies if goal was reached in the past but there has been regression and goal is being sought again).</td></tr><tr><td>achieved<a name=\"achieved\"> </a></td><td>The goal has been met and no further action is needed.</td></tr><tr><td>sustaining<a name=\"sustaining\"> </a></td><td>The goal has been met, but ongoing activity is needed to sustain the goal objective.</td></tr><tr><td>cancelled<a name=\"cancelled\"> </a></td><td>The goal is no longer being sought.</td></tr><tr><td>accepted<a name=\"accepted\"> </a></td><td>A proposed goal was accepted.</td></tr><tr><td>rejected<a name=\"rejected\"> </a></td><td>A proposed goal was rejected.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.547"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/goal-status",
+  "name": "GoalStatus",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Indicates whether the goal has been met and is still being targeted",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.495+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.547"
+      }
+    ],
+    "system": "http://hl7.org/fhir/goal-status",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "proposed",
+        "definition": "A goal is proposed for this patient."
+      },
+      {
+        "code": "planned",
+        "definition": "A goal is planned for this patient."
+      },
+      {
+        "code": "in progress",
+        "definition": "The goal is being sought but has not yet been reached.  (Also applies if goal was reached in the past but there has been regression and goal is being sought again)."
+      },
+      {
+        "code": "achieved",
+        "definition": "The goal has been met and no further action is needed."
+      },
+      {
+        "code": "sustaining",
+        "definition": "The goal has been met, but ongoing activity is needed to sustain the goal objective."
+      },
+      {
+        "code": "cancelled",
+        "definition": "The goal is no longer being sought."
+      },
+      {
+        "code": "accepted",
+        "definition": "A proposed goal was accepted."
+      },
+      {
+        "code": "rejected",
+        "definition": "A proposed goal was rejected."
+      }
+    ]
+  }
+}

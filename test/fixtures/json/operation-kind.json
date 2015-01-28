@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "id": "operation-kind",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 2 concepts</p><h2>OperationKind</h2><p>Whether an operation is a normal operation or a query</p><p>This value set defines its own terms in the system http://hl7.org/fhir/operation-kind</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>operation<a name=\"operation\"> </a></td><td>This operation is invoked as an operation.</td></tr><tr><td>query<a name=\"query\"> </a></td><td>This operation is a named query, invoked using the search mechanism.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.408"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/operation-kind",
+  "name": "OperationKind",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Whether an operation is a normal operation or a query",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.492+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.408"
+      }
+    ],
+    "system": "http://hl7.org/fhir/operation-kind",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "operation",
+        "definition": "This operation is invoked as an operation."
+      },
+      {
+        "code": "query",
+        "definition": "This operation is a named query, invoked using the search mechanism."
+      }
+    ]
+  }
+}

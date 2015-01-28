@@ -1,0 +1,59 @@
+{
+  "resourceType": "ValueSet",
+  "id": "address-use",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 4 concepts</p><h2>AddressUse</h2><p>The use of an address</p><p>This value set defines its own terms in the system http://hl7.org/fhir/address-use</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td><td><b><a href=\"null\">v3 Map (AddressUse)</a></b></td><td><b><a href=\"v2\\0190\\index.html\">v2 Map (0190)</a></b></td></tr><tr><td>home<a name=\"home\"> </a></td><td>A communication address at a home.</td><td><span title=\"equal\">=</span><a href=\"#H\">H</a></td><td><span title=\"equivalent\">~</span><a href=\"v2\\0190\\index.html#H\">H</a></td></tr><tr><td>work<a name=\"work\"> </a></td><td>An office address. First choice for business related contacts during business hours.</td><td><span title=\"equal\">=</span><a href=\"#WP\">WP</a></td><td><span title=\"equivalent\">~</span><a href=\"v2\\0190\\index.html#O\">O</a></td></tr><tr><td>temp<a name=\"temp\"> </a></td><td>A temporary address. The period can provide more detailed information.</td><td><span title=\"equal\">=</span><a href=\"#TMP\">TMP</a></td><td><span title=\"equivalent\">~</span><a href=\"v2\\0190\\index.html#C\">C</a></td></tr><tr><td>old<a name=\"old\"> </a></td><td>This address is no longer in use (or was never correct, but retained for records).</td><td><span title=\"narrower\">&lt;</span><a href=\"#OLD\">OLD</a><br/><span title=\"narrower\">&lt;</span><a href=\"#BAD\">BAD</a></td><td><span title=\"wider\">&gt;</span><a href=\"v2\\0190\\index.html#BA\">BA</a><i>(unclear about old addresses)</i></td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.16"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/address-use",
+  "name": "AddressUse",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "The use of an address",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.493+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.16"
+      }
+    ],
+    "system": "http://hl7.org/fhir/address-use",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "home",
+        "definition": "A communication address at a home."
+      },
+      {
+        "code": "work",
+        "definition": "An office address. First choice for business related contacts during business hours."
+      },
+      {
+        "code": "temp",
+        "definition": "A temporary address. The period can provide more detailed information."
+      },
+      {
+        "code": "old",
+        "definition": "This address is no longer in use (or was never correct, but retained for records)."
+      }
+    ]
+  }
+}

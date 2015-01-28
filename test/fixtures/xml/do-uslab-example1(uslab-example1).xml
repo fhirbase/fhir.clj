@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DiagnosticOrder xmlns="http://hl7.org/fhir">
+  <id value="uslab-example1"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+			
+      <ul>
+				
+        <li>file: diagnosticorder-uslab-example1.xml </li>
+				
+        <li>id: uslab-example1</li>
+				
+        <li>Name: USLabOrder DiagnosticOrder Example1 </li>
+				
+        <li>Description: USLabOrder DiagnosticOrder Canonical Example: Childhood Blood Lead Order</li>
+			
+      </ul>
+		
+    </div>
+  </text><!--   comment out to see if causing build to hang extension for a CC to a non ordering party in this case another provider 
+	<extension url="http://hl7.org/fhir/ExtensionDefinition/uslabcc-practitioner">
+		<valueReference>
+			<reference value="Practitioner/uslab-example2"/>
+			<display value="Dr Bill T Lookafter Jr"/>
+		</valueReference>
+	</extension>
+  -->
+  <subject>
+    <reference value="Patient/uslab-example1"/>
+    <display value="Todd Lerr"/>
+  </subject>
+  <orderer>
+    <reference value="Practitioner/uslab-example1"/>
+    <display value="Dr Leonard T Bloodraw Jr"/>
+  </orderer>
+  <identifier>
+    <use value="official"/>
+    <label value="Placer Order Number"/><!--   EH Using an OID here but could any URI  eg  http://aceclinic.com   -->
+    <system value="urn:oid:2.16.840.1.113883.3.72.5.24"/>
+    <value value="ORD000123A"/>
+  </identifier>
+  <clinicalNotes value="Screening for blood lead"/>
+  <supportingInformation>
+    <reference value="Observation/uslab-example1"/>
+    <display value="Prior Results Observation"/>
+  </supportingInformation>
+  <supportingInformation>
+    <reference value="Condition/uslab-example1"/>
+    <display value="Lead Exposure"/>
+  </supportingInformation><!--    EH this specimen is for when lab has existing 
+<specimen>
+		<reference value="Specimen/uslab-example1"/>
+		<display value="Whole blood"/>
+	</specimen>
+  --><!--   EH this is set to 'requested' by the Placer  -->
+  <status value="requested"/>
+  <priority value="routine"/>
+  <event><!--   EH this is set to 'requested' by the Placer is required element in core resource  -->
+    <status value="requested"/><!--   EH:bound to closed value setUSLAB Diagnostic Order Event Codes  -->
+    <description>
+      <coding>
+        <code value="new-request"/>
+      </coding>
+    </description><!--   EH: Showing dateTime to ss with TZO although only needed to Day   -->
+    <dateTime value="2014-12-04T15:42:15-08:00"/>
+  </event><!--   EH:  the event is the order placer requesting a test  -->
+  <item><!--  EH :  The local and /or LOINC test codes go here   -->
+    <code><!--   EH: LOINC code gos here  -->
+      <coding>
+        <system value="http://loinc.org"/>
+        <code value="5671-3"/>
+        <display value="Lead [Mass/volume] in Blood"/>
+      </coding><!--   EH: LOINC code gos here  -->
+      <coding>
+        <system value="urn:oid:2.16.840.1.113883.3.72.5.24"/>
+        <code value="BLDLD"/>
+        <display value="Blood Lead"/>
+      </coding>
+      <text value="Blood Lead"/>
+    </code>
+    <specimen>
+      <reference value="Specimen/uslab-example1"/>
+      <display value="Whole blood"/>
+    </specimen><!--   EH this is set to 'requested' by the Placer   -->
+    <status value="requested"/>
+  </item>
+</DiagnosticOrder>

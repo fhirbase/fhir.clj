@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "id": "constraint-severity",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 2 concepts</p><h2>ConstraintSeverity</h2><p>SHALL applications comply with this constraint?</p><p>This value set defines its own terms in the system http://hl7.org/fhir/constraint-severity</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>error<a name=\"error\"> </a></td><td>If the constraint is violated, the resource is not conformant.</td></tr><tr><td>warning<a name=\"warning\"> </a></td><td>If the constraint is violated, the resource is conformant, but it is not necessarily following best practice.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.146"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/constraint-severity",
+  "name": "ConstraintSeverity",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "SHALL applications comply with this constraint?",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.497+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.146"
+      }
+    ],
+    "system": "http://hl7.org/fhir/constraint-severity",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "error",
+        "definition": "If the constraint is violated, the resource is not conformant."
+      },
+      {
+        "code": "warning",
+        "definition": "If the constraint is violated, the resource is conformant, but it is not necessarily following best practice."
+      }
+    ]
+  }
+}

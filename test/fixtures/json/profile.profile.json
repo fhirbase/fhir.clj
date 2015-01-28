@@ -1,0 +1,1433 @@
+{
+  "resourceType": "Profile",
+  "id": "Profile",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><table style=\"border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;\" cellpadding=\"0\" border=\"0\" cellspacing=\"0\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><th style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Name</th><th style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Flags</th><th style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Card.</th><th style=\"width: 100px\" class=\"heirarchy\">Type</th><th style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Description &amp; Constraints<span style=\"float: right\"><a title=\"Legend for this format\" href=\"formats.html#table\"><img alt=\"doco\" src=\"help16.png\"/></a></span></th></tr><tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img title=\"Resource\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJBSURBVDjLhdKxa5NBGMfx713yvkmbJnaoFiSF4mJTh06Kg4OgiyCCRXCof4YIdXdxFhQVHPo3OFSoUx0FySQttaVKYq2NbdO8ed/L3fM4JG3tYPvAcfBw9+HHPWdUlf/V0tLSqKo+EpEHInJFRIohhDUR+RBCeDM7O7ua55QSkRfVanVufHyckZERrLV0Op2Zra2tmXq9fg+YsmcAdyYnJykUCke9OI6ZmJgghHAZ4KwE3ntPs9mkVCohIjQaDWq1GiEEAM5KoHEcY62lVCrRarUoFotUKpUjIL/y/uqXYmV62ph/LSVrr30P4bEFcM4B0Ov1jk547/uAUTs1ceNdZIwB7V/GGHz6+9LXxY96eDiEgHMOY8xJAK8p4grZz5cElwNbwZgyxYu3EFM01lriOCZJEqIoIooiALIsGwA9Y1UcwcWoKNLdpLu9zvbnBWqNBhuvn5EDUmB0EH/1E2TZw5U+YLQovkun+Ytsaw1xCbnCOap334LC7s4Oe/ttvA+ICLmhMXRxDufczUECS37oAuevPwUEVFFp4/eXkXSdYc2IopSepnjtUh5/wg9gfn6+OQBUNaRIUkfDHhraSLoBKqikIF3yHJDLHaAkFOLciVHnyVAVj/S2Ub/XRyQD9aAZKgkaOohvo6ENgykcA07VEFDfQv1uf4W9Y8y30bCPhg4qKZJtMnjTPqBO/vhkZ7h3EJeRslWNQMqgY2jIAIfa/m5sIKSpqpPsGEiz599e3b+GchtD+bSvjQJm2SG6cNj6C+QmaxAek5tyAAAAAElFTkSuQmCC\"/> <span title=\"A Resource Profile - a statement of use of one or more FHIR Resources.  It may include constraints on Resources and Data Types, Terminology Binding Statements and Extension Definitions.\">Profile</span><a name=\"Profile\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element has or is affected by some invariants\">I</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"domainresource.html\">DomainResource</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Resource Profile<br/><span title=\"3\" style=\"font-style: italic\">Parameter names must be unique within structure</span></td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"The URL at which this profile is (or will be) published, and which is used to reference this profile in extension urls and tag values in operational FHIR systems.\">url</span><a name=\"Profile.url\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#uri\">uri</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Literal URL used to reference this profile</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7\"/> <span title=\"Formal identifier that is used to identify this profile when it is represented in other formats, or referenced in a specification, model, design or an instance  (should be globally unique OID, UUID, or URI), (if it's not possible to use the literal URI).\">identifier</span><a name=\"Profile.identifier\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Other identifiers for the profile</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"The identifier that is used to identify this version of the profile when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the profile author manually.\">version</span><a name=\"Profile.version\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Logical id for this version of the profile</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"A free text natural language name identifying the Profile.\">name</span><a name=\"Profile.name\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Informal name for this profile</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"Details of the individual or organization who accepts responsibility for publishing the profile.\">publisher</span><a name=\"Profile.publisher\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Name of the publisher (Organization or individual)</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7\"/> <span title=\"Contact details to assist a user in finding and communicating with the publisher.\">telecom</span><a name=\"Profile.telecom\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#ContactPoint\">ContactPoint</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Contact information of the publisher</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"A free text natural language description of the profile and its use.\">description</span><a name=\"Profile.description\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Natural language description of the profile</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7\"/> <span title=\"A set of terms from external terminologies that may be used to assist with indexing and searching of templates.\">code</span><a name=\"Profile.code\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#Coding\">Coding</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Assist with indexing and finding</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"The status of the profile.\">status</span><a name=\"Profile.status\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is a modifier element\">M </span><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">draft | active | retired<br/><a title=\"The lifecycle status of a Resource Profile\" href=\"resource-profile-status.html\">ResourceProfileStatus</a> (<a title=\"One of the the defined codes must be used\" href=\"terminologies.html#code\">Required</a>)</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"This profile was authored for testing purposes (or education/evaluation/marketing), and is not intended to be used for genuine usage.\">experimental</span><a name=\"Profile.experimental\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#boolean\">boolean</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">If for testing purposes, not real usage</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"The date that this version of the profile was published.\">date</span><a name=\"Profile.date\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#dateTime\">dateTime</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Date for this version of the profile</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"The Scope and Usage that this profile was created to meet.\">requirements</span><a name=\"Profile.requirements\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Scope and Usage this profile is for</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"The version of the FHIR specification on which this profile is based - this is the formal version of the specification, without the revision number, e.g. [publication].[major].[minor], which is 0.4.0 for this version.\">fhirVersion</span><a name=\"Profile.fhirVersion\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#id\">id</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">FHIR Version this profile targets</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Element\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAMQfAOvGUf7ztuvPMf/78/fkl/Pbg+u8Rvjqteu2Pf3zxPz36Pz0z+vTmPzurPvuw/npofbjquvNefHVduuyN+uuMu3Oafbgjfnqvf/3zv/3xevPi+vRjP/20/bmsP///////yH5BAEAAB8ALAAAAAAQABAAAAV24CeOZGmepqeqqOgxjBZFa+19r4ftWQUAgqDgltthMshMIJAZ4jYDHsBARSAmFOJvq+g6HIdEFgcYmBWNxoNAsDjGHgBnmV5bCoUDHLBIq9sFEhIdcAYJdYASFRUQhQkLCwkOFwcdEBAXhVabE52ecDahKy0oIQA7\"/> <span title=\"An external specification that the content is mapped to.\">mapping</span><a name=\"Profile.mapping\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element has or is affected by some invariants\">I</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"element.html\">Element</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">External specification that the content is mapped to<br/><span title=\"2\" style=\"font-style: italic\">Must have at a name or a uri (or both)</span></td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4/x0ISQIM/0kGANNnY41GtlCWAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII=\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"An Internal id that is used to identify this mapping set when specific mappings are made.\">identity</span><a name=\"Profile.mapping.identity\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#id\">id</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Internal id when this mapping is used</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4/x0ISQIM/0kGANNnY41GtlCWAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII=\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"A URI that identifies the specification that this mapping is expressed to.\">uri</span><a name=\"Profile.mapping.uri\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element has or is affected by some invariants\">I</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#uri\">uri</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Identifies what this mapping refers to</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4/x0ISQIM/0kGANNnY41GtlCWAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII=\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"A name for the specification that is being mapped to.\">name</span><a name=\"Profile.mapping.name\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element has or is affected by some invariants\">I</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Names what this mapping refers to</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII=\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII=\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"Comments about this mapping, including version notes, issues, scope limitations, and other important notes for usage.\">comments</span><a name=\"Profile.mapping.comments\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Versions, Issues, Scope limitations etc</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"The Resource or Data type being described.\">type</span><a name=\"Profile.type\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">The Resource or Data Type being described<br/><a title=\"Either a resource or a data type\" href=\"defined-types.html\">FHIRDefinedType</a> (<a title=\"One of the the defined codes must be used\" href=\"terminologies.html#code\">Required</a>)</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"The structure that is the base on which this set of constraints is derived from.\">base</span><a name=\"Profile.base\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#uri\">uri</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Structure that this set of constraints applies to</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Element\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAMQfAOvGUf7ztuvPMf/78/fkl/Pbg+u8Rvjqteu2Pf3zxPz36Pz0z+vTmPzurPvuw/npofbjquvNefHVduuyN+uuMu3Oafbgjfnqvf/3zv/3xevPi+vRjP/20/bmsP///////yH5BAEAAB8ALAAAAAAQABAAAAV24CeOZGmepqeqqOgxjBZFa+19r4ftWQUAgqDgltthMshMIJAZ4jYDHsBARSAmFOJvq+g6HIdEFgcYmBWNxoNAsDjGHgBnmV5bCoUDHLBIq9sFEhIdcAYJdYASFRUQhQkLCwkOFwcdEBAXhVabE52ecDahKy0oIQA7\"/> <span title=\"A snapshot view is expressed in a stand alone form that can be used and interpreted without considering the base profile.\">snapshot</span><a name=\"Profile.snapshot\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element has or is affected by some invariants\">I</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"element.html\">Element</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Snapshot view of the structure<br/><span title=\"1\" style=\"font-style: italic\">Element paths must be unique - or not (LM)</span><br/><span title=\"4\" style=\"font-style: italic\">If a structure is a snapshot, then each element definition must have a formal definition, cardinalities, and a isModifier flag</span></td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII=\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII=\"/><img title=\"Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7\"/> <span title=\"Captures constraints on each element within the resource.\">element</span><a name=\"Profile.snapshot.element\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"elementdefinition.html#ElementDefinition\">ElementDefinition</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Definition of elements in the resource (if no profile)</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAD0lEQVR42mP4TzJgIF0LANmXY523xFiMAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII=\"/><img title=\"Reference to another Element\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAKjSURBVDjLrZLdT1JhHMfd6q6L7voT3NrEuQq6aTircWFQ04u4MetCZ4UXGY2J1UoMdCoWxMZWDWtrrqHgylZ54RbkZtkiJ5aAku8MXXqQl3PgAOfb8xwq5LrOzmfnd34vn+d5tqcMQNm/UPZfBMHXx2ZWvI386odLe7jIL7w5EQ68qjhEOFjCmMj+v4LQmCwtCHkSCuSlFOIst4X1KU1mbUqT/kPki57bmL6xEnx55HxRMCqNCTkO6fUBpH5YkFoeBLsyAiHLEFcSQi5B2C38Z3eAPJ8JjcrmigKnLJ7nd8mwDcnFh4h/68T29FVsfW4F4zeCmb0LZqYDO191hOtkZ5sIuY8lioJhKZ9lo2DmbNjx9WDTowW7+YmsGv+9Ov3GijsgxwsNy7iiYOg4L54/nyawQC4lDubYANIRG7g1I9glHVILl5EMNCCXnEfouXSP4JksI+RY5OIfkWXGwf8cQSb6hAz2gV2+BXaxFangBSS/n0PCfxq5xAxCg3sFj2TpPB8Hvz2G3dWneOvqhLnPCIfDgd5uPebfNyAyrUR/t1bMmft7MdR1NiuXyw8UBDYpJ/AMkhsOPLa2wmKxIBqNIhwOw+Px4EG/Hvb7GoSCc2JucnJS7FEqlb2FizRwNMLHFmPvXnQJN/U6+Px+3LvdApVKiebmZlitVuj1ejFWqc7AZNCJEq1WGxMFAVPFtUCPZKhDXZUyGu6IAr+pklOclGNiYgI+nw9erxculws0N2uqjFOBwWDgSu61RCK50tLSwlBBfX39eE1NDa9QKFBXVydCY5qjNSqgvSWCw+RRqVTzZrOZcTqd2263G3a7HW1tbWhvbxdjmqM12kN7SwTl5eX7qqurq2pra5eampqSGo2GI2TUanUj4RSJ4zRHa7SH9v4C8Nrl+GFh7LoAAAAASUVORK5CYII=\"/> <span title=\"A differential view is expressed relative to the base profile - a statement of differences that it applies.\">differential</span><a name=\"Profile.differential\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">see <a title=\"Profile.snapshot\" href=\"#Profile.snapshot\">snapshot</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Differential view of the structure</td></tr>\r\n</table></div>"
+  },
+  "url": "http://hl7.org/fhir/Profile/Profile",
+  "name": "Profile",
+  "publisher": "HL7 FHIR Project (FHIR Management Group)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "url",
+      "value": "http://www.hl7.org/Special/committees/fhirmg/index.cfm"
+    }
+  ],
+  "description": "Base Profile for Profile Resource",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "mapping": [
+    {
+      "identity": "iso11179",
+      "uri": "http://metadata-standards.org/11179/",
+      "name": "ISO 11179"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "type": "Profile",
+  "snapshot": {
+    "element": [
+      {
+        "path": "Profile",
+        "short": "Resource Profile",
+        "formal": "A Resource Profile - a statement of use of one or more FHIR Resources.  It may include constraints on Resources and Data Types, Terminology Binding Statements and Extension Definitions.",
+        "comments": "Often called a clinical template.",
+        "synonym": [
+          "Template"
+        ],
+        "min": 1,
+        "max": "1",
+        "constraint": [
+          {
+            "key": "3",
+            "severity": "error",
+            "human": "Parameter names must be unique within structure",
+            "xpath": "count(distinct-values(f:searchParam/f:name/@value)) =count(f:searchParam/f:name)"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.id",
+        "short": "Logical id of this artefact",
+        "formal": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes.",
+        "comments": "The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.meta",
+        "short": "Metadata about the resource",
+        "formal": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
+        "min": 0,
+        "max": "1",
+        "isSummary": false
+      },
+      {
+        "path": "Profile.meta.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "Profile.meta.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "Profile.meta.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "Profile.meta.versionId",
+        "short": "Version specific identifier",
+        "formal": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted.",
+        "comments": "The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.meta.lastUpdated",
+        "short": "When the resource version last changed",
+        "formal": "When the resource last changed - e.g. when the version changed.",
+        "comments": "This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "instant"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.meta.profile",
+        "short": "Profiles this resource claims to conform to",
+        "formal": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url.",
+        "comments": "It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.meta.security",
+        "short": "Security Labels applied to this resource",
+        "formal": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
+        "comments": "The security labels can be updated without changing the stated version of the resource.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.meta.tag",
+        "short": "Tags applied",
+        "formal": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
+        "comments": "The tags can be updated without changing the stated version of the resource.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "formal": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
+        "comments": "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": false
+      },
+      {
+        "path": "Profile.language",
+        "short": "Language of the resource content",
+        "formal": "The base language in which the resource is written.",
+        "comments": "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "Language",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "A human language",
+          "referenceUri": "http://tools.ietf.org/html/bcp47"
+        }
+      },
+      {
+        "path": "Profile.text",
+        "short": "Text summary of the resource, for human interpretation",
+        "formal": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+        "comments": "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative.",
+        "synonym": [
+          "narrative",
+          "html",
+          "xhtml",
+          "display"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Narrative"
+          }
+        ],
+        "condition": [
+          "1"
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Act.text?"
+          },
+          {
+            "identity": "rim",
+            "map": "Act.text?"
+          }
+        ]
+      },
+      {
+        "path": "Profile.contained",
+        "short": "Contained, inline Resources",
+        "formal": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+        "comments": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
+        "synonym": [
+          "inline resources",
+          "anonymous resources",
+          "contained resources"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Resource"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "Profile.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "Profile.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "Profile.url",
+        "short": "Literal URL used to reference this profile",
+        "formal": "The URL at which this profile is (or will be) published, and which is used to reference this profile in extension urls and tag values in operational FHIR systems.",
+        "requirements": "So you can say, in a profile, what the full extensions URLs should be. This is required to allow hosting profiles on multiple different servers, and to allow for the editorial process.",
+        "synonym": [
+          "url",
+          "authoritative-url",
+          "destination"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.identifier",
+        "short": "Other identifiers for the profile",
+        "formal": "Formal identifier that is used to identify this profile when it is represented in other formats, or referenced in a specification, model, design or an instance  (should be globally unique OID, UUID, or URI), (if it's not possible to use the literal URI).",
+        "comments": "N/A.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "iso11179",
+            "map": "Identifier part"
+          },
+          {
+            "identity": "iso11179",
+            "map": "Identifier part"
+          }
+        ]
+      },
+      {
+        "path": "Profile.version",
+        "short": "Logical id for this version of the profile",
+        "formal": "The identifier that is used to identify this version of the profile when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the profile author manually.",
+        "comments": "N/A.",
+        "requirements": "There may be multiple resource versions of the profile that have this same identifier. The resource version id will change for technical reasons, whereas the stated version number needs to be under the author's control.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "iso11179",
+            "map": "Version"
+          },
+          {
+            "identity": "iso11179",
+            "map": "Version"
+          }
+        ]
+      },
+      {
+        "path": "Profile.name",
+        "short": "Informal name for this profile",
+        "formal": "A free text natural language name identifying the Profile.",
+        "comments": "Not expected to be globally unique.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "path": "Profile.publisher",
+        "short": "Name of the publisher (Organization or individual)",
+        "formal": "Details of the individual or organization who accepts responsibility for publishing the profile.",
+        "comments": "Usually an organization, but may be an individual. This item SHOULD be populated unless the information is available from context.",
+        "requirements": "Helps establish the \"authority/credibility\" of the profile.  May also allow for contact.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "iso11179",
+            "map": "Registration Authority"
+          },
+          {
+            "identity": "iso11179",
+            "map": "Registration Authority"
+          }
+        ]
+      },
+      {
+        "path": "Profile.telecom",
+        "short": "Contact information of the publisher",
+        "formal": "Contact details to assist a user in finding and communicating with the publisher.",
+        "comments": "May be a web site, an email address, a telephone number (tel:), etc.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ContactPoint"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "path": "Profile.description",
+        "short": "Natural language description of the profile",
+        "formal": "A free text natural language description of the profile and its use.",
+        "comments": "This field can be used for things such as why the profile was written, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc.  It is *not* a rendering of the profile as conveyed in Profile.text. This item SHOULD be populated unless the information is available from context.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "path": "Profile.code",
+        "short": "Assist with indexing and finding",
+        "formal": "A set of terms from external terminologies that may be used to assist with indexing and searching of templates.",
+        "requirements": "Assist in searching for appropriate profiles.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "iso11179",
+            "map": "keywords"
+          },
+          {
+            "identity": "iso11179",
+            "map": "keywords"
+          }
+        ]
+      },
+      {
+        "path": "Profile.status",
+        "short": "draft | active | retired",
+        "formal": "The status of the profile.",
+        "requirements": "Allows filtering of profiles that are appropriate for use vs. not.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "binding": {
+          "name": "ResourceProfileStatus",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "The lifecycle status of a Resource Profile",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/resource-profile-status"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "iso11179",
+            "map": "Registration status"
+          },
+          {
+            "identity": "iso11179",
+            "map": "Registration status"
+          }
+        ]
+      },
+      {
+        "path": "Profile.experimental",
+        "short": "If for testing purposes, not real usage",
+        "formal": "This profile was authored for testing purposes (or education/evaluation/marketing), and is not intended to be used for genuine usage.",
+        "requirements": "Allows filtering of profiles that are appropriate for use vs. not.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "iso11179",
+            "map": "Registration status"
+          },
+          {
+            "identity": "iso11179",
+            "map": "Registration status"
+          }
+        ]
+      },
+      {
+        "path": "Profile.date",
+        "short": "Date for this version of the profile",
+        "formal": "The date that this version of the profile was published.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "path": "Profile.requirements",
+        "short": "Scope and Usage this profile is for",
+        "formal": "The Scope and Usage that this profile was created to meet.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.fhirVersion",
+        "short": "FHIR Version this profile targets",
+        "formal": "The version of the FHIR specification on which this profile is based - this is the formal version of the specification, without the revision number, e.g. [publication].[major].[minor], which is 0.4.0 for this version.",
+        "comments": "A profile does not need to specify the target it applies to,as profiles will often be valid across multiple versions of FHIR. FHIR tooling can determine whether a profile is consistent with a particular profile if desired.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "path": "Profile.mapping",
+        "short": "External specification that the content is mapped to",
+        "formal": "An external specification that the content is mapped to.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "2",
+            "severity": "error",
+            "human": "Must have at a name or a uri (or both)",
+            "xpath": "exists(f:uri) or exists(f:name)"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.mapping.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "Profile.mapping.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "Profile.mapping.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "Profile.mapping.identity",
+        "short": "Internal id when this mapping is used",
+        "formal": "An Internal id that is used to identify this mapping set when specific mappings are made.",
+        "comments": "The specification is described once, with general comments, and then specific mappings are made that reference this declaration.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.mapping.uri",
+        "short": "Identifies what this mapping refers to",
+        "formal": "A URI that identifies the specification that this mapping is expressed to.",
+        "comments": "A formal identity for the specification being mapped to helps with identifying maps consistently.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "condition": [
+          "2"
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.mapping.name",
+        "short": "Names what this mapping refers to",
+        "formal": "A name for the specification that is being mapped to.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "condition": [
+          "2"
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.mapping.comments",
+        "short": "Versions, Issues, Scope limitations etc",
+        "formal": "Comments about this mapping, including version notes, issues, scope limitations, and other important notes for usage.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.type",
+        "short": "The Resource or Data Type being described",
+        "formal": "The Resource or Data type being described.",
+        "comments": "Only complex types can be constrained, not primitive types such as string etc.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "FHIRDefinedType",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "Either a resource or a data type",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/defined-types"
+          }
+        }
+      },
+      {
+        "path": "Profile.base",
+        "short": "Structure that this set of constraints applies to",
+        "formal": "The structure that is the base on which this set of constraints is derived from.",
+        "comments": "If differential constraints are specified in this structure, they are applied to the base in a \"differential\" fashion. If there is no base, then the differential constraints cannot be provided (snapshot only). Differential structures are useful for the editing perspective, and snapshot structures are suitable for operational use. The FHIR Project provides a number of tools/services to populate snaphots from differential constraints.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.snapshot",
+        "name": "snapshot",
+        "short": "Snapshot view of the structure",
+        "formal": "A snapshot view is expressed in a stand alone form that can be used and interpreted without considering the base profile.",
+        "min": 0,
+        "max": "1",
+        "constraint": [
+          {
+            "key": "1",
+            "severity": "error",
+            "human": "Element paths must be unique - or not (LM)",
+            "xpath": "count(f:element) >= count(distinct-values(f:element/f:path/@value))"
+          },
+          {
+            "key": "4",
+            "severity": "error",
+            "human": "If a structure is a snapshot, then each element definition must have a formal definition, cardinalities, and a isModifier flag",
+            "xpath": "exists(f:base) or (count(f:element) = count(f:element[exists(f:definition/f:formal) and exists(f:definition/f:min) and exists(f:definition/f:max) and exists(f:definition/f:isModifier)]))"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.snapshot.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "Profile.snapshot.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "Profile.snapshot.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "Profile.snapshot.element",
+        "short": "Definition of elements in the resource (if no profile)",
+        "formal": "Captures constraints on each element within the resource.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ElementDefinition"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "iso11179",
+            "map": "--"
+          },
+          {
+            "identity": "iso11179",
+            "map": "--"
+          }
+        ]
+      },
+      {
+        "path": "Profile.differential",
+        "short": "Differential view of the structure",
+        "formal": "A differential view is expressed relative to the base profile - a statement of differences that it applies.",
+        "min": 0,
+        "max": "1",
+        "nameReference": "snapshot",
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "path": "Profile",
+        "short": "Resource Profile",
+        "formal": "A Resource Profile - a statement of use of one or more FHIR Resources.  It may include constraints on Resources and Data Types, Terminology Binding Statements and Extension Definitions.",
+        "comments": "Often called a clinical template.",
+        "synonym": [
+          "Template"
+        ],
+        "min": 1,
+        "max": "1",
+        "constraint": [
+          {
+            "key": "3",
+            "severity": "error",
+            "human": "Parameter names must be unique within structure",
+            "xpath": "count(distinct-values(f:searchParam/f:name/@value)) =count(f:searchParam/f:name)"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.url",
+        "short": "Literal URL used to reference this profile",
+        "formal": "The URL at which this profile is (or will be) published, and which is used to reference this profile in extension urls and tag values in operational FHIR systems.",
+        "requirements": "So you can say, in a profile, what the full extensions URLs should be. This is required to allow hosting profiles on multiple different servers, and to allow for the editorial process.",
+        "synonym": [
+          "url",
+          "authoritative-url",
+          "destination"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.identifier",
+        "short": "Other identifiers for the profile",
+        "formal": "Formal identifier that is used to identify this profile when it is represented in other formats, or referenced in a specification, model, design or an instance  (should be globally unique OID, UUID, or URI), (if it's not possible to use the literal URI).",
+        "comments": "N/A.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "iso11179",
+            "map": "Identifier part"
+          },
+          {
+            "identity": "iso11179",
+            "map": "Identifier part"
+          }
+        ]
+      },
+      {
+        "path": "Profile.version",
+        "short": "Logical id for this version of the profile",
+        "formal": "The identifier that is used to identify this version of the profile when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the profile author manually.",
+        "comments": "N/A.",
+        "requirements": "There may be multiple resource versions of the profile that have this same identifier. The resource version id will change for technical reasons, whereas the stated version number needs to be under the author's control.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "iso11179",
+            "map": "Version"
+          },
+          {
+            "identity": "iso11179",
+            "map": "Version"
+          }
+        ]
+      },
+      {
+        "path": "Profile.name",
+        "short": "Informal name for this profile",
+        "formal": "A free text natural language name identifying the Profile.",
+        "comments": "Not expected to be globally unique.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "path": "Profile.publisher",
+        "short": "Name of the publisher (Organization or individual)",
+        "formal": "Details of the individual or organization who accepts responsibility for publishing the profile.",
+        "comments": "Usually an organization, but may be an individual. This item SHOULD be populated unless the information is available from context.",
+        "requirements": "Helps establish the \"authority/credibility\" of the profile.  May also allow for contact.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "iso11179",
+            "map": "Registration Authority"
+          },
+          {
+            "identity": "iso11179",
+            "map": "Registration Authority"
+          }
+        ]
+      },
+      {
+        "path": "Profile.telecom",
+        "short": "Contact information of the publisher",
+        "formal": "Contact details to assist a user in finding and communicating with the publisher.",
+        "comments": "May be a web site, an email address, a telephone number (tel:), etc.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ContactPoint"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "path": "Profile.description",
+        "short": "Natural language description of the profile",
+        "formal": "A free text natural language description of the profile and its use.",
+        "comments": "This field can be used for things such as why the profile was written, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc.  It is *not* a rendering of the profile as conveyed in Profile.text. This item SHOULD be populated unless the information is available from context.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "path": "Profile.code",
+        "short": "Assist with indexing and finding",
+        "formal": "A set of terms from external terminologies that may be used to assist with indexing and searching of templates.",
+        "requirements": "Assist in searching for appropriate profiles.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "iso11179",
+            "map": "keywords"
+          },
+          {
+            "identity": "iso11179",
+            "map": "keywords"
+          }
+        ]
+      },
+      {
+        "path": "Profile.status",
+        "short": "draft | active | retired",
+        "formal": "The status of the profile.",
+        "requirements": "Allows filtering of profiles that are appropriate for use vs. not.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "binding": {
+          "name": "ResourceProfileStatus",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "The lifecycle status of a Resource Profile",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/resource-profile-status"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "iso11179",
+            "map": "Registration status"
+          },
+          {
+            "identity": "iso11179",
+            "map": "Registration status"
+          }
+        ]
+      },
+      {
+        "path": "Profile.experimental",
+        "short": "If for testing purposes, not real usage",
+        "formal": "This profile was authored for testing purposes (or education/evaluation/marketing), and is not intended to be used for genuine usage.",
+        "requirements": "Allows filtering of profiles that are appropriate for use vs. not.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "iso11179",
+            "map": "Registration status"
+          },
+          {
+            "identity": "iso11179",
+            "map": "Registration status"
+          }
+        ]
+      },
+      {
+        "path": "Profile.date",
+        "short": "Date for this version of the profile",
+        "formal": "The date that this version of the profile was published.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "path": "Profile.requirements",
+        "short": "Scope and Usage this profile is for",
+        "formal": "The Scope and Usage that this profile was created to meet.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.fhirVersion",
+        "short": "FHIR Version this profile targets",
+        "formal": "The version of the FHIR specification on which this profile is based - this is the formal version of the specification, without the revision number, e.g. [publication].[major].[minor], which is 0.4.0 for this version.",
+        "comments": "A profile does not need to specify the target it applies to,as profiles will often be valid across multiple versions of FHIR. FHIR tooling can determine whether a profile is consistent with a particular profile if desired.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": true
+      },
+      {
+        "path": "Profile.mapping",
+        "short": "External specification that the content is mapped to",
+        "formal": "An external specification that the content is mapped to.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "2",
+            "severity": "error",
+            "human": "Must have at a name or a uri (or both)",
+            "xpath": "exists(f:uri) or exists(f:name)"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.mapping.identity",
+        "short": "Internal id when this mapping is used",
+        "formal": "An Internal id that is used to identify this mapping set when specific mappings are made.",
+        "comments": "The specification is described once, with general comments, and then specific mappings are made that reference this declaration.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.mapping.uri",
+        "short": "Identifies what this mapping refers to",
+        "formal": "A URI that identifies the specification that this mapping is expressed to.",
+        "comments": "A formal identity for the specification being mapped to helps with identifying maps consistently.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "condition": [
+          "2"
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.mapping.name",
+        "short": "Names what this mapping refers to",
+        "formal": "A name for the specification that is being mapped to.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "condition": [
+          "2"
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.mapping.comments",
+        "short": "Versions, Issues, Scope limitations etc",
+        "formal": "Comments about this mapping, including version notes, issues, scope limitations, and other important notes for usage.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.type",
+        "short": "The Resource or Data Type being described",
+        "formal": "The Resource or Data type being described.",
+        "comments": "Only complex types can be constrained, not primitive types such as string etc.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "FHIRDefinedType",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "Either a resource or a data type",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/defined-types"
+          }
+        }
+      },
+      {
+        "path": "Profile.base",
+        "short": "Structure that this set of constraints applies to",
+        "formal": "The structure that is the base on which this set of constraints is derived from.",
+        "comments": "If differential constraints are specified in this structure, they are applied to the base in a \"differential\" fashion. If there is no base, then the differential constraints cannot be provided (snapshot only). Differential structures are useful for the editing perspective, and snapshot structures are suitable for operational use. The FHIR Project provides a number of tools/services to populate snaphots from differential constraints.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.snapshot",
+        "name": "snapshot",
+        "short": "Snapshot view of the structure",
+        "formal": "A snapshot view is expressed in a stand alone form that can be used and interpreted without considering the base profile.",
+        "min": 0,
+        "max": "1",
+        "constraint": [
+          {
+            "key": "1",
+            "severity": "error",
+            "human": "Element paths must be unique - or not (LM)",
+            "xpath": "count(f:element) >= count(distinct-values(f:element/f:path/@value))"
+          },
+          {
+            "key": "4",
+            "severity": "error",
+            "human": "If a structure is a snapshot, then each element definition must have a formal definition, cardinalities, and a isModifier flag",
+            "xpath": "exists(f:base) or (count(f:element) = count(f:element[exists(f:definition/f:formal) and exists(f:definition/f:min) and exists(f:definition/f:max) and exists(f:definition/f:isModifier)]))"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Profile.snapshot.element",
+        "short": "Definition of elements in the resource (if no profile)",
+        "formal": "Captures constraints on each element within the resource.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ElementDefinition"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "iso11179",
+            "map": "--"
+          },
+          {
+            "identity": "iso11179",
+            "map": "--"
+          }
+        ]
+      },
+      {
+        "path": "Profile.differential",
+        "short": "Differential view of the structure",
+        "formal": "A differential view is expressed relative to the base profile - a statement of differences that it applies.",
+        "min": 0,
+        "max": "1",
+        "nameReference": "snapshot",
+        "isSummary": false
+      }
+    ]
+  }
+}

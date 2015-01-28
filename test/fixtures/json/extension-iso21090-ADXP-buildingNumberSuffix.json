@@ -1,0 +1,48 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "iso21090-ADXP-buildingNumberSuffix",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/iso21090-ADXP-buildingNumberSuffix",
+  "name": "buildingNumberSuffix",
+  "publisher": "HL7",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://www.hl7.org"
+    }
+  ],
+  "description": "Any alphabetic character, fraction or other text that may appear after the numeric portion of a building number.",
+  "status": "draft",
+  "date": "2012-06-24",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "datatype",
+  "context": [
+    "Address"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "buildingNumberSuffix",
+      "formal": "Any alphabetic character, fraction or other text that may appear after the numeric portion of a building number.",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isSummary": false,
+      "mapping": [
+        {
+          "identity": "rim",
+          "map": "ADXP[partType=BNS]"
+        }
+      ]
+    }
+  ]
+}

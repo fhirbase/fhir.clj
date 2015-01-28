@@ -1,0 +1,62 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-encounter-participant-type",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set does not contain a fixed number of concepts</p><h2>ParticipantType</h2><p>This value set defines a set of codes that can be used to indicate how an individual parcitipates in an encounter</p><p>This value set defines its own terms in the system http://hl7.org/fhir/participant-type</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>translator<a name=\"translator\"> </a></td><td>Translator</td><td>A translator who is facilitating communication with the patient during the encounter</td></tr><tr><td>emergency<a name=\"emergency\"> </a></td><td>Emergency</td><td>A person to be contacted in case of an emergency during the encounter</td></tr></table><p>In addition, this value set includes codes defined in other code systems, using the following rules:</p><ul><li>Include codes from <a href=\"v3/ParticipationType/index.html\">http://hl7.org/fhir/v3/ParticipationType</a> where concept  is-a  <a href=\"v3/ParticipationType/index.html#_ParticipationAncillary\">_ParticipationAncillary</a></li></ul></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.183"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/encounter-participant-type",
+  "name": "ParticipantType",
+  "publisher": "FHIR Project team",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "This value set defines a set of codes that can be used to indicate how an individual parcitipates in an encounter",
+  "status": "draft",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:null"
+      }
+    ],
+    "system": "http://hl7.org/fhir/participant-type",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "translator",
+        "display": "Translator",
+        "definition": "A translator who is facilitating communication with the patient during the encounter"
+      },
+      {
+        "code": "emergency",
+        "display": "Emergency",
+        "definition": "A person to be contacted in case of an emergency during the encounter"
+      }
+    ]
+  },
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/v3/ParticipationType",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "_ParticipationAncillary"
+          }
+        ]
+      }
+    ]
+  }
+}

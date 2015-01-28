@@ -1,0 +1,38 @@
+{
+  "resourceType": "AllergyIntolerance",
+  "id": "medication",
+  "recordedDate": "2010-03-01",
+  "recorder": {
+    "reference": "Practitioner/13"
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "substance": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "314422",
+        "display": "ALLERGENIC EXTRACT, PENICILLIN"
+      }
+    ]
+  },
+  "status": "unconfirmed",
+  "criticality": "high",
+  "category": "medication",
+  "event": [
+    {
+      "manifestation": [
+        {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "247472004",
+              "display": "Hives"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

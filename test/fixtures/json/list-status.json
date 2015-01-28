@@ -1,0 +1,55 @@
+{
+  "resourceType": "ValueSet",
+  "id": "list-status",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 3 concepts</p><h2>ListStatusCodes</h2><p>Codes providing the status of a list</p><p>This value set defines its own terms in the system http://hl7.org/fhir/list-status</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>preliminary<a name=\"preliminary\"> </a></td><td>This is an initial or interim observation: data may be incomplete or unverified.</td></tr><tr><td>final<a name=\"final\"> </a></td><td>The observation is complete and verified by an authorized person.</td></tr><tr><td>amended<a name=\"amended\"> </a></td><td>The observation has been modified subsequent to being Final, and is complete and verified by an authorized person.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.491"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/list-status",
+  "name": "ListStatusCodes",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Codes providing the status of a list",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.492+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.491"
+      }
+    ],
+    "system": "http://hl7.org/fhir/list-status",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "preliminary",
+        "definition": "This is an initial or interim observation: data may be incomplete or unverified."
+      },
+      {
+        "code": "final",
+        "definition": "The observation is complete and verified by an authorized person."
+      },
+      {
+        "code": "amended",
+        "definition": "The observation has been modified subsequent to being Final, and is complete and verified by an authorized person."
+      }
+    ]
+  }
+}

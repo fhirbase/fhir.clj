@@ -1,0 +1,67 @@
+{
+  "resourceType": "ValueSet",
+  "id": "care-plan-activity-status",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 6 concepts</p><h2>CarePlanActivityStatus</h2><p>Indicates where the activity is at in its overall life cycle</p><p>This value set defines its own terms in the system http://hl7.org/fhir/care-plan-activity-status</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>not started<a name=\"notstarted\"> </a></td><td>Activity is planned but no action has yet been taken.</td></tr><tr><td>scheduled<a name=\"scheduled\"> </a></td><td>Appointment or other booking has occurred but activity has not yet begun.</td></tr><tr><td>in progress<a name=\"inprogress\"> </a></td><td>Activity has been started but is not yet complete.</td></tr><tr><td>on hold<a name=\"onhold\"> </a></td><td>Activity was started but has temporarily ceased with an expectation of resumption at a future time.</td></tr><tr><td>completed<a name=\"completed\"> </a></td><td>The activities have been completed (more or less) as planned.</td></tr><tr><td>cancelled<a name=\"cancelled\"> </a></td><td>The activities have been ended prior to completion (perhaps even before they were started).</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.41"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/care-plan-activity-status",
+  "name": "CarePlanActivityStatus",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Indicates where the activity is at in its overall life cycle",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.493+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.41"
+      }
+    ],
+    "system": "http://hl7.org/fhir/care-plan-activity-status",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "not started",
+        "definition": "Activity is planned but no action has yet been taken."
+      },
+      {
+        "code": "scheduled",
+        "definition": "Appointment or other booking has occurred but activity has not yet begun."
+      },
+      {
+        "code": "in progress",
+        "definition": "Activity has been started but is not yet complete."
+      },
+      {
+        "code": "on hold",
+        "definition": "Activity was started but has temporarily ceased with an expectation of resumption at a future time."
+      },
+      {
+        "code": "completed",
+        "definition": "The activities have been completed (more or less) as planned."
+      },
+      {
+        "code": "cancelled",
+        "definition": "The activities have been ended prior to completion (perhaps even before they were started)."
+      }
+    ]
+  }
+}

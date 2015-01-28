@@ -1,0 +1,90 @@
+{
+  "resourceType": "Encounter",
+  "id": "f002",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "http://www.bmc.nl/zorgportal/identifiers/encounters",
+      "value": "v3251"
+    }
+  ],
+  "status": "finished",
+  "class": "outpatient",
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "270427003",
+          "display": "Patient-initiated encounter"
+        }
+      ]
+    }
+  ],
+  "patient": {
+    "reference": "Patient/f001",
+    "display": "P. van de Heuvel"
+  },
+  "participant": [
+    {
+      "individual": {
+        "reference": "Practitioner/f003",
+        "display": "M.I.M Versteegh"
+      }
+    }
+  ],
+  "length": {
+    "value": 140,
+    "units": "min",
+    "system": "http://unitsofmeasure.org",
+    "code": "min"
+  },
+  "reason": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "34068001",
+        "display": "Partial lobectomy of lung"
+      }
+    ]
+  },
+  "priority": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "103391001",
+        "display": "Urgent"
+      }
+    ]
+  },
+  "hospitalization": {
+    "preAdmissionIdentifier": {
+      "use": "official",
+      "system": "http://www.bmc.nl/zorgportal/identifiers/pre-admissions",
+      "value": "98682"
+    },
+    "admitSource": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "305997006",
+          "display": "Referral by radiologist"
+        }
+      ]
+    },
+    "dischargeDisposition": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "306689006",
+          "display": "Discharge to home"
+        }
+      ]
+    },
+    "reAdmission": false
+  },
+  "serviceProvider": {
+    "reference": "Organization/f001",
+    "display": "BMC"
+  }
+}

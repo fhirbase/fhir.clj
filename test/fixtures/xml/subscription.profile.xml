@@ -1,0 +1,1115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Profile xmlns="http://hl7.org/fhir">
+  <id value="Subscription"/>
+  <meta>
+    <lastUpdated value="2014-12-12T13:17:44.755+11:00"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;" cellpadding="0" border="0" cellspacing="0">
+        <tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;">
+          <th style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Name</th>
+          <th style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Flags</th>
+          <th style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Card.</th>
+          <th style="width: 100px" class="heirarchy">Type</th>
+          <th style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Description &amp; Constraints
+            <span style="float: right">
+              <a title="Legend for this format" href="formats.html#table">
+                <img alt="doco" src="help16.png"/>
+              </a>
+            </span>
+          </th>
+        </tr>
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img title="Resource" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJBSURBVDjLhdKxa5NBGMfx713yvkmbJnaoFiSF4mJTh06Kg4OgiyCCRXCof4YIdXdxFhQVHPo3OFSoUx0FySQttaVKYq2NbdO8ed/L3fM4JG3tYPvAcfBw9+HHPWdUlf/V0tLSqKo+EpEHInJFRIohhDUR+RBCeDM7O7ua55QSkRfVanVufHyckZERrLV0Op2Zra2tmXq9fg+YsmcAdyYnJykUCke9OI6ZmJgghHAZ4KwE3ntPs9mkVCohIjQaDWq1GiEEAM5KoHEcY62lVCrRarUoFotUKpUjIL/y/uqXYmV62ph/LSVrr30P4bEFcM4B0Ov1jk547/uAUTs1ceNdZIwB7V/GGHz6+9LXxY96eDiEgHMOY8xJAK8p4grZz5cElwNbwZgyxYu3EFM01lriOCZJEqIoIooiALIsGwA9Y1UcwcWoKNLdpLu9zvbnBWqNBhuvn5EDUmB0EH/1E2TZw5U+YLQovkun+Ytsaw1xCbnCOap334LC7s4Oe/ttvA+ICLmhMXRxDufczUECS37oAuevPwUEVFFp4/eXkXSdYc2IopSepnjtUh5/wg9gfn6+OQBUNaRIUkfDHhraSLoBKqikIF3yHJDLHaAkFOLciVHnyVAVj/S2Ub/XRyQD9aAZKgkaOohvo6ENgykcA07VEFDfQv1uf4W9Y8y30bCPhg4qKZJtMnjTPqBO/vhkZ7h3EJeRslWNQMqgY2jIAIfa/m5sIKSpqpPsGEiz599e3b+GchtD+bSvjQJm2SG6cNj6C+QmaxAek5tyAAAAAElFTkSuQmCC"/> 
+            <span title="Todo.">Subscription</span>
+            <a name="Subscription"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="domainresource.html">DomainResource</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">A server push subscription criteria</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="Todo.">criteria</span>
+            <a name="Subscription.criteria"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#string">string</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Rule for server push criteria</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7"/> 
+            <span title="Todo.">contact</span>
+            <a name="Subscription.contact"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..*</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#ContactPoint">ContactPoint</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Contact details for source (e.g. troubleshooting)</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="Todo.">reason</span>
+            <a name="Subscription.reason"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#string">string</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Description of why this subscription was created</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="Todo.">status</span>
+            <a name="Subscription.status"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#code">code</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">requested | active | error | off
+            <br/>
+            <a title="The status of a subscription" href="subscription-status.html">SubscriptionStatus</a> (
+            <a title="One of the the defined codes must be used" href="terminologies.html#code">Required</a>)
+          </td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="Todo.">error</span>
+            <a name="Subscription.error"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#string">string</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Latest error note</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Element" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAMQfAOvGUf7ztuvPMf/78/fkl/Pbg+u8Rvjqteu2Pf3zxPz36Pz0z+vTmPzurPvuw/npofbjquvNefHVduuyN+uuMu3Oafbgjfnqvf/3zv/3xevPi+vRjP/20/bmsP///////yH5BAEAAB8ALAAAAAAQABAAAAV24CeOZGmepqeqqOgxjBZFa+19r4ftWQUAgqDgltthMshMIJAZ4jYDHsBARSAmFOJvq+g6HIdEFgcYmBWNxoNAsDjGHgBnmV5bCoUDHLBIq9sFEhIdcAYJdYASFRUQhQkLCwkOFwcdEBAXhVabE52ecDahKy0oIQA7"/> 
+            <span title="Todo.">channel</span>
+            <a name="Subscription.channel"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="element.html">Element</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">The channel on which to report matches to the criteria</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4/x0ISQIM/0kGANNnY41GtlCWAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="Todo.">type</span>
+            <a name="Subscription.channel.type"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#code">code</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">rest-hook | websocket | email | sms | message
+            <br/>
+            <a title="The type of method used to execute a subscription" href="subscription-channel-type.html">SubscriptionChannelType</a> (
+            <a title="One of the the defined codes must be used" href="terminologies.html#code">Required</a>)
+          </td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4/x0ISQIM/0kGANNnY41GtlCWAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="Todo.">url</span>
+            <a name="Subscription.channel.url"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#uri">uri</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Where the channel points to</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4/x0ISQIM/0kGANNnY41GtlCWAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="ToDo.">payload</span>
+            <a name="Subscription.channel.payload"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#string">string</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Mimetype to send, or blank for no payload</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII="/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="Usage depends on the channel type.">header</span>
+            <a name="Subscription.channel.header"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#string">string</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Usage depends on the channel type</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="Todo.">end</span>
+            <a name="Subscription.end"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#instant">instant</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">When to automatically delete the subscription</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAD0lEQVR42mP4TzJgIF0LANmXY523xFiMAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII="/>
+            <img title="Element" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAMQfAOvGUf7ztuvPMf/78/fkl/Pbg+u8Rvjqteu2Pf3zxPz36Pz0z+vTmPzurPvuw/npofbjquvNefHVduuyN+uuMu3Oafbgjfnqvf/3zv/3xevPi+vRjP/20/bmsP///////yH5BAEAAB8ALAAAAAAQABAAAAV24CeOZGmepqeqqOgxjBZFa+19r4ftWQUAgqDgltthMshMIJAZ4jYDHsBARSAmFOJvq+g6HIdEFgcYmBWNxoNAsDjGHgBnmV5bCoUDHLBIq9sFEhIdcAYJdYASFRUQhQkLCwkOFwcdEBAXhVabE52ecDahKy0oIQA7"/> 
+            <span title="Todo.">tag</span>
+            <a name="Subscription.tag"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..*</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="element.html">Element</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">A tag to add to matching resources</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAFElEQVR42mP4////9/8kAYb/JAMA1odjlXxALpEAAAAASUVORK5CYII=)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="Todo.">term</span>
+            <a name="Subscription.tag.term"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#uri">uri</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">The term that identifies the tag</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAFElEQVR42mP4////9/8kAYb/JAMA1odjlXxALpEAAAAASUVORK5CYII=)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="Todo.">scheme</span>
+            <a name="Subscription.tag.scheme"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#uri">uri</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">The scheme for the tag (kind of tag)</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAD0lEQVR42mP4TzJgIF0LANmXY523xFiMAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII="/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="Todo.">description</span>
+            <a name="Subscription.tag.description"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#string">string</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Tag description label</td>
+        </tr>
+
+      </table>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/Profile/Subscription"/>
+  <name value="Subscription"/>
+  <publisher value="HL7 FHIR Project (FHIR Management Group)"/>
+  <telecom>
+    <system value="url"/>
+    <value value="http://hl7.org/fhir"/>
+  </telecom>
+  <telecom>
+    <system value="url"/>
+    <value value="http://www.hl7.org/Special/committees/fhirmg/index.cfm"/>
+  </telecom>
+  <description value="Base Profile for Subscription Resource"/>
+  <status value="draft"/>
+  <date value="2014-12-12T13:17:44.755+11:00"/>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM"/>
+  </mapping>
+  <type value="Subscription"/>
+  <snapshot>
+    <element>
+      <path value="Subscription"/>
+      <short value="A server push subscription criteria"/>
+      <formal value="Todo."/>
+      <synonym value="WebHook"/>
+      <synonym value="Hook"/>
+      <synonym value="Routing Rule"/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Subscription.id"/>
+      <short value="Logical id of this artefact"/>
+      <formal value="The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes."/>
+      <comments value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.meta"/>
+      <short value="Metadata about the resource"/>
+      <formal value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.meta.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Subscription.meta.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Subscription.meta.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Subscription.meta.versionId"/>
+      <short value="Version specific identifier"/>
+      <formal value="The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted."/>
+      <comments value="The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.meta.lastUpdated"/>
+      <short value="When the resource version last changed"/>
+      <formal value="When the resource last changed - e.g. when the version changed."/>
+      <comments value="This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="instant"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.meta.profile"/>
+      <short value="Profiles this resource claims to conform to"/>
+      <formal value="A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url."/>
+      <comments value="It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.meta.security"/>
+      <short value="Security Labels applied to this resource"/>
+      <formal value="Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure."/>
+      <comments value="The security labels can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.meta.tag"/>
+      <short value="Tags applied"/>
+      <formal value="Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource."/>
+      <comments value="The tags can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.implicitRules"/>
+      <short value="A set of rules under which this content was created"/>
+      <formal value="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content."/>
+      <comments value="Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.language"/>
+      <short value="Language of the resource content"/>
+      <formal value="The base language in which the resource is written."/>
+      <comments value="Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource
+
+Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="Language"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="A human language"/>
+        <referenceUri value="http://tools.ietf.org/html/bcp47"/>
+      </binding>
+    </element>
+    <element>
+      <path value="Subscription.text"/>
+      <short value="Text summary of the resource, for human interpretation"/>
+      <formal value="A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."/>
+      <comments value="Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."/>
+      <synonym value="narrative"/>
+      <synonym value="html"/>
+      <synonym value="xhtml"/>
+      <synonym value="display"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Narrative"/>
+      </type>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Subscription.contained"/>
+      <short value="Contained, inline Resources"/>
+      <formal value="These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope."/>
+      <comments value="This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."/>
+      <synonym value="inline resources"/>
+      <synonym value="anonymous resources"/>
+      <synonym value="contained resources"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Resource"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Subscription.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Subscription.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Subscription.criteria"/>
+      <short value="Rule for server push criteria"/>
+      <formal value="Todo."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.contact"/>
+      <short value="Contact details for source (e.g. troubleshooting)"/>
+      <formal value="Todo."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="ContactPoint"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.reason"/>
+      <short value="Description of why this subscription was created"/>
+      <formal value="Todo."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.status"/>
+      <short value="requested | active | error | off"/>
+      <formal value="Todo."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="SubscriptionStatus"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The status of a subscription"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/subscription-status"/>
+        </referenceReference>
+      </binding>
+    </element>
+    <element>
+      <path value="Subscription.error"/>
+      <short value="Latest error note"/>
+      <formal value="Todo."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.channel"/>
+      <short value="The channel on which to report matches to the criteria"/>
+      <formal value="Todo."/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.channel.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Subscription.channel.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Subscription.channel.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Subscription.channel.type"/>
+      <short value="rest-hook | websocket | email | sms | message"/>
+      <formal value="Todo."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="SubscriptionChannelType"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The type of method used to execute a subscription"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/subscription-channel-type"/>
+        </referenceReference>
+      </binding>
+    </element>
+    <element>
+      <path value="Subscription.channel.url"/>
+      <short value="Where the channel points to"/>
+      <formal value="Todo."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.channel.payload"/>
+      <short value="Mimetype to send, or blank for no payload"/>
+      <formal value="ToDo."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.channel.header"/>
+      <short value="Usage depends on the channel type"/>
+      <formal value="Usage depends on the channel type."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.end"/>
+      <short value="When to automatically delete the subscription"/>
+      <formal value="Todo."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="instant"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.tag"/>
+      <short value="A tag to add to matching resources"/>
+      <formal value="Todo."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.tag.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Subscription.tag.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Subscription.tag.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Subscription.tag.term"/>
+      <short value="The term that identifies the tag"/>
+      <formal value="Todo."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.tag.scheme"/>
+      <short value="The scheme for the tag (kind of tag)"/>
+      <formal value="Todo."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.tag.description"/>
+      <short value="Tag description label"/>
+      <formal value="Todo."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+  </snapshot>
+  <differential>
+    <element>
+      <path value="Subscription"/>
+      <short value="A server push subscription criteria"/>
+      <formal value="Todo."/>
+      <synonym value="WebHook"/>
+      <synonym value="Hook"/>
+      <synonym value="Routing Rule"/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Subscription.criteria"/>
+      <short value="Rule for server push criteria"/>
+      <formal value="Todo."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.contact"/>
+      <short value="Contact details for source (e.g. troubleshooting)"/>
+      <formal value="Todo."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="ContactPoint"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.reason"/>
+      <short value="Description of why this subscription was created"/>
+      <formal value="Todo."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.status"/>
+      <short value="requested | active | error | off"/>
+      <formal value="Todo."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="SubscriptionStatus"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The status of a subscription"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/subscription-status"/>
+        </referenceReference>
+      </binding>
+    </element>
+    <element>
+      <path value="Subscription.error"/>
+      <short value="Latest error note"/>
+      <formal value="Todo."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.channel"/>
+      <short value="The channel on which to report matches to the criteria"/>
+      <formal value="Todo."/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.channel.type"/>
+      <short value="rest-hook | websocket | email | sms | message"/>
+      <formal value="Todo."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="SubscriptionChannelType"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The type of method used to execute a subscription"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/subscription-channel-type"/>
+        </referenceReference>
+      </binding>
+    </element>
+    <element>
+      <path value="Subscription.channel.url"/>
+      <short value="Where the channel points to"/>
+      <formal value="Todo."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.channel.payload"/>
+      <short value="Mimetype to send, or blank for no payload"/>
+      <formal value="ToDo."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.channel.header"/>
+      <short value="Usage depends on the channel type"/>
+      <formal value="Usage depends on the channel type."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.end"/>
+      <short value="When to automatically delete the subscription"/>
+      <formal value="Todo."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="instant"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.tag"/>
+      <short value="A tag to add to matching resources"/>
+      <formal value="Todo."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.tag.term"/>
+      <short value="The term that identifies the tag"/>
+      <formal value="Todo."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.tag.scheme"/>
+      <short value="The scheme for the tag (kind of tag)"/>
+      <formal value="Todo."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Subscription.tag.description"/>
+      <short value="Tag description label"/>
+      <formal value="Todo."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</Profile>

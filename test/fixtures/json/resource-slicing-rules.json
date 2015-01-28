@@ -1,0 +1,55 @@
+{
+  "resourceType": "ValueSet",
+  "id": "resource-slicing-rules",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 3 concepts</p><h2>SlicingRules</h2><p>How slices are interpreted when evaluating an instance</p><p>This value set defines its own terms in the system http://hl7.org/fhir/resource-slicing-rules</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>closed<a name=\"closed\"> </a></td><td>No additional content is allowed other than that described by the slices in this profile.</td></tr><tr><td>open<a name=\"open\"> </a></td><td>Additional content is allowed anywhere in the list.</td></tr><tr><td>openAtEnd<a name=\"openAtEnd\"> </a></td><td>Additional content is allowed, but only at the end of the list.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.265"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/resource-slicing-rules",
+  "name": "SlicingRules",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "How slices are interpreted when evaluating an instance",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.495+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.265"
+      }
+    ],
+    "system": "http://hl7.org/fhir/resource-slicing-rules",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "closed",
+        "definition": "No additional content is allowed other than that described by the slices in this profile."
+      },
+      {
+        "code": "open",
+        "definition": "Additional content is allowed anywhere in the list."
+      },
+      {
+        "code": "openAtEnd",
+        "definition": "Additional content is allowed, but only at the end of the list."
+      }
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "resourceType": "ValueSet",
+  "id": "data-absent-reason",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 8 concepts</p><h2>DataAbsentReason</h2><p>Used to specify why the normally expected content of the data element is missing</p><p>This value set defines its own terms in the system http://hl7.org/fhir/data-absent-reason</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td><td><b><a href=\"null\">v3 Map (NullFlavor)</a></b></td></tr><tr><td>unknown<a name=\"unknown\"> </a></td><td>The value is not known</td><td><span title=\"equal\">=</span><a href=\"#UNK\">UNK</a></td></tr><tr><td>asked<a name=\"asked\"> </a></td><td>The source human does not know the value</td><td><span title=\"equal\">=</span><a href=\"#ASKU\">ASKU</a></td></tr><tr><td>temp<a name=\"temp\"> </a></td><td>There is reason to expect (from the workflow) that the value may become known</td><td><span title=\"equal\">=</span><a href=\"#NAV\">NAV</a></td></tr><tr><td>notasked<a name=\"notasked\"> </a></td><td>The workflow didn't lead to this value being known</td><td><span title=\"equal\">=</span><a href=\"#NASK\">NASK</a></td></tr><tr><td>masked<a name=\"masked\"> </a></td><td>The information is not available due to security, privacy or related reasons</td><td><span title=\"equal\">=</span><a href=\"#MSK\">MSK</a></td></tr><tr><td>unsupported<a name=\"unsupported\"> </a></td><td>The source system wasn't capable of supporting this element</td><td><span title=\"wider\">&gt;</span><a href=\"#NA\">NA</a></td></tr><tr><td>astext<a name=\"astext\"> </a></td><td>The content of the data is represented in the resource narrative</td><td/></tr><tr><td>error<a name=\"error\"> </a></td><td>Some system or workflow process error means that the information is not available</td><td><span title=\"wider\">&gt;</span><a href=\"#NA\">NA</a></td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.2"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/data-absent-reason",
+  "name": "DataAbsentReason",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Used to specify why the normally expected content of the data element is missing",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.489+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.2"
+      }
+    ],
+    "system": "http://hl7.org/fhir/data-absent-reason",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "unknown",
+        "definition": "The value is not known"
+      },
+      {
+        "code": "asked",
+        "definition": "The source human does not know the value"
+      },
+      {
+        "code": "temp",
+        "definition": "There is reason to expect (from the workflow) that the value may become known"
+      },
+      {
+        "code": "notasked",
+        "definition": "The workflow didn't lead to this value being known"
+      },
+      {
+        "code": "masked",
+        "definition": "The information is not available due to security, privacy or related reasons"
+      },
+      {
+        "code": "unsupported",
+        "definition": "The source system wasn't capable of supporting this element"
+      },
+      {
+        "code": "astext",
+        "definition": "The content of the data is represented in the resource narrative"
+      },
+      {
+        "code": "error",
+        "definition": "Some system or workflow process error means that the information is not available"
+      }
+    ]
+  }
+}

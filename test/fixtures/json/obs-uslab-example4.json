@@ -1,0 +1,72 @@
+{
+  "resourceType": "Observation",
+  "id": "uslab-example4",
+  "text": {
+    "status": "generated",
+    "div": "<div>\n\t\t\t\n      <ul>\n\t\t\t\t\n        <li> obs-uslab-example4.xml</li>\n\t\t\t\t\n        <li> id: uslab-example4</li>\n\t\t\t\t\n        <li> Name: USLab Observation Example4</li>\n\t\t\t\t\n        <li>Description: USLab Ratio Observation Profile Canonical Example: Dengue Virus</li>\n\t\t\t\n      </ul>\n\t\t\n    </div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/uslabobservationkind": [
+    {
+      "valueCode": "result"
+    }
+  ],
+  "name": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "6812-2",
+        "display": "Dengue virus IgM Ab [Titer] in Serum"
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.3.72.5.24",
+        "code": "DGIGM",
+        "display": "Dengue IgM QN"
+      }
+    ],
+    "text": "Dengue IgM Titer"
+  },
+  "valueRatio": {
+    "numerator": {
+      "value": 1
+    },
+    "denominator": {
+      "value": 256
+    }
+  },
+  "interpretation": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/v2/0078",
+        "code": "H"
+      }
+    ]
+  },
+  "appliesDateTime": "2014-12-05",
+  "issued": "2014-12-06T15:42:15-08:00",
+  "status": "final",
+  "identifier": {
+    "use": "official",
+    "label": "lab test result ID",
+    "system": "http://lis.acmelabs.org/identifiers/labtestresult",
+    "value": "4567"
+  },
+  "subject": {
+    "reference": "uslab-example1",
+    "display": "Todd Lerr"
+  },
+  "specimen": {
+    "reference": "uslab-example1",
+    "display": "Bloo sample"
+  },
+  "performer": [
+    {
+      "reference": "uslab-example1",
+      "display": "Dr Leonard T Bloodraw Jr"
+    }
+  ],
+  "referenceRange": [
+    {
+      "text": "<1:64"
+    }
+  ]
+}

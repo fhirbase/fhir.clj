@@ -1,0 +1,45 @@
+{
+  "resourceType": "RiskAssessment",
+  "id": "cardiac",
+  "text": {
+    "status": "additional",
+    "div": "<div>\n      \n      <table>\n        \n        <tr>\n          \n          <td colspan=\"2\">\n            \n            <h1>Information about your risk score:</h1>\n          \n          </td>\n        \n        </tr>\n        \n        <tr>\n          \n          <td>\n            \n            <strong>Age:</strong>\n          \n          </td>\n          \n          <td>39</td>\n        \n        </tr>\n        \n        <tr>\n          \n          <td>\n            \n            <strong>Gender:</strong>\n          \n          </td>\n          \n          <td>male</td>\n        \n        </tr>\n        \n        <tr>\n          \n          <td>\n            \n            <strong>Total Cholesterol:</strong>\n          \n          </td>\n          \n          <td>244 mg/dL</td>\n        \n        </tr>\n        \n        <tr>\n          \n          <td>\n            \n            <strong>HDL Cholesterol:</strong>\n          \n          </td>\n          \n          <td>50 mg/dL\n          </td>\n        \n        </tr>\n        \n        <tr>\n          \n          <td>\n            \n            <strong>Smoker:</strong>\n          \n          </td>\n          \n          <td>No</td>\n        \n        </tr>\n        \n        <tr>\n          \n          <td>\n            \n            <strong>Systolic Blood Pressure:</strong>\n          \n          </td>\n          \n          <td>107 mm/Hg</td>\n        \n        </tr>\n        \n        <tr>\n          \n          <td>\n            \n            <strong>On medication for HBP:</strong>\n          \n          </td>\n          \n          <td>No</td>\n        \n        </tr>\n        \n        <tr>\n          \n          <td valign=\"top\">\n            \n            <b>Risk Score*</b>\n          \n          </td>\n          \n          <td>2%\n            <br/>Means 2 of 100 people with this level of risk will have a heart attack in the next 10 years.\n          </td>\n        \n        </tr>\n        \n        <tr>\n          \n          <td colspan=\"2\">* Your risk score was calculated using an equation.  Other NCEP products, such as printed ATP III materials, use a point system to determine a risk score that is close to the equation score.</td>\n        \n        </tr>\n        \n        <tr>\n          \n          <td colspan=\"2\">To find out what your risk score means and how to lower your risk for a heart attack, go to\n            <br/>\n            \n            <a href=\"http://www.nhlbi.nih.gov/health/public/heart/chol/hbc_what.htm\">&quot;High Blood Cholesterol—What You Need to Know&quot;</a>.\n            <br/>\n            \n            <a href=\"http://www.nhlbi.nih.gov/health/public/heart/chol/chol_tlc.htm\">Your Guide to Lowering Cholesterol with Therapeutic Lifestyle Changes (TLC)</a>\n            <br/>\n            \n            <a href=\"http://www.nhlbi.nih.gov/health/public/heart/other/hhw/index.htm\">The Healthy Heart Handbook for Women</a>\n          \n          </td>\n        \n        </tr>\n      \n      </table>\n    \n    </div>"
+  },
+  "date": "2014-07-19T16:04:00",
+  "performer": {
+    "display": "http://cvdrisk.nhlbi.nih.gov/#cholesterol"
+  },
+  "basis": [
+    {
+      "reference": "Patient/example"
+    },
+    {
+      "reference": "DiagnosticReport/lipids"
+    },
+    {
+      "reference": "Observation/blood-pressure"
+    }
+  ],
+  "prediction": [
+    {
+      "outcome": {
+        "text": "Heart Attack"
+      },
+      "probabilityDecimal": 0.02,
+      "whenRange": {
+        "low": {
+          "value": 39,
+          "units": "years",
+          "system": "http://unitsofmeasure.org",
+          "code": "a"
+        },
+        "high": {
+          "value": 49,
+          "units": "years",
+          "system": "http://unitsofmeasure.org",
+          "code": "a"
+        }
+      }
+    }
+  ]
+}

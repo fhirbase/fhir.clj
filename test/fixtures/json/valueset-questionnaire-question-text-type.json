@@ -1,0 +1,48 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-questionnaire-question-text-type",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 1 concepts</p><h2>Questionnaire Question Text Type</h2><p>Codes that define types of additional text that may be associated with a Questionnaire group or question.</p><p>This value set defines its own terms in the system http://hl7.org/fhir/questionnaire-question-text-type</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>units<a name=\"units\"> </a></td><td>units</td><td>Identifies the units in which the question's answer should be captured</td></tr></table><p>In addition, this value set includes codes defined in other code systems, using the following rules:</p><ul><li>Import all the codes that are part of <a href=\"valueset-questionnaire-text-type.html\">http://hl7.org/fhir/vs/questionnaire-text-type</a></li></ul></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.394"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/questionnaire-question-text-type",
+  "name": "Questionnaire Question Text Type",
+  "publisher": "FHIR Project team",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "Codes that define types of additional text that may be associated with a Questionnaire group or question.",
+  "status": "draft",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:null"
+      }
+    ],
+    "system": "http://hl7.org/fhir/questionnaire-question-text-type",
+    "caseSensitive": false,
+    "concept": [
+      {
+        "code": "units",
+        "display": "units",
+        "definition": "Identifies the units in which the question's answer should be captured"
+      }
+    ]
+  },
+  "compose": {
+    "import": [
+      "http://hl7.org/fhir/vs/questionnaire-text-type"
+    ]
+  }
+}

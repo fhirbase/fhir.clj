@@ -1,0 +1,930 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "vs2",
+      "identifier": "urn:uuid:6cfe8ba2-a08e-4d44-a7fa-b0152deb0d6d",
+      "name": "Type options for DiagnosticReport.subject",
+      "description": "Type options for DiagnosticReport.subject",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:20:12.249+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Patient",
+            "display": "Patient"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Group",
+            "display": "Group"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Device",
+            "display": "Device"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Location",
+            "display": "Location"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs3",
+      "identifier": "urn:uuid:bef2ff93-685d-41bb-83db-7cd886678280",
+      "name": "Type options for DiagnosticReport.performer",
+      "description": "Type options for DiagnosticReport.performer",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:20:12.249+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Practitioner",
+            "display": "Practitioner"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Organization",
+            "display": "Organization"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs4",
+      "identifier": "urn:uuid:256eee4b-1376-488d-bd8f-ec24f45649b0",
+      "name": "Type options for DiagnosticReport.diagnostic[x]",
+      "description": "Type options for DiagnosticReport.diagnostic[x]",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:20:12.249+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "dateTime",
+            "display": "dateTime"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Period",
+            "display": "Period"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (Orders and Observations)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretation, and formatted representation of diagnostic reports."
+      }
+    ],
+    "linkId": "DiagnosticReport",
+    "title": "A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports",
+    "text": "This is intended to capture a single report, and is not suitable for use in displaying summary information that covers multiple reports.  For example, this resource has not been designed for laboratory cumulative reporting formats nor detailed structured reports for sequencing.",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "DiagnosticReport.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DiagnosticReport.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "DiagnosticReport.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "DiagnosticReport.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DiagnosticReport.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "DiagnosticReport.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DiagnosticReport.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "DiagnosticReport.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DiagnosticReport.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "DiagnosticReport.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DiagnosticReport.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "DiagnosticReport.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DiagnosticReport.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "DiagnosticReport.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DiagnosticReport.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "DiagnosticReport.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DiagnosticReport.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "DiagnosticReport.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DiagnosticReport.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "DiagnosticReport.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "DiagnosticReport.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A code or name that describes this diagnostic report."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "DiagnosticReport.name",
+        "text": "Name/Code for this diagnostic report",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DiagnosticReport.name.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "DiagnosticReport.name.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The status of the diagnostic report as a whole. This is labeled as \"Is Modifier\" because applications need to take appropriate action if a report is withdrawn."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "DiagnosticReport.status",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DiagnosticReport.status.value",
+            "text": "status",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The date and/or time that this version of the report was released from the source diagnostic service. May be different from the update time of the resource itself, because that is the status of the record (potentially a secondary copy), not the actual release time of the report ."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "datetime"
+          }
+        ],
+        "linkId": "DiagnosticReport.issued",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DiagnosticReport.issued.value",
+            "text": "Date this version was released",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The subject of the report. Usually, but not always, this is a patient. However diagnostic services also perform analyses on specimens collected from a variety of other sources."
+          }
+        ],
+        "linkId": "DiagnosticReport.subject",
+        "text": "The subject of the report, usually, but not always, the patient",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DiagnosticReport.subject._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs2"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "DiagnosticReport.subject._Patient",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "DiagnosticReport.subject._Patient.value",
+                    "text": "Patient",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "DiagnosticReport.subject._Group",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Group?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "DiagnosticReport.subject._Group.value",
+                    "text": "Group",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "DiagnosticReport.subject._Device",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Device?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "DiagnosticReport.subject._Device.value",
+                    "text": "Device",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "DiagnosticReport.subject._Location",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Location?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "DiagnosticReport.subject._Location.value",
+                    "text": "Location",
+                    "type": "reference"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The diagnostic service that is responsible for issuing the report. This is not necessarily the source of the atomic data items - it is the entity that takes responsibility for the clinical report."
+          }
+        ],
+        "linkId": "DiagnosticReport.performer",
+        "text": "Responsible Diagnostic Service",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DiagnosticReport.performer._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs3"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "DiagnosticReport.performer._Practitioner",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "DiagnosticReport.performer._Practitioner.value",
+                    "text": "Practitioner",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "DiagnosticReport.performer._Organization",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "DiagnosticReport.performer._Organization.value",
+                    "text": "Organization",
+                    "type": "reference"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The local ID assigned to the report by the order filler, usually by the Information System of the diagnostic service provider."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Identifier"
+          }
+        ],
+        "linkId": "DiagnosticReport.identifier",
+        "text": "Id for external references to this report",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DiagnosticReport.identifier.label",
+            "text": "label:",
+            "type": "string"
+          },
+          {
+            "linkId": "DiagnosticReport.identifier.system",
+            "text": "system:",
+            "type": "string"
+          },
+          {
+            "linkId": "DiagnosticReport.identifier.value",
+            "text": "value:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Details concerning a test requested. Note: Usually there is one test request for each result, however in some circumstances multiple test requests may be represented using a single test result resource. Note that there are also cases where one request leads to multiple reports."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "DiagnosticReport.requestDetail",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/DiagnosticOrder?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "DiagnosticReport.requestDetail.value",
+            "text": "What was requested",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The section of the diagnostic service that performs the examination e.g. biochemistry, hematology, MRI."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "DiagnosticReport.serviceCategory",
+        "text": "Biochemistry, Hematology etc.",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DiagnosticReport.serviceCategory.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "DiagnosticReport.serviceCategory.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The time or time-period the observed values are related to. This is usually either the time of the procedure or of specimen collection(s), but very often the source of the date/time is not known, only the date/time itself. If the diagnostic procedure was performed on the patient, this is the time it was performed. If there are specimens, the diagnostically relevant time can be derived from the specimen collection times, but the specimen information is not always available, and the exact relationship between the specimens and the diagnostically relevant time is not always automatic."
+          }
+        ],
+        "linkId": "DiagnosticReport.diagnostic[x]",
+        "text": "Physiologically Relevant time/time-period for report",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DiagnosticReport.diagnostic[x]._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs4"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "datetime"
+                  }
+                ],
+                "linkId": "DiagnosticReport.diagnostic[x]._dateTime",
+                "question": [
+                  {
+                    "linkId": "DiagnosticReport.diagnostic[x]._dateTime.value",
+                    "text": "dateTime",
+                    "type": "dateTime"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Period"
+                  }
+                ],
+                "linkId": "DiagnosticReport.diagnostic[x]._Period",
+                "text": "Period",
+                "question": [
+                  {
+                    "linkId": "DiagnosticReport.diagnostic[x]._Period.low",
+                    "text": "start:",
+                    "type": "dateTime"
+                  },
+                  {
+                    "linkId": "DiagnosticReport.diagnostic[x]._Period.end",
+                    "text": "end:",
+                    "type": "dateTime"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Details about the specimens on which this diagnostic report is based. If the specimen is sufficiently specified with a code in the Test result name, then this additional data may be redundant. If there are multiple specimens, these may be represented per Observation or group."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "DiagnosticReport.specimen",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Specimen?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "DiagnosticReport.specimen.value",
+            "text": "Specimens this report is based on",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Observations that are part of this diagnostic report. Observations can be simple name/value pairs (e.g. \"atomic\" results), or they can be grouping observations that include references to other members of the group (e.g. \"panels\")."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "DiagnosticReport.result",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Observation?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "DiagnosticReport.result.value",
+            "text": "Observations - simple, or complex nested groups",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "One or more links to full details of any imaging performed during the diagnostic investigation. Typically, this is imaging performed by DICOM enabled modalities, but this is not required. A fully enabled PACS viewer can use this information to provide views of the source images. ImagingStudy and image are somewhat overlapping - typically, an image in the image list will also be found in the imaging study resource. However the imaging study and image lists cater to different types of displays for different types of purposes. Neither, either, or both may be provided."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "DiagnosticReport.imagingStudy",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/ImagingStudy?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "DiagnosticReport.imagingStudy.value",
+            "text": "Reference to full details of imaging associated with the diagnostic report",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest)."
+          }
+        ],
+        "linkId": "DiagnosticReport.image",
+        "title": "Key images associated with this report",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "DiagnosticReport.image.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DiagnosticReport.image.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A comment about the image. Typically, this is used to provide an explanation for why the image is included, or to draw the viewer's attention to important features. The comment should be displayed with the image. It would be common for the report to include additional discussion of the image contents in other sections such as the conclusion."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "DiagnosticReport.image.comment",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DiagnosticReport.image.comment.value",
+                "text": "Comment about the image (e.g. explanation)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Reference to the image source."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "DiagnosticReport.image.link",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Media?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "DiagnosticReport.image.link.value",
+                "text": "Reference to the image source",
+                "type": "reference"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Concise and clinically contextualized narrative interpretation of the diagnostic report. Typically, a report is either [all data, no narrative (e.g. Core lab)] or [a mix of data with some concluding narrative (e.g. Structured Pathology Report, Bone Density)], or [all narrative (e.g. typical imaging report, histopathology)]. In all of these cases, the narrative goes in \"text\"."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "DiagnosticReport.conclusion",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DiagnosticReport.conclusion.value",
+            "text": "Clinical Interpretation of test results",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Codes for the conclusion."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "DiagnosticReport.codedDiagnosis",
+        "text": "Codes for the conclusion",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DiagnosticReport.codedDiagnosis.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "DiagnosticReport.codedDiagnosis.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Rich text representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they SHALL be semantically equivalent. Application/pdf is recommended as the most reliable and interoperable in this context."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Attachment"
+          }
+        ],
+        "linkId": "DiagnosticReport.presentedForm",
+        "text": "Entire Report as issued",
+        "repeats": true
+      }
+    ]
+  }
+}

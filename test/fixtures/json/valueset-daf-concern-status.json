@@ -1,0 +1,57 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-daf-concern-status",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 3 concepts</p><h2>HITSP Problem Status</h2><p>The clinical status of the Condition or diagnosis - that is, the status of the concern about the problem</p><p><b>Copyright Statement:</b> This value set includes content from SNOMED CT, which is copyright &copy; 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement</p><p>This value set includes codes defined in other code systems, using the following rules:</p><ul><li>Include these codes as defined in http://snomed.info/sct<table><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td>55561003</td><td>Active</td><td/></tr><tr><td>73425007</td><td>Inactive</td><td/></tr><tr><td>413322009</td><td>Resolved</td><td/></tr></table></li></ul></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.3.88.12.80.68"
+    },
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.3.88.12.80.68"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/daf-concern-status",
+  "name": "HITSP Problem Status",
+  "publisher": "HL7 (FHIR Project) / DAF  Project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "url",
+      "value": "http://wiki.siframework.org/Data+Access+Framework+Homepage"
+    }
+  ],
+  "description": "The clinical status of the Condition or diagnosis - that is, the status of the concern about the problem",
+  "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement",
+  "status": "draft",
+  "date": "2014-12-05T23:40:31.198+11:00",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "55561003",
+            "display": "Active"
+          },
+          {
+            "code": "73425007",
+            "display": "Inactive"
+          },
+          {
+            "code": "413322009",
+            "display": "Resolved"
+          }
+        ]
+      }
+    ]
+  }
+}

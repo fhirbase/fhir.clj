@@ -1,0 +1,67 @@
+{
+  "resourceType": "CarePlan",
+  "id": "f001",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "http://www.bmc.nl/zorgportal/identifiers/careplans",
+      "value": "CP2903"
+    }
+  ],
+  "patient": {
+    "reference": "Patient/f001",
+    "display": "P. van de Heuvel"
+  },
+  "status": "completed",
+  "period": {
+    "start": "2011-06-26",
+    "end": "2011-06-27"
+  },
+  "modified": "2011-06-27T09:30:10+01:00",
+  "concern": [
+    {
+      "reference": "Condition/f201",
+      "display": "?????"
+    }
+  ],
+  "participant": [
+    {
+      "member": {
+        "reference": "Practitioner/f002",
+        "display": "P. Voigt"
+      }
+    }
+  ],
+  "goal": [
+    {
+      "description": "recovery surgery on heart of patient",
+      "status": "achieved",
+      "notes": "goal accomplished without complications"
+    }
+  ],
+  "activity": [
+    {
+      "status": "completed",
+      "prohibited": true,
+      "simple": {
+        "category": "procedure",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "64915003",
+              "display": "Operation on heart"
+            }
+          ]
+        },
+        "scheduledString": "2011-06-27T09:30:10+01:00",
+        "performer": [
+          {
+            "reference": "Practitioner/f002",
+            "display": "P. Voigt"
+          }
+        ]
+      }
+    }
+  ]
+}

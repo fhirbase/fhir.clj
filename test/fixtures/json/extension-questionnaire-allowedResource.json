@@ -1,0 +1,44 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "questionnaire-allowedResource",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/questionnaire-allowedResource",
+  "name": "Allowed resource for reference",
+  "publisher": "HL7",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://www.hl7.org"
+    }
+  ],
+  "description": "Where the type for a question is \"Reference\", indicates a type of resource that is permitted.",
+  "status": "draft",
+  "date": "2013-07-04",
+  "contextType": "resource",
+  "context": [
+    "Questionnaire.group.question"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Allowed resource for reference",
+      "formal": "Where the type for a question is \"Reference\", indicates a type of resource that is permitted.",
+      "comments": "This extension only has meaning if the question.type = Reference.  If no allowedResource extensions are present, the presumption is that any type of resource is permitted.  If multiple are present, then any of the specified types are permitted.",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isSummary": false,
+      "binding": {
+        "name": "ResourceType",
+        "isExtensible": true,
+        "description": "One of the resource types defined as part of FHIR",
+        "referenceReference": {
+          "reference": "http://hl7.org/fhir/vs/resource-types"
+        }
+      }
+    }
+  ]
+}

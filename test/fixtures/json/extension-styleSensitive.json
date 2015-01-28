@@ -1,0 +1,36 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "styleSensitive",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/styleSensitive",
+  "name": "Are styles important for processing?",
+  "publisher": "HL7 FHIR project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "Indicates that the style extensions in this resource are essential to the interpretation of the styled text and that it cannot be rendered without the style without losing essential information.",
+  "status": "draft",
+  "date": "2014-04-23",
+  "contextType": "resource",
+  "context": [
+    "*"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Are styles important for processing?",
+      "formal": "Indicates that the style extensions in this resource are essential to the interpretation of the styled text and that it cannot be rendered without the style without losing essential information.",
+      "comments": "If set to true, all systems that claim to support this extension and which render elements of the resource containing this extension SHALL either render the content as required by the style extensions defined by this profile that are present in the resource or shall (if safe to do so based on their own rules), omit entirely the styled content they cannot render in accordance with the extensions.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

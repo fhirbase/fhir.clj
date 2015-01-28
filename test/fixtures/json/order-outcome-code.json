@@ -1,0 +1,81 @@
+{
+  "resourceType": "ValueSet",
+  "id": "order-outcome-code",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 9 concepts</p><h2>OrderOutcomeStatus</h2><p>The status of the response to an order</p><p>This value set defines its own terms in the system http://hl7.org/fhir/order-outcome-code</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>1</td><td>pending<a name=\"pending\"> </a></td><td>The order is known, but no processing has occurred at this time.</td></tr><tr><td>1</td><td>review<a name=\"review\"> </a></td><td>The order is undergoing initial processing to determine whether it will be accepted (usually this involves human review).</td></tr><tr><td>1</td><td>rejected<a name=\"rejected\"> </a></td><td>The order was rejected because of a workflow/business logic reason.</td></tr><tr><td>1</td><td>error<a name=\"error\"> </a></td><td>The order was unable to be processed because of a technical error (i.e. unexpected error).</td></tr><tr><td>1</td><td>accepted<a name=\"accepted\"> </a></td><td>The order has been accepted, and work is in progress.</td></tr><tr><td>1</td><td>cancelled<a name=\"cancelled\"> </a></td><td>Processing the order was halted at the initiators request.</td></tr><tr><td>2</td><td>&nbsp;&nbsp;replaced<a name=\"replaced\"> </a></td><td>The order has been cancelled and replaced by another.</td></tr><tr><td>1</td><td>aborted<a name=\"aborted\"> </a></td><td>Processing the order was stopped because of some workflow/business logic reason.</td></tr><tr><td>1</td><td>complete<a name=\"complete\"> </a></td><td>The order has been completed.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.323"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/order-outcome-code",
+  "name": "OrderOutcomeStatus",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "The status of the response to an order",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.490+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.323"
+      }
+    ],
+    "system": "http://hl7.org/fhir/order-outcome-code",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "pending",
+        "definition": "The order is known, but no processing has occurred at this time."
+      },
+      {
+        "code": "review",
+        "definition": "The order is undergoing initial processing to determine whether it will be accepted (usually this involves human review)."
+      },
+      {
+        "code": "rejected",
+        "definition": "The order was rejected because of a workflow/business logic reason."
+      },
+      {
+        "code": "error",
+        "definition": "The order was unable to be processed because of a technical error (i.e. unexpected error)."
+      },
+      {
+        "code": "accepted",
+        "definition": "The order has been accepted, and work is in progress."
+      },
+      {
+        "code": "cancelled",
+        "definition": "Processing the order was halted at the initiators request.",
+        "concept": [
+          {
+            "code": "replaced",
+            "definition": "The order has been cancelled and replaced by another."
+          }
+        ]
+      },
+      {
+        "code": "aborted",
+        "definition": "Processing the order was stopped because of some workflow/business logic reason."
+      },
+      {
+        "code": "complete",
+        "definition": "The order has been completed."
+      }
+    ]
+  }
+}

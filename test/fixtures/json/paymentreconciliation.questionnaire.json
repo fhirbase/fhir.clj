@@ -1,0 +1,843 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (Financial Management)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "This resource provides payment details and claim references supporting a bulk payment."
+      }
+    ],
+    "linkId": "PaymentReconciliation",
+    "title": "PaymentReconciliation resource",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "PaymentReconciliation.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "PaymentReconciliation.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "PaymentReconciliation.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "PaymentReconciliation.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "PaymentReconciliation.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "PaymentReconciliation.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "PaymentReconciliation.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "PaymentReconciliation.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "PaymentReconciliation.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "PaymentReconciliation.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "PaymentReconciliation.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "PaymentReconciliation.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "PaymentReconciliation.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "PaymentReconciliation.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "PaymentReconciliation.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "PaymentReconciliation.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "PaymentReconciliation.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "PaymentReconciliation.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "PaymentReconciliation.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "PaymentReconciliation.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "PaymentReconciliation.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The Response Business Identifier."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Identifier"
+          }
+        ],
+        "linkId": "PaymentReconciliation.identifier",
+        "text": "Business Identifier",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "PaymentReconciliation.identifier.label",
+            "text": "label:",
+            "type": "string"
+          },
+          {
+            "linkId": "PaymentReconciliation.identifier.system",
+            "text": "system:",
+            "type": "string"
+          },
+          {
+            "linkId": "PaymentReconciliation.identifier.value",
+            "text": "value:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Original request resource reference."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "PaymentReconciliation.request",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/PendedRequest?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "PaymentReconciliation.request.value",
+            "text": "Claim reference",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Transaction status: error, complete."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "PaymentReconciliation.outcome",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "PaymentReconciliation.outcome.value",
+            "text": "outcome",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A description of the status of the adjudication."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "PaymentReconciliation.disposition",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "PaymentReconciliation.disposition.value",
+            "text": "Disposition Message",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The version of the style of resource contents. This should be mapped to the allowable profiles for this and supporting resources."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "PaymentReconciliation.ruleset",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "PaymentReconciliation.ruleset.value",
+            "text": "Resource version",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The style (standard) and version of the original material which was converted into this resource."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "PaymentReconciliation.originalRuleset",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "PaymentReconciliation.originalRuleset.value",
+            "text": "Original version",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The date when the enclosed suite of services were performed or completed."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "datetime"
+          }
+        ],
+        "linkId": "PaymentReconciliation.created",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "PaymentReconciliation.created.value",
+            "text": "Creation date",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The period of time for which payments have been gathered into this bulk payment for settlement."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Period"
+          }
+        ],
+        "linkId": "PaymentReconciliation.period",
+        "text": "Period covered",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "PaymentReconciliation.period.low",
+            "text": "start:",
+            "type": "dateTime"
+          },
+          {
+            "linkId": "PaymentReconciliation.period.end",
+            "text": "end:",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The Insurer who produced this adjudicated response."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "PaymentReconciliation.organization",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "PaymentReconciliation.organization.value",
+            "text": "Insurer",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The practitioner who is responsible for the services rendered to the patient."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "PaymentReconciliation.requestProvider",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "PaymentReconciliation.requestProvider.value",
+            "text": "Responsible practitioner",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The organization which is responsible for the services rendered to the patient."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "PaymentReconciliation.requestOrganization",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "PaymentReconciliation.requestOrganization.value",
+            "text": "Responsible organization",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "List of individual settlement amounts and the corresponding transaction."
+          }
+        ],
+        "linkId": "PaymentReconciliation.detail",
+        "title": "Details",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "PaymentReconciliation.detail.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "PaymentReconciliation.detail.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Code to indicate the nature of the payment, adjustment, funds advance, etc."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "PaymentReconciliation.detail.type",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "PaymentReconciliation.detail.type.value",
+                "text": "Type code",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The claim or financial resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "PaymentReconciliation.detail.request",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "PaymentReconciliation.detail.request.value",
+                "text": "Claim",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The claim response resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "PaymentReconciliation.detail.responce",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "PaymentReconciliation.detail.responce.value",
+                "text": "Claim Response",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The Organization which submitted the invoice or financial transaction."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "PaymentReconciliation.detail.submitter",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "PaymentReconciliation.detail.submitter.value",
+                "text": "Submitter",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The organization which is receiving the payment."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "PaymentReconciliation.detail.payee",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "PaymentReconciliation.detail.payee.value",
+                "text": "Payee",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The date of the invoice or financial resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "datetime"
+              }
+            ],
+            "linkId": "PaymentReconciliation.detail.date",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "PaymentReconciliation.detail.date.value",
+                "text": "Invoice date",
+                "type": "dateTime"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Amount paid for this detail."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Money"
+              }
+            ],
+            "linkId": "PaymentReconciliation.detail.amount",
+            "text": "Detail amount",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "PaymentReconciliation.detail.amount.value",
+                "text": "value:",
+                "type": "decimal"
+              },
+              {
+                "linkId": "PaymentReconciliation.detail.amount.currency",
+                "text": "currency:",
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The form to be used for printing the content."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "PaymentReconciliation.form",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "PaymentReconciliation.form.value",
+            "text": "Printed Form Identifier",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Total payment amount."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Money"
+          }
+        ],
+        "linkId": "PaymentReconciliation.total",
+        "text": "Total amount of Payment",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "PaymentReconciliation.total.value",
+            "text": "value:",
+            "type": "decimal"
+          },
+          {
+            "linkId": "PaymentReconciliation.total.currency",
+            "text": "currency:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Suite of notes."
+          }
+        ],
+        "linkId": "PaymentReconciliation.note",
+        "title": "Note text",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "PaymentReconciliation.note.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "PaymentReconciliation.note.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The note purpose: Print/Display."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "PaymentReconciliation.note.type",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "PaymentReconciliation.note.type.value",
+                "text": "display | print | printoper",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The note text."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "PaymentReconciliation.note.text",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "PaymentReconciliation.note.text.value",
+                "text": "Notes text",
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

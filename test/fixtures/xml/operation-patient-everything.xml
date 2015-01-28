@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OperationDefinition xmlns="http://hl7.org/fhir">
+  <id value="Patient-everything"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>Fetch Patient Record</h2>
+      <p>OPERATION: everything</p>
+      <div>
+        <p>This operation is used to return all the information related to patient described in the resource on which this operation is invoked. The response is a bundle of type &quot;searchset&quot;. At a minimum, the patient resource itself is returned, along with any other resources that the server has available for the given user. The server also returns whatever resources are needed to support the records - e.g. linked practitioners, locations, organizations etc. The principle intended use for rhis operation is to provide a patient with access to their records (e.g. &quot;Blue Button&quot;).</p>
+
+        <p>The server SHOULD return all resources that it has that are in the patient compartment for the identified patient, and any resource referenced from those, including binaries and attachments. At a mimimum, the resources returned SHALL include all the data covered by the meaningful use common data elements (ref to be provided). Other applicable implementation guides may make additional rules about the information that is returned. Note: the expectations here will be refined after experience with this at connectathon.</p>
+
+      </div>
+      <p>URL: [base]/Patient/$everything</p>
+      <p>URL: [base]/Patient/[id]/$everything</p>
+      <p>Parameters</p>
+      <table class="grid">
+        <tr>
+          <td>
+            <b>Use</b>
+          </td>
+          <td>
+            <b>Name</b>
+          </td>
+          <td>
+            <b>Cardinality</b>
+          </td>
+          <td>
+            <b>Type</b>
+          </td>
+          <td>
+            <b>Documentation</b>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>start</td>
+          <td>0..1</td>
+          <td>date</td>
+          <td>
+            <div>
+              <p>The date range relates to care dates, not record currency dates - e.g all records relating to care provided in a certain date range. If no date is provided, all records are in scope.</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>end</td>
+          <td>0..1</td>
+          <td>date</td>
+          <td>
+            <div>
+              <p>The date range relates to care dates, not record currency dates - e.g all records relating to care provided in a certain date range. If no date is provided, all records are in scope.</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>OUT</td>
+          <td>return</td>
+          <td>1..1</td>
+          <td>Bundle</td>
+          <td>
+            <div>
+              <p>The bundle type is &quot;searchset&quot;</p>
+
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div>
+        <p>The key differences between this operation and simply searching the patient compartment are:</p>
+
+        <ul>
+
+          <li>unless the client requests otherwise, the server returns the entire result set in a single bundle (rather than using paging)</li>
+
+          <li>the server is responsible for determining what resources to return as included resources (rather than the client specifying which ones)</li>
+
+        </ul>
+
+        <p>It is assumed that the server has identified and secured the context appropriately, and can either associate the authorization context with a single patient, or determine whether the context has the rights to the nominated patient, if there is one. If there is no nominated patient (e.g. the operation is invoked at the system level) and the context is not associated with a single patient record, then the server should return an error. Speciying the relationship between the context, a user and patient records is outside the scope of this specification.</p>
+
+      </div>
+    </div>
+  </text>
+  <identifier value="http://hl7.org/fhir/OperationDefinition/Patient-everything"/>
+  <title value="Fetch Patient Record"/>
+  <publisher value="HL7 (FHIR Project)"/>
+  <telecom>
+    <system value="url"/>
+    <value value="http://hl7.org/fhir"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="fhir@lists.hl7.org"/>
+  </telecom>
+  <description value="This operation is used to return all the information related to patient described in the resource on which this operation is invoked. The response is a bundle of type &quot;searchset&quot;. At a minimum, the patient resource itself is returned, along with any other resources that the server has available for the given user. The server also returns whatever resources are needed to support the records - e.g. linked practitioners, locations, organizations etc. The principle intended use for rhis operation is to provide a patient with access to their records (e.g. &quot;Blue Button&quot;).
+
+The server SHOULD return all resources that it has that are in the patient compartment for the identified patient, and any resource referenced from those, including binaries and attachments. At a mimimum, the resources returned SHALL include all the data covered by the meaningful use common data elements (ref to be provided). Other applicable implementation guides may make additional rules about the information that is returned. Note: the expectations here will be refined after experience with this at connectathon."/>
+  <status value="draft"/>
+  <date value="2014-12-12T13:17:44.755+11:00"/>
+  <kind value="operation"/>
+  <name value="everything"/>
+  <notes value="The key differences between this operation and simply searching the patient compartment are:
+
+* unless the client requests otherwise, the server returns the entire result set in a single bundle (rather than using paging)
+* the server is responsible for determining what resources to return as included resources (rather than the client specifying which ones)
+
+It is assumed that the server has identified and secured the context appropriately, and can either associate the authorization context with a single patient, or determine whether the context has the rights to the nominated patient, if there is one. If there is no nominated patient (e.g. the operation is invoked at the system level) and the context is not associated with a single patient record, then the server should return an error. Speciying the relationship between the context, a user and patient records is outside the scope of this specification."/>
+  <system value="false"/>
+  <type value="Patient"/>
+  <instance value="true"/>
+  <parameter>
+    <name value="start"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="The date range relates to care dates, not record currency dates - e.g all records relating to care provided in a certain date range. If no date is provided, all records are in scope."/>
+    <type value="date"/>
+  </parameter>
+  <parameter>
+    <name value="end"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="The date range relates to care dates, not record currency dates - e.g all records relating to care provided in a certain date range. If no date is provided, all records are in scope."/>
+    <type value="date"/>
+  </parameter>
+  <parameter>
+    <name value="return"/>
+    <use value="out"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="The bundle type is &quot;searchset&quot;"/>
+    <type value="Bundle"/>
+  </parameter>
+</OperationDefinition>

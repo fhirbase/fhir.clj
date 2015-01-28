@@ -1,0 +1,2455 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (Financial Management)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "A provider issued list of services and products provided, or to be provided, to a patient which is provided to an insurer for payment recovery."
+      }
+    ],
+    "linkId": "OralHealthClaim",
+    "title": "Claim, Pre-determination or Pre-authorization",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "OralHealthClaim.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OralHealthClaim.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "OralHealthClaim.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "OralHealthClaim.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "OralHealthClaim.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "OralHealthClaim.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "OralHealthClaim.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "OralHealthClaim.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "OralHealthClaim.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "OralHealthClaim.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OralHealthClaim.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "OralHealthClaim.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OralHealthClaim.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "OralHealthClaim.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "OralHealthClaim.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The business identifier for the instance: invoice number, claim number, pre-determination or pre-authorization number."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Identifier"
+          }
+        ],
+        "linkId": "OralHealthClaim.identifier",
+        "text": "Claim number",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OralHealthClaim.identifier.label",
+            "text": "label:",
+            "type": "string"
+          },
+          {
+            "linkId": "OralHealthClaim.identifier.system",
+            "text": "system:",
+            "type": "string"
+          },
+          {
+            "linkId": "OralHealthClaim.identifier.value",
+            "text": "value:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The version of the specification on which this instance relies."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "OralHealthClaim.ruleset",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OralHealthClaim.ruleset.value",
+            "text": "Current specification followed",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The version of the specification from which the original instance was created."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "OralHealthClaim.originalRuleset",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OralHealthClaim.originalRuleset.value",
+            "text": "Original specification followed",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The date when the enclosed suite of services were performed or completed."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "datetime"
+          }
+        ],
+        "linkId": "OralHealthClaim.created",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OralHealthClaim.created.value",
+            "text": "Creation date",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Insurer Identifier, typical BIN number (6 digit)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "OralHealthClaim.target",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "OralHealthClaim.target.value",
+            "text": "Insurer",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The provider which is responsible for the bill, claim pre-determination, pre-authorization."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "OralHealthClaim.provider",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "OralHealthClaim.provider.value",
+            "text": "Responsible provider",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The organization which is responsible for the bill, claim pre-determination, pre-authorization."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "OralHealthClaim.organization",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "OralHealthClaim.organization.value",
+            "text": "Responsible organization",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Complete (Bill or Claim), Proposed (Pre-Authorization), Exploratory (Pre-determination)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "OralHealthClaim.use",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OralHealthClaim.use.value",
+            "text": "use",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Immediate (STAT), best effort (NORMAL), deferred (DEFER)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "OralHealthClaim.priority",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OralHealthClaim.priority.value",
+            "text": "Desired processing priority",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "In the case of a Pre-Determination/Pre-Authorization the provider may request that funds in the amount of the expected Benefit be reserved ('Patient' or 'Provider') to pay for the Benefits determined on the subsequent claim(s). 'None' explicitly indicates no funds reserving is requested."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "OralHealthClaim.fundsReserve",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OralHealthClaim.fundsReserve.value",
+            "text": "Funds requested to be reserved",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Person who created the invoice/claim/pre-determination or pre-authorization."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "OralHealthClaim.enterer",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "OralHealthClaim.enterer.value",
+            "text": "Author",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Facility where the services were provided."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "OralHealthClaim.facility",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Location?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "OralHealthClaim.facility.value",
+            "text": "Servicing Facility",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The party to be reimbursed for the services."
+          }
+        ],
+        "linkId": "OralHealthClaim.payee",
+        "title": "Payee",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "OralHealthClaim.payee.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.payee.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Party to be reimbursed: Subscriber, provider, other."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "OralHealthClaim.payee.type",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.payee.type.value",
+                "text": "Party to be paid any benefits payable",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The provider who is to be reimbursed for the claim (the party to whom any benefit is assigned)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "OralHealthClaim.payee.provider",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "OralHealthClaim.payee.provider.value",
+                "text": "Provider who is the payee",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The organization who is to be reimbursed for the claim (the party to whom any benefit is assigned)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "OralHealthClaim.payee.organization",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "OralHealthClaim.payee.organization.value",
+                "text": "Organization who is the payee",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The person other than the subscriber who is to be reimbursed for the claim (the party to whom any benefit is assigned)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "OralHealthClaim.payee.person",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "OralHealthClaim.payee.person.value",
+                "text": "Other person who is the payee",
+                "type": "reference"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The referral resource which lists the date, practitioner, reason and other supporting information."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "OralHealthClaim.referral",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/ReferralRequest?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "OralHealthClaim.referral.value",
+            "text": "Treatment Referral",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Ordered list of patient diagnosis for which care is sought."
+          }
+        ],
+        "linkId": "OralHealthClaim.diagnosis",
+        "title": "Diagnosis",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "OralHealthClaim.diagnosis.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.diagnosis.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Sequence of diagnosis."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "integer"
+              }
+            ],
+            "linkId": "OralHealthClaim.diagnosis.sequence",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.diagnosis.sequence.value",
+                "text": "Sequence of diagnosis",
+                "type": "integer"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The diagnosis."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "OralHealthClaim.diagnosis.diagnosis",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.diagnosis.diagnosis.value",
+                "text": "Patient's list of diagnosis",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "List of patient conditions for which care is sought."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "OralHealthClaim.condition",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OralHealthClaim.condition.value",
+            "text": "List of presenting Conditions",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Patient Resource."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "OralHealthClaim.patient",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "OralHealthClaim.patient.value",
+            "text": "The subject of the Products and Services",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Financial instrument by which payment information for health care."
+          }
+        ],
+        "linkId": "OralHealthClaim.coverage",
+        "title": "Insurance or medical plan",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "OralHealthClaim.coverage.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.coverage.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A service line item."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "integer"
+              }
+            ],
+            "linkId": "OralHealthClaim.coverage.sequence",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.coverage.sequence.value",
+                "text": "Service instance identifier",
+                "type": "integer"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The instance number of the Coverage which is the focus for adjudication. The Coverage against which the claim is to be adjudicated."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "boolean"
+              }
+            ],
+            "linkId": "OralHealthClaim.coverage.focal",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.coverage.focal.value",
+                "text": "Is the focal Coverage",
+                "type": "boolean"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Reference to the program or plan identification, underwriter or payor."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "OralHealthClaim.coverage.coverage",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Coverage?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "OralHealthClaim.coverage.coverage.value",
+                "text": "Insurance information",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The contract number of a business agreement which describes the terms and conditions."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "OralHealthClaim.coverage.businessArrangement",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.coverage.businessArrangement.value",
+                "text": "Business agreement",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The relationship of the patient to the subscriber."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "OralHealthClaim.coverage.relationship",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.coverage.relationship.value",
+                "text": "Patient relationship to subscriber",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of references from the Insurer to which these services pertain."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "OralHealthClaim.coverage.preauthref",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.coverage.preauthref.value",
+                "text": "Pre-Authorization/Determination Reference",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The Coverages adjudication details."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "OralHealthClaim.coverage.claimResponse",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/ClaimResponse?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "OralHealthClaim.coverage.claimResponse.value",
+                "text": "Adjudication results",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The style (standard) and version of the original material which was converted into this resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "OralHealthClaim.coverage.originalRuleset",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.coverage.originalRuleset.value",
+                "text": "Original version",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Factors which may influence the applicability of coverage."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "OralHealthClaim.exception",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OralHealthClaim.exception.value",
+            "text": "Eligibility exceptions",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Name of school for over-aged dependants."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "OralHealthClaim.school",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OralHealthClaim.school.value",
+            "text": "Name of School",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Date of an accident which these services are addressing."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "datetime"
+          }
+        ],
+        "linkId": "OralHealthClaim.accident",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OralHealthClaim.accident.value",
+            "text": "Accident Date",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Type of accident: work, auto, etc."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "OralHealthClaim.accidentType",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OralHealthClaim.accidentType.value",
+            "text": "Accident Type",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A list of intervention and exception codes which may influence the adjudication of the claim."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "OralHealthClaim.interventionException",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OralHealthClaim.interventionException.value",
+            "text": "Intervention and exception code (Pharma)",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A list of teeth which would be expected but are not found due to having been previously  extracted or for other reasons."
+          }
+        ],
+        "linkId": "OralHealthClaim.missingteeth",
+        "title": "Missing Teeth",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "OralHealthClaim.missingteeth.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.missingteeth.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The code identifying which tooth is missing."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "OralHealthClaim.missingteeth.tooth",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.missingteeth.tooth.value",
+                "text": "Tooth Code",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Missing reason may be: E-extraction, O-other."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "OralHealthClaim.missingteeth.reason",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.missingteeth.reason.value",
+                "text": "Reason for missing",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The date of the extraction either known from records or patient reported estimate."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "datetime"
+              }
+            ],
+            "linkId": "OralHealthClaim.missingteeth.extractiondate",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.missingteeth.extractiondate.value",
+                "text": "Date of Extraction",
+                "type": "dateTime"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The high-level details of an Orthodontic Treatment Plan."
+          }
+        ],
+        "linkId": "OralHealthClaim.orthoPlan",
+        "title": "Orthodontic Treatment Plan",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "OralHealthClaim.orthoPlan.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.orthoPlan.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The intended start date for service."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "datetime"
+              }
+            ],
+            "linkId": "OralHealthClaim.orthoPlan.start",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.orthoPlan.start.value",
+                "text": "Start date",
+                "type": "dateTime"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The estimated first examination fee."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Money"
+              }
+            ],
+            "linkId": "OralHealthClaim.orthoPlan.examFee",
+            "text": "First exam fee",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.orthoPlan.examFee.value",
+                "text": "value:",
+                "type": "decimal"
+              },
+              {
+                "linkId": "OralHealthClaim.orthoPlan.examFee.currency",
+                "text": "currency:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The estimated diagnostic fee."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Money"
+              }
+            ],
+            "linkId": "OralHealthClaim.orthoPlan.diagnosticFee",
+            "text": "Diagnostic phase fee",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.orthoPlan.diagnosticFee.value",
+                "text": "value:",
+                "type": "decimal"
+              },
+              {
+                "linkId": "OralHealthClaim.orthoPlan.diagnosticFee.currency",
+                "text": "currency:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The estimated initial payment."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Money"
+              }
+            ],
+            "linkId": "OralHealthClaim.orthoPlan.initialPayment",
+            "text": "Initial payment",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.orthoPlan.initialPayment.value",
+                "text": "value:",
+                "type": "decimal"
+              },
+              {
+                "linkId": "OralHealthClaim.orthoPlan.initialPayment.currency",
+                "text": "currency:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The estimated treatment duration in months."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "integer"
+              }
+            ],
+            "linkId": "OralHealthClaim.orthoPlan.durationMonths",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.orthoPlan.durationMonths.value",
+                "text": "Duration in months",
+                "type": "integer"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The anticipated number of payments."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "integer"
+              }
+            ],
+            "linkId": "OralHealthClaim.orthoPlan.paymentCount",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.orthoPlan.paymentCount.value",
+                "text": "Anticipated number of payments",
+                "type": "integer"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The anticipated payment amount."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Money"
+              }
+            ],
+            "linkId": "OralHealthClaim.orthoPlan.periodicPayment",
+            "text": "Anticipated payment",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.orthoPlan.periodicPayment.value",
+                "text": "value:",
+                "type": "decimal"
+              },
+              {
+                "linkId": "OralHealthClaim.orthoPlan.periodicPayment.currency",
+                "text": "currency:",
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "First tier of goods and services."
+          }
+        ],
+        "linkId": "OralHealthClaim.item",
+        "title": "Goods and Services",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "OralHealthClaim.item.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.item.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A service line number."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "integer"
+              }
+            ],
+            "linkId": "OralHealthClaim.item.sequence",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.item.sequence.value",
+                "text": "Service instance",
+                "type": "integer"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The type of product or service."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "OralHealthClaim.item.type",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.item.type.value",
+                "text": "Group or type of product or service",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The practitioner who is responsible for the services rendered to the patient."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "OralHealthClaim.item.provider",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "OralHealthClaim.item.provider.value",
+                "text": "Responsible practitioner",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Diagnosis applicable for this service or product line."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "integer"
+              }
+            ],
+            "linkId": "OralHealthClaim.item.diagnosisLinkId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.item.diagnosisLinkId.value",
+                "text": "Diagnosis Link",
+                "type": "integer"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "If a grouping item then 'GROUP' otherwise it is a node therefore a code to indicate the Professional Service or Product supplied."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "OralHealthClaim.item.service",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.item.service.value",
+                "text": "Item Code",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The date when the enclosed suite of services were performed or completed."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "datetime"
+              }
+            ],
+            "linkId": "OralHealthClaim.item.serviceDate",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.item.serviceDate.value",
+                "text": "Date of Service",
+                "type": "dateTime"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The number of repetitions of a service or product."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Quantity"
+              }
+            ],
+            "linkId": "OralHealthClaim.item.quantity",
+            "text": "Count of Products or Services",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.item.quantity.comparator",
+                "text": "comp:",
+                "type": "choice"
+              },
+              {
+                "linkId": "OralHealthClaim.item.quantity.value",
+                "text": "value:",
+                "type": "decimal"
+              },
+              {
+                "linkId": "OralHealthClaim.item.quantity.units",
+                "text": "units:",
+                "type": "string"
+              },
+              {
+                "linkId": "OralHealthClaim.item.quantity.code",
+                "text": "coded units:",
+                "type": "string"
+              },
+              {
+                "linkId": "OralHealthClaim.item.quantity.system",
+                "text": "units system:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "If the item is a node then this is the fee for the product or service, otherwise this is the total of the fees for the children of the group."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Money"
+              }
+            ],
+            "linkId": "OralHealthClaim.item.unitPrice",
+            "text": "Fee, charge or cost per point",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.item.unitPrice.value",
+                "text": "value:",
+                "type": "decimal"
+              },
+              {
+                "linkId": "OralHealthClaim.item.unitPrice.currency",
+                "text": "currency:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "decimal"
+              }
+            ],
+            "linkId": "OralHealthClaim.item.factor",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.item.factor.value",
+                "text": "Price scaling factor",
+                "type": "decimal"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "An amount that expresses the weighting (based on difficulty, cost and/or resource intensiveness) associated with the good or service delivered. The concept of Points allows for assignment of point values for services and/or goods, such that a monetary amount can be assigned to each point."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "decimal"
+              }
+            ],
+            "linkId": "OralHealthClaim.item.points",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.item.points.value",
+                "text": "Difficulty scaling factor",
+                "type": "decimal"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The quantity times the unit price for an addittional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Money"
+              }
+            ],
+            "linkId": "OralHealthClaim.item.net",
+            "text": "Total item cost",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.item.net.value",
+                "text": "value:",
+                "type": "decimal"
+              },
+              {
+                "linkId": "OralHealthClaim.item.net.currency",
+                "text": "currency:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "List of Unique Device Identifiers associated with this line item."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "OralHealthClaim.item.udi",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.item.udi.value",
+                "text": "Unique Device Identifier",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Physical service site on the patient (limb, tooth, etc)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "OralHealthClaim.item.bodySite",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.item.bodySite.value",
+                "text": "Service Location",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A region or surface of the site, eg. limb region or tooth surface(s)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "OralHealthClaim.item.subsite",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.item.subsite.value",
+                "text": "Service Sub-location",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Item typification or modifiers codes, eg for Oral whether the treatment is cosmetic or associated with TMJ, or an appliance was lost or stolen."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "OralHealthClaim.item.modifier",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OralHealthClaim.item.modifier.value",
+                "text": "Service/Product billing modifiers",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Second tier of goods and services."
+              }
+            ],
+            "linkId": "OralHealthClaim.item.detail",
+            "title": "Additional items",
+            "repeats": true,
+            "group": [
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "unique id for the element within a resource (for internal references)."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "OralHealthClaim.item.detail.id",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "OralHealthClaim.item.detail.id.value",
+                    "text": "xml:id (or equivalent in JSON)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "A service line number."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "integer"
+                  }
+                ],
+                "linkId": "OralHealthClaim.item.detail.sequence",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "OralHealthClaim.item.detail.sequence.value",
+                    "text": "Service instance",
+                    "type": "integer"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The type of product or service."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Coding"
+                  }
+                ],
+                "linkId": "OralHealthClaim.item.detail.type",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "OralHealthClaim.item.detail.type.value",
+                    "text": "Group or type of product or service",
+                    "type": "open-choice"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "If a grouping item then 'GROUP' otherwise it is a node therefore a code to indicate the Professional Service or Product supplied."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Coding"
+                  }
+                ],
+                "linkId": "OralHealthClaim.item.detail.service",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "OralHealthClaim.item.detail.service.value",
+                    "text": "Additional item codes",
+                    "type": "open-choice"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The number of repetitions of a service or product."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Quantity"
+                  }
+                ],
+                "linkId": "OralHealthClaim.item.detail.quantity",
+                "text": "Count of Products or Services",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "OralHealthClaim.item.detail.quantity.comparator",
+                    "text": "comp:",
+                    "type": "choice"
+                  },
+                  {
+                    "linkId": "OralHealthClaim.item.detail.quantity.value",
+                    "text": "value:",
+                    "type": "decimal"
+                  },
+                  {
+                    "linkId": "OralHealthClaim.item.detail.quantity.units",
+                    "text": "units:",
+                    "type": "string"
+                  },
+                  {
+                    "linkId": "OralHealthClaim.item.detail.quantity.code",
+                    "text": "coded units:",
+                    "type": "string"
+                  },
+                  {
+                    "linkId": "OralHealthClaim.item.detail.quantity.system",
+                    "text": "units system:",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "If the item is a node then this is the fee for the product or service, otherwise this is the total of the fees for the children of the group."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Money"
+                  }
+                ],
+                "linkId": "OralHealthClaim.item.detail.unitPrice",
+                "text": "Fee, charge or cost per point",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "OralHealthClaim.item.detail.unitPrice.value",
+                    "text": "value:",
+                    "type": "decimal"
+                  },
+                  {
+                    "linkId": "OralHealthClaim.item.detail.unitPrice.currency",
+                    "text": "currency:",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "decimal"
+                  }
+                ],
+                "linkId": "OralHealthClaim.item.detail.factor",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "OralHealthClaim.item.detail.factor.value",
+                    "text": "Price scaling factor",
+                    "type": "decimal"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "An amount that expresses the weighting (based on difficulty, cost and/or resource intensiveness) associated with the good or service delivered. The concept of Points allows for assignment of point values for services and/or goods, such that a monetary amount can be assigned to each point."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "decimal"
+                  }
+                ],
+                "linkId": "OralHealthClaim.item.detail.points",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "OralHealthClaim.item.detail.points.value",
+                    "text": "Difficulty scaling factor",
+                    "type": "decimal"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The quantity times the unit price for an addittional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Money"
+                  }
+                ],
+                "linkId": "OralHealthClaim.item.detail.net",
+                "text": "Total additional item cost",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "OralHealthClaim.item.detail.net.value",
+                    "text": "value:",
+                    "type": "decimal"
+                  },
+                  {
+                    "linkId": "OralHealthClaim.item.detail.net.currency",
+                    "text": "currency:",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "List of Unique Device Identifiers associated with this line item."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Coding"
+                  }
+                ],
+                "linkId": "OralHealthClaim.item.detail.udi",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "OralHealthClaim.item.detail.udi.value",
+                    "text": "Unique Device Identifier",
+                    "type": "open-choice"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Third tier of goods and services."
+                  }
+                ],
+                "linkId": "OralHealthClaim.item.detail.subDetail",
+                "title": "Additional items",
+                "repeats": true,
+                "group": [
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "unique id for the element within a resource (for internal references)."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "string"
+                      }
+                    ],
+                    "linkId": "OralHealthClaim.item.detail.subDetail.id",
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "OralHealthClaim.item.detail.subDetail.id.value",
+                        "text": "xml:id (or equivalent in JSON)",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "A service line number."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "integer"
+                      }
+                    ],
+                    "linkId": "OralHealthClaim.item.detail.subDetail.sequence",
+                    "required": true,
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "OralHealthClaim.item.detail.subDetail.sequence.value",
+                        "text": "Service instance",
+                        "type": "integer"
+                      }
+                    ]
+                  },
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "The type of product or service."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "Coding"
+                      }
+                    ],
+                    "linkId": "OralHealthClaim.item.detail.subDetail.type",
+                    "required": true,
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "OralHealthClaim.item.detail.subDetail.type.value",
+                        "text": "Type of product or service",
+                        "type": "open-choice"
+                      }
+                    ]
+                  },
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "The fee for an addittional service or product or charge."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "Coding"
+                      }
+                    ],
+                    "linkId": "OralHealthClaim.item.detail.subDetail.service",
+                    "required": true,
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "OralHealthClaim.item.detail.subDetail.service.value",
+                        "text": "Additional item codes",
+                        "type": "open-choice"
+                      }
+                    ]
+                  },
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "The number of repetitions of a service or product."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "Quantity"
+                      }
+                    ],
+                    "linkId": "OralHealthClaim.item.detail.subDetail.quantity",
+                    "text": "Count of Products or Services",
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "OralHealthClaim.item.detail.subDetail.quantity.comparator",
+                        "text": "comp:",
+                        "type": "choice"
+                      },
+                      {
+                        "linkId": "OralHealthClaim.item.detail.subDetail.quantity.value",
+                        "text": "value:",
+                        "type": "decimal"
+                      },
+                      {
+                        "linkId": "OralHealthClaim.item.detail.subDetail.quantity.units",
+                        "text": "units:",
+                        "type": "string"
+                      },
+                      {
+                        "linkId": "OralHealthClaim.item.detail.subDetail.quantity.code",
+                        "text": "coded units:",
+                        "type": "string"
+                      },
+                      {
+                        "linkId": "OralHealthClaim.item.detail.subDetail.quantity.system",
+                        "text": "units system:",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "The fee for an addittional service or product or charge."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "Money"
+                      }
+                    ],
+                    "linkId": "OralHealthClaim.item.detail.subDetail.unitPrice",
+                    "text": "Fee, charge or cost per point",
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "OralHealthClaim.item.detail.subDetail.unitPrice.value",
+                        "text": "value:",
+                        "type": "decimal"
+                      },
+                      {
+                        "linkId": "OralHealthClaim.item.detail.subDetail.unitPrice.currency",
+                        "text": "currency:",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "decimal"
+                      }
+                    ],
+                    "linkId": "OralHealthClaim.item.detail.subDetail.factor",
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "OralHealthClaim.item.detail.subDetail.factor.value",
+                        "text": "Price scaling factor",
+                        "type": "decimal"
+                      }
+                    ]
+                  },
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "An amount that expresses the weighting (based on difficulty, cost and/or resource intensiveness) associated with the good or service delivered. The concept of Points allows for assignment of point values for services and/or goods, such that a monetary amount can be assigned to each point."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "decimal"
+                      }
+                    ],
+                    "linkId": "OralHealthClaim.item.detail.subDetail.points",
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "OralHealthClaim.item.detail.subDetail.points.value",
+                        "text": "Difficulty scaling factor",
+                        "type": "decimal"
+                      }
+                    ]
+                  },
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "The quantity times the unit price for an addittional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "Money"
+                      }
+                    ],
+                    "linkId": "OralHealthClaim.item.detail.subDetail.net",
+                    "text": "Net additional item cost",
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "OralHealthClaim.item.detail.subDetail.net.value",
+                        "text": "value:",
+                        "type": "decimal"
+                      },
+                      {
+                        "linkId": "OralHealthClaim.item.detail.subDetail.net.currency",
+                        "text": "currency:",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "List of Unique Device Identifiers associated with this line item."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "Coding"
+                      }
+                    ],
+                    "linkId": "OralHealthClaim.item.detail.subDetail.udi",
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "OralHealthClaim.item.detail.subDetail.udi.value",
+                        "text": "Unique Device Identifier",
+                        "type": "open-choice"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The materials and placement date of prior fixed prosthesis."
+              }
+            ],
+            "linkId": "OralHealthClaim.item.prosthesis",
+            "title": "Prosthetic details",
+            "group": [
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "unique id for the element within a resource (for internal references)."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "OralHealthClaim.item.prosthesis.id",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "OralHealthClaim.item.prosthesis.id.value",
+                    "text": "xml:id (or equivalent in JSON)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Indicates whether this is the initial placement of a fixed prosthesis."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "boolean"
+                  }
+                ],
+                "linkId": "OralHealthClaim.item.prosthesis.initial",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "OralHealthClaim.item.prosthesis.initial.value",
+                    "text": "Is this the initial service",
+                    "type": "boolean"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Date of the initial placement."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "datetime"
+                  }
+                ],
+                "linkId": "OralHealthClaim.item.prosthesis.priorDate",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "OralHealthClaim.item.prosthesis.priorDate.value",
+                    "text": "Initial service Date",
+                    "type": "dateTime"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Material of the prior denture or bridge prosthesis. (Oral)."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Coding"
+                  }
+                ],
+                "linkId": "OralHealthClaim.item.prosthesis.priorMaterial",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "OralHealthClaim.item.prosthesis.priorMaterial.value",
+                    "text": "Prosthetic Material",
+                    "type": "open-choice"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Code to indicate that Xrays, images, emails, documents, models or attachments are being sent in support of this submission."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "OralHealthClaim.additionalMaterials",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OralHealthClaim.additionalMaterials.value",
+            "text": "Additional materials, documents, etc.",
+            "type": "open-choice"
+          }
+        ]
+      }
+    ]
+  }
+}

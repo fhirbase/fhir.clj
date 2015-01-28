@@ -1,0 +1,400 @@
+{
+  "resourceType": "Conformance",
+  "id": "sdc-formmanager",
+  "text": {
+    "status": "generated",
+    "div": "<div>\n      \n      <h2>SDC Form Manager</h2>\n      \n      <p>(Requirements Definition)</p>\n      \n      <p>Published: 2014-07-06 (draft)</p>\n      \n      <p>Published by: \n        <b>\n          \n          <a href=\"http://wiki.siframework.org/Structured+Data+Capture+Initiative\">U.S. Office of the National Coordinator (ONC)</a>\n        \n        </b>\n      \n      </p>\n      \n      <p>This profile defines the expected capabilities of the \n        <i>SDC Form Manager</i> role when conforming to the S&amp;I Framework's \n        <a href=\"sdc.html\">Structured Data Capture FHIR implementation guide</a>.  This role is responsible for maintaining a repository of form definitions and also of performing pre-population of form data.\n      </p>\n      \n      <h2>General</h2>\n      \n      <table>\n        \n        <tbody>\n          \n          <tr>\n            \n            <th>FHIR Version:</th>\n            \n            <td>0.2</td>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>Supported formats:</th>\n            \n            <td>xml, json</td>\n          \n          </tr>\n        \n        </tbody>\n      \n      </table>\n      \n      <h2>REST  behavior</h2>\n      \n      <p>The primary focus of the repository is the definition of \n        <a href=\"questionnaires.html\">Questionnaires</a>.  However, \n        <a href=\"valueset.html\">ValueSet</a>s must also be supported to allow definition of coded data elements.  Some data elements will choose to maintain value sets as 'contained' resources, meaning the value set exists only in the context of the data element and cannot be referenced or maintained without also updating the data element.  However, systems should support value set re-use across data elements.  (Version-specific referencing can be used to avoid value sets from changing independent of the referencing \n        <a href=\"questionnaire.html\">Questionnaire</a>.)\n      </p>\n      \n      <p>\n        \n        <b>Security:</b>\n      \n      </p>\n      \n      <p>Implementations must meet the general security requirements documented in the \n        <a href=\"sdc-security.html\">SDC implementation guide</a>.\n      </p>\n      \n      <h3>Summary</h3>\n      \n      <table class=\"grid\">\n        \n        <thead>\n          \n          <tr>\n            \n            <th>Resource</th>\n            \n            <th>Search</th>\n            \n            <th>Read</th>\n            \n            <th>Read Version</th>\n            \n            <th>Instance History</th>\n            \n            <th>Resource History</th>\n            \n            <th>Validate</th>\n            \n            <th>Create</th>\n            \n            <th>Update</th>\n            \n            <th>Delete</th>\n          \n          </tr>\n        \n        </thead>\n        \n        <tbody>\n          \n          <tr>\n            \n            <th>Questionnaire</th>\n            \n            <td>\n              \n              <a title=\"Allows a user to search for existing forms\" href=\"#Questionnaire-search-type\">SHALL</a>\n            \n            </td>\n            \n            <td>\n              \n              <a title=\"Allows retrieval of a specific known form\" href=\"#Questionnaire-read\">SHALL</a>\n            \n            </td>\n            \n            <td>\n              \n              <a title=\"Allows retrieval of a specific version of a form\" href=\"#Questionnaire-vread\">SHALL</a>\n            \n            </td>\n            \n            <td>\n              \n              <a title=\"Allows review of changes to a form over time\" href=\"#Questionnaire-history-instance\">SHALL</a>\n            \n            </td>\n            \n            <td/>\n            \n            <td>\n              \n              <a title=\"SHOULD. Allows a client to verify whether a particular new form or revision of an existing form would be accepted based on validation and other business rules.  Useful for some workflows\" href=\"#Questionnaire-validate\">SHOULD</a>\n            \n            </td>\n            \n            <td>\n              \n              <a title=\"Allows defining a new form.  Repositories requiring curation of submitted forms may require all new data elements to have a status of 'draft'.\" href=\"#Questionnaire-create\">SHALL</a>\n            \n            </td>\n            \n            <td>\n              \n              <a title=\"Allows an existing form to be updated.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new questionnaire (and potentially the retiring of the existing questionnaire).  Servers may also limit who can change particular forms.\" href=\"#Questionnaire-update\">SHALL</a>\n            \n            </td>\n            \n            <td>\n              \n              <a title=\"Allows removal of an existing form.  Servers may choose to not support deletions and instead require that the form's status be changed to 'retired'.  Other systems support deletions but limit them to forms meeting certain requirements.  E.g. only forms with a status of draft or only forms that have been retired for at least two years, etc.\" href=\"#Questionnaire-delete\">MAY</a>\n            \n            </td>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>ValueSet</th>\n            \n            <td>\n              \n              <a title=\"Allows discovery of existing value sets for use in authoring questionnaires\" href=\"#ValueSet-search-type\">SHALL</a>\n            \n            </td>\n            \n            <td>\n              \n              <a title=\"Allows retrieval of a specific value set referenced within a questionnaire\" href=\"#ValueSet-read\">SHALL</a>\n            \n            </td>\n            \n            <td>\n              \n              <a title=\"Allows retrieval of a historical version of a value set as referenced within a questionnaire\" href=\"#ValueSet-vread\">SHALL</a>\n            \n            </td>\n            \n            <td>\n              \n              <a title=\"Allows review of changes to a value set over time\" href=\"#ValueSet-history-instance\">SHALL</a>\n            \n            </td>\n            \n            <td/>\n            \n            <td>\n              \n              <a title=\"Allows verification that a value set is valid prior to submission - useful for some workflows.\" href=\"#ValueSet-validate\">SHOULD</a>\n            \n            </td>\n            \n            <td>\n              \n              <a title=\"Allows definition of a new value set used by one or more questionnaires\" href=\"#ValueSet-create\">SHALL</a>\n            \n            </td>\n            \n            <td>\n              \n              <a title=\"Allows existing value sets referenced by one or more questionnaires to be maintained\" href=\"#ValueSet-update\">SHALL</a>\n            \n            </td>\n            \n            <td>\n              \n              <a title=\"Not all servers will support deletion of value sets.  Status change to 'retired' will be more typical, though deletion of draft value sets may keep repositories cleaner.\" href=\"#ValueSet-delete\">MAY</a>\n            \n            </td>\n          \n          </tr>\n        \n        </tbody>\n      \n      </table>\n      \n      <p>\n        \n        <b>Operations:</b>\n        \n        <a title=\"Populate Questionnaire\" href=\"http://hl7.org/fhir/OperationDefinition#questionnaire-populate\">populate</a>MAY\n      </p>\n      \n      <br/>\n      \n      <br/>\n      \n      <h3>\n        \n        <a href=\"questionnaire.html\">Questionnaire</a>\n      \n      </h3>\n      \n      <h4>Interactions</h4>\n      \n      <table class=\"list\">\n        \n        <thead>\n          \n          <tr>\n            \n            <th>Name</th>\n            \n            <th>Conformance</th>\n            \n            <th>Description</th>\n          \n          </tr>\n        \n        </thead>\n        \n        <tbody>\n          \n          <tr>\n            \n            <th>\n              \n              <a name=\"Questionnaire-search-type\">&nbsp;</a>\n              \n              <span>search-type</span>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>\n              \n              <p>Allows a user to search for existing forms</p>\n            \n            </td>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a name=\"Questionnaire-read\">&nbsp;</a>\n              \n              <span>read</span>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>\n              \n              <p>Allows retrieval of a specific known form</p>\n            \n            </td>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a name=\"Questionnaire-vread\">&nbsp;</a>\n              \n              <span>vread</span>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>\n              \n              <p>Allows retrieval of a specific version of a form</p>\n            \n            </td>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a name=\"Questionnaire-history-instance\">&nbsp;</a>\n              \n              <span>history-instance</span>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>\n              \n              <p>Allows review of changes to a form over time</p>\n            \n            </td>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a name=\"Questionnaire-create\">&nbsp;</a>\n              \n              <span>create</span>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>\n              \n              <p>Allows defining a new form.  Repositories requiring curation of submitted forms may require all new data elements to have a status of 'draft'.</p>\n            \n            </td>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a name=\"Questionnaire-update\">&nbsp;</a>\n              \n              <span>update</span>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>\n              \n              <p>Allows an existing form to be updated.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new questionnaire (and potentially the retiring of the existing questionnaire).  Servers may also limit who can change particular forms.</p>\n            \n            </td>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a name=\"Questionnaire-validate\">&nbsp;</a>\n              \n              <span>validate</span>\n            \n            </th>\n            \n            <td>SHOULD</td>\n            \n            <td>\n              \n              <p>SHOULD. Allows a client to verify whether a particular new form or revision of an existing form would be accepted based on validation and other business rules.  Useful for some workflows</p>\n            \n            </td>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a name=\"Questionnaire-delete\">&nbsp;</a>\n              \n              <span>delete</span>\n            \n            </th>\n            \n            <td>MAY</td>\n            \n            <td>\n              \n              <p>Allows removal of an existing form.  Servers may choose to not support deletions and instead require that the form's status be changed to 'retired'.  Other systems support deletions but limit them to forms meeting certain requirements.  E.g. only forms with a status of draft or only forms that have been retired for at least two years, etc.</p>\n            \n            </td>\n          \n          </tr>\n        \n        </tbody>\n      \n      </table>\n      \n      <h4>Search</h4>\n      \n      <p>Supported Includes: Questionnaire.group.question.options</p>\n      \n      <table class=\"list\">\n        \n        <thead>\n          \n          <tr>\n            \n            <th>Parameter</th>\n            \n            <th>Conformance</th>\n            \n            <th>Type</th>\n            \n            <th>Definition &amp; Chaining</th>\n          \n          </tr>\n        \n        </thead>\n        \n        <tbody>\n          \n          <tr>\n            \n            <th>\n              \n              <a href=\"http://hl7.org/fhir/Profile/questionnaire#code\">code</a>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>token</td>\n            \n            <td/>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a href=\"http://hl7.org/fhir/Profile/questionnaire#date\">date</a>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>date</td>\n            \n            <td/>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a href=\"http://hl7.org/fhir/Profile/questionnaire#identifier\">identifier</a>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>token</td>\n            \n            <td/>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a href=\"http://hl7.org/fhir/Profile/questionnaire#publisher\">publisher</a>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>string</td>\n            \n            <td/>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a href=\"http://hl7.org/fhir/Profile/questionnaire#status\">status</a>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>token</td>\n            \n            <td/>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a href=\"http://hl7.org/fhir/Profile/questionnaire#title\">title</a>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>string</td>\n            \n            <td/>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a href=\"http://hl7.org/fhir/Profile/questionnaire#version\">version</a>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>string</td>\n            \n            <td/>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a href=\"http://hl7.org/fhir/ExtensionDefinition/questionnaire-deReference\">deReference</a>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>token</td>\n            \n            <td/>\n          \n          </tr>\n          \n          <tr>\n            \n            <td>SHALL</td>\n            \n            <td>token</td>\n            \n            <td/>\n          \n          </tr>\n        \n        </tbody>\n      \n      </table>\n      \n      <br/>\n      \n      <br/>\n      \n      <h3>\n        \n        <a href=\"valueset.html\">ValueSet</a>\n      \n      </h3>\n      \n      <h4>Interactions</h4>\n      \n      <table class=\"list\">\n        \n        <thead>\n          \n          <tr>\n            \n            <th>Name</th>\n            \n            <th>Conformance</th>\n            \n            <th>Description</th>\n          \n          </tr>\n        \n        </thead>\n        \n        <tbody>\n          \n          <tr>\n            \n            <th>\n              \n              <a name=\"ValueSet-search-type\">&nbsp;</a>\n              \n              <span>search-type</span>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>\n              \n              <p>Allows discovery of existing value sets for use in authoring questionnaires</p>\n            \n            </td>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a name=\"ValueSet-read\">&nbsp;</a>\n              \n              <span>read</span>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>\n              \n              <p>Allows retrieval of a specific value set referenced within a questionnaire</p>\n            \n            </td>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a name=\"ValueSet-vread\">&nbsp;</a>\n              \n              <span>vread</span>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>\n              \n              <p>Allows retrieval of a historical version of a value set as referenced within a questionnaire</p>\n            \n            </td>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a name=\"ValueSet-history-instance\">&nbsp;</a>\n              \n              <span>history-instance</span>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>\n              \n              <p>Allows review of changes to a value set over time</p>\n            \n            </td>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a name=\"ValueSet-create\">&nbsp;</a>\n              \n              <span>create</span>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>\n              \n              <p>Allows definition of a new value set used by one or more questionnaires</p>\n            \n            </td>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a name=\"ValueSet-update\">&nbsp;</a>\n              \n              <span>update</span>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>\n              \n              <p>Allows existing value sets referenced by one or more questionnaires to be maintained</p>\n            \n            </td>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a name=\"ValueSet-validate\">&nbsp;</a>\n              \n              <span>validate</span>\n            \n            </th>\n            \n            <td>SHOULD</td>\n            \n            <td>\n              \n              <p>Allows verification that a value set is valid prior to submission - useful for some workflows.</p>\n            \n            </td>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a name=\"ValueSet-delete\">&nbsp;</a>\n              \n              <span>delete</span>\n            \n            </th>\n            \n            <td>MAY</td>\n            \n            <td>\n              \n              <p>Not all servers will support deletion of value sets.  Status change to 'retired' will be more typical, though deletion of draft value sets may keep repositories cleaner.</p>\n            \n            </td>\n          \n          </tr>\n        \n        </tbody>\n      \n      </table>\n      \n      <h4>Search</h4>\n      \n      <p>Supported Includes: ValueSet.compose.import</p>\n      \n      <table class=\"list\">\n        \n        <thead>\n          \n          <tr>\n            \n            <th>Parameter</th>\n            \n            <th>Conformance</th>\n            \n            <th>Type</th>\n            \n            <th>Definition &amp; Chaining</th>\n          \n          </tr>\n        \n        </thead>\n        \n        <tbody>\n          \n          <tr>\n            \n            <th>\n              \n              <a href=\"http://hl7.org/fhir/Profile/valueset#code\">code</a>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>token</td>\n            \n            <td/>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a href=\"http://hl7.org/fhir/Profile/valueset#date\">date</a>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>date</td>\n            \n            <td/>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a href=\"http://hl7.org/fhir/Profile/valueset#description\">description</a>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>string</td>\n            \n            <td/>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a href=\"http://hl7.org/fhir/Profile/valueset#identifier\">identifier</a>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>token</td>\n            \n            <td/>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a href=\"http://hl7.org/fhir/Profile/valueset#name\">name</a>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>string</td>\n            \n            <td/>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a href=\"http://hl7.org/fhir/Profile/valueset#publisher\">publisher</a>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>string</td>\n            \n            <td/>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a href=\"http://hl7.org/fhir/Profile/valueset#reference\">reference</a>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>string</td>\n            \n            <td/>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a href=\"http://hl7.org/fhir/Profile/valueset#status\">status</a>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>token</td>\n            \n            <td/>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a href=\"http://hl7.org/fhir/Profile/valueset#system\">system</a>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>string</td>\n            \n            <td/>\n          \n          </tr>\n          \n          <tr>\n            \n            <th>\n              \n              <a href=\"http://hl7.org/fhir/Profile/valueset#version\">version</a>\n            \n            </th>\n            \n            <td>SHALL</td>\n            \n            <td>string</td>\n            \n            <td/>\n          \n          </tr>\n        \n        </tbody>\n      \n      </table>\n    \n    </div>"
+  },
+  "name": "SDC Form Manager",
+  "publisher": "U.S. Office of the National Coordinator (ONC)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://wiki.siframework.org/Structured+Data+Capture+Initiative"
+    }
+  ],
+  "description": "This profile defines the expected capabilities of the ''SDC Form Manager'' role when conforming to the S&I Framework's [[sdc|Structured Data Capture FHIR implementation guide]].  This role is responsible for maintaining a repository of form definitions and also of performing pre-population of form data.",
+  "status": "draft",
+  "date": "2014-07-06",
+  "fhirVersion": "0.2",
+  "acceptUnknown": false,
+  "format": [
+    "xml",
+    "json"
+  ],
+  "rest": [
+    {
+      "mode": "server",
+      "documentation": "The primary focus of the repository is the definition of [[Questionnaires]].  However, [[ValueSet]]s must also be supported to allow definition of coded data elements.  Some data elements will choose to maintain value sets as 'contained' resources, meaning the value set exists only in the context of the data element and cannot be referenced or maintained without also updating the data element.  However, systems should support value set re-use across data elements.  (Version-specific referencing can be used to avoid value sets from changing independent of the referencing [[Questionnaire]].)",
+      "security": {
+        "description": "Implementations must meet the general security requirements documented in the [[sdc-security|SDC implementation guide]]."
+      },
+      "resource": [
+        {
+          "type": "Questionnaire",
+          "profile": {
+            "reference": "http://hl7.org/fhir/ExtensionDefinition/questionnaire-sdc-"
+          },
+          "interaction": [
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type",
+              "documentation": "Allows a user to search for existing forms"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "read",
+              "documentation": "Allows retrieval of a specific known form"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "vread",
+              "documentation": "Allows retrieval of a specific version of a form"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "history-instance",
+              "documentation": "Allows review of changes to a form over time"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "create",
+              "documentation": "Allows defining a new form.  Repositories requiring curation of submitted forms may require all new data elements to have a status of 'draft'."
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "update",
+              "documentation": "Allows an existing form to be updated.  Servers may choose to prohibit certain types of edits, instead requiring the creation of a new questionnaire (and potentially the retiring of the existing questionnaire).  Servers may also limit who can change particular forms."
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "code": "validate",
+              "documentation": "SHOULD. Allows a client to verify whether a particular new form or revision of an existing form would be accepted based on validation and other business rules.  Useful for some workflows"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "MAY"
+                }
+              ],
+              "code": "delete",
+              "documentation": "Allows removal of an existing form.  Servers may choose to not support deletions and instead require that the form's status be changed to 'retired'.  Other systems support deletions but limit them to forms meeting certain requirements.  E.g. only forms with a status of draft or only forms that have been retired for at least two years, etc."
+            }
+          ],
+          "searchInclude": [
+            "Questionnaire.group.question.options"
+          ],
+          "searchParam": [
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "code",
+              "definition": "http://hl7.org/fhir/Profile/questionnaire#code",
+              "type": "token"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "date",
+              "definition": "http://hl7.org/fhir/Profile/questionnaire#date",
+              "type": "date"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "identifier",
+              "definition": "http://hl7.org/fhir/Profile/questionnaire#identifier",
+              "type": "token"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "publisher",
+              "definition": "http://hl7.org/fhir/Profile/questionnaire#publisher",
+              "type": "string"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "status",
+              "definition": "http://hl7.org/fhir/Profile/questionnaire#status",
+              "type": "token"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "title",
+              "definition": "http://hl7.org/fhir/Profile/questionnaire#title",
+              "type": "string"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "version",
+              "definition": "http://hl7.org/fhir/Profile/questionnaire#version",
+              "type": "string"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "deReference",
+              "definition": "http://hl7.org/fhir/ExtensionDefinition/questionnaire-deReference",
+              "type": "token"
+            }
+          ]
+        },
+        {
+          "type": "ValueSet",
+          "profile": {
+            "reference": "http://hl7.org/fhir/Profile/valueset-sdc"
+          },
+          "interaction": [
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "search-type",
+              "documentation": "Allows discovery of existing value sets for use in authoring questionnaires"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "read",
+              "documentation": "Allows retrieval of a specific value set referenced within a questionnaire"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "vread",
+              "documentation": "Allows retrieval of a historical version of a value set as referenced within a questionnaire"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "history-instance",
+              "documentation": "Allows review of changes to a value set over time"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "create",
+              "documentation": "Allows definition of a new value set used by one or more questionnaires"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "code": "update",
+              "documentation": "Allows existing value sets referenced by one or more questionnaires to be maintained"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHOULD"
+                }
+              ],
+              "code": "validate",
+              "documentation": "Allows verification that a value set is valid prior to submission - useful for some workflows."
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "MAY"
+                }
+              ],
+              "code": "delete",
+              "documentation": "Not all servers will support deletion of value sets.  Status change to 'retired' will be more typical, though deletion of draft value sets may keep repositories cleaner."
+            }
+          ],
+          "searchInclude": [
+            "ValueSet.compose.import"
+          ],
+          "searchParam": [
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "code",
+              "definition": "http://hl7.org/fhir/Profile/valueset#code",
+              "type": "token"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "date",
+              "definition": "http://hl7.org/fhir/Profile/valueset#date",
+              "type": "date"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "description",
+              "definition": "http://hl7.org/fhir/Profile/valueset#description",
+              "type": "string"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "identifier",
+              "definition": "http://hl7.org/fhir/Profile/valueset#identifier",
+              "type": "token"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "name",
+              "definition": "http://hl7.org/fhir/Profile/valueset#name",
+              "type": "string"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "publisher",
+              "definition": "http://hl7.org/fhir/Profile/valueset#publisher",
+              "type": "string"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "reference",
+              "definition": "http://hl7.org/fhir/Profile/valueset#reference",
+              "type": "string"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "status",
+              "definition": "http://hl7.org/fhir/Profile/valueset#status",
+              "type": "token"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "system",
+              "definition": "http://hl7.org/fhir/Profile/valueset#system",
+              "type": "string"
+            },
+            {
+              "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+                {
+                  "valueCode": "SHALL"
+                }
+              ],
+              "name": "version",
+              "definition": "http://hl7.org/fhir/Profile/valueset#version",
+              "type": "string"
+            }
+          ]
+        }
+      ],
+      "operation": [
+        {
+          "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation": [
+            {
+              "valueCode": "MAY"
+            }
+          ],
+          "name": "populate",
+          "definition": {
+            "reference": "http://hl7.org/fhir/OperationDefinition#questionnaire-populate",
+            "display": "Populate Questionnaire"
+          }
+        }
+      ]
+    }
+  ]
+}

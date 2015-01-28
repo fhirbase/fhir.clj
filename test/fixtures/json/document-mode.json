@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "id": "document-mode",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 2 concepts</p><h2>DocumentMode</h2><p>Whether the application produces or consumes documents</p><p>This value set defines its own terms in the system http://hl7.org/fhir/document-mode</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>producer<a name=\"producer\"> </a></td><td>The application produces documents of the specified type.</td></tr><tr><td>consumer<a name=\"consumer\"> </a></td><td>The application consumes documents of the specified type.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.47"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/document-mode",
+  "name": "DocumentMode",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Whether the application produces or consumes documents",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.496+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.47"
+      }
+    ],
+    "system": "http://hl7.org/fhir/document-mode",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "producer",
+        "definition": "The application produces documents of the specified type."
+      },
+      {
+        "code": "consumer",
+        "definition": "The application consumes documents of the specified type."
+      }
+    ]
+  }
+}

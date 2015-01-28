@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Profile xmlns="http://hl7.org/fhir">
+  <id value="provenance-ehrs-rle-ehrprovenance"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">to do</div>
+  </text>
+  <url value="http://hl7.org/fhir/Profile/provenance-ehrs-rle-ehrprovenance"/>
+  <name value="EHRS FM Record Lifecycle Event - Provenance"/>
+  <publisher value="Health Level Seven, Inc. - EHR WG"/>
+  <telecom>
+    <system value="url"/>
+    <value value="http://hl7.org/special/committees/ehr.html"/>
+  </telecom>
+  <description value="Defines the elements to be supported within the Provenance resource in order to conform with the Electronic Health Record System Functional Model Record Lifecycle Event standard : EHRS FM Record Lifecycle Event - Provenance"/>
+  <status value="draft"/>
+  <date value="2014-01-31"/>
+  <type value="Provenance"/>
+  <base value="http://hl7.org/fhir/Profile/Provenance"/>
+  <snapshot>
+    <element>
+      <path value="Provenance"/>
+      <name value="EHRProvenance"/>
+      <short value="Who, What, When for a set of resources"/>
+      <formal value="Provenance information that describes the activity that led to the creation of a set of resources. This information can be used to help determine their reliability or trace where the information in them came from. The focus of the provenance resource is record keeping, audit and traceability, and not explicit statements of clinical significance."/>
+      <comments value="Some parties may be duplicated between the target resource and its provenance.  For instance, the prescriber is usually (but not always) the author of the prescription resource. This resource is defined with close consideration for W3C Provenance."/>
+      <synonym value="History"/>
+      <synonym value="Event"/>
+      <synonym value="Activity"/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="ControlAct[isNormalAct() and subsumes(CACT, classCode) and moodCode=EVN]"/>
+      </mapping>
+      <mapping>
+        <identity value="w3c.prov"/>
+        <map value="Activity"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="ControlAct[isNormalAct() and subsumes(CACT, classCode) and moodCode=EVN]"/>
+      </mapping>
+      <mapping>
+        <identity value="w3c.prov"/>
+        <map value="Activity"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.id"/>
+      <short value="Logical id of this artefact"/>
+      <formal value="The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes."/>
+      <comments value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.meta"/>
+      <short value="Metadata about the resource"/>
+      <formal value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.meta.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.meta.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.meta.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.meta.versionId"/>
+      <short value="Version specific identifier"/>
+      <formal value="The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted."/>
+      <comments value="The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.meta.lastUpdated"/>
+      <short value="When the resource version last changed"/>
+      <formal value="When the resource last changed - e.g. when the version changed."/>
+      <comments value="This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="instant"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.meta.profile"/>
+      <short value="Profiles this resource claims to conform to"/>
+      <formal value="A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url."/>
+      <comments value="It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.meta.security"/>
+      <short value="Security Labels applied to this resource"/>
+      <formal value="Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure."/>
+      <comments value="The security labels can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.meta.tag"/>
+      <short value="Tags applied"/>
+      <formal value="Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource."/>
+      <comments value="The tags can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.implicitRules"/>
+      <short value="A set of rules under which this content was created"/>
+      <formal value="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content."/>
+      <comments value="Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.language"/>
+      <short value="Language of the resource content"/>
+      <formal value="The base language in which the resource is written."/>
+      <comments value="Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource
+
+Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="Language"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="A human language"/>
+        <referenceUri value="http://tools.ietf.org/html/bcp47"/>
+      </binding>
+    </element>
+    <element>
+      <path value="Provenance.text"/>
+      <short value="Text summary of the resource, for human interpretation"/>
+      <formal value="A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."/>
+      <comments value="Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."/>
+      <synonym value="narrative"/>
+      <synonym value="html"/>
+      <synonym value="xhtml"/>
+      <synonym value="display"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Narrative"/>
+      </type>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.contained"/>
+      <short value="Contained, inline Resources"/>
+      <formal value="These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope."/>
+      <comments value="This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."/>
+      <synonym value="inline resources"/>
+      <synonym value="anonymous resources"/>
+      <synonym value="contained resources"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Resource"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.target"/>
+      <short value="Target Reference(s) (usually version specific)"/>
+      <formal value="The Reference(s) that were generated by  the activity described in this resource. A provenance can point to more than one target if multiple resources were created/updated by the same activity."/>
+      <comments value="Target references are usually version specific, but may not be, if a version has not been assigned or if the provenance information is part of the set of resources being maintained (i.e. a document). When using the RESTful API, the identity of the resource may not be known (especially not the version specific one); the client may either submit the resource first, and then the provenance, or it may submit both using a single transaction. See the notes on transaction for further discussion."/>
+      <min value="1"/>
+      <max value="*"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./outboundRelationship[isNormalActRelationship() and typeCode=SUBJ]/target
+
+OR
+
+./participation[isNormalParticipation() and typeCode=SBJ]/role
+
+OR
+
+./participation[isNormalParticipation() and typeCode=SBJ]/role[isNormalRole()]/player"/>
+      </mapping>
+      <mapping>
+        <identity value="w3c.prov"/>
+        <map value="Activity.wasGeneratedBy"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./outboundRelationship[isNormalActRelationship() and typeCode=SUBJ]/target
+
+OR
+
+./participation[isNormalParticipation() and typeCode=SBJ]/role
+
+OR
+
+./participation[isNormalParticipation() and typeCode=SBJ]/role[isNormalRole()]/player"/>
+      </mapping>
+      <mapping>
+        <identity value="w3c.prov"/>
+        <map value="Activity.wasGeneratedBy"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.period"/>
+      <short value="When the activity occurred"/>
+      <formal value="The period during which the activity occurred."/>
+      <comments value="The period can be a little arbitrary; where possible, the time should correspond to human assessment of the activity time."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./effectiveTime[type=IVL_TS]"/>
+      </mapping>
+      <mapping>
+        <identity value="w3c.prov"/>
+        <map value="Activity.startTime &amp; Activity.endTime"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./effectiveTime[type=IVL_TS]"/>
+      </mapping>
+      <mapping>
+        <identity value="w3c.prov"/>
+        <map value="Activity.startTime &amp; Activity.endTime"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.recorded"/>
+      <short value="When the activity was recorded / updated"/>
+      <formal value="The instant of time at which the activity was recorded."/>
+      <comments value="This can be a little different from the time stamp on the resource if there is a delay between recording the event and updating the provenance and target resource."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="unique(./participation[isNormalParticipation() and typeCode=AUT]/time[type=TS])"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="unique(./participation[isNormalParticipation() and typeCode=AUT]/time[type=TS])"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.reason"/>
+      <short value="Reason the activity is occurring"/>
+      <formal value="The reason that the activity was taking place."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="EventPurposeOfUse"/>
+        <isExtensible value="true"/>
+        <conformance value="required"/>
+        <description value="Indicates the why the event occurred"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/v3/vs/PurposeOfUse"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value="unique(./reasonCode)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="unique(./reasonCode)"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.location"/>
+      <short value="Where the activity occurred, if relevant"/>
+      <formal value="Where the activity occurred, if relevant."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="unique(./participation[isNormalParticipation() and typeCode=LOC]/role[isNormalRole() and subsumes(SDLOC, classCode)]/player[isNormalEntity and classCode=&quot;LOC&quot; and determinerCode=&quot;INST&quot;]"/>
+      </mapping>
+      <mapping>
+        <identity value="w3c.prov"/>
+        <map value="Activity.location"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="unique(./participation[isNormalParticipation() and typeCode=LOC]/role[isNormalRole() and subsumes(SDLOC, classCode)]/player[isNormalEntity and classCode=&quot;LOC&quot; and determinerCode=&quot;INST&quot;]"/>
+      </mapping>
+      <mapping>
+        <identity value="w3c.prov"/>
+        <map value="Activity.location"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.policy"/>
+      <short value="Policy or plan the activity was defined by"/>
+      <formal value="Policy or plan the activity was defined by. Typically, a single activity may have multiple applicable policy documents, such as patient consent, guarantor funding, etc."/>
+      <min value="0"/>
+      <max value="*"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./inboundRelationship[isNormalActRelationship() and typeCode=&quot;SUBJ&quot;]/source[isNormalAct and subsumes(POLICY, classCode) and moodCode=EVN]/text[typeCode=&#39;ED&#39;/tel"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./inboundRelationship[isNormalActRelationship() and typeCode=&quot;SUBJ&quot;]/source[isNormalAct and subsumes(POLICY, classCode) and moodCode=EVN]/text[typeCode=&#39;ED&#39;/tel"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.agent"/>
+      <short value="Person, organization, records, etc. involved in creating resource"/>
+      <formal value="An agent takes a role in an activity such that the agent can be assigned some degree of responsibility for the activity taking place. An agent can be a person, a piece of software, an inanimate object, an organization, or other entities that may be ascribed responsibility."/>
+      <comments value="Several agents may be associated (i.e. has some responsibility for an activity) with an activity and vice-versa."/>
+      <min value="0"/>
+      <max value="*"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./participation[isNormalParticipation()]
+
+OR
+
+./outboundRelationship[isNormalActRelationship() and typeCode=&#39;DRIV&#39;]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./participation[isNormalParticipation()]
+
+OR
+
+./outboundRelationship[isNormalActRelationship() and typeCode=&#39;DRIV&#39;]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.agent.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.agent.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.agent.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.agent.role"/>
+      <short value="e.g. author | overseer | enterer | attester | source | cc: +"/>
+      <formal value="The role that the participant played."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="ProvenanceAgentRole"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="The role that a provenance agent played"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/provenance-agent-role"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value="attester: .[self::participation]/typeCode=&#39;RESP&#39;
+author: .[self::participation]/typeCode=&#39;AUT&#39;
+cc: .[self::participation]/typeCode=&#39;IRCP&#39;
+enterer:  .[self::participation]/typeCode=&#39;ENT&#39;
+informant: .[self::participation]/typeCode=&#39;INF&#39;
+performer: .[self::participation]/typeCode=&#39;PRF&#39;
+verifier: .[self::participation]/typeCode=&#39;VRF&#39;
+source: .[self::outboundRelationship]/typeCode=&#39;&#39;"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="attester: .[self::participation]/typeCode=&#39;RESP&#39;
+author: .[self::participation]/typeCode=&#39;AUT&#39;
+cc: .[self::participation]/typeCode=&#39;IRCP&#39;
+enterer:  .[self::participation]/typeCode=&#39;ENT&#39;
+informant: .[self::participation]/typeCode=&#39;INF&#39;
+performer: .[self::participation]/typeCode=&#39;PRF&#39;
+verifier: .[self::participation]/typeCode=&#39;VRF&#39;
+source: .[self::outboundRelationship]/typeCode=&#39;&#39;"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.agent.type"/>
+      <short value="e.g. Resource | Person | Application | Record | Document +"/>
+      <formal value="The type of the participant."/>
+      <comments value="If the type is &quot;Resource&quot; then the resource itself was the participant. If the type is a type of resource, then the entity identified by the resource is the participant."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="ProvenanceAgentType"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="The type of a provenance agent"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/provenance-agent-type"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value="person: ./role[isNormalRole() and classCode=&#39;REL&#39;]/player[isNormalEntity and classCode=&#39;PER&#39; and determinerCode=&#39;INST&#39;]
+agent: ./role[isNormalRole() and classCode=&#39;ASSIGNED&#39; and player[isNormalEntity and classCode=&#39;PSN&#39; and determinerCode=&#39;INST&#39;]]
+organization: ./role[isNormalRole() and classCode=&#39;ASSIGNED&#39; and not(player)]/scoper[isNormalEntity and classCode=&#39;ORG&#39; and determinerCode=&#39;INST&#39;]
+
+software: ./role[isNormalRole() and classCode=&#39;ASSIGNED&#39;]/scoper[isNormalEntity and classCode=&#39;DEV&#39; and determinerCode=&#39;INST&#39; and hasDomain(code, &#39;Software&#39;)]
+document: ./target[isNormalAct and subsumes(&#39;DOC&#39;, classCode) and moodCode=&#39;EVN&#39;]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="person: ./role[isNormalRole() and classCode=&#39;REL&#39;]/player[isNormalEntity and classCode=&#39;PER&#39; and determinerCode=&#39;INST&#39;]
+agent: ./role[isNormalRole() and classCode=&#39;ASSIGNED&#39; and player[isNormalEntity and classCode=&#39;PSN&#39; and determinerCode=&#39;INST&#39;]]
+organization: ./role[isNormalRole() and classCode=&#39;ASSIGNED&#39; and not(player)]/scoper[isNormalEntity and classCode=&#39;ORG&#39; and determinerCode=&#39;INST&#39;]
+
+software: ./role[isNormalRole() and classCode=&#39;ASSIGNED&#39;]/scoper[isNormalEntity and classCode=&#39;DEV&#39; and determinerCode=&#39;INST&#39; and hasDomain(code, &#39;Software&#39;)]
+document: ./target[isNormalAct and subsumes(&#39;DOC&#39;, classCode) and moodCode=&#39;EVN&#39;]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.agent.reference"/>
+      <short value="Identity of agent (urn or url)"/>
+      <formal value="Identity of participant. May be a logical or physical uri and maybe absolute or relative."/>
+      <comments value="identity may be a reference to a resource or to something else, depending on the type."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./id"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.agent.display"/>
+      <short value="Human description of participant"/>
+      <formal value="Human-readable description of the participant."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./player/description
+
+OR
+
+./description
+
+OR
+
+./text"/>
+      </mapping>
+      <mapping>
+        <identity value="w3c.prov"/>
+        <map value="Agent.label"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./player/description
+
+OR
+
+./description
+
+OR
+
+./text"/>
+      </mapping>
+      <mapping>
+        <identity value="w3c.prov"/>
+        <map value="Agent.label"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.entity"/>
+      <short value="An entity used in this activity"/>
+      <formal value="An entity used in this activity."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./subjectOf"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./subjectOf"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.entity.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.entity.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.entity.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.entity.role"/>
+      <short value="derivation | revision | quotation | source"/>
+      <formal value="How the entity was used during the activity."/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="ProvenanceEntityRole"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="How an entity was used in an activity"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/provenance-entity-role"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./typeCode"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./typeCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.entity.type"/>
+      <short value="Resource Type, or something else"/>
+      <formal value="The type of the entity. If the entity is a resource, then this is a resource type."/>
+      <comments value="If the type is &quot;resource&quot; then the resource itself was the participant. If the type is a type of resource, then the entity identified by the resource is the participant."/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="ProvenanceEntityType"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="The type of an entity used in an activity"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/resource-types"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./target"/>
+      </mapping>
+      <mapping>
+        <identity value="w3c.prov"/>
+        <map value="Entity.type"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./target"/>
+      </mapping>
+      <mapping>
+        <identity value="w3c.prov"/>
+        <map value="Entity.type"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.entity.reference"/>
+      <short value="Identity of participant (urn or url)"/>
+      <formal value="Identity of participant. May be a logical or physical uri and maybe absolute or relative."/>
+      <comments value="identity may be a reference to a resource or to something else, depending on the type."/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./text/reference"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./text/reference"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.entity.display"/>
+      <short value="Human description of participant"/>
+      <formal value="Human-readable description of the entity."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./title"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./title"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.entity.agent"/>
+      <short value="Entity is attributed to this agent"/>
+      <formal value="The entity is attributed to an agent to express the agent&#39;s responsibility for that entity, possibly along with other agents. This description can be understood as shorthand for saying that the agent was responsible for the activity which generated the entity."/>
+      <min value="0"/>
+      <max value="1"/>
+      <nameReference value="agent"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./author/role"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./author/role"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Provenance.integritySignature"/>
+      <short value="Base64 signature (DigSig) - integrity check"/>
+      <formal value="A digital signature on the target Reference(s). The signature should match a Provenance.agent.reference in the provenance resource. The signature is only added to support checking cryptographic integrity of the resource, and not to represent workflow and clinical aspects of the signing process, or to support non-repudiation."/>
+      <comments value="Whether the content is XML or JSON, the representation is as a base64 of the XML signature of the resource."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./signatureText"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./signatureText"/>
+      </mapping>
+    </element>
+  </snapshot>
+  <differential>
+    <element>
+      <path value="Provenance"/>
+      <name value="EHRProvenance"/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.target"/>
+      <min value="1"/>
+      <max value="*"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.period"/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.recorded"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.reason"/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="EventPurposeOfUse"/>
+        <isExtensible value="true"/>
+        <conformance value="required"/>
+        <description value="Indicates the why the event occurred"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/v3/vs/PurposeOfUse"/>
+        </referenceReference>
+      </binding>
+    </element>
+    <element>
+      <path value="Provenance.location"/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.policy"/>
+      <min value="0"/>
+      <max value="*"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.agent"/>
+      <min value="0"/>
+      <max value="*"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.agent.role"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.agent.type"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.agent.reference"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.agent.display"/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.entity"/>
+      <min value="0"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.entity.role"/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.entity.type"/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.entity.reference"/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.entity.display"/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.entity.agent"/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Provenance.integritySignature"/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</Profile>

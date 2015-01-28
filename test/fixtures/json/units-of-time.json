@@ -1,0 +1,98 @@
+{
+  "resourceType": "ValueSet",
+  "id": "units-of-time",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div><p>This value set contains 7 concepts</p><h2>UnitsOfTime</h2><p>A unit of time (units from UCUM)</p><p><b>Copyright Statement:</b> UCUM is Copyright ?? 1999-2013 Regenstrief Institute, Inc. and The UCUM Organization, Indianapolis, IN. All rights reserved. See http://unitsofmeasure.org/trac//wiki/TermsOfUse for details</p><p>This value set includes codes defined in other code systems, using the following rules:</p><ul><li>Include these codes as defined in http://unitsofmeasure.org<table><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>s</td><td/><td>second.</td></tr><tr><td>min</td><td/><td>minute.</td></tr><tr><td>h</td><td/><td>hour.</td></tr><tr><td>d</td><td/><td>day.</td></tr><tr><td>wk</td><td/><td>week.</td></tr><tr><td>mo</td><td/><td>month.</td></tr><tr><td>a</td><td/><td>year.</td></tr></table></li></ul></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.20"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/units-of-time",
+  "name": "UnitsOfTime",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "A unit of time (units from UCUM)",
+  "copyright": "UCUM is Copyright ?? 1999-2013 Regenstrief Institute, Inc. and The UCUM Organization, Indianapolis, IN. All rights reserved. See http://unitsofmeasure.org/trac//wiki/TermsOfUse for details",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.493+11:00",
+  "compose": {
+    "include": [
+      {
+        "system": "http://unitsofmeasure.org",
+        "concept": [
+          {
+            "http://hl7.org/fhir/ExtensionDefinition/valueset-definition": [
+              {
+                "valueString": "second."
+              }
+            ],
+            "code": "s"
+          },
+          {
+            "http://hl7.org/fhir/ExtensionDefinition/valueset-definition": [
+              {
+                "valueString": "minute."
+              }
+            ],
+            "code": "min"
+          },
+          {
+            "http://hl7.org/fhir/ExtensionDefinition/valueset-definition": [
+              {
+                "valueString": "hour."
+              }
+            ],
+            "code": "h"
+          },
+          {
+            "http://hl7.org/fhir/ExtensionDefinition/valueset-definition": [
+              {
+                "valueString": "day."
+              }
+            ],
+            "code": "d"
+          },
+          {
+            "http://hl7.org/fhir/ExtensionDefinition/valueset-definition": [
+              {
+                "valueString": "week."
+              }
+            ],
+            "code": "wk"
+          },
+          {
+            "http://hl7.org/fhir/ExtensionDefinition/valueset-definition": [
+              {
+                "valueString": "month."
+              }
+            ],
+            "code": "mo"
+          },
+          {
+            "http://hl7.org/fhir/ExtensionDefinition/valueset-definition": [
+              {
+                "valueString": "year."
+              }
+            ],
+            "code": "a"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-dataelement-comparable-granularity",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set does not contain a fixed number of concepts</p><h2>DataElement SDC Concept</h2><p>Includes any data element granularity that supports comparison of the data elements - possibly after automated normalization.</p><p>This value set includes codes defined in other code systems, using the following rules:</p><ul><li>Include codes from <a href=\"dataelement-granularity.html\">http://hl7.org/fhir/dataelement-granularity</a> where concept  is-a  <a href=\"dataelement-granularity.html#comparable\">comparable</a></li></ul></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.583"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/dataelement-comparable-granularity",
+  "name": "DataElement SDC Concept",
+  "publisher": "Office of the National Coordinator for Health IT",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://healthit.gov"
+    }
+  ],
+  "description": "Includes any data element granularity that supports comparison of the data elements - possibly after automated normalization.",
+  "status": "draft",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/dataelement-granularity",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "comparable"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "resourceType": "ValueSet",
+  "id": "care-plan-goal-status",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 4 concepts</p><h2>CarePlanGoalStatus</h2><p>Indicates whether the goal has been met and is still being targeted</p><p>This value set defines its own terms in the system http://hl7.org/fhir/care-plan-goal-status</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>in progress<a name=\"inprogress\"> </a></td><td>The goal is being sought but has not yet been reached.  (Also applies if goal was reached in the past but there has been regression and goal is being sought again).</td></tr><tr><td>achieved<a name=\"achieved\"> </a></td><td>The goal has been met and no further action is needed.</td></tr><tr><td>sustaining<a name=\"sustaining\"> </a></td><td>The goal has been met, but ongoing activity is needed to sustain the goal objective.</td></tr><tr><td>cancelled<a name=\"cancelled\"> </a></td><td>The goal is no longer being sought.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.38"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/care-plan-goal-status",
+  "name": "CarePlanGoalStatus",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Indicates whether the goal has been met and is still being targeted",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.494+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.38"
+      }
+    ],
+    "system": "http://hl7.org/fhir/care-plan-goal-status",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "in progress",
+        "definition": "The goal is being sought but has not yet been reached.  (Also applies if goal was reached in the past but there has been regression and goal is being sought again)."
+      },
+      {
+        "code": "achieved",
+        "definition": "The goal has been met and no further action is needed."
+      },
+      {
+        "code": "sustaining",
+        "definition": "The goal has been met, but ongoing activity is needed to sustain the goal objective."
+      },
+      {
+        "code": "cancelled",
+        "definition": "The goal is no longer being sought."
+      }
+    ]
+  }
+}

@@ -3,10 +3,25 @@
             [fhir.utils :as fu]
             [fhir.profiles :as fp]))
 
-(deftest meta-test
-  (testing "find-meta"
-    (is (= (fp/find-meta [:Patient :name :use])
-           {:$attrs {:path [:HumanName :use] :ord 3 :type [:code] :max "1" :min 0}}))
 
-    (is (= (:$attrs (fp/find-meta [:Patient :name]))
-           {:path [:Patient :name], :ord 18, :type [:HumanName], :max "*", :min 0}))))
+(deftest meta-test
+  (testing "expansion of *"
+    (is (not (nil?
+               (get-in fp/idx [:ElementDefinition :defaultValueString])))))
+  (testing "find-meta"
+    (is (= [:HumanName :use]
+           (->
+             (fp/find-meta [:Patient :name :use])
+             (get-in [:$attrs :path]))))
+
+    (is (= [:HumanName]
+           (-> (fp/find-meta [:Patient :name])
+               (get-in [:$attrs :type])))))
+
+
+  (testing "name refs"
+    (is
+      (= [:Profile :snapshot :element]
+         (-> (fp/find-meta [:Profile :differential :element])
+             (get-in [:$attrs :path])
+             )))))

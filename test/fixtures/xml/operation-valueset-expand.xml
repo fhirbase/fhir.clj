@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<OperationDefinition xmlns="http://hl7.org/fhir">
+  <id value="ValueSet-expand"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <h2>Value Set Expansion</h2>
+      <p>OPERATION: expand</p>
+      <div>
+        <p>The definition of a value set is used to create a simple collection of codes suitable for use for data entry or validation.</p>
+
+        <p>If the operation is not called at the instance level, one of the in parameters identifier or valueset must be provided.</p>
+
+        <p>An expanded value set will be returned, or an OperationOutcome with an error message</p>
+
+      </div>
+      <p>URL: [base]/ValueSet/$expand</p>
+      <p>URL: [base]/ValueSet/[id]/$expand</p>
+      <p>Parameters</p>
+      <table class="grid">
+        <tr>
+          <td>
+            <b>Use</b>
+          </td>
+          <td>
+            <b>Name</b>
+          </td>
+          <td>
+            <b>Cardinality</b>
+          </td>
+          <td>
+            <b>Type</b>
+          </td>
+          <td>
+            <b>Documentation</b>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>identifier</td>
+          <td>0..1</td>
+          <td>uri</td>
+          <td>
+            <div>
+              <p>A logical value set identifier (i.e. ValueSet.identifier). The server must know the value set (e.g. it is defined explicitly in the server&#39;s valuesets, or it is defined implicitly by some code system known to the server</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>valueSet</td>
+          <td>0..1</td>
+          <td>ValueSet</td>
+          <td>
+            <div>
+              <p>The value set is provided directly as part of the request. Servers may choose not to accept value sets in this fashion</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>filter</td>
+          <td>0..1</td>
+          <td>string</td>
+          <td>
+            <div>
+              <p>A text filter that is applied to restrict the codes that are returned (this is useful in a UI context)</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>IN</td>
+          <td>date</td>
+          <td>0..1</td>
+          <td>dateTime</td>
+          <td>
+            <div>
+              <p>The date for which the expansion should be generated. Normally, this is the current conditions (which is the default value) but under some circumstances, systems need to generate an expansion as it would have been in the past. A typical example of this would be where code selection is constrained to the set of codes that were available when the patient was treated, not when the record is being edited. Note that which date is appropriate is a matter for implementation policy.</p>
+
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>OUT</td>
+          <td>return</td>
+          <td>1..1</td>
+          <td>ValueSet</td>
+          <td>
+            <div>
+              <p>The result of the expansion</p>
+
+            </div>
+          </td>
+        </tr>
+      </table>
+      <div>
+        <p>The value set expansion returned by this query should be treated as a transient result that will change over time (whether it does or not depends on how the value set is specified), so applications should repeat the operation each time the value set is used.</p>
+
+        <p>Different servers may return different results from expanding a value set for the following reasons:</p>
+
+        <ul>
+
+          <li>The underlying code systems are different (e.g. different versions, possibly with different defined behaviour)</li>
+
+          <li>The server optimises filter includes differently, such as sorting by code frequency</li>
+
+          <li>Servers introduce arbitrary groups to assist a user to navigate the lists based either on extensions in the definition, or additional knowledge available to the server</li>
+
+        </ul>
+
+      </div>
+    </div>
+  </text>
+  <identifier value="http://hl7.org/fhir/OperationDefinition/ValueSet-expand"/>
+  <title value="Value Set Expansion"/>
+  <publisher value="HL7 (FHIR Project)"/>
+  <telecom>
+    <system value="url"/>
+    <value value="http://hl7.org/fhir"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="fhir@lists.hl7.org"/>
+  </telecom>
+  <description value="The definition of a value set is used to create a simple collection of codes suitable for use for data entry or validation. 
+
+If the operation is not called at the instance level, one of the in parameters identifier or valueset must be provided.
+
+An expanded value set will be returned, or an OperationOutcome with an error message"/>
+  <status value="draft"/>
+  <date value="2014-12-12T13:17:44.755+11:00"/>
+  <kind value="operation"/>
+  <name value="expand"/>
+  <notes value="The value set expansion returned by this query should be treated as a transient result that will change over time (whether it does or not depends on how the value set is specified), so applications should repeat the operation each time the value set is used. 
+
+Different servers may return different results from expanding a value set for the following reasons:
+
+* The underlying code systems are different (e.g. different versions, possibly with different defined behaviour)
+* The server optimises filter includes differently, such as sorting by code frequency
+* Servers introduce arbitrary groups to assist a user to navigate the lists based either on extensions in the definition, or additional knowledge available to the server"/>
+  <system value="false"/>
+  <type value="ValueSet"/>
+  <instance value="true"/>
+  <parameter>
+    <name value="identifier"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="A logical value set identifier (i.e. ValueSet.identifier). The server must know the value set (e.g. it is defined explicitly in the server&#39;s valuesets, or it is defined implicitly by some code system known to the server"/>
+    <type value="uri"/>
+  </parameter>
+  <parameter>
+    <name value="valueSet"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="The value set is provided directly as part of the request. Servers may choose not to accept value sets in this fashion"/>
+    <type value="ValueSet"/>
+  </parameter>
+  <parameter>
+    <name value="filter"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="A text filter that is applied to restrict the codes that are returned (this is useful in a UI context)"/>
+    <type value="string"/>
+  </parameter>
+  <parameter>
+    <name value="date"/>
+    <use value="in"/>
+    <min value="0"/>
+    <max value="1"/>
+    <documentation value="The date for which the expansion should be generated. Normally, this is the current conditions (which is the default value) but under some circumstances, systems need to generate an expansion as it would have been in the past. A typical example of this would be where code selection is constrained to the set of codes that were available when the patient was treated, not when the record is being edited. Note that which date is appropriate is a matter for implementation policy."/>
+    <type value="dateTime"/>
+  </parameter>
+  <parameter>
+    <name value="return"/>
+    <use value="out"/>
+    <min value="1"/>
+    <max value="1"/>
+    <documentation value="The result of the expansion"/>
+    <type value="ValueSet"/>
+  </parameter>
+</OperationDefinition>

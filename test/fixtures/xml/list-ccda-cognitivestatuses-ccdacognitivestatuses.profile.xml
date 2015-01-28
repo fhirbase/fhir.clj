@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Profile xmlns="http://hl7.org/fhir">
+  <id value="list-ccda-cognitivestatuses-ccdacognitivestatuses"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">to do</div>
+  </text>
+  <url value="http://hl7.org/fhir/Profile/list-ccda-cognitivestatuses-ccdacognitivestatuses"/>
+  <name value="CCDA Cognitive Statuses"/>
+  <publisher value="HL7 International - Orders and Observations WG"/>
+  <telecom>
+    <system value="url"/>
+    <value value="http://hl7.org"/>
+  </telecom>
+  <description value="CCDA Cognitive Status (Result) Organizer  to FHIR Profile mapping : CCDA Cognitive Statuses"/>
+  <status value="draft"/>
+  <date value="2014-09-21"/>
+  <type value="List"/>
+  <base value="http://hl7.org/fhir/Profile/List"/>
+  <snapshot>
+    <element>
+      <path value="List"/>
+      <name value="CCDACognitiveStatuses"/>
+      <short value="Information summarized from a list of other resources"/>
+      <formal value="A set of information summarized from a list of other resources."/>
+      <synonym value="Collection"/>
+      <synonym value="WorkingList"/>
+      <synonym value="Organizer"/>
+      <min value="1"/>
+      <max value="1"/>
+      <constraint>
+        <key value="2"/>
+        <name value="Deleted Rule"/>
+        <severity value="error"/>
+        <human value="The deleted flag can only be used if the mode of the list is &quot;changes&quot;"/>
+        <xpath value="(f:mode/@value = &#39;changes&#39;) or not(exists(f:entry/f:item/f:deleted))"/>
+      </constraint>
+      <constraint>
+        <key value="1"/>
+        <name value="No emptyReason if list is not empty"/>
+        <severity value="error"/>
+        <human value="A list can only have an emptyReason if it is empty"/>
+        <xpath value="not(exists(f:emptyReason) and exists(f:entry))"/>
+      </constraint>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act[classCode&lt;ORG,moodCode=EVN]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act[classCode&lt;ORG,moodCode=EVN]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.id"/>
+      <short value="Logical id of this artefact"/>
+      <formal value="The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes."/>
+      <comments value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="List.meta"/>
+      <short value="Metadata about the resource"/>
+      <formal value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="List.meta.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.meta.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.meta.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.meta.versionId"/>
+      <short value="Version specific identifier"/>
+      <formal value="The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted."/>
+      <comments value="The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="List.meta.lastUpdated"/>
+      <short value="When the resource version last changed"/>
+      <formal value="When the resource last changed - e.g. when the version changed."/>
+      <comments value="This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="instant"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="List.meta.profile"/>
+      <short value="Profiles this resource claims to conform to"/>
+      <formal value="A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url."/>
+      <comments value="It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="List.meta.security"/>
+      <short value="Security Labels applied to this resource"/>
+      <formal value="Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure."/>
+      <comments value="The security labels can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="List.meta.tag"/>
+      <short value="Tags applied"/>
+      <formal value="Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource."/>
+      <comments value="The tags can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="List.implicitRules"/>
+      <short value="A set of rules under which this content was created"/>
+      <formal value="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content."/>
+      <comments value="Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="List.language"/>
+      <short value="Language of the resource content"/>
+      <formal value="The base language in which the resource is written."/>
+      <comments value="Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource
+
+Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="Language"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="A human language"/>
+        <referenceUri value="http://tools.ietf.org/html/bcp47"/>
+      </binding>
+    </element>
+    <element>
+      <path value="List.text"/>
+      <short value="Text summary of the resource, for human interpretation"/>
+      <formal value="A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."/>
+      <comments value="Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."/>
+      <synonym value="narrative"/>
+      <synonym value="html"/>
+      <synonym value="xhtml"/>
+      <synonym value="display"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Narrative"/>
+      </type>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.contained"/>
+      <short value="Contained, inline Resources"/>
+      <formal value="These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope."/>
+      <comments value="This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."/>
+      <synonym value="inline resources"/>
+      <synonym value="anonymous resources"/>
+      <synonym value="contained resources"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Resource"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.extension"/>
+      <slicing>
+        <discriminator value="url"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.extension"/>
+      <name value="ListStatus"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <requirements value="7.  SHALL contain exactly one [1..1] statusCode=&quot;completed&quot; Completed 
+(CodeSystem: ActStatus 2.16.840.1.113883.5.14) (CONF:14372)."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <fixedCode value="final"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.identifier"/>
+      <short value="Business identifier"/>
+      <formal value="Identifier for the List assigned for business purposes outside the context of FHIR."/>
+      <comments value="An appropriate nullFlavor can be used in the identifier.data-absent reason element when id is unknown."/>
+      <requirements value="5.  SHALL contain at least one [1..*] id (CONF:14377). 
+An appropriate nullFlavor can be used when the organizer/code or 
+organizer/id is unknown."/>
+      <min value="1"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.code"/>
+      <short value="What the purpose of this list is"/>
+      <formal value="This code defines the purpose of the list - why it was created."/>
+      <comments value="An appropriate nullFlavor can be used in the code.data-absent reason element when code is unknown."/>
+      <requirements value="6.  SHALL contain exactly one [1..1] code (CONF:14378). 
+a.  This code SHOULD contain zero or one [0..1] @code (CONF:14697). 
+i.  Should be selected from ICF (codeSystem 
+2.16.840.1.113883.6.254) or SNOMED CT (codeSystem 
+2.16.840.1.113883.6.96) (CONF:14698). 
+An appropriate nullFlavor can be used when the organizer/code or 
+organizer/id is unknown."/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="ListPurposeCodes"/>
+        <isExtensible value="true"/>
+        <description value="Codes defining the purpose of the list"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/list-listpurposecodes"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.subject"/>
+      <short value="If all resources have the same subject"/>
+      <formal value="The common subject (or patient) of the resources that are in the list, if there is one."/>
+      <comments value="Some purely aribitrary lists do not have a common subject, so this is optional."/>
+      <requirements value="The primary purpose of listing the subject explicitly is to help with finding the right list."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Patient"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Group"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Device"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Location"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode&lt;SUB].role
+(and sometimes .player)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode&lt;SUB].role
+(and sometimes .player)"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.source"/>
+      <short value="Who and/or what defined the list contents"/>
+      <formal value="The entity responsible for deciding what the contents of the list were."/>
+      <comments value="The primary source is the entity that made the decisions what items are in the list. This may be software or user."/>
+      <requirements value="Allows follow-up as well as context."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Practitioner"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Patient"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Device"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode&lt;AUT].role[classCode=REL].player[classCode=PSN,determinerCode=INST]
+or
+.participation[typeCode&lt;AUT].role[classCode=REL].player[classCode=DEV,determinerCode=INST]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode&lt;AUT].role[classCode=REL].player[classCode=PSN,determinerCode=INST]
+or
+.participation[typeCode&lt;AUT].role[classCode=REL].player[classCode=DEV,determinerCode=INST]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.date"/>
+      <short value="When the list was prepared"/>
+      <formal value="The date that the list was prepared."/>
+      <comments value="The actual important date is the date of currency of the resources that were summarized, but it is usually assumed that these are current when the preparation occurs."/>
+      <requirements value="Identifies how current the list is which affects relevance."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode&lt;AUT].time[type=TS]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode&lt;AUT].time[type=TS]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.ordered"/>
+      <short value="Whether items in the list have a meaningful order"/>
+      <formal value="Whether items in the list have a meaningful order."/>
+      <comments value="Applications SHOULD render ordered lists in the order provided, but MAY allow users to re-order based on their own preferences as well. This is marked as &quot;is modifier&quot; because whether the list is ordered or not may change how the results are processed or displayed."/>
+      <requirements value="Important for presentation and rendering.  Lists may be sorted to place more important information first or to group related entries."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=COMP].sequenceNumber &gt; 1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=COMP].sequenceNumber &gt; 1"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.mode"/>
+      <short value="working | snapshot | changes"/>
+      <formal value="How this list was prepared - whether it is a working list that is suitable for being maintained on an ongoing basis, or if it represents a snapshot of a list of items from another source, or whether it is a prepared list where items may be marked as added, modified or deleted."/>
+      <requirements value="Lists are used in various ways, and it must be known in what way it is safe to use them."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="ListMode"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The processing mode that applies to this list"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/list-mode"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outBoundRelationship[typeCode=COMP].target[classCode=OBS&quot;].value"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outBoundRelationship[typeCode=COMP].target[classCode=OBS&quot;].value"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.entry"/>
+      <short value="Entries in the list"/>
+      <formal value="Entries in this list."/>
+      <comments value="If there are no entries in the list, an emptyReason SHOULD be provided."/>
+      <requirements value="8.  SHALL contain at least one [1..*] component (CONF:14373) such that it 
+a.  SHALL contain exactly one [1..1] Cognitive Status Result 
+Observation (templateId:2.16.840.1.113883.10.20.22.4.74) 
+(CONF:14381)."/>
+      <min value="1"/>
+      <max value="*"/>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=COMP]
+or 
+.participation[typeCode=SBJ]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=COMP]
+or 
+.participation[typeCode=SBJ]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.entry.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.entry.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.entry.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.entry.flag"/>
+      <short value="Workflow information about this item"/>
+      <formal value="The flag allows the system constructing the list to make one or more statements about the role and significance of the item in the list."/>
+      <comments value="The flag can only be understood in the context of the List.code. If the flag means that the entry has actually been deleted from the list, the deleted element SHALL be true. Deleted can only be used if the List.mode is &quot;changes&quot;."/>
+      <requirements value="This field is present to support various clinical uses of lists, such as a discharge summary medication list, where flags specify whether the medication was added, modified, or deleted from the list."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="ListItemFlag"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="Codes that provide further information about the reason and meaning of the item in the list"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/list-item-flag"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outBoundRelationship[typeCode=COMP].target[classCode=OBS&quot;].value"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outBoundRelationship[typeCode=COMP].target[classCode=OBS&quot;].value"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.entry.deleted"/>
+      <short value="If this item is actually marked as deleted"/>
+      <formal value="True if this item is marked as deleted in the list."/>
+      <comments value="If the flag means that the entry has actually been deleted from the list, the deleted element SHALL be true. Both flag and deleted can only be used if the List.mode is &quot;changes&quot;. A deleted entry should be displayed in narrative as deleted."/>
+      <requirements value="The flag element may contain codes that an application processing the list does not understand. However there can be no ambiguity if a list item is actually marked as &quot;deleted&quot;."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <defaultValueBoolean value="false"/>
+      <condition value="2"/>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="added: .updateMode=(&quot;A&quot;,&quot;AR&quot;)
+
+retained: .updateMode=&quot;NC&quot;
+
+updated: .updateMode=&quot;R&quot;
+
+deleted: .updateMode=&quot;D&quot;"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="added: .updateMode=(&quot;A&quot;,&quot;AR&quot;)
+
+retained: .updateMode=&quot;NC&quot;
+
+updated: .updateMode=&quot;R&quot;
+
+deleted: .updateMode=&quot;D&quot;"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.entry.date"/>
+      <short value="When item added to list"/>
+      <formal value="When this item was added to the list."/>
+      <comments value="This is only useful and meaningful when the mode is &quot;working&quot;."/>
+      <requirements value="The date may be significant for understanding the meaning of items in a working list."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".availabilityTime"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".availabilityTime"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.entry.item"/>
+      <short value="Actual entry"/>
+      <formal value="A reference to the actual resource from which data was derived."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Any"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".target
+or
+.role
+or
+.role.entity"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".target
+or
+.role
+or
+.role.entity"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="List.emptyReason"/>
+      <short value="Why list is empty"/>
+      <formal value="If the list is empty, why the list is empty."/>
+      <comments value="The various reasons for an empty list make a significant interpretation to its interpretation."/>
+      <requirements value="Allows capturing things like &quot;none exist&quot; or &quot;not asked&quot; which can be important for most lists."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="ListEmptyReason"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="If a list is empty, why it is empty"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/list-empty-reason"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=SUBJ,code&lt;{ListEmptyReason}].value[type=CD]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=SUBJ,code&lt;{ListEmptyReason}].value[type=CD]"/>
+      </mapping>
+    </element>
+  </snapshot>
+  <differential>
+    <element>
+      <path value="List"/>
+      <name value="CCDACognitiveStatuses"/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="List.extension"/>
+      <slicing>
+        <discriminator value="url"/>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element>
+      <path value="List.extension"/>
+      <name value="ListStatus"/>
+      <requirements value="7.  SHALL contain exactly one [1..1] statusCode=&quot;completed&quot; Completed 
+(CodeSystem: ActStatus 2.16.840.1.113883.5.14) (CONF:14372)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <fixedCode value="final"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="List.identifier"/>
+      <comments value="An appropriate nullFlavor can be used in the identifier.data-absent reason element when id is unknown."/>
+      <requirements value="5.  SHALL contain at least one [1..*] id (CONF:14377). 
+An appropriate nullFlavor can be used when the organizer/code or 
+organizer/id is unknown."/>
+      <min value="1"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="List.identifier.extension"/>
+      <slicing>
+        <discriminator value="url"/>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element>
+      <path value="List.identifier.extension"/>
+      <name value="ListIdentifierDAR"/>
+      <requirements value="5.  SHALL contain at least one [1..*] id (CONF:14377). 
+An appropriate nullFlavor can be used when the organizer/code or 
+organizer/id is unknown."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/data-absent-reason"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="List.code"/>
+      <comments value="An appropriate nullFlavor can be used in the code.data-absent reason element when code is unknown."/>
+      <requirements value="6.  SHALL contain exactly one [1..1] code (CONF:14378). 
+a.  This code SHOULD contain zero or one [0..1] @code (CONF:14697). 
+i.  Should be selected from ICF (codeSystem 
+2.16.840.1.113883.6.254) or SNOMED CT (codeSystem 
+2.16.840.1.113883.6.96) (CONF:14698). 
+An appropriate nullFlavor can be used when the organizer/code or 
+organizer/id is unknown."/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="ListPurposeCodes"/>
+        <isExtensible value="true"/>
+        <description value="Codes defining the purpose of the list"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/list-listpurposecodes"/>
+        </referenceReference>
+      </binding>
+    </element>
+    <element>
+      <path value="List.code.extension"/>
+      <slicing>
+        <discriminator value="url"/>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element>
+      <path value="List.code.extension"/>
+      <name value="ListCodeDAR"/>
+      <requirements value="6.  SHALL contain exactly one [1..1] code (CONF:14378). 
+a.  This code SHOULD contain zero or one [0..1] @code (CONF:14697). 
+i.  Should be selected from ICF (codeSystem 
+2.16.840.1.113883.6.254) or SNOMED CT (codeSystem 
+2.16.840.1.113883.6.96) (CONF:14698). 
+An appropriate nullFlavor can be used when the organizer/code or 
+organizer/id is unknown."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/data-absent-reason"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="List.entry"/>
+      <requirements value="8.  SHALL contain at least one [1..*] component (CONF:14373) such that it 
+a.  SHALL contain exactly one [1..1] Cognitive Status Result 
+Observation (templateId:2.16.840.1.113883.10.20.22.4.74) 
+(CONF:14381)."/>
+      <min value="1"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="List.entry.item"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/CCDACognitiveStatusResult"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</Profile>

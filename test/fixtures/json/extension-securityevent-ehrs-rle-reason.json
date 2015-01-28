@@ -1,0 +1,66 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "securityevent-ehrs-rle-reason",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/securityevent-ehrs-rle-reason",
+  "name": "Reason activity is occurring",
+  "publisher": "Health Level Seven, Inc. - EHR WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/special/committees/ehr.html"
+    }
+  ],
+  "description": "The reason that the activity was taking place.",
+  "status": "draft",
+  "date": "2014-12-04",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "resource",
+  "context": [
+    "SecurityEvent.event"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Reason activity is occurring",
+      "formal": "The reason that the activity was taking place.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isSummary": false,
+      "binding": {
+        "name": "EventPurposeOfUse",
+        "isExtensible": true,
+        "conformance": "required",
+        "description": "Indicates the why the event occurred",
+        "referenceReference": {
+          "reference": "http://hl7.org/fhir/v3/vs/PurposeOfUse"
+        }
+      },
+      "mapping": [
+        {
+          "identity": "v2",
+          "map": "N/A"
+        },
+        {
+          "identity": "rim",
+          "map": "Act.reasonCode"
+        }
+      ]
+    }
+  ]
+}

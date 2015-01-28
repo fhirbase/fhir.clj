@@ -1,0 +1,35 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "xds-practiceSettingCode",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/xds-practiceSettingCode",
+  "name": "XDSDocumentEntry.practiceSettingCode",
+  "publisher": "HL7",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://www.hl7.org"
+    }
+  ],
+  "description": "The code specifying the clinical specialty where the act that resulted in the document was performed (e.g., Family Practice, Laboratory, Radiology).",
+  "status": "draft",
+  "date": "2012-06-24",
+  "contextType": "resource",
+  "context": [
+    "DocumentReference"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "XDSDocumentEntry.practiceSettingCode",
+      "formal": "The code specifying the clinical specialty where the act that resulted in the document was performed (e.g., Family Practice, Laboratory, Radiology).",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

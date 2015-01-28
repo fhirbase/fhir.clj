@@ -1,0 +1,75 @@
+{
+  "resourceType": "Encounter",
+  "id": "f203",
+  "identifier": [
+    {
+      "use": "temp",
+      "label": "Roel's encounter on March eleventh 2013",
+      "value": "Encounter_Roel_20130311"
+    }
+  ],
+  "status": "finished",
+  "class": "inpatient",
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "183807002",
+          "display": "Inpatient stay for nine days"
+        }
+      ]
+    }
+  ],
+  "patient": {
+    "reference": "Patient/f201",
+    "display": "Roel"
+  },
+  "participant": [
+    {
+      "individual": {
+        "reference": "Practitioner/f201"
+      }
+    }
+  ],
+  "period": {
+    "start": "2013-03-11",
+    "end": "2013-03-20"
+  },
+  "reason": {
+    "text": "The patient seems to suffer from bilateral pneumonia and renal insufficiency, most likely due to chemotherapy."
+  },
+  "priority": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "394849002",
+        "display": "High priority"
+      }
+    ]
+  },
+  "hospitalization": {
+    "admitSource": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "309902002",
+          "display": "Clinical Oncology Department"
+        }
+      ]
+    },
+    "diet": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "276026009",
+          "display": "Fluid balance regulation"
+        }
+      ]
+    },
+    "reAdmission": false
+  },
+  "serviceProvider": {
+    "reference": "Organization/f201"
+  }
+}

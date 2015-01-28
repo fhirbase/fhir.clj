@@ -1,0 +1,65 @@
+{
+  "resourceType": "ValueSet",
+  "id": "uslab-country-codes",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 6 concepts</p><h2>USLabCountry</h2><p>ISO 3 letter codes</p><p>This value set includes codes defined in other code systems, using the following rules:</p><ul><li>Include these codes as defined in http://www.iso.org/iso/country_codes.htm<table><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td>USA</td><td>United States</td><td/></tr><tr><td>MEX</td><td>Mexico</td><td/></tr><tr><td>CAN</td><td>Canada</td><td/></tr><tr><td>BMU</td><td>Bermuda</td><td/></tr><tr><td>PRI</td><td>Puerto Rico</td><td/></tr><tr><td>GUM</td><td>Guam</td><td/></tr></table></li></ul></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.516"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/uslab-country-codes",
+  "name": "USLabCountry",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "ISO 3 letter codes",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.494+11:00",
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.iso.org/iso/country_codes.htm",
+        "concept": [
+          {
+            "code": "USA",
+            "display": "United States"
+          },
+          {
+            "code": "MEX",
+            "display": "Mexico"
+          },
+          {
+            "code": "CAN",
+            "display": "Canada"
+          },
+          {
+            "code": "BMU",
+            "display": "Bermuda"
+          },
+          {
+            "code": "PRI",
+            "display": "Puerto Rico"
+          },
+          {
+            "code": "GUM",
+            "display": "Guam"
+          }
+        ]
+      }
+    ]
+  }
+}

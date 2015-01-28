@@ -1,0 +1,1123 @@
+{
+  "resourceType": "Profile",
+  "id": "provenance-ehrs-rle-ehrprovenance",
+  "text": {
+    "status": "generated",
+    "div": "<div>to do</div>"
+  },
+  "url": "http://hl7.org/fhir/Profile/provenance-ehrs-rle-ehrprovenance",
+  "name": "EHRS FM Record Lifecycle Event - Provenance",
+  "publisher": "Health Level Seven, Inc. - EHR WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/special/committees/ehr.html"
+    }
+  ],
+  "description": "Defines the elements to be supported within the Provenance resource in order to conform with the Electronic Health Record System Functional Model Record Lifecycle Event standard : EHRS FM Record Lifecycle Event - Provenance",
+  "status": "draft",
+  "date": "2014-01-31",
+  "type": "Provenance",
+  "base": "http://hl7.org/fhir/Profile/Provenance",
+  "snapshot": {
+    "element": [
+      {
+        "path": "Provenance",
+        "name": "EHRProvenance",
+        "short": "Who, What, When for a set of resources",
+        "formal": "Provenance information that describes the activity that led to the creation of a set of resources. This information can be used to help determine their reliability or trace where the information in them came from. The focus of the provenance resource is record keeping, audit and traceability, and not explicit statements of clinical significance.",
+        "comments": "Some parties may be duplicated between the target resource and its provenance.  For instance, the prescriber is usually (but not always) the author of the prescription resource. This resource is defined with close consideration for W3C Provenance.",
+        "synonym": [
+          "History",
+          "Event",
+          "Activity"
+        ],
+        "min": 1,
+        "max": "1",
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "ControlAct[isNormalAct() and subsumes(CACT, classCode) and moodCode=EVN]"
+          },
+          {
+            "identity": "w3c.prov",
+            "map": "Activity"
+          },
+          {
+            "identity": "rim",
+            "map": "ControlAct[isNormalAct() and subsumes(CACT, classCode) and moodCode=EVN]"
+          },
+          {
+            "identity": "w3c.prov",
+            "map": "Activity"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.id",
+        "short": "Logical id of this artefact",
+        "formal": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes.",
+        "comments": "The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.meta",
+        "short": "Metadata about the resource",
+        "formal": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
+        "min": 0,
+        "max": "1",
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.meta.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.meta.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.meta.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.meta.versionId",
+        "short": "Version specific identifier",
+        "formal": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted.",
+        "comments": "The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.meta.lastUpdated",
+        "short": "When the resource version last changed",
+        "formal": "When the resource last changed - e.g. when the version changed.",
+        "comments": "This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "instant"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.meta.profile",
+        "short": "Profiles this resource claims to conform to",
+        "formal": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url.",
+        "comments": "It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.meta.security",
+        "short": "Security Labels applied to this resource",
+        "formal": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
+        "comments": "The security labels can be updated without changing the stated version of the resource.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.meta.tag",
+        "short": "Tags applied",
+        "formal": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
+        "comments": "The tags can be updated without changing the stated version of the resource.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "formal": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
+        "comments": "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.language",
+        "short": "Language of the resource content",
+        "formal": "The base language in which the resource is written.",
+        "comments": "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "Language",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "A human language",
+          "referenceUri": "http://tools.ietf.org/html/bcp47"
+        }
+      },
+      {
+        "path": "Provenance.text",
+        "short": "Text summary of the resource, for human interpretation",
+        "formal": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+        "comments": "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative.",
+        "synonym": [
+          "narrative",
+          "html",
+          "xhtml",
+          "display"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Narrative"
+          }
+        ],
+        "condition": [
+          "1"
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Act.text?"
+          },
+          {
+            "identity": "rim",
+            "map": "Act.text?"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.contained",
+        "short": "Contained, inline Resources",
+        "formal": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+        "comments": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
+        "synonym": [
+          "inline resources",
+          "anonymous resources",
+          "contained resources"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Resource"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.target",
+        "short": "Target Reference(s) (usually version specific)",
+        "formal": "The Reference(s) that were generated by  the activity described in this resource. A provenance can point to more than one target if multiple resources were created/updated by the same activity.",
+        "comments": "Target references are usually version specific, but may not be, if a version has not been assigned or if the provenance information is part of the set of resources being maintained (i.e. a document). When using the RESTful API, the identity of the resource may not be known (especially not the version specific one); the client may either submit the resource first, and then the provenance, or it may submit both using a single transaction. See the notes on transaction for further discussion.",
+        "min": 1,
+        "max": "*",
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./outboundRelationship[isNormalActRelationship() and typeCode=SUBJ]/target\n\nOR\n\n./participation[isNormalParticipation() and typeCode=SBJ]/role\n\nOR\n\n./participation[isNormalParticipation() and typeCode=SBJ]/role[isNormalRole()]/player"
+          },
+          {
+            "identity": "w3c.prov",
+            "map": "Activity.wasGeneratedBy"
+          },
+          {
+            "identity": "rim",
+            "map": "./outboundRelationship[isNormalActRelationship() and typeCode=SUBJ]/target\n\nOR\n\n./participation[isNormalParticipation() and typeCode=SBJ]/role\n\nOR\n\n./participation[isNormalParticipation() and typeCode=SBJ]/role[isNormalRole()]/player"
+          },
+          {
+            "identity": "w3c.prov",
+            "map": "Activity.wasGeneratedBy"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.period",
+        "short": "When the activity occurred",
+        "formal": "The period during which the activity occurred.",
+        "comments": "The period can be a little arbitrary; where possible, the time should correspond to human assessment of the activity time.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./effectiveTime[type=IVL_TS]"
+          },
+          {
+            "identity": "w3c.prov",
+            "map": "Activity.startTime & Activity.endTime"
+          },
+          {
+            "identity": "rim",
+            "map": "./effectiveTime[type=IVL_TS]"
+          },
+          {
+            "identity": "w3c.prov",
+            "map": "Activity.startTime & Activity.endTime"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.recorded",
+        "short": "When the activity was recorded / updated",
+        "formal": "The instant of time at which the activity was recorded.",
+        "comments": "This can be a little different from the time stamp on the resource if there is a delay between recording the event and updating the provenance and target resource.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "unique(./participation[isNormalParticipation() and typeCode=AUT]/time[type=TS])"
+          },
+          {
+            "identity": "rim",
+            "map": "unique(./participation[isNormalParticipation() and typeCode=AUT]/time[type=TS])"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.reason",
+        "short": "Reason the activity is occurring",
+        "formal": "The reason that the activity was taking place.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "EventPurposeOfUse",
+          "isExtensible": true,
+          "conformance": "required",
+          "description": "Indicates the why the event occurred",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/v3/vs/PurposeOfUse"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "unique(./reasonCode)"
+          },
+          {
+            "identity": "rim",
+            "map": "unique(./reasonCode)"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.location",
+        "short": "Where the activity occurred, if relevant",
+        "formal": "Where the activity occurred, if relevant.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "unique(./participation[isNormalParticipation() and typeCode=LOC]/role[isNormalRole() and subsumes(SDLOC, classCode)]/player[isNormalEntity and classCode=\"LOC\" and determinerCode=\"INST\"]"
+          },
+          {
+            "identity": "w3c.prov",
+            "map": "Activity.location"
+          },
+          {
+            "identity": "rim",
+            "map": "unique(./participation[isNormalParticipation() and typeCode=LOC]/role[isNormalRole() and subsumes(SDLOC, classCode)]/player[isNormalEntity and classCode=\"LOC\" and determinerCode=\"INST\"]"
+          },
+          {
+            "identity": "w3c.prov",
+            "map": "Activity.location"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.policy",
+        "short": "Policy or plan the activity was defined by",
+        "formal": "Policy or plan the activity was defined by. Typically, a single activity may have multiple applicable policy documents, such as patient consent, guarantor funding, etc.",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./inboundRelationship[isNormalActRelationship() and typeCode=\"SUBJ\"]/source[isNormalAct and subsumes(POLICY, classCode) and moodCode=EVN]/text[typeCode='ED'/tel"
+          },
+          {
+            "identity": "rim",
+            "map": "./inboundRelationship[isNormalActRelationship() and typeCode=\"SUBJ\"]/source[isNormalAct and subsumes(POLICY, classCode) and moodCode=EVN]/text[typeCode='ED'/tel"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.agent",
+        "short": "Person, organization, records, etc. involved in creating resource",
+        "formal": "An agent takes a role in an activity such that the agent can be assigned some degree of responsibility for the activity taking place. An agent can be a person, a piece of software, an inanimate object, an organization, or other entities that may be ascribed responsibility.",
+        "comments": "Several agents may be associated (i.e. has some responsibility for an activity) with an activity and vice-versa.",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./participation[isNormalParticipation()]\n\nOR\n\n./outboundRelationship[isNormalActRelationship() and typeCode='DRIV']"
+          },
+          {
+            "identity": "rim",
+            "map": "./participation[isNormalParticipation()]\n\nOR\n\n./outboundRelationship[isNormalActRelationship() and typeCode='DRIV']"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.agent.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.agent.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.agent.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.agent.role",
+        "short": "e.g. author | overseer | enterer | attester | source | cc: +",
+        "formal": "The role that the participant played.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "ProvenanceAgentRole",
+          "isExtensible": true,
+          "conformance": "preferred",
+          "description": "The role that a provenance agent played",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/provenance-agent-role"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "attester: .[self::participation]/typeCode='RESP'\nauthor: .[self::participation]/typeCode='AUT'\ncc: .[self::participation]/typeCode='IRCP'\nenterer:  .[self::participation]/typeCode='ENT'\ninformant: .[self::participation]/typeCode='INF'\nperformer: .[self::participation]/typeCode='PRF'\nverifier: .[self::participation]/typeCode='VRF'\nsource: .[self::outboundRelationship]/typeCode=''"
+          },
+          {
+            "identity": "rim",
+            "map": "attester: .[self::participation]/typeCode='RESP'\nauthor: .[self::participation]/typeCode='AUT'\ncc: .[self::participation]/typeCode='IRCP'\nenterer:  .[self::participation]/typeCode='ENT'\ninformant: .[self::participation]/typeCode='INF'\nperformer: .[self::participation]/typeCode='PRF'\nverifier: .[self::participation]/typeCode='VRF'\nsource: .[self::outboundRelationship]/typeCode=''"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.agent.type",
+        "short": "e.g. Resource | Person | Application | Record | Document +",
+        "formal": "The type of the participant.",
+        "comments": "If the type is \"Resource\" then the resource itself was the participant. If the type is a type of resource, then the entity identified by the resource is the participant.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "ProvenanceAgentType",
+          "isExtensible": true,
+          "conformance": "preferred",
+          "description": "The type of a provenance agent",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/provenance-agent-type"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "person: ./role[isNormalRole() and classCode='REL']/player[isNormalEntity and classCode='PER' and determinerCode='INST']\nagent: ./role[isNormalRole() and classCode='ASSIGNED' and player[isNormalEntity and classCode='PSN' and determinerCode='INST']]\norganization: ./role[isNormalRole() and classCode='ASSIGNED' and not(player)]/scoper[isNormalEntity and classCode='ORG' and determinerCode='INST']\n\nsoftware: ./role[isNormalRole() and classCode='ASSIGNED']/scoper[isNormalEntity and classCode='DEV' and determinerCode='INST' and hasDomain(code, 'Software')]\ndocument: ./target[isNormalAct and subsumes('DOC', classCode) and moodCode='EVN']"
+          },
+          {
+            "identity": "rim",
+            "map": "person: ./role[isNormalRole() and classCode='REL']/player[isNormalEntity and classCode='PER' and determinerCode='INST']\nagent: ./role[isNormalRole() and classCode='ASSIGNED' and player[isNormalEntity and classCode='PSN' and determinerCode='INST']]\norganization: ./role[isNormalRole() and classCode='ASSIGNED' and not(player)]/scoper[isNormalEntity and classCode='ORG' and determinerCode='INST']\n\nsoftware: ./role[isNormalRole() and classCode='ASSIGNED']/scoper[isNormalEntity and classCode='DEV' and determinerCode='INST' and hasDomain(code, 'Software')]\ndocument: ./target[isNormalAct and subsumes('DOC', classCode) and moodCode='EVN']"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.agent.reference",
+        "short": "Identity of agent (urn or url)",
+        "formal": "Identity of participant. May be a logical or physical uri and maybe absolute or relative.",
+        "comments": "identity may be a reference to a resource or to something else, depending on the type.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./id"
+          },
+          {
+            "identity": "rim",
+            "map": "./id"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.agent.display",
+        "short": "Human description of participant",
+        "formal": "Human-readable description of the participant.",
+        "min": 0,
+        "max": "1",
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./player/description\n\nOR\n\n./description\n\nOR\n\n./text"
+          },
+          {
+            "identity": "w3c.prov",
+            "map": "Agent.label"
+          },
+          {
+            "identity": "rim",
+            "map": "./player/description\n\nOR\n\n./description\n\nOR\n\n./text"
+          },
+          {
+            "identity": "w3c.prov",
+            "map": "Agent.label"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.entity",
+        "short": "An entity used in this activity",
+        "formal": "An entity used in this activity.",
+        "min": 0,
+        "max": "*",
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./subjectOf"
+          },
+          {
+            "identity": "rim",
+            "map": "./subjectOf"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.entity.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.entity.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.entity.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.entity.role",
+        "short": "derivation | revision | quotation | source",
+        "formal": "How the entity was used during the activity.",
+        "min": 1,
+        "max": "1",
+        "isSummary": false,
+        "binding": {
+          "name": "ProvenanceEntityRole",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "How an entity was used in an activity",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/provenance-entity-role"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./typeCode"
+          },
+          {
+            "identity": "rim",
+            "map": "./typeCode"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.entity.type",
+        "short": "Resource Type, or something else",
+        "formal": "The type of the entity. If the entity is a resource, then this is a resource type.",
+        "comments": "If the type is \"resource\" then the resource itself was the participant. If the type is a type of resource, then the entity identified by the resource is the participant.",
+        "min": 1,
+        "max": "1",
+        "isSummary": false,
+        "binding": {
+          "name": "ProvenanceEntityType",
+          "isExtensible": true,
+          "conformance": "preferred",
+          "description": "The type of an entity used in an activity",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/resource-types"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./target"
+          },
+          {
+            "identity": "w3c.prov",
+            "map": "Entity.type"
+          },
+          {
+            "identity": "rim",
+            "map": "./target"
+          },
+          {
+            "identity": "w3c.prov",
+            "map": "Entity.type"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.entity.reference",
+        "short": "Identity of participant (urn or url)",
+        "formal": "Identity of participant. May be a logical or physical uri and maybe absolute or relative.",
+        "comments": "identity may be a reference to a resource or to something else, depending on the type.",
+        "min": 1,
+        "max": "1",
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./text/reference"
+          },
+          {
+            "identity": "rim",
+            "map": "./text/reference"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.entity.display",
+        "short": "Human description of participant",
+        "formal": "Human-readable description of the entity.",
+        "min": 0,
+        "max": "1",
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./title"
+          },
+          {
+            "identity": "rim",
+            "map": "./title"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.entity.agent",
+        "short": "Entity is attributed to this agent",
+        "formal": "The entity is attributed to an agent to express the agent's responsibility for that entity, possibly along with other agents. This description can be understood as shorthand for saying that the agent was responsible for the activity which generated the entity.",
+        "min": 0,
+        "max": "1",
+        "nameReference": "agent",
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./author/role"
+          },
+          {
+            "identity": "rim",
+            "map": "./author/role"
+          }
+        ]
+      },
+      {
+        "path": "Provenance.integritySignature",
+        "short": "Base64 signature (DigSig) - integrity check",
+        "formal": "A digital signature on the target Reference(s). The signature should match a Provenance.agent.reference in the provenance resource. The signature is only added to support checking cryptographic integrity of the resource, and not to represent workflow and clinical aspects of the signing process, or to support non-repudiation.",
+        "comments": "Whether the content is XML or JSON, the representation is as a base64 of the XML signature of the resource.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./signatureText"
+          },
+          {
+            "identity": "rim",
+            "map": "./signatureText"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "path": "Provenance",
+        "name": "EHRProvenance",
+        "min": 1,
+        "max": "1",
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.target",
+        "min": 1,
+        "max": "*",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.period",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.recorded",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.reason",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "EventPurposeOfUse",
+          "isExtensible": true,
+          "conformance": "required",
+          "description": "Indicates the why the event occurred",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/v3/vs/PurposeOfUse"
+          }
+        }
+      },
+      {
+        "path": "Provenance.location",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.policy",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.agent",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.agent.role",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.agent.type",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.agent.reference",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.agent.display",
+        "min": 0,
+        "max": "1",
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.entity",
+        "min": 0,
+        "max": "*",
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.entity.role",
+        "min": 1,
+        "max": "1",
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.entity.type",
+        "min": 1,
+        "max": "1",
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.entity.reference",
+        "min": 1,
+        "max": "1",
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.entity.display",
+        "min": 0,
+        "max": "1",
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.entity.agent",
+        "min": 0,
+        "max": "1",
+        "isSummary": false
+      },
+      {
+        "path": "Provenance.integritySignature",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      }
+    ]
+  }
+}

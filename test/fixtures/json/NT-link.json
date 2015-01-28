@@ -1,0 +1,55 @@
+{
+  "resourceType": "ValueSet",
+  "id": "NT-link",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 3 concepts</p><h2>NoteType</h2><p>The presentation types of notes</p><p>This value set defines its own terms in the system http://hl7.org/fhir/NT-link</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>display<a name=\"display\"> </a></td><td>Display the note.</td></tr><tr><td>print<a name=\"print\"> </a></td><td>Print the note on the form.</td></tr><tr><td>printoper<a name=\"printoper\"> </a></td><td>Print the note for the operator.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.472"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/NT-link",
+  "name": "NoteType",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "The presentation types of notes",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.491+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.472"
+      }
+    ],
+    "system": "http://hl7.org/fhir/NT-link",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "display",
+        "definition": "Display the note."
+      },
+      {
+        "code": "print",
+        "definition": "Print the note on the form."
+      },
+      {
+        "code": "printoper",
+        "definition": "Print the note for the operator."
+      }
+    ]
+  }
+}

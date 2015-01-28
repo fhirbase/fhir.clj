@@ -1,0 +1,51 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "questionnaire-minOccurs",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/questionnaire-minOccurs",
+  "name": "Minimum repetitions",
+  "publisher": "HL7",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://www.hl7.org"
+    }
+  ],
+  "description": "The minimum number of times the group must appear or the minimum number of answers for a question - when greater than 1.",
+  "status": "draft",
+  "date": "2013-07-04",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "resource",
+  "context": [
+    "Questionnaire.group",
+    "Questionnaire.group.group",
+    "Questionnaire.group.question"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Minimum repetitions",
+      "formal": "The minimum number of times the group must appear or the minimum number of answers for a question - when greater than 1.",
+      "comments": "Default assumption for \"required\" elements is minOccurs=1.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "integer"
+        }
+      ],
+      "isSummary": false,
+      "mapping": [
+        {
+          "identity": "rim",
+          "map": "N/A - MIF rather than RIM level"
+        }
+      ]
+    }
+  ]
+}

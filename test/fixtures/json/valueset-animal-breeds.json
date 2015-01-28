@@ -1,0 +1,78 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-animal-breeds",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 4 concepts</p><h2>AnimalBreeds</h2><p>This example value set defines a set of codes that can be used to indicate breeds of species.</p><p>This value set defines its own terms in the system http://hl7.org/fhir/animal-breed</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>gsd<a name=\"gsd\"> </a></td><td>German Shepherd Dog</td><td/></tr><tr><td>irt<a name=\"irt\"> </a></td><td>Irish Terrier</td><td/></tr><tr><td>tibmas<a name=\"tibmas\"> </a></td><td>Tibetan Mastiff</td><td/></tr><tr><td>gret<a name=\"gret\"> </a></td><td>Golden Retriever</td><td/></tr></table><p><b>Additional Language Displays</b></p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>nl</b></td></tr><tr><td>gsd</td><td>Duitse herdershond</td></tr><tr><td>irt</td><td>Ierse terrier</td></tr><tr><td>tibmas</td><td>Tibetaanse mastiff</td></tr><tr><td>gret</td><td>Golden Retriever</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.134"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/animal-breeds",
+  "name": "AnimalBreeds",
+  "publisher": "FHIR Project team",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "This example value set defines a set of codes that can be used to indicate breeds of species.",
+  "status": "draft",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:null"
+      }
+    ],
+    "system": "http://hl7.org/fhir/animal-breed",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "gsd",
+        "display": "German Shepherd Dog",
+        "designation": [
+          {
+            "language": "nl",
+            "value": "Duitse herdershond"
+          }
+        ]
+      },
+      {
+        "code": "irt",
+        "display": "Irish Terrier",
+        "designation": [
+          {
+            "language": "nl",
+            "value": "Ierse terrier"
+          }
+        ]
+      },
+      {
+        "code": "tibmas",
+        "display": "Tibetan Mastiff",
+        "designation": [
+          {
+            "language": "nl",
+            "value": "Tibetaanse mastiff"
+          }
+        ]
+      },
+      {
+        "code": "gret",
+        "display": "Golden Retriever",
+        "designation": [
+          {
+            "language": "nl",
+            "value": "Golden Retriever"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -4,6 +4,7 @@
             [fhir.profiles :as fp]
             [clojure.edn :as ce]
             [clojure.stacktrace :as cs]
+            [clojure.string :as cstr]
             [cheshire.core :as json]
             [clojure.zip :as cz]))
 
@@ -44,16 +45,19 @@
                   acc (xml-element-tag k m v)))) [])
     (filter identity)))
 
-
 (defn parse-xml [s]
   (cx/parse (stream s)))
 
+(defn normalize-string [s]
+  (cstr/replace s #"\s" " "))
 
 (defn coerce-primitive [-meta value]
   (if-let [tp (get-in -meta [:$attrs :type 0])]
     (if (string? value)
       (cond
         (= tp :boolean) (ce/read-string value)
+        (= tp :integer) (int (ce/read-string value))
+        (= tp :string) (normalize-string value)
         :else value)
       value)
     value))
@@ -63,6 +67,7 @@
     (map? res) (reduce (fn [acc [k v]]
                          (let [-meta (fp/find-meta (conj pth k))
                                mult (= "*" (get-in -meta [:$attrs :max]))]
+                           #_(println pth k mult)
                            (assoc acc k
                                   (if (and mult (not (vector? v)))
                                     [(coerce-resource v (conj pth k))]
@@ -74,23 +79,28 @@
 (defn from-xml-recur [content]
   (reduce
     (fn [acc node]
-      (let [attr (:tag node)
-            prev-value (get acc attr)
-            value (if (:content node)
-                    (from-xml-recur (:content node))
-                    (get-in node [:attrs :value]))]
-        (update-in acc [attr]
-                   (fn [v]
-                     (cond
-                       (nil? v) value
-                       (vector? v) (conj v value)
-                       :else [v value])))))
+      ;; fix text html
+      (if (= (:tag node) :div)
+        (assoc acc :div
+          (with-out-str (cx/emit-element (assoc-in node [:attrs :xmlns] "http://www.w3.org/1999/xhtml"))))
+        (let [attr (:tag node)
+              prev-value (get acc attr)
+              value (if (:content node)
+                      (from-xml-recur (:content node))
+                      (get-in node [:attrs :value]))]
+          (update-in acc [attr]
+                     (fn [v]
+                       (cond
+                         (nil? v) value
+                         (vector? v) (conj v value)
+                         :else [v value]))))))
     {} content))
 
 
 ;;; PUBLIC API
 
-(defn to-json [res] res)
+(defn to-json [res]
+  (json/generate-string res))
 
 (defn from-json [s]
   (let [res (json/parse-string s keyword)

@@ -1,0 +1,36 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "openEHR-exposureDate",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/openEHR-exposureDate",
+  "name": "Date(/time) of first exposure to Substance",
+  "publisher": "Health Level Seven, Inc / openEHR project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org"
+    }
+  ],
+  "description": "Record of the date and/or time of the first exposure to the Substance for this Reaction Event.",
+  "status": "draft",
+  "date": "2014-10-09",
+  "contextType": "resource",
+  "context": [
+    "AllergyIntolerance.event"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Date(/time) of first exposure to Substance",
+      "formal": "Record of the date and/or time of the first exposure to the Substance for this Reaction Event.",
+      "comments": "Exposure can be more complicated by more than one exposure events leading to a reaction. Further details about the nature of the exposure can be provided in additional extensions, or as text in the Exposure Description extension.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

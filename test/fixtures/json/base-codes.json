@@ -1,0 +1,59 @@
+{
+  "resourceType": "ValueSet",
+  "id": "base-codes",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 4 concepts</p><h2>VisionBase</h2><p>A coded concept listing the base codes.</p><p>This value set defines its own terms in the system http://hl7.org/fhir/base-codes</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>up<a name=\"up\"> </a></td><td>top.</td></tr><tr><td>down<a name=\"down\"> </a></td><td>bottom.</td></tr><tr><td>in<a name=\"in\"> </a></td><td>inner edge.</td></tr><tr><td>out<a name=\"out\"> </a></td><td>outer edge.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.558"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/base-codes",
+  "name": "VisionBase",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "A coded concept listing the base codes.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.496+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.558"
+      }
+    ],
+    "system": "http://hl7.org/fhir/base-codes",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "up",
+        "definition": "top."
+      },
+      {
+        "code": "down",
+        "definition": "bottom."
+      },
+      {
+        "code": "in",
+        "definition": "inner edge."
+      },
+      {
+        "code": "out",
+        "definition": "outer edge."
+      }
+    ]
+  }
+}

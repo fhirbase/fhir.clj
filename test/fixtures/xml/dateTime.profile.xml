@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Profile xmlns="http://hl7.org/fhir">
+  <id value="dateTime"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">to do</div>
+  </text>
+  <url value="http://hl7.org/fhir/Profile/dateTime"/>
+  <name value="dateTime"/>
+  <publisher value="HL7 FHIR Standard"/>
+  <telecom>
+    <system value="url"/>
+    <value value="http://hl7.org/fhir"/>
+  </telecom>
+  <description value="Base Profile for dateTime Resource: A date, date-time or partial date (e.g. just year or year + month).  If hours and minutes are specified, a time zone SHALL be populated. The format is a union of the schema types gYear, gYearMonth, date and dateTime. Seconds may be provided but may also be ignored.  Dates SHALL be valid dates."/>
+  <status value="draft"/>
+  <date value="2014-12-12T13:17:44.755+11:00"/>
+  <type value="dateTime"/>
+  <base value="http://hl7.org/fhir/Profile/Element"/>
+  <snapshot>
+    <element>
+      <path value="dateTime"/>
+      <short value="Primitive Type dateTime"/>
+      <formal value="A date, date-time or partial date (e.g. just year or year + month).  If hours and minutes are specified, a time zone SHALL be populated. The format is a union of the schema types gYear, gYearMonth, date and dateTime. Seconds may be provided but may also be ignored.  Dates SHALL be valid dates."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="dateTime.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="value"/>
+      <representation value="xmlAttr"/>
+      <short value="Primitive value for dateTime"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="xsd:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime"/>
+      </type>
+    </element>
+  </snapshot>
+  <differential>
+    <element>
+      <path value="dateTime"/>
+      <short value="Primitive Type dateTime"/>
+      <formal value="A date, date-time or partial date (e.g. just year or year + month).  If hours and minutes are specified, a time zone SHALL be populated. The format is a union of the schema types gYear, gYearMonth, date and dateTime. Seconds may be provided but may also be ignored.  Dates SHALL be valid dates."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="value"/>
+      <representation value="xmlAttr"/>
+      <short value="Primitive value for dateTime"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="xsd:xs:gYear, xs:gYearMonth, xs:date, xs:dateTime"/>
+      </type>
+    </element>
+  </differential>
+</Profile>

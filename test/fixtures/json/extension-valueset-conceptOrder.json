@@ -1,0 +1,31 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "valueset-conceptOrder",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/valueset-conceptOrder",
+  "name": "Appearance order for user selection",
+  "publisher": "HL7",
+  "description": "Identifies the relative order in which concepts within the value set should be presented to a user.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "contextType": "resource",
+  "context": [
+    "ValueSet.compose.include.concept",
+    "ValueSet.define.concept",
+    "ValueSet.expansion.contains"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Appearance order for user selection",
+      "formal": "Identifies the relative order in which concepts within the value set should be presented to a user.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "integer"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

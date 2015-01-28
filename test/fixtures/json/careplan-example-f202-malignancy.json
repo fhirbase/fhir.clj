@@ -1,0 +1,132 @@
+{
+  "resourceType": "CarePlan",
+  "id": "f202",
+  "contained": [
+    {
+      "resourceType": "Medication",
+      "id": "tpf",
+      "contained": [
+        {
+          "resourceType": "Medication",
+          "id": "doce",
+          "name": "Docetaxel",
+          "code": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "108806006"
+              }
+            ]
+          }
+        },
+        {
+          "resourceType": "Medication",
+          "id": "cisp",
+          "name": "Cisplatin",
+          "code": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "57066004"
+              }
+            ]
+          }
+        },
+        {
+          "resourceType": "Medication",
+          "id": "fluo",
+          "name": "5-Fluorouracil",
+          "code": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "3127006"
+              }
+            ]
+          }
+        }
+      ],
+      "name": "TPF",
+      "product": {
+        "ingredient": [
+          {
+            "item": {
+              "reference": "#doce"
+            }
+          },
+          {
+            "item": {
+              "reference": "#cisp"
+            }
+          },
+          {
+            "item": {
+              "reference": "#fluo"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "patient": {
+    "reference": "Patient/f201",
+    "display": "Roel"
+  },
+  "status": "active",
+  "concern": [
+    {
+      "reference": "Condition/f202",
+      "display": "Roel's head-neck tumor"
+    }
+  ],
+  "participant": [
+    {
+      "role": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "28995006",
+            "display": "Treated with"
+          }
+        ]
+      },
+      "member": {
+        "reference": "Practitioner/f201",
+        "display": "Dokter Bronsig"
+      }
+    }
+  ],
+  "goal": [
+    {
+      "description": "Elimination of the spenoid bone tumor",
+      "status": "in progress"
+    }
+  ],
+  "activity": [
+    {
+      "status": "in progress",
+      "prohibited": false,
+      "actionResulting": [
+        {
+          "reference": "Procedure/f201",
+          "display": "Roel's Chemotherapy"
+        }
+      ],
+      "simple": {
+        "category": "procedure",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "367336001",
+              "display": "Chemotherapy"
+            }
+          ]
+        },
+        "product": {
+          "reference": "#tpf"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,3384 @@
+{
+  "resourceType": "Profile",
+  "id": "DataElement",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><table style=\"border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;\" cellpadding=\"0\" border=\"0\" cellspacing=\"0\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><th style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Name</th><th style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Flags</th><th style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Card.</th><th style=\"width: 100px\" class=\"heirarchy\">Type</th><th style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Description &amp; Constraints<span style=\"float: right\"><a title=\"Legend for this format\" href=\"formats.html#table\"><img alt=\"doco\" src=\"help16.png\"/></a></span></th></tr><tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img title=\"Resource\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJBSURBVDjLhdKxa5NBGMfx713yvkmbJnaoFiSF4mJTh06Kg4OgiyCCRXCof4YIdXdxFhQVHPo3OFSoUx0FySQttaVKYq2NbdO8ed/L3fM4JG3tYPvAcfBw9+HHPWdUlf/V0tLSqKo+EpEHInJFRIohhDUR+RBCeDM7O7ua55QSkRfVanVufHyckZERrLV0Op2Zra2tmXq9fg+YsmcAdyYnJykUCke9OI6ZmJgghHAZ4KwE3ntPs9mkVCohIjQaDWq1GiEEAM5KoHEcY62lVCrRarUoFotUKpUjIL/y/uqXYmV62ph/LSVrr30P4bEFcM4B0Ov1jk547/uAUTs1ceNdZIwB7V/GGHz6+9LXxY96eDiEgHMOY8xJAK8p4grZz5cElwNbwZgyxYu3EFM01lriOCZJEqIoIooiALIsGwA9Y1UcwcWoKNLdpLu9zvbnBWqNBhuvn5EDUmB0EH/1E2TZw5U+YLQovkun+Ytsaw1xCbnCOap334LC7s4Oe/ttvA+ICLmhMXRxDufczUECS37oAuevPwUEVFFp4/eXkXSdYc2IopSepnjtUh5/wg9gfn6+OQBUNaRIUkfDHhraSLoBKqikIF3yHJDLHaAkFOLciVHnyVAVj/S2Ub/XRyQD9aAZKgkaOohvo6ENgykcA07VEFDfQv1uf4W9Y8y30bCPhg4qKZJtMnjTPqBO/vhkZ7h3EJeRslWNQMqgY2jIAIfa/m5sIKSpqpPsGEiz599e3b+GchtD+bSvjQJm2SG6cNj6C+QmaxAek5tyAAAAAElFTkSuQmCC\"/> <span title=\"The formal description of a single piece of information that can be gathered and reported.\">DataElement</span><a name=\"DataElement\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element has or is affected by some invariants\">I</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"domainresource.html\">DomainResource</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Resource data element<br/><span title=\"1\" style=\"font-style: italic\">Can have a maximum of one definitional binding or primary concept</span></td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7\"/> <span title=\"The identifier that is used to identify this data element when it is referenced in a Profile, Questionnaire or an instance.\">identifier</span><a name=\"DataElement.identifier\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Logical id to reference this data element</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"The identifier that is used to identify this version of the data element when it is referenced in a Profile, Questionnaire or instance. This is an arbitrary value managed by the definition author manually.\">version</span><a name=\"DataElement.version\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Logical id for this version of the data element</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"Details of the individual or organization who accepts responsibility for publishing the data element.\">publisher</span><a name=\"DataElement.publisher\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Name of the publisher (Organization or individual)</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7\"/> <span title=\"Contact details to assist a user in finding and communicating with the publisher.\">telecom</span><a name=\"DataElement.telecom\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#ContactPoint\">ContactPoint</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Contact information of the publisher</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"The status of the data element.\">status</span><a name=\"DataElement.status\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is a modifier element\">M </span><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">draft | active | retired<br/><a title=\"The lifecycle status of a Resource data element\" href=\"resource-observation-def-status.html\">ResourceDataElementStatus</a> (<a title=\"One of the the defined codes must be used\" href=\"terminologies.html#code\">Required</a>)</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"The date that the status for this business version of the data element became effective.  (I.e. Date the draft was created, date element became active or date element became retired).\">date</span><a name=\"DataElement.date\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#dateTime\">dateTime</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Date for this version of the data element</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"The term used by humans to refer to the data element.  Should ideally be unique within the context in which the data element is expected to be used.\">name</span><a name=\"DataElement.name\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Descriptive label for this element definition</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7\"/> <span title=\"A set of terms from external terminologies that may be used to assist with indexing and searching of data element definitions.\">category</span><a name=\"DataElement.category\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Assist with indexing and finding</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"Identifies how precise the data element is in its definition.\">granularity</span><a name=\"DataElement.granularity\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">comparable | fully specified | equivalent | convertable | scaleable | flexible<br/><a title=\"Indicates the degree of precision of the data element definition\" href=\"dataelement-granularity.html\">DataElementGranularity</a> (<a title=\"One of the the defined codes must be used\" href=\"terminologies.html#code\">Required</a>)</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7\"/> <span title=\"A code that provides the meaning for a data element according to a particular terminology.\">code</span><a name=\"DataElement.code\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#Coding\">Coding</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Identifying concept</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"The default/suggested phrasing to use when prompting a human to capture the data element in question form (e.g. In a survey).\">question</span><a name=\"DataElement.question\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Prompt for element phrased as question</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"The text to display beside the element indicating its meaning or to use to prompt for the element in a user display or form.\">label</span><a name=\"DataElement.label\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element is included in summaries\">Σ</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Name for element to display with or prompt for element</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"Provides a complete explanation of the meaning of the data element for human readability.\">definition</span><a name=\"DataElement.definition\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Definition/description as narrative text</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"Comments about the use of the element, including notes about how to use the data properly, exceptions to proper use, etc.\">comments</span><a name=\"DataElement.comments\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Comments about the use of this element</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"Explains why this element is needed and why it's been constrained as it has.\">requirements</span><a name=\"DataElement.requirements\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Why is this needed?</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"Identifies additional names by which this element might also be known.\">synonym</span><a name=\"DataElement.synonym\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Other names</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"The FHIR data type that is the type for data that corresponds to this data element.\">type</span><a name=\"DataElement.type\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Name of Data type<br/><a title=\"The type of an element - one of the FHIR data types\" href=\"data-types.html\">DataType</a> (<a title=\"One of the the defined codes must be used\" href=\"terminologies.html#code\">Required</a>)</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7\"/> <span title=\"A sample value for this element demonstrating the type of information that would typically be captured.\">example[x]</span><a name=\"DataElement.example_x_\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#open\">*</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Example value: [as defined for type]</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"Indicates the shortest length that SHALL be supported by conformant instances without truncation.\">maxLength</span><a name=\"DataElement.maxLength\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#integer\">integer</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Length for strings</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Choice of Types\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAMQfAGm6/idTd4yTmF+v8Xa37KvW+lyh3KHJ62aq41ee2bXZ98nm/2mt5W2Ck5XN/C1chEZieho8WXXA/2Gn4P39/W+y6V+l3qjP8Njt/lx2izxPYGyv51Oa1EJWZ////////yH5BAEAAB8ALAAAAAAQABAAAAWH4Cd+Xml6Y0pCQts0EKp6GbYshaM/skhjhCChUmFIeL4OsHIxXRAISQTl6SgIG8+FgfBMoh2qtbLZQr0TQJhk3TC4pYPBApiyFVDEwSOf18UFXxMWBoUJBn9sDgmDewcJCRyJJBoEkRyYmAABPZQEAAOhA5seFDMaDw8BAQ9TpiokJyWwtLUhADs=\"/> <span title=\"Identifies the units of measure in which the data element should be captured or expressed.\">units[x]</span><a name=\"DataElement.units_x_\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Units to use for measured value<br/><a title=\"Type of measurement system used to express a value\" href=\"valueset-units.html\">Units</a> (<a title=\"If one of the defined codes is appropriate, it must be used, or some other code may be used\" href=\"terminologies.html#incomplete\">Incomplete</a>)</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4/x0ISQIM/0kGANNnY41GtlCWAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII=\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7\"/> <span title=\"A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.\">unitsCodeableConcept</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII=\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII=\"/><img title=\"Reference to another Resource\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC\"/> unitsReference</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"valueset.html\">ValueSet</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Element\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAMQfAOvGUf7ztuvPMf/78/fkl/Pbg+u8Rvjqteu2Pf3zxPz36Pz0z+vTmPzurPvuw/npofbjquvNefHVduuyN+uuMu3Oafbgjfnqvf/3zv/3xevPi+vRjP/20/bmsP///////yH5BAEAAB8ALAAAAAAQABAAAAV24CeOZGmepqeqqOgxjBZFa+19r4ftWQUAgqDgltthMshMIJAZ4jYDHsBARSAmFOJvq+g6HIdEFgcYmBWNxoNAsDjGHgBnmV5bCoUDHLBIq9sFEhIdcAYJdYASFRUQhQkLCwkOFwcdEBAXhVabE52ecDahKy0oIQA7\"/> <span title=\"Binds to a value set if this element is coded (code, Coding, CodeableConcept).\">binding</span><a name=\"DataElement.binding\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element has or is affected by some invariants\">I</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"element.html\">Element</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">ValueSet details if this is coded<br/><span title=\"3\" style=\"font-style: italic\">provide either a valueSet or a description (or both)</span><br/><span title=\"14\" style=\"font-style: italic\">Example value sets are always extensible</span></td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4/x0ISQIM/0kGANNnY41GtlCWAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII=\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"If true, then conformant systems may use additional codes or (where the data type permits) text alone to convey concepts not covered by the set of codes identified in the binding.  If false, then conformant systems are constrained to the provided codes alone.\">isExtensible</span><a name=\"DataElement.binding.isExtensible\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element has or is affected by some invariants\">I</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#boolean\">boolean</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Can additional codes be used?</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4/x0ISQIM/0kGANNnY41GtlCWAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII=\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"Indicates the degree of conformance expectations associated with this binding.\">conformance</span><a name=\"DataElement.binding.conformance\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element has or is affected by some invariants\">I</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">required | preferred | example<br/><a title=\"Binding conformance for applications\" href=\"binding-conformance.html\">BindingConformance</a> (<a title=\"One of the the defined codes must be used\" href=\"terminologies.html#code\">Required</a>)</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4/x0ISQIM/0kGANNnY41GtlCWAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII=\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"Describes the intended use of this particular set of codes.\">description</span><a name=\"DataElement.binding.description\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element has or is affected by some invariants\">I</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Human explanation of the value set</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII=\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII=\"/><img title=\"Reference to another Resource\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC\"/> <span title=\"Points to the value set that identifies the set of codes to be used.\">valueSet</span><a name=\"DataElement.binding.valueSet\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element has or is affected by some invariants\">I</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"valueset.html\">ValueSet</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Source of value set</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAD0lEQVR42mP4TzJgIF0LANmXY523xFiMAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII=\"/><img title=\"Element\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAMQfAOvGUf7ztuvPMf/78/fkl/Pbg+u8Rvjqteu2Pf3zxPz36Pz0z+vTmPzurPvuw/npofbjquvNefHVduuyN+uuMu3Oafbgjfnqvf/3zv/3xevPi+vRjP/20/bmsP///////yH5BAEAAB8ALAAAAAAQABAAAAV24CeOZGmepqeqqOgxjBZFa+19r4ftWQUAgqDgltthMshMIJAZ4jYDHsBARSAmFOJvq+g6HIdEFgcYmBWNxoNAsDjGHgBnmV5bCoUDHLBIq9sFEhIdcAYJdYASFRUQhQkLCwkOFwcdEBAXhVabE52ecDahKy0oIQA7\"/> <span title=\"Identifies a concept from an external specification that roughly corresponds to this element.\">mapping</span><a name=\"DataElement.mapping\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element has or is affected by some invariants\">I</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"element.html\">Element</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Map element to another set of definitions<br/><span title=\"26\" style=\"font-style: italic\">Must have at a name or a uri (or both)</span></td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAFElEQVR42mP4////9/8kAYb/JAMA1odjlXxALpEAAAAASUVORK5CYII=)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg==\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"A URI that identifies the specification that this mapping is expressed to.\">uri</span><a name=\"DataElement.mapping.uri\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element has or is affected by some invariants\">I</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#uri\">uri</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Identifies what this mapping refers to</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAFElEQVR42mP4////9/8kAYb/JAMA1odjlXxALpEAAAAASUVORK5CYII=)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg==\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"If true, indicates that the official meaning of the data element is exactly equivalent to the mapped element.\">definitional</span><a name=\"DataElement.mapping.definitional\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#boolean\">boolean</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">True if mapping defines element</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAFElEQVR42mP4////9/8kAYb/JAMA1odjlXxALpEAAAAASUVORK5CYII=)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg==\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"A name for the specification that is being mapped to.\">name</span><a name=\"DataElement.mapping.name\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><span title=\"This element has or is affected by some invariants\">I</span></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Names what this mapping refers to</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAFElEQVR42mP4////9/8kAYb/JAMA1odjlXxALpEAAAAASUVORK5CYII=)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg==\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"Comments about this mapping, including version notes, issues, scope limitations, and other important notes for usage.\">comments</span><a name=\"DataElement.mapping.comments\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Versions, Issues, Scope limitations etc</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAD0lEQVR42mP4TzJgIF0LANmXY523xFiMAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg==\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII=\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"Expresses what part of the target specification corresponds to this element.\">map</span><a name=\"DataElement.mapping.map\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Details of the mapping</td></tr>\r\n</table></div>"
+  },
+  "url": "http://hl7.org/fhir/Profile/DataElement",
+  "name": "DataElement",
+  "publisher": "HL7 FHIR Project (FHIR Management Group)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "url",
+      "value": "http://www.hl7.org/Special/committees/fhirmg/index.cfm"
+    }
+  ],
+  "description": "Base Profile for DataElement Resource",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "mapping": [
+    {
+      "identity": "dex",
+      "uri": "http://wiki.ihe.net/index.php?title=Data_Element_Exchange",
+      "name": "IHE Data Element Exchange (DEX)"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    },
+    {
+      "identity": "iso11179",
+      "uri": "http://metadata-standards.org/11179/",
+      "name": "ISO 11179"
+    },
+    {
+      "identity": "loincstruc",
+      "uri": "http://loinc.org/downloads",
+      "name": "LOINC Internal structure"
+    }
+  ],
+  "type": "DataElement",
+  "snapshot": {
+    "element": [
+      {
+        "path": "DataElement",
+        "short": "Resource data element",
+        "formal": "The formal description of a single piece of information that can be gathered and reported.",
+        "comments": "Often called a clinical template.",
+        "synonym": [
+          "Master Observation",
+          "Data Element",
+          "CDE"
+        ],
+        "min": 1,
+        "max": "1",
+        "constraint": [
+          {
+            "key": "1",
+            "name": "Only one definitional",
+            "severity": "error",
+            "human": "Can have a maximum of one definitional binding or primary concept",
+            "xpath": "count(f:concept[f:primary[@value='true']|f:mapping/f:definitional[@value='true']])<=1"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "RetrieveMetadata response"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1"
+          },
+          {
+            "identity": "rim",
+            "map": "Observation[classCode=OBS, moodCode=DEFN]"
+          },
+          {
+            "identity": "iso11179",
+            "map": "Data_Element"
+          },
+          {
+            "identity": "dex",
+            "map": "RetrieveMetadata response"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1"
+          },
+          {
+            "identity": "rim",
+            "map": "Observation[classCode=OBS, moodCode=DEFN]"
+          },
+          {
+            "identity": "iso11179",
+            "map": "Data_Element"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.id",
+        "short": "Logical id of this artefact",
+        "formal": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes.",
+        "comments": "The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "DataElement.meta",
+        "short": "Metadata about the resource",
+        "formal": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
+        "min": 0,
+        "max": "1",
+        "isSummary": false
+      },
+      {
+        "path": "DataElement.meta.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.meta.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.meta.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.meta.versionId",
+        "short": "Version specific identifier",
+        "formal": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted.",
+        "comments": "The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "DataElement.meta.lastUpdated",
+        "short": "When the resource version last changed",
+        "formal": "When the resource last changed - e.g. when the version changed.",
+        "comments": "This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "instant"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "DataElement.meta.profile",
+        "short": "Profiles this resource claims to conform to",
+        "formal": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url.",
+        "comments": "It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "DataElement.meta.security",
+        "short": "Security Labels applied to this resource",
+        "formal": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
+        "comments": "The security labels can be updated without changing the stated version of the resource.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "DataElement.meta.tag",
+        "short": "Tags applied",
+        "formal": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
+        "comments": "The tags can be updated without changing the stated version of the resource.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "DataElement.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "formal": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
+        "comments": "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": false
+      },
+      {
+        "path": "DataElement.language",
+        "short": "Language of the resource content",
+        "formal": "The base language in which the resource is written.",
+        "comments": "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "Language",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "A human language",
+          "referenceUri": "http://tools.ietf.org/html/bcp47"
+        }
+      },
+      {
+        "path": "DataElement.text",
+        "short": "Text summary of the resource, for human interpretation",
+        "formal": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+        "comments": "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative.",
+        "synonym": [
+          "narrative",
+          "html",
+          "xhtml",
+          "display"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Narrative"
+          }
+        ],
+        "condition": [
+          "1"
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Act.text?"
+          },
+          {
+            "identity": "rim",
+            "map": "Act.text?"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.contained",
+        "short": "Contained, inline Resources",
+        "formal": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+        "comments": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
+        "synonym": [
+          "inline resources",
+          "anonymous resources",
+          "contained resources"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Resource"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.identifier",
+        "short": "Logical id to reference this data element",
+        "formal": "The identifier that is used to identify this data element when it is referenced in a Profile, Questionnaire or an instance.",
+        "comments": "N/A.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "id"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.2"
+          },
+          {
+            "identity": "rim",
+            "map": "./id[use=BUS]"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "LOINC_NUM (the code is the identifier)"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Identified_Item).identifier\n\nAs assigned by registering authority"
+          },
+          {
+            "identity": "dex",
+            "map": "id"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.2"
+          },
+          {
+            "identity": "rim",
+            "map": "./id[use=BUS]"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "LOINC_NUM (the code is the identifier)"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Identified_Item).identifier\n\nAs assigned by registering authority"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.version",
+        "short": "Logical id for this version of the data element",
+        "formal": "The identifier that is used to identify this version of the data element when it is referenced in a Profile, Questionnaire or instance. This is an arbitrary value managed by the definition author manually.",
+        "comments": "N/A.",
+        "requirements": "There may be multiple resource versions of the data element that have this same identifier. The resource version id will change for technical reasons, whereas the stated version number needs to be under the author's control.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "version"
+          },
+          {
+            "identity": "v2",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "./id[use=VER]"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "N/A"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Identified_Item).identifier.version"
+          },
+          {
+            "identity": "dex",
+            "map": "version"
+          },
+          {
+            "identity": "v2",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "./id[use=VER]"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "N/A"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Identified_Item).identifier.version"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.publisher",
+        "short": "Name of the publisher (Organization or individual)",
+        "formal": "Details of the individual or organization who accepts responsibility for publishing the data element.",
+        "comments": "Usually an organization, but may be an individual. This item SHOULD be populated unless the information is available from context.",
+        "requirements": "Helps establish the \"authority/credibility\" of the data element.  May also allow for contact.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "registrationAuthority"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.16"
+          },
+          {
+            "identity": "rim",
+            "map": "./participation[typeCode=AUT]/role[classCode=ASSIGN]/scoper[classCode=ORG,determinerCode=INSTANCE]/name"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "Fixed to Regenstrief or SOURCE"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Administered_Item).stewardship_record.organization.name"
+          },
+          {
+            "identity": "dex",
+            "map": "registrationAuthority"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.16"
+          },
+          {
+            "identity": "rim",
+            "map": "./participation[typeCode=AUT]/role[classCode=ASSIGN]/scoper[classCode=ORG,determinerCode=INSTANCE]/name"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "Fixed to Regenstrief or SOURCE"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Administered_Item).stewardship_record.organization.name"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.telecom",
+        "short": "Contact information of the publisher",
+        "formal": "Contact details to assist a user in finding and communicating with the publisher.",
+        "comments": "May be a web site, an email address, a telephone number (tel:), etc.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ContactPoint"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OM1.17"
+          },
+          {
+            "identity": "rim",
+            "map": "./participation[typeCode=AUT]/role[classCode=ASSIGN]/scoper[classCode=ORG,determinerCode=INSTANCE]/telecom"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "N/A"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Administered_Item).stewardship_record.organization.[email_address, phone_number, uri]"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.17"
+          },
+          {
+            "identity": "rim",
+            "map": "./participation[typeCode=AUT]/role[classCode=ASSIGN]/scoper[classCode=ORG,determinerCode=INSTANCE]/telecom"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "N/A"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Administered_Item).stewardship_record.organization.[email_address, phone_number, uri]"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.status",
+        "short": "draft | active | retired",
+        "formal": "The status of the data element.",
+        "requirements": "Allows filtering of data elements that are appropriate for use vs. not.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "binding": {
+          "name": "ResourceDataElementStatus",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "The lifecycle status of a Resource data element",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/resource-observation-def-status"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "MFE.1"
+          },
+          {
+            "identity": "rim",
+            "map": "./status\n(draft = new\n active = active\n retired = aborted)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "STATUS"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Administered_item).registration.state\n\nnew = Incomplete, Candidate, Recorded, Qualified\n\nactive = Standard, Preferred Standard, Application\n\nretired = Retired, Superceded, Historical"
+          },
+          {
+            "identity": "v2",
+            "map": "MFE.1"
+          },
+          {
+            "identity": "rim",
+            "map": "./status\n(draft = new\n active = active\n retired = aborted)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "STATUS"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Administered_item).registration.state\n\nnew = Incomplete, Candidate, Recorded, Qualified\n\nactive = Standard, Preferred Standard, Application\n\nretired = Retired, Superceded, Historical"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.date",
+        "short": "Date for this version of the data element",
+        "formal": "The date that the status for this business version of the data element became effective.  (I.e. Date the draft was created, date element became active or date element became retired).",
+        "comments": "This refers to the \"business\" version - the DataElement.version which changes based on business processes.  It does not refer to the date of the RESTful version which is part of the resource metadata.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "revisionDate"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.21"
+          },
+          {
+            "identity": "rim",
+            "map": "./participation[typeCode=AUT]/time"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "DATE_LAST_CHANGED"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Administered_item).last_change_date"
+          },
+          {
+            "identity": "dex",
+            "map": "revisionDate"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.21"
+          },
+          {
+            "identity": "rim",
+            "map": "./participation[typeCode=AUT]/time"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "DATE_LAST_CHANGED"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Administered_item).last_change_date"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.name",
+        "short": "Descriptive label for this element definition",
+        "formal": "The term used by humans to refer to the data element.  Should ideally be unique within the context in which the data element is expected to be used.",
+        "comments": "This may be similar to the question used to prompt someone for a data element value, but the purpose is communicating about the data element, not asking the question.  (Refer to the 'question' element for the latter.).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "displayName"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.11"
+          },
+          {
+            "identity": "rim",
+            "map": "./title"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "LONG_COMMON_NAME"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Designatable_Item).designation.sign\n\nacceptability=preferred in default context"
+          },
+          {
+            "identity": "dex",
+            "map": "displayName"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.11"
+          },
+          {
+            "identity": "rim",
+            "map": "./title"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "LONG_COMMON_NAME"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Designatable_Item).designation.sign\n\nacceptability=preferred in default context"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.category",
+        "short": "Assist with indexing and finding",
+        "formal": "A set of terms from external terminologies that may be used to assist with indexing and searching of data element definitions.",
+        "requirements": "Assist in searching for appropriate data elements.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OM1.18, OM1.42, OM1.46, OM7.3"
+          },
+          {
+            "identity": "rim",
+            "map": "./inboundRelationship[typeCode=SUBJ]/source[classCode=LIST, moodCode=EVN]/code"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "COMPONENT, PROPERTY, TIME_ASPCT, SYSTEM, SCALE_TYP, METHOD_TYP, CLASS, CLASSTYPE, ORDER_OBS, DOCUMENT_SECTION, HL7_ATTACHMENT_STRUCTURE"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Classifiable_Item).classifier"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.18, OM1.42, OM1.46, OM7.3"
+          },
+          {
+            "identity": "rim",
+            "map": "./inboundRelationship[typeCode=SUBJ]/source[classCode=LIST, moodCode=EVN]/code"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "COMPONENT, PROPERTY, TIME_ASPCT, SYSTEM, SCALE_TYP, METHOD_TYP, CLASS, CLASSTYPE, ORDER_OBS, DOCUMENT_SECTION, HL7_ATTACHMENT_STRUCTURE"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Classifiable_Item).classifier"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.granularity",
+        "short": "comparable | fully specified | equivalent | convertable | scaleable | flexible",
+        "formal": "Identifies how precise the data element is in its definition.",
+        "requirements": "Allows determining whether the degree of comparability of data element instances - less granular data elements result in data that is less comparable (or at least requires more work to compare).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": true,
+        "binding": {
+          "name": "DataElementGranularity",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "Indicates the degree of precision of the data element definition",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/dataelement-granularity"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "./target[typeCode=SUBJ]/source[classCode=OBS, moodCode=EVN, code=\"granularity\"]/value"
+          },
+          {
+            "identity": "v2",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "./target[typeCode=SUBJ]/source[classCode=OBS, moodCode=EVN, code=\"granularity\"]/value"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.code",
+        "short": "Identifying concept",
+        "formal": "A code that provides the meaning for a data element according to a particular terminology.",
+        "comments": "The data element definition and other constraints SHALL be a proper constraint on the meaning (as defined in the code system, including relationships) of any code listed here.\n\nWhere multiple codes exist in a terminology that could correspond to the data element, the most granular code(s) should be selected, so long as they are not more restrictive than the data element itself.",
+        "requirements": "Many data elements may have codes that define the concepts described by the data element.  E.g. LOINC, SNOMED, various meta-thesauruses, etc.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OM1.7"
+          },
+          {
+            "identity": "rim",
+            "map": "./code (root or translation)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "LOINC_NUM"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Data_Element).data_element_concept.identifier"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.7"
+          },
+          {
+            "identity": "rim",
+            "map": "./code (root or translation)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "LOINC_NUM"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Data_Element).data_element_concept.identifier"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.question",
+        "short": "Prompt for element phrased as question",
+        "formal": "The default/suggested phrasing to use when prompting a human to capture the data element in question form (e.g. In a survey).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./code/originalText"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "SURVEY_QUEST_TEXT"
+          },
+          {
+            "identity": "rim",
+            "map": "./code/originalText"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "SURVEY_QUEST_TEXT"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.label",
+        "short": "Name for element to display with or prompt for element",
+        "formal": "The text to display beside the element indicating its meaning or to use to prompt for the element in a user display or form.",
+        "comments": "Question and label serve similar purposes in they both can be used to prompt for capturing a data element.  Whether the question form or label form should be used will depend on the type of instrument being used to capture the information.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./code/display"
+          },
+          {
+            "identity": "rim",
+            "map": "./code/display"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.definition",
+        "short": "Definition/description as narrative text",
+        "formal": "Provides a complete explanation of the meaning of the data element for human readability.",
+        "synonym": [
+          "Definition",
+          "Description"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OM1.6, OM1.41"
+          },
+          {
+            "identity": "rim",
+            "map": "./text"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "TERM DEFINITION/DESCRIPTION(S)"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Designatable_Item).definition.text\n\nacceptability=preferred in default context"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.6, OM1.41"
+          },
+          {
+            "identity": "rim",
+            "map": "./text"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "TERM DEFINITION/DESCRIPTION(S)"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Designatable_Item).definition.text\n\nacceptability=preferred in default context"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.comments",
+        "short": "Comments about the use of this element",
+        "formal": "Comments about the use of the element, including notes about how to use the data properly, exceptions to proper use, etc.",
+        "comments": "If it is possible to capture usage rules using invariants, that mechanism should be used in preference to this element.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "NTE, OM.32, OM1.33, OM1.39"
+          },
+          {
+            "identity": "rim",
+            "map": "./inboundRelationship[typeCode=SUBJ]/source[classCode=LIST, moodCode=EVN]/code"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "COMMENTS"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Administered_Item).explanatory_comment"
+          },
+          {
+            "identity": "v2",
+            "map": "NTE, OM.32, OM1.33, OM1.39"
+          },
+          {
+            "identity": "rim",
+            "map": "./inboundRelationship[typeCode=SUBJ]/source[classCode=LIST, moodCode=EVN]/code"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "COMMENTS"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Administered_Item).explanatory_comment"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.requirements",
+        "short": "Why is this needed?",
+        "formal": "Explains why this element is needed and why it's been constrained as it has.",
+        "comments": "This element does not describe the usage of the element (that's done in comments), rather it's for traceability of *why* the element is either needed or why the constraints exist as they do.  This may be used to point to source materials or specifications that drove the structure of this data element.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./inboundRelationship[typeCode=META]/source[classCode=ACT, moodCode=EVN, isCriterionInd=true]/reasonCode/originalText"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "R/O/C"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Registered_item).document_reference[document_type=requirements].notation"
+          },
+          {
+            "identity": "rim",
+            "map": "./inboundRelationship[typeCode=META]/source[classCode=ACT, moodCode=EVN, isCriterionInd=true]/reasonCode/originalText"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "R/O/C"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Registered_item).document_reference[document_type=requirements].notation"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.synonym",
+        "short": "Other names",
+        "formal": "Identifies additional names by which this element might also be known.",
+        "requirements": "Allows for better easier recognition of the element by multiple communities, including international communities.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OM1.8, OM1.52"
+          },
+          {
+            "identity": "rim",
+            "map": "Not currently expressible"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "RELATED NAMES (only some of these apply)"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Designatable_Item).designation.sign\n\nacceptability!=preferred or context is other than default"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.8, OM1.52"
+          },
+          {
+            "identity": "rim",
+            "map": "Not currently expressible"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "RELATED NAMES (only some of these apply)"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Designatable_Item).designation.sign\n\nacceptability!=preferred or context is other than default"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.type",
+        "short": "Name of Data type",
+        "formal": "The FHIR data type that is the type for data that corresponds to this data element.",
+        "comments": "If absent, the structure represents a concept rather than an element.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "DataType",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "The type of an element - one of the FHIR data types",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/data-types"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "valueDomain.dataType"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.3"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "HL7_V2_DATATYPE (translation required), HL7_V3_DATATYPE (translation required)"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".domain.data+Q14type"
+          },
+          {
+            "identity": "dex",
+            "map": "valueDomain.dataType"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.3"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "HL7_V2_DATATYPE (translation required), HL7_V3_DATATYPE (translation required)"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".domain.data+Q14type"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.example[x]",
+        "short": "Example value: [as defined for type]",
+        "formal": "A sample value for this element demonstrating the type of information that would typically be captured.",
+        "comments": "This will most commonly be present for data where it's not implicitly obvious from either the data type or value set what the values might be.  (I.e. Example values for dates or quantities would generally be unnecessary.).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "*"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "EXMPL_ANSWERS"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".example"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "EXMPL_ANSWERS"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".example"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.maxLength",
+        "short": "Length for strings",
+        "formal": "Indicates the shortest length that SHALL be supported by conformant instances without truncation.",
+        "comments": "If not specified, there is no conformance expectation for length support.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".domain.maximum_character_quantity"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".domain.maximum_character_quantity"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.units[x]",
+        "short": "Units to use for measured value",
+        "formal": "Identifies the units of measure in which the data element should be captured or expressed.",
+        "comments": "Use a value set if more than one unit of measure is possible.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/ValueSet"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "Units",
+          "isExtensible": true,
+          "conformance": "preferred",
+          "description": "Type of measurement system used to express a value",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/units"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "valueDomain.unitOfMeasure"
+          },
+          {
+            "identity": "v2",
+            "map": "OM2.2"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".domain.unit_of_measure"
+          },
+          {
+            "identity": "dex",
+            "map": "valueDomain.unitOfMeasure"
+          },
+          {
+            "identity": "v2",
+            "map": "OM2.2"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".domain.unit_of_measure"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.binding",
+        "short": "ValueSet details if this is coded",
+        "formal": "Binds to a value set if this element is coded (code, Coding, CodeableConcept).",
+        "min": 0,
+        "max": "1",
+        "constraint": [
+          {
+            "key": "3",
+            "name": "Valueset or description",
+            "severity": "error",
+            "human": "provide either a valueSet or a description (or both)",
+            "xpath": "(exists(f:valueSet)) or exists(f:description)"
+          },
+          {
+            "key": "14",
+            "name": "Examples extensible",
+            "severity": "error",
+            "human": "Example value sets are always extensible",
+            "xpath": "not(f:conformance/value='example' and f:isExtensible.value='false')"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OM3"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "ANSWER LIST, NORMATIVE ANSWER LIST"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".domain"
+          },
+          {
+            "identity": "v2",
+            "map": "OM3"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "ANSWER LIST, NORMATIVE ANSWER LIST"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".domain"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.binding.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.binding.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.binding.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.binding.isExtensible",
+        "short": "Can additional codes be used?",
+        "formal": "If true, then conformant systems may use additional codes or (where the data type permits) text alone to convey concepts not covered by the set of codes identified in the binding.  If false, then conformant systems are constrained to the provided codes alone.",
+        "comments": "When the binding use used for elements with a type of \"code\" (rather than Coding or CodableConcept), the binding is treated as non-extensible regardless of the value of this property.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "condition": [
+          "14"
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.binding.conformance",
+        "short": "required | preferred | example",
+        "formal": "Indicates the degree of conformance expectations associated with this binding.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "condition": [
+          "14"
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "BindingConformance",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "Binding conformance for applications",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/binding-conformance"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.binding.description",
+        "short": "Human explanation of the value set",
+        "formal": "Describes the intended use of this particular set of codes.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "condition": [
+          "3"
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".domain.description"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".domain.description"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.binding.valueSet",
+        "short": "Source of value set",
+        "formal": "Points to the value set that identifies the set of codes to be used.",
+        "comments": "The display can contain the value set description.  The reference may be version-specific or not.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/ValueSet"
+          }
+        ],
+        "condition": [
+          "3"
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "valueDomain.valueSet"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "CODE_TABLE"
+          },
+          {
+            "identity": "iso11179",
+            "map": "points to explicit list or expression that evaluates to list of (Enumerated_Value_Domain).member"
+          },
+          {
+            "identity": "dex",
+            "map": "valueDomain.valueSet"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "CODE_TABLE"
+          },
+          {
+            "identity": "iso11179",
+            "map": "points to explicit list or expression that evaluates to list of (Enumerated_Value_Domain).member"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.mapping",
+        "short": "Map element to another set of definitions",
+        "formal": "Identifies a concept from an external specification that roughly corresponds to this element.",
+        "comments": "Mappings are not necessarily specific enough for safe translation.",
+        "requirements": "Provides guidance to implementers familiar with or converting content from other specifications.  May also help formally define the meaning of the element by mapping to a reference model.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "26",
+            "name": "Name or URI",
+            "severity": "error",
+            "human": "Must have at a name or a uri (or both)",
+            "xpath": "exists(f:uri) or exists(f:name)"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "mappingSpecification"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "iso11179",
+            "map": "Registered_item).document_reference[document_type=mapping]\n\nAlso, .meaning linkage to Data_Element_Concept is done as a mapping to a reference model.  (Data_Element_Concepts are all defined in some sort of reference model, be that Object_Class and Property or some other mechanism)"
+          },
+          {
+            "identity": "dex",
+            "map": "mappingSpecification"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "iso11179",
+            "map": "Registered_item).document_reference[document_type=mapping]\n\nAlso, .meaning linkage to Data_Element_Concept is done as a mapping to a reference model.  (Data_Element_Concepts are all defined in some sort of reference model, be that Object_Class and Property or some other mechanism)"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.mapping.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.mapping.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.mapping.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.mapping.uri",
+        "short": "Identifies what this mapping refers to",
+        "formal": "A URI that identifies the specification that this mapping is expressed to.",
+        "comments": "A formal identity for the specification being mapped to helps with identifying maps consistently.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "condition": [
+          "26"
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "mappingSpecification.contentModel.id"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "dex",
+            "map": "mappingSpecification.contentModel.id"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.mapping.definitional",
+        "short": "True if mapping defines element",
+        "formal": "If true, indicates that the official meaning of the data element is exactly equivalent to the mapped element.",
+        "requirements": "Distinguishes mappings that approximate the meaning of the element from the mapping that is exactly equivalent to the data element.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "defaultValueBoolean": false,
+        "isSummary": false
+      },
+      {
+        "path": "DataElement.mapping.name",
+        "short": "Names what this mapping refers to",
+        "formal": "A name for the specification that is being mapped to.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "condition": [
+          "26"
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "mappingSpecification.contentModel.name"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "dex",
+            "map": "mappingSpecification.contentModel.name"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.mapping.comments",
+        "short": "Versions, Issues, Scope limitations etc",
+        "formal": "Comments about this mapping, including version notes, issues, scope limitations, and other important notes for usage.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.mapping.map",
+        "short": "Details of the mapping",
+        "formal": "Expresses what part of the target specification corresponds to this element.",
+        "comments": "For most mappings, the syntax is undefined.  Syntax will be provided for mappings to the RIM.  Multiple mappings may be possible and may include constraints on other resource elements that identify when a particular mapping applies.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "ObjectClass, Property (this is one possible data model that can be mapped to - the uri would identify the data model\n\nmappingSpecification.mappingScript"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "dex",
+            "map": "ObjectClass, Property (this is one possible data model that can be mapped to - the uri would identify the data model\n\nmappingSpecification.mappingScript"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "path": "DataElement",
+        "short": "Resource data element",
+        "formal": "The formal description of a single piece of information that can be gathered and reported.",
+        "comments": "Often called a clinical template.",
+        "synonym": [
+          "Master Observation",
+          "Data Element",
+          "CDE"
+        ],
+        "min": 1,
+        "max": "1",
+        "constraint": [
+          {
+            "key": "1",
+            "name": "Only one definitional",
+            "severity": "error",
+            "human": "Can have a maximum of one definitional binding or primary concept",
+            "xpath": "count(f:concept[f:primary[@value='true']|f:mapping/f:definitional[@value='true']])<=1"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "RetrieveMetadata response"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1"
+          },
+          {
+            "identity": "rim",
+            "map": "Observation[classCode=OBS, moodCode=DEFN]"
+          },
+          {
+            "identity": "iso11179",
+            "map": "Data_Element"
+          },
+          {
+            "identity": "dex",
+            "map": "RetrieveMetadata response"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1"
+          },
+          {
+            "identity": "rim",
+            "map": "Observation[classCode=OBS, moodCode=DEFN]"
+          },
+          {
+            "identity": "iso11179",
+            "map": "Data_Element"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.identifier",
+        "short": "Logical id to reference this data element",
+        "formal": "The identifier that is used to identify this data element when it is referenced in a Profile, Questionnaire or an instance.",
+        "comments": "N/A.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "id"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.2"
+          },
+          {
+            "identity": "rim",
+            "map": "./id[use=BUS]"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "LOINC_NUM (the code is the identifier)"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Identified_Item).identifier\n\nAs assigned by registering authority"
+          },
+          {
+            "identity": "dex",
+            "map": "id"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.2"
+          },
+          {
+            "identity": "rim",
+            "map": "./id[use=BUS]"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "LOINC_NUM (the code is the identifier)"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Identified_Item).identifier\n\nAs assigned by registering authority"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.version",
+        "short": "Logical id for this version of the data element",
+        "formal": "The identifier that is used to identify this version of the data element when it is referenced in a Profile, Questionnaire or instance. This is an arbitrary value managed by the definition author manually.",
+        "comments": "N/A.",
+        "requirements": "There may be multiple resource versions of the data element that have this same identifier. The resource version id will change for technical reasons, whereas the stated version number needs to be under the author's control.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "version"
+          },
+          {
+            "identity": "v2",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "./id[use=VER]"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "N/A"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Identified_Item).identifier.version"
+          },
+          {
+            "identity": "dex",
+            "map": "version"
+          },
+          {
+            "identity": "v2",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "./id[use=VER]"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "N/A"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Identified_Item).identifier.version"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.publisher",
+        "short": "Name of the publisher (Organization or individual)",
+        "formal": "Details of the individual or organization who accepts responsibility for publishing the data element.",
+        "comments": "Usually an organization, but may be an individual. This item SHOULD be populated unless the information is available from context.",
+        "requirements": "Helps establish the \"authority/credibility\" of the data element.  May also allow for contact.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "registrationAuthority"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.16"
+          },
+          {
+            "identity": "rim",
+            "map": "./participation[typeCode=AUT]/role[classCode=ASSIGN]/scoper[classCode=ORG,determinerCode=INSTANCE]/name"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "Fixed to Regenstrief or SOURCE"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Administered_Item).stewardship_record.organization.name"
+          },
+          {
+            "identity": "dex",
+            "map": "registrationAuthority"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.16"
+          },
+          {
+            "identity": "rim",
+            "map": "./participation[typeCode=AUT]/role[classCode=ASSIGN]/scoper[classCode=ORG,determinerCode=INSTANCE]/name"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "Fixed to Regenstrief or SOURCE"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Administered_Item).stewardship_record.organization.name"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.telecom",
+        "short": "Contact information of the publisher",
+        "formal": "Contact details to assist a user in finding and communicating with the publisher.",
+        "comments": "May be a web site, an email address, a telephone number (tel:), etc.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ContactPoint"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OM1.17"
+          },
+          {
+            "identity": "rim",
+            "map": "./participation[typeCode=AUT]/role[classCode=ASSIGN]/scoper[classCode=ORG,determinerCode=INSTANCE]/telecom"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "N/A"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Administered_Item).stewardship_record.organization.[email_address, phone_number, uri]"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.17"
+          },
+          {
+            "identity": "rim",
+            "map": "./participation[typeCode=AUT]/role[classCode=ASSIGN]/scoper[classCode=ORG,determinerCode=INSTANCE]/telecom"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "N/A"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Administered_Item).stewardship_record.organization.[email_address, phone_number, uri]"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.status",
+        "short": "draft | active | retired",
+        "formal": "The status of the data element.",
+        "requirements": "Allows filtering of data elements that are appropriate for use vs. not.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": true,
+        "binding": {
+          "name": "ResourceDataElementStatus",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "The lifecycle status of a Resource data element",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/resource-observation-def-status"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "MFE.1"
+          },
+          {
+            "identity": "rim",
+            "map": "./status\n(draft = new\n active = active\n retired = aborted)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "STATUS"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Administered_item).registration.state\n\nnew = Incomplete, Candidate, Recorded, Qualified\n\nactive = Standard, Preferred Standard, Application\n\nretired = Retired, Superceded, Historical"
+          },
+          {
+            "identity": "v2",
+            "map": "MFE.1"
+          },
+          {
+            "identity": "rim",
+            "map": "./status\n(draft = new\n active = active\n retired = aborted)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "STATUS"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Administered_item).registration.state\n\nnew = Incomplete, Candidate, Recorded, Qualified\n\nactive = Standard, Preferred Standard, Application\n\nretired = Retired, Superceded, Historical"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.date",
+        "short": "Date for this version of the data element",
+        "formal": "The date that the status for this business version of the data element became effective.  (I.e. Date the draft was created, date element became active or date element became retired).",
+        "comments": "This refers to the \"business\" version - the DataElement.version which changes based on business processes.  It does not refer to the date of the RESTful version which is part of the resource metadata.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "revisionDate"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.21"
+          },
+          {
+            "identity": "rim",
+            "map": "./participation[typeCode=AUT]/time"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "DATE_LAST_CHANGED"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Administered_item).last_change_date"
+          },
+          {
+            "identity": "dex",
+            "map": "revisionDate"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.21"
+          },
+          {
+            "identity": "rim",
+            "map": "./participation[typeCode=AUT]/time"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "DATE_LAST_CHANGED"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Administered_item).last_change_date"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.name",
+        "short": "Descriptive label for this element definition",
+        "formal": "The term used by humans to refer to the data element.  Should ideally be unique within the context in which the data element is expected to be used.",
+        "comments": "This may be similar to the question used to prompt someone for a data element value, but the purpose is communicating about the data element, not asking the question.  (Refer to the 'question' element for the latter.).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "displayName"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.11"
+          },
+          {
+            "identity": "rim",
+            "map": "./title"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "LONG_COMMON_NAME"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Designatable_Item).designation.sign\n\nacceptability=preferred in default context"
+          },
+          {
+            "identity": "dex",
+            "map": "displayName"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.11"
+          },
+          {
+            "identity": "rim",
+            "map": "./title"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "LONG_COMMON_NAME"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Designatable_Item).designation.sign\n\nacceptability=preferred in default context"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.category",
+        "short": "Assist with indexing and finding",
+        "formal": "A set of terms from external terminologies that may be used to assist with indexing and searching of data element definitions.",
+        "requirements": "Assist in searching for appropriate data elements.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OM1.18, OM1.42, OM1.46, OM7.3"
+          },
+          {
+            "identity": "rim",
+            "map": "./inboundRelationship[typeCode=SUBJ]/source[classCode=LIST, moodCode=EVN]/code"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "COMPONENT, PROPERTY, TIME_ASPCT, SYSTEM, SCALE_TYP, METHOD_TYP, CLASS, CLASSTYPE, ORDER_OBS, DOCUMENT_SECTION, HL7_ATTACHMENT_STRUCTURE"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Classifiable_Item).classifier"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.18, OM1.42, OM1.46, OM7.3"
+          },
+          {
+            "identity": "rim",
+            "map": "./inboundRelationship[typeCode=SUBJ]/source[classCode=LIST, moodCode=EVN]/code"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "COMPONENT, PROPERTY, TIME_ASPCT, SYSTEM, SCALE_TYP, METHOD_TYP, CLASS, CLASSTYPE, ORDER_OBS, DOCUMENT_SECTION, HL7_ATTACHMENT_STRUCTURE"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Classifiable_Item).classifier"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.granularity",
+        "short": "comparable | fully specified | equivalent | convertable | scaleable | flexible",
+        "formal": "Identifies how precise the data element is in its definition.",
+        "requirements": "Allows determining whether the degree of comparability of data element instances - less granular data elements result in data that is less comparable (or at least requires more work to compare).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": true,
+        "binding": {
+          "name": "DataElementGranularity",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "Indicates the degree of precision of the data element definition",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/dataelement-granularity"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "./target[typeCode=SUBJ]/source[classCode=OBS, moodCode=EVN, code=\"granularity\"]/value"
+          },
+          {
+            "identity": "v2",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "./target[typeCode=SUBJ]/source[classCode=OBS, moodCode=EVN, code=\"granularity\"]/value"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.code",
+        "short": "Identifying concept",
+        "formal": "A code that provides the meaning for a data element according to a particular terminology.",
+        "comments": "The data element definition and other constraints SHALL be a proper constraint on the meaning (as defined in the code system, including relationships) of any code listed here.\n\nWhere multiple codes exist in a terminology that could correspond to the data element, the most granular code(s) should be selected, so long as they are not more restrictive than the data element itself.",
+        "requirements": "Many data elements may have codes that define the concepts described by the data element.  E.g. LOINC, SNOMED, various meta-thesauruses, etc.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OM1.7"
+          },
+          {
+            "identity": "rim",
+            "map": "./code (root or translation)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "LOINC_NUM"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Data_Element).data_element_concept.identifier"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.7"
+          },
+          {
+            "identity": "rim",
+            "map": "./code (root or translation)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "LOINC_NUM"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Data_Element).data_element_concept.identifier"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.question",
+        "short": "Prompt for element phrased as question",
+        "formal": "The default/suggested phrasing to use when prompting a human to capture the data element in question form (e.g. In a survey).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./code/originalText"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "SURVEY_QUEST_TEXT"
+          },
+          {
+            "identity": "rim",
+            "map": "./code/originalText"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "SURVEY_QUEST_TEXT"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.label",
+        "short": "Name for element to display with or prompt for element",
+        "formal": "The text to display beside the element indicating its meaning or to use to prompt for the element in a user display or form.",
+        "comments": "Question and label serve similar purposes in they both can be used to prompt for capturing a data element.  Whether the question form or label form should be used will depend on the type of instrument being used to capture the information.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": true,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./code/display"
+          },
+          {
+            "identity": "rim",
+            "map": "./code/display"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.definition",
+        "short": "Definition/description as narrative text",
+        "formal": "Provides a complete explanation of the meaning of the data element for human readability.",
+        "synonym": [
+          "Definition",
+          "Description"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OM1.6, OM1.41"
+          },
+          {
+            "identity": "rim",
+            "map": "./text"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "TERM DEFINITION/DESCRIPTION(S)"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Designatable_Item).definition.text\n\nacceptability=preferred in default context"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.6, OM1.41"
+          },
+          {
+            "identity": "rim",
+            "map": "./text"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "TERM DEFINITION/DESCRIPTION(S)"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Designatable_Item).definition.text\n\nacceptability=preferred in default context"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.comments",
+        "short": "Comments about the use of this element",
+        "formal": "Comments about the use of the element, including notes about how to use the data properly, exceptions to proper use, etc.",
+        "comments": "If it is possible to capture usage rules using invariants, that mechanism should be used in preference to this element.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "NTE, OM.32, OM1.33, OM1.39"
+          },
+          {
+            "identity": "rim",
+            "map": "./inboundRelationship[typeCode=SUBJ]/source[classCode=LIST, moodCode=EVN]/code"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "COMMENTS"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Administered_Item).explanatory_comment"
+          },
+          {
+            "identity": "v2",
+            "map": "NTE, OM.32, OM1.33, OM1.39"
+          },
+          {
+            "identity": "rim",
+            "map": "./inboundRelationship[typeCode=SUBJ]/source[classCode=LIST, moodCode=EVN]/code"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "COMMENTS"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Administered_Item).explanatory_comment"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.requirements",
+        "short": "Why is this needed?",
+        "formal": "Explains why this element is needed and why it's been constrained as it has.",
+        "comments": "This element does not describe the usage of the element (that's done in comments), rather it's for traceability of *why* the element is either needed or why the constraints exist as they do.  This may be used to point to source materials or specifications that drove the structure of this data element.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "./inboundRelationship[typeCode=META]/source[classCode=ACT, moodCode=EVN, isCriterionInd=true]/reasonCode/originalText"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "R/O/C"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Registered_item).document_reference[document_type=requirements].notation"
+          },
+          {
+            "identity": "rim",
+            "map": "./inboundRelationship[typeCode=META]/source[classCode=ACT, moodCode=EVN, isCriterionInd=true]/reasonCode/originalText"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "R/O/C"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Registered_item).document_reference[document_type=requirements].notation"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.synonym",
+        "short": "Other names",
+        "formal": "Identifies additional names by which this element might also be known.",
+        "requirements": "Allows for better easier recognition of the element by multiple communities, including international communities.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OM1.8, OM1.52"
+          },
+          {
+            "identity": "rim",
+            "map": "Not currently expressible"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "RELATED NAMES (only some of these apply)"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Designatable_Item).designation.sign\n\nacceptability!=preferred or context is other than default"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.8, OM1.52"
+          },
+          {
+            "identity": "rim",
+            "map": "Not currently expressible"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "RELATED NAMES (only some of these apply)"
+          },
+          {
+            "identity": "iso11179",
+            "map": "(Designatable_Item).designation.sign\n\nacceptability!=preferred or context is other than default"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.type",
+        "short": "Name of Data type",
+        "formal": "The FHIR data type that is the type for data that corresponds to this data element.",
+        "comments": "If absent, the structure represents a concept rather than an element.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "DataType",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "The type of an element - one of the FHIR data types",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/data-types"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "valueDomain.dataType"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.3"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "HL7_V2_DATATYPE (translation required), HL7_V3_DATATYPE (translation required)"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".domain.data+Q14type"
+          },
+          {
+            "identity": "dex",
+            "map": "valueDomain.dataType"
+          },
+          {
+            "identity": "v2",
+            "map": "OM1.3"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "HL7_V2_DATATYPE (translation required), HL7_V3_DATATYPE (translation required)"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".domain.data+Q14type"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.example[x]",
+        "short": "Example value: [as defined for type]",
+        "formal": "A sample value for this element demonstrating the type of information that would typically be captured.",
+        "comments": "This will most commonly be present for data where it's not implicitly obvious from either the data type or value set what the values might be.  (I.e. Example values for dates or quantities would generally be unnecessary.).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "*"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "EXMPL_ANSWERS"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".example"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "EXMPL_ANSWERS"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".example"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.maxLength",
+        "short": "Length for strings",
+        "formal": "Indicates the shortest length that SHALL be supported by conformant instances without truncation.",
+        "comments": "If not specified, there is no conformance expectation for length support.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "integer"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".domain.maximum_character_quantity"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".domain.maximum_character_quantity"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.units[x]",
+        "short": "Units to use for measured value",
+        "formal": "Identifies the units of measure in which the data element should be captured or expressed.",
+        "comments": "Use a value set if more than one unit of measure is possible.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/ValueSet"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "Units",
+          "isExtensible": true,
+          "conformance": "preferred",
+          "description": "Type of measurement system used to express a value",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/units"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "valueDomain.unitOfMeasure"
+          },
+          {
+            "identity": "v2",
+            "map": "OM2.2"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".domain.unit_of_measure"
+          },
+          {
+            "identity": "dex",
+            "map": "valueDomain.unitOfMeasure"
+          },
+          {
+            "identity": "v2",
+            "map": "OM2.2"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".domain.unit_of_measure"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.binding",
+        "short": "ValueSet details if this is coded",
+        "formal": "Binds to a value set if this element is coded (code, Coding, CodeableConcept).",
+        "min": 0,
+        "max": "1",
+        "constraint": [
+          {
+            "key": "3",
+            "name": "Valueset or description",
+            "severity": "error",
+            "human": "provide either a valueSet or a description (or both)",
+            "xpath": "(exists(f:valueSet)) or exists(f:description)"
+          },
+          {
+            "key": "14",
+            "name": "Examples extensible",
+            "severity": "error",
+            "human": "Example value sets are always extensible",
+            "xpath": "not(f:conformance/value='example' and f:isExtensible.value='false')"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OM3"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "ANSWER LIST, NORMATIVE ANSWER LIST"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".domain"
+          },
+          {
+            "identity": "v2",
+            "map": "OM3"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "ANSWER LIST, NORMATIVE ANSWER LIST"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".domain"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.binding.isExtensible",
+        "short": "Can additional codes be used?",
+        "formal": "If true, then conformant systems may use additional codes or (where the data type permits) text alone to convey concepts not covered by the set of codes identified in the binding.  If false, then conformant systems are constrained to the provided codes alone.",
+        "comments": "When the binding use used for elements with a type of \"code\" (rather than Coding or CodableConcept), the binding is treated as non-extensible regardless of the value of this property.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "condition": [
+          "14"
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.binding.conformance",
+        "short": "required | preferred | example",
+        "formal": "Indicates the degree of conformance expectations associated with this binding.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "condition": [
+          "14"
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "BindingConformance",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "Binding conformance for applications",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/binding-conformance"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.binding.description",
+        "short": "Human explanation of the value set",
+        "formal": "Describes the intended use of this particular set of codes.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "condition": [
+          "3"
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".domain.description"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "iso11179",
+            "map": ".domain.description"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.binding.valueSet",
+        "short": "Source of value set",
+        "formal": "Points to the value set that identifies the set of codes to be used.",
+        "comments": "The display can contain the value set description.  The reference may be version-specific or not.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/ValueSet"
+          }
+        ],
+        "condition": [
+          "3"
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "valueDomain.valueSet"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "CODE_TABLE"
+          },
+          {
+            "identity": "iso11179",
+            "map": "points to explicit list or expression that evaluates to list of (Enumerated_Value_Domain).member"
+          },
+          {
+            "identity": "dex",
+            "map": "valueDomain.valueSet"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "loincstruc",
+            "map": "CODE_TABLE"
+          },
+          {
+            "identity": "iso11179",
+            "map": "points to explicit list or expression that evaluates to list of (Enumerated_Value_Domain).member"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.mapping",
+        "short": "Map element to another set of definitions",
+        "formal": "Identifies a concept from an external specification that roughly corresponds to this element.",
+        "comments": "Mappings are not necessarily specific enough for safe translation.",
+        "requirements": "Provides guidance to implementers familiar with or converting content from other specifications.  May also help formally define the meaning of the element by mapping to a reference model.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "26",
+            "name": "Name or URI",
+            "severity": "error",
+            "human": "Must have at a name or a uri (or both)",
+            "xpath": "exists(f:uri) or exists(f:name)"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "mappingSpecification"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "iso11179",
+            "map": "Registered_item).document_reference[document_type=mapping]\n\nAlso, .meaning linkage to Data_Element_Concept is done as a mapping to a reference model.  (Data_Element_Concepts are all defined in some sort of reference model, be that Object_Class and Property or some other mechanism)"
+          },
+          {
+            "identity": "dex",
+            "map": "mappingSpecification"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "iso11179",
+            "map": "Registered_item).document_reference[document_type=mapping]\n\nAlso, .meaning linkage to Data_Element_Concept is done as a mapping to a reference model.  (Data_Element_Concepts are all defined in some sort of reference model, be that Object_Class and Property or some other mechanism)"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.mapping.uri",
+        "short": "Identifies what this mapping refers to",
+        "formal": "A URI that identifies the specification that this mapping is expressed to.",
+        "comments": "A formal identity for the specification being mapped to helps with identifying maps consistently.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "condition": [
+          "26"
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "mappingSpecification.contentModel.id"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "dex",
+            "map": "mappingSpecification.contentModel.id"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.mapping.definitional",
+        "short": "True if mapping defines element",
+        "formal": "If true, indicates that the official meaning of the data element is exactly equivalent to the mapped element.",
+        "requirements": "Distinguishes mappings that approximate the meaning of the element from the mapping that is exactly equivalent to the data element.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "defaultValueBoolean": false,
+        "isSummary": false
+      },
+      {
+        "path": "DataElement.mapping.name",
+        "short": "Names what this mapping refers to",
+        "formal": "A name for the specification that is being mapped to.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "condition": [
+          "26"
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "mappingSpecification.contentModel.name"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "dex",
+            "map": "mappingSpecification.contentModel.name"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.mapping.comments",
+        "short": "Versions, Issues, Scope limitations etc",
+        "formal": "Comments about this mapping, including version notes, issues, scope limitations, and other important notes for usage.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          }
+        ]
+      },
+      {
+        "path": "DataElement.mapping.map",
+        "short": "Details of the mapping",
+        "formal": "Expresses what part of the target specification corresponds to this element.",
+        "comments": "For most mappings, the syntax is undefined.  Syntax will be provided for mappings to the RIM.  Multiple mappings may be possible and may include constraints on other resource elements that identify when a particular mapping applies.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "dex",
+            "map": "ObjectClass, Property (this is one possible data model that can be mapped to - the uri would identify the data model\n\nmappingSpecification.mappingScript"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          },
+          {
+            "identity": "dex",
+            "map": "ObjectClass, Property (this is one possible data model that can be mapped to - the uri would identify the data model\n\nmappingSpecification.mappingScript"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A (MIF territory)"
+          }
+        ]
+      }
+    ]
+  }
+}

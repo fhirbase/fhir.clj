@@ -1,0 +1,1711 @@
+{
+  "resourceType": "Profile",
+  "id": "DiagnosticOrder",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><table style=\"border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;\" cellpadding=\"0\" border=\"0\" cellspacing=\"0\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><th style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Name</th><th style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Flags</th><th style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Card.</th><th style=\"width: 100px\" class=\"heirarchy\">Type</th><th style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Description &amp; Constraints<span style=\"float: right\"><a title=\"Legend for this format\" href=\"formats.html#table\"><img alt=\"doco\" src=\"help16.png\"/></a></span></th></tr><tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img title=\"Resource\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJBSURBVDjLhdKxa5NBGMfx713yvkmbJnaoFiSF4mJTh06Kg4OgiyCCRXCof4YIdXdxFhQVHPo3OFSoUx0FySQttaVKYq2NbdO8ed/L3fM4JG3tYPvAcfBw9+HHPWdUlf/V0tLSqKo+EpEHInJFRIohhDUR+RBCeDM7O7ua55QSkRfVanVufHyckZERrLV0Op2Zra2tmXq9fg+YsmcAdyYnJykUCke9OI6ZmJgghHAZ4KwE3ntPs9mkVCohIjQaDWq1GiEEAM5KoHEcY62lVCrRarUoFotUKpUjIL/y/uqXYmV62ph/LSVrr30P4bEFcM4B0Ov1jk547/uAUTs1ceNdZIwB7V/GGHz6+9LXxY96eDiEgHMOY8xJAK8p4grZz5cElwNbwZgyxYu3EFM01lriOCZJEqIoIooiALIsGwA9Y1UcwcWoKNLdpLu9zvbnBWqNBhuvn5EDUmB0EH/1E2TZw5U+YLQovkun+Ytsaw1xCbnCOap334LC7s4Oe/ttvA+ICLmhMXRxDufczUECS37oAuevPwUEVFFp4/eXkXSdYc2IopSepnjtUh5/wg9gfn6+OQBUNaRIUkfDHhraSLoBKqikIF3yHJDLHaAkFOLciVHnyVAVj/S2Ub/XRyQD9aAZKgkaOohvo6ENgykcA07VEFDfQv1uf4W9Y8y30bCPhg4qKZJtMnjTPqBO/vhkZ7h3EJeRslWNQMqgY2jIAIfa/m5sIKSpqpPsGEiz599e3b+GchtD+bSvjQJm2SG6cNj6C+QmaxAek5tyAAAAAElFTkSuQmCC\"/> <span title=\"A request for a diagnostic investigation service to be performed.\">DiagnosticOrder</span><a name=\"DiagnosticOrder\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"domainresource.html\">DomainResource</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">A request for a diagnostic service</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Reference to another Resource\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC\"/> <span title=\"Who or what the investigation is to be performed on. This is usually a human patient, but diagnostic tests can also be requested on animals, groups of humans or animals, devices such as dialysis machines, or even locations (typically for environmental scans).\">subject</span><a name=\"DiagnosticOrder.subject\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"patient.html\">Patient</a> | <a href=\"group.html\">Group</a> | <a href=\"location.html\">Location</a> | <a href=\"device.html\">Device</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Who and/or what test is about</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Reference to another Resource\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC\"/> <span title=\"The practitioner that holds legal responsibility for ordering the investigation.\">orderer</span><a name=\"DiagnosticOrder.orderer\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"practitioner.html\">Practitioner</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Who ordered the test</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7\"/> <span title=\"Identifiers assigned to this order by the order or by the receiver.\">identifier</span><a name=\"DiagnosticOrder.identifier\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#Identifier\">Identifier</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Identifiers assigned to this order</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Reference to another Resource\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC\"/> <span title=\"An encounter that provides additional information about the healthcare context in which this request is made.\">encounter</span><a name=\"DiagnosticOrder.encounter\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"encounter.html\">Encounter</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">The encounter that this diagnostic order is associated with</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"An explanation or justification for why this diagnostic investigation is being requested.\">clinicalNotes</span><a name=\"DiagnosticOrder.clinicalNotes\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#string\">string</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Explanation/Justification for test</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Reference to another Resource\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC\"/> <span title=\"Additional clinical information about the patient or specimen that may influence test interpretations.\">supportingInformation</span><a name=\"DiagnosticOrder.supportingInformation\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"observation.html\">Observation</a> | <a href=\"condition.html\">Condition</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Supporting observations or conditions for this request</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Reference to another Resource\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC\"/> <span title=\"One or more specimens that the diagnostic investigation is about.\">specimen</span><a name=\"DiagnosticOrder.specimen\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"specimen.html\">Specimen</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">If the whole order relates to specific specimens</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"The status of the order.\">status</span><a name=\"DiagnosticOrder.status\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">requested | received | accepted | in progress | review | completed | suspended | rejected | failed<br/><a title=\"The status of a diagnostic order\" href=\"diagnostic-order-status.html\">DiagnosticOrderStatus</a> (<a title=\"One of the the defined codes must be used\" href=\"terminologies.html#code\">Required</a>)</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"The clinical priority associated with this order.\">priority</span><a name=\"DiagnosticOrder.priority\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">routine | urgent | stat | asap<br/><a title=\"The clinical priority of a diagnostic order\" href=\"diagnostic-order-priority.html\">DiagnosticOrderPriority</a> (<a title=\"One of the the defined codes must be used\" href=\"terminologies.html#code\">Required</a>)</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Element\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAMQfAOvGUf7ztuvPMf/78/fkl/Pbg+u8Rvjqteu2Pf3zxPz36Pz0z+vTmPzurPvuw/npofbjquvNefHVduuyN+uuMu3Oafbgjfnqvf/3zv/3xevPi+vRjP/20/bmsP///////yH5BAEAAB8ALAAAAAAQABAAAAV24CeOZGmepqeqqOgxjBZFa+19r4ftWQUAgqDgltthMshMIJAZ4jYDHsBARSAmFOJvq+g6HIdEFgcYmBWNxoNAsDjGHgBnmV5bCoUDHLBIq9sFEhIdcAYJdYASFRUQhQkLCwkOFwcdEBAXhVabE52ecDahKy0oIQA7\"/> <span title=\"A summary of the events of interest that have occurred as the request is processed. E.g. when the order was made, various processing steps (specimens received), when it was completed.\">event</span><a name=\"DiagnosticOrder.event\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"element.html\">Element</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">A list of events of interest in the lifecycle</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4/x0ISQIM/0kGANNnY41GtlCWAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII=\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"The status for the event.\">status</span><a name=\"DiagnosticOrder.event.status\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">requested | received | accepted | in progress | review | completed | suspended | rejected | failed<br/><a title=\"The status of a diagnostic order\" href=\"diagnostic-order-status.html\">DiagnosticOrderStatus</a> (<a title=\"One of the the defined codes must be used\" href=\"terminologies.html#code\">Required</a>)</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4/x0ISQIM/0kGANNnY41GtlCWAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII=\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7\"/> <span title=\"Additional information about the event that occurred - e.g. if the status remained unchanged.\">description</span><a name=\"DiagnosticOrder.event.description\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">More information about the event and its context<br/><a title=\"Additional information about an event that occurred to a diagnostic order - e.g. if the status remained unchanged\" href=\"valueset-diagnostic-order-event.html\">DiagnosticOrderEventDescription</a> (<a title=\"These codes are an example of the type of codes that may be used\" href=\"terminologies.html#example\">Example</a>)</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4/x0ISQIM/0kGANNnY41GtlCWAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII=\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"The date/time at which the event occurred.\">dateTime</span><a name=\"DiagnosticOrder.event.dateTime\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#dateTime\">dateTime</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">The date at which the event happened</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII=\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII=\"/><img title=\"Reference to another Resource\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC\"/> <span title=\"The person who was responsible for performing or recording the action.\">actor</span><a name=\"DiagnosticOrder.event.actor\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"practitioner.html\">Practitioner</a> | <a href=\"device.html\">Device</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Who recorded or did this</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAD0lEQVR42mP4TzJgIF0LANmXY523xFiMAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII=\"/><img title=\"Element\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAMQfAOvGUf7ztuvPMf/78/fkl/Pbg+u8Rvjqteu2Pf3zxPz36Pz0z+vTmPzurPvuw/npofbjquvNefHVduuyN+uuMu3Oafbgjfnqvf/3zv/3xevPi+vRjP/20/bmsP///////yH5BAEAAB8ALAAAAAAQABAAAAV24CeOZGmepqeqqOgxjBZFa+19r4ftWQUAgqDgltthMshMIJAZ4jYDHsBARSAmFOJvq+g6HIdEFgcYmBWNxoNAsDjGHgBnmV5bCoUDHLBIq9sFEhIdcAYJdYASFRUQhQkLCwkOFwcdEBAXhVabE52ecDahKy0oIQA7\"/> <span title=\"The specific diagnostic investigations that are requested as part of this request. Sometimes, there can only be one item per request, but in most contexts, more than one investigation can be requested.\">item</span><a name=\"DiagnosticOrder.item\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"element.html\">Element</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">The items the orderer requested</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAFElEQVR42mP4////9/8kAYb/JAMA1odjlXxALpEAAAAASUVORK5CYII=)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg==\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7\"/> <span title=\"A code that identifies a particular diagnostic investigation, or panel of investigations, that have been requested.\">code</span><a name=\"DiagnosticOrder.item.code\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">1..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Code to indicate the item (test or panel) being ordered<br/><a title=\"Codes for tests/services that can be performed by diagnostic services\" href=\"valueset-diagnostic-requests.html\">DiagnosticRequests</a> (<a title=\"If one of the defined codes is appropriate, it must be used, or some other code may be used\" href=\"terminologies.html#incomplete\">Incomplete</a>)</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAFElEQVR42mP4////9/8kAYb/JAMA1odjlXxALpEAAAAASUVORK5CYII=)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg==\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Reference to another Resource\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC\"/> <span title=\"If the item is related to a specific specimen.\">specimen</span><a name=\"DiagnosticOrder.item.specimen\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"specimen.html\">Specimen</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">If this item relates to specific specimens</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAFElEQVR42mP4////9/8kAYb/JAMA1odjlXxALpEAAAAASUVORK5CYII=)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg==\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7\"/> <span title=\"Anatomical location where the request test should be performed.\">bodySite</span><a name=\"DiagnosticOrder.item.bodySite\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Location of requested test (if applicable)<br/><a title=\"Codes describing anatomical locations. May include laterality\" href=\"valueset-body-site.html\">BodySite</a> (<a title=\"These codes are an example of the type of codes that may be used\" href=\"terminologies.html#example\">Example</a>)</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAFElEQVR42mP4////9/8kAYb/JAMA1odjlXxALpEAAAAASUVORK5CYII=)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg==\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC\"/><img title=\"Primitive Data Type\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC\"/> <span title=\"The status of this individual item within the order.\">status</span><a name=\"DiagnosticOrder.item.status\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..1</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"><a href=\"datatypes.html#code\">code</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">requested | received | accepted | in progress | review | completed | suspended | rejected | failed<br/><a title=\"The status of a diagnostic order\" href=\"diagnostic-order-status.html\">DiagnosticOrderStatus</a> (<a title=\"One of the the defined codes must be used\" href=\"terminologies.html#code\">Required</a>)</td></tr>\r\n<tr style=\"border: 0px; padding:0px; vertical-align: top; background-color: white;\"><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAD0lEQVR42mP4TzJgIF0LANmXY523xFiMAAAAAElFTkSuQmCC)\" class=\"heirarchy\"><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg==\"/><img alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII=\"/><img title=\"Reference to another Element\" style=\"background-color: white;\" alt=\".\" class=\"heirarchy\" src=\"data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAKjSURBVDjLrZLdT1JhHMfd6q6L7voT3NrEuQq6aTircWFQ04u4MetCZ4UXGY2J1UoMdCoWxMZWDWtrrqHgylZ54RbkZtkiJ5aAku8MXXqQl3PgAOfb8xwq5LrOzmfnd34vn+d5tqcMQNm/UPZfBMHXx2ZWvI386odLe7jIL7w5EQ68qjhEOFjCmMj+v4LQmCwtCHkSCuSlFOIst4X1KU1mbUqT/kPki57bmL6xEnx55HxRMCqNCTkO6fUBpH5YkFoeBLsyAiHLEFcSQi5B2C38Z3eAPJ8JjcrmigKnLJ7nd8mwDcnFh4h/68T29FVsfW4F4zeCmb0LZqYDO191hOtkZ5sIuY8lioJhKZ9lo2DmbNjx9WDTowW7+YmsGv+9Ov3GijsgxwsNy7iiYOg4L54/nyawQC4lDubYANIRG7g1I9glHVILl5EMNCCXnEfouXSP4JksI+RY5OIfkWXGwf8cQSb6hAz2gV2+BXaxFangBSS/n0PCfxq5xAxCg3sFj2TpPB8Hvz2G3dWneOvqhLnPCIfDgd5uPebfNyAyrUR/t1bMmft7MdR1NiuXyw8UBDYpJ/AMkhsOPLa2wmKxIBqNIhwOw+Px4EG/Hvb7GoSCc2JucnJS7FEqlb2FizRwNMLHFmPvXnQJN/U6+Px+3LvdApVKiebmZlitVuj1ejFWqc7AZNCJEq1WGxMFAVPFtUCPZKhDXZUyGu6IAr+pklOclGNiYgI+nw9erxculws0N2uqjFOBwWDgSu61RCK50tLSwlBBfX39eE1NDa9QKFBXVydCY5qjNSqgvSWCw+RRqVTzZrOZcTqd2263G3a7HW1tbWhvbxdjmqM12kN7SwTl5eX7qqurq2pra5eampqSGo2GI2TUanUj4RSJ4zRHa7SH9v4C8Nrl+GFh7LoAAAAASUVORK5CYII=\"/> <span title=\"A summary of the events of interest that have occurred as this item of the request is processed.\">event</span><a name=\"DiagnosticOrder.item.event\"> </a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\"/><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">0..*</td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">see <a title=\"DiagnosticOrder.event\" href=\"#DiagnosticOrder.event\">event</a></td><td style=\"vertical-align: top; text-align : left; padding:0px 4px 0px 4px\" class=\"heirarchy\">Events specific to this item</td></tr>\r\n</table></div>"
+  },
+  "url": "http://hl7.org/fhir/Profile/DiagnosticOrder",
+  "name": "DiagnosticOrder",
+  "publisher": "HL7 FHIR Project (Orders and Observations)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "url",
+      "value": "http://www.hl7.org/Special/committees/orders/index.cfm"
+    }
+  ],
+  "description": "Base Profile for DiagnosticOrder Resource",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2"
+    }
+  ],
+  "type": "DiagnosticOrder",
+  "snapshot": {
+    "element": [
+      {
+        "path": "DiagnosticOrder",
+        "short": "A request for a diagnostic service",
+        "formal": "A request for a diagnostic investigation service to be performed.",
+        "synonym": [
+          "Report",
+          "Test",
+          "Result",
+          "Results",
+          "Labs",
+          "Laboratory"
+        ],
+        "min": 1,
+        "max": "1",
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Observation[classCode=OBS, moodCode=RQO, code<\"diagnostic order\"]"
+          },
+          {
+            "identity": "rim",
+            "map": "Observation[classCode=OBS, moodCode=RQO, code<\"diagnostic order\"]"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.id",
+        "short": "Logical id of this artefact",
+        "formal": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes.",
+        "comments": "The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.meta",
+        "short": "Metadata about the resource",
+        "formal": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
+        "min": 0,
+        "max": "1",
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.meta.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.meta.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.meta.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.meta.versionId",
+        "short": "Version specific identifier",
+        "formal": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted.",
+        "comments": "The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.meta.lastUpdated",
+        "short": "When the resource version last changed",
+        "formal": "When the resource last changed - e.g. when the version changed.",
+        "comments": "This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "instant"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.meta.profile",
+        "short": "Profiles this resource claims to conform to",
+        "formal": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url.",
+        "comments": "It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.meta.security",
+        "short": "Security Labels applied to this resource",
+        "formal": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
+        "comments": "The security labels can be updated without changing the stated version of the resource.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.meta.tag",
+        "short": "Tags applied",
+        "formal": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
+        "comments": "The tags can be updated without changing the stated version of the resource.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "formal": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
+        "comments": "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.language",
+        "short": "Language of the resource content",
+        "formal": "The base language in which the resource is written.",
+        "comments": "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "Language",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "A human language",
+          "referenceUri": "http://tools.ietf.org/html/bcp47"
+        }
+      },
+      {
+        "path": "DiagnosticOrder.text",
+        "short": "Text summary of the resource, for human interpretation",
+        "formal": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+        "comments": "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative.",
+        "synonym": [
+          "narrative",
+          "html",
+          "xhtml",
+          "display"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Narrative"
+          }
+        ],
+        "condition": [
+          "1"
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Act.text?"
+          },
+          {
+            "identity": "rim",
+            "map": "Act.text?"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.contained",
+        "short": "Contained, inline Resources",
+        "formal": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+        "comments": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
+        "synonym": [
+          "inline resources",
+          "anonymous resources",
+          "contained resources"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Resource"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.subject",
+        "short": "Who and/or what test is about",
+        "formal": "Who or what the investigation is to be performed on. This is usually a human patient, but diagnostic tests can also be requested on animals, groups of humans or animals, devices such as dialysis machines, or even locations (typically for environmental scans).",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Patient"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Group"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Location"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Device"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=SBJ].role"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=SBJ].role"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.orderer",
+        "short": "Who ordered the test",
+        "formal": "The practitioner that holds legal responsibility for ordering the investigation.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Practitioner"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=AUT].role"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=AUT].role"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.identifier",
+        "short": "Identifiers assigned to this order",
+        "formal": "Identifiers assigned to this order by the order or by the receiver.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".id"
+          },
+          {
+            "identity": "rim",
+            "map": ".id"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.encounter",
+        "short": "The encounter that this diagnostic order is associated with",
+        "formal": "An encounter that provides additional information about the healthcare context in which this request is made.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Encounter"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]"
+          },
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.clinicalNotes",
+        "short": "Explanation/Justification for test",
+        "formal": "An explanation or justification for why this diagnostic investigation is being requested.",
+        "comments": "This may be used to decide how the diagnostic investigation will be performed, or even if it will be performed at all.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".reasonCode.originalText"
+          },
+          {
+            "identity": "rim",
+            "map": ".reasonCode.originalText"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.supportingInformation",
+        "short": "Supporting observations or conditions for this request",
+        "formal": "Additional clinical information about the patient or specimen that may influence test interpretations.",
+        "comments": "This information includes diagnosis, clinical findings and other observations.  Examples include reporting the amount of inspired carbon dioxide for blood gasses, the point in the menstrual cycle for cervical pap tests, and other conditions that influence test interpretations.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Observation"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Condition"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBR-13"
+          },
+          {
+            "identity": "v2",
+            "map": "OBR-13"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.specimen",
+        "short": "If the whole order relates to specific specimens",
+        "formal": "One or more specimens that the diagnostic investigation is about.",
+        "comments": "Many investigation requests will create a need for specimens, but the request itself is not actually about the specimens. This is provided for when the diagnostic investigation is requested on already existing specimens.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Specimen"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=SPC].role"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=SPC].role"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.status",
+        "short": "requested | received | accepted | in progress | review | completed | suspended | rejected | failed",
+        "formal": "The status of the order.",
+        "comments": "Typically the system placing the order sets the status to requested. Thereafter, the order is maintained by the receiver that updates the status as the request is handled.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "DiagnosticOrderStatus",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "The status of a diagnostic order",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/diagnostic-order-status"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".statusCode\nalso influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"
+          },
+          {
+            "identity": "rim",
+            "map": ".statusCode\nalso influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.priority",
+        "short": "routine | urgent | stat | asap",
+        "formal": "The clinical priority associated with this order.",
+        "comments": "The Order resource also has a priority. Generally, these should be the same, but they can be different, for instance in the case where the clinician indicates that the order is urgent, but the subsequent workflow process overrule this priority for some reason. The effective default value is \"normal\".",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "DiagnosticOrderPriority",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "The clinical priority of a diagnostic order",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/diagnostic-order-priority"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".priorityCode"
+          },
+          {
+            "identity": "rim",
+            "map": ".priorityCode"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.event",
+        "name": "event",
+        "short": "A list of events of interest in the lifecycle",
+        "formal": "A summary of the events of interest that have occurred as the request is processed. E.g. when the order was made, various processing steps (specimens received), when it was completed.",
+        "comments": "This is not the same as an audit trail - it is a view of the important things that happened in the past. Typically, there would only be one entry for any given status, and systems may not record all the status events.",
+        "min": 0,
+        "max": "*",
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship[typeCode=FLFS].source"
+          },
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship[typeCode=FLFS].source"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.event.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.event.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.event.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.event.status",
+        "short": "requested | received | accepted | in progress | review | completed | suspended | rejected | failed",
+        "formal": "The status for the event.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "DiagnosticOrderStatus",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "The status of a diagnostic order",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/diagnostic-order-status"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".statusCode\nalso influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"
+          },
+          {
+            "identity": "rim",
+            "map": ".statusCode\nalso influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.event.description",
+        "short": "More information about the event and its context",
+        "formal": "Additional information about the event that occurred - e.g. if the status remained unchanged.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "DiagnosticOrderEventDescription",
+          "isExtensible": true,
+          "conformance": "example",
+          "description": "Additional information about an event that occurred to a diagnostic order - e.g. if the status remained unchanged",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/diagnostic-order-event"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".text"
+          },
+          {
+            "identity": "rim",
+            "map": ".text"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.event.dateTime",
+        "short": "The date at which the event happened",
+        "formal": "The date/time at which the event occurred.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".effectiveTime"
+          },
+          {
+            "identity": "rim",
+            "map": ".effectiveTime"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.event.actor",
+        "short": "Who recorded or did this",
+        "formal": "The person who was responsible for performing or recording the action.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Practitioner"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Device"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".participation[AUT or PFM]"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[AUT or PFM]"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item",
+        "short": "The items the orderer requested",
+        "formal": "The specific diagnostic investigations that are requested as part of this request. Sometimes, there can only be one item per request, but in most contexts, more than one investigation can be requested.",
+        "comments": "There would always be at least one item in normal usage, but this is optional so that a workflow can quote order details without having to list the items.",
+        "min": 0,
+        "max": "*",
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".outboundRelationship[typeCode=COMP].target[classCode=OBS, moodCode=OBS]"
+          },
+          {
+            "identity": "rim",
+            "map": ".outboundRelationship[typeCode=COMP].target[classCode=OBS, moodCode=OBS]"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item.code",
+        "short": "Code to indicate the item (test or panel) being ordered",
+        "formal": "A code that identifies a particular diagnostic investigation, or panel of investigations, that have been requested.",
+        "comments": "Many laboratory tests and radiology tests embed the specimen/organ system in the test name, for example,  serum or serum/plasma glucose, or a chest xray. The specimen may not be recorded separately from the test code.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "DiagnosticRequests",
+          "isExtensible": true,
+          "conformance": "preferred",
+          "description": "Codes for tests/services that can be performed by diagnostic services",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/diagnostic-requests"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBX-4"
+          },
+          {
+            "identity": "rim",
+            "map": ".code"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX-4"
+          },
+          {
+            "identity": "rim",
+            "map": ".code"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item.specimen",
+        "short": "If this item relates to specific specimens",
+        "formal": "If the item is related to a specific specimen.",
+        "comments": "A single specimen should not appear in both DiagnosticOrder.specimen and DiagnosticOrder.item.specimen.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Specimen"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=SPC].role"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=SPC].role"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item.bodySite",
+        "short": "Location of requested test (if applicable)",
+        "formal": "Anatomical location where the request test should be performed.",
+        "synonym": [
+          "location"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "BodySite",
+          "isExtensible": true,
+          "conformance": "example",
+          "description": "Codes describing anatomical locations. May include laterality",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/body-site"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "targetSiteCode"
+          },
+          {
+            "identity": "rim",
+            "map": "targetSiteCode"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item.status",
+        "short": "requested | received | accepted | in progress | review | completed | suspended | rejected | failed",
+        "formal": "The status of this individual item within the order.",
+        "comments": "If the request has multiple items that have their own life cycles, then the items will have their own status while the overall diagnostic order is (usually) \"in progress\".",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "DiagnosticOrderStatus",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "The status of a diagnostic order",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/diagnostic-order-status"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".statusCode\nalso influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"
+          },
+          {
+            "identity": "rim",
+            "map": ".statusCode\nalso influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item.event",
+        "short": "Events specific to this item",
+        "formal": "A summary of the events of interest that have occurred as this item of the request is processed.",
+        "min": 0,
+        "max": "*",
+        "nameReference": "event",
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship[typeCode=FLFS].source"
+          },
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship[typeCode=FLFS].source"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "path": "DiagnosticOrder",
+        "short": "A request for a diagnostic service",
+        "formal": "A request for a diagnostic investigation service to be performed.",
+        "synonym": [
+          "Report",
+          "Test",
+          "Result",
+          "Results",
+          "Labs",
+          "Laboratory"
+        ],
+        "min": 1,
+        "max": "1",
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Observation[classCode=OBS, moodCode=RQO, code<\"diagnostic order\"]"
+          },
+          {
+            "identity": "rim",
+            "map": "Observation[classCode=OBS, moodCode=RQO, code<\"diagnostic order\"]"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.subject",
+        "short": "Who and/or what test is about",
+        "formal": "Who or what the investigation is to be performed on. This is usually a human patient, but diagnostic tests can also be requested on animals, groups of humans or animals, devices such as dialysis machines, or even locations (typically for environmental scans).",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Patient"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Group"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Location"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Device"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=SBJ].role"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=SBJ].role"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.orderer",
+        "short": "Who ordered the test",
+        "formal": "The practitioner that holds legal responsibility for ordering the investigation.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Practitioner"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=AUT].role"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=AUT].role"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.identifier",
+        "short": "Identifiers assigned to this order",
+        "formal": "Identifiers assigned to this order by the order or by the receiver.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".id"
+          },
+          {
+            "identity": "rim",
+            "map": ".id"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.encounter",
+        "short": "The encounter that this diagnostic order is associated with",
+        "formal": "An encounter that provides additional information about the healthcare context in which this request is made.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Encounter"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]"
+          },
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.clinicalNotes",
+        "short": "Explanation/Justification for test",
+        "formal": "An explanation or justification for why this diagnostic investigation is being requested.",
+        "comments": "This may be used to decide how the diagnostic investigation will be performed, or even if it will be performed at all.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".reasonCode.originalText"
+          },
+          {
+            "identity": "rim",
+            "map": ".reasonCode.originalText"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.supportingInformation",
+        "short": "Supporting observations or conditions for this request",
+        "formal": "Additional clinical information about the patient or specimen that may influence test interpretations.",
+        "comments": "This information includes diagnosis, clinical findings and other observations.  Examples include reporting the amount of inspired carbon dioxide for blood gasses, the point in the menstrual cycle for cervical pap tests, and other conditions that influence test interpretations.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Observation"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Condition"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBR-13"
+          },
+          {
+            "identity": "v2",
+            "map": "OBR-13"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.specimen",
+        "short": "If the whole order relates to specific specimens",
+        "formal": "One or more specimens that the diagnostic investigation is about.",
+        "comments": "Many investigation requests will create a need for specimens, but the request itself is not actually about the specimens. This is provided for when the diagnostic investigation is requested on already existing specimens.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Specimen"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=SPC].role"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=SPC].role"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.status",
+        "short": "requested | received | accepted | in progress | review | completed | suspended | rejected | failed",
+        "formal": "The status of the order.",
+        "comments": "Typically the system placing the order sets the status to requested. Thereafter, the order is maintained by the receiver that updates the status as the request is handled.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "DiagnosticOrderStatus",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "The status of a diagnostic order",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/diagnostic-order-status"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".statusCode\nalso influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"
+          },
+          {
+            "identity": "rim",
+            "map": ".statusCode\nalso influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.priority",
+        "short": "routine | urgent | stat | asap",
+        "formal": "The clinical priority associated with this order.",
+        "comments": "The Order resource also has a priority. Generally, these should be the same, but they can be different, for instance in the case where the clinician indicates that the order is urgent, but the subsequent workflow process overrule this priority for some reason. The effective default value is \"normal\".",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "DiagnosticOrderPriority",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "The clinical priority of a diagnostic order",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/diagnostic-order-priority"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".priorityCode"
+          },
+          {
+            "identity": "rim",
+            "map": ".priorityCode"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.event",
+        "name": "event",
+        "short": "A list of events of interest in the lifecycle",
+        "formal": "A summary of the events of interest that have occurred as the request is processed. E.g. when the order was made, various processing steps (specimens received), when it was completed.",
+        "comments": "This is not the same as an audit trail - it is a view of the important things that happened in the past. Typically, there would only be one entry for any given status, and systems may not record all the status events.",
+        "min": 0,
+        "max": "*",
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship[typeCode=FLFS].source"
+          },
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship[typeCode=FLFS].source"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.event.status",
+        "short": "requested | received | accepted | in progress | review | completed | suspended | rejected | failed",
+        "formal": "The status for the event.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "DiagnosticOrderStatus",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "The status of a diagnostic order",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/diagnostic-order-status"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".statusCode\nalso influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"
+          },
+          {
+            "identity": "rim",
+            "map": ".statusCode\nalso influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.event.description",
+        "short": "More information about the event and its context",
+        "formal": "Additional information about the event that occurred - e.g. if the status remained unchanged.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "DiagnosticOrderEventDescription",
+          "isExtensible": true,
+          "conformance": "example",
+          "description": "Additional information about an event that occurred to a diagnostic order - e.g. if the status remained unchanged",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/diagnostic-order-event"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".text"
+          },
+          {
+            "identity": "rim",
+            "map": ".text"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.event.dateTime",
+        "short": "The date at which the event happened",
+        "formal": "The date/time at which the event occurred.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".effectiveTime"
+          },
+          {
+            "identity": "rim",
+            "map": ".effectiveTime"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.event.actor",
+        "short": "Who recorded or did this",
+        "formal": "The person who was responsible for performing or recording the action.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Practitioner"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Device"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".participation[AUT or PFM]"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[AUT or PFM]"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item",
+        "short": "The items the orderer requested",
+        "formal": "The specific diagnostic investigations that are requested as part of this request. Sometimes, there can only be one item per request, but in most contexts, more than one investigation can be requested.",
+        "comments": "There would always be at least one item in normal usage, but this is optional so that a workflow can quote order details without having to list the items.",
+        "min": 0,
+        "max": "*",
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".outboundRelationship[typeCode=COMP].target[classCode=OBS, moodCode=OBS]"
+          },
+          {
+            "identity": "rim",
+            "map": ".outboundRelationship[typeCode=COMP].target[classCode=OBS, moodCode=OBS]"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item.code",
+        "short": "Code to indicate the item (test or panel) being ordered",
+        "formal": "A code that identifies a particular diagnostic investigation, or panel of investigations, that have been requested.",
+        "comments": "Many laboratory tests and radiology tests embed the specimen/organ system in the test name, for example,  serum or serum/plasma glucose, or a chest xray. The specimen may not be recorded separately from the test code.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "DiagnosticRequests",
+          "isExtensible": true,
+          "conformance": "preferred",
+          "description": "Codes for tests/services that can be performed by diagnostic services",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/diagnostic-requests"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBX-4"
+          },
+          {
+            "identity": "rim",
+            "map": ".code"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX-4"
+          },
+          {
+            "identity": "rim",
+            "map": ".code"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item.specimen",
+        "short": "If this item relates to specific specimens",
+        "formal": "If the item is related to a specific specimen.",
+        "comments": "A single specimen should not appear in both DiagnosticOrder.specimen and DiagnosticOrder.item.specimen.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Specimen"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=SPC].role"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=SPC].role"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item.bodySite",
+        "short": "Location of requested test (if applicable)",
+        "formal": "Anatomical location where the request test should be performed.",
+        "synonym": [
+          "location"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "BodySite",
+          "isExtensible": true,
+          "conformance": "example",
+          "description": "Codes describing anatomical locations. May include laterality",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/body-site"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "targetSiteCode"
+          },
+          {
+            "identity": "rim",
+            "map": "targetSiteCode"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item.status",
+        "short": "requested | received | accepted | in progress | review | completed | suspended | rejected | failed",
+        "formal": "The status of this individual item within the order.",
+        "comments": "If the request has multiple items that have their own life cycles, then the items will have their own status while the overall diagnostic order is (usually) \"in progress\".",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "DiagnosticOrderStatus",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "The status of a diagnostic order",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/diagnostic-order-status"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".statusCode\nalso influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"
+          },
+          {
+            "identity": "rim",
+            "map": ".statusCode\nalso influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item.event",
+        "short": "Events specific to this item",
+        "formal": "A summary of the events of interest that have occurred as this item of the request is processed.",
+        "min": 0,
+        "max": "*",
+        "nameReference": "event",
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship[typeCode=FLFS].source"
+          },
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship[typeCode=FLFS].source"
+          }
+        ]
+      }
+    ]
+  }
+}

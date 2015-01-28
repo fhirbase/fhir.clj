@@ -1,0 +1,582 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "Describes a measurement, calculation or setting capability of a medical device."
+      }
+    ],
+    "linkId": "DeviceMetric",
+    "title": "Measurement, calculation or setting capability of a medical device",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "DeviceMetric.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DeviceMetric.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "DeviceMetric.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "DeviceMetric.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DeviceMetric.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "DeviceMetric.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DeviceMetric.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "DeviceMetric.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DeviceMetric.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "DeviceMetric.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DeviceMetric.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "DeviceMetric.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DeviceMetric.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "DeviceMetric.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DeviceMetric.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "DeviceMetric.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DeviceMetric.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "DeviceMetric.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DeviceMetric.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Describes the type of the metric. For example: Heart Rate, PEEP Setting, etc."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "DeviceMetric.type",
+        "text": "Type of metric",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DeviceMetric.type.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "DeviceMetric.type.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Describes the unique identification of this metric that has been assigned by the device or gateway software. For example: handle ID. \nIt should be noted that in order to make the identifier unique, the system element of the identifier should be set to the unique identifier of the device."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Identifier"
+          }
+        ],
+        "linkId": "DeviceMetric.identifier",
+        "text": "Unique identifier of this DeviceMetric",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DeviceMetric.identifier.label",
+            "text": "label:",
+            "type": "string"
+          },
+          {
+            "linkId": "DeviceMetric.identifier.system",
+            "text": "system:",
+            "type": "string"
+          },
+          {
+            "linkId": "DeviceMetric.identifier.value",
+            "text": "value:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Describes the unit that an observed value determined for this metric will have. For example: Percent, Seconds, etc."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "DeviceMetric.unit",
+        "text": "Unit of metric",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DeviceMetric.unit.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "DeviceMetric.unit.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Describes the link to the  Device that this DeviceMetric belongs to and that contains administrative device information such as manufacture, serial number, etc."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "DeviceMetric.source",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Device?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "DeviceMetric.source.value",
+            "text": "Describes the link to the source Device",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Describes the link to the  DeviceComponent that this DeviceMetric belongs to and that provide information about the location of this DeviceMetric in the containment structure of the parent Device.\nAn example would be a DeviceComponent that represents a Channel. This reference can be used by a client application to distinguish DeviceMetrics that have the same type, but should be interpreted based on their containment location."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "DeviceMetric.parent",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/DeviceComponent?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "DeviceMetric.parent.value",
+            "text": "Describes the link to the parent DeviceComponent",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Indicates current operational state of the device. For example: On, Off, Standby, etc."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "DeviceMetric.operationalState",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DeviceMetric.operationalState.value",
+            "text": "operational state",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Describes the physical principle of the measurement. For example: thermal, chemical, acoustical, etc."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Identifier"
+          }
+        ],
+        "linkId": "DeviceMetric.measurementMode",
+        "text": "Describes the physical principle of the measurement",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DeviceMetric.measurementMode.label",
+            "text": "label:",
+            "type": "string"
+          },
+          {
+            "linkId": "DeviceMetric.measurementMode.system",
+            "text": "system:",
+            "type": "string"
+          },
+          {
+            "linkId": "DeviceMetric.measurementMode.value",
+            "text": "value:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Describes the typical color of the representation of observations that have been generated for this DeviceMetric."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Identifier"
+          }
+        ],
+        "linkId": "DeviceMetric.color",
+        "text": "Describes the typical color of representation",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DeviceMetric.color.label",
+            "text": "label:",
+            "type": "string"
+          },
+          {
+            "linkId": "DeviceMetric.color.system",
+            "text": "system:",
+            "type": "string"
+          },
+          {
+            "linkId": "DeviceMetric.color.value",
+            "text": "value:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Indicates the category of the observation generation process. A DeviceMetric can be for example a setting, measurement, or calculation."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "DeviceMetric.category",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DeviceMetric.category.value",
+            "text": "category",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Describes the measurement repetition time. This is not\nnecessarily the same as the update\nperiod."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Schedule"
+          }
+        ],
+        "linkId": "DeviceMetric.measurementPeriod",
+        "text": "Describes the measurement repetition time",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Describes the calibrations that have been performed or that are required to be performed."
+          }
+        ],
+        "linkId": "DeviceMetric.calibrationInfo",
+        "title": "Describes the calibrations that have been performed or that are required to be performed",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "DeviceMetric.calibrationInfo.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DeviceMetric.calibrationInfo.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Describes the type of the calibration method."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "code"
+              }
+            ],
+            "linkId": "DeviceMetric.calibrationInfo.type",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DeviceMetric.calibrationInfo.type.value",
+                "text": "type",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Describes the state of the calibration."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "code"
+              }
+            ],
+            "linkId": "DeviceMetric.calibrationInfo.state",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DeviceMetric.calibrationInfo.state.value",
+                "text": "state",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Describes the time last calibration has been performed."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "DeviceMetric.calibrationInfo.time",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DeviceMetric.calibrationInfo.time.value",
+                "text": "Describes the time last calibration has been performed",
+                "type": "instant"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

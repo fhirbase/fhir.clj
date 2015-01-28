@@ -1,0 +1,35 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "additionalobservationid",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/additionalobservationid",
+  "name": "Additional identifier",
+  "publisher": "HL7 International - Orders and Observations WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org"
+    }
+  ],
+  "description": "This extension is used when there are multiple observation identifiers for a single observation .  The Observation.identifier is the first identifier for this observation and any additional identifiers will go here.",
+  "status": "draft",
+  "date": "2014-09-20",
+  "contextType": "resource",
+  "context": [
+    "Observation"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Additional identifier",
+      "formal": "This extension is used when there are multiple observation identifiers for a single observation .  The Observation.identifier is the first identifier for this observation and any additional identifiers will go here.",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

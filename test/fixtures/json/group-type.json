@@ -1,0 +1,67 @@
+{
+  "resourceType": "ValueSet",
+  "id": "group-type",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 6 concepts</p><h2>GroupType</h2><p>Types of resources that are part of group</p><p>This value set defines its own terms in the system http://hl7.org/fhir/group-type</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>person<a name=\"person\"> </a></td><td>Group contains &quot;person&quot; Patient resources.</td></tr><tr><td>animal<a name=\"animal\"> </a></td><td>Group contains &quot;animal&quot; Patient resources.</td></tr><tr><td>practitioner<a name=\"practitioner\"> </a></td><td>Group contains healthcare practitioner resources.</td></tr><tr><td>device<a name=\"device\"> </a></td><td>Group contains Device resources.</td></tr><tr><td>medication<a name=\"medication\"> </a></td><td>Group contains Medication resources.</td></tr><tr><td>substance<a name=\"substance\"> </a></td><td>Group contains Substance resources.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.74"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/group-type",
+  "name": "GroupType",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Types of resources that are part of group",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.489+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.74"
+      }
+    ],
+    "system": "http://hl7.org/fhir/group-type",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "person",
+        "definition": "Group contains \"person\" Patient resources."
+      },
+      {
+        "code": "animal",
+        "definition": "Group contains \"animal\" Patient resources."
+      },
+      {
+        "code": "practitioner",
+        "definition": "Group contains healthcare practitioner resources."
+      },
+      {
+        "code": "device",
+        "definition": "Group contains Device resources."
+      },
+      {
+        "code": "medication",
+        "definition": "Group contains Medication resources."
+      },
+      {
+        "code": "substance",
+        "definition": "Group contains Substance resources."
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "conformance-common-prohibited",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/conformance-common-prohibited",
+  "name": "Functionality not allowed",
+  "display": "Conformance prohibition",
+  "publisher": "Health Level Seven, Inc. - [WG Name] WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/special/committees/fhir.htm"
+    }
+  ],
+  "description": "If set to true, indicates that support for the specified behavior would make a system non=conformant with the specification.",
+  "status": "draft",
+  "date": "2014-04-12",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "resource",
+  "context": [
+    "Conformance.rest.resource.interaction",
+    "Conformance.rest.resource.searchParam",
+    "Conformance.rest.operation",
+    "Conformance.messaging.event",
+    "Conformance.document",
+    "Conformance.rest.interaction"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Functionality not allowed",
+      "formal": "If set to true, indicates that support for the specified behavior would make a system non=conformant with the specification.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isSummary": false,
+      "mapping": [
+        {
+          "identity": "v2",
+          "map": "N/A"
+        },
+        {
+          "identity": "rim",
+          "map": "N/A"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "resourceType": "Profile",
+  "id": "integer",
+  "text": {
+    "status": "generated",
+    "div": "<div>to do</div>"
+  },
+  "url": "http://hl7.org/fhir/Profile/integer",
+  "name": "integer",
+  "publisher": "HL7 FHIR Standard",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "Base Profile for integer Resource: A whole number",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "type": "integer",
+  "base": "http://hl7.org/fhir/Profile/Element",
+  "snapshot": {
+    "element": [
+      {
+        "path": "integer",
+        "short": "Primitive Type integer",
+        "formal": "A whole number",
+        "comments": "32 bit number; for values larger than this, use decimal",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "integer.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "value",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "Primitive value for integer",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "xsd:int"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "path": "integer",
+        "short": "Primitive Type integer",
+        "formal": "A whole number",
+        "comments": "32 bit number; for values larger than this, use decimal",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "value",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "Primitive value for integer",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "xsd:int"
+          }
+        ]
+      }
+    ]
+  }
+}

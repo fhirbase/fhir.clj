@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-administration-method-codes",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div>\n      <p>The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or contains method of administration concepts.</p>\n      <p>Possible sources include:</p>\n      <ul>\n        <li>SNOMED CT - Children of SCTID: 107733003 &quot;introduction (procedure)&quot; (note: not all concepts in this subset may be suitable)</li>\n        <li>ISO 11239 - Administration methods</li>\n      </ul>\n      <p>SNOMED CT is being used here as the example terminology.</p>\n      <p>Note: to avoid confusion with other attributes in this resource concepts that are pre-coordinated with  site and/or route \n        of administration (e.g. &quot;intravenous infusion&quot; where &quot;intravenous&quot; is the route or &quot;rub into left hand&quot; where &quot;left hand&quot; \n        is the site) should not be used in this value set\n      </p>\n    </div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.94"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/administration-method-codes",
+  "name": "SNOMED CT Inroduction (procedure) for Administration Method Codes",
+  "publisher": "FHIR Project team",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "This value set includes some introduction (procedure) codes from SNOMED CT - provided as an exemplar",
+  "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement",
+  "status": "draft",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "107733003"
+          }
+        ]
+      }
+    ]
+  }
+}

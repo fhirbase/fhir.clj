@@ -1,0 +1,49 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "cda-guardian-id",
+  "meta": {
+    "lastUpdated": "2014-11-05T20:31:00Z"
+  },
+  "url": "http://hl7.org/fhir/ExtensionDefinition/cda-guardian-id",
+  "name": "CDA Guardian Identifier",
+  "publisher": "HL7 FHIR Project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "Standard Profile for CDA R2 on FHIR",
+  "status": "draft",
+  "date": "2014-11-05",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "resource",
+  "context": [
+    "Patient.contact"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "The Guardian's id",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Identifier"
+        }
+      ],
+      "mapping": [
+        {
+          "identity": "rim",
+          "map": "Role.id"
+        }
+      ]
+    }
+  ]
+}

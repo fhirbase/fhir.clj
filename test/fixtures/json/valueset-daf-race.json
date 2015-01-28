@@ -1,0 +1,60 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-daf-race",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 5 concepts</p><h2>MU Race Value Set</h2><p>Meaningful use race code. The 5 base codes (see http://forum.sitenv.org/viewtopic.php?f=16&amp;t=23&amp;sid=8fb101254557843fa05ac94d8d83a095) from PHIN VADS https://phinvads.cdc.gov/vads/ViewValueSet.action?id=94E75E17-176B-DE11-9B52-0015173D1785 (oid: 2.16.840.1.113883.1.11.14914)</p><p>This value set includes codes defined in other code systems, using the following rules:</p><ul><li>Include these codes as defined in <a href=\"v3/Race/index.html\">http://hl7.org/fhir/v3/Race</a><table><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td>1002-5</td><td>American Indian or Alaska Native</td><td/></tr><tr><td>2028-9</td><td>Asian</td><td/></tr><tr><td>2054-5</td><td>Black or African American</td><td/></tr><tr><td>2076-8</td><td>Native Hawaiian or Other Pacific Islander</td><td/></tr><tr><td>2106-3</td><td>White</td><td/></tr></table></li></ul></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.1.11.14914"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/daf-race",
+  "name": "MU Race Value Set",
+  "publisher": "DAF Project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "url",
+      "value": "http://wiki.siframework.org/Data+Access+Framework+Homepage"
+    }
+  ],
+  "description": "Meaningful use race code. The 5 base codes (see http://forum.sitenv.org/viewtopic.php?f=16&t=23&sid=8fb101254557843fa05ac94d8d83a095) from PHIN VADS https://phinvads.cdc.gov/vads/ViewValueSet.action?id=94E75E17-176B-DE11-9B52-0015173D1785 (oid: 2.16.840.1.113883.1.11.14914)",
+  "status": "active",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/v3/Race",
+        "concept": [
+          {
+            "code": "1002-5",
+            "display": "American Indian or Alaska Native"
+          },
+          {
+            "code": "2028-9",
+            "display": "Asian"
+          },
+          {
+            "code": "2054-5",
+            "display": "Black or African American"
+          },
+          {
+            "code": "2076-8",
+            "display": "Native Hawaiian or Other Pacific Islander"
+          },
+          {
+            "code": "2106-3",
+            "display": "White"
+          }
+        ]
+      }
+    ]
+  }
+}

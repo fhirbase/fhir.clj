@@ -1,0 +1,63 @@
+{
+  "resourceType": "ValueSet",
+  "id": "allergy-intolerance-status",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 4 concepts</p><h2>AllergyIntoleranceStatus</h2><p>Assertion about certainty associated with a propensity, or potential risk, of a reaction to the identified Substance</p><p>This value set defines its own terms in the system http://hl7.org/fhir/allergy-intolerance-status</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>unconfirmed<a name=\"unconfirmed\"> </a></td><td>Unconfirmed</td><td>A low level of certainty about the propensity for a reaction to the identified Substance.</td></tr><tr><td>confirmed<a name=\"confirmed\"> </a></td><td>Confirmed</td><td>A high level of certainty about the propensity for a reaction to the identified Substance, which may include clinical evidence by testing or rechallenge.</td></tr><tr><td>resolved<a name=\"resolved\"> </a></td><td>Resolved</td><td>A reaction to the identified Substance has been clinically reassessed by testing or rechallenge and considered to be resolved.</td></tr><tr><td>refuted<a name=\"refuted\"> </a></td><td>Refuted</td><td>A propensity for a reaction to the identified Substance has been disproven with a high level of clinical certainty, which may include testing or rechallenge, and is refuted.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.478"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/allergy-intolerance-status",
+  "name": "AllergyIntoleranceStatus",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Assertion about certainty associated with a propensity, or potential risk, of a reaction to the identified Substance",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.494+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.478"
+      }
+    ],
+    "system": "http://hl7.org/fhir/allergy-intolerance-status",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "unconfirmed",
+        "display": "Unconfirmed",
+        "definition": "A low level of certainty about the propensity for a reaction to the identified Substance."
+      },
+      {
+        "code": "confirmed",
+        "display": "Confirmed",
+        "definition": "A high level of certainty about the propensity for a reaction to the identified Substance, which may include clinical evidence by testing or rechallenge."
+      },
+      {
+        "code": "resolved",
+        "display": "Resolved",
+        "definition": "A reaction to the identified Substance has been clinically reassessed by testing or rechallenge and considered to be resolved."
+      },
+      {
+        "code": "refuted",
+        "display": "Refuted",
+        "definition": "A propensity for a reaction to the identified Substance has been disproven with a high level of clinical certainty, which may include testing or rechallenge, and is refuted."
+      }
+    ]
+  }
+}

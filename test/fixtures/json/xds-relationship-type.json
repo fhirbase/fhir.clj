@@ -1,0 +1,63 @@
+{
+  "resourceType": "ValueSet",
+  "id": "xds-relationship-type",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 5 concepts</p><h2>XDSRelationshipType</h2><p>The kind of relationship between two XDS documents</p><p>This value set defines its own terms in the system http://hl7.org/fhir/xds-relationship-type</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>APND<a name=\"APND\"> </a></td><td>A separate XDS Document that references a prior document, and may extend or \nalter the observations in the prior document.</td></tr><tr><td>RPLC<a name=\"RPLC\"> </a></td><td>A new version of an existing document.</td></tr><tr><td>XFRM<a name=\"XFRM\"> </a></td><td>A transformed document is derived by a machine translation from some other format.</td></tr><tr><td>XFRM_RPLC<a name=\"XFRM_RPLC\"> </a></td><td>Both a XFRM and a RPLC relationship.</td></tr><tr><td>signs<a name=\"signs\"> </a></td><td>This document signs the target document.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.242"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/xds-relationship-type",
+  "name": "XDSRelationshipType",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "The kind of relationship between two XDS documents",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.491+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.242"
+      }
+    ],
+    "system": "http://hl7.org/fhir/xds-relationship-type",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "APND",
+        "definition": "A separate XDS Document that references a prior document, and may extend or \nalter the observations in the prior document."
+      },
+      {
+        "code": "RPLC",
+        "definition": "A new version of an existing document."
+      },
+      {
+        "code": "XFRM",
+        "definition": "A transformed document is derived by a machine translation from some other format."
+      },
+      {
+        "code": "XFRM_RPLC",
+        "definition": "Both a XFRM and a RPLC relationship."
+      },
+      {
+        "code": "signs",
+        "definition": "This document signs the target document."
+      }
+    ]
+  }
+}

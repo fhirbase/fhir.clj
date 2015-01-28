@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="uslab-example1"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+			
+			
+      <ul>
+				
+        <li>file: patient-uslab-example1.xml</li>
+				
+        <li> id: uslab-example1</li>
+				
+        <li> Name: USLab Patient Example1 </li>
+				
+        <li>Description: USLab Patient Profile Canonical Example: Todd Lerr</li>
+			
+      </ul>
+		
+    </div>
+  </text>
+  <extension url="http://hl7.org/fhir/ExtensionDefinition/us-core-race">
+    <valueCodeableConcept>
+      <coding>
+        <code value="2106-3"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <extension url="http://hl7.org/fhir/ExtensionDefinition/us-core-ethnicity">
+    <valueCodeableConcept>
+      <coding>
+        <code value="2135-2"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension><!--   EH: limit to single identifier that orderer can match to patient system can be URL   -->
+  <identifier>
+    <use value="usual"/>
+    <system value="urn:oid:2.16.840.1.113883.3.72.5.30.2"/>
+    <value value="18547545"/>
+  </identifier><!--  name use limited to official and anonymous  -->
+  <name>
+    <use value="official"/>
+    <family value="Lerr"/>
+    <given value="Todd"/>
+    <given value="G."/>
+    <suffix value="Jr"/>
+  </name><!--   use FHIR code system for male / female   -->
+  <gender value="male"/>
+  <birthDate value="2012-06-07"/>
+  <deceasedBoolean value="false"/>
+  <address>
+    <use value="home"/>
+    <line value="123 North 102nd Street"/>
+    <line value="Apt 4d"/>
+    <city value="Harrisburg"/>
+    <state value="PA"/>
+    <postalCode value="17102"/>
+    <country value="USA"/>
+  </address>
+</Patient>

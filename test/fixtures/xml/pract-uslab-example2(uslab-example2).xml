@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="uslab-example2"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+			
+      <ul>
+				
+        <li>file: pract-uslab-example2.xml</li>
+				
+        <li> id: uslab-example2</li>
+				
+        <li> Name: USLab PHPractitioner Example2 </li>
+				
+        <li>Description: USLab PHPractitioner Canonical Example: DR Bill T Lookafter JR
+</li>
+			
+      </ul>
+		
+    </div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <label value="NPI"/>
+    <value value="121121121"/>
+    <assigner>
+      <reference value="https://nppes.cms.hhs.gov/NPPES/"/>
+      <display value="The Centers for Medicare and Medicaid Services (CMS) National Plan and Provider Enumeration System (NPPES)"/>
+    </assigner>
+  </identifier>
+  <name>
+    <family value="Lookafter"/>
+    <given value="Bill"/>
+    <given value="T"/>
+    <suffix value="Jr"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="(617)5551234 ext.12"/>
+  </telecom>
+  <telecom>
+    <system value="email"/>
+    <value value="docbill@healthedatainc.com"/>
+  </telecom>
+  <address><!--   EH replace with example.org temporarily to pass validation
+<extension url="http://hl7.org/fhir/ExtensionDefinition/us-core-county">
+			<extension url="http://hl7.org/fhir/ExtensionDefinition/iso21090-SC-coding">
+  -->
+    <extension url="http://example.org/us-core-county">
+      <extension url="http://example.org//iso21090-SC-coding">
+        <valueCoding>
+          <system value="https://www.census.gov/geo/reference"/>
+          <code value="42043"/>
+        </valueCoding>
+      </extension>
+    </extension>
+    <use value="work"/>
+    <line value="100 Medical Drive"/>
+    <line value="Suite 6"/>
+    <city value="Boston"/>
+    <state value="MA"/>
+    <postalCode value="01236"/>
+    <country value="USA"/>
+  </address>
+  <organization>
+    <reference value="Organization/uslab-example1"/>
+    <display value="Children&#39;s Hospital"/>
+  </organization>
+</Practitioner>

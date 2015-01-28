@@ -1,0 +1,55 @@
+{
+  "resourceType": "ValueSet",
+  "id": "media-type",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 3 concepts</p><h2>MediaType</h2><p>Whether the Media is a photo, video, or audio</p><p>This value set defines its own terms in the system http://hl7.org/fhir/media-type</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>photo<a name=\"photo\"> </a></td><td>The media consists of one or more unmoving images, including photographs, computer-generated graphs and charts, and scanned documents.</td></tr><tr><td>video<a name=\"video\"> </a></td><td>The media consists of a series of frames that capture a moving image.</td></tr><tr><td>audio<a name=\"audio\"> </a></td><td>The media consists of a sound recording.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.235"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/media-type",
+  "name": "MediaType",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Whether the Media is a photo, video, or audio",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.492+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.235"
+      }
+    ],
+    "system": "http://hl7.org/fhir/media-type",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "photo",
+        "definition": "The media consists of one or more unmoving images, including photographs, computer-generated graphs and charts, and scanned documents."
+      },
+      {
+        "code": "video",
+        "definition": "The media consists of a series of frames that capture a moving image."
+      },
+      {
+        "code": "audio",
+        "definition": "The media consists of a sound recording."
+      }
+    ]
+  }
+}

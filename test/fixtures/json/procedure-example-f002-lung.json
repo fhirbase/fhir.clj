@@ -1,0 +1,66 @@
+{
+  "resourceType": "Procedure",
+  "id": "f002",
+  "patient": {
+    "reference": "Patient/f001",
+    "display": "P. van de Heuvel"
+  },
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "359615001",
+        "display": "Partial lobectomy of lung"
+      }
+    ]
+  },
+  "bodySite": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "39607008",
+          "display": "Lung structure"
+        }
+      ]
+    }
+  ],
+  "indication": [
+    {
+      "text": "Malignant tumor of lung"
+    }
+  ],
+  "performer": [
+    {
+      "person": {
+        "reference": "Practitioner/f003",
+        "display": "M.I.M. Versteegh"
+      },
+      "role": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.2.4.15.111",
+            "code": "01.000",
+            "display": "Arts"
+          }
+        ],
+        "text": "Care role"
+      }
+    }
+  ],
+  "date": {
+    "start": "2013-03-08T09:00:10+01:00",
+    "end": "2013-03-08T09:30:10+01:00"
+  },
+  "encounter": {
+    "reference": "Encounter/f002"
+  },
+  "outcome": "improved blood circulation",
+  "report": [
+    {
+      "reference": "DiagnosticReport/f001",
+      "display": "Lab results blood test"
+    }
+  ],
+  "followUp": "described in care plan"
+}

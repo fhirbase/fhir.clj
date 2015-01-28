@@ -1,0 +1,34 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-units",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div>\n      This value set includes all UCUM codes\n    <hr/><p>This value set does not contain a fixed number of concepts</p><h2>UCUM Codes</h2><p>This value set includes all UCUM codes</p><p>This value set includes codes defined in other code systems, using the following rules:</p><ul><li>Include all codes defined in http://unitsofmeasure.org</li></ul></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.383"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/units",
+  "name": "UCUM Codes",
+  "publisher": "FHIR Project team",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "This value set includes all UCUM codes",
+  "status": "draft",
+  "compose": {
+    "include": [
+      {
+        "system": "http://unitsofmeasure.org"
+      }
+    ]
+  }
+}

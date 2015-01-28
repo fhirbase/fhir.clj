@@ -1,0 +1,73 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "conformance-common-expectation",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/conformance-common-expectation",
+  "name": "SHALL | SHOULD | MAY |SHOULD NOT",
+  "display": "Conformance expectation",
+  "publisher": "Health Level Seven, Inc. - [WG Name] WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/special/committees/fhir.htm"
+    }
+  ],
+  "description": "Defines the level of expectation associated with a given system capability.",
+  "status": "draft",
+  "date": "2014-04-12",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "resource",
+  "context": [
+    "Conformance.rest.resource.interaction",
+    "Conformance.rest.resource.searchParam",
+    "Conformance.rest.operation",
+    "Conformance.messaging.event",
+    "Conformance.document",
+    "Conformance.rest.interaction"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "SHALL | SHOULD | MAY |SHOULD NOT",
+      "formal": "Defines the level of expectation associated with a given system capability.",
+      "comments": "If \"SHALL NOT\" is desired, use the \"prohibited\" modifier extension.\n\nThis extension should only be used with conformance profiles documenting requirements, not those documenting actual system capabilities.",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isSummary": false,
+      "binding": {
+        "name": "ConformanceExpectation",
+        "isExtensible": false,
+        "conformance": "required",
+        "description": "Indicates the degree of adherence to a specified behavior or capability expected in order for a system to be deemed conformant with a specification",
+        "referenceReference": {
+          "reference": "http://hl7.org/fhir/vs/conformance-expectation"
+        }
+      },
+      "mapping": [
+        {
+          "identity": "v2",
+          "map": "N/A"
+        },
+        {
+          "identity": "rim",
+          "map": "N/A"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "v2-administrative-gender",
+  "text": {
+    "status": "generated",
+    "div": "<div><h2>v2 map for AdministrativeGender (http://hl7.org/fhir/cm/v2/administrative-gender)</h2><p>Mapping from <a href=\"administrative-gender.html\">http://hl7.org/fhir/vs/administrative-gender</a> to <a href=\"v2/0001/index.html\">http://hl7.org/fhir/v2/vs/0001</a></p><p>DRAFT. Published on 12-Dec 2014 13:18 by HL7 (FHIR Project) (<a href=\"http://hl7.org/fhir\">http://hl7.org/fhir</a>, <a href=\"mailto:fhir@lists.hl7.org\">fhir@lists.hl7.org</a>). </p><p>v2 Map (0001)</p><br/><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Equivalence</b></td><td><b>Destination Code</b></td></tr><tr><td>male</td><td>equal</td><td>M (Male)</td></tr><tr><td>female</td><td>equal</td><td>F (Female)</td></tr><tr><td>other</td><td>wider</td><td>A (Ambiguous)</td></tr><tr><td>other</td><td>wider</td><td>O (Other)</td></tr><tr><td>unknown</td><td>equal</td><td>U (Unknown)</td></tr></table></div>"
+  },
+  "identifier": "http://hl7.org/fhir/cm/v2/administrative-gender",
+  "name": "v2 map for AdministrativeGender",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "v2 Map (0001)",
+  "status": "draft",
+  "date": "2014-12-12T13:18:46.496+11:00",
+  "sourceReference": {
+    "reference": "http://hl7.org/fhir/vs/administrative-gender"
+  },
+  "targetReference": {
+    "reference": "http://hl7.org/fhir/v2/vs/0001"
+  },
+  "element": [
+    {
+      "codeSystem": "http://hl7.org/fhir/administrative-gender",
+      "code": "male",
+      "map": [
+        {
+          "codeSystem": "http://hl7.org/fhir/v2/0001",
+          "code": "M",
+          "equivalence": "equal"
+        }
+      ]
+    },
+    {
+      "codeSystem": "http://hl7.org/fhir/administrative-gender",
+      "code": "female",
+      "map": [
+        {
+          "codeSystem": "http://hl7.org/fhir/v2/0001",
+          "code": "F",
+          "equivalence": "equal"
+        }
+      ]
+    },
+    {
+      "codeSystem": "http://hl7.org/fhir/administrative-gender",
+      "code": "other",
+      "map": [
+        {
+          "codeSystem": "http://hl7.org/fhir/v2/0001",
+          "code": "A",
+          "equivalence": "wider"
+        }
+      ]
+    },
+    {
+      "codeSystem": "http://hl7.org/fhir/administrative-gender",
+      "code": "other",
+      "map": [
+        {
+          "codeSystem": "http://hl7.org/fhir/v2/0001",
+          "code": "O",
+          "equivalence": "wider"
+        }
+      ]
+    },
+    {
+      "codeSystem": "http://hl7.org/fhir/administrative-gender",
+      "code": "unknown",
+      "map": [
+        {
+          "codeSystem": "http://hl7.org/fhir/v2/0001",
+          "code": "U",
+          "equivalence": "equal"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "resourceType": "ValueSet",
+  "id": "medication-dispense-status",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 5 concepts</p><h2>MedicationDispenseStatus</h2><p>A code specifying the state of the dispense event.<br/><br/>Describes the lifecycle of the dispense.</p><p>This value set defines its own terms in the system http://hl7.org/fhir/medication-dispense-status</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td><td><b><a href=\"v3\\ActStatus\\index.html\">v3 Map (ctStatus)</a></b></td></tr><tr><td>in progress<a name=\"inprogress\"> </a></td><td>The dispense has started but has not yet completed.</td><td><span title=\"null\"></span><a href=\"v3\\ActStatus\\index.html#active\">active</a></td></tr><tr><td>on hold<a name=\"onhold\"> </a></td><td>Actions implied by the administration have been temporarily halted, but are expected to continue later. May also be called &quot;suspended&quot;.</td><td><span title=\"null\"></span><a href=\"v3\\ActStatus\\index.html#suspended\">suspended</a></td></tr><tr><td>completed<a name=\"completed\"> </a></td><td>All actions that are implied by the dispense have occurred.</td><td><span title=\"null\"></span><a href=\"v3\\ActStatus\\index.html#completed\">completed</a></td></tr><tr><td>entered in error<a name=\"enteredinerror\"> </a></td><td>The dispense was entered in error and therefore nullified.</td><td><span title=\"null\"></span><a href=\"v3\\ActStatus\\index.html#nullified\">nullified</a></td></tr><tr><td>stopped<a name=\"stopped\"> </a></td><td>Actions implied by the dispense have been permanently halted, before all of them occurred.</td><td><span title=\"null\"></span><a href=\"v3\\ActStatus\\index.html#aborted\">aborted</a></td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.101"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/medication-dispense-status",
+  "name": "MedicationDispenseStatus",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "A code specifying the state of the dispense event.\r\n\r\nDescribes the lifecycle of the dispense.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.488+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.101"
+      }
+    ],
+    "system": "http://hl7.org/fhir/medication-dispense-status",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "in progress",
+        "definition": "The dispense has started but has not yet completed."
+      },
+      {
+        "code": "on hold",
+        "definition": "Actions implied by the administration have been temporarily halted, but are expected to continue later. May also be called \"suspended\"."
+      },
+      {
+        "code": "completed",
+        "definition": "All actions that are implied by the dispense have occurred."
+      },
+      {
+        "code": "entered in error",
+        "definition": "The dispense was entered in error and therefore nullified."
+      },
+      {
+        "code": "stopped",
+        "definition": "Actions implied by the dispense have been permanently halted, before all of them occurred."
+      }
+    ]
+  }
+}

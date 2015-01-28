@@ -1,0 +1,89 @@
+{
+  "resourceType": "Condition",
+  "id": "f203",
+  "subject": {
+    "reference": "Patient/f201",
+    "display": "Roel"
+  },
+  "encounter": {
+    "reference": "Encounter/f203",
+    "display": "Roel's encounter on March eleventh"
+  },
+  "asserter": {
+    "reference": "Practitioner/f201"
+  },
+  "dateAsserted": "2013-03-11",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "10001005",
+        "display": "Bacterial sepsis"
+      }
+    ]
+  },
+  "category": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "55607006",
+        "display": "Problem"
+      },
+      {
+        "system": "http://hl7.org/fhir/condition-category",
+        "code": "finding"
+      }
+    ]
+  },
+  "status": "confirmed",
+  "certainty": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "17162000",
+        "display": "Certain"
+      }
+    ]
+  },
+  "severity": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "371924009",
+        "display": "Moderate to severe"
+      }
+    ]
+  },
+  "onsetDateTime": "2013-03-08",
+  "evidence": [
+    {
+      "detail": [
+        {
+          "reference": "DiagnosticReport/f202",
+          "display": "Diagnostic report for Roel's sepsis"
+        }
+      ]
+    }
+  ],
+  "location": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "281158006",
+            "display": "Pulmonary vascular structure"
+          }
+        ]
+      }
+    }
+  ],
+  "dueTo": [
+    {
+      "target": {
+        "reference": "Substance/f202",
+        "display": "Staphylococcus Aureus"
+      }
+    }
+  ]
+}

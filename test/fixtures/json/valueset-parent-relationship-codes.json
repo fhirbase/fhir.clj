@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-parent-relationship-codes",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div>\n      <p>The value set includes the v3 RoleCode PRN (parent), TWIN (twin) and all of their specializations.  It covers the relationships needed to establish genetic pedigree relationships between family members.</p>\n    </div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.311"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/parent-relationship-codes",
+  "name": "Parent Relationship Codes",
+  "publisher": "FHIR Project team",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "The value set includes the v3 RoleCode PRN (parent), TWIN (twin) and all of their specializations.  It covers the relationships needed to establish genetic pedigree relationships between family members.",
+  "status": "draft",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/v3/RoleCode",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "PRN"
+          }
+        ]
+      },
+      {
+        "system": "http://hl7.org/fhir/v3/RoleCode",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "TWIN"
+          }
+        ]
+      }
+    ]
+  }
+}

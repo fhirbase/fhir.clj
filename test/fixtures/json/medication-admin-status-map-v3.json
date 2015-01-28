@@ -1,0 +1,82 @@
+{
+  "resourceType": "ConceptMap",
+  "id": "v3-medication-admin-status",
+  "text": {
+    "status": "generated",
+    "div": "<div><h2>v3 map for MedicationAdministrationStatus (http://hl7.org/fhir/cm/v3/medication-admin-status)</h2><p>Mapping from <a href=\"medication-admin-status.html\">http://hl7.org/fhir/vs/medication-admin-status</a> to <a href=\"v3/ActStatus/index.html\">http://hl7.org/fhir/v3/vs/ActStatus</a></p><p>DRAFT. Published on 12-Dec 2014 13:18 by HL7 (FHIR Project) (<a href=\"http://hl7.org/fhir\">http://hl7.org/fhir</a>, <a href=\"mailto:fhir@lists.hl7.org\">fhir@lists.hl7.org</a>). </p><p>v3 Map (ctStatus)</p><br/><table class=\"grid\"><tr><td><b>Source Code</b></td><td><b>Equivalence</b></td><td><b>Destination Code</b></td></tr><tr><td>in progress</td><td></td><td>active</td></tr><tr><td>on hold</td><td></td><td>suspended</td></tr><tr><td>completed</td><td></td><td>completed</td></tr><tr><td>entered in error</td><td></td><td>nullified</td></tr><tr><td>stopped</td><td></td><td>aborted</td></tr></table></div>"
+  },
+  "identifier": "http://hl7.org/fhir/cm/v3/medication-admin-status",
+  "name": "v3 map for MedicationAdministrationStatus",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "v3 Map (ctStatus)",
+  "status": "draft",
+  "date": "2014-12-12T13:18:46.786+11:00",
+  "sourceReference": {
+    "reference": "http://hl7.org/fhir/vs/medication-admin-status"
+  },
+  "targetReference": {
+    "reference": "http://hl7.org/fhir/v3/vs/ActStatus"
+  },
+  "element": [
+    {
+      "codeSystem": "http://hl7.org/fhir/medication-admin-status",
+      "code": "in progress",
+      "map": [
+        {
+          "codeSystem": "http://hl7.org/fhir/v3/ctStatus",
+          "code": "active"
+        }
+      ]
+    },
+    {
+      "codeSystem": "http://hl7.org/fhir/medication-admin-status",
+      "code": "on hold",
+      "map": [
+        {
+          "codeSystem": "http://hl7.org/fhir/v3/ctStatus",
+          "code": "suspended"
+        }
+      ]
+    },
+    {
+      "codeSystem": "http://hl7.org/fhir/medication-admin-status",
+      "code": "completed",
+      "map": [
+        {
+          "codeSystem": "http://hl7.org/fhir/v3/ctStatus",
+          "code": "completed"
+        }
+      ]
+    },
+    {
+      "codeSystem": "http://hl7.org/fhir/medication-admin-status",
+      "code": "entered in error",
+      "map": [
+        {
+          "codeSystem": "http://hl7.org/fhir/v3/ctStatus",
+          "code": "nullified"
+        }
+      ]
+    },
+    {
+      "codeSystem": "http://hl7.org/fhir/medication-admin-status",
+      "code": "stopped",
+      "map": [
+        {
+          "codeSystem": "http://hl7.org/fhir/v3/ctStatus",
+          "code": "aborted"
+        }
+      ]
+    }
+  ]
+}

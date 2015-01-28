@@ -1,0 +1,86 @@
+{
+  "resourceType": "Supply",
+  "id": "102",
+  "kind": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/supply-type",
+        "code": "central",
+        "display": "Central Supply",
+        "primary": true,
+        "valueSet": {
+          "reference": "http://hl7.org/fhir/vs/supply-type",
+          "display": "supply-type"
+        }
+      }
+    ]
+  },
+  "identifier": {
+    "system": "OR-Supply-Application",
+    "value": "23455",
+    "assigner": {
+      "reference": "Organization/2.16.840.1.113883.19.5",
+      "display": "Good Health Clinic"
+    }
+  },
+  "status": "received",
+  "orderedItem": {
+    "reference": "Device/f001",
+    "display": "Feeding tube"
+  },
+  "dispense": [
+    {
+      "identifier": {
+        "use": "usual",
+        "system": "MM-Supply-Application",
+        "value": "12345",
+        "assigner": {
+          "reference": "Organization/2.16.840.1.113883.19.5",
+          "display": "Good Health Clinic"
+        }
+      },
+      "status": "dispensed",
+      "type": {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/supply-item-type",
+            "code": "device",
+            "display": "Device",
+            "primary": true,
+            "valueSet": {
+              "reference": "http://hl7.org/fhir/vs/supply-item",
+              "display": "supply-item"
+            }
+          }
+        ]
+      },
+      "quantity": {
+        "value": 1,
+        "units": "EA",
+        "system": "http://unitsofmeasure.org/trac/",
+        "code": "{each}"
+      },
+      "suppliedItem": {
+        "reference": "Device/f001",
+        "display": "Feeding tube"
+      },
+      "supplier": {
+        "reference": "Practitioner/f006",
+        "display": "Rob van den Berk "
+      },
+      "whenHandedOver": {
+        "start": "2014-07-24T01:23:55-07:00"
+      },
+      "destination": {
+        "reference": "Location/2",
+        "display": "Neuro Radiology Operation Room "
+      },
+      "receiver": [
+        {
+          "reference": "Practitioner/f204",
+          "display": "Carla Espinosa"
+        }
+      ]
+    }
+  ]
+}

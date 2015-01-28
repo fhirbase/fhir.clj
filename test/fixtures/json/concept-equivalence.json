@@ -1,0 +1,87 @@
+{
+  "resourceType": "ValueSet",
+  "id": "concept-equivalence",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 9 concepts</p><h2>ConceptMapEquivalence</h2><p>The degree of equivalence between concepts</p><p>This value set defines its own terms in the system http://hl7.org/fhir/concept-equivalence</p><table class=\"codes\"><tr><td><b>Lvl</b></td><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>1</td><td>equivalent<a name=\"equivalent\"> </a></td><td>The definitions of the concepts mean the same thing (including when structural implications of meaning are considered) (i.e. extensionally identical).</td></tr><tr><td>2</td><td>&nbsp;&nbsp;equal<a name=\"equal\"> </a></td><td>The definitions of the concepts are exactly the same (i.e. only grammatical differences) and structural implications of meaning are identifical or irrelevant (i.e. intensionally identical).</td></tr><tr><td>1</td><td>wider<a name=\"wider\"> </a></td><td>The target mapping is wider in meaning than the source concept.</td></tr><tr><td>2</td><td>&nbsp;&nbsp;subsumes<a name=\"subsumes\"> </a></td><td>The target mapping subsumes the meaning of the source concept (e.g. the source is-a target).</td></tr><tr><td>1</td><td>narrower<a name=\"narrower\"> </a></td><td>The target mapping is narrower in meaning that the source concept. The sense in which the mapping is narrower SHALL be described in the comments in this case, and applications should be careful when atempting to use these mappings operationally.</td></tr><tr><td>2</td><td>&nbsp;&nbsp;specialises<a name=\"specialises\"> </a></td><td>The target mapping specialises the meaning of the source concept (e.g. the target is-a source).</td></tr><tr><td>1</td><td>inexact<a name=\"inexact\"> </a></td><td>The target mapping overlaps with the source concept, but both source and target cover additional meaning, or the definitions are imprecise and it is uncertain whether they have the same boundaries to their meaning. The sense in which the mapping is narrower SHALL be described in the comments in this case, and applications should be careful when atempting to use these mappings operationally.</td></tr><tr><td>1</td><td>unmatched<a name=\"unmatched\"> </a></td><td>There is no match for this concept in the destination concept system.</td></tr><tr><td>2</td><td>&nbsp;&nbsp;disjoint<a name=\"disjoint\"> </a></td><td>This is an explicit assertion that there is no mapping between the source and target concept.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.306"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/concept-equivalence",
+  "name": "ConceptMapEquivalence",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "The degree of equivalence between concepts",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.494+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.306"
+      }
+    ],
+    "system": "http://hl7.org/fhir/concept-equivalence",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "equivalent",
+        "definition": "The definitions of the concepts mean the same thing (including when structural implications of meaning are considered) (i.e. extensionally identical).",
+        "concept": [
+          {
+            "code": "equal",
+            "definition": "The definitions of the concepts are exactly the same (i.e. only grammatical differences) and structural implications of meaning are identifical or irrelevant (i.e. intensionally identical)."
+          }
+        ]
+      },
+      {
+        "code": "wider",
+        "definition": "The target mapping is wider in meaning than the source concept.",
+        "concept": [
+          {
+            "code": "subsumes",
+            "definition": "The target mapping subsumes the meaning of the source concept (e.g. the source is-a target)."
+          }
+        ]
+      },
+      {
+        "code": "narrower",
+        "definition": "The target mapping is narrower in meaning that the source concept. The sense in which the mapping is narrower SHALL be described in the comments in this case, and applications should be careful when atempting to use these mappings operationally.",
+        "concept": [
+          {
+            "code": "specialises",
+            "definition": "The target mapping specialises the meaning of the source concept (e.g. the target is-a source)."
+          }
+        ]
+      },
+      {
+        "code": "inexact",
+        "definition": "The target mapping overlaps with the source concept, but both source and target cover additional meaning, or the definitions are imprecise and it is uncertain whether they have the same boundaries to their meaning. The sense in which the mapping is narrower SHALL be described in the comments in this case, and applications should be careful when atempting to use these mappings operationally."
+      },
+      {
+        "code": "unmatched",
+        "definition": "There is no match for this concept in the destination concept system.",
+        "concept": [
+          {
+            "code": "disjoint",
+            "definition": "This is an explicit assertion that there is no mapping between the source and target concept."
+          }
+        ]
+      }
+    ]
+  }
+}

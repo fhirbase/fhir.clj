@@ -1,0 +1,47 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-process-priority",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div>\n      This value set includes the financial priority codes.\n    <hr/><p>This value set contains 3 concepts</p><h2>Priority Codes</h2><p>This value set includes the financial processing priority codes</p><p><b>Copyright Statement:</b> This is an example set</p><p>This value set defines its own terms in the system http://hl7.org/fhir/processpriority</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>stat<a name=\"stat\"> </a></td><td/></tr><tr><td>normal<a name=\"normal\"> </a></td><td/></tr><tr><td>deferred<a name=\"deferred\"> </a></td><td/></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.464"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/process-priority",
+  "name": "Priority Codes",
+  "publisher": "Financial Management",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "This value set includes the financial processing priority codes",
+  "copyright": "This is an example set",
+  "status": "draft",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:null"
+      }
+    ],
+    "system": "http://hl7.org/fhir/processpriority",
+    "concept": [
+      {
+        "code": "stat"
+      },
+      {
+        "code": "normal"
+      },
+      {
+        "code": "deferred"
+      }
+    ]
+  }
+}

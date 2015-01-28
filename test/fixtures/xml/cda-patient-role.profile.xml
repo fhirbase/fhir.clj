@@ -1,0 +1,2123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Profile xmlns="http://hl7.org/fhir"><!--  CDA Patient Role  -->
+  <id value="cda-patient-role"/>
+  <meta>
+    <lastUpdated value="2014-11-05T20:31:00Z"/>
+  </meta><!--  build tool to fill out narrative  -->
+  <url value="http://hl7.org/fhir/Profile/cda-patient-role"/>
+  <name value="PatientRole"/>
+  <publisher value="HL7 FHIR Project"/>
+  <telecom>
+    <system value="url"/>
+    <value value="http://hl7.org/fhir"/>
+  </telecom>
+  <description value="Standard Profile for CDA R2 on FHIR"/>
+  <status value="draft"/>
+  <date value="2014-07-28"/>
+  <mapping>
+    <identity value="cda"/>
+    <uri value="http://hl7.org/v3/cda"/>
+    <name value="CDA (R2)"/>
+  </mapping><!--  record target structure - used from Composition  -->
+  <type value="Patient"/>
+  <base value="http://hl7.org/fhir/Profile/Patient"/>
+  <snapshot>
+    <element>
+      <path value="Patient"/>
+      <short value="CDA PatientRole"/>
+      <formal value="Demographics and other administrative information about a person or animal receiving care or other health-related services."/>
+      <requirements value="Tracking patient is the center of the healthcare process."/>
+      <synonym value="SubjectOfCare Client Resident"/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Patient[classCode=PAT]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Patient[classCode=PAT]"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value="PatientRole"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.id"/>
+      <short value="Logical id of this artefact"/>
+      <formal value="The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes."/>
+      <comments value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Patient.meta"/>
+      <short value="Metadata about the resource"/>
+      <formal value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Patient.meta.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.meta.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.meta.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.meta.versionId"/>
+      <short value="Version specific identifier"/>
+      <formal value="The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted."/>
+      <comments value="The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Patient.meta.lastUpdated"/>
+      <short value="When the resource version last changed"/>
+      <formal value="When the resource last changed - e.g. when the version changed."/>
+      <comments value="This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="instant"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Patient.meta.profile"/>
+      <short value="Profiles this resource claims to conform to"/>
+      <formal value="A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url."/>
+      <comments value="It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Patient.meta.security"/>
+      <short value="Security Labels applied to this resource"/>
+      <formal value="Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure."/>
+      <comments value="The security labels can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Patient.meta.tag"/>
+      <short value="Tags applied"/>
+      <formal value="Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource."/>
+      <comments value="The tags can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Patient.implicitRules"/>
+      <short value="A set of rules under which this content was created"/>
+      <formal value="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content."/>
+      <comments value="Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Patient.language"/>
+      <short value="Language of the resource content"/>
+      <formal value="The base language in which the resource is written."/>
+      <comments value="Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource
+
+Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="Language"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="A human language"/>
+        <referenceUri value="http://tools.ietf.org/html/bcp47"/>
+      </binding>
+    </element>
+    <element>
+      <path value="Patient.text"/>
+      <short value="Text summary of the resource, for human interpretation"/>
+      <formal value="A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."/>
+      <comments value="Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."/>
+      <synonym value="narrative"/>
+      <synonym value="html"/>
+      <synonym value="xhtml"/>
+      <synonym value="display"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Narrative"/>
+      </type>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.contained"/>
+      <short value="Contained, inline Resources"/>
+      <formal value="These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope."/>
+      <comments value="This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."/>
+      <synonym value="inline resources"/>
+      <synonym value="anonymous resources"/>
+      <synonym value="contained resources"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Resource"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.extension"/>
+      <slicing>
+        <discriminator value="url"/>
+        <ordered value="true"/>
+        <rules value="openAtEnd"/>
+      </slicing>
+      <short value="Patient&#39;s religious classification"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.religiousAffiliationCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.extension"/>
+      <short value="Patient&#39;s racial classification"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.raceCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.extension"/>
+      <short value="Patient&#39;s ethnic classification"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value="ethnicGroupCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.extension"/>
+      <short value="Patient&#39;s birthplace"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.birthPlace"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.identifier"/>
+      <short value="Patient Identifier"/>
+      <formal value="An identifier that applies to this person as a patient."/>
+      <requirements value="Patients are almost always assigned specific numerical identifiers."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="id"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="id"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".id"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.name"/>
+      <short value="Patient names"/>
+      <formal value="A name associated with the individual."/>
+      <comments value="Person may have multiple names with different uses or applicable periods.For animals, the name is a &quot;HumanName&quot; in the sense that is assigned and used by humans and has the same patterns."/>
+      <requirements value="Need to be able to track the person by multiple names. Examples are your official name and a partner name."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="HumanName"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-5, PID-9"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="name"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-5, PID-9"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="name"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.name"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.telecom"/>
+      <short value="Patient Contact Details"/>
+      <formal value="A contact detail (e.g. a telephone number or an email address) by which the individual may be contacted."/>
+      <comments value="Person may have multiple ways to be contacted with different uses or applicable periods. May need to have options for contacting the person urgently and also to help with identification. The address may not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner&#39;s phone)."/>
+      <requirements value="People have (primary) ways to contact them in some way such as phone, email."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="ContactPoint"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-13, PID-14, PID-40"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="telecom"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-13, PID-14, PID-40"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="telecom"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".telecom"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.gender"/>
+      <short value="Patient administrative Gender"/>
+      <formal value="Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes."/>
+      <comments value="The gender may not match the biological sex as determined by genetics, or the individual&#39;s preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than M and F, though the vast majority of systems and contexts only support M and F."/>
+      <requirements value="Needed for identification of the individual, in combination with (at least) name and birth date. Gender of individual drives many clinical processes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="true"/>
+      <binding>
+        <name value="AdministrativeGender"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The gender of a person used for administrative purposes"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/administrative-gender"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-8"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-8"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.administrativeGender"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.birthDate"/>
+      <short value="Patient Birthtime"/>
+      <formal value="The date and time of birth for the individual."/>
+      <comments value="At least an estimated year should be provided as a guess if the real dob is unknown."/>
+      <requirements value="Age of the individual drives many clinical processes. Next to the common use case of capturing someone birth date, also in some common cases time is registered."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="date"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="loinc"/>
+        <map value="21112-8"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-7"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=PSN|ANM and determinerCode=INSTANCE]/birthTime"/>
+      </mapping>
+      <mapping>
+        <identity value="loinc"/>
+        <map value="21112-8"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-7"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=PSN|ANM and determinerCode=INSTANCE]/birthTime"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.birthTime"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.deceased[x]"/>
+      <short value="Indicates if the individual is deceased or not"/>
+      <formal value="Indicates if the individual is deceased or not."/>
+      <comments value="If there&#39;s no value in the instance it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive."/>
+      <requirements value="The fact that a patient is deceased influences the clinical process. Also, in human communication and relation management it is necessary to know whether the person is alive."/>
+      <min value="0"/>
+      <max value="0"/>
+      <isModifier value="true"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-30 (bool) and PID-29 (datetime)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedInd,player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedTime"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-30 (bool) and PID-29 (datetime)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedInd,player[classCode=PSN|ANM and determinerCode=INSTANCE]/deceasedTime"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.address"/>
+      <short value="Patient Address"/>
+      <formal value="Addresses for the individual."/>
+      <comments value="Person may have multiple addresses with different uses or applicable periods."/>
+      <requirements value="May need to keep track of persons addresses for contacting, billing or reporting requirements and also to help with identification."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Address"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-11"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="addr"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-11"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="addr"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".addr"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.maritalStatus"/>
+      <short value="CDA Patient Marital Status"/>
+      <formal value="This field contains a patient&#39;s most recent marital (civil) status."/>
+      <requirements value="Most, if not all systems capture it."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="true"/>
+      <binding>
+        <name value="MaritalStatus"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="The domestic partnership status of a person"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/marital-status"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-16"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=PSN]/maritalStatusCode"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-16"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=PSN]/maritalStatusCode"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.maritalStatusCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.multipleBirth[x]"/>
+      <short value="Whether patient is part of a multiple birth"/>
+      <formal value="Indicates whether the patient is part of a multiple or indicates the actual birth order."/>
+      <requirements value="For disambiguation of multiple-birth children, especially relevant where the care provider doesn&#39;t meet the patient, such as labs."/>
+      <min value="0"/>
+      <max value="0"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-24 (bool), PID-25 (integer)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthInd, player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthOrderNumber"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-24 (bool), PID-25 (integer)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthInd, player[classCode=PSN|ANM and determinerCode=INSTANCE]/multipleBirthOrderNumber"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.photo"/>
+      <short value="Image of the person"/>
+      <formal value="Image of the person."/>
+      <requirements value="Many EHR systems have the capability to capture an image of the patient. Fits with newer social media usage too."/>
+      <min value="0"/>
+      <max value="0"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBX-5 - needs a profile"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=PSN|ANM and determinerCode=INSTANCE]/desc"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBX-5 - needs a profile"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=PSN|ANM and determinerCode=INSTANCE]/desc"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.contact"/>
+      <short value="CDA Guardian"/>
+      <formal value="A contact party (e.g. guardian, partner, friend) for the patient."/>
+      <comments value="Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact."/>
+      <requirements value="Need to track people you can contact about the patient."/>
+      <min value="0"/>
+      <max value="*"/>
+      <constraint>
+        <key value="1"/>
+        <name value="ContactNeedsDetails"/>
+        <severity value="error"/>
+        <human value="SHALL at least contain a contact&#39;s details or a reference to an organization"/>
+        <xpath value="f:name or f:telecom or f:address or f:organization"/>
+      </constraint>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=PSN|ANM and determinerCode=INSTANCE]/scopedRole[classCode=CON]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=PSN|ANM and determinerCode=INSTANCE]/scopedRole[classCode=CON]"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.guardian"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.contact.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.contact.extension"/>
+      <short value="CDA Guardian Identifier"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.guardian.id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.contact.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.contact.relationship"/>
+      <slicing>
+        <discriminator value="coding.code"/>
+        <ordered value="true"/>
+        <rules value="openAtEnd"/>
+      </slicing>
+      <short value="The kind of relationship"/>
+      <formal value="The nature of the relationship between the patient and the contact person."/>
+      <requirements value="Used to determine which contact person is the most relevant to approach, depending on circumstances."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="ContactRelationship"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="The nature of the relationship between a patient and a contact person for that patient"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/patient-contact-relationship"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="NK1-7, NK1-3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="code"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="NK1-7, NK1-3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.contact.relationship"/>
+      <short value="in CDA, only Guardian is allowed"/>
+      <formal value="The nature of the relationship between the patient and the contact person."/>
+      <requirements value="Used to determine which contact person is the most relevant to approach, depending on circumstances."/>
+      <min value="1"/>
+      <max value="1"/>
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/patient-contact-relationship"/>
+          <code value="guardian"/>
+        </coding>
+      </fixedCodeableConcept>
+      <isSummary value="false"/>
+      <binding>
+        <name value="ContactRelationship"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="The nature of the relationship between a patient and a contact person for that patient"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/patient-contact-relationship"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="NK1-7, NK1-3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="code"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="NK1-7, NK1-3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.contact.relationship"/>
+      <short value="The kind of relationship"/>
+      <formal value="The nature of the relationship between the patient and the contact person."/>
+      <requirements value="Used to determine which contact person is the most relevant to approach, depending on circumstances."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="ContactRelationship"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="The nature of the relationship between a patient and a contact person for that patient"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/patient-contact-relationship"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="NK1-7, NK1-3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="code"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="NK1-7, NK1-3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="code"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.guardian.code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.contact.name"/>
+      <short value="Guardian name (if a person)"/>
+      <formal value="A name associated with the person."/>
+      <requirements value="Contact persons need to be identified by name, but it is uncommon to need details about multiple other names for that person."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="NK1-2"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="name"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="NK1-2"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="name"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.guardian.name"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.contact.telecom"/>
+      <short value="A contact detail for the guardian"/>
+      <formal value="A contact detail for the person, e.g. a telephone number or an email address."/>
+      <comments value="Person may have multiple ways to be contacted with different uses or applicable periods. May need to have options for contacting the person urgently, and also to help with identification."/>
+      <requirements value="People have (primary) ways to contact them in some way such as phone, email."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="ContactPoint"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="NK1-5, NK1-6, NK1-40"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="telecom"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="NK1-5, NK1-6, NK1-40"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="telecom"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.guardian.telecom"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.contact.address"/>
+      <short value="Address for the guardian"/>
+      <formal value="Address for the contact person."/>
+      <requirements value="Need to keep track where the contact person can be contacted per postal mail or visited."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="NK1-4"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="addr"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="NK1-4"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="addr"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.guardian.addr"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.contact.gender"/>
+      <short value="male | female | other | unknown"/>
+      <formal value="Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes."/>
+      <requirements value="Needed to address the person correctly."/>
+      <min value="0"/>
+      <max value="0"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="AdministrativeGender"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The gender of a person used for administrative purposes"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/administrative-gender"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="NK1-15"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="NK1-15"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=PSN|ANM and determinerCode=INSTANCE]/administrativeGender"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.contact.organization"/>
+      <short value="Organization that acts as guardian for the contact"/>
+      <formal value="Organization on behalf of which the contact is acting or for which the contact is working."/>
+      <requirements value="For guardians or business related contacts, the organization is relevant."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Organization"/>
+      </type>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="NK1-13, NK1-30, NK1-31, NK1-32, NK1-41"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="scoper"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="NK1-13, NK1-30, NK1-31, NK1-32, NK1-41"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="scoper"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.guardian.guardianOrganization"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.contact.period"/>
+      <short value="The period during which this person or organization is valid to be contacted relating to this patient"/>
+      <formal value="The period during which this person or organization is valid to be contacted relating to this patient."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Period"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Patient.animal"/>
+      <short value="If this patient is an animal (non-human)"/>
+      <formal value="This element has a value if the patient is an animal."/>
+      <comments value="The animal element is labeled &quot;Is Modifier&quot; since patients may be non-human. Systems SHALL either handle patient details appropriately (e.g. inform users patient is not human) or reject non-human patient records."/>
+      <requirements value="Many clinical systems are extended to care for animal patients as well as human."/>
+      <min value="0"/>
+      <max value="0"/>
+      <isModifier value="true"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=ANM]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=ANM]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.animal.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.animal.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.animal.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.animal.species"/>
+      <short value="E.g. Dog, Cow"/>
+      <formal value="Identifies the high level categorization of the kind of animal."/>
+      <comments value="If the patient is non-human, at least a species SHALL be specified."/>
+      <requirements value="Need to know what kind of animal."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="true"/>
+      <binding>
+        <name value="AnimalSpecies"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="The species of an animal"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/animal-species"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-35"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="code"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-35"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.animal.breed"/>
+      <short value="E.g. Poodle, Angus"/>
+      <formal value="Identifies the detailed categorization of the kind of animal."/>
+      <requirements value="May need to know the specific kind within the species."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="true"/>
+      <binding>
+        <name value="AnimalBreed"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="The breed of an animal"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/animal-breeds"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-37"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="playedRole[classCode=GEN]/scoper[classCode=ANM, determinerCode=KIND]/code"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-37"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="playedRole[classCode=GEN]/scoper[classCode=ANM, determinerCode=KIND]/code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.animal.genderStatus"/>
+      <short value="E.g. Neutered, Intact"/>
+      <formal value="Indicates the current state of the animal&#39;s reproductive organs."/>
+      <requirements value="Gender status can affect housing and animal behavior."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="true"/>
+      <binding>
+        <name value="AnimalGenderStatus"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="The state of the animal&#39;s reproductive organs"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/animal-genderstatus"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="genderStatusCode"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="genderStatusCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.communication"/>
+      <short value="CDA patient language"/>
+      <formal value="Languages which may be used to communicate with the patient about his or her health."/>
+      <comments value="If no language is specified, this *implies* that the default local language is spoken.For animals, language is not a relevant field, and should be absent from the instance."/>
+      <requirements value="If a patient does not speak the local language, interpreters may be required, so languages spoken is an important things to keep track of both for patient and other persons of interest."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="Language"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="A human language"/>
+        <referenceUri value="http://tools.ietf.org/html/bcp47"/>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="LAN-2"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=PSN|ANM and determinerCode=INSTANCE]/languageCommunication/code"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="LAN-2"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="player[classCode=PSN|ANM and determinerCode=INSTANCE]/languageCommunication/code"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.languageCommunication.languageCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.communication.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.communication.extension"/>
+      <slicing>
+        <discriminator value="url"/>
+        <ordered value="true"/>
+        <rules value="openAtEnd"/>
+      </slicing>
+      <short value="CDA patient language mode"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.languageCommunication.modeCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.communication.extension"/>
+      <short value="CDA patient language proficiency"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.languageCommunication.proficiencyCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.communication.extension"/>
+      <short value="CDA patient language preference"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.languageCommunication.preferenceInd"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.communication.coding"/>
+      <short value="Code defined by a terminology system"/>
+      <formal value="A reference to a code defined by a terminology system."/>
+      <comments value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the V3 Core Principles for more information.  Ordering of codings is undefined and SHALL not be used to infer meaning."/>
+      <requirements value="Allows for translations and alternate encodings within a code system.  Also supports communication of the same instance to systems requiring different encodings."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.1-8, C*E.10-22"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="union(., ./translation)"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.1-8, C*E.10-22"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="union(., ./translation)"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.communication.text"/>
+      <short value="Plain text representation of the concept"/>
+      <formal value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user."/>
+      <comments value="Very often the text is the same as a displayName of one of the codings."/>
+      <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.9. But note many systems use C*E.2 for this"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./originalText[mediaType/code=&quot;text/plain&quot;]/data"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.9. But note many systems use C*E.2 for this"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./originalText[mediaType/code=&quot;text/plain&quot;]/data"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.careProvider"/>
+      <short value="Patient&#39;s nominated care provider"/>
+      <formal value="Patient&#39;s nominated care provider."/>
+      <min value="0"/>
+      <max value="0"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="subjectOf.CareEvent.performer.AssignedEntity"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="subjectOf.CareEvent.performer.AssignedEntity"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.managingOrganization"/>
+      <short value="Organization that is the custodian of the patient record"/>
+      <formal value="Organization that is the custodian of the patient record."/>
+      <requirements value="Need to know who recognizes this patient record, manages and updates it."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Organization"/>
+      </type>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="scoper"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="scoper"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".providerOrganization"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.link"/>
+      <short value="Link to another patient resource that concerns the same actual person"/>
+      <formal value="Link to another patient resource that concerns the same actual person."/>
+      <comments value="There is no assumption that linked patient records have mutual links."/>
+      <requirements value="There are multiple usecases: * Duplicate patient records due to the clerical errors associated with the difficulties of identifying humans consistently, and * Distribution of patient information across multiple servers."/>
+      <min value="0"/>
+      <max value="0"/>
+      <isModifier value="true"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outboundLink"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outboundLink"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.link.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.link.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.link.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.link.other"/>
+      <short value="The other patient resource that the link refers to"/>
+      <formal value="The other patient resource that the link refers to."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Patient"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-3, MRG-1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="id"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-3, MRG-1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.link.type"/>
+      <short value="replace | refer | seealso - type of link"/>
+      <formal value="The type of link between this patient resource and another patient resource."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="true"/>
+      <binding>
+        <name value="LinkType"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The type of link between this patient resource and another patient resource."/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/link-type"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value="typeCode"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="typeCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.active"/>
+      <short value="Whether this patient&#39;s record is in active use"/>
+      <formal value="Whether this patient record is in active use."/>
+      <comments value="Default is true. If a record is inactive, and linked to an active record, then future patient/person/record updates should occur on the other patient."/>
+      <requirements value="Need to be able to mark a patient record as not to be used because it was created in error."/>
+      <min value="0"/>
+      <max value="0"/>
+      <defaultValueBoolean value="true"/>
+      <isModifier value="true"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="statusCode"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="statusCode"/>
+      </mapping>
+    </element>
+  </snapshot>
+  <differential>
+    <element>
+      <path value="Patient"/>
+      <short value="CDA PatientRole"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Resource"/>
+      </type>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value="PatientRole"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.extension"/>
+      <short value="Patient&#39;s religious classification"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/us-core-religion"/>
+      </type>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.religiousAffiliationCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.extension"/>
+      <short value="Patient&#39;s racial classification"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/us-core-race"/>
+      </type>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.raceCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.extension"/>
+      <short value="Patient&#39;s ethnic classification"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/us-core-ethnicity"/>
+      </type>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value="ethnicGroupCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.extension"/>
+      <short value="Patient&#39;s birthplace"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/cda-Birthplace"/>
+      </type>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.birthPlace"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.identifier"/>
+      <short value="Patient Identifier"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".id"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.name"/>
+      <short value="Patient names"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="HumanName"/>
+      </type>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.name"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.telecom"/>
+      <short value="Patient Contact Details"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Contact"/>
+      </type>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".telecom"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.gender"/>
+      <short value="Patient administrative Gender"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.administrativeGender"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.birthDate"/>
+      <short value="Patient Birthtime"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.birthTime"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.deceased[x]"/>
+      <min value="0"/>
+      <max value="0"/>
+      <isModifier value="true"/>
+    </element>
+    <element>
+      <path value="Patient.address"/>
+      <short value="Patient Address"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Address"/>
+      </type>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".addr"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.maritalStatus"/>
+      <short value="CDA Patient Marital Status"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.maritalStatusCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.multipleBirth[x]"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+    <element>
+      <path value="Patient.photo"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+    <element>
+      <path value="Patient.contact"/>
+      <short value="CDA Guardian"/>
+      <min value="0"/>
+      <max value="*"/>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.guardian"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.contact.extension"/>
+      <short value="CDA Guardian Identifier"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/cda-guardian-id"/>
+      </type>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.guardian.id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.contact.relationship"/>
+      <slicing>
+        <discriminator value="coding.code"/>
+        <ordered value="true"/>
+        <rules value="openAtEnd"/>
+      </slicing>
+    </element>
+    <element>
+      <path value="Patient.contact.relationship"/>
+      <short value="in CDA, only Guardian is allowed"/>
+      <min value="1"/>
+      <max value="1"/>
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://hl7.org/fhir/patient-contact-relationship"/>
+          <code value="guardian"/>
+        </coding>
+      </fixedCodeableConcept>
+    </element>
+    <element>
+      <path value="Patient.contact.relationship"/>
+      <min value="0"/>
+      <max value="1"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.guardian.code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.contact.name"/>
+      <short value="Guardian name (if a person)"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.guardian.name"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.contact.telecom"/>
+      <short value="A contact detail for the guardian"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Contact"/>
+      </type>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.guardian.telecom"/>
+      </mapping>
+    </element><!--  todo: extension for 0..*  -->
+    <element>
+      <path value="Patient.contact.address"/>
+      <short value="Address for the guardian"/>
+      <formal value="Address for the contact person."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.guardian.addr"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.contact.gender"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+    <element>
+      <path value="Patient.contact.organization"/>
+      <short value="Organization that acts as guardian for the contact"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="#Organization"/>
+      </type>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.guardian.guardianOrganization"/>
+      </mapping>
+    </element><!--  CDA does not support non-human patients  -->
+    <element>
+      <path value="Patient.animal"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+    <element>
+      <path value="Patient.communication"/>
+      <short value="CDA patient language"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.languageCommunication.languageCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.communication.extension"/>
+      <short value="CDA patient language mode"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/cda-language-mode"/>
+      </type>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.languageCommunication.modeCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.communication.extension"/>
+      <short value="CDA patient language proficiency"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/cda-language-proficiency"/>
+      </type>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.languageCommunication.proficiencyCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.communication.extension"/>
+      <short value="CDA patient language preference"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/cda-language-preference"/>
+      </type>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".patient.languageCommunication.preferenceInd"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.careProvider"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+    <element>
+      <path value="Patient.managingOrganization"/>
+      <short value="Organization that is the custodian of the patient record"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="#Organization"/>
+      </type>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".providerOrganization"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Patient.link"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+    <element>
+      <path value="Patient.active"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+  </differential>
+</Profile>

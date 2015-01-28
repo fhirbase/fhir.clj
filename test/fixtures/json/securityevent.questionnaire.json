@@ -1,0 +1,1180 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "vs2",
+      "identifier": "urn:uuid:a08e0e74-293f-42d3-9118-14928cf38fa7",
+      "name": "Type options for SecurityEvent.participant.reference",
+      "description": "Type options for SecurityEvent.participant.reference",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:22:28.925+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Practitioner",
+            "display": "Practitioner"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Patient",
+            "display": "Patient"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Device",
+            "display": "Device"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (Security)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "A record of an event made for purposes of maintaining a security log. Typical uses include detection of intrusion attempts and monitoring for inappropriate usage."
+      }
+    ],
+    "linkId": "SecurityEvent",
+    "title": "Event record kept for security purposes",
+    "text": "Based on ATNA (RFC 3881).",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "SecurityEvent.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "SecurityEvent.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "SecurityEvent.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "SecurityEvent.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "SecurityEvent.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "SecurityEvent.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "SecurityEvent.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "SecurityEvent.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "SecurityEvent.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "SecurityEvent.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "SecurityEvent.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "SecurityEvent.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "SecurityEvent.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "SecurityEvent.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "SecurityEvent.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Identifies the name, action type, time, and disposition of the audited event."
+          }
+        ],
+        "linkId": "SecurityEvent.event",
+        "title": "What was done",
+        "required": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "SecurityEvent.event.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.event.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Identifier for a family of the event. e.g., a menu item, program, rule, policy, function code, application name or URL. It identifies the performed function."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "SecurityEvent.event.type",
+            "text": "Type/identifier of event",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.event.type.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "SecurityEvent.event.type.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Identifier for the category of event."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "SecurityEvent.event.subtype",
+            "text": "More specific type/id for the event",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.event.subtype.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "SecurityEvent.event.subtype.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Indicator for type of action performed during the event that generated the audit."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "code"
+              }
+            ],
+            "linkId": "SecurityEvent.event.action",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.event.action.value",
+                "text": "action",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The time when the event occurred on the source. In a distributed system, some sort of common time base, e.g., an NTP [RFC1305] server, is a good implementation tactic."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "SecurityEvent.event.dateTime",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.event.dateTime.value",
+                "text": "Time when the event occurred on source",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Indicates whether the event succeeded or failed. In some cases a \"success\" may be partial, for example, an incomplete or interrupted transfer of a radiological study. For the purpose of establishing accountability, these distinctions are not relevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "code"
+              }
+            ],
+            "linkId": "SecurityEvent.event.outcome",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.event.outcome.value",
+                "text": "outcome",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A free text description of the outcome of the event."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "SecurityEvent.event.outcomeDesc",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.event.outcomeDesc.value",
+                "text": "Description of the event outcome",
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A person, a hardware device or software process."
+          }
+        ],
+        "linkId": "SecurityEvent.participant",
+        "title": "A person, a hardware device or software process",
+        "text": "There may be more than one user per event, for example, in cases of actions initiated by one user for other users, or in events that involve more than one user, hardware device, or system process. However, only one user may be the initiator/requestor for the event.",
+        "required": true,
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "SecurityEvent.participant.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.participant.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Specification of the role(s) the user plays when performing the event. Usually the codes used in this element are local codes defined by the role-based access control security system used in the local context."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "SecurityEvent.participant.role",
+            "text": "User roles (e.g. local RBAC codes)",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.participant.role.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "SecurityEvent.participant.role.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Direct reference to a resource that identifies the participant."
+              }
+            ],
+            "linkId": "SecurityEvent.participant.reference",
+            "text": "Direct reference to resource",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.participant.reference._type",
+                "text": "type",
+                "type": "choice",
+                "options": {
+                  "reference": "#vs2"
+                },
+                "group": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "Reference"
+                      }
+                    ],
+                    "linkId": "SecurityEvent.participant.reference._Practitioner",
+                    "question": [
+                      {
+                        "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                          {
+                            "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                          }
+                        ],
+                        "linkId": "SecurityEvent.participant.reference._Practitioner.value",
+                        "text": "Practitioner",
+                        "type": "reference"
+                      }
+                    ]
+                  },
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "Reference"
+                      }
+                    ],
+                    "linkId": "SecurityEvent.participant.reference._Patient",
+                    "question": [
+                      {
+                        "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                          {
+                            "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                          }
+                        ],
+                        "linkId": "SecurityEvent.participant.reference._Patient.value",
+                        "text": "Patient",
+                        "type": "reference"
+                      }
+                    ]
+                  },
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "Reference"
+                      }
+                    ],
+                    "linkId": "SecurityEvent.participant.reference._Device",
+                    "question": [
+                      {
+                        "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                          {
+                            "valueString": "/Device?subject=$subj&patient=$subj&encounter=$encounter"
+                          }
+                        ],
+                        "linkId": "SecurityEvent.participant.reference._Device.value",
+                        "text": "Device",
+                        "type": "reference"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Unique identifier for the user actively participating in the event. a unique value within the Audit Source ID. For node-based authentication -- where only the system hardware or process, but not a human user, is identified -- User ID would be the node name."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "SecurityEvent.participant.userId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.participant.userId.value",
+                "text": "Unique identifier for the user",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Alternative Participant Identifier. For a human, this should be a user identifier text string from authentication system. This identifier would be one known to a common authentication system (e.g., single sign-on), if available."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "SecurityEvent.participant.altId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.participant.altId.value",
+                "text": "Alternative User id e.g. authentication",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Human-meaningful name for the user."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "SecurityEvent.participant.name",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.participant.name.value",
+                "text": "Human-meaningful name for the user",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Indicator that the user is or is not the requestor, or initiator, for the event being audited. There can only be one initiator. If the initiator is not clear, then do not choose any one participant as the initiator."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "boolean"
+              }
+            ],
+            "linkId": "SecurityEvent.participant.requestor",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.participant.requestor.value",
+                "text": "Whether user is initiator",
+                "type": "boolean"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Type of media involved. Used when the event is about exporting/importing onto media."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "SecurityEvent.participant.media",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.participant.media.value",
+                "text": "Type of media",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Logical network location for application activity, if the activity has a network location."
+              }
+            ],
+            "linkId": "SecurityEvent.participant.network",
+            "title": "Logical network location for application activity",
+            "group": [
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "unique id for the element within a resource (for internal references)."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "SecurityEvent.participant.network.id",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "SecurityEvent.participant.network.id.value",
+                    "text": "xml:id (or equivalent in JSON)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "An identifier for the network access point of the user device for the audit event. This could be a device id, IP address or some other identifier associated with a device."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "SecurityEvent.participant.network.identifier",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "SecurityEvent.participant.network.identifier.value",
+                    "text": "Identifier for the network access point of the user device",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "An identifier for the type of network access point that originated the audit event."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "code"
+                  }
+                ],
+                "linkId": "SecurityEvent.participant.network.type",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "SecurityEvent.participant.network.type.value",
+                    "text": "type",
+                    "type": "choice"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Application systems and processes."
+          }
+        ],
+        "linkId": "SecurityEvent.source",
+        "title": "Application systems and processes",
+        "text": "Since multi-tier, distributed, or composite applications make source identification ambiguous, this collection of fields may repeat for each application or process actively involved in the event. For example, multiple value-sets can identify participating web servers, application processes, and database server threads in an n-tier distributed application. Passive event participants, e.g., low-level network transports, need not be identified.",
+        "required": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "SecurityEvent.source.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.source.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Logical source location within the healthcare enterprise network. a hospital or other provider location within a multi-entity provider group."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "SecurityEvent.source.site",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.source.site.value",
+                "text": "Logical source location within the enterprise",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Identifier of the source where the event originated."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "SecurityEvent.source.identifier",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.source.identifier.value",
+                "text": "The id of source where event originated",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Code specifying the type of source where event originated."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "SecurityEvent.source.type",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.source.type.value",
+                "text": "The type of source where event originated",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Specific instances of data or objects that have been accessed."
+          }
+        ],
+        "linkId": "SecurityEvent.object",
+        "title": "Specific instances of data or objects that have been accessed",
+        "text": "required unless the values for Event Identification, Active Participant Identification, and Audit Source Identification are sufficient to document the entire auditable event. Because events may have more than one participant object, this group can be a repeating set of values.",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "SecurityEvent.object.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.object.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Identifies a specific instance of the participant object. The reference should always be version specific. Identifier details depends on object type."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Identifier"
+              }
+            ],
+            "linkId": "SecurityEvent.object.identifier",
+            "text": "Specific instance of object (e.g. versioned)",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.object.identifier.label",
+                "text": "label:",
+                "type": "string"
+              },
+              {
+                "linkId": "SecurityEvent.object.identifier.system",
+                "text": "system:",
+                "type": "string"
+              },
+              {
+                "linkId": "SecurityEvent.object.identifier.value",
+                "text": "value:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Identifies a specific instance of the participant object. The reference should always be version specific."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "SecurityEvent.object.reference",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "SecurityEvent.object.reference.value",
+                "text": "Specific instance of resource (e.g. versioned)",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Object type being audited. This value is distinct from the user's role or any user relationship to the participant object."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "code"
+              }
+            ],
+            "linkId": "SecurityEvent.object.type",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.object.type.value",
+                "text": "type",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Code representing the functional application role of Participant Object being audited. See RFC 3881 for rules concerning matches between role and type."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "code"
+              }
+            ],
+            "linkId": "SecurityEvent.object.role",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.object.role.value",
+                "text": "role",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Identifier for the data life-cycle stage for the participant object. This can be used to provide an audit trail for data, over time, as it passes through the system."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "code"
+              }
+            ],
+            "linkId": "SecurityEvent.object.lifecycle",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.object.lifecycle.value",
+                "text": "lifecycle",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Denotes policy-defined sensitivity for the Participant Object ID such as VIP, HIV status, mental health status or similar topics. Values from ATNA are institution- and implementation-defined text strings (in sensitivity.text). HL7 defines confidentiality codes for records, documents etc. that can also be used here."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "SecurityEvent.object.sensitivity",
+            "text": "Policy-defined sensitivity for the object",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.object.sensitivity.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "SecurityEvent.object.sensitivity.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "An instance-specific descriptor of the Participant Object ID audited, such as a person's name. This field may be used in a query/report to identify audit events for a specific person, e.g., where multiple synonymous Participant Object IDs (patient number, medical record number, encounter number, etc.) have been used."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "SecurityEvent.object.name",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.object.name.value",
+                "text": "Instance-specific descriptor for Object",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Text that describes the object in more detail."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "SecurityEvent.object.description",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "SecurityEvent.object.description.value",
+                "text": "Descriptive text",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The actual query for a query-type participant object."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "binary"
+              }
+            ],
+            "linkId": "SecurityEvent.object.query",
+            "text": "Actual query for object",
+            "repeats": true
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Additional Information about the Object."
+              }
+            ],
+            "linkId": "SecurityEvent.object.detail",
+            "title": "Additional Information about the Object",
+            "repeats": true,
+            "group": [
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "unique id for the element within a resource (for internal references)."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "SecurityEvent.object.detail.id",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "SecurityEvent.object.detail.id.value",
+                    "text": "xml:id (or equivalent in JSON)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Name of the property."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "SecurityEvent.object.detail.type",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "SecurityEvent.object.detail.type.value",
+                    "text": "Name of the property",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Property value."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "binary"
+                  }
+                ],
+                "linkId": "SecurityEvent.object.detail.value",
+                "text": "Property value",
+                "required": true,
+                "repeats": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-encounter-special-arrangements",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 5 concepts</p><h2>SpecialArrangements</h2><p>This value set defines a set of codes that can be used to indicate the kinds     of special arrangements in place for a patients visit</p><p>This value set defines its own terms in the system http://hl7.org/fhir/encounter-special-arrangements</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>wheel<a name=\"wheel\"> </a></td><td>Wheelchair</td><td/></tr><tr><td>stret<a name=\"stret\"> </a></td><td>Stretcher</td><td/></tr><tr><td>int<a name=\"int\"> </a></td><td>Interpreter</td><td/></tr><tr><td>att<a name=\"att\"> </a></td><td>Attendant</td><td/></tr><tr><td>dog<a name=\"dog\"> </a></td><td>Guide dog</td><td/></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.185"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/encounter-special-arrangements",
+  "name": "SpecialArrangements",
+  "publisher": "FHIR Project team",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "This value set defines a set of codes that can be used to indicate the kinds     of special arrangements in place for a patients visit",
+  "status": "draft",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:null"
+      }
+    ],
+    "system": "http://hl7.org/fhir/encounter-special-arrangements",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "wheel",
+        "display": "Wheelchair"
+      },
+      {
+        "code": "stret",
+        "display": "Stretcher"
+      },
+      {
+        "code": "int",
+        "display": "Interpreter"
+      },
+      {
+        "code": "att",
+        "display": "Attendant"
+      },
+      {
+        "code": "dog",
+        "display": "Guide dog"
+      }
+    ]
+  }
+}

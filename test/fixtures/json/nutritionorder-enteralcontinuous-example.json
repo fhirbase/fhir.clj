@@ -1,0 +1,138 @@
+{
+  "resourceType": "NutritionOrder",
+  "id": "enteralcontinuous",
+  "text": {
+    "status": "generated",
+    "div": "<div> Description = Nutrition Order Infant Enteral Feeding Canonical Example</div>"
+  },
+  "subject": {
+    "reference": "Practitioner/example",
+    "display": "Dr Adam Careful"
+  },
+  "orderer": {
+    "reference": "Patient/example",
+    "display": "Peter Chalmers"
+  },
+  "identifier": [
+    {
+      "system": "http://www.acme.org/nutritionorders",
+      "value": "123"
+    }
+  ],
+  "encounter": {
+    "reference": "Encounter/example",
+    "display": "Inpatient"
+  },
+  "dateTime": "2014-09-17",
+  "allergyIntolerance": [
+    {
+      "reference": "AllergyIntolerance/example",
+      "display": "Cashew Nuts"
+    }
+  ],
+  "foodPreferenceModifier": [
+    {
+      "coding": [
+        {
+          "system": "http://hl7.org/fhir/diet",
+          "code": "dairy-free",
+          "valueSet": {
+            "reference": "http://hl7.org/fhir/vs/encounter-diet",
+            "display": "PatientDiet"
+          }
+        }
+      ]
+    }
+  ],
+  "excludeFoodModifier": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "version": "20140730",
+          "code": "227493005",
+          "display": "Cashew Nut"
+        }
+      ]
+    }
+  ],
+  "item": [
+    {
+      "scheduledPeriod": {
+        "start": "2014-09-17"
+      },
+      "isInEffect": true,
+      "enteralFormula": {
+        "administrationInstructions": "Hold feedings from 7 pm to 7 am. Add MCT oil to increase calories from 1.0 cal/mL to 1.5 cal/mL",
+        "baseFormulaType": {
+          "coding": [
+            {
+              "system": "http://snomed-us.info/sct",
+              "code": "6547210000124112",
+              "display": "Diabetic specialty enteral formula"
+            }
+          ]
+        },
+        "baseFormulaName": " Acme Diabetes Formula",
+        "additiveType": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "427298002",
+              "display": "Enteral dietary supplement",
+              "valueSet": {
+                "reference": "http://hl7.org/fhir/vs/entformula-additive",
+                "display": "Medium chain triglyceride supplementation"
+              }
+            }
+          ]
+        },
+        "additiveName": "Acme MCT Oil",
+        "caloricDensity": {
+          "value": 1,
+          "units": "calories per milliliter",
+          "system": "http://unitsofmeasure.org",
+          "code": "cal/mL"
+        },
+        "routeofAdministration": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/v3/RouteOfAdministration",
+              "code": "NGT",
+              "display": "Instillation, nasogastrostomy tube",
+              "valueSet": {
+                "reference": "http://hl7.org/fhir/vs/enteral-route",
+                "display": "EnteralRouteOfAdministration"
+              }
+            }
+          ]
+        },
+        "rate": {
+          "numerator": {
+            "value": 60,
+            "units": "millilters",
+            "system": "http://unitsofmeasure.org",
+            "code": "mL"
+          },
+          "denominator": {
+            "value": 1,
+            "units": "hr",
+            "system": "http://unitsofmeasure.org",
+            "code": "h"
+          }
+        },
+        "rateAdjustment": {
+          "value": 10,
+          "units": "milliliters every 4 hours"
+        },
+        "maxVolumeToDeliver": {
+          "value": 880,
+          "units": "milliliter",
+          "system": "http://unitsofmeasure.org",
+          "code": "mL"
+        }
+      }
+    }
+  ],
+  "status": "active"
+}

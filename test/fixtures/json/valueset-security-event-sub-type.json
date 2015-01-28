@@ -1,0 +1,143 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-security-event-sub-type",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div>\n    \n    <hr/><p>This value set contains 35 concepts</p><h2>Security Event Sub-Type</h2><p>More detailed code concerning the type of the security event - defined by DICOM with some FHIR specific additions</p><p><b>Copyright Statement:</b> These codes are excerpted from Digital Imaging and Communications in Medicine (DICOM) Standard, Part 16: Content Mapping Resource, Copyright 2011 by the National Electrical Manufacturers Association</p><p>This value set includes codes defined in other code systems, using the following rules:</p><ul><li>Include these codes as defined in http://nema.org/dicom/dcid<table><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td>110120</td><td>Application Start</td><td>Audit event: Application Entity has started</td></tr><tr><td>110121</td><td>Application Stop</td><td>Audit event: Application Entity has stopped</td></tr><tr><td>110122</td><td>Login</td><td>Audit event: User login has been attempted</td></tr><tr><td>110123</td><td>Logout</td><td>Audit event: User logout has been attempted</td></tr><tr><td>110124</td><td>Attach</td><td>Audit event: Node has been attached</td></tr><tr><td>110125</td><td>Detach</td><td>Audit event: Node has been detached</td></tr><tr><td>110126</td><td>Node Authentication</td><td>Audit event: Node Authentication has been attempted</td></tr><tr><td>110127</td><td>Emergency Override Started</td><td>Audit event: Emergency Override has started</td></tr><tr><td>110128</td><td>Network Configuration</td><td>Audit event: Network configuration has been changed</td></tr><tr><td>110129</td><td>Security Configuration</td><td>Audit event: Security configuration has been changed</td></tr><tr><td>110130</td><td>Hardware Configuration</td><td>Audit event: Hardware configuration has been changed</td></tr><tr><td>110131</td><td>Software Configuration</td><td>Audit event: Software configuration has been changed</td></tr><tr><td>110132</td><td>Use of Restricted Function</td><td>Audit event: A use of a restricted function has been attempted</td></tr><tr><td>110133</td><td>Audit Recording Stopped</td><td>Audit event: Audit recording has been stopped</td></tr><tr><td>110134</td><td>Audit Recording Started</td><td>Audit event: Audit recording has been started</td></tr><tr><td>110135</td><td>Object Security Attributes Changed</td><td>Audit event: Security attributes of an object have been changed</td></tr><tr><td>110136</td><td>Security Roles Changed</td><td>Audit event: Security roles have been changed</td></tr><tr><td>110137</td><td>User security Attributes Changed</td><td>Audit event: Security attributes of a user have been changed</td></tr><tr><td>110138</td><td>Emergency Override Stopped</td><td>Audit event: Emergency Override has Stopped</td></tr><tr><td>110139</td><td>Remote Service Operation Started</td><td>Audit event: Remote Service Operation has Begun</td></tr><tr><td>110140</td><td>Remote Service Operation Stopped</td><td>Audit event: Remote Service Operation has Stopped</td></tr><tr><td>110141</td><td>Local Service Operation Started</td><td>Audit event: Local Service Operation has Begun</td></tr><tr><td>110142</td><td>Local Service Operation Stopped</td><td>Audit event: Local Service Operation Stopped</td></tr></table></li><li>Include these codes as defined in http://hl7.org/fhir/restful-interaction<table><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td>read</td><td>read</td><td>Read the current state of the resource</td></tr><tr><td>vread</td><td>vread</td><td>Read the state of a specific version of the resource</td></tr><tr><td>update</td><td>update</td><td>Update an existing resource by its id (or create it if it is new)</td></tr><tr><td>delete</td><td>delete</td><td>Delete a resource</td></tr><tr><td>validate</td><td>validate</td><td>Check that the content would be acceptable as an update</td></tr><tr><td>create</td><td>create</td><td>Create a new resource with a server assigned id</td></tr><tr><td>history-instance</td><td>history-instance</td><td>Retrieve the update history for a particular resource</td></tr><tr><td>history-type</td><td>history-type</td><td>Retrieve the update history for a all resources of a particular type</td></tr><tr><td>history-system</td><td>history-system</td><td>Retrieve the update history for all resources on a system</td></tr><tr><td>search-type</td><td>search-type</td><td>Search all resources of the specified type based on some filter criteria</td></tr><tr><td>search-system</td><td>search-system</td><td>Search all resources based on some filter criteria</td></tr><tr><td>transaction</td><td>transaction</td><td>Update, create or delete a set of resources as a single transaction</td></tr></table></li></ul></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.221"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/security-event-sub-type",
+  "version": "20100826",
+  "name": "Security Event Sub-Type",
+  "publisher": "NEMA/DICOM",
+  "description": "More detailed code concerning the type of the security event - defined by DICOM with some FHIR specific additions",
+  "copyright": "These codes are excerpted from Digital Imaging and Communications in Medicine (DICOM) Standard, Part 16: Content Mapping Resource, Copyright 2011 by the National Electrical Manufacturers Association",
+  "status": "active",
+  "date": "2010-08-26",
+  "compose": {
+    "include": [
+      {
+        "system": "http://nema.org/dicom/dcid",
+        "concept": [
+          {
+            "code": "110120"
+          },
+          {
+            "code": "110121"
+          },
+          {
+            "code": "110122"
+          },
+          {
+            "code": "110123"
+          },
+          {
+            "code": "110124"
+          },
+          {
+            "code": "110125"
+          },
+          {
+            "code": "110126"
+          },
+          {
+            "code": "110127"
+          },
+          {
+            "code": "110128"
+          },
+          {
+            "code": "110129"
+          },
+          {
+            "code": "110130"
+          },
+          {
+            "code": "110131"
+          },
+          {
+            "code": "110132"
+          },
+          {
+            "code": "110133"
+          },
+          {
+            "code": "110134"
+          },
+          {
+            "code": "110135"
+          },
+          {
+            "code": "110136"
+          },
+          {
+            "code": "110137"
+          },
+          {
+            "code": "110138"
+          },
+          {
+            "code": "110139"
+          },
+          {
+            "code": "110140"
+          },
+          {
+            "code": "110141"
+          },
+          {
+            "code": "110142"
+          }
+        ]
+      },
+      {
+        "system": "http://hl7.org/fhir/restful-interaction",
+        "concept": [
+          {
+            "code": "read"
+          },
+          {
+            "code": "vread"
+          },
+          {
+            "code": "update"
+          },
+          {
+            "code": "delete"
+          },
+          {
+            "code": "validate"
+          },
+          {
+            "code": "create"
+          },
+          {
+            "code": "history-instance"
+          },
+          {
+            "code": "history-type"
+          },
+          {
+            "code": "history-system"
+          },
+          {
+            "code": "search-type"
+          },
+          {
+            "code": "search-system"
+          },
+          {
+            "code": "transaction"
+          }
+        ]
+      }
+    ]
+  }
+}

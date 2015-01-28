@@ -1,0 +1,204 @@
+{
+  "resourceType": "Observation",
+  "id": "f201",
+  "contained": [
+    {
+      "resourceType": "Observation",
+      "id": "height",
+      "name": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "50373000",
+            "display": "Body height measure"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 182,
+        "units": "centimeter",
+        "system": "http://snomed.info/sct",
+        "code": "258672001"
+      },
+      "status": "final",
+      "reliability": "ok"
+    },
+    {
+      "resourceType": "Observation",
+      "id": "weight",
+      "name": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "27113001",
+            "display": "Body weight"
+          }
+        ]
+      },
+      "valueQuantity": {
+        "value": 103.7,
+        "units": "kilogram",
+        "system": "http://snomed.info/sct",
+        "code": "258683005"
+      },
+      "status": "final",
+      "reliability": "ok"
+    }
+  ],
+  "name": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "60621009",
+        "display": "Body mass index"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "39156-5",
+        "display": "Body mass index (BMI) [Ratio]"
+      }
+    ],
+    "text": "BMI"
+  },
+  "valueQuantity": {
+    "value": 31.31
+  },
+  "interpretation": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "75540009",
+        "display": "High"
+      },
+      {
+        "system": "http://hl7.org/fhir/v2/0078",
+        "code": "H"
+      }
+    ]
+  },
+  "issued": "2013-04-04T13:27:00+01:00",
+  "status": "final",
+  "reliability": "ok",
+  "bodySite": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "38266002",
+        "display": "Entire body as a whole"
+      }
+    ]
+  },
+  "method": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "122869004",
+        "display": "Measurement procedure"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/f201",
+    "display": "Roel"
+  },
+  "performer": [
+    {
+      "reference": "Practitioner/f201"
+    }
+  ],
+  "referenceRange": [
+    {
+      "high": {
+        "value": 20
+      },
+      "meaning": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "248342006",
+            "display": "Underweight"
+          }
+        ]
+      }
+    },
+    {
+      "low": {
+        "value": 20
+      },
+      "high": {
+        "value": 25
+      },
+      "meaning": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "43664005",
+            "display": "Normal weight"
+          }
+        ]
+      }
+    },
+    {
+      "low": {
+        "value": 25
+      },
+      "high": {
+        "value": 30
+      },
+      "meaning": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "238131007",
+            "display": "Overweight"
+          }
+        ]
+      }
+    },
+    {
+      "low": {
+        "value": 30
+      },
+      "high": {
+        "value": 40
+      },
+      "meaning": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "414915002",
+            "display": "Obese"
+          }
+        ]
+      }
+    },
+    {
+      "low": {
+        "value": 40
+      },
+      "meaning": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "238136002",
+            "display": "Morbid obesity"
+          }
+        ]
+      }
+    }
+  ],
+  "related": [
+    {
+      "type": "derived-from",
+      "target": {
+        "reference": "#height"
+      }
+    },
+    {
+      "type": "derived-from",
+      "target": {
+        "reference": "#weight"
+      }
+    }
+  ]
+}

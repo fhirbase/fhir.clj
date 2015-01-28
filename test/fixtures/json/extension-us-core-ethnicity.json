@@ -1,0 +1,37 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "us-core-ethnicity",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/us-core-ethnicity",
+  "name": "A category of human sharing heritage",
+  "publisher": "Fhir Core Team",
+  "description": "A code classifying the person into a named category of humans sharing a common real or presumed heritage.",
+  "status": "draft",
+  "date": "2013-12-03",
+  "contextType": "resource",
+  "context": [
+    "Patient"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "A category of human sharing heritage",
+      "formal": "A code classifying the person into a named category of humans sharing a common real or presumed heritage.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isSummary": false,
+      "binding": {
+        "name": "Ethnicity",
+        "isExtensible": true,
+        "description": "A code classifying the person into a named category of humans sharing a common real or presumed heritage.",
+        "referenceReference": {
+          "reference": "http://hl7.org/fhir/v3/vs/Ethnicity"
+        }
+      }
+    }
+  ]
+}

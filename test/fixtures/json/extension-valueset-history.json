@@ -1,0 +1,98 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "valueset-history",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/valueset-history",
+  "name": "What has happened over time",
+  "publisher": "HL7",
+  "description": "Information on changes made to the Value Set Definition over time, and also has a contained audit trail of all such changes.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "contextType": "resource",
+  "context": [
+    "ValueSet"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "What has happened over time",
+      "formal": "Information on changes made to the Value Set Definition over time, and also has a contained audit trail of all such changes.",
+      "min": 0,
+      "max": "*",
+      "isSummary": false
+    },
+    {
+      "path": "Extension.name",
+      "short": "The name of this set of history entries",
+      "formal": "Label for a set of entries, such as a version.",
+      "comments": "Typically, a value set will have a set of history entries for each major publication milestone.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isSummary": false
+    },
+    {
+      "path": "Extension.revision",
+      "short": "Audit of all changes for a history entry",
+      "formal": "A list of specific changes, who made them and when.",
+      "min": 0,
+      "max": "*",
+      "isSummary": false
+    },
+    {
+      "path": "Extension.revision.date",
+      "short": "Date the change was made",
+      "formal": "Date the change took place.",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "dateTime"
+        }
+      ],
+      "isSummary": false
+    },
+    {
+      "path": "Extension.revision.id",
+      "short": "Version marker after the change was made",
+      "formal": "Unique id for the specific change.",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isSummary": false
+    },
+    {
+      "path": "Extension.revision.author",
+      "short": "Who made the change",
+      "formal": "Person or device responsible for the change.",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isSummary": false
+    },
+    {
+      "path": "Extension.revision.notes",
+      "short": "Information about the change",
+      "formal": "Description of exactly what was changed and how.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

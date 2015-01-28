@@ -1,0 +1,90 @@
+{
+  "resourceType": "Encounter",
+  "id": "f001",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "http://www.amc.nl/zorgportal/identifiers/visits",
+      "value": "v1451"
+    }
+  ],
+  "status": "finished",
+  "class": "outpatient",
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "270427003",
+          "display": "Patient-initiated encounter"
+        }
+      ]
+    }
+  ],
+  "patient": {
+    "reference": "Patient/f001",
+    "display": "P. van de Heuvel"
+  },
+  "participant": [
+    {
+      "individual": {
+        "reference": "Practitioner/f002",
+        "display": "P. Voigt"
+      }
+    }
+  ],
+  "length": {
+    "value": 140,
+    "units": "min",
+    "system": "http://unitsofmeasure.org",
+    "code": "min"
+  },
+  "reason": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "34068001",
+        "display": "Heart valve replacement"
+      }
+    ]
+  },
+  "priority": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "310361003",
+        "display": "Non-urgent cardiological admission"
+      }
+    ]
+  },
+  "hospitalization": {
+    "preAdmissionIdentifier": {
+      "use": "official",
+      "system": "http://www.amc.nl/zorgportal/identifiers/pre-admissions",
+      "value": "93042"
+    },
+    "admitSource": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "305956004",
+          "display": "Referral by physician"
+        }
+      ]
+    },
+    "dischargeDisposition": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "306689006",
+          "display": "Discharge to home"
+        }
+      ]
+    },
+    "reAdmission": false
+  },
+  "serviceProvider": {
+    "reference": "Organization/f001",
+    "display": "Burgers University Medical Center"
+  }
+}

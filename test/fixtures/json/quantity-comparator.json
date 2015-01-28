@@ -1,0 +1,59 @@
+{
+  "resourceType": "ValueSet",
+  "id": "quantity-comparator",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 4 concepts</p><h2>QuantityComparator</h2><p>How the Quantity should be understood and represented</p><p>This value set defines its own terms in the system http://hl7.org/fhir/quantity-comparator</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>&lt;<a name=\".60\"> </a></td><td>The actual value is less than the given value.</td></tr><tr><td>&lt;=<a name=\".60.61\"> </a></td><td>The actual value is less than or equal to the given value.</td></tr><tr><td>&gt;=<a name=\".62.61\"> </a></td><td>The actual value is greater than or equal to the given value.</td></tr><tr><td>&gt;<a name=\".62\"> </a></td><td>The actual value is greater than the given value.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.445"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/quantity-comparator",
+  "name": "QuantityComparator",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "How the Quantity should be understood and represented",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.491+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.445"
+      }
+    ],
+    "system": "http://hl7.org/fhir/quantity-comparator",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "<",
+        "definition": "The actual value is less than the given value."
+      },
+      {
+        "code": "<=",
+        "definition": "The actual value is less than or equal to the given value."
+      },
+      {
+        "code": ">=",
+        "definition": "The actual value is greater than or equal to the given value."
+      },
+      {
+        "code": ">",
+        "definition": "The actual value is greater than the given value."
+      }
+    ]
+  }
+}

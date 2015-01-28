@@ -1,0 +1,1247 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "vs2",
+      "identifier": "urn:uuid:9ca9bcf8-9c7c-4ba7-898e-0807aa4af9c2",
+      "name": "Type options for MedicationDispense.dispense.receiver",
+      "description": "Type options for MedicationDispense.dispense.receiver",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:20:47.903+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Patient",
+            "display": "Patient"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Practitioner",
+            "display": "Practitioner"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs3",
+      "identifier": "urn:uuid:63f64652-e979-4487-8efa-6782bbe05e4e",
+      "name": "Type options for MedicationDispense.dispense.dosage.schedule[x]",
+      "description": "Type options for MedicationDispense.dispense.dosage.schedule[x]",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:20:47.903+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "dateTime",
+            "display": "dateTime"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Period",
+            "display": "Period"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Timing",
+            "display": "Timing"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs4",
+      "identifier": "urn:uuid:4356431c-da21-44f2-8094-01b7aab73b16",
+      "name": "Type options for MedicationDispense.dispense.dosage.asNeeded[x]",
+      "description": "Type options for MedicationDispense.dispense.dosage.asNeeded[x]",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:20:47.903+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "boolean",
+            "display": "boolean"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "CodeableConcept",
+            "display": "CodeableConcept"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (Pharmacy)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "Dispensing a medication to a named patient.  This includes a description of the supply provided and the instructions for administering the medication."
+      }
+    ],
+    "linkId": "MedicationDispense",
+    "title": "Dispensing a medication to a named patient",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "MedicationDispense.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "MedicationDispense.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "MedicationDispense.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "MedicationDispense.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "MedicationDispense.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "MedicationDispense.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "MedicationDispense.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "MedicationDispense.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "MedicationDispense.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "MedicationDispense.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "MedicationDispense.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "MedicationDispense.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "MedicationDispense.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "MedicationDispense.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "MedicationDispense.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "MedicationDispense.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "MedicationDispense.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "MedicationDispense.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "MedicationDispense.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "MedicationDispense.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "MedicationDispense.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Identifier assigned by the dispensing facility - this is an identifier assigned outside FHIR."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Identifier"
+          }
+        ],
+        "linkId": "MedicationDispense.identifier",
+        "text": "External identifier",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "MedicationDispense.identifier.label",
+            "text": "label:",
+            "type": "string"
+          },
+          {
+            "linkId": "MedicationDispense.identifier.system",
+            "text": "system:",
+            "type": "string"
+          },
+          {
+            "linkId": "MedicationDispense.identifier.value",
+            "text": "value:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A code specifying the state of the set of dispense events."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "MedicationDispense.status",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "MedicationDispense.status.value",
+            "text": "status",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A link to a resource representing the person to whom the medication will be given. SubstanceAdministration->subject->Patient."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "MedicationDispense.patient",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "MedicationDispense.patient.value",
+            "text": "Who the dispense is for",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The individual responsible for dispensing the medication."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "MedicationDispense.dispenser",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "MedicationDispense.dispenser.value",
+            "text": "Practitioner responsible for dispensing medication",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Indicates the medication order that is being dispensed against."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "MedicationDispense.authorizingPrescription",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/MedicationPrescription?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "MedicationDispense.authorizingPrescription.value",
+            "text": "Medication order that authorizes the dispense",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Indicates the details of the dispense event such as the days supply and quantity of medication dispensed."
+          }
+        ],
+        "linkId": "MedicationDispense.dispense",
+        "title": "Details for individual dispensed medicationdetails",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "MedicationDispense.dispense.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "MedicationDispense.dispense.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Identifier assigned by the dispensing facility.   This is an identifier assigned outside FHIR."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Identifier"
+              }
+            ],
+            "linkId": "MedicationDispense.dispense.identifier",
+            "text": "External identifier for individual item",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "MedicationDispense.dispense.identifier.label",
+                "text": "label:",
+                "type": "string"
+              },
+              {
+                "linkId": "MedicationDispense.dispense.identifier.system",
+                "text": "system:",
+                "type": "string"
+              },
+              {
+                "linkId": "MedicationDispense.dispense.identifier.value",
+                "text": "value:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A code specifying the state of the dispense event."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "code"
+              }
+            ],
+            "linkId": "MedicationDispense.dispense.status",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "MedicationDispense.dispense.status.value",
+                "text": "status",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Indicates the type of dispensing event that is performed. Examples include: Trial Fill, Completion of Trial, Partial Fill, Emergency Fill, Samples, etc."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "MedicationDispense.dispense.type",
+            "text": "Trial fill, partial fill, emergency fill, etc.",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "MedicationDispense.dispense.type.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "MedicationDispense.dispense.type.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The amount of medication that has been dispensed. Includes unit of measure."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Quantity"
+              }
+            ],
+            "linkId": "MedicationDispense.dispense.quantity",
+            "text": "Amount dispensed",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "MedicationDispense.dispense.quantity.comparator",
+                "text": "comp:",
+                "type": "choice"
+              },
+              {
+                "linkId": "MedicationDispense.dispense.quantity.value",
+                "text": "value:",
+                "type": "decimal"
+              },
+              {
+                "linkId": "MedicationDispense.dispense.quantity.units",
+                "text": "units:",
+                "type": "string"
+              },
+              {
+                "linkId": "MedicationDispense.dispense.quantity.code",
+                "text": "coded units:",
+                "type": "string"
+              },
+              {
+                "linkId": "MedicationDispense.dispense.quantity.system",
+                "text": "units system:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Identifies the medication being administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications. Note: do not use Medication.name to describe the dispensed medication. When the only available information is a text description of the medication, Medication.code.text should be used."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "MedicationDispense.dispense.medication",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Medication?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "MedicationDispense.dispense.medication.value",
+                "text": "What medication was supplied",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The time when the dispensed product was packaged and reviewed."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "datetime"
+              }
+            ],
+            "linkId": "MedicationDispense.dispense.whenPrepared",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "MedicationDispense.dispense.whenPrepared.value",
+                "text": "Dispense processing time",
+                "type": "dateTime"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The time the dispensed product was provided to the patient or their representative."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "datetime"
+              }
+            ],
+            "linkId": "MedicationDispense.dispense.whenHandedOver",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "MedicationDispense.dispense.whenHandedOver.value",
+                "text": "Handover time",
+                "type": "dateTime"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Identification of the facility/location where the medication was shipped to, as part of the dispense event."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "MedicationDispense.dispense.destination",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Location?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "MedicationDispense.dispense.destination.value",
+                "text": "Where the medication was sent",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Identifies the person who picked up the medication.  This will usually be a patient or their carer, but some cases exist where it can be a healthcare professional."
+              }
+            ],
+            "linkId": "MedicationDispense.dispense.receiver",
+            "text": "Who collected the medication",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "MedicationDispense.dispense.receiver._type",
+                "text": "type",
+                "type": "choice",
+                "options": {
+                  "reference": "#vs2"
+                },
+                "group": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "Reference"
+                      }
+                    ],
+                    "linkId": "MedicationDispense.dispense.receiver._Patient",
+                    "question": [
+                      {
+                        "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                          {
+                            "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                          }
+                        ],
+                        "linkId": "MedicationDispense.dispense.receiver._Patient.value",
+                        "text": "Patient",
+                        "type": "reference"
+                      }
+                    ]
+                  },
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "Reference"
+                      }
+                    ],
+                    "linkId": "MedicationDispense.dispense.receiver._Practitioner",
+                    "question": [
+                      {
+                        "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                          {
+                            "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                          }
+                        ],
+                        "linkId": "MedicationDispense.dispense.receiver._Practitioner.value",
+                        "text": "Practitioner",
+                        "type": "reference"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Indicates how the medication is to be used by the patient."
+              }
+            ],
+            "linkId": "MedicationDispense.dispense.dosage",
+            "title": "Medicine administration instructions to the patient/carer",
+            "repeats": true,
+            "group": [
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "unique id for the element within a resource (for internal references)."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "MedicationDispense.dispense.dosage.id",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "MedicationDispense.dispense.dosage.id.value",
+                    "text": "xml:id (or equivalent in JSON)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Additional instructions such as \"Swallow with plenty of water\" which may or may not be coded."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "CodeableConcept"
+                  }
+                ],
+                "linkId": "MedicationDispense.dispense.dosage.additionalInstructions",
+                "text": "E.g. \"Take with food\"",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "MedicationDispense.dispense.dosage.additionalInstructions.coding",
+                    "text": "code:",
+                    "type": "open-choice"
+                  },
+                  {
+                    "linkId": "MedicationDispense.dispense.dosage.additionalInstructions.text",
+                    "text": "text:",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The timing schedule for giving the medication to the patient.  The Schedule data type allows many different expressions, for example.  \"Every  8 hours\"; \"Three times a day\"; \"1/2 an hour before breakfast for 10 days from 23-Dec 2011:\";  \"15 Oct 2013, 17 Oct 2013 and 1 Nov 2013\"."
+                  }
+                ],
+                "linkId": "MedicationDispense.dispense.dosage.schedule[x]",
+                "text": "When medication should be administered",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "MedicationDispense.dispense.dosage.schedule[x]._type",
+                    "text": "type",
+                    "type": "choice",
+                    "options": {
+                      "reference": "#vs3"
+                    },
+                    "group": [
+                      {
+                        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                          {
+                            "valueString": "datetime"
+                          }
+                        ],
+                        "linkId": "MedicationDispense.dispense.dosage.schedule[x]._dateTime",
+                        "question": [
+                          {
+                            "linkId": "MedicationDispense.dispense.dosage.schedule[x]._dateTime.value",
+                            "text": "dateTime",
+                            "type": "dateTime"
+                          }
+                        ]
+                      },
+                      {
+                        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                          {
+                            "valueString": "Period"
+                          }
+                        ],
+                        "linkId": "MedicationDispense.dispense.dosage.schedule[x]._Period",
+                        "text": "Period",
+                        "question": [
+                          {
+                            "linkId": "MedicationDispense.dispense.dosage.schedule[x]._Period.low",
+                            "text": "start:",
+                            "type": "dateTime"
+                          },
+                          {
+                            "linkId": "MedicationDispense.dispense.dosage.schedule[x]._Period.end",
+                            "text": "end:",
+                            "type": "dateTime"
+                          }
+                        ]
+                      },
+                      {
+                        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                          {
+                            "valueString": "Schedule"
+                          }
+                        ],
+                        "linkId": "MedicationDispense.dispense.dosage.schedule[x]._Timing",
+                        "text": "Timing"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "If set to true or if specified as a CodeableConcept, indicates that the medication is only taken when needed within the specified schedule rather than at every scheduled dose.  If a CodeableConcept is present, it indicates the pre-condition for taking the Medication."
+                  }
+                ],
+                "linkId": "MedicationDispense.dispense.dosage.asNeeded[x]",
+                "text": "Take \"as needed\" f(or x)",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "MedicationDispense.dispense.dosage.asNeeded[x]._type",
+                    "text": "type",
+                    "type": "choice",
+                    "options": {
+                      "reference": "#vs4"
+                    },
+                    "group": [
+                      {
+                        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                          {
+                            "valueString": "boolean"
+                          }
+                        ],
+                        "linkId": "MedicationDispense.dispense.dosage.asNeeded[x]._boolean",
+                        "question": [
+                          {
+                            "linkId": "MedicationDispense.dispense.dosage.asNeeded[x]._boolean.value",
+                            "text": "boolean",
+                            "type": "boolean"
+                          }
+                        ]
+                      },
+                      {
+                        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                          {
+                            "valueString": "CodeableConcept"
+                          }
+                        ],
+                        "linkId": "MedicationDispense.dispense.dosage.asNeeded[x]._CodeableConcept",
+                        "text": "CodeableConcept",
+                        "question": [
+                          {
+                            "linkId": "MedicationDispense.dispense.dosage.asNeeded[x]._CodeableConcept.coding",
+                            "text": "code:",
+                            "type": "open-choice"
+                          },
+                          {
+                            "linkId": "MedicationDispense.dispense.dosage.asNeeded[x]._CodeableConcept.text",
+                            "text": "text:",
+                            "type": "string"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "A coded specification of the anatomic site where the medication first enters the body."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "CodeableConcept"
+                  }
+                ],
+                "linkId": "MedicationDispense.dispense.dosage.site",
+                "text": "Body site to administer to",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "MedicationDispense.dispense.dosage.site.coding",
+                    "text": "code:",
+                    "type": "open-choice"
+                  },
+                  {
+                    "linkId": "MedicationDispense.dispense.dosage.site.text",
+                    "text": "text:",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "A code specifying the route or physiological path of administration of a therapeutic agent into or onto a subject."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "CodeableConcept"
+                  }
+                ],
+                "linkId": "MedicationDispense.dispense.dosage.route",
+                "text": "How drug should enter body",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "MedicationDispense.dispense.dosage.route.coding",
+                    "text": "code:",
+                    "type": "open-choice"
+                  },
+                  {
+                    "linkId": "MedicationDispense.dispense.dosage.route.text",
+                    "text": "text:",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "A coded value indicating the method by which the medication is introduced into or onto the body. Most commonly used for injections.  Examples:  Slow Push; Deep IV.\n\nTerminologies used often pre-coordinate this term with the route and or form of administration. SubstanceAdministration.methodCode."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "CodeableConcept"
+                  }
+                ],
+                "linkId": "MedicationDispense.dispense.dosage.method",
+                "text": "Technique for administering medication",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "MedicationDispense.dispense.dosage.method.coding",
+                    "text": "code:",
+                    "type": "open-choice"
+                  },
+                  {
+                    "linkId": "MedicationDispense.dispense.dosage.method.text",
+                    "text": "text:",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The amount of therapeutic or other substance given at one administration event."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Quantity"
+                  }
+                ],
+                "linkId": "MedicationDispense.dispense.dosage.quantity",
+                "text": "Amount of medication per dose",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "MedicationDispense.dispense.dosage.quantity.comparator",
+                    "text": "comp:",
+                    "type": "choice"
+                  },
+                  {
+                    "linkId": "MedicationDispense.dispense.dosage.quantity.value",
+                    "text": "value:",
+                    "type": "decimal"
+                  },
+                  {
+                    "linkId": "MedicationDispense.dispense.dosage.quantity.units",
+                    "text": "units:",
+                    "type": "string"
+                  },
+                  {
+                    "linkId": "MedicationDispense.dispense.dosage.quantity.code",
+                    "text": "coded units:",
+                    "type": "string"
+                  },
+                  {
+                    "linkId": "MedicationDispense.dispense.dosage.quantity.system",
+                    "text": "units system:",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Identifies the speed with which the substance is introduced into the subject. Typically the rate for an infusion. 200ml in 2 hours."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Ratio"
+                  }
+                ],
+                "linkId": "MedicationDispense.dispense.dosage.rate",
+                "text": "Amount of medication per unit of time",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "MedicationDispense.dispense.dosage.rate.numerator",
+                    "text": "numerator:",
+                    "type": "decimal"
+                  },
+                  {
+                    "linkId": "MedicationDispense.dispense.dosage.rate.denominator",
+                    "text": "denominator:",
+                    "type": "decimal"
+                  },
+                  {
+                    "linkId": "MedicationDispense.dispense.dosage.rate.units",
+                    "text": "units:",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The maximum total quantity of a therapeutic substance that may be administered to a subject over the period of time,  e.g. 1000mg in 24 hours."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Ratio"
+                  }
+                ],
+                "linkId": "MedicationDispense.dispense.dosage.maxDosePerPeriod",
+                "text": "Upper limit on medication per unit of time",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "MedicationDispense.dispense.dosage.maxDosePerPeriod.numerator",
+                    "text": "numerator:",
+                    "type": "decimal"
+                  },
+                  {
+                    "linkId": "MedicationDispense.dispense.dosage.maxDosePerPeriod.denominator",
+                    "text": "denominator:",
+                    "type": "decimal"
+                  },
+                  {
+                    "linkId": "MedicationDispense.dispense.dosage.maxDosePerPeriod.units",
+                    "text": "units:",
+                    "type": "string"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Indicates whether or not substitution was made as part of the dispense.  In some cases substitution will be expected but doesn't happen, in other cases substitution is not expected but does happen.  This block explains what substitition did or did not happen and why."
+          }
+        ],
+        "linkId": "MedicationDispense.substitution",
+        "title": "Deals with substitution of one medicine for another",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "MedicationDispense.substitution.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "MedicationDispense.substitution.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A code signifying whether a different drug was dispensed from what was prescribed."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "MedicationDispense.substitution.type",
+            "text": "Type of substitiution",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "MedicationDispense.substitution.type.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "MedicationDispense.substitution.type.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Indicates the reason for the substitution of (or lack of substitution) from what was prescribed."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "MedicationDispense.substitution.reason",
+            "text": "Why was substitution made",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "MedicationDispense.substitution.reason.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "MedicationDispense.substitution.reason.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The person or organization that has primary responsibility for the substitution. rename."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "MedicationDispense.substitution.responsibleParty",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "MedicationDispense.substitution.responsibleParty.value",
+                "text": "Who is responsible for the substitution",
+                "type": "reference"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

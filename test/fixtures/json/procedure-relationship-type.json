@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "id": "procedure-relationship-type",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 2 concepts</p><h2>ProcedureRelationshipType</h2><p>The nature of the relationship with this procedure</p><p>This value set defines its own terms in the system http://hl7.org/fhir/procedure-relationship-type</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>caused-by<a name=\"caused-by\"> </a></td><td>This procedure had to be performed because of the related one.</td></tr><tr><td>because-of<a name=\"because-of\"> </a></td><td>This procedure caused the related one to be performed.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.136"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/procedure-relationship-type",
+  "name": "ProcedureRelationshipType",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "The nature of the relationship with this procedure",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.488+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.136"
+      }
+    ],
+    "system": "http://hl7.org/fhir/procedure-relationship-type",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "caused-by",
+        "definition": "This procedure had to be performed because of the related one."
+      },
+      {
+        "code": "because-of",
+        "definition": "This procedure caused the related one to be performed."
+      }
+    ]
+  }
+}

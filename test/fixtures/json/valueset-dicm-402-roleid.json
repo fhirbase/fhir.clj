@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-dicm-402-roleid",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div>\n    \n    <hr/><p>This value set contains 6 concepts</p><h2>Audit Active Participant Role ID Code</h2><p>Audit Active Participant Role ID Code</p><p><b>Copyright Statement:</b> These codes are excerpted from Digital Imaging and Communications in Medicine (DICOM) Standard, Part 16: Content Mapping Resource, Copyright 2011 by the National Electrical Manufacturers Association</p><p>This value set includes codes defined in other code systems, using the following rules:</p><ul><li>Include these codes as defined in http://nema.org/dicom/dcid<table><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td>110150</td><td>Application</td><td>Audit participant role ID of software application</td></tr><tr><td>110151</td><td>Application Launcher</td><td>Audit participant role ID of software application launcher, i.e., the entity that started or stopped an application.</td></tr><tr><td>110152</td><td>Destination Role ID</td><td>Audit participant role ID of the receiver of data</td></tr><tr><td>110153</td><td>Source Role ID</td><td>Audit participant role ID of the sender of data</td></tr><tr><td>110154</td><td>Destination Media</td><td>Audit participant role ID of media receiving data during an export.</td></tr><tr><td>110155</td><td>Source Media</td><td>Audit participant role ID of media providing data during an import.</td></tr></table></li></ul></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.366"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/dicm-402-roleid",
+  "version": "20100826",
+  "name": "Audit Active Participant Role ID Code",
+  "publisher": "NEMA/DICOM",
+  "description": "Audit Active Participant Role ID Code",
+  "copyright": "These codes are excerpted from Digital Imaging and Communications in Medicine (DICOM) Standard, Part 16: Content Mapping Resource, Copyright 2011 by the National Electrical Manufacturers Association",
+  "status": "active",
+  "date": "2010-08-26",
+  "compose": {
+    "include": [
+      {
+        "system": "http://nema.org/dicom/dcid",
+        "concept": [
+          {
+            "code": "110150"
+          },
+          {
+            "code": "110151"
+          },
+          {
+            "code": "110152"
+          },
+          {
+            "code": "110153"
+          },
+          {
+            "code": "110154"
+          },
+          {
+            "code": "110155"
+          }
+        ]
+      }
+    ]
+  }
+}

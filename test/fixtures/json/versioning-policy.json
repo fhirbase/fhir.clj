@@ -1,0 +1,58 @@
+{
+  "resourceType": "ValueSet",
+  "id": "versioning-policy",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 3 concepts</p><h2>ResourceVersionPolicy</h2><p>How the system supports versioning for a resource</p><p>This value set defines its own terms in the system http://hl7.org/fhir/versioning-policy</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>no-version<a name=\"no-version\"> </a></td><td>No VersionId Support</td><td>VersionId meta-property is not suppoerted (server) or used (client).</td></tr><tr><td>versioned<a name=\"versioned\"> </a></td><td>Versioned</td><td>VersionId meta-property is suppoerted (server) or used (client).</td></tr><tr><td>versioned-update<a name=\"versioned-update\"> </a></td><td>VersionId tracked fully</td><td>VersionId is must be correct for updates (server) or will be specified (If-match header) for updates (client).</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.473"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/versioning-policy",
+  "name": "ResourceVersionPolicy",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "How the system supports versioning for a resource",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.489+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.473"
+      }
+    ],
+    "system": "http://hl7.org/fhir/versioning-policy",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "no-version",
+        "display": "No VersionId Support",
+        "definition": "VersionId meta-property is not suppoerted (server) or used (client)."
+      },
+      {
+        "code": "versioned",
+        "display": "Versioned",
+        "definition": "VersionId meta-property is suppoerted (server) or used (client)."
+      },
+      {
+        "code": "versioned-update",
+        "display": "VersionId tracked fully",
+        "definition": "VersionId is must be correct for updates (server) or will be specified (If-match header) for updates (client)."
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-nutritionorder-status-notcanceled",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div>\n\t\t<p>This value set excludes cancelled status code</p>\n\t\t<h2>NutritionOrderStatus</h2>\n\t\t<p>TODO</p>\n\t\t<p>This value set constrains the terms in the system http://hl7.org/fhir/nutrition-order-status\n\t\t excluding the cancelled code.</p>\n\t\t<table class=\"codes\">\n\t\t  <tr>\n\t\t\t<td>\n\t\t\t  <b>Code</b>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t  <b>Display</b>\n\t\t\t</td>\n\t\t\t<td>\n\t\t\t  <b>Definition</b>\n\t\t\t</td>\n\t\t  </tr>\n\t\t  <tr>\n\t\t\t<td>requested\n\t\t\t  <a name=\"requested\"> </a>\n\t\t\t</td>\n\t\t\t<td>Requested</td>\n\t\t\t<td>TODO.</td>\n\t\t  </tr>\n\t\t  <tr>\n\t\t\t<td>active\n\t\t\t  <a name=\"active\"> </a>\n\t\t\t</td>\n\t\t\t<td>Active</td>\n\t\t\t<td>TODO.</td>\n\t\t  </tr>\n\t\t  <tr>\n\t\t\t<td>inactive\n\t\t\t  <a name=\"inactive\"> </a>\n\t\t\t</td>\n\t\t\t<td>Inactive</td>\n\t\t\t<td>TODO.</td>\n\t\t  </tr>\n\t\t  <tr>\n\t\t\t<td>held\n\t\t\t  <a name=\"held\"> </a>\n\t\t\t</td>\n\t\t\t<td>Held</td>\n\t\t\t<td>TODO.</td>\n\t\t  </tr>\t\t  \n\t\t</table>\n\t  </div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.633"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/nutritionorder-status-notcanceled",
+  "name": "NutritionOrderStatusNotCanceled",
+  "publisher": "Health Level Seven, Inc. - CQI WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/special/committees/CQI"
+    }
+  ],
+  "description": "TODO",
+  "status": "draft",
+  "date": "2014-12-10T16:17:24.861-05:00",
+  "compose": {
+    "exclude": [
+      {
+        "system": "http://hl7.org/fhir/nutrition-order-status",
+        "concept": [
+          {
+            "code": "cancelled"
+          }
+        ]
+      }
+    ]
+  }
+}

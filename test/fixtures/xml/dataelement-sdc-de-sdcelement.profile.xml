@@ -1,0 +1,2785 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Profile xmlns="http://hl7.org/fhir">
+  <id value="dataelement-sdc-de-sdcelement"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">to do</div>
+  </text>
+  <url value="http://hl7.org/fhir/Profile/dataelement-sdc-de-sdcelement"/>
+  <name value="Structured Data Capture Data Element Exchange"/>
+  <publisher value="U.S. Office of the National Coordinator (ONC)&#39;s Standards and Infrastructure (S&amp;I) Structured Data Capture project"/>
+  <telecom>
+    <system value="url"/>
+    <value value="http://wiki.siframework.org/Structured+Data+Capture+Initiative"/>
+  </telecom>
+  <description value="Sets expectations for data elements exchanged or maintained within data element registries according to requirements established by the structured data capture project : Structured Data Capture Data Element Exchange"/>
+  <status value="draft"/>
+  <date value="2014-04-21"/>
+  <type value="DataElement"/>
+  <base value="http://hl7.org/fhir/Profile/DataElement"/>
+  <snapshot>
+    <element>
+      <path value="DataElement"/>
+      <name value="SDCElement"/>
+      <short value="Resource data element"/>
+      <formal value="The formal description of a single piece of information that can be gathered and reported."/>
+      <comments value="Often called a clinical template."/>
+      <synonym value="Master Observation"/>
+      <synonym value="Data Element"/>
+      <synonym value="CDE"/>
+      <min value="1"/>
+      <max value="1"/>
+      <constraint>
+        <key value="1"/>
+        <name value="Only one definitional"/>
+        <severity value="error"/>
+        <human value="Can have a maximum of one definitional binding or primary concept"/>
+        <xpath value="count(f:concept[f:primary[@value=&#39;true&#39;]|f:mapping/f:definitional[@value=&#39;true&#39;]])&lt;=1"/>
+      </constraint>
+      <constraint>
+        <key value="2"/>
+        <severity value="error"/>
+        <human value="Must have either a code or an object-property mapping from the SDC value set"/>
+        <xpath value="exists(f:code) or exists(f:mapping[f:uri/@value=&#39;http://healthit.gov/sdc/objectclassproperty&#39;])"/>
+      </constraint>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dex"/>
+        <map value="RetrieveMetadata response"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Observation[classCode=OBS, moodCode=DEFN]"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="Data_Element"/>
+      </mapping>
+      <mapping>
+        <identity value="dex"/>
+        <map value="RetrieveMetadata response"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Observation[classCode=OBS, moodCode=DEFN]"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="Data_Element"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.id"/>
+      <short value="Logical id of this artefact"/>
+      <formal value="The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes."/>
+      <comments value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.meta"/>
+      <short value="Metadata about the resource"/>
+      <formal value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.meta.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.meta.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.meta.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.meta.versionId"/>
+      <short value="Version specific identifier"/>
+      <formal value="The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted."/>
+      <comments value="The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.meta.lastUpdated"/>
+      <short value="When the resource version last changed"/>
+      <formal value="When the resource last changed - e.g. when the version changed."/>
+      <comments value="This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="instant"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.meta.profile"/>
+      <short value="Profiles this resource claims to conform to"/>
+      <formal value="A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url."/>
+      <comments value="It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.meta.security"/>
+      <short value="Security Labels applied to this resource"/>
+      <formal value="Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure."/>
+      <comments value="The security labels can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.meta.tag"/>
+      <short value="Tags applied"/>
+      <formal value="Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource."/>
+      <comments value="The tags can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.implicitRules"/>
+      <short value="A set of rules under which this content was created"/>
+      <formal value="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content."/>
+      <comments value="Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.language"/>
+      <short value="Language of the resource content"/>
+      <formal value="The base language in which the resource is written."/>
+      <comments value="Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource
+
+Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="Language"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="A human language"/>
+        <referenceUri value="http://tools.ietf.org/html/bcp47"/>
+      </binding>
+    </element>
+    <element>
+      <path value="DataElement.text"/>
+      <short value="Text summary of the resource, for human interpretation"/>
+      <formal value="A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."/>
+      <comments value="Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."/>
+      <synonym value="narrative"/>
+      <synonym value="html"/>
+      <synonym value="xhtml"/>
+      <synonym value="display"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Narrative"/>
+      </type>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.contained"/>
+      <short value="Contained, inline Resources"/>
+      <formal value="These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope."/>
+      <comments value="This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."/>
+      <synonym value="inline resources"/>
+      <synonym value="anonymous resources"/>
+      <synonym value="contained resources"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Resource"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.extension"/>
+      <slicing>
+        <discriminator value="url"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.extension"/>
+      <name value="minLength"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.extension"/>
+      <name value="maxLength"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.extension"/>
+      <name value="regex"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.extension"/>
+      <name value="entryFormat"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.extension"/>
+      <name value="minValue"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.extension"/>
+      <name value="maxValue"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.extension"/>
+      <name value="maxDecimalPlaces"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.extension"/>
+      <name value="effectivePeriod"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.identifier"/>
+      <short value="Logical id to reference this data element"/>
+      <formal value="The identifier that is used to identify this data element when it is referenced in a Profile, Questionnaire or an instance."/>
+      <comments value="N/A."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dex"/>
+        <map value="id"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM1.2"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./id[use=BUS]"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="LOINC_NUM (the code is the identifier)"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Identified_Item).identifier
+
+As assigned by registering authority"/>
+      </mapping>
+      <mapping>
+        <identity value="dex"/>
+        <map value="id"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM1.2"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./id[use=BUS]"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="LOINC_NUM (the code is the identifier)"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Identified_Item).identifier
+
+As assigned by registering authority"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.version"/>
+      <short value="Logical id for this version of the data element"/>
+      <formal value="The identifier that is used to identify this version of the data element when it is referenced in a Profile, Questionnaire or instance. This is an arbitrary value managed by the definition author manually."/>
+      <comments value="N/A."/>
+      <requirements value="There may be multiple resource versions of the data element that have this same identifier. The resource version id will change for technical reasons, whereas the stated version number needs to be under the author&#39;s control."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dex"/>
+        <map value="version"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./id[use=VER]"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Identified_Item).identifier.version"/>
+      </mapping>
+      <mapping>
+        <identity value="dex"/>
+        <map value="version"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./id[use=VER]"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Identified_Item).identifier.version"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.publisher"/>
+      <short value="Name of the publisher (Organization or individual)"/>
+      <formal value="Details of the individual or organization who accepts responsibility for publishing the data element."/>
+      <comments value="Usually an organization, but may be an individual. This item SHOULD be populated unless the information is available from context."/>
+      <requirements value="Helps establish the &quot;authority/credibility&quot; of the data element.  May also allow for contact."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dex"/>
+        <map value="registrationAuthority"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM1.16"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./participation[typeCode=AUT]/role[classCode=ASSIGN]/scoper[classCode=ORG,determinerCode=INSTANCE]/name"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="Fixed to Regenstrief or SOURCE"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Administered_Item).stewardship_record.organization.name"/>
+      </mapping>
+      <mapping>
+        <identity value="dex"/>
+        <map value="registrationAuthority"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM1.16"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./participation[typeCode=AUT]/role[classCode=ASSIGN]/scoper[classCode=ORG,determinerCode=INSTANCE]/name"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="Fixed to Regenstrief or SOURCE"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Administered_Item).stewardship_record.organization.name"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.telecom"/>
+      <short value="Contact information of the publisher"/>
+      <formal value="Contact details to assist a user in finding and communicating with the publisher."/>
+      <comments value="May be a web site, an email address, a telephone number (tel:), etc."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="ContactPoint"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM1.17"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./participation[typeCode=AUT]/role[classCode=ASSIGN]/scoper[classCode=ORG,determinerCode=INSTANCE]/telecom"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Administered_Item).stewardship_record.organization.[email_address, phone_number, uri]"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM1.17"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./participation[typeCode=AUT]/role[classCode=ASSIGN]/scoper[classCode=ORG,determinerCode=INSTANCE]/telecom"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Administered_Item).stewardship_record.organization.[email_address, phone_number, uri]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.status"/>
+      <short value="draft | active | retired"/>
+      <formal value="The status of the data element."/>
+      <requirements value="Allows filtering of data elements that are appropriate for use vs. not."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="true"/>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="ResourceDataElementStatus"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The lifecycle status of a Resource data element"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/resource-observation-def-status"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="MFE.1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./status
+(draft = new
+ active = active
+ retired = aborted)"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="STATUS"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Administered_item).registration.state
+
+new = Incomplete, Candidate, Recorded, Qualified
+
+active = Standard, Preferred Standard, Application
+
+retired = Retired, Superceded, Historical"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="MFE.1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./status
+(draft = new
+ active = active
+ retired = aborted)"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="STATUS"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Administered_item).registration.state
+
+new = Incomplete, Candidate, Recorded, Qualified
+
+active = Standard, Preferred Standard, Application
+
+retired = Retired, Superceded, Historical"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.date"/>
+      <short value="Date for this version of the data element"/>
+      <formal value="The date that the status for this business version of the data element became effective.  (I.e. Date the draft was created, date element became active or date element became retired)."/>
+      <comments value="This refers to the &quot;business&quot; version - the DataElement.version which changes based on business processes.  It does not refer to the date of the RESTful version which is part of the resource metadata."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dex"/>
+        <map value="revisionDate"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM1.21"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./participation[typeCode=AUT]/time"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="DATE_LAST_CHANGED"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Administered_item).last_change_date"/>
+      </mapping>
+      <mapping>
+        <identity value="dex"/>
+        <map value="revisionDate"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM1.21"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./participation[typeCode=AUT]/time"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="DATE_LAST_CHANGED"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Administered_item).last_change_date"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.name"/>
+      <short value="Descriptive label for this element definition"/>
+      <formal value="The term used by humans to refer to the data element.  Should ideally be unique within the context in which the data element is expected to be used."/>
+      <comments value="This may be similar to the question used to prompt someone for a data element value, but the purpose is communicating about the data element, not asking the question.  (Refer to the &#39;question&#39; element for the latter.)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dex"/>
+        <map value="displayName"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM1.11"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./title"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="LONG_COMMON_NAME"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Designatable_Item).designation.sign
+
+acceptability=preferred in default context"/>
+      </mapping>
+      <mapping>
+        <identity value="dex"/>
+        <map value="displayName"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM1.11"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./title"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="LONG_COMMON_NAME"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Designatable_Item).designation.sign
+
+acceptability=preferred in default context"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.category"/>
+      <short value="Assist with indexing and finding"/>
+      <formal value="A set of terms from external terminologies that may be used to assist with indexing and searching of data element definitions."/>
+      <requirements value="Assist in searching for appropriate data elements."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM1.18, OM1.42, OM1.46, OM7.3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./inboundRelationship[typeCode=SUBJ]/source[classCode=LIST, moodCode=EVN]/code"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="COMPONENT, PROPERTY, TIME_ASPCT, SYSTEM, SCALE_TYP, METHOD_TYP, CLASS, CLASSTYPE, ORDER_OBS, DOCUMENT_SECTION, HL7_ATTACHMENT_STRUCTURE"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Classifiable_Item).classifier"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM1.18, OM1.42, OM1.46, OM7.3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./inboundRelationship[typeCode=SUBJ]/source[classCode=LIST, moodCode=EVN]/code"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="COMPONENT, PROPERTY, TIME_ASPCT, SYSTEM, SCALE_TYP, METHOD_TYP, CLASS, CLASSTYPE, ORDER_OBS, DOCUMENT_SECTION, HL7_ATTACHMENT_STRUCTURE"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Classifiable_Item).classifier"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.granularity"/>
+      <short value="comparable | fully specified | equivalent | convertable | scaleable | flexible"/>
+      <formal value="Identifies how precise the data element is in its definition."/>
+      <requirements value="Allows determining whether the degree of comparability of data element instances - less granular data elements result in data that is less comparable (or at least requires more work to compare)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="ComparableGranularity"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="Those granularities which support automated comparison of the data elements, though possibly with a degree of normalization involved"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/dataelement-comparable-granularity"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./target[typeCode=SUBJ]/source[classCode=OBS, moodCode=EVN, code=&quot;granularity&quot;]/value"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./target[typeCode=SUBJ]/source[classCode=OBS, moodCode=EVN, code=&quot;granularity&quot;]/value"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.code"/>
+      <short value="A code that defines the data element in terms of SDC&#39;s data element concept value set."/>
+      <formal value="A code that defines the data element in terms of SDC&#39;s data element concept value set."/>
+      <comments value="For SDC conformance, if there is no class-property mapping, then at least one of the &#39;code&#39; repetitions SHALL come from the &quot;DataElement SDC Concept&quot; value set (which is extensible)."/>
+      <requirements value="Many data elements may have codes that define the concepts described by the data element.  E.g. LOINC, SNOMED, various meta-thesauruses, etc."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM1.7"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./code (root or translation)"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="LOINC_NUM"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Data_Element).data_element_concept.identifier"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM1.7"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./code (root or translation)"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="LOINC_NUM"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Data_Element).data_element_concept.identifier"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.question"/>
+      <short value="Prompt for element phrased as question"/>
+      <formal value="The default/suggested phrasing to use when prompting a human to capture the data element in question form (e.g. In a survey)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./code/originalText"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="SURVEY_QUEST_TEXT"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./code/originalText"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="SURVEY_QUEST_TEXT"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.label"/>
+      <short value="Name for element to display with or prompt for element"/>
+      <formal value="The text to display beside the element indicating its meaning or to use to prompt for the element in a user display or form."/>
+      <comments value="Question and label serve similar purposes in they both can be used to prompt for capturing a data element.  Whether the question form or label form should be used will depend on the type of instrument being used to capture the information."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./code/display"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./code/display"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.definition"/>
+      <short value="Definition/description as narrative text"/>
+      <formal value="Provides a complete explanation of the meaning of the data element for human readability."/>
+      <synonym value="Definition"/>
+      <synonym value="Description"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM1.6, OM1.41"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./text"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="TERM DEFINITION/DESCRIPTION(S)"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Designatable_Item).definition.text
+
+acceptability=preferred in default context"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM1.6, OM1.41"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./text"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="TERM DEFINITION/DESCRIPTION(S)"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Designatable_Item).definition.text
+
+acceptability=preferred in default context"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.comments"/>
+      <short value="Comments about the use of this element"/>
+      <formal value="Comments about the use of the element, including notes about how to use the data properly, exceptions to proper use, etc."/>
+      <comments value="If it is possible to capture usage rules using invariants, that mechanism should be used in preference to this element."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="NTE, OM.32, OM1.33, OM1.39"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./inboundRelationship[typeCode=SUBJ]/source[classCode=LIST, moodCode=EVN]/code"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="COMMENTS"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Administered_Item).explanatory_comment"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="NTE, OM.32, OM1.33, OM1.39"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./inboundRelationship[typeCode=SUBJ]/source[classCode=LIST, moodCode=EVN]/code"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="COMMENTS"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Administered_Item).explanatory_comment"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.requirements"/>
+      <short value="Why is this needed?"/>
+      <formal value="Explains why this element is needed and why it&#39;s been constrained as it has."/>
+      <comments value="This element does not describe the usage of the element (that&#39;s done in comments), rather it&#39;s for traceability of *why* the element is either needed or why the constraints exist as they do.  This may be used to point to source materials or specifications that drove the structure of this data element."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./inboundRelationship[typeCode=META]/source[classCode=ACT, moodCode=EVN, isCriterionInd=true]/reasonCode/originalText"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="R/O/C"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Registered_item).document_reference[document_type=requirements].notation"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./inboundRelationship[typeCode=META]/source[classCode=ACT, moodCode=EVN, isCriterionInd=true]/reasonCode/originalText"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="R/O/C"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Registered_item).document_reference[document_type=requirements].notation"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.synonym"/>
+      <short value="Other names"/>
+      <formal value="Identifies additional names by which this element might also be known."/>
+      <requirements value="Allows for better easier recognition of the element by multiple communities, including international communities."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM1.8, OM1.52"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Not currently expressible"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="RELATED NAMES (only some of these apply)"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Designatable_Item).designation.sign
+
+acceptability!=preferred or context is other than default"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM1.8, OM1.52"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Not currently expressible"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="RELATED NAMES (only some of these apply)"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="(Designatable_Item).designation.sign
+
+acceptability!=preferred or context is other than default"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.type"/>
+      <short value="Name of Data type"/>
+      <formal value="The FHIR data type that is the type for data that corresponds to this data element."/>
+      <comments value="If absent, the structure represents a concept rather than an element."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DataType"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The type of an element - one of the FHIR data types"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/data-types"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="dex"/>
+        <map value="valueDomain.dataType"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM1.3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="HL7_V2_DATATYPE (translation required), HL7_V3_DATATYPE (translation required)"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value=".domain.data+Q14type"/>
+      </mapping>
+      <mapping>
+        <identity value="dex"/>
+        <map value="valueDomain.dataType"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM1.3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="HL7_V2_DATATYPE (translation required), HL7_V3_DATATYPE (translation required)"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value=".domain.data+Q14type"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.example[x]"/>
+      <short value="Example value: [as defined for type]"/>
+      <formal value="A sample value for this element demonstrating the type of information that would typically be captured."/>
+      <comments value="This will most commonly be present for data where it&#39;s not implicitly obvious from either the data type or value set what the values might be.  (I.e. Example values for dates or quantities would generally be unnecessary.)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="*"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="EXMPL_ANSWERS"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value=".example"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="EXMPL_ANSWERS"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value=".example"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.maxLength"/>
+      <short value="Length for strings"/>
+      <formal value="Indicates the shortest length that SHALL be supported by conformant instances without truncation."/>
+      <comments value="If not specified, there is no conformance expectation for length support."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="integer"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value=".domain.maximum_character_quantity"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value=".domain.maximum_character_quantity"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.units[x]"/>
+      <short value="Units to use for measured value"/>
+      <formal value="Identifies the units of measure in which the data element should be captured or expressed."/>
+      <comments value="Use a value set if more than one unit of measure is possible."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/ValueSet"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="Units"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="Type of measurement system used to express a value"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/units"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="dex"/>
+        <map value="valueDomain.unitOfMeasure"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM2.2"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value=".domain.unit_of_measure"/>
+      </mapping>
+      <mapping>
+        <identity value="dex"/>
+        <map value="valueDomain.unitOfMeasure"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM2.2"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value=".domain.unit_of_measure"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.binding"/>
+      <short value="ValueSet details if this is coded"/>
+      <formal value="Binds to a value set if this element is coded (code, Coding, CodeableConcept)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <constraint>
+        <key value="3"/>
+        <name value="Valueset or description"/>
+        <severity value="error"/>
+        <human value="provide either a valueSet or a description (or both)"/>
+        <xpath value="(exists(f:valueSet)) or exists(f:description)"/>
+      </constraint>
+      <constraint>
+        <key value="14"/>
+        <name value="Examples extensible"/>
+        <severity value="error"/>
+        <human value="Example value sets are always extensible"/>
+        <xpath value="not(f:conformance/value=&#39;example&#39; and f:isExtensible.value=&#39;false&#39;)"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="ANSWER LIST, NORMATIVE ANSWER LIST"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value=".domain"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OM3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="ANSWER LIST, NORMATIVE ANSWER LIST"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value=".domain"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.binding.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.binding.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.binding.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.binding.isExtensible"/>
+      <short value="Can additional codes be used?"/>
+      <formal value="If true, then conformant systems may use additional codes or (where the data type permits) text alone to convey concepts not covered by the set of codes identified in the binding.  If false, then conformant systems are constrained to the provided codes alone."/>
+      <comments value="When the binding use used for elements with a type of &quot;code&quot; (rather than Coding or CodableConcept), the binding is treated as non-extensible regardless of the value of this property."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <condition value="14"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.binding.conformance"/>
+      <short value="required | preferred | example"/>
+      <formal value="Indicates the degree of conformance expectations associated with this binding."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <condition value="14"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="BindingConformance"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="Binding conformance for applications"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/binding-conformance"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.binding.description"/>
+      <short value="Human explanation of the value set"/>
+      <formal value="Describes the intended use of this particular set of codes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <condition value="3"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value=".domain.description"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value=".domain.description"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.binding.valueSet"/>
+      <short value="Source of value set"/>
+      <formal value="Points to the value set that identifies the set of codes to be used."/>
+      <comments value="The display can contain the value set description.  The reference may be version-specific or not."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/ValueSet"/>
+      </type>
+      <condition value="3"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dex"/>
+        <map value="valueDomain.valueSet"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="CODE_TABLE"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="points to explicit list or expression that evaluates to list of (Enumerated_Value_Domain).member"/>
+      </mapping>
+      <mapping>
+        <identity value="dex"/>
+        <map value="valueDomain.valueSet"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="loincstruc"/>
+        <map value="CODE_TABLE"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="points to explicit list or expression that evaluates to list of (Enumerated_Value_Domain).member"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.mapping"/>
+      <slicing>
+        <discriminator value="uri"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Map element to another set of definitions"/>
+      <formal value="Identifies a concept from an external specification that roughly corresponds to this element."/>
+      <comments value="Mappings are not necessarily specific enough for safe translation."/>
+      <requirements value="Provides guidance to implementers familiar with or converting content from other specifications.  May also help formally define the meaning of the element by mapping to a reference model."/>
+      <min value="0"/>
+      <max value="*"/>
+      <constraint>
+        <key value="26"/>
+        <name value="Name or URI"/>
+        <severity value="error"/>
+        <human value="Must have at a name or a uri (or both)"/>
+        <xpath value="exists(f:uri) or exists(f:name)"/>
+      </constraint>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dex"/>
+        <map value="mappingSpecification"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="Registered_item).document_reference[document_type=mapping]
+
+Also, .meaning linkage to Data_Element_Concept is done as a mapping to a reference model.  (Data_Element_Concepts are all defined in some sort of reference model, be that Object_Class and Property or some other mechanism)"/>
+      </mapping>
+      <mapping>
+        <identity value="dex"/>
+        <map value="mappingSpecification"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="Registered_item).document_reference[document_type=mapping]
+
+Also, .meaning linkage to Data_Element_Concept is done as a mapping to a reference model.  (Data_Element_Concepts are all defined in some sort of reference model, be that Object_Class and Property or some other mechanism)"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.mapping"/>
+      <name value="ClassPropertyMapping"/>
+      <short value="A mapping that defines the data element in terms of the SDC project&#39;s ObjectClass and Property value sets."/>
+      <formal value="A mapping that defines the data element in terms of the SDC project&#39;s ObjectClass and Property value sets."/>
+      <comments value="Mappings are not necessarily specific enough for safe translation."/>
+      <requirements value="Provides guidance to implementers familiar with or converting content from other specifications.  May also help formally define the meaning of the element by mapping to a reference model."/>
+      <min value="0"/>
+      <max value="1"/>
+      <constraint>
+        <key value="26"/>
+        <name value="Name or URI"/>
+        <severity value="error"/>
+        <human value="Must have at a name or a uri (or both)"/>
+        <xpath value="exists(f:uri) or exists(f:name)"/>
+      </constraint>
+      <constraint>
+        <key value="1"/>
+        <severity value="error"/>
+        <human value="Property extension can only be specified if ObjectClass extension is present"/>
+        <xpath value="exists(f:extension[@url=&#39;http://hl7.org/fhir/ExtensionDefinition/11179-objectClass&#39;]) or not(exists(f:extension[@url=&#39;http://hl7.org/fhir/ExtensionDefinition/11179-property&#39;]))"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dex"/>
+        <map value="mappingSpecification"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="Registered_item).document_reference[document_type=mapping]
+
+Also, .meaning linkage to Data_Element_Concept is done as a mapping to a reference model.  (Data_Element_Concepts are all defined in some sort of reference model, be that Object_Class and Property or some other mechanism)"/>
+      </mapping>
+      <mapping>
+        <identity value="dex"/>
+        <map value="mappingSpecification"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="iso11179"/>
+        <map value="Registered_item).document_reference[document_type=mapping]
+
+Also, .meaning linkage to Data_Element_Concept is done as a mapping to a reference model.  (Data_Element_Concepts are all defined in some sort of reference model, be that Object_Class and Property or some other mechanism)"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.mapping.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.mapping.extension"/>
+      <slicing>
+        <discriminator value="url"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.mapping.extension"/>
+      <name value="objectClass"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.mapping.extension.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.mapping.extension.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.mapping.extension.url"/>
+      <representation value="xmlAttr"/>
+      <short value="identifies the meaning of the extension"/>
+      <formal value="Source of the definition for the extension code - a logical name or a URL."/>
+      <comments value="The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition should be version specific.  This will ideally be the URI for the Resource Profile defining the extension, with the code for the extension after a #."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.mapping.extension.value[x]"/>
+      <short value="Value of extension"/>
+      <formal value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="*"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="SDCObjectClass"/>
+        <isExtensible value="true"/>
+        <conformance value="required"/>
+        <description value="Allowed values for the ISO 11179 ObjectClass extension when used for Structured Data Capture purposes"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/dataelement-sdcobjectclass"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.mapping.extension"/>
+      <name value="property"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.mapping.extension.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.mapping.extension.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.mapping.extension.url"/>
+      <representation value="xmlAttr"/>
+      <short value="identifies the meaning of the extension"/>
+      <formal value="Source of the definition for the extension code - a logical name or a URL."/>
+      <comments value="The definition may point directly to a computable or human-readable definition of the extensibility codes, or it may be a logical URI as declared in some other specification. The definition should be version specific.  This will ideally be the URI for the Resource Profile defining the extension, with the code for the extension after a #."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.mapping.extension.value[x]"/>
+      <short value="Value of extension"/>
+      <formal value="Value of extension - may be a resource or one of a constrained set of the data types (see Extensibility in the spec for list)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="*"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="SDCObjectClassProperty"/>
+        <isExtensible value="true"/>
+        <conformance value="required"/>
+        <description value="Allowed values for the ISO 11179 ObjectClass  Property extension when used for Structured Data Capture purposes"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/dataelement-sdcobjectclassproperty"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.mapping.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.mapping.uri"/>
+      <short value="Identifies what this mapping refers to"/>
+      <formal value="A URI that identifies the specification that this mapping is expressed to."/>
+      <comments value="A formal identity for the specification being mapped to helps with identifying maps consistently."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="http://healthit.gov/sdc/objectclassproperty"/>
+      <condition value="26"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dex"/>
+        <map value="mappingSpecification.contentModel.id"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="dex"/>
+        <map value="mappingSpecification.contentModel.id"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.mapping.definitional"/>
+      <short value="True if mapping defines element"/>
+      <formal value="If true, indicates that the official meaning of the data element is exactly equivalent to the mapped element."/>
+      <requirements value="Distinguishes mappings that approximate the meaning of the element from the mapping that is exactly equivalent to the data element."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <defaultValueBoolean value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.mapping.name"/>
+      <short value="Names what this mapping refers to"/>
+      <formal value="A name for the specification that is being mapped to."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <condition value="26"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dex"/>
+        <map value="mappingSpecification.contentModel.name"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="dex"/>
+        <map value="mappingSpecification.contentModel.name"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.mapping.comments"/>
+      <short value="Versions, Issues, Scope limitations etc"/>
+      <formal value="Comments about this mapping, including version notes, issues, scope limitations, and other important notes for usage."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DataElement.mapping.map"/>
+      <short value="This should be expressed as &quot;[uri for object class code system]#[code for object class code system] | [uri for property code system]#[code for property code system]&quot;."/>
+      <formal value="This should be expressed as &quot;[uri for object class code system]#[code for object class code system] | [uri for property code system]#[code for property code system]&quot;."/>
+      <comments value="We express the mapping even though the class and property extensions already convey the data to ensure that systems that don&#39;t recognize the extensions still understand the mappings."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dex"/>
+        <map value="ObjectClass, Property (this is one possible data model that can be mapped to - the uri would identify the data model
+
+mappingSpecification.mappingScript"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+      <mapping>
+        <identity value="dex"/>
+        <map value="ObjectClass, Property (this is one possible data model that can be mapped to - the uri would identify the data model
+
+mappingSpecification.mappingScript"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A (MIF territory)"/>
+      </mapping>
+    </element>
+  </snapshot>
+  <differential>
+    <element>
+      <path value="DataElement"/>
+      <name value="SDCElement"/>
+      <min value="1"/>
+      <max value="1"/>
+      <constraint>
+        <key value="2"/>
+        <severity value="error"/>
+        <human value="Must have either a code or an object-property mapping from the SDC value set"/>
+        <xpath value="exists(f:code) or exists(f:mapping[f:uri/@value=&#39;http://healthit.gov/sdc/objectclassproperty&#39;])"/>
+      </constraint>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.extension"/>
+      <slicing>
+        <discriminator value="url"/>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element>
+      <path value="DataElement.extension"/>
+      <name value="minLength"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/minLength"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.extension"/>
+      <name value="maxLength"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/maxLength"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.extension"/>
+      <name value="regex"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/regex"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.extension"/>
+      <name value="entryFormat"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/entryFormat"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.extension"/>
+      <name value="minValue"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/minValue"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.extension"/>
+      <name value="maxValue"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/maxValue"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.extension"/>
+      <name value="maxDecimalPlaces"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/maxDecimalPlaces"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.extension"/>
+      <name value="effectivePeriod"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/11179-effective-period"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.identifier"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.version"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.publisher"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.telecom"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Contact"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.status"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.date"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.name"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.category"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.granularity"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="ComparableGranularity"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="Those granularities which support automated comparison of the data elements, though possibly with a degree of normalization involved"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/dataelement-comparable-granularity"/>
+        </referenceReference>
+      </binding>
+    </element>
+    <element>
+      <path value="DataElement.code"/>
+      <short value="A code that defines the data element in terms of SDC&#39;s data element concept value set."/>
+      <formal value="A code that defines the data element in terms of SDC&#39;s data element concept value set."/>
+      <comments value="For SDC conformance, if there is no class-property mapping, then at least one of the &#39;code&#39; repetitions SHALL come from the &quot;DataElement SDC Concept&quot; value set (which is extensible)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <condition value="2"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.question"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.label"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.definition"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.comments"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.requirements"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.synonym"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.type"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.example[x]"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="*"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.maxLength"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="integer"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.units[x]"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/ValueSet"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.binding"/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.binding.isExtensible"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.binding.conformance"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.binding.description"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.binding.valueSet"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/ValueSet"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.mapping"/>
+      <slicing>
+        <discriminator value="uri"/>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element>
+      <path value="DataElement.mapping"/>
+      <name value="ClassPropertyMapping"/>
+      <short value="A mapping that defines the data element in terms of the SDC project&#39;s ObjectClass and Property value sets."/>
+      <formal value="A mapping that defines the data element in terms of the SDC project&#39;s ObjectClass and Property value sets."/>
+      <min value="0"/>
+      <max value="1"/>
+      <condition value="2"/>
+      <constraint>
+        <key value="1"/>
+        <severity value="error"/>
+        <human value="Property extension can only be specified if ObjectClass extension is present"/>
+        <xpath value="exists(f:extension[@url=&#39;http://hl7.org/fhir/ExtensionDefinition/11179-objectClass&#39;]) or not(exists(f:extension[@url=&#39;http://hl7.org/fhir/ExtensionDefinition/11179-property&#39;]))"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.mapping.extension"/>
+      <slicing>
+        <discriminator value="url"/>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element>
+      <path value="DataElement.mapping.extension"/>
+      <name value="objectClass"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/11179-objectClass"/>
+      </type>
+      <condition value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.mapping.extension.valueCoding"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="SDCObjectClass"/>
+        <isExtensible value="true"/>
+        <conformance value="required"/>
+        <description value="Allowed values for the ISO 11179 ObjectClass extension when used for Structured Data Capture purposes"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/dataelement-sdcobjectclass"/>
+        </referenceReference>
+      </binding>
+    </element>
+    <element>
+      <path value="DataElement.mapping.extension"/>
+      <name value="property"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/11179-property"/>
+      </type>
+      <condition value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.mapping.extension.valueCoding"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="SDCObjectClassProperty"/>
+        <isExtensible value="true"/>
+        <conformance value="required"/>
+        <description value="Allowed values for the ISO 11179 ObjectClass  Property extension when used for Structured Data Capture purposes"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/dataelement-sdcobjectclassproperty"/>
+        </referenceReference>
+      </binding>
+    </element>
+    <element>
+      <path value="DataElement.mapping.definitional"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.mapping.uri"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="http://healthit.gov/sdc/objectclassproperty"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.mapping.name"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.mapping.comments"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DataElement.mapping.map"/>
+      <short value="This should be expressed as &quot;[uri for object class code system]#[code for object class code system] | [uri for property code system]#[code for property code system]&quot;."/>
+      <formal value="This should be expressed as &quot;[uri for object class code system]#[code for object class code system] | [uri for property code system]#[code for property code system]&quot;."/>
+      <comments value="We express the mapping even though the class and property extensions already convey the data to ensure that systems that don&#39;t recognize the extensions still understand the mappings."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</Profile>

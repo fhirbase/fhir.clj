@@ -1,0 +1,1592 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "vs2",
+      "identifier": "urn:uuid:c3181b28-d12a-4060-bfb6-4975be166182",
+      "name": "Type options for DataElement.example[x]",
+      "description": "Type options for DataElement.example[x]",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:19:54.185+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "integer",
+            "display": "integer"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "decimal",
+            "display": "decimal"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "dateTime",
+            "display": "dateTime"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "date",
+            "display": "date"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "instant",
+            "display": "instant"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "time",
+            "display": "time"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "string",
+            "display": "string"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "uri",
+            "display": "uri"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "boolean",
+            "display": "boolean"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Coding",
+            "display": "Coding"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "CodeableConcept",
+            "display": "CodeableConcept"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Attachment",
+            "display": "Attachment"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Identifier",
+            "display": "Identifier"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Quantity",
+            "display": "Quantity"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Range",
+            "display": "Range"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Period",
+            "display": "Period"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Ratio",
+            "display": "Ratio"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "HumanName",
+            "display": "HumanName"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Address",
+            "display": "Address"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "ContactPoint",
+            "display": "ContactPoint"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Timing",
+            "display": "Timing"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Reference",
+            "display": "Reference"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs3",
+      "identifier": "urn:uuid:efe33ebe-f9b6-4d84-9dec-3948d9ae0746",
+      "name": "Type options for DataElement.units[x]",
+      "description": "Type options for DataElement.units[x]",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:19:54.186+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "CodeableConcept",
+            "display": "CodeableConcept"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "ValueSet",
+            "display": "ValueSet"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (FHIR Management Group)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "The formal description of a single piece of information that can be gathered and reported."
+      }
+    ],
+    "linkId": "DataElement",
+    "title": "Resource data element",
+    "text": "Often called a clinical template.",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "DataElement.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "DataElement.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "DataElement.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DataElement.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "DataElement.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DataElement.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "DataElement.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DataElement.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "DataElement.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DataElement.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "DataElement.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DataElement.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "DataElement.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DataElement.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "DataElement.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "DataElement.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "DataElement.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "DataElement.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The identifier that is used to identify this data element when it is referenced in a Profile, Questionnaire or an instance. N/A."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Identifier"
+          }
+        ],
+        "linkId": "DataElement.identifier",
+        "text": "Logical id to reference this data element",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.identifier.label",
+            "text": "label:",
+            "type": "string"
+          },
+          {
+            "linkId": "DataElement.identifier.system",
+            "text": "system:",
+            "type": "string"
+          },
+          {
+            "linkId": "DataElement.identifier.value",
+            "text": "value:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The identifier that is used to identify this version of the data element when it is referenced in a Profile, Questionnaire or instance. This is an arbitrary value managed by the definition author manually. N/A."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "DataElement.version",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.version.value",
+            "text": "Logical id for this version of the data element",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Details of the individual or organization who accepts responsibility for publishing the data element. Usually an organization, but may be an individual. This item SHOULD be populated unless the information is available from context."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "DataElement.publisher",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.publisher.value",
+            "text": "Name of the publisher (Organization or individual)",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Contact details to assist a user in finding and communicating with the publisher. May be a web site, an email address, a telephone number (tel:), etc."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "ContactPoint"
+          }
+        ],
+        "linkId": "DataElement.telecom",
+        "text": "Contact information of the publisher",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.telecom.system",
+            "text": "type:",
+            "type": "choice"
+          },
+          {
+            "linkId": "DataElement.telecom.value",
+            "text": "value:",
+            "type": "string"
+          },
+          {
+            "linkId": "DataElement.telecom.use",
+            "text": "use:",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The status of the data element."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "DataElement.status",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.status.value",
+            "text": "status",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The date that the status for this business version of the data element became effective.  (I.e. Date the draft was created, date element became active or date element became retired). This refers to the \"business\" version - the DataElement.version which changes based on business processes.  It does not refer to the date of the RESTful version which is part of the resource metadata."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "datetime"
+          }
+        ],
+        "linkId": "DataElement.date",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.date.value",
+            "text": "Date for this version of the data element",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The term used by humans to refer to the data element.  Should ideally be unique within the context in which the data element is expected to be used. This may be similar to the question used to prompt someone for a data element value, but the purpose is communicating about the data element, not asking the question.  (Refer to the 'question' element for the latter.)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "DataElement.name",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.name.value",
+            "text": "Descriptive label for this element definition",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A set of terms from external terminologies that may be used to assist with indexing and searching of data element definitions."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "DataElement.category",
+        "text": "Assist with indexing and finding",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.category.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "DataElement.category.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Identifies how precise the data element is in its definition."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "DataElement.granularity",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.granularity.value",
+            "text": "granularity",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A code that provides the meaning for a data element according to a particular terminology. The data element definition and other constraints SHALL be a proper constraint on the meaning (as defined in the code system, including relationships) of any code listed here.\n\nWhere multiple codes exist in a terminology that could correspond to the data element, the most granular code(s) should be selected, so long as they are not more restrictive than the data element itself."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "DataElement.code",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.code.value",
+            "text": "Identifying concept",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The default/suggested phrasing to use when prompting a human to capture the data element in question form (e.g. In a survey)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "DataElement.question",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.question.value",
+            "text": "Prompt for element phrased as question",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The text to display beside the element indicating its meaning or to use to prompt for the element in a user display or form. Question and label serve similar purposes in they both can be used to prompt for capturing a data element.  Whether the question form or label form should be used will depend on the type of instrument being used to capture the information."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "DataElement.label",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.label.value",
+            "text": "Name for element to display with or prompt for element",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Provides a complete explanation of the meaning of the data element for human readability."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "DataElement.definition",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.definition.value",
+            "text": "Definition/description as narrative text",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Comments about the use of the element, including notes about how to use the data properly, exceptions to proper use, etc. If it is possible to capture usage rules using invariants, that mechanism should be used in preference to this element."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "DataElement.comments",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.comments.value",
+            "text": "Comments about the use of this element",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Explains why this element is needed and why it's been constrained as it has. This element does not describe the usage of the element (that's done in comments), rather it's for traceability of *why* the element is either needed or why the constraints exist as they do.  This may be used to point to source materials or specifications that drove the structure of this data element."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "DataElement.requirements",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.requirements.value",
+            "text": "Why is this needed?",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Identifies additional names by which this element might also be known."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "DataElement.synonym",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.synonym.value",
+            "text": "Other names",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The FHIR data type that is the type for data that corresponds to this data element. If absent, the structure represents a concept rather than an element."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "DataElement.type",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.type.value",
+            "text": "type",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A sample value for this element demonstrating the type of information that would typically be captured. This will most commonly be present for data where it's not implicitly obvious from either the data type or value set what the values might be.  (I.e. Example values for dates or quantities would generally be unnecessary.)."
+          }
+        ],
+        "linkId": "DataElement.example[x]",
+        "text": "Example value: [as defined for type]",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.example[x]._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs2"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "integer"
+                  }
+                ],
+                "linkId": "DataElement.example[x]._integer",
+                "question": [
+                  {
+                    "linkId": "DataElement.example[x]._integer.value",
+                    "text": "integer",
+                    "type": "integer"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "decimal"
+                  }
+                ],
+                "linkId": "DataElement.example[x]._decimal",
+                "question": [
+                  {
+                    "linkId": "DataElement.example[x]._decimal.value",
+                    "text": "decimal",
+                    "type": "decimal"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "datetime"
+                  }
+                ],
+                "linkId": "DataElement.example[x]._dateTime",
+                "question": [
+                  {
+                    "linkId": "DataElement.example[x]._dateTime.value",
+                    "text": "dateTime",
+                    "type": "dateTime"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "datetime"
+                  }
+                ],
+                "linkId": "DataElement.example[x]._date",
+                "question": [
+                  {
+                    "linkId": "DataElement.example[x]._date.value",
+                    "text": "date",
+                    "type": "dateTime"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "instant"
+                  }
+                ],
+                "linkId": "DataElement.example[x]._instant",
+                "question": [
+                  {
+                    "linkId": "DataElement.example[x]._instant.value",
+                    "text": "instant",
+                    "type": "instant"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "time"
+                  }
+                ],
+                "linkId": "DataElement.example[x]._time",
+                "question": [
+                  {
+                    "linkId": "DataElement.example[x]._time.value",
+                    "text": "time",
+                    "type": "time"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "DataElement.example[x]._string",
+                "question": [
+                  {
+                    "linkId": "DataElement.example[x]._string.value",
+                    "text": "string",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "uri"
+                  }
+                ],
+                "linkId": "DataElement.example[x]._uri",
+                "question": [
+                  {
+                    "linkId": "DataElement.example[x]._uri.value",
+                    "text": "uri",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "boolean"
+                  }
+                ],
+                "linkId": "DataElement.example[x]._boolean",
+                "question": [
+                  {
+                    "linkId": "DataElement.example[x]._boolean.value",
+                    "text": "boolean",
+                    "type": "boolean"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Coding"
+                  }
+                ],
+                "linkId": "DataElement.example[x]._Coding",
+                "question": [
+                  {
+                    "linkId": "DataElement.example[x]._Coding.value",
+                    "text": "Coding",
+                    "type": "open-choice"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "CodeableConcept"
+                  }
+                ],
+                "linkId": "DataElement.example[x]._CodeableConcept",
+                "text": "CodeableConcept",
+                "question": [
+                  {
+                    "linkId": "DataElement.example[x]._CodeableConcept.coding",
+                    "text": "code:",
+                    "type": "open-choice"
+                  },
+                  {
+                    "linkId": "DataElement.example[x]._CodeableConcept.text",
+                    "text": "text:",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Attachment"
+                  }
+                ],
+                "linkId": "DataElement.example[x]._Attachment",
+                "text": "Attachment"
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Identifier"
+                  }
+                ],
+                "linkId": "DataElement.example[x]._Identifier",
+                "text": "Identifier",
+                "question": [
+                  {
+                    "linkId": "DataElement.example[x]._Identifier.label",
+                    "text": "label:",
+                    "type": "string"
+                  },
+                  {
+                    "linkId": "DataElement.example[x]._Identifier.system",
+                    "text": "system:",
+                    "type": "string"
+                  },
+                  {
+                    "linkId": "DataElement.example[x]._Identifier.value",
+                    "text": "value:",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Quantity"
+                  }
+                ],
+                "linkId": "DataElement.example[x]._Quantity",
+                "text": "Quantity",
+                "question": [
+                  {
+                    "linkId": "DataElement.example[x]._Quantity.comparator",
+                    "text": "comp:",
+                    "type": "choice"
+                  },
+                  {
+                    "linkId": "DataElement.example[x]._Quantity.value",
+                    "text": "value:",
+                    "type": "decimal"
+                  },
+                  {
+                    "linkId": "DataElement.example[x]._Quantity.units",
+                    "text": "units:",
+                    "type": "string"
+                  },
+                  {
+                    "linkId": "DataElement.example[x]._Quantity.code",
+                    "text": "coded units:",
+                    "type": "string"
+                  },
+                  {
+                    "linkId": "DataElement.example[x]._Quantity.system",
+                    "text": "units system:",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Range"
+                  }
+                ],
+                "linkId": "DataElement.example[x]._Range",
+                "text": "Range",
+                "question": [
+                  {
+                    "linkId": "DataElement.example[x]._Range.low",
+                    "text": "low:",
+                    "type": "decimal"
+                  },
+                  {
+                    "linkId": "DataElement.example[x]._Range.high",
+                    "text": "high:",
+                    "type": "decimal"
+                  },
+                  {
+                    "linkId": "DataElement.example[x]._Range.units",
+                    "text": "units:",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Period"
+                  }
+                ],
+                "linkId": "DataElement.example[x]._Period",
+                "text": "Period",
+                "question": [
+                  {
+                    "linkId": "DataElement.example[x]._Period.low",
+                    "text": "start:",
+                    "type": "dateTime"
+                  },
+                  {
+                    "linkId": "DataElement.example[x]._Period.end",
+                    "text": "end:",
+                    "type": "dateTime"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Ratio"
+                  }
+                ],
+                "linkId": "DataElement.example[x]._Ratio",
+                "text": "Ratio",
+                "question": [
+                  {
+                    "linkId": "DataElement.example[x]._Ratio.numerator",
+                    "text": "numerator:",
+                    "type": "decimal"
+                  },
+                  {
+                    "linkId": "DataElement.example[x]._Ratio.denominator",
+                    "text": "denominator:",
+                    "type": "decimal"
+                  },
+                  {
+                    "linkId": "DataElement.example[x]._Ratio.units",
+                    "text": "units:",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Name"
+                  }
+                ],
+                "linkId": "DataElement.example[x]._HumanName",
+                "text": "HumanName",
+                "question": [
+                  {
+                    "linkId": "DataElement.example[x]._HumanName.text",
+                    "text": "text:",
+                    "type": "string"
+                  },
+                  {
+                    "linkId": "DataElement.example[x]._HumanName.family",
+                    "text": "family:",
+                    "type": "string",
+                    "repeats": true
+                  },
+                  {
+                    "linkId": "DataElement.example[x]._HumanName.given",
+                    "text": "given:",
+                    "type": "string",
+                    "repeats": true
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Address"
+                  }
+                ],
+                "linkId": "DataElement.example[x]._Address",
+                "text": "Address",
+                "question": [
+                  {
+                    "linkId": "DataElement.example[x]._Address.text",
+                    "text": "text:",
+                    "type": "string"
+                  },
+                  {
+                    "linkId": "DataElement.example[x]._Address.line",
+                    "text": "line:",
+                    "type": "string",
+                    "repeats": true
+                  },
+                  {
+                    "linkId": "DataElement.example[x]._Address.city",
+                    "text": "city:",
+                    "type": "string"
+                  },
+                  {
+                    "linkId": "DataElement.example[x]._Address.state",
+                    "text": "state:",
+                    "type": "string"
+                  },
+                  {
+                    "linkId": "DataElement.example[x]._Address.postalCode",
+                    "text": "post code:",
+                    "type": "string"
+                  },
+                  {
+                    "linkId": "DataElement.example[x]._Address.country",
+                    "text": "country:",
+                    "type": "string"
+                  },
+                  {
+                    "linkId": "DataElement.example[x]._Address.use",
+                    "text": "use:",
+                    "type": "choice"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "ContactPoint"
+                  }
+                ],
+                "linkId": "DataElement.example[x]._ContactPoint",
+                "text": "ContactPoint",
+                "question": [
+                  {
+                    "linkId": "DataElement.example[x]._ContactPoint.system",
+                    "text": "type:",
+                    "type": "choice"
+                  },
+                  {
+                    "linkId": "DataElement.example[x]._ContactPoint.value",
+                    "text": "value:",
+                    "type": "string"
+                  },
+                  {
+                    "linkId": "DataElement.example[x]._ContactPoint.use",
+                    "text": "use:",
+                    "type": "choice"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Schedule"
+                  }
+                ],
+                "linkId": "DataElement.example[x]._Timing",
+                "text": "Timing"
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "DataElement.example[x]._Reference",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "DataElement.example[x]._Reference.value",
+                    "text": "Reference",
+                    "type": "reference"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Indicates the shortest length that SHALL be supported by conformant instances without truncation. If not specified, there is no conformance expectation for length support."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "integer"
+          }
+        ],
+        "linkId": "DataElement.maxLength",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.maxLength.value",
+            "text": "Length for strings",
+            "type": "integer"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Identifies the units of measure in which the data element should be captured or expressed. Use a value set if more than one unit of measure is possible."
+          }
+        ],
+        "linkId": "DataElement.units[x]",
+        "text": "Units to use for measured value",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "DataElement.units[x]._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs3"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "CodeableConcept"
+                  }
+                ],
+                "linkId": "DataElement.units[x]._CodeableConcept",
+                "text": "CodeableConcept",
+                "question": [
+                  {
+                    "linkId": "DataElement.units[x]._CodeableConcept.coding",
+                    "text": "code:",
+                    "type": "open-choice"
+                  },
+                  {
+                    "linkId": "DataElement.units[x]._CodeableConcept.text",
+                    "text": "text:",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "DataElement.units[x]._ValueSet",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/ValueSet?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "DataElement.units[x]._ValueSet.value",
+                    "text": "ValueSet",
+                    "type": "reference"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Binds to a value set if this element is coded (code, Coding, CodeableConcept)."
+          }
+        ],
+        "linkId": "DataElement.binding",
+        "title": "ValueSet details if this is coded",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "DataElement.binding.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DataElement.binding.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "If true, then conformant systems may use additional codes or (where the data type permits) text alone to convey concepts not covered by the set of codes identified in the binding.  If false, then conformant systems are constrained to the provided codes alone. When the binding use used for elements with a type of \"code\" (rather than Coding or CodableConcept), the binding is treated as non-extensible regardless of the value of this property."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "boolean"
+              }
+            ],
+            "linkId": "DataElement.binding.isExtensible",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DataElement.binding.isExtensible.value",
+                "text": "Can additional codes be used?",
+                "type": "boolean"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Indicates the degree of conformance expectations associated with this binding."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "code"
+              }
+            ],
+            "linkId": "DataElement.binding.conformance",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DataElement.binding.conformance.value",
+                "text": "conformance",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Describes the intended use of this particular set of codes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "DataElement.binding.description",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DataElement.binding.description.value",
+                "text": "Human explanation of the value set",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Points to the value set that identifies the set of codes to be used. The display can contain the value set description.  The reference may be version-specific or not."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "DataElement.binding.valueSet",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/ValueSet?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "DataElement.binding.valueSet.value",
+                "text": "Source of value set",
+                "type": "reference"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Identifies a concept from an external specification that roughly corresponds to this element."
+          }
+        ],
+        "linkId": "DataElement.mapping",
+        "title": "Map element to another set of definitions",
+        "text": "Mappings are not necessarily specific enough for safe translation.",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "DataElement.mapping.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DataElement.mapping.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A URI that identifies the specification that this mapping is expressed to. A formal identity for the specification being mapped to helps with identifying maps consistently."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "DataElement.mapping.uri",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DataElement.mapping.uri.value",
+                "text": "Identifies what this mapping refers to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "If true, indicates that the official meaning of the data element is exactly equivalent to the mapped element."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "boolean"
+              }
+            ],
+            "linkId": "DataElement.mapping.definitional",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DataElement.mapping.definitional.value",
+                "text": "True if mapping defines element",
+                "type": "boolean"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A name for the specification that is being mapped to."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "DataElement.mapping.name",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DataElement.mapping.name.value",
+                "text": "Names what this mapping refers to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Comments about this mapping, including version notes, issues, scope limitations, and other important notes for usage."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "DataElement.mapping.comments",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DataElement.mapping.comments.value",
+                "text": "Versions, Issues, Scope limitations etc",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Expresses what part of the target specification corresponds to this element. For most mappings, the syntax is undefined.  Syntax will be provided for mappings to the RIM.  Multiple mappings may be possible and may include constraints on other resource elements that identify when a particular mapping applies."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "DataElement.mapping.map",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "DataElement.mapping.map.value",
+                "text": "Details of the mapping",
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

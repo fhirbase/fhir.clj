@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "id": "special-type",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 2 concepts</p><h2>QuestionnaireGroupSpecialType</h2><p>If specified, indicates that the group should be rendered as a repeating header or footer on each &quot;page&quot; of the questionnaire.</p><p>This value set defines its own terms in the system http://hl7.org/fhir/special-type</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>header<a name=\"header\"> </a></td><td>The group should repeat at the top of each &quot;page&quot; or rendered portion of the questionnaire.</td></tr><tr><td>footer<a name=\"footer\"> </a></td><td>The group should repeat at the bottom of each &quot;page&quot; or rendered portion of the questionnaire.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.392"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/special-type",
+  "name": "QuestionnaireGroupSpecialType",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "If specified, indicates that the group should be rendered as a repeating header or footer on each \"page\" of the questionnaire.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.494+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.392"
+      }
+    ],
+    "system": "http://hl7.org/fhir/special-type",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "header",
+        "definition": "The group should repeat at the top of each \"page\" or rendered portion of the questionnaire."
+      },
+      {
+        "code": "footer",
+        "definition": "The group should repeat at the bottom of each \"page\" or rendered portion of the questionnaire."
+      }
+    ]
+  }
+}

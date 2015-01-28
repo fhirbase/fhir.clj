@@ -1,0 +1,36 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "openEHR-careplan",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/openEHR-careplan",
+  "name": "Clinical Management Details",
+  "publisher": "Health Level Seven, Inc / openEHR project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org"
+    }
+  ],
+  "description": "Additional details about the clinical management provided for this Reaction Event.",
+  "status": "draft",
+  "date": "2014-10-09",
+  "contextType": "resource",
+  "context": [
+    "AllergyIntolerance.event"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Clinical Management Details",
+      "formal": "Additional details about the clinical management provided for this Reaction Event.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "profile": "http://hl7.org/fhir/Profile/CarePlan"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

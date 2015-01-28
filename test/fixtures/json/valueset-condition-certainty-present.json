@@ -1,0 +1,59 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-condition-certainty-present",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div>\n      <p>This value set includes all SNOMED CT codes relating to the qualifier &quot;Known&quot; (concepts with an is-a relationship with 36692007)\n\t  that are present, possible or suspected.\n\t  </p>\n    </div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.507"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/condition-certainty-present",
+  "name": "Condition/Diagnosis Certainty",
+  "publisher": "CQF Project team",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://www.hl7.org/Special/committees/cqi/"
+    },
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "value set for Condition/Problem/Diagnosis certainty for present or non-refuted occurrence",
+  "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement",
+  "status": "draft",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "410515003"
+          },
+          {
+            "code": "410591008"
+          },
+          {
+            "code": "410605003"
+          },
+          {
+            "code": "410590009"
+          },
+          {
+            "code": "410592001"
+          },
+          {
+            "code": "415684004"
+          }
+        ]
+      }
+    ]
+  }
+}

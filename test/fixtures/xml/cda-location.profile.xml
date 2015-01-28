@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Profile xmlns="http://hl7.org/fhir"><!--  CDA Location  -->
+  <id value="cda-location"/>
+  <meta>
+    <lastUpdated value="2014-11-05T20:31:00Z"/>
+  </meta><!--  build tool to fill out narrative  -->
+  <url value="http://hl7.org/fhir/Profile/cda-location"/>
+  <name value="Location"/>
+  <publisher value="HL7 FHIR Project"/>
+  <telecom>
+    <system value="url"/>
+    <value value="http://hl7.org/fhir"/>
+  </telecom>
+  <description value="Standard Profile for CDA R2 on FHIR"/>
+  <status value="draft"/>
+  <date value="2014-07-28"/>
+  <mapping>
+    <identity value="cda"/>
+    <uri value="http://hl7.org/v3/cda"/>
+    <name value="CDA (R2)"/>
+  </mapping>
+  <type value="Location"/>
+  <base value="http://hl7.org/fhir/Profile/Location"/>
+  <snapshot>
+    <element>
+      <path value="Location"/>
+      <short value="Details and position information for a physical place"/>
+      <formal value="Details and position information for a physical place where services are provided  and resources and participants may be stored, found, contained or accommodated."/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role[classCode=SDLC]."/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role[classCode=SDLC]."/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value="Place"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.id"/>
+      <short value="Logical id of this artefact"/>
+      <formal value="The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes."/>
+      <comments value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Location.meta"/>
+      <short value="Metadata about the resource"/>
+      <formal value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Location.meta.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.meta.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.meta.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.meta.versionId"/>
+      <short value="Version specific identifier"/>
+      <formal value="The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted."/>
+      <comments value="The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Location.meta.lastUpdated"/>
+      <short value="When the resource version last changed"/>
+      <formal value="When the resource last changed - e.g. when the version changed."/>
+      <comments value="This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="instant"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Location.meta.profile"/>
+      <short value="Profiles this resource claims to conform to"/>
+      <formal value="A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url."/>
+      <comments value="It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Location.meta.security"/>
+      <short value="Security Labels applied to this resource"/>
+      <formal value="Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure."/>
+      <comments value="The security labels can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Location.meta.tag"/>
+      <short value="Tags applied"/>
+      <formal value="Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource."/>
+      <comments value="The tags can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Location.implicitRules"/>
+      <short value="A set of rules under which this content was created"/>
+      <formal value="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content."/>
+      <comments value="Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Location.language"/>
+      <short value="Language of the resource content"/>
+      <formal value="The base language in which the resource is written."/>
+      <comments value="Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource
+
+Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="Language"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="A human language"/>
+        <referenceUri value="http://tools.ietf.org/html/bcp47"/>
+      </binding>
+    </element>
+    <element>
+      <path value="Location.text"/>
+      <short value="Text summary of the resource, for human interpretation"/>
+      <formal value="A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."/>
+      <comments value="Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."/>
+      <synonym value="narrative"/>
+      <synonym value="html"/>
+      <synonym value="xhtml"/>
+      <synonym value="display"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Narrative"/>
+      </type>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.contained"/>
+      <short value="Contained, inline Resources"/>
+      <formal value="These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope."/>
+      <comments value="This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."/>
+      <synonym value="inline resources"/>
+      <synonym value="anonymous resources"/>
+      <synonym value="contained resources"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Resource"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.identifier"/>
+      <short value="Unique code or number identifying the location to its users"/>
+      <formal value="Unique code or number identifying the location to its users."/>
+      <requirements value="Organization label locations in registries, need to keep track of those."/>
+      <min value="0"/>
+      <max value="0"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="id"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.name"/>
+      <short value="Name of the location as used by humans"/>
+      <formal value="Name of the location as used by humans. Does not need to be unique."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="name"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="name"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".name"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.description"/>
+      <short value="Description of the Location, which helps in finding or referencing the place"/>
+      <formal value="Description of the Location, which helps in finding or referencing the place."/>
+      <requirements value="Humans need additional information to verify a correct location has been identified."/>
+      <min value="0"/>
+      <max value="0"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="playingEntity[classCode=PLC determinerCode=INSTANCE].desc"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="playingEntity[classCode=PLC determinerCode=INSTANCE].desc"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.type"/>
+      <short value="Indicates the type of function performed at the location"/>
+      <formal value="Indicates the type of function performed at the location."/>
+      <min value="0"/>
+      <max value="0"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="LocationType"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="Indicates the type of function performed at the location"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/v3/vs/ServiceDeliveryLocationRoleType"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value="code"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.telecom"/>
+      <short value="Contact details of the location"/>
+      <formal value="The contact details of communication devices available at the location. This can include phone numbers, fax numbers, mobile numbers, email addresses and web sites."/>
+      <min value="0"/>
+      <max value="0"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="telecom"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="telecom"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.address"/>
+      <short value="Physical location address"/>
+      <formal value="Physical location."/>
+      <comments value="This was kept as 0..1 as there is no use property on the address, so wouldn&#39;t be able to identify different address types."/>
+      <requirements value="If locations can be visited, we need to keep track of their address."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="addr"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="addr"/>
+      </mapping>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".addr"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.physicalType"/>
+      <short value="Physical form of the location"/>
+      <formal value="Physical form of the location, e.g. building, room, vehicle, road."/>
+      <requirements value="For purposes of showing relevant locations in queries, we need to categorize locations."/>
+      <min value="0"/>
+      <max value="0"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="PhysicalType"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="Physical form of the location"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/location-physical-type"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value="playingEntity [classCode=PLC].code"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="playingEntity [classCode=PLC].code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.position"/>
+      <short value="The absolute geographic location"/>
+      <formal value="The absolute geographic location of the Location, expressed in a KML compatible manner (see notes below for KML)."/>
+      <requirements value="For mobile applications and automated route-finding knowing the exact location of the Location is required."/>
+      <min value="0"/>
+      <max value="0"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="playingEntity [classCode=PLC determinerCode=INSTANCE].positionText"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="playingEntity [classCode=PLC determinerCode=INSTANCE].positionText"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.position.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.position.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.position.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.position.longitude"/>
+      <short value="Longitude as expressed in KML"/>
+      <formal value="Longitude. The value domain and the interpretation are the same as for the text of the longitude element in KML (see notes below)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="?? RIM Opted not to map the sub-elements of GPS location) is now an OBS"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="?? RIM Opted not to map the sub-elements of GPS location) is now an OBS"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.position.latitude"/>
+      <short value="Latitude as expressed in KML"/>
+      <formal value="Latitude. The value domain and the interpretation are the same as for the text of the latitude element in KML (see notes below)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="?? RIM Opted not to map the sub-elements of GPS location) is now an OBS"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="?? RIM Opted not to map the sub-elements of GPS location) is now an OBS"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.position.altitude"/>
+      <short value="Altitude as expressed in KML"/>
+      <formal value="Altitude. The value domain and the interpretation are the same as for the text of the altitude element in KML (see notes below)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="decimal"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="?? RIM Opted not to map the sub-elements of GPS location) is now an OBS"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="?? RIM Opted not to map the sub-elements of GPS location) is now an OBS"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.managingOrganization"/>
+      <short value="The organization that is responsible for the provisioning and upkeep of the location"/>
+      <formal value="The organization that is responsible for the provisioning and upkeep of the location."/>
+      <requirements value="Need to know who manages the location."/>
+      <min value="0"/>
+      <max value="0"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="scopingEntity[classCode=ORG determinerKind=INSTANCE]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="scopingEntity[classCode=ORG determinerKind=INSTANCE]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.status"/>
+      <short value="active | suspended | inactive"/>
+      <formal value="active | suspended | inactive."/>
+      <min value="0"/>
+      <max value="0"/>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="LocationStatus"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="Indicates whether the location is still in use"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/location-status"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value="statusCode"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="statusCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.partOf"/>
+      <short value="Another Location which this Location is physically part of"/>
+      <formal value="Another Location which this Location is physically part of."/>
+      <requirements value="For purposes of location, display and identification, knowing which locations are located within other locations is important."/>
+      <min value="0"/>
+      <max value="0"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="inboundLink[typeCode=PART].source[classCode=SDLC]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="inboundLink[typeCode=PART].source[classCode=SDLC]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.mode"/>
+      <short value="instance | kind"/>
+      <formal value="Indicates whether a resource instance represents a specific location or a class of locations."/>
+      <requirements value="When using a Location resource for scheduling or orders, we need to be able to refer to a class of Locations instead of a specific Location."/>
+      <min value="0"/>
+      <max value="0"/>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="LocationMode"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="Indicates whether a resource instance represents a specific location or a class of locations"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/location-mode"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value="playingEntity[classCode=PLC].determinerCode"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="playingEntity[classCode=PLC].determinerCode"/>
+      </mapping>
+    </element>
+  </snapshot>
+  <differential>
+    <element>
+      <path value="Location"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Resource"/>
+      </type>
+      <isModifier value="false"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value="Place"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.identifier"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+    <element>
+      <path value="Location.name"/>
+      <min value="0"/>
+      <max value="1"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".name"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.description"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+    <element>
+      <path value="Location.type"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+    <element>
+      <path value="Location.telecom"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+    <element>
+      <path value="Location.address"/>
+      <short value="Physical location address"/>
+      <min value="0"/>
+      <max value="1"/>
+      <mapping>
+        <identity value="cda"/>
+        <map value=".addr"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Location.physicalType"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+    <element>
+      <path value="Location.position"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+    <element>
+      <path value="Location.managingOrganization"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+    <element>
+      <path value="Location.status"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+    <element>
+      <path value="Location.partOf"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+    <element>
+      <path value="Location.mode"/>
+      <min value="0"/>
+      <max value="0"/>
+    </element>
+  </differential>
+</Profile>

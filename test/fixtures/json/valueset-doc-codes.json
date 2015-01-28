@@ -1,0 +1,42 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-doc-codes",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set does not contain a fixed number of concepts</p><h2>FHIR Document Codes</h2><p>FHIR Document Codes - all LOINC codes where scale_type = 'DOC'</p><p><b>Copyright Statement:</b> This content from LOINC&reg; is copyright &copy; 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use</p><p>This value set includes codes defined in other code systems, using the following rules:</p><ul><li>Include codes from http://loinc.org where SCALE_TYP  =  DOC</li></ul></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.65"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/doc-codes",
+  "name": "FHIR Document Codes",
+  "publisher": "HL7",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org"
+    }
+  ],
+  "description": "FHIR Document Codes - all LOINC codes where scale_type = 'DOC'",
+  "copyright": "This content from LOINC® is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use",
+  "status": "draft",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "SCALE_TYP",
+            "op": "=",
+            "value": "DOC"
+          }
+        ]
+      }
+    ]
+  }
+}

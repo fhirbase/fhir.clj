@@ -1,0 +1,31 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "valueset-ordinalValue",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/valueset-ordinalValue",
+  "name": "Comparison value for ordinal codes",
+  "publisher": "HL7",
+  "description": "A numeric value that allows the comparison (less than, greater than) or other numerical manipulation of a concept (e.g. Adding up components of a score).",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "contextType": "resource",
+  "context": [
+    "ValueSet.compose.include.concept",
+    "ValueSet.define.concept",
+    "ValueSet.expansion.contains"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Comparison value for ordinal codes",
+      "formal": "A numeric value that allows the comparison (less than, greater than) or other numerical manipulation of a concept (e.g. Adding up components of a score).",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "integer"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "resourceType": "Specimen",
+  "id": "uslab-example1",
+  "text": {
+    "status": "generated",
+    "div": "<div>\n\t\t\t\n      <ul>\n\t\t\t\t\n        <li>file: spec-uslab-example1.xml</li>\n\t\t\t\t\n        <li> id: uslab-example1</li>\n\t\t\t\t\n        <li> Name: USLab Specimen Example1</li>\n\t\t\t\t\n        <li>Description: USLab Specimen Profile Canonical Example: Whole Blood</li>\n\t\t\t\n      </ul>\n\t\t\n    </div>"
+  },
+  "identifier": [
+    {
+      "use": "official",
+      "label": "Placer Specimen ID",
+      "system": "http://ehr.goodhealthclinic.org/identifiers/specimen",
+      "value": "SID123"
+    }
+  ],
+  "type": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "122555007",
+        "display": "Venous blood specimen"
+      },
+      {
+        "system": "http://ehr.goodhealthclinic.org",
+        "code": "BLD",
+        "display": "Blood"
+      }
+    ],
+    "text": "Blood sample"
+  },
+  "subject": {
+    "reference": "Patient/uslab-example1",
+    "display": "Todd Lerr"
+  },
+  "accessionIdentifier": {
+    "use": "official",
+    "system": "http://lis.acmelabs.org/identifiers/accession",
+    "value": "21041205000001"
+  },
+  "collection": {
+    "collectedDateTime": "2014-12-05",
+    "sourceSite": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": " 53120007",
+          "display": "Arm"
+        },
+        {
+          "system": "http://ehr.goodhealthclinic.org",
+          "code": "ARM",
+          "display": "Arm"
+        }
+      ],
+      "text": "Drawn from Arm"
+    }
+  }
+}

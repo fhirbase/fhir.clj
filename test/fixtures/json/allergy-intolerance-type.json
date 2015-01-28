@@ -1,0 +1,53 @@
+{
+  "resourceType": "ValueSet",
+  "id": "allergy-intolerance-type",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 2 concepts</p><h2>AllergyIntoleranceType</h2><p>Identification of the underlying physiological mechanism for a Reaction Risk</p><p>This value set defines its own terms in the system http://hl7.org/fhir/allergy-intolerance-type</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>immune<a name=\"immune\"> </a></td><td>Immune Mediated</td><td>Immune mediated reaction, including allergic reactions and hypersensitivities.</td></tr><tr><td>non-immune<a name=\"non-immune\"> </a></td><td>Non-immune mediated</td><td>A non-immune mediated reaction, which can include pseudoallergic reactions, side effects, intolerances, drug toxicities (eg to Gentamicin), drug-drug interactions, food-drug interactions, and drug-disease interactions.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.480"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/allergy-intolerance-type",
+  "name": "AllergyIntoleranceType",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Identification of the underlying physiological mechanism for a Reaction Risk",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.495+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.480"
+      }
+    ],
+    "system": "http://hl7.org/fhir/allergy-intolerance-type",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "immune",
+        "display": "Immune Mediated",
+        "definition": "Immune mediated reaction, including allergic reactions and hypersensitivities."
+      },
+      {
+        "code": "non-immune",
+        "display": "Non-immune mediated",
+        "definition": "A non-immune mediated reaction, which can include pseudoallergic reactions, side effects, intolerances, drug toxicities (eg to Gentamicin), drug-drug interactions, food-drug interactions, and drug-disease interactions."
+      }
+    ]
+  }
+}

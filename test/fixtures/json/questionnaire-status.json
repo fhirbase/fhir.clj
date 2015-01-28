@@ -1,0 +1,58 @@
+{
+  "resourceType": "ValueSet",
+  "id": "questionnaire-status",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 3 concepts</p><h2>QuestionnaireStatus</h2><p>Lifecycle status of the questionnaire</p><p>This value set defines its own terms in the system http://hl7.org/fhir/questionnaire-status</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>draft<a name=\"draft\"> </a></td><td>draft</td><td>This Questionnaire is not ready for official use.</td></tr><tr><td>published<a name=\"published\"> </a></td><td>published</td><td>This Questionnaire is ready for use.</td></tr><tr><td>retired<a name=\"retired\"> </a></td><td>retired</td><td>This Questionnaire should no longer be used to gather data.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.338"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/questionnaire-status",
+  "name": "QuestionnaireStatus",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Lifecycle status of the questionnaire",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.488+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.338"
+      }
+    ],
+    "system": "http://hl7.org/fhir/questionnaire-status",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "draft",
+        "display": "draft",
+        "definition": "This Questionnaire is not ready for official use."
+      },
+      {
+        "code": "published",
+        "display": "published",
+        "definition": "This Questionnaire is ready for use."
+      },
+      {
+        "code": "retired",
+        "display": "retired",
+        "definition": "This Questionnaire should no longer be used to gather data."
+      }
+    ]
+  }
+}

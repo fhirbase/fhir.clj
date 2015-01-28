@@ -1,0 +1,1855 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Profile xmlns="http://hl7.org/fhir">
+  <id value="DiagnosticOrder"/>
+  <meta>
+    <lastUpdated value="2014-12-12T13:17:44.755+11:00"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;" cellpadding="0" border="0" cellspacing="0">
+        <tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;">
+          <th style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Name</th>
+          <th style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Flags</th>
+          <th style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Card.</th>
+          <th style="width: 100px" class="heirarchy">Type</th>
+          <th style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Description &amp; Constraints
+            <span style="float: right">
+              <a title="Legend for this format" href="formats.html#table">
+                <img alt="doco" src="help16.png"/>
+              </a>
+            </span>
+          </th>
+        </tr>
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img title="Resource" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJBSURBVDjLhdKxa5NBGMfx713yvkmbJnaoFiSF4mJTh06Kg4OgiyCCRXCof4YIdXdxFhQVHPo3OFSoUx0FySQttaVKYq2NbdO8ed/L3fM4JG3tYPvAcfBw9+HHPWdUlf/V0tLSqKo+EpEHInJFRIohhDUR+RBCeDM7O7ua55QSkRfVanVufHyckZERrLV0Op2Zra2tmXq9fg+YsmcAdyYnJykUCke9OI6ZmJgghHAZ4KwE3ntPs9mkVCohIjQaDWq1GiEEAM5KoHEcY62lVCrRarUoFotUKpUjIL/y/uqXYmV62ph/LSVrr30P4bEFcM4B0Ov1jk547/uAUTs1ceNdZIwB7V/GGHz6+9LXxY96eDiEgHMOY8xJAK8p4grZz5cElwNbwZgyxYu3EFM01lriOCZJEqIoIooiALIsGwA9Y1UcwcWoKNLdpLu9zvbnBWqNBhuvn5EDUmB0EH/1E2TZw5U+YLQovkun+Ytsaw1xCbnCOap334LC7s4Oe/ttvA+ICLmhMXRxDufczUECS37oAuevPwUEVFFp4/eXkXSdYc2IopSepnjtUh5/wg9gfn6+OQBUNaRIUkfDHhraSLoBKqikIF3yHJDLHaAkFOLciVHnyVAVj/S2Ub/XRyQD9aAZKgkaOohvo6ENgykcA07VEFDfQv1uf4W9Y8y30bCPhg4qKZJtMnjTPqBO/vhkZ7h3EJeRslWNQMqgY2jIAIfa/m5sIKSpqpPsGEiz599e3b+GchtD+bSvjQJm2SG6cNj6C+QmaxAek5tyAAAAAElFTkSuQmCC"/> 
+            <span title="A request for a diagnostic investigation service to be performed.">DiagnosticOrder</span>
+            <a name="DiagnosticOrder"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="domainresource.html">DomainResource</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">A request for a diagnostic service</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Reference to another Resource" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC"/> 
+            <span title="Who or what the investigation is to be performed on. This is usually a human patient, but diagnostic tests can also be requested on animals, groups of humans or animals, devices such as dialysis machines, or even locations (typically for environmental scans).">subject</span>
+            <a name="DiagnosticOrder.subject"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="patient.html">Patient</a> | 
+            <a href="group.html">Group</a> | 
+            <a href="location.html">Location</a> | 
+            <a href="device.html">Device</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Who and/or what test is about</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Reference to another Resource" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC"/> 
+            <span title="The practitioner that holds legal responsibility for ordering the investigation.">orderer</span>
+            <a name="DiagnosticOrder.orderer"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="practitioner.html">Practitioner</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Who ordered the test</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7"/> 
+            <span title="Identifiers assigned to this order by the order or by the receiver.">identifier</span>
+            <a name="DiagnosticOrder.identifier"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..*</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#Identifier">Identifier</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Identifiers assigned to this order</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Reference to another Resource" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC"/> 
+            <span title="An encounter that provides additional information about the healthcare context in which this request is made.">encounter</span>
+            <a name="DiagnosticOrder.encounter"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="encounter.html">Encounter</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">The encounter that this diagnostic order is associated with</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="An explanation or justification for why this diagnostic investigation is being requested.">clinicalNotes</span>
+            <a name="DiagnosticOrder.clinicalNotes"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#string">string</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Explanation/Justification for test</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Reference to another Resource" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC"/> 
+            <span title="Additional clinical information about the patient or specimen that may influence test interpretations.">supportingInformation</span>
+            <a name="DiagnosticOrder.supportingInformation"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..*</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="observation.html">Observation</a> | 
+            <a href="condition.html">Condition</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Supporting observations or conditions for this request</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Reference to another Resource" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC"/> 
+            <span title="One or more specimens that the diagnostic investigation is about.">specimen</span>
+            <a name="DiagnosticOrder.specimen"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..*</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="specimen.html">Specimen</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">If the whole order relates to specific specimens</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="The status of the order.">status</span>
+            <a name="DiagnosticOrder.status"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#code">code</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">requested | received | accepted | in progress | review | completed | suspended | rejected | failed
+            <br/>
+            <a title="The status of a diagnostic order" href="diagnostic-order-status.html">DiagnosticOrderStatus</a> (
+            <a title="One of the the defined codes must be used" href="terminologies.html#code">Required</a>)
+          </td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="The clinical priority associated with this order.">priority</span>
+            <a name="DiagnosticOrder.priority"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#code">code</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">routine | urgent | stat | asap
+            <br/>
+            <a title="The clinical priority of a diagnostic order" href="diagnostic-order-priority.html">DiagnosticOrderPriority</a> (
+            <a title="One of the the defined codes must be used" href="terminologies.html#code">Required</a>)
+          </td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Element" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAMQfAOvGUf7ztuvPMf/78/fkl/Pbg+u8Rvjqteu2Pf3zxPz36Pz0z+vTmPzurPvuw/npofbjquvNefHVduuyN+uuMu3Oafbgjfnqvf/3zv/3xevPi+vRjP/20/bmsP///////yH5BAEAAB8ALAAAAAAQABAAAAV24CeOZGmepqeqqOgxjBZFa+19r4ftWQUAgqDgltthMshMIJAZ4jYDHsBARSAmFOJvq+g6HIdEFgcYmBWNxoNAsDjGHgBnmV5bCoUDHLBIq9sFEhIdcAYJdYASFRUQhQkLCwkOFwcdEBAXhVabE52ecDahKy0oIQA7"/> 
+            <span title="A summary of the events of interest that have occurred as the request is processed. E.g. when the order was made, various processing steps (specimens received), when it was completed.">event</span>
+            <a name="DiagnosticOrder.event"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..*</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="element.html">Element</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">A list of events of interest in the lifecycle</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4/x0ISQIM/0kGANNnY41GtlCWAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="The status for the event.">status</span>
+            <a name="DiagnosticOrder.event.status"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#code">code</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">requested | received | accepted | in progress | review | completed | suspended | rejected | failed
+            <br/>
+            <a title="The status of a diagnostic order" href="diagnostic-order-status.html">DiagnosticOrderStatus</a> (
+            <a title="One of the the defined codes must be used" href="terminologies.html#code">Required</a>)
+          </td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4/x0ISQIM/0kGANNnY41GtlCWAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7"/> 
+            <span title="Additional information about the event that occurred - e.g. if the status remained unchanged.">description</span>
+            <a name="DiagnosticOrder.event.description"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#CodeableConcept">CodeableConcept</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">More information about the event and its context
+            <br/>
+            <a title="Additional information about an event that occurred to a diagnostic order - e.g. if the status remained unchanged" href="valueset-diagnostic-order-event.html">DiagnosticOrderEventDescription</a> (
+            <a title="These codes are an example of the type of codes that may be used" href="terminologies.html#example">Example</a>)
+          </td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4/x0ISQIM/0kGANNnY41GtlCWAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="The date/time at which the event occurred.">dateTime</span>
+            <a name="DiagnosticOrder.event.dateTime"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#dateTime">dateTime</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">The date at which the event happened</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII="/>
+            <img title="Reference to another Resource" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC"/> 
+            <span title="The person who was responsible for performing or recording the action.">actor</span>
+            <a name="DiagnosticOrder.event.actor"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="practitioner.html">Practitioner</a> | 
+            <a href="device.html">Device</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Who recorded or did this</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAD0lEQVR42mP4TzJgIF0LANmXY523xFiMAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII="/>
+            <img title="Element" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAMQfAOvGUf7ztuvPMf/78/fkl/Pbg+u8Rvjqteu2Pf3zxPz36Pz0z+vTmPzurPvuw/npofbjquvNefHVduuyN+uuMu3Oafbgjfnqvf/3zv/3xevPi+vRjP/20/bmsP///////yH5BAEAAB8ALAAAAAAQABAAAAV24CeOZGmepqeqqOgxjBZFa+19r4ftWQUAgqDgltthMshMIJAZ4jYDHsBARSAmFOJvq+g6HIdEFgcYmBWNxoNAsDjGHgBnmV5bCoUDHLBIq9sFEhIdcAYJdYASFRUQhQkLCwkOFwcdEBAXhVabE52ecDahKy0oIQA7"/> 
+            <span title="The specific diagnostic investigations that are requested as part of this request. Sometimes, there can only be one item per request, but in most contexts, more than one investigation can be requested.">item</span>
+            <a name="DiagnosticOrder.item"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..*</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="element.html">Element</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">The items the orderer requested</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAFElEQVR42mP4////9/8kAYb/JAMA1odjlXxALpEAAAAASUVORK5CYII=)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7"/> 
+            <span title="A code that identifies a particular diagnostic investigation, or panel of investigations, that have been requested.">code</span>
+            <a name="DiagnosticOrder.item.code"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#CodeableConcept">CodeableConcept</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Code to indicate the item (test or panel) being ordered
+            <br/>
+            <a title="Codes for tests/services that can be performed by diagnostic services" href="valueset-diagnostic-requests.html">DiagnosticRequests</a> (
+            <a title="If one of the defined codes is appropriate, it must be used, or some other code may be used" href="terminologies.html#incomplete">Incomplete</a>)
+          </td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAFElEQVR42mP4////9/8kAYb/JAMA1odjlXxALpEAAAAASUVORK5CYII=)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Reference to another Resource" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC"/> 
+            <span title="If the item is related to a specific specimen.">specimen</span>
+            <a name="DiagnosticOrder.item.specimen"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..*</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="specimen.html">Specimen</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">If this item relates to specific specimens</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAFElEQVR42mP4////9/8kAYb/JAMA1odjlXxALpEAAAAASUVORK5CYII=)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7"/> 
+            <span title="Anatomical location where the request test should be performed.">bodySite</span>
+            <a name="DiagnosticOrder.item.bodySite"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#CodeableConcept">CodeableConcept</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Location of requested test (if applicable)
+            <br/>
+            <a title="Codes describing anatomical locations. May include laterality" href="valueset-body-site.html">BodySite</a> (
+            <a title="These codes are an example of the type of codes that may be used" href="terminologies.html#example">Example</a>)
+          </td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAFElEQVR42mP4////9/8kAYb/JAMA1odjlXxALpEAAAAASUVORK5CYII=)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="The status of this individual item within the order.">status</span>
+            <a name="DiagnosticOrder.item.status"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#code">code</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">requested | received | accepted | in progress | review | completed | suspended | rejected | failed
+            <br/>
+            <a title="The status of a diagnostic order" href="diagnostic-order-status.html">DiagnosticOrderStatus</a> (
+            <a title="One of the the defined codes must be used" href="terminologies.html#code">Required</a>)
+          </td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAD0lEQVR42mP4TzJgIF0LANmXY523xFiMAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII="/>
+            <img title="Reference to another Element" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAKjSURBVDjLrZLdT1JhHMfd6q6L7voT3NrEuQq6aTircWFQ04u4MetCZ4UXGY2J1UoMdCoWxMZWDWtrrqHgylZ54RbkZtkiJ5aAku8MXXqQl3PgAOfb8xwq5LrOzmfnd34vn+d5tqcMQNm/UPZfBMHXx2ZWvI386odLe7jIL7w5EQ68qjhEOFjCmMj+v4LQmCwtCHkSCuSlFOIst4X1KU1mbUqT/kPki57bmL6xEnx55HxRMCqNCTkO6fUBpH5YkFoeBLsyAiHLEFcSQi5B2C38Z3eAPJ8JjcrmigKnLJ7nd8mwDcnFh4h/68T29FVsfW4F4zeCmb0LZqYDO191hOtkZ5sIuY8lioJhKZ9lo2DmbNjx9WDTowW7+YmsGv+9Ov3GijsgxwsNy7iiYOg4L54/nyawQC4lDubYANIRG7g1I9glHVILl5EMNCCXnEfouXSP4JksI+RY5OIfkWXGwf8cQSb6hAz2gV2+BXaxFangBSS/n0PCfxq5xAxCg3sFj2TpPB8Hvz2G3dWneOvqhLnPCIfDgd5uPebfNyAyrUR/t1bMmft7MdR1NiuXyw8UBDYpJ/AMkhsOPLa2wmKxIBqNIhwOw+Px4EG/Hvb7GoSCc2JucnJS7FEqlb2FizRwNMLHFmPvXnQJN/U6+Px+3LvdApVKiebmZlitVuj1ejFWqc7AZNCJEq1WGxMFAVPFtUCPZKhDXZUyGu6IAr+pklOclGNiYgI+nw9erxculws0N2uqjFOBwWDgSu61RCK50tLSwlBBfX39eE1NDa9QKFBXVydCY5qjNSqgvSWCw+RRqVTzZrOZcTqd2263G3a7HW1tbWhvbxdjmqM12kN7SwTl5eX7qqurq2pra5eampqSGo2GI2TUanUj4RSJ4zRHa7SH9v4C8Nrl+GFh7LoAAAAASUVORK5CYII="/> 
+            <span title="A summary of the events of interest that have occurred as this item of the request is processed.">event</span>
+            <a name="DiagnosticOrder.item.event"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..*</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">see 
+            <a title="DiagnosticOrder.event" href="#DiagnosticOrder.event">event</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Events specific to this item</td>
+        </tr>
+
+      </table>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/Profile/DiagnosticOrder"/>
+  <name value="DiagnosticOrder"/>
+  <publisher value="HL7 FHIR Project (Orders and Observations)"/>
+  <telecom>
+    <system value="url"/>
+    <value value="http://hl7.org/fhir"/>
+  </telecom>
+  <telecom>
+    <system value="url"/>
+    <value value="http://www.hl7.org/Special/committees/orders/index.cfm"/>
+  </telecom>
+  <description value="Base Profile for DiagnosticOrder Resource"/>
+  <status value="draft"/>
+  <date value="2014-12-12T13:17:44.755+11:00"/>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM"/>
+  </mapping>
+  <mapping>
+    <identity value="v2"/>
+    <uri value="http://hl7.org/v2"/>
+    <name value="HL7 v2"/>
+  </mapping>
+  <type value="DiagnosticOrder"/>
+  <snapshot>
+    <element>
+      <path value="DiagnosticOrder"/>
+      <short value="A request for a diagnostic service"/>
+      <formal value="A request for a diagnostic investigation service to be performed."/>
+      <synonym value="Report"/>
+      <synonym value="Test"/>
+      <synonym value="Result"/>
+      <synonym value="Results"/>
+      <synonym value="Labs"/>
+      <synonym value="Laboratory"/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Observation[classCode=OBS, moodCode=RQO, code&lt;&quot;diagnostic order&quot;]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Observation[classCode=OBS, moodCode=RQO, code&lt;&quot;diagnostic order&quot;]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.id"/>
+      <short value="Logical id of this artefact"/>
+      <formal value="The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes."/>
+      <comments value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.meta"/>
+      <short value="Metadata about the resource"/>
+      <formal value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.meta.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.meta.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.meta.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.meta.versionId"/>
+      <short value="Version specific identifier"/>
+      <formal value="The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted."/>
+      <comments value="The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.meta.lastUpdated"/>
+      <short value="When the resource version last changed"/>
+      <formal value="When the resource last changed - e.g. when the version changed."/>
+      <comments value="This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="instant"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.meta.profile"/>
+      <short value="Profiles this resource claims to conform to"/>
+      <formal value="A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url."/>
+      <comments value="It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.meta.security"/>
+      <short value="Security Labels applied to this resource"/>
+      <formal value="Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure."/>
+      <comments value="The security labels can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.meta.tag"/>
+      <short value="Tags applied"/>
+      <formal value="Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource."/>
+      <comments value="The tags can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.implicitRules"/>
+      <short value="A set of rules under which this content was created"/>
+      <formal value="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content."/>
+      <comments value="Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.language"/>
+      <short value="Language of the resource content"/>
+      <formal value="The base language in which the resource is written."/>
+      <comments value="Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource
+
+Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="Language"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="A human language"/>
+        <referenceUri value="http://tools.ietf.org/html/bcp47"/>
+      </binding>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.text"/>
+      <short value="Text summary of the resource, for human interpretation"/>
+      <formal value="A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."/>
+      <comments value="Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."/>
+      <synonym value="narrative"/>
+      <synonym value="html"/>
+      <synonym value="xhtml"/>
+      <synonym value="display"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Narrative"/>
+      </type>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.contained"/>
+      <short value="Contained, inline Resources"/>
+      <formal value="These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope."/>
+      <comments value="This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."/>
+      <synonym value="inline resources"/>
+      <synonym value="anonymous resources"/>
+      <synonym value="contained resources"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Resource"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.subject"/>
+      <short value="Who and/or what test is about"/>
+      <formal value="Who or what the investigation is to be performed on. This is usually a human patient, but diagnostic tests can also be requested on animals, groups of humans or animals, devices such as dialysis machines, or even locations (typically for environmental scans)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Patient"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Group"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Location"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Device"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].role"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].role"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.orderer"/>
+      <short value="Who ordered the test"/>
+      <formal value="The practitioner that holds legal responsibility for ordering the investigation."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Practitioner"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=AUT].role"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=AUT].role"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier"/>
+      <short value="Identifiers assigned to this order"/>
+      <formal value="Identifiers assigned to this order by the order or by the receiver."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.encounter"/>
+      <short value="The encounter that this diagnostic order is associated with"/>
+      <formal value="An encounter that provides additional information about the healthcare context in which this request is made."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Encounter"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.clinicalNotes"/>
+      <short value="Explanation/Justification for test"/>
+      <formal value="An explanation or justification for why this diagnostic investigation is being requested."/>
+      <comments value="This may be used to decide how the diagnostic investigation will be performed, or even if it will be performed at all."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".reasonCode.originalText"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".reasonCode.originalText"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.supportingInformation"/>
+      <short value="Supporting observations or conditions for this request"/>
+      <formal value="Additional clinical information about the patient or specimen that may influence test interpretations."/>
+      <comments value="This information includes diagnosis, clinical findings and other observations.  Examples include reporting the amount of inspired carbon dioxide for blood gasses, the point in the menstrual cycle for cervical pap tests, and other conditions that influence test interpretations."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Observation"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Condition"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBR-13"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBR-13"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.specimen"/>
+      <short value="If the whole order relates to specific specimens"/>
+      <formal value="One or more specimens that the diagnostic investigation is about."/>
+      <comments value="Many investigation requests will create a need for specimens, but the request itself is not actually about the specimens. This is provided for when the diagnostic investigation is requested on already existing specimens."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Specimen"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SPC].role"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SPC].role"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.status"/>
+      <short value="requested | received | accepted | in progress | review | completed | suspended | rejected | failed"/>
+      <formal value="The status of the order."/>
+      <comments value="Typically the system placing the order sets the status to requested. Thereafter, the order is maintained by the receiver that updates the status as the request is handled."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DiagnosticOrderStatus"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The status of a diagnostic order"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/diagnostic-order-status"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode
+also influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode
+also influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.priority"/>
+      <short value="routine | urgent | stat | asap"/>
+      <formal value="The clinical priority associated with this order."/>
+      <comments value="The Order resource also has a priority. Generally, these should be the same, but they can be different, for instance in the case where the clinician indicates that the order is urgent, but the subsequent workflow process overrule this priority for some reason. The effective default value is &quot;normal&quot;."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DiagnosticOrderPriority"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The clinical priority of a diagnostic order"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/diagnostic-order-priority"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".priorityCode"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".priorityCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event"/>
+      <name value="event"/>
+      <short value="A list of events of interest in the lifecycle"/>
+      <formal value="A summary of the events of interest that have occurred as the request is processed. E.g. when the order was made, various processing steps (specimens received), when it was completed."/>
+      <comments value="This is not the same as an audit trail - it is a view of the important things that happened in the past. Typically, there would only be one entry for any given status, and systems may not record all the status events."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=FLFS].source"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=FLFS].source"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event.status"/>
+      <short value="requested | received | accepted | in progress | review | completed | suspended | rejected | failed"/>
+      <formal value="The status for the event."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DiagnosticOrderStatus"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The status of a diagnostic order"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/diagnostic-order-status"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode
+also influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode
+also influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event.description"/>
+      <short value="More information about the event and its context"/>
+      <formal value="Additional information about the event that occurred - e.g. if the status remained unchanged."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DiagnosticOrderEventDescription"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="Additional information about an event that occurred to a diagnostic order - e.g. if the status remained unchanged"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/diagnostic-order-event"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event.dateTime"/>
+      <short value="The date at which the event happened"/>
+      <formal value="The date/time at which the event occurred."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event.actor"/>
+      <short value="Who recorded or did this"/>
+      <formal value="The person who was responsible for performing or recording the action."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Practitioner"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Device"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[AUT or PFM]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[AUT or PFM]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item"/>
+      <short value="The items the orderer requested"/>
+      <formal value="The specific diagnostic investigations that are requested as part of this request. Sometimes, there can only be one item per request, but in most contexts, more than one investigation can be requested."/>
+      <comments value="There would always be at least one item in normal usage, but this is optional so that a workflow can quote order details without having to list the items."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=COMP].target[classCode=OBS, moodCode=OBS]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=COMP].target[classCode=OBS, moodCode=OBS]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.code"/>
+      <short value="Code to indicate the item (test or panel) being ordered"/>
+      <formal value="A code that identifies a particular diagnostic investigation, or panel of investigations, that have been requested."/>
+      <comments value="Many laboratory tests and radiology tests embed the specimen/organ system in the test name, for example,  serum or serum/plasma glucose, or a chest xray. The specimen may not be recorded separately from the test code."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DiagnosticRequests"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="Codes for tests/services that can be performed by diagnostic services"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/diagnostic-requests"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBX-4"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBX-4"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.specimen"/>
+      <short value="If this item relates to specific specimens"/>
+      <formal value="If the item is related to a specific specimen."/>
+      <comments value="A single specimen should not appear in both DiagnosticOrder.specimen and DiagnosticOrder.item.specimen."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Specimen"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SPC].role"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SPC].role"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.bodySite"/>
+      <short value="Location of requested test (if applicable)"/>
+      <formal value="Anatomical location where the request test should be performed."/>
+      <synonym value="location"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="BodySite"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="Codes describing anatomical locations. May include laterality"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/body-site"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value="targetSiteCode"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="targetSiteCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.status"/>
+      <short value="requested | received | accepted | in progress | review | completed | suspended | rejected | failed"/>
+      <formal value="The status of this individual item within the order."/>
+      <comments value="If the request has multiple items that have their own life cycles, then the items will have their own status while the overall diagnostic order is (usually) &quot;in progress&quot;."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DiagnosticOrderStatus"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The status of a diagnostic order"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/diagnostic-order-status"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode
+also influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode
+also influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.event"/>
+      <short value="Events specific to this item"/>
+      <formal value="A summary of the events of interest that have occurred as this item of the request is processed."/>
+      <min value="0"/>
+      <max value="*"/>
+      <nameReference value="event"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=FLFS].source"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=FLFS].source"/>
+      </mapping>
+    </element>
+  </snapshot>
+  <differential>
+    <element>
+      <path value="DiagnosticOrder"/>
+      <short value="A request for a diagnostic service"/>
+      <formal value="A request for a diagnostic investigation service to be performed."/>
+      <synonym value="Report"/>
+      <synonym value="Test"/>
+      <synonym value="Result"/>
+      <synonym value="Results"/>
+      <synonym value="Labs"/>
+      <synonym value="Laboratory"/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Observation[classCode=OBS, moodCode=RQO, code&lt;&quot;diagnostic order&quot;]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Observation[classCode=OBS, moodCode=RQO, code&lt;&quot;diagnostic order&quot;]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.subject"/>
+      <short value="Who and/or what test is about"/>
+      <formal value="Who or what the investigation is to be performed on. This is usually a human patient, but diagnostic tests can also be requested on animals, groups of humans or animals, devices such as dialysis machines, or even locations (typically for environmental scans)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Patient"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Group"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Location"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Device"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].role"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].role"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.orderer"/>
+      <short value="Who ordered the test"/>
+      <formal value="The practitioner that holds legal responsibility for ordering the investigation."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Practitioner"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=AUT].role"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=AUT].role"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier"/>
+      <short value="Identifiers assigned to this order"/>
+      <formal value="Identifiers assigned to this order by the order or by the receiver."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.encounter"/>
+      <short value="The encounter that this diagnostic order is associated with"/>
+      <formal value="An encounter that provides additional information about the healthcare context in which this request is made."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Encounter"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.clinicalNotes"/>
+      <short value="Explanation/Justification for test"/>
+      <formal value="An explanation or justification for why this diagnostic investigation is being requested."/>
+      <comments value="This may be used to decide how the diagnostic investigation will be performed, or even if it will be performed at all."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".reasonCode.originalText"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".reasonCode.originalText"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.supportingInformation"/>
+      <short value="Supporting observations or conditions for this request"/>
+      <formal value="Additional clinical information about the patient or specimen that may influence test interpretations."/>
+      <comments value="This information includes diagnosis, clinical findings and other observations.  Examples include reporting the amount of inspired carbon dioxide for blood gasses, the point in the menstrual cycle for cervical pap tests, and other conditions that influence test interpretations."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Observation"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Condition"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBR-13"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBR-13"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.specimen"/>
+      <short value="If the whole order relates to specific specimens"/>
+      <formal value="One or more specimens that the diagnostic investigation is about."/>
+      <comments value="Many investigation requests will create a need for specimens, but the request itself is not actually about the specimens. This is provided for when the diagnostic investigation is requested on already existing specimens."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Specimen"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SPC].role"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SPC].role"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.status"/>
+      <short value="requested | received | accepted | in progress | review | completed | suspended | rejected | failed"/>
+      <formal value="The status of the order."/>
+      <comments value="Typically the system placing the order sets the status to requested. Thereafter, the order is maintained by the receiver that updates the status as the request is handled."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DiagnosticOrderStatus"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The status of a diagnostic order"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/diagnostic-order-status"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode
+also influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode
+also influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.priority"/>
+      <short value="routine | urgent | stat | asap"/>
+      <formal value="The clinical priority associated with this order."/>
+      <comments value="The Order resource also has a priority. Generally, these should be the same, but they can be different, for instance in the case where the clinician indicates that the order is urgent, but the subsequent workflow process overrule this priority for some reason. The effective default value is &quot;normal&quot;."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DiagnosticOrderPriority"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The clinical priority of a diagnostic order"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/diagnostic-order-priority"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".priorityCode"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".priorityCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event"/>
+      <name value="event"/>
+      <short value="A list of events of interest in the lifecycle"/>
+      <formal value="A summary of the events of interest that have occurred as the request is processed. E.g. when the order was made, various processing steps (specimens received), when it was completed."/>
+      <comments value="This is not the same as an audit trail - it is a view of the important things that happened in the past. Typically, there would only be one entry for any given status, and systems may not record all the status events."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=FLFS].source"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=FLFS].source"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event.status"/>
+      <short value="requested | received | accepted | in progress | review | completed | suspended | rejected | failed"/>
+      <formal value="The status for the event."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DiagnosticOrderStatus"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The status of a diagnostic order"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/diagnostic-order-status"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode
+also influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode
+also influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event.description"/>
+      <short value="More information about the event and its context"/>
+      <formal value="Additional information about the event that occurred - e.g. if the status remained unchanged."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DiagnosticOrderEventDescription"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="Additional information about an event that occurred to a diagnostic order - e.g. if the status remained unchanged"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/diagnostic-order-event"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event.dateTime"/>
+      <short value="The date at which the event happened"/>
+      <formal value="The date/time at which the event occurred."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event.actor"/>
+      <short value="Who recorded or did this"/>
+      <formal value="The person who was responsible for performing or recording the action."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Practitioner"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Device"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[AUT or PFM]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[AUT or PFM]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item"/>
+      <short value="The items the orderer requested"/>
+      <formal value="The specific diagnostic investigations that are requested as part of this request. Sometimes, there can only be one item per request, but in most contexts, more than one investigation can be requested."/>
+      <comments value="There would always be at least one item in normal usage, but this is optional so that a workflow can quote order details without having to list the items."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=COMP].target[classCode=OBS, moodCode=OBS]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=COMP].target[classCode=OBS, moodCode=OBS]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.code"/>
+      <short value="Code to indicate the item (test or panel) being ordered"/>
+      <formal value="A code that identifies a particular diagnostic investigation, or panel of investigations, that have been requested."/>
+      <comments value="Many laboratory tests and radiology tests embed the specimen/organ system in the test name, for example,  serum or serum/plasma glucose, or a chest xray. The specimen may not be recorded separately from the test code."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DiagnosticRequests"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="Codes for tests/services that can be performed by diagnostic services"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/diagnostic-requests"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBX-4"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBX-4"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.specimen"/>
+      <short value="If this item relates to specific specimens"/>
+      <formal value="If the item is related to a specific specimen."/>
+      <comments value="A single specimen should not appear in both DiagnosticOrder.specimen and DiagnosticOrder.item.specimen."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Specimen"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SPC].role"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SPC].role"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.bodySite"/>
+      <short value="Location of requested test (if applicable)"/>
+      <formal value="Anatomical location where the request test should be performed."/>
+      <synonym value="location"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="BodySite"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="Codes describing anatomical locations. May include laterality"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/body-site"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value="targetSiteCode"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="targetSiteCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.status"/>
+      <short value="requested | received | accepted | in progress | review | completed | suspended | rejected | failed"/>
+      <formal value="The status of this individual item within the order."/>
+      <comments value="If the request has multiple items that have their own life cycles, then the items will have their own status while the overall diagnostic order is (usually) &quot;in progress&quot;."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DiagnosticOrderStatus"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The status of a diagnostic order"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/diagnostic-order-status"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode
+also influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode
+also influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.event"/>
+      <short value="Events specific to this item"/>
+      <formal value="A summary of the events of interest that have occurred as this item of the request is processed."/>
+      <min value="0"/>
+      <max value="*"/>
+      <nameReference value="event"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=FLFS].source"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=FLFS].source"/>
+      </mapping>
+    </element>
+  </differential>
+</Profile>

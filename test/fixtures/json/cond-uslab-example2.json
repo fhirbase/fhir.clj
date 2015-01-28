@@ -1,0 +1,30 @@
+{
+  "resourceType": "Condition",
+  "id": "uslab-example2",
+  "text": {
+    "status": "generated",
+    "div": "<div>\n\t\t\t\n      <p>Condition/uslab-example1</p>\n\t\t\t\n      <ul>\n\t\t\t\t\n\t\t\t\n        <li>file: cond-uslab-example2.xml</li>\n\t\t\t\n        <li> id: uslab-example2</li>\n\t\t\t\n        <li> Name: USLab Condition Example2</li>\n\t\t\t\n        <li>Description: USLab  Reason For Study Profile Canonical Example: Lead Exposure</li>\n\t\t\t\n      </ul>\n\t\t\n    </div>"
+  },
+  "subject": {
+    "reference": "Patient/uslab-example1"
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://www.cms.gov/Medicare/Coding/ICD10/index.html",
+        "code": "R78.71",
+        "display": "Abnormal lead level in blood"
+      }
+    ]
+  },
+  "category": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/condition-category",
+        "code": "diagnosis",
+        "display": "Diagnosis"
+      }
+    ]
+  },
+  "status": "provisional"
+}

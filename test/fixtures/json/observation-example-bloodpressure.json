@@ -1,0 +1,137 @@
+{
+  "resourceType": "Bundle",
+  "id": "blood-pressure",
+  "meta": {
+    "lastUpdated": "2014-01-30T22:35:23+11:00"
+  },
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "34252345234",
+        "meta": {
+          "lastUpdated": "2014-01-30T22:35:23+11:00"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div>Sept 17, 2012: Systolic Blood pressure 107/60 mmHg (low)</div>"
+        },
+        "name": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55284-4",
+              "display": "Blood pressure systolic & diastolic"
+            }
+          ]
+        },
+        "interpretation": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/v2/0078",
+              "code": "L",
+              "display": "Below low normal"
+            }
+          ],
+          "text": "low"
+        },
+        "appliesDateTime": "2012-09-17",
+        "status": "final",
+        "reliability": "ok",
+        "identifier": {
+          "system": "urn:ietf:rfc:3986",
+          "value": "urn:uuid:187e0c12-8dd2-67e2-99b2-bf273c878281"
+        },
+        "subject": {
+          "reference": "Patient/example"
+        },
+        "performer": [
+          {
+            "reference": "Practitioner/example"
+          }
+        ],
+        "related": [
+          {
+            "type": "has-component",
+            "target": {
+              "reference": "http://acme.org/ehr/observations/34252345234-s"
+            }
+          },
+          {
+            "type": "has-component",
+            "target": {
+              "reference": "http://acme.org/ehr/observations/34252345234-d"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "34252345234-s",
+        "meta": {
+          "lastUpdated": "2014-01-30T22:35:23+11:00"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div>Sept 17, 2012: Systolic Blood pressure 107 mmHg (low)</div>"
+        },
+        "name": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "271649006",
+              "display": "Systolic blood pressure"
+            },
+            {
+              "system": "http://acme.org/devices/clinical-codes",
+              "code": "bp-s",
+              "display": "Systolic Blood pressure"
+            }
+          ]
+        },
+        "valueQuantity": {
+          "value": 107,
+          "units": "mm[Hg]"
+        },
+        "status": "final",
+        "reliability": "ok"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "34252345234-d",
+        "meta": {
+          "lastUpdated": "2014-01-30T22:35:23+11:00"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div>Sept 17, 2012: Diastolic Blood pressure 60 mmHg (low)</div>"
+        },
+        "name": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "valueQuantity": {
+          "value": 60,
+          "units": "mm[Hg]"
+        },
+        "status": "final",
+        "reliability": "ok"
+      }
+    }
+  ]
+}

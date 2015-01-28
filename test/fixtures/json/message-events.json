@@ -1,0 +1,91 @@
+{
+  "resourceType": "ValueSet",
+  "id": "message-events",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 12 concepts</p><h2>MessageEvent</h2><p>One of the message events defined as part of FHIR</p><p>This value set defines its own terms in the system http://hl7.org/fhir/message-events</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>MedicationAdministration-Complete<a name=\"MedicationAdministration-Complete\"> </a></td><td>Change the status of a Medication Administration to show that it is complete.</td></tr><tr><td>MedicationAdministration-Nullification<a name=\"MedicationAdministration-Nullification\"> </a></td><td>Someone wishes to record that the record of administration of a medication is in error and should be ignored.</td></tr><tr><td>MedicationAdministration-Recording<a name=\"MedicationAdministration-Recording\"> </a></td><td>Indicates that a medication has been recorded against the patient's record.</td></tr><tr><td>MedicationAdministration-Update<a name=\"MedicationAdministration-Update\"> </a></td><td>Update a Medication Administration record.</td></tr><tr><td>admin-notify<a name=\"admin-notify\"> </a></td><td>Notification of a change to an administrative resource (either create or update). Note that there is no delete, though some administrative resources have status or period elements for this use.</td></tr><tr><td>conceptmap-translate<a name=\"conceptmap-translate\"> </a></td><td>Translate a code from one value set to another, based on the existing value set and concept maps resources, and/or other additional knowledge available to the server. The coded value is carried as an extension in the message header.  The outcome is an operationOutcome with hints, warnings, or errors, or the translated code in an extension.</td></tr><tr><td>diagnosticreport-provide<a name=\"diagnosticreport-provide\"> </a></td><td>Provide a diagnostic report, or update a previously provided diagnostic report.</td></tr><tr><td>observation-provide<a name=\"observation-provide\"> </a></td><td>Provide a simple observation or update a previously provided simple observation.</td></tr><tr><td>patient-link<a name=\"patient-link\"> </a></td><td>Notification that two patient records actually identify the same patient.</td></tr><tr><td>patient-unlink<a name=\"patient-unlink\"> </a></td><td>Notification that previous advice that two patient records concern the same patient is now considered incorrect.</td></tr><tr><td>valueset-expand<a name=\"valueset-expand\"> </a></td><td>The definition of a value set is used to create a simple collection of codes suitable for use for data entry or validation. An expanded value set will be returned, or an error message.</td></tr><tr><td>valueset-validate<a name=\"valueset-validate\"> </a></td><td>Validate that a coded value is in the set of codes allowed by a value set. The coded value is carried as an extension in the message header. The outcome is an OperationOutcome with hints, warnings, or errors.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.6"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/message-events",
+  "name": "MessageEvent",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "One of the message events defined as part of FHIR",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.496+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.6"
+      }
+    ],
+    "system": "http://hl7.org/fhir/message-events",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "MedicationAdministration-Complete",
+        "definition": "Change the status of a Medication Administration to show that it is complete."
+      },
+      {
+        "code": "MedicationAdministration-Nullification",
+        "definition": "Someone wishes to record that the record of administration of a medication is in error and should be ignored."
+      },
+      {
+        "code": "MedicationAdministration-Recording",
+        "definition": "Indicates that a medication has been recorded against the patient's record."
+      },
+      {
+        "code": "MedicationAdministration-Update",
+        "definition": "Update a Medication Administration record."
+      },
+      {
+        "code": "admin-notify",
+        "definition": "Notification of a change to an administrative resource (either create or update). Note that there is no delete, though some administrative resources have status or period elements for this use."
+      },
+      {
+        "code": "conceptmap-translate",
+        "definition": "Translate a code from one value set to another, based on the existing value set and concept maps resources, and/or other additional knowledge available to the server. The coded value is carried as an extension in the message header.  The outcome is an operationOutcome with hints, warnings, or errors, or the translated code in an extension."
+      },
+      {
+        "code": "diagnosticreport-provide",
+        "definition": "Provide a diagnostic report, or update a previously provided diagnostic report."
+      },
+      {
+        "code": "observation-provide",
+        "definition": "Provide a simple observation or update a previously provided simple observation."
+      },
+      {
+        "code": "patient-link",
+        "definition": "Notification that two patient records actually identify the same patient."
+      },
+      {
+        "code": "patient-unlink",
+        "definition": "Notification that previous advice that two patient records concern the same patient is now considered incorrect."
+      },
+      {
+        "code": "valueset-expand",
+        "definition": "The definition of a value set is used to create a simple collection of codes suitable for use for data entry or validation. An expanded value set will be returned, or an error message."
+      },
+      {
+        "code": "valueset-validate",
+        "definition": "Validate that a coded value is in the set of codes allowed by a value set. The coded value is carried as an extension in the message header. The outcome is an OperationOutcome with hints, warnings, or errors."
+      }
+    ]
+  }
+}

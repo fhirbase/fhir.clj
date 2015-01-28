@@ -1,0 +1,32 @@
+{
+  "resourceType": "Contraindication",
+  "id": "duplicate",
+  "text": {
+    "status": "generated",
+    "div": "<div>\n      \n      <p>Similar test was performed within the past 14 days</p>\n      \n      <ul>\n        \n        <li>\n          \n          <a href=\"DiagnosticOrder/id\">Chest CT - ordered May 8, 2013 by Dr. Adam Careful</a>\n        \n        </li>\n        \n        <li>\n          \n          <a href=\"ImagingStudy/example\">Image 1 from Series 3: CT Images on Patient MINT (MINT1234) taken at 1-Jan 2011 01:20 AM</a>\n        \n        </li>\n      \n      </ul>\n    \n    </div>"
+  },
+  "category": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/v3/ActCode",
+        "code": "DUPTHPY",
+        "display": "Duplicate Therapy Alert"
+      }
+    ]
+  },
+  "implicated": [
+    {
+      "reference": "DiagnosticOrder/di",
+      "display": "Chest CT - ordered May 8, 2013 by Dr. Adam Careful"
+    },
+    {
+      "reference": "ImagingStudy/example",
+      "display": "Image 1 from Series 3: CT Images on Patient MINT (MINT1234) taken at 1-Jan 2011 01:20 AM"
+    }
+  ],
+  "detail": "Similar test was performed within the past 14 days",
+  "date": "2013-05-08",
+  "author": {
+    "reference": "Device/dsp"
+  }
+}

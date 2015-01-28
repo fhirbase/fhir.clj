@@ -1,0 +1,777 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "vs2",
+      "identifier": "urn:uuid:b78a199d-109c-41e6-b645-e84197fdd555",
+      "name": "Type options for ReferralRequest.requester",
+      "description": "Type options for ReferralRequest.requester",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:22:17.709+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Practitioner",
+            "display": "Practitioner"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Organization",
+            "display": "Organization"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Patient",
+            "display": "Patient"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs3",
+      "identifier": "urn:uuid:7ec721ca-9f65-4274-8e05-ba785b2a41dd",
+      "name": "Type options for ReferralRequest.recipient",
+      "description": "Type options for ReferralRequest.recipient",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:22:17.709+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Practitioner",
+            "display": "Practitioner"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Organization",
+            "display": "Organization"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (Patient Care)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "Used to record and send details about a request for referral service or transfer of a patient to the care of another provider or provider organisation."
+      }
+    ],
+    "linkId": "ReferralRequest",
+    "title": "A request for referral or tranfer of care",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "ReferralRequest.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ReferralRequest.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "ReferralRequest.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ReferralRequest.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ReferralRequest.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ReferralRequest.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ReferralRequest.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "ReferralRequest.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ReferralRequest.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "ReferralRequest.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ReferralRequest.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "ReferralRequest.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ReferralRequest.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "ReferralRequest.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ReferralRequest.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "ReferralRequest.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ReferralRequest.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "ReferralRequest.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ReferralRequest.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "ReferralRequest.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "ReferralRequest.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The workflow status of the referral or transfer of care request."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "ReferralRequest.status",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ReferralRequest.status.value",
+            "text": "status",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Business Id that uniquely identifies the referral/care transfer request instance."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Identifier"
+          }
+        ],
+        "linkId": "ReferralRequest.identifier",
+        "text": "Identifier of request",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ReferralRequest.identifier.label",
+            "text": "label:",
+            "type": "string"
+          },
+          {
+            "linkId": "ReferralRequest.identifier.system",
+            "text": "system:",
+            "type": "string"
+          },
+          {
+            "linkId": "ReferralRequest.identifier.value",
+            "text": "value:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "An indication of the type of referral (or where applicable the type of transfer of care) request. Examples of referral type:\r- consultation; \r       second opinion; \r        third opinion\r- Assume management\r- Request for procedure(s)\r\rHL7 v2.8 Example - Table 0336:\rS = second opinion\rp = patient preference\ro = provider ordered\rw = work load."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "ReferralRequest.type",
+        "text": "Referral/Transition of care request type",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ReferralRequest.type.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "ReferralRequest.type.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Indication of the clinical domain or discipline to which the referral or transfer of care request is sent. Examples:\rCardiology\rGastroenterology\rDiabetology."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "ReferralRequest.specialty",
+        "text": "The clinical specialty (discipline) that the referral is requested for",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ReferralRequest.specialty.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "ReferralRequest.specialty.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "An indication of the urgency of referral (or where applicable the type of transfer of care) request."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "ReferralRequest.priority",
+        "text": "Urgency of referral / transfer of care request",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ReferralRequest.priority.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "ReferralRequest.priority.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The patient who is the subject of a referral or transfer of care request. Referral of family, group or community is to be catered for by profiles."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "ReferralRequest.patient",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "ReferralRequest.patient.value",
+            "text": "Patient referred to care or transfer",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The healthcare provider or provider organization who/which initaited the referral/transfer of care request. Can also be  Patient (a self referral)."
+          }
+        ],
+        "linkId": "ReferralRequest.requester",
+        "text": "Requester of referral / transfer of care",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ReferralRequest.requester._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs2"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "ReferralRequest.requester._Practitioner",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "ReferralRequest.requester._Practitioner.value",
+                    "text": "Practitioner",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "ReferralRequest.requester._Organization",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "ReferralRequest.requester._Organization.value",
+                    "text": "Organization",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "ReferralRequest.requester._Patient",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "ReferralRequest.requester._Patient.value",
+                    "text": "Patient",
+                    "type": "reference"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The healthcare provider(s) or provider organization(s) who/which is to receive the referral/transfer of care request. There will be a primary receiver.\rBut the request can be received by any number of \"copied to\" providers or organisations."
+          }
+        ],
+        "linkId": "ReferralRequest.recipient",
+        "text": "Receiver of referral / transfer of care request",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ReferralRequest.recipient._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs3"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "ReferralRequest.recipient._Practitioner",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "ReferralRequest.recipient._Practitioner.value",
+                    "text": "Practitioner",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "ReferralRequest.recipient._Organization",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "ReferralRequest.recipient._Organization.value",
+                    "text": "Organization",
+                    "type": "reference"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The encounter at which the request for referral or transfer of care is initiated."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "ReferralRequest.encounter",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Encounter?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "ReferralRequest.encounter.value",
+            "text": "Encounter",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Date/DateTime the request for referral or transfer of care is sent by the author."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "datetime"
+          }
+        ],
+        "linkId": "ReferralRequest.dateSent",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ReferralRequest.dateSent.value",
+            "text": "Date referral/transfer of care request is sent",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Description of clinical condition indicating why referral/transfer of care is requested. Examples:\r\"2nd degree AV block\"\r\rOral Health example ReferralReasonCode:\r01 = Pathological Anomalies\r02 = Disabled (physical or mental)\r03 = Complexity of Treatment\r04 = Seizure Disorders\r05 = Extensive Surgery\r06 = Surgical Complexity\r07 = Rampant decay\r08 = Medical History (to provide details upon request)\r09 = Temporal Mandibular Joint Anomalies\r10 = Accidental Injury\r11 = Anaesthesia complications (local or general)\r12 = Developmental Anomalies\r13 = Behavioral Management."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "ReferralRequest.reason",
+        "text": "Reason for referral / Transfer of care request",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ReferralRequest.reason.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "ReferralRequest.reason.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The reason gives a short description of why the referral is being made, the description expands on this to support a more complete clinical summary. This would be a good candidate for a 'markdown' data type."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "ReferralRequest.description",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ReferralRequest.description.value",
+            "text": "A textual description of the referral",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The service(s) that is/are requested to be provided to the patient. Examples:\r\"cardiac pacemaker insertion\"\r\rHL7 v3 Concept domain - ReferralReasonCode examples:\r- Specialized medical assistance\r- Other care requirement."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "ReferralRequest.serviceRequested",
+        "text": "Service(s) requested",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ReferralRequest.serviceRequested.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "ReferralRequest.serviceRequested.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Any additional (administrative, financial or clinical) information required to support request for referral or transfer of care. Examples include:\rPresenting problems/chief complaints\rMedical History\rFamily History\rAlerts\rAllergy/Intolerance and Adverse Reactions\rMedications\rObservations/Assessments (may include cognitive and fundtional assessments)\rDiagnostic Reports\rCare Plan."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "ReferralRequest.supportingInformation",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "ReferralRequest.supportingInformation.value",
+            "text": "Additonal information to support referral or transfer of care request",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The period of time within which the services identified in the referral/transfer of care is specified or required to occur."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Period"
+          }
+        ],
+        "linkId": "ReferralRequest.fulfillmentTime",
+        "text": "Requested service(s) fulfillment time",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ReferralRequest.fulfillmentTime.low",
+            "text": "start:",
+            "type": "dateTime"
+          },
+          {
+            "linkId": "ReferralRequest.fulfillmentTime.end",
+            "text": "end:",
+            "type": "dateTime"
+          }
+        ]
+      }
+    ]
+  }
+}

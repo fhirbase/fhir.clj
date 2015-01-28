@@ -1,0 +1,41 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-contraindication-mitigation-action",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set does not contain a fixed number of concepts</p><h2>contraindication-mitigation-action</h2><p>Kinds of mitigating actions and observations that can be associated with a contraindicaiton, such as 'added concurrent therapy', 'prior therapy documented', etc.</p><p>This value set includes codes defined in other code systems, using the following rules:</p><ul><li>Include codes from http://hl7.org/fhir/v3/actcode where concept  is-a  _ActDetectedIssueManagementCode</li></ul></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.402"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/contraindication-mitigation-action",
+  "name": "contraindication-mitigation-action",
+  "publisher": "FHIR Project team",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "Kinds of mitigating actions and observations that can be associated with a contraindicaiton, such as 'added concurrent therapy', 'prior therapy documented', etc.",
+  "status": "draft",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/v3/actcode",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "_ActDetectedIssueManagementCode"
+          }
+        ]
+      }
+    ]
+  }
+}

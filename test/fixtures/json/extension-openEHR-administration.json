@@ -1,0 +1,36 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "openEHR-administration",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/openEHR-administration",
+  "name": "Actual medication record, if known",
+  "publisher": "Health Level Seven, Inc / openEHR project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org"
+    }
+  ],
+  "description": "Link to an actual medication administration record with the full details of the administration, if a link is known.",
+  "status": "draft",
+  "date": "2014-10-09",
+  "contextType": "resource",
+  "context": [
+    "AllergyIntolerance.event"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Actual medication record, if known",
+      "formal": "Link to an actual medication administration record with the full details of the administration, if a link is known.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "profile": "http://hl7.org/fhir/Profile/MedicationAdministration"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

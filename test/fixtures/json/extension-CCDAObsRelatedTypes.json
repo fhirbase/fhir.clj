@@ -1,0 +1,36 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "CCDAObsRelatedTypes",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/CCDAObsRelatedTypes",
+  "name": "CCDA related observation types",
+  "display": "CCDAObsRelatedTypes",
+  "publisher": "HL7 International - Orders and Observations WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org"
+    }
+  ],
+  "description": "CCDA related observation types.",
+  "status": "draft",
+  "date": "2014-09-21",
+  "contextType": "resource",
+  "context": [
+    "Observation"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "CCDA related observation types",
+      "formal": "CCDA related observation types.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

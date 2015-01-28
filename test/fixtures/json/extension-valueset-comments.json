@@ -1,0 +1,32 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "valueset-comments",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/valueset-comments",
+  "name": "Comment about the use of this code in this context",
+  "display": "Comment",
+  "publisher": "HL7",
+  "description": "A comment that explains how this code is used in this context (where the value set is expected to be used).",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "contextType": "resource",
+  "context": [
+    "ValueSet.compose.include.concept",
+    "ValueSet.define.concept"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Comment about the use of this code in this context",
+      "formal": "A comment that explains how this code is used in this context (where the value set is expected to be used).",
+      "comments": "This is used in various FHIR value sets to make comments on how particular codes are used when the formal definition is a little abstract or vague, but it's not clear whether it belongs in the actual value set resource.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

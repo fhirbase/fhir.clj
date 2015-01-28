@@ -1,0 +1,734 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "vs2",
+      "identifier": "urn:uuid:b3e7b48c-88e9-47be-b612-597177a1791a",
+      "name": "Type options for Medication.product.ingredient.item",
+      "description": "Type options for Medication.product.ingredient.item",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:20:45.939+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Substance",
+            "display": "Substance"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Medication",
+            "display": "Medication"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (Pharmacy)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "Primarily used for identification and definition of Medication, but also covers ingredients and packaging."
+      }
+    ],
+    "linkId": "Medication",
+    "title": "Definition of a Medication",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "Medication.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Medication.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "Medication.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Medication.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Medication.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Medication.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Medication.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "Medication.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Medication.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "Medication.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Medication.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Medication.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Medication.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Medication.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Medication.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "Medication.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Medication.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "Medication.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Medication.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "Medication.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "Medication.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The common/commercial name of the medication absent information such as strength, form, etc.  E.g. Acetaminophen, Tylenol 3, etc.  The fully coordinated name is communicated as the display of Medication.code."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "Medication.name",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Medication.name.value",
+            "text": "Common / Commercial name",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A code (or set of codes) that identify this medication.   Usage note: This could be a standard drug code such as a drug regulator code, RxNorm code, SNOMED CT code, etc. It could also be a local formulary code, optionally with translations to the standard drug codes. When defining a medication, the code is the \"identifying\" code for the medication. All the codings provided should be at the same level in the hierarchy (generic, formulation, generic strength, etc.). Codes that relate the medication across the hierarchy should be conveyed using the relationships inherent in Medication.package and Medication.product."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "Medication.code",
+        "text": "Codes that identify this medication",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Medication.code.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "Medication.code.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Set to true if the item is attributable to a specific manufacturer (even if we don't know who that is)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "boolean"
+          }
+        ],
+        "linkId": "Medication.isBrand",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Medication.isBrand.value",
+            "text": "True if a brand",
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Describes the details of the manufacturer."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "Medication.manufacturer",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "Medication.manufacturer.value",
+            "text": "Manufacturer of the item",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Medications are either a single administrable product or a package that contains one or more products."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "Medication.kind",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Medication.kind.value",
+            "text": "kind",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Information that only applies to products (not packages)."
+          }
+        ],
+        "linkId": "Medication.product",
+        "title": "Administrable medication details",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Medication.product.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Medication.product.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Describes the form of the item.  Powder; tables; carton."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "Medication.product.form",
+            "text": "powder | tablets | carton +",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Medication.product.form.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "Medication.product.form.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Identifies a particular constituent of interest in the product."
+              }
+            ],
+            "linkId": "Medication.product.ingredient",
+            "title": "Active or inactive ingredient",
+            "text": "The ingredients need not be a complete list; usually only active ingredients are listed.",
+            "repeats": true,
+            "group": [
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "unique id for the element within a resource (for internal references)."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "Medication.product.ingredient.id",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "Medication.product.ingredient.id.value",
+                    "text": "xml:id (or equivalent in JSON)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The actual ingredient - either a substance (simple ingredient) or another medication."
+                  }
+                ],
+                "linkId": "Medication.product.ingredient.item",
+                "text": "The product contained",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "Medication.product.ingredient.item._type",
+                    "text": "type",
+                    "type": "choice",
+                    "options": {
+                      "reference": "#vs2"
+                    },
+                    "group": [
+                      {
+                        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                          {
+                            "valueString": "Reference"
+                          }
+                        ],
+                        "linkId": "Medication.product.ingredient.item._Substance",
+                        "question": [
+                          {
+                            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                              {
+                                "valueString": "/Substance?subject=$subj&patient=$subj&encounter=$encounter"
+                              }
+                            ],
+                            "linkId": "Medication.product.ingredient.item._Substance.value",
+                            "text": "Substance",
+                            "type": "reference"
+                          }
+                        ]
+                      },
+                      {
+                        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                          {
+                            "valueString": "Reference"
+                          }
+                        ],
+                        "linkId": "Medication.product.ingredient.item._Medication",
+                        "question": [
+                          {
+                            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                              {
+                                "valueString": "/Medication?subject=$subj&patient=$subj&encounter=$encounter"
+                              }
+                            ],
+                            "linkId": "Medication.product.ingredient.item._Medication.value",
+                            "text": "Medication",
+                            "type": "reference"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Specifies how many (or how much) of the items there are in this Medication.  E.g. 250 mg per tablet."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Ratio"
+                  }
+                ],
+                "linkId": "Medication.product.ingredient.amount",
+                "text": "How much ingredient in product",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "Medication.product.ingredient.amount.numerator",
+                    "text": "numerator:",
+                    "type": "decimal"
+                  },
+                  {
+                    "linkId": "Medication.product.ingredient.amount.denominator",
+                    "text": "denominator:",
+                    "type": "decimal"
+                  },
+                  {
+                    "linkId": "Medication.product.ingredient.amount.units",
+                    "text": "units:",
+                    "type": "string"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Information that only applies to packages (not products)."
+          }
+        ],
+        "linkId": "Medication.package",
+        "title": "Details about packaged medications",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Medication.package.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Medication.package.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The kind of container that this package comes as."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "Medication.package.container",
+            "text": "E.g. box, vial, blister-pack",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Medication.package.container.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "Medication.package.container.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A set of components that go to make up the described item."
+              }
+            ],
+            "linkId": "Medication.package.content",
+            "title": "What is  in the package?",
+            "repeats": true,
+            "group": [
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "unique id for the element within a resource (for internal references)."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "Medication.package.content.id",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "Medication.package.content.id.value",
+                    "text": "xml:id (or equivalent in JSON)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Identifies one of the items in the package."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Medication.package.content.item",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Medication?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Medication.package.content.item.value",
+                    "text": "A product in the package",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The amount of the product that is in the package."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Quantity"
+                  }
+                ],
+                "linkId": "Medication.package.content.amount",
+                "text": "How many are in the package?",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "Medication.package.content.amount.comparator",
+                    "text": "comp:",
+                    "type": "choice"
+                  },
+                  {
+                    "linkId": "Medication.package.content.amount.value",
+                    "text": "value:",
+                    "type": "decimal"
+                  },
+                  {
+                    "linkId": "Medication.package.content.amount.units",
+                    "text": "units:",
+                    "type": "string"
+                  },
+                  {
+                    "linkId": "Medication.package.content.amount.code",
+                    "text": "coded units:",
+                    "type": "string"
+                  },
+                  {
+                    "linkId": "Medication.package.content.amount.system",
+                    "text": "units system:",
+                    "type": "string"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

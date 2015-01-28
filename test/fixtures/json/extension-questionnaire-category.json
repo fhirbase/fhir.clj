@@ -1,0 +1,53 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "questionnaire-category",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/questionnaire-category",
+  "name": "What kind of questionnaire?",
+  "publisher": "HL7",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://www.hl7.org"
+    }
+  ],
+  "description": "A code that identifies the questionnaire as falling into a particular group of like questionnaires.  E.g. \"Pediatric\", \"Admissions\", \"Research\", \"Demographic\", \"Opinion Survey\", etc.",
+  "status": "draft",
+  "date": "2013-07-04",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "resource",
+  "context": [
+    "Questionnaire"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "What kind of questionnaire?",
+      "formal": "A code that identifies the questionnaire as falling into a particular group of like questionnaires.  E.g. \"Pediatric\", \"Admissions\", \"Research\", \"Demographic\", \"Opinion Survey\", etc.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isSummary": false,
+      "binding": {
+        "name": "QuestionnaireCategory",
+        "isExtensible": true,
+        "description": "Classifications for questionnaires.  Can include such concepts as \"intake form\", \"opinion survey\", \"clinical research questionnaire\", \"pediatric\", etc."
+      },
+      "mapping": [
+        {
+          "identity": "rim",
+          "map": "./inboundRelationship[typeCode=SUBJ]/act[classCode=LIST, moodCode=EVN]/code"
+        }
+      ]
+    }
+  ]
+}

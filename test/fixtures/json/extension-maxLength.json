@@ -1,0 +1,59 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "maxLength",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/maxLength",
+  "name": "No more than this many characters",
+  "publisher": "HL7 FHIR project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "The maximum number of characters that must be present in the simple data type to be considered a \"valid\" instance.",
+  "status": "draft",
+  "date": "2014-04-27",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "resource",
+  "context": [
+    "DataElement",
+    "Questionnaire.group.question"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "No more than this many characters",
+      "formal": "The maximum number of characters that must be present in the simple data type to be considered a \"valid\" instance.",
+      "comments": "For base64binary, reflects the number of characters representing the encoded data, not the number of bytes of the binary data.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "integer"
+        }
+      ],
+      "isSummary": false,
+      "mapping": [
+        {
+          "identity": "v2",
+          "map": "N/A"
+        },
+        {
+          "identity": "rim",
+          "map": "N/A (MIF-level)"
+        }
+      ]
+    }
+  ]
+}

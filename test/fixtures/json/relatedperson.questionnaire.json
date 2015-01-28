@@ -1,0 +1,512 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (Patient Administration)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "Information about a person that is involved in the care for a patient, but who is not the target of healthcare, nor has a formal responsibility in the care process."
+      }
+    ],
+    "linkId": "RelatedPerson",
+    "title": "An person that is related to a patient, but who is not a direct target of care",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "RelatedPerson.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "RelatedPerson.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "RelatedPerson.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "RelatedPerson.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "RelatedPerson.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "RelatedPerson.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "RelatedPerson.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "RelatedPerson.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "RelatedPerson.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "RelatedPerson.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "RelatedPerson.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "RelatedPerson.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "RelatedPerson.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "RelatedPerson.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "RelatedPerson.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "RelatedPerson.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "RelatedPerson.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "RelatedPerson.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "RelatedPerson.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "RelatedPerson.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "RelatedPerson.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Identifier for a person within a particular scope."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Identifier"
+          }
+        ],
+        "linkId": "RelatedPerson.identifier",
+        "text": "A Human identifier for this person",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "RelatedPerson.identifier.label",
+            "text": "label:",
+            "type": "string"
+          },
+          {
+            "linkId": "RelatedPerson.identifier.system",
+            "text": "system:",
+            "type": "string"
+          },
+          {
+            "linkId": "RelatedPerson.identifier.value",
+            "text": "value:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The patient this person is related to."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "RelatedPerson.patient",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "RelatedPerson.patient.value",
+            "text": "The patient this person is related to",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The nature of the relationship between a patient and the related person."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "RelatedPerson.relationship",
+        "text": "The nature of the relationship",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "RelatedPerson.relationship.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "RelatedPerson.relationship.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A name associated with the person."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Name"
+          }
+        ],
+        "linkId": "RelatedPerson.name",
+        "text": "A name associated with the person",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "RelatedPerson.name.text",
+            "text": "text:",
+            "type": "string"
+          },
+          {
+            "linkId": "RelatedPerson.name.family",
+            "text": "family:",
+            "type": "string",
+            "repeats": true
+          },
+          {
+            "linkId": "RelatedPerson.name.given",
+            "text": "given:",
+            "type": "string",
+            "repeats": true
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A contact detail for the person, e.g. a telephone number or an email address. Person may have multiple ways to be contacted with different uses or applicable periods. \rMay need to have options for contacting the person urgently, and also to help with identification."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "ContactPoint"
+          }
+        ],
+        "linkId": "RelatedPerson.telecom",
+        "text": "A contact detail for the person",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "RelatedPerson.telecom.system",
+            "text": "type:",
+            "type": "choice"
+          },
+          {
+            "linkId": "RelatedPerson.telecom.value",
+            "text": "value:",
+            "type": "string"
+          },
+          {
+            "linkId": "RelatedPerson.telecom.use",
+            "text": "use:",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "RelatedPerson.gender",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "RelatedPerson.gender.value",
+            "text": "gender",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Address where the related person can be contacted or visited."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Address"
+          }
+        ],
+        "linkId": "RelatedPerson.address",
+        "text": "Address where the related person can be contacted or visited",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "RelatedPerson.address.text",
+            "text": "text:",
+            "type": "string"
+          },
+          {
+            "linkId": "RelatedPerson.address.line",
+            "text": "line:",
+            "type": "string",
+            "repeats": true
+          },
+          {
+            "linkId": "RelatedPerson.address.city",
+            "text": "city:",
+            "type": "string"
+          },
+          {
+            "linkId": "RelatedPerson.address.state",
+            "text": "state:",
+            "type": "string"
+          },
+          {
+            "linkId": "RelatedPerson.address.postalCode",
+            "text": "post code:",
+            "type": "string"
+          },
+          {
+            "linkId": "RelatedPerson.address.country",
+            "text": "country:",
+            "type": "string"
+          },
+          {
+            "linkId": "RelatedPerson.address.use",
+            "text": "use:",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Image of the person."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Attachment"
+          }
+        ],
+        "linkId": "RelatedPerson.photo",
+        "text": "Image of the person",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The period of time that this relationship is considered to be valid. If there are no dates defined, then the interval is unknown."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Period"
+          }
+        ],
+        "linkId": "RelatedPerson.period",
+        "text": "Period of time that this relationship is considered valid",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "RelatedPerson.period.low",
+            "text": "start:",
+            "type": "dateTime"
+          },
+          {
+            "linkId": "RelatedPerson.period.end",
+            "text": "end:",
+            "type": "dateTime"
+          }
+        ]
+      }
+    ]
+  }
+}

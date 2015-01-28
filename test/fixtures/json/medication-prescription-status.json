@@ -1,0 +1,67 @@
+{
+  "resourceType": "ValueSet",
+  "id": "medication-prescription-status",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 6 concepts</p><h2>MedicationPrescriptionStatus</h2><p>A code specifying the state of the prescribing event. Describes the lifecycle of the prescription.</p><p>This value set defines its own terms in the system http://hl7.org/fhir/medication-prescription-status</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td><td><b><a href=\"v3\\ActStatus\\index.html\">v3 Map (ctStatus)</a></b></td></tr><tr><td>active<a name=\"active\"> </a></td><td>The prescription is 'actionable', but not all actions that are implied by it have occurred yet.</td><td><span title=\"null\"></span><a href=\"v3\\ActStatus\\index.html#active\">active</a></td></tr><tr><td>on hold<a name=\"onhold\"> </a></td><td>Actions implied by the prescription have been temporarily halted, but are expected to continue later.  May also be called &quot;suspended&quot;.</td><td><span title=\"null\"></span><a href=\"v3\\ActStatus\\index.html#suspended\">suspended</a></td></tr><tr><td>completed<a name=\"completed\"> </a></td><td>All actions that are implied by the prescription have occurred (this will rarely be made explicit).</td><td><span title=\"null\"></span><a href=\"v3\\ActStatus\\index.html#completed\">completed</a></td></tr><tr><td>entered in error<a name=\"enteredinerror\"> </a></td><td>The prescription was entered in error and therefore nullified.</td><td><span title=\"null\"></span><a href=\"v3\\ActStatus\\index.html#nullified\">nullified</a></td></tr><tr><td>stopped<a name=\"stopped\"> </a></td><td>Actions implied by the prescription have been permanently halted, before all of them occurred.</td><td><span title=\"null\"></span><a href=\"v3\\ActStatus\\index.html#aborted\">aborted</a></td></tr><tr><td>superceded<a name=\"superceded\"> </a></td><td>The prescription was replaced by a newer one, which encompasses all the information in the previous one.</td><td><span title=\"null\"></span><a href=\"v3\\ActStatus\\index.html#obsolete\">obsolete</a></td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.107"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/medication-prescription-status",
+  "name": "MedicationPrescriptionStatus",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "A code specifying the state of the prescribing event. Describes the lifecycle of the prescription.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.496+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.107"
+      }
+    ],
+    "system": "http://hl7.org/fhir/medication-prescription-status",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "active",
+        "definition": "The prescription is 'actionable', but not all actions that are implied by it have occurred yet."
+      },
+      {
+        "code": "on hold",
+        "definition": "Actions implied by the prescription have been temporarily halted, but are expected to continue later.  May also be called \"suspended\"."
+      },
+      {
+        "code": "completed",
+        "definition": "All actions that are implied by the prescription have occurred (this will rarely be made explicit)."
+      },
+      {
+        "code": "entered in error",
+        "definition": "The prescription was entered in error and therefore nullified."
+      },
+      {
+        "code": "stopped",
+        "definition": "Actions implied by the prescription have been permanently halted, before all of them occurred."
+      },
+      {
+        "code": "superceded",
+        "definition": "The prescription was replaced by a newer one, which encompasses all the information in the previous one."
+      }
+    ]
+  }
+}

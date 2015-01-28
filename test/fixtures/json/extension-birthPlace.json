@@ -1,0 +1,35 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "birthPlace",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/birthPlace",
+  "name": "Place of Birth for patient",
+  "publisher": "HL7 FHIR project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "The registered place of birth of the patient.",
+  "status": "draft",
+  "date": "2013-12-05",
+  "contextType": "resource",
+  "context": [
+    "Patient"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Place of Birth for patient",
+      "formal": "The registered place of birth of the patient.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Address"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

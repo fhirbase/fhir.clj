@@ -1,0 +1,38 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-observation-assessmentsupportingobservationcodes",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set does not contain a fixed number of concepts</p><h2>AssessmentSupportingObservationCodes</h2><p>AssessmentSupportingObservationCodes :  All SNOMED CT and LOINC codes for now.  This is  a placeholder until code set defined</p><p><b>Copyright Statement:</b> This value set includes content from LOINC&reg;, which is copyright &copy; 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use. This value set includes content from SNOMED CT, which is copyright &copy; 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement</p><p>This value set includes codes defined in other code systems, using the following rules:</p><ul><li>Include all codes defined in http://snomed.info/sct</li><li>Include all codes defined in http://loinc.org</li></ul></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.429"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/observation-assessmentsupportingobservationcodes",
+  "name": "AssessmentSupportingObservationCodes",
+  "publisher": "HL7 International - Orders and Observations WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "AssessmentSupportingObservationCodes :  All SNOMED CT and LOINC codes for now.  This is  a placeholder until code set defined",
+  "copyright": "This value set includes content from LOINC®, which is copyright © 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use. This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement",
+  "status": "draft",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct"
+      },
+      {
+        "system": "http://loinc.org"
+      }
+    ]
+  }
+}

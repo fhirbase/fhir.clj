@@ -1,0 +1,113 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-provenance-agent-role",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div><p>This value set contains 10 concepts</p><h2>ProvenanceParticipantRole</h2><p>The role that a provenance participant played</p><p>This value set defines its own terms in the system http://hl7.org/fhir/provenance-participant-role</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td><td><b>Comments</b></td></tr><tr><td>enterer<a name=\"enterer\"> </a></td><td>A person entering the data into the originating system</td><td>The data entry person is collected optionally for internal quality control purposes. This includes the transcriptionist for dictated text</td></tr><tr><td>performer<a name=\"performer\"> </a></td><td>A person, animal, organization or device that who actually and principally carries out the activity</td><td>Device should only be assigned as a performer in circumstances where the device is performing independent of human intervention. Need not be the principal responsible actor</td></tr><tr><td>author<a name=\"author\"> </a></td><td>A party that originates the resource and therefore has responsibility for the information given in the resource and ownership of this resource</td><td>Every resource should have an author</td></tr><tr><td>verifier<a name=\"verifier\"> </a></td><td>A person who verifies the correctness and appropriateness of activity</td><td>This is often used in association with the institution that hosts an activity</td></tr><tr><td>attester<a name=\"attester\"> </a></td><td>A verifier who attests to the accuracy of the resource</td><td/></tr><tr><td>informant<a name=\"informant\"> </a></td><td>A person who reported information that contributed to the resource</td><td>e.g., a next of kin who answers questions about the patient's history</td></tr><tr><td>source<a name=\"source\"> </a></td><td>An information source from which the portions of the resource are derived</td><td>May be an electronic document, application, paper record, etc.  *Not* a person</td></tr><tr><td>cc<a name=\"cc\"> </a></td><td>A party, who may or should receive or who has received a copy of the resource or subsequent or derivative information of that resource</td><td/></tr><tr><td>application<a name=\"application\"> </a></td><td>An application with a user interface that interacts with a person</td><td/></tr><tr><td>daemon<a name=\"daemon\"> </a></td><td>A background process that transfers information from one place or form to another</td><td/></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.269"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/provenance-agent-role",
+  "name": "ProvenanceParticipantRole",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "The role that a provenance participant played",
+  "status": "draft",
+  "date": "2023-05-12T00:10:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:null"
+      }
+    ],
+    "system": "http://hl7.org/fhir/provenance-participant-role",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "http://hl7.org/fhir/ExtensionDefinition/valueset-comments": [
+          {
+            "valueString": "The data entry person is collected optionally for internal quality control purposes. This includes the transcriptionist for dictated text"
+          }
+        ],
+        "code": "enterer",
+        "definition": "A person entering the data into the originating system"
+      },
+      {
+        "http://hl7.org/fhir/ExtensionDefinition/valueset-comments": [
+          {
+            "valueString": "Device should only be assigned as a performer in circumstances where the device is performing independent of human intervention. Need not be the principal responsible actor"
+          }
+        ],
+        "code": "performer",
+        "definition": "A person, animal, organization or device that who actually and principally carries out the activity"
+      },
+      {
+        "http://hl7.org/fhir/ExtensionDefinition/valueset-comments": [
+          {
+            "valueString": "Every resource should have an author"
+          }
+        ],
+        "code": "author",
+        "definition": "A party that originates the resource and therefore has responsibility for the information given in the resource and ownership of this resource"
+      },
+      {
+        "http://hl7.org/fhir/ExtensionDefinition/valueset-comments": [
+          {
+            "valueString": "This is often used in association with the institution that hosts an activity"
+          }
+        ],
+        "code": "verifier",
+        "definition": "A person who verifies the correctness and appropriateness of activity"
+      },
+      {
+        "code": "attester",
+        "definition": "A verifier who attests to the accuracy of the resource"
+      },
+      {
+        "http://hl7.org/fhir/ExtensionDefinition/valueset-comments": [
+          {
+            "valueString": "e.g., a next of kin who answers questions about the patient's history"
+          }
+        ],
+        "code": "informant",
+        "definition": "A person who reported information that contributed to the resource"
+      },
+      {
+        "http://hl7.org/fhir/ExtensionDefinition/valueset-comments": [
+          {
+            "valueString": "May be an electronic document, application, paper record, etc.  *Not* a person"
+          }
+        ],
+        "code": "source",
+        "definition": "An information source from which the portions of the resource are derived"
+      },
+      {
+        "code": "cc",
+        "definition": "A party, who may or should receive or who has received a copy of the resource or subsequent or derivative information of that resource"
+      },
+      {
+        "code": "application",
+        "definition": "An application with a user interface that interacts with a person"
+      },
+      {
+        "code": "daemon",
+        "definition": "A background process that transfers information from one place or form to another"
+      }
+    ]
+  }
+}

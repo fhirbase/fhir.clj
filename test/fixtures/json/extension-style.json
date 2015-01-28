@@ -1,0 +1,49 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "style",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/style",
+  "name": "Html style value",
+  "publisher": "HL7 FHIR project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "Identifies how the specified element should be rendered when displayed.",
+  "status": "draft",
+  "date": "2014-04-23",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "datatype",
+  "context": [
+    "*"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Html style value",
+      "formal": "Identifies how the specified element should be rendered when displayed.",
+      "comments": "This extension would be equivalent to setting the HTML \"style\" attribute on the root element for the element containing the extension.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isSummary": false,
+      "mapping": [
+        {
+          "identity": "rim",
+          "map": "N/A"
+        }
+      ]
+    }
+  ]
+}

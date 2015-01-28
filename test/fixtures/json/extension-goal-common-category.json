@@ -1,0 +1,35 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "goal-common-category",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/goal-common-category",
+  "name": "Goal category",
+  "publisher": "Health Level Seven, Inc. - FHIR WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/special/committees/fhir"
+    }
+  ],
+  "description": "The class of goal.",
+  "status": "draft",
+  "date": "2014-12-07",
+  "contextType": "resource",
+  "context": [
+    "Goal"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Goal category",
+      "formal": "The class of goal.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

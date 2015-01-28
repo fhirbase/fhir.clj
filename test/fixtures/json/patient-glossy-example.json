@@ -1,0 +1,46 @@
+{
+  "resourceType": "Patient",
+  "id": "glossy",
+  "meta": {
+    "lastUpdated": "2014-11-13T11:41:00+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div>\n\t\t\t\n      <p>Henry Levin the 7th</p>\n\t\t\t\n      <p>MRN: 123456</p>\n\t\t\n    </div>"
+  },
+  "http://example.org/consent#trials": [
+    {
+      "valueCode": "renal"
+    }
+  ],
+  "identifier": [
+    {
+      "use": "usual",
+      "label": "MRN",
+      "system": "http://www.goodhealth.org/identifiers/mrn",
+      "value": "123456"
+    }
+  ],
+  "name": [
+    {
+      "family": [
+        "Levin"
+      ],
+      "given": [
+        "Henry"
+      ],
+      "suffix": [
+        "The 7th"
+      ]
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1932-09-24",
+  "careProvider": [
+    {
+      "reference": "Organization/2",
+      "display": "Good Health Clinic"
+    }
+  ],
+  "active": true
+}

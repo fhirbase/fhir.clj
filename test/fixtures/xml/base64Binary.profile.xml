@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Profile xmlns="http://hl7.org/fhir">
+  <id value="base64Binary"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">to do</div>
+  </text>
+  <url value="http://hl7.org/fhir/Profile/base64Binary"/>
+  <name value="base64Binary"/>
+  <publisher value="HL7 FHIR Standard"/>
+  <telecom>
+    <system value="url"/>
+    <value value="http://hl7.org/fhir"/>
+  </telecom>
+  <description value="Base Profile for base64Binary Resource: A stream of bytes"/>
+  <status value="draft"/>
+  <date value="2014-12-12T13:17:44.755+11:00"/>
+  <type value="base64Binary"/>
+  <base value="http://hl7.org/fhir/Profile/Element"/>
+  <snapshot>
+    <element>
+      <path value="base64Binary"/>
+      <short value="Primitive Type base64Binary"/>
+      <formal value="A stream of bytes"/>
+      <comments value="A stream of bytes, base64 encoded"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="base64Binary.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="value"/>
+      <representation value="xmlAttr"/>
+      <short value="Primitive value for base64Binary"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="xsd:base64Binary"/>
+      </type>
+    </element>
+  </snapshot>
+  <differential>
+    <element>
+      <path value="base64Binary"/>
+      <short value="Primitive Type base64Binary"/>
+      <formal value="A stream of bytes"/>
+      <comments value="A stream of bytes, base64 encoded"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="value"/>
+      <representation value="xmlAttr"/>
+      <short value="Primitive value for base64Binary"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="xsd:base64Binary"/>
+      </type>
+    </element>
+  </differential>
+</Profile>

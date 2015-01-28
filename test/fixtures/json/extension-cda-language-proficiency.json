@@ -1,0 +1,54 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "cda-language-proficiency",
+  "meta": {
+    "lastUpdated": "2014-11-05T20:31:00Z"
+  },
+  "url": "http://hl7.org/fhir/ExtensionDefinition/cda-language-proficiency",
+  "name": "CDA Language Proficiency",
+  "publisher": "HL7 FHIR Project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "Standard Profile for CDA R2 on FHIR",
+  "status": "draft",
+  "date": "2014-11-05",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "resource",
+  "context": [
+    "Patient.communication"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "The proficiency for this language",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "binding": {
+        "name": "LanguageAbiliityProficiency",
+        "isExtensible": true,
+        "referenceUri": "http://hl7.org/fhir/v3/vs/LanguageAbilityProficiency"
+      },
+      "mapping": [
+        {
+          "identity": "rim",
+          "map": "LanguageCommunication.proficiencyLevelCode"
+        }
+      ]
+    }
+  ]
+}

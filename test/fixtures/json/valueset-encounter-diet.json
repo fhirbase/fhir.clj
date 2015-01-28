@@ -1,0 +1,66 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-encounter-diet",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 7 concepts</p><h2>Diet</h2><p>This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.</p><p>This value set defines its own terms in the system http://hl7.org/fhir/diet</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>vegetarian<a name=\"vegetarian\"> </a></td><td>Food without meat, poultry or seafood</td></tr><tr><td>dairy-free<a name=\"dairy-free\"> </a></td><td>Exludes dairy products</td></tr><tr><td>nut-free<a name=\"nut-free\"> </a></td><td>Excludes ingredients containing nuts</td></tr><tr><td>gluten-free<a name=\"gluten-free\"> </a></td><td>Excludes ingredients containing gluten</td></tr><tr><td>vegan<a name=\"vegan\"> </a></td><td>Food without meat, poultry, seafood, eggs, dairy products and other animal-derived substances</td></tr><tr><td>halal<a name=\"halal\"> </a></td><td>Foods that conform to Islamic law</td></tr><tr><td>kosher<a name=\"kosher\"> </a></td><td>foods that conform to Jewish dietary law</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.186"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/encounter-diet",
+  "name": "Diet",
+  "publisher": "FHIR Project team",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "This value set defines a set of codes that can be used to indicate dietary preferences or restrictions a patient may have.",
+  "status": "draft",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:null"
+      }
+    ],
+    "system": "http://hl7.org/fhir/diet",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "vegetarian",
+        "definition": "Food without meat, poultry or seafood"
+      },
+      {
+        "code": "dairy-free",
+        "definition": "Exludes dairy products"
+      },
+      {
+        "code": "nut-free",
+        "definition": "Excludes ingredients containing nuts"
+      },
+      {
+        "code": "gluten-free",
+        "definition": "Excludes ingredients containing gluten"
+      },
+      {
+        "code": "vegan",
+        "definition": "Food without meat, poultry, seafood, eggs, dairy products and other animal-derived substances"
+      },
+      {
+        "code": "halal",
+        "definition": "Foods that conform to Islamic law"
+      },
+      {
+        "code": "kosher",
+        "definition": "foods that conform to Jewish dietary law"
+      }
+    ]
+  }
+}

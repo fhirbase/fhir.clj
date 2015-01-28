@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Coverage xmlns="http://hl7.org/fhir">
+  <id value="7546D"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">A human-readable rendering of the coverage</div>
+  </text>
+  <issuer>
+    <reference value="Organization/2"/>
+  </issuer>
+  <period>
+    <start value="2011-03-17"/>
+    <end value="2012-03-17"/>
+  </period>
+  <type>
+    <system value="http://hl7.org/fhir/v3/ActCode"/>
+    <code value="EHCPOL"/>
+    <display value="extended healthcare"/>
+  </type>
+  <identifier>
+    <system value="http://xyz.com/codes/identifier"/>
+    <value value="AB9876"/>
+  </identifier>
+  <plan value="11024"/>
+  <subplan value="D15C9"/>
+  <dependent value="1"/>
+  <subscriber>
+    <reference value="Patient/5"/>
+  </subscriber>
+</Coverage>

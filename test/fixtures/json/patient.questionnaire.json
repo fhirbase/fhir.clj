@@ -1,0 +1,1242 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "vs2",
+      "identifier": "urn:uuid:3c789267-162e-4a77-b6bd-341e64a4dcce",
+      "name": "Type options for Patient.deceased[x]",
+      "description": "Type options for Patient.deceased[x]",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:21:41.394+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "boolean",
+            "display": "boolean"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "dateTime",
+            "display": "dateTime"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs3",
+      "identifier": "urn:uuid:e3f5b96d-2935-4902-aa02-b00926d17823",
+      "name": "Type options for Patient.multipleBirth[x]",
+      "description": "Type options for Patient.multipleBirth[x]",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:21:41.394+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "boolean",
+            "display": "boolean"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "integer",
+            "display": "integer"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs4",
+      "identifier": "urn:uuid:11240976-5fde-44a3-b038-64d07ec34d7c",
+      "name": "Type options for Patient.careProvider",
+      "description": "Type options for Patient.careProvider",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:21:41.394+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Organization",
+            "display": "Organization"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Practitioner",
+            "display": "Practitioner"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (Patient Administration)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "Demographics and other administrative information about a person or animal receiving care or other health-related services."
+      }
+    ],
+    "linkId": "Patient",
+    "title": "Information about a person or animal receiving health care services",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "Patient.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Patient.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "Patient.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Patient.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Patient.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Patient.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Patient.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "Patient.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Patient.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "Patient.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Patient.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Patient.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Patient.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Patient.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Patient.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "Patient.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Patient.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "Patient.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Patient.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "Patient.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "Patient.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "An identifier that applies to this person as a patient."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Identifier"
+          }
+        ],
+        "linkId": "Patient.identifier",
+        "text": "An identifier for the person as this patient",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Patient.identifier.label",
+            "text": "label:",
+            "type": "string"
+          },
+          {
+            "linkId": "Patient.identifier.system",
+            "text": "system:",
+            "type": "string"
+          },
+          {
+            "linkId": "Patient.identifier.value",
+            "text": "value:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A name associated with the individual. Person may have multiple names with different uses or applicable periods.For animals, the name is a \"HumanName\" in the sense that is assigned and used by humans and has the same patterns."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Name"
+          }
+        ],
+        "linkId": "Patient.name",
+        "text": "A name associated with the patient",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Patient.name.text",
+            "text": "text:",
+            "type": "string"
+          },
+          {
+            "linkId": "Patient.name.family",
+            "text": "family:",
+            "type": "string",
+            "repeats": true
+          },
+          {
+            "linkId": "Patient.name.given",
+            "text": "given:",
+            "type": "string",
+            "repeats": true
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A contact detail (e.g. a telephone number or an email address) by which the individual may be contacted. Person may have multiple ways to be contacted with different uses or applicable periods. \rMay need to have options for contacting the person urgently and also to help with identification. The address may not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "ContactPoint"
+          }
+        ],
+        "linkId": "Patient.telecom",
+        "text": "A contact detail for the individual",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Patient.telecom.system",
+            "text": "type:",
+            "type": "choice"
+          },
+          {
+            "linkId": "Patient.telecom.value",
+            "text": "value:",
+            "type": "string"
+          },
+          {
+            "linkId": "Patient.telecom.use",
+            "text": "use:",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Administrative Gender - the gender that the patient is considered to have for administration and record keeping purposes. The gender may not match the biological sex as determined by genetics, or the individual's preferred identification. Note that for both humans and particularly animals, there are other legitimate possibilities than M and F, though the vast majority of systems and contexts only support M and F."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "Patient.gender",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Patient.gender.value",
+            "text": "gender",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The date and time of birth for the individual. At least an estimated year should be provided as a guess if the real dob is unknown."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "datetime"
+          }
+        ],
+        "linkId": "Patient.birthDate",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Patient.birthDate.value",
+            "text": "The date and time of birth for the individual",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Indicates if the individual is deceased or not. If there's no value in the instance it means there is no statement on whether or not the individual is deceased. Most systems will interpret the absence of a value as a sign of the person being alive."
+          }
+        ],
+        "linkId": "Patient.deceased[x]",
+        "text": "Indicates if the individual is deceased or not",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Patient.deceased[x]._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs2"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "boolean"
+                  }
+                ],
+                "linkId": "Patient.deceased[x]._boolean",
+                "question": [
+                  {
+                    "linkId": "Patient.deceased[x]._boolean.value",
+                    "text": "boolean",
+                    "type": "boolean"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "datetime"
+                  }
+                ],
+                "linkId": "Patient.deceased[x]._dateTime",
+                "question": [
+                  {
+                    "linkId": "Patient.deceased[x]._dateTime.value",
+                    "text": "dateTime",
+                    "type": "dateTime"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Addresses for the individual. Person may have multiple addresses with different uses or applicable periods."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Address"
+          }
+        ],
+        "linkId": "Patient.address",
+        "text": "Addresses for the individual",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Patient.address.text",
+            "text": "text:",
+            "type": "string"
+          },
+          {
+            "linkId": "Patient.address.line",
+            "text": "line:",
+            "type": "string",
+            "repeats": true
+          },
+          {
+            "linkId": "Patient.address.city",
+            "text": "city:",
+            "type": "string"
+          },
+          {
+            "linkId": "Patient.address.state",
+            "text": "state:",
+            "type": "string"
+          },
+          {
+            "linkId": "Patient.address.postalCode",
+            "text": "post code:",
+            "type": "string"
+          },
+          {
+            "linkId": "Patient.address.country",
+            "text": "country:",
+            "type": "string"
+          },
+          {
+            "linkId": "Patient.address.use",
+            "text": "use:",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "This field contains a patient's most recent marital (civil) status."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "Patient.maritalStatus",
+        "text": "Marital (civil) status of a person",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Patient.maritalStatus.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "Patient.maritalStatus.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Indicates whether the patient is part of a multiple or indicates the actual birth order."
+          }
+        ],
+        "linkId": "Patient.multipleBirth[x]",
+        "text": "Whether patient is part of a multiple birth",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Patient.multipleBirth[x]._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs3"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "boolean"
+                  }
+                ],
+                "linkId": "Patient.multipleBirth[x]._boolean",
+                "question": [
+                  {
+                    "linkId": "Patient.multipleBirth[x]._boolean.value",
+                    "text": "boolean",
+                    "type": "boolean"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "integer"
+                  }
+                ],
+                "linkId": "Patient.multipleBirth[x]._integer",
+                "question": [
+                  {
+                    "linkId": "Patient.multipleBirth[x]._integer.value",
+                    "text": "integer",
+                    "type": "integer"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Image of the person."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Attachment"
+          }
+        ],
+        "linkId": "Patient.photo",
+        "text": "Image of the person",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A contact party (e.g. guardian, partner, friend) for the patient."
+          }
+        ],
+        "linkId": "Patient.contact",
+        "title": "A contact party (e.g. guardian, partner, friend) for the patient",
+        "text": "Contact covers all kinds of contact parties: family members, business contacts, guardians, caregivers. Not applicable to register pedigree and family ties beyond use of having contact.",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Patient.contact.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Patient.contact.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The nature of the relationship between the patient and the contact person."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "Patient.contact.relationship",
+            "text": "The kind of relationship",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Patient.contact.relationship.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "Patient.contact.relationship.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A name associated with the person."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Name"
+              }
+            ],
+            "linkId": "Patient.contact.name",
+            "text": "A name associated with the person",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Patient.contact.name.text",
+                "text": "text:",
+                "type": "string"
+              },
+              {
+                "linkId": "Patient.contact.name.family",
+                "text": "family:",
+                "type": "string",
+                "repeats": true
+              },
+              {
+                "linkId": "Patient.contact.name.given",
+                "text": "given:",
+                "type": "string",
+                "repeats": true
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A contact detail for the person, e.g. a telephone number or an email address. Person may have multiple ways to be contacted with different uses or applicable periods. \rMay need to have options for contacting the person urgently, and also to help with identification."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "ContactPoint"
+              }
+            ],
+            "linkId": "Patient.contact.telecom",
+            "text": "A contact detail for the person",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Patient.contact.telecom.system",
+                "text": "type:",
+                "type": "choice"
+              },
+              {
+                "linkId": "Patient.contact.telecom.value",
+                "text": "value:",
+                "type": "string"
+              },
+              {
+                "linkId": "Patient.contact.telecom.use",
+                "text": "use:",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Address for the contact person."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Address"
+              }
+            ],
+            "linkId": "Patient.contact.address",
+            "text": "Address for the contact person",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Patient.contact.address.text",
+                "text": "text:",
+                "type": "string"
+              },
+              {
+                "linkId": "Patient.contact.address.line",
+                "text": "line:",
+                "type": "string",
+                "repeats": true
+              },
+              {
+                "linkId": "Patient.contact.address.city",
+                "text": "city:",
+                "type": "string"
+              },
+              {
+                "linkId": "Patient.contact.address.state",
+                "text": "state:",
+                "type": "string"
+              },
+              {
+                "linkId": "Patient.contact.address.postalCode",
+                "text": "post code:",
+                "type": "string"
+              },
+              {
+                "linkId": "Patient.contact.address.country",
+                "text": "country:",
+                "type": "string"
+              },
+              {
+                "linkId": "Patient.contact.address.use",
+                "text": "use:",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "code"
+              }
+            ],
+            "linkId": "Patient.contact.gender",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Patient.contact.gender.value",
+                "text": "gender",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Organization on behalf of which the contact is acting or for which the contact is working."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "Patient.contact.organization",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "Patient.contact.organization.value",
+                "text": "Organization that is associated with the contact",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The period during which this person or organization is valid to be contacted relating to this patient."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Period"
+              }
+            ],
+            "linkId": "Patient.contact.period",
+            "text": "The period during which this person or organization is valid to be contacted relating to this patient",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Patient.contact.period.low",
+                "text": "start:",
+                "type": "dateTime"
+              },
+              {
+                "linkId": "Patient.contact.period.end",
+                "text": "end:",
+                "type": "dateTime"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "This element has a value if the patient is an animal."
+          }
+        ],
+        "linkId": "Patient.animal",
+        "title": "If this patient is an animal (non-human)",
+        "text": "The animal element is labeled \"Is Modifier\" since patients may be non-human. Systems SHALL either handle patient details appropriately (e.g. inform users patient is not human) or reject non-human patient records.",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Patient.animal.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Patient.animal.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Identifies the high level categorization of the kind of animal. If the patient is non-human, at least a species SHALL be specified."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "Patient.animal.species",
+            "text": "E.g. Dog, Cow",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Patient.animal.species.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "Patient.animal.species.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Identifies the detailed categorization of the kind of animal."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "Patient.animal.breed",
+            "text": "E.g. Poodle, Angus",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Patient.animal.breed.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "Patient.animal.breed.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Indicates the current state of the animal's reproductive organs."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "Patient.animal.genderStatus",
+            "text": "E.g. Neutered, Intact",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Patient.animal.genderStatus.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "Patient.animal.genderStatus.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Languages which may be used to communicate with the patient about his or her health. If no language is specified, this *implies* that the default local language is spoken.\rFor animals, language is not a relevant field, and should be absent from the instance."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "Patient.communication",
+        "text": "Languages which may be used to communicate with the patient about his or her health",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Patient.communication.coding",
+            "text": "code:",
+            "type": "choice"
+          },
+          {
+            "linkId": "Patient.communication.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Patient's nominated care provider."
+          }
+        ],
+        "linkId": "Patient.careProvider",
+        "text": "Patient's nominated care provider",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Patient.careProvider._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs4"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Patient.careProvider._Organization",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Patient.careProvider._Organization.value",
+                    "text": "Organization",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Patient.careProvider._Practitioner",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Patient.careProvider._Practitioner.value",
+                    "text": "Practitioner",
+                    "type": "reference"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Organization that is the custodian of the patient record."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "Patient.managingOrganization",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "Patient.managingOrganization.value",
+            "text": "Organization that is the custodian of the patient record",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Link to another patient resource that concerns the same actual person."
+          }
+        ],
+        "linkId": "Patient.link",
+        "title": "Link to another patient resource that concerns the same actual person",
+        "text": "There is no assumption that linked patient records have mutual links.",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Patient.link.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Patient.link.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The other patient resource that the link refers to."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "Patient.link.other",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "Patient.link.other.value",
+                "text": "The other patient resource that the link refers to",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The type of link between this patient resource and another patient resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "code"
+              }
+            ],
+            "linkId": "Patient.link.type",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Patient.link.type.value",
+                "text": "type",
+                "type": "choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Whether this patient record is in active use. Default is true. If a record is inactive, and linked to an active record, then future patient/person/record updates should occur on the other patient."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "boolean"
+          }
+        ],
+        "linkId": "Patient.active",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Patient.active.value",
+            "text": "Whether this patient's record is in active use",
+            "type": "boolean"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,813 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "vs2",
+      "identifier": "urn:uuid:da8c3d52-2164-40b0-9704-2acd6078d663",
+      "name": "Type options for AllergyIntolerance.recorder",
+      "description": "Type options for AllergyIntolerance.recorder",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:19:06.324+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Practitioner",
+            "display": "Practitioner"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Patient",
+            "display": "Patient"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (Patient Care)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance."
+      }
+    ],
+    "linkId": "AllergyIntolerance",
+    "title": "Allergy or Intolerance (generally: Risk Of Adverse reaction to a substance)",
+    "text": "Substances include, but are not limited to: a therapeutic substance administered correctly at an appropriate dosage for the individual; food; material derived from plants or animals; or venom from insect stings.",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "AllergyIntolerance.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "AllergyIntolerance.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "AllergyIntolerance.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "AllergyIntolerance.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "AllergyIntolerance.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "AllergyIntolerance.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "AllergyIntolerance.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "AllergyIntolerance.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "AllergyIntolerance.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "AllergyIntolerance.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "AllergyIntolerance.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "AllergyIntolerance.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "AllergyIntolerance.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "AllergyIntolerance.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "AllergyIntolerance.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "AllergyIntolerance.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "AllergyIntolerance.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "AllergyIntolerance.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "AllergyIntolerance.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "AllergyIntolerance.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "AllergyIntolerance.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "This records identifiers associated with this allergy/intolerance concern that are defined by business processed and/ or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Identifier"
+          }
+        ],
+        "linkId": "AllergyIntolerance.identifier",
+        "text": "External Ids for this item",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "AllergyIntolerance.identifier.label",
+            "text": "label:",
+            "type": "string"
+          },
+          {
+            "linkId": "AllergyIntolerance.identifier.system",
+            "text": "system:",
+            "type": "string"
+          },
+          {
+            "linkId": "AllergyIntolerance.identifier.value",
+            "text": "value:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Date when the sensitivity was recorded."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "datetime"
+          }
+        ],
+        "linkId": "AllergyIntolerance.recordedDate",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "AllergyIntolerance.recordedDate.value",
+            "text": "When recorded",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Indicates who has responsibility for the record."
+          }
+        ],
+        "linkId": "AllergyIntolerance.recorder",
+        "text": "Who recorded the sensitivity",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "AllergyIntolerance.recorder._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs2"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "AllergyIntolerance.recorder._Practitioner",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "AllergyIntolerance.recorder._Practitioner.value",
+                    "text": "Practitioner",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "AllergyIntolerance.recorder._Patient",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "AllergyIntolerance.recorder._Patient.value",
+                    "text": "Patient",
+                    "type": "reference"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The patient who has the allergy or intolerance."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "AllergyIntolerance.subject",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "AllergyIntolerance.subject.value",
+            "text": "Who the sensitivity is for",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Identification of a substance, or a class of substances, that is considered to be responsible for the Adverse reaction risk. It is strongly recommended that Substance be coded with a terminology, where possible. For example, some terminologies used include RxNorm, Snomed CT, DM+D, NDFRT, ICD-9, IDC-10, UNI, ATC and CPT. Plain text should only be used if there is no appropriate terminology available."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "AllergyIntolerance.substance",
+        "text": "Substance, (or class) considered to be responsible for risk",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "AllergyIntolerance.substance.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "AllergyIntolerance.substance.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Assertion about certainty associated with the propensity, or potential risk, of a reaction to the identified Substance. Decision support would typically raise alerts for 'Unconfirmed', 'Confirmed', and 'Resolved' and ignore a 'Refuted' reaction.\nIn particular, 'Refuted' may be useful for reconciliation of the Adverse Reaction List.\nSome implementations may choose to make this field mandatory."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "AllergyIntolerance.status",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "AllergyIntolerance.status.value",
+            "text": "status",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Estimate of the potential clinical harm, or seriousness, of the reaction to the identified Substance. The default criticality value for any propensity to an Adverse Reaction should be 'Low Risk', indicating at the very least a relative contraindication to deliberate or voluntary exposure to the Substance. 'High Risk' is flagged if the clinician has identified a propensity for a more serious or potentially life-threatening reaction, such as anaphylaxis, and implies an absolute contraindication to deliberate or voluntary exposure to the substance. If this element is missing, the criticality is unknown (though it may be known elsewhere)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "AllergyIntolerance.criticality",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "AllergyIntolerance.criticality.value",
+            "text": "criticality",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Identification of the underlying physiological mechanism for the Reaction Risk. Immune-mediated responses have been traditionally regarded as an indicator for escalation of significant future risk. Contemporary knowledge suggests that some reactions previously thought to be immune and non-immune and still carry life threatening risk. \n\nIt is acknowledged that many clinicians may not be in a position to distinguish the mechanism of a particular reaction.  This data element is included nevertheless because many legacy systems have captured this attribute.\n\nImmunological testing may provide supporting evidence for the basis and causative substance , but no tests are 100% sensitive or specific for a sensitivity."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "AllergyIntolerance.type",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "AllergyIntolerance.type.value",
+            "text": "type",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Category of the identified Substance. This data element has been included because it is currently being captured in some clinical systems. This data can be derived from the Substance where coding systems are used, and is effectively redundant in that situation."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "AllergyIntolerance.category",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "AllergyIntolerance.category.value",
+            "text": "category",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Represents the date and/or time of the last known occurence of a reaction event. This date may be replicated by one of the Onset of Reaction dates.\nWhere a textual representation of the date of last occurence is required e.g 'In Childhood, '10 years ago' the Comment element should be used."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "datetime"
+          }
+        ],
+        "linkId": "AllergyIntolerance.lastOccurence",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "AllergyIntolerance.lastOccurence.value",
+            "text": "Date(/time) of last known occurence of a reaction",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Additional narrative about the propensity for the Adverse Reaction, not captured in other fields. For example: including reason for flagging a Seriousness of 'High Risk'; and instructions related to future exposure or administration of the Substance, such as administration within an Intensive Care Unit or under corticosteroid cover."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "AllergyIntolerance.comment",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "AllergyIntolerance.comment.value",
+            "text": "Additional text not captured in other fields",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Details about each Adverse Reaction Event linked to exposure to the identified Substance."
+          }
+        ],
+        "linkId": "AllergyIntolerance.event",
+        "title": "Adverse Reaction Events linked to exposure to substance",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "AllergyIntolerance.event.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "AllergyIntolerance.event.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Identification of the specific substance considered to be responsible for the Adverse Reaction event. Note: the substance for a specific reaction may be different to the substance identified as the cause of the risk, but must be consistent with it. For instance, it may be a more specific substance (e.g. a brand medication) or a composite substance that includes the identified substance. It must be clinically safe to only process the AllergyIntolerance.substance and ignore the AllergyIntolerance.event.substance. Coding of the Specific Substance with a terminology capable of triggering decision support should be used wherever possible. \nThe Substance field allows for the use of a specific substance or a group or class of substances, for example \"Penicillins\". The specific Substance field could be used for Amoxycillin.\nDuplication is acceptable when a specific substance has been recorded in the 'Substance' field."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "AllergyIntolerance.event.substance",
+            "text": "Specific substance considered to be responsible for event",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "AllergyIntolerance.event.substance.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "AllergyIntolerance.event.substance.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Statement about the degree of clinical certainty that the Specific Substance was the cause of the Manifestation in this reaction event."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "code"
+              }
+            ],
+            "linkId": "AllergyIntolerance.event.certainty",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "AllergyIntolerance.event.certainty.value",
+                "text": "certainty",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Clinical symptoms and/or signs that are observed or associated with the Adverse Reaction Event. Manifestation can be expressed as a single word, phrase or brief description. For example: nausea, rash or no reaction. It is preferable that Manifestation should be coded with a terminology, where possible. The values entered here may be used to display on an application screen as part of a list of adverse reactions, as recommended in the UK NHS CUI guidelines.\n\nTerminologies commonly used include, but are not limited to, SNOMED-CT or ICD10."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "AllergyIntolerance.event.manifestation",
+            "text": "Clinical symptoms/signs associated with the Event",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "AllergyIntolerance.event.manifestation.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "AllergyIntolerance.event.manifestation.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Text description about the Reaction as a whole, including details of the manifestation if required."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "AllergyIntolerance.event.description",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "AllergyIntolerance.event.description.value",
+                "text": "Description of the event as a whole",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Record of the date and/or time of the onset of the Reaction."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "datetime"
+              }
+            ],
+            "linkId": "AllergyIntolerance.event.onset",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "AllergyIntolerance.event.onset.value",
+                "text": "Date(/time) when manifestations showed",
+                "type": "dateTime"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The amount of time that the Adverse Reaction persisted."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Duration"
+              }
+            ],
+            "linkId": "AllergyIntolerance.event.duration",
+            "text": "How long Manifestations persisted",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "AllergyIntolerance.event.duration.value",
+                "text": "value:",
+                "type": "decimal"
+              },
+              {
+                "linkId": "AllergyIntolerance.event.duration.units",
+                "text": "units:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Clinical assessment of the severity of the reaction event as a whole, potentially considering multiple different manifestations. It is acknowledged that this assessment is very subjective. There may be some some specific practice domains where objective scales have been applied.\nObjective scales can be included in this model as extensions."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "code"
+              }
+            ],
+            "linkId": "AllergyIntolerance.event.severity",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "AllergyIntolerance.event.severity.value",
+                "text": "severity",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Identification of the route by which the subject was exposed to the substance. Coding of the Route of Exposure with a terminology should be used wherever possible."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "AllergyIntolerance.event.exposureRoute",
+            "text": "How the subject was exposed to the substance",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "AllergyIntolerance.event.exposureRoute.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "AllergyIntolerance.event.exposureRoute.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Additional text about the Adverse Reaction event not captured in other fields."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "AllergyIntolerance.event.comment",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "AllergyIntolerance.event.comment.value",
+                "text": "Text about event not captured in other fields",
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

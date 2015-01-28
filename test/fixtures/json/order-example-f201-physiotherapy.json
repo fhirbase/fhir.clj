@@ -1,0 +1,35 @@
+{
+  "resourceType": "Order",
+  "id": "f201",
+  "date": "2013-03-05T12:00:00+01:00",
+  "subject": {
+    "reference": "Patient/f201",
+    "display": "Roel"
+  },
+  "source": {
+    "reference": "Practitioner/f201"
+  },
+  "target": {
+    "reference": "Practitioner/f203",
+    "display": "Juri van Gelder"
+  },
+  "reasonCodeableConcept": {
+    "text": "It concerns a one-off order for consultation in order to evaluate the stairs walking ability of Roel."
+  },
+  "when": {
+    "code": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "394848005",
+          "display": "Normal priority"
+        }
+      ]
+    }
+  },
+  "detail": [
+    {
+      "display": "Consultation, not yet developed"
+    }
+  ]
+}

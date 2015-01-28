@@ -1,0 +1,3099 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Profile xmlns="http://hl7.org/fhir">
+  <id value="DocumentReference"/>
+  <meta>
+    <lastUpdated value="2014-12-12T13:17:44.755+11:00"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;" cellpadding="0" border="0" cellspacing="0">
+        <tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;">
+          <th style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Name</th>
+          <th style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Flags</th>
+          <th style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Card.</th>
+          <th style="width: 100px" class="heirarchy">Type</th>
+          <th style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Description &amp; Constraints
+            <span style="float: right">
+              <a title="Legend for this format" href="formats.html#table">
+                <img alt="doco" src="help16.png"/>
+              </a>
+            </span>
+          </th>
+        </tr>
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img title="Resource" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJBSURBVDjLhdKxa5NBGMfx713yvkmbJnaoFiSF4mJTh06Kg4OgiyCCRXCof4YIdXdxFhQVHPo3OFSoUx0FySQttaVKYq2NbdO8ed/L3fM4JG3tYPvAcfBw9+HHPWdUlf/V0tLSqKo+EpEHInJFRIohhDUR+RBCeDM7O7ua55QSkRfVanVufHyckZERrLV0Op2Zra2tmXq9fg+YsmcAdyYnJykUCke9OI6ZmJgghHAZ4KwE3ntPs9mkVCohIjQaDWq1GiEEAM5KoHEcY62lVCrRarUoFotUKpUjIL/y/uqXYmV62ph/LSVrr30P4bEFcM4B0Ov1jk547/uAUTs1ceNdZIwB7V/GGHz6+9LXxY96eDiEgHMOY8xJAK8p4grZz5cElwNbwZgyxYu3EFM01lriOCZJEqIoIooiALIsGwA9Y1UcwcWoKNLdpLu9zvbnBWqNBhuvn5EDUmB0EH/1E2TZw5U+YLQovkun+Ytsaw1xCbnCOap334LC7s4Oe/ttvA+ICLmhMXRxDufczUECS37oAuevPwUEVFFp4/eXkXSdYc2IopSepnjtUh5/wg9gfn6+OQBUNaRIUkfDHhraSLoBKqikIF3yHJDLHaAkFOLciVHnyVAVj/S2Ub/XRyQD9aAZKgkaOohvo6ENgykcA07VEFDfQv1uf4W9Y8y30bCPhg4qKZJtMnjTPqBO/vhkZ7h3EJeRslWNQMqgY2jIAIfa/m5sIKSpqpPsGEiz599e3b+GchtD+bSvjQJm2SG6cNj6C+QmaxAek5tyAAAAAElFTkSuQmCC"/> 
+            <span title="A reference to a document.">DocumentReference</span>
+            <a name="DocumentReference"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <span title="This element has or is affected by some invariants">I</span>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="domainresource.html">DomainResource</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">A reference to a document
+            <br/>
+            <span title="1" style="font-style: italic">A location or a service (or both) SHALL be provided</span>
+          </td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7"/> 
+            <span title="Document identifier as assigned by the source of the document. This identifier is specific to this version of the document. This unique identifier may be used elsewhere to identify this version of the document.">masterIdentifier</span>
+            <a name="DocumentReference.masterIdentifier"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#Identifier">Identifier</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Master Version Specific Identifier</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7"/> 
+            <span title="Other identifiers associated with the document, including version independent, source record and workflow related identifiers.">identifier</span>
+            <a name="DocumentReference.identifier"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..*</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#Identifier">Identifier</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Other identifiers for the document</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Reference to another Resource" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC"/> 
+            <span title="Who or what the document is about. The document can be about a person, (patient or healthcare practitioner), a device (I.e. machine) or even a group of subjects (such as a document about a herd of farm animals, or a set of patients that share a common exposure).">subject</span>
+            <a name="DocumentReference.subject"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="patient.html">Patient</a> | 
+            <a href="practitioner.html">Practitioner</a> | 
+            <a href="group.html">Group</a> | 
+            <a href="device.html">Device</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Who|what is the subject of the document</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7"/> 
+            <span title="Specifies the particular kind of document (e.g. Patient Summary, Discharge Summary, Prescription, etc.).">type</span>
+            <a name="DocumentReference.type"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#CodeableConcept">CodeableConcept</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">What kind of document this is (LOINC if possible)
+            <br/>
+            <a title="Type of a composition" href="valueset-doc-codes.html">DocumentType</a> (
+            <a title="If one of the defined codes is appropriate, it must be used, or some other code may be used" href="terminologies.html#incomplete">Incomplete</a>)
+          </td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7"/> 
+            <span title="A categorization for the type of the document. This may be implied by or derived from the code specified in the Document Type.">class</span>
+            <a name="DocumentReference.class"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#CodeableConcept">CodeableConcept</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Categorization of Document
+            <br/>
+            <a title="SubType of a clinical document" href="valueset-xds-typecodes.html">DocumentClass</a> (
+            <a title="These codes are an example of the type of codes that may be used" href="terminologies.html#example">Example</a>)
+          </td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Reference to another Resource" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC"/> 
+            <span title="Identifies who is responsible for adding the information to the document.">author</span>
+            <a name="DocumentReference.author"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..*</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="practitioner.html">Practitioner</a> | 
+            <a href="device.html">Device</a> | 
+            <a href="patient.html">Patient</a> | 
+            <a href="relatedperson.html">RelatedPerson</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Who and/or what authored the document</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Reference to another Resource" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC"/> 
+            <span title="Identifies the organization or group who is responsible for ongoing maintenance of and access to the document.">custodian</span>
+            <a name="DocumentReference.custodian"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="organization.html">Organization</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Org which maintains the document</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="A reference to a domain or server that manages policies under which the document is accessed and/or made available.">policyManager</span>
+            <a name="DocumentReference.policyManager"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#uri">uri</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Manages access policies for the document</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Reference to another Resource" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC"/> 
+            <span title="Which person or organization authenticates that this document is valid.">authenticator</span>
+            <a name="DocumentReference.authenticator"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="practitioner.html">Practitioner</a> | 
+            <a href="organization.html">Organization</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Who/What authenticated the document</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="When the document was created.">created</span>
+            <a name="DocumentReference.created"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#dateTime">dateTime</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Document creation time</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="When the document reference was created.">indexed</span>
+            <a name="DocumentReference.indexed"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#instant">instant</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">When this document reference created</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="The status of this document reference.">status</span>
+            <a name="DocumentReference.status"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <span title="This element is a modifier element">M</span>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#code">code</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">current | superceded | entered in error
+            <br/>
+            <a title="The status of the document reference" href="document-reference-status.html">DocumentReferenceStatus</a> (
+            <a title="One of the the defined codes must be used" href="terminologies.html#code">Required</a>)
+          </td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7"/> 
+            <span title="The status of the underlying document.">docStatus</span>
+            <a name="DocumentReference.docStatus"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#CodeableConcept">CodeableConcept</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">preliminary | final | appended | amended | entered in error
+            <br/>
+            <a title="Status of the underlying document" href="composition-status.html">ReferredDocumentStatus</a> (
+            <a title="If one of the defined codes is appropriate, it must be used, or some other code may be used" href="terminologies.html#incomplete">Incomplete</a>)
+          </td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Element" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAMQfAOvGUf7ztuvPMf/78/fkl/Pbg+u8Rvjqteu2Pf3zxPz36Pz0z+vTmPzurPvuw/npofbjquvNefHVduuyN+uuMu3Oafbgjfnqvf/3zv/3xevPi+vRjP/20/bmsP///////yH5BAEAAB8ALAAAAAAQABAAAAV24CeOZGmepqeqqOgxjBZFa+19r4ftWQUAgqDgltthMshMIJAZ4jYDHsBARSAmFOJvq+g6HIdEFgcYmBWNxoNAsDjGHgBnmV5bCoUDHLBIq9sFEhIdcAYJdYASFRUQhQkLCwkOFwcdEBAXhVabE52ecDahKy0oIQA7"/> 
+            <span title="Relationships that this document has with other document references that already exist.">relatesTo</span>
+            <a name="DocumentReference.relatesTo"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <span title="This element is a modifier element">M</span>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..*</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="element.html">Element</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Relationships to other documents</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4/x0ISQIM/0kGANNnY41GtlCWAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="The type of relationship that this document has with anther document.">code</span>
+            <a name="DocumentReference.relatesTo.code"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#code">code</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">replaces | transforms | signs | appends
+            <br/>
+            <a title="The type of relationship between documents" href="document-relationship-type.html">DocumentRelationshipType</a> (
+            <a title="One of the the defined codes must be used" href="terminologies.html#code">Required</a>)
+          </td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII="/>
+            <img title="Reference to another Resource" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC"/> 
+            <span title="The target document of this relationship.">target</span>
+            <a name="DocumentReference.relatesTo.target"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="documentreference.html">DocumentReference</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Target of the relationship</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="Human-readable description of the source document. This is sometimes known as the &quot;title&quot;.">description</span>
+            <a name="DocumentReference.description"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#string">string</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Human-readable description (title)</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7"/> 
+            <span title="A code specifying the level of confidentiality of the XDS Document.">confidentiality</span>
+            <a name="DocumentReference.confidentiality"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <span title="This element is a modifier element">M</span>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..*</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#CodeableConcept">CodeableConcept</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Sensitivity of source document
+            <br/>
+            <a title="Codes specifying the level of confidentiality of the composition" href="v3/Confidentiality/index.html">DocumentConfidentiality</a> (
+            <a title="If one of the defined codes is appropriate, it must be used, or some other code may be used" href="terminologies.html#incomplete">Incomplete</a>)
+          </td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="The primary language in which the source document is written.">primaryLanguage</span>
+            <a name="DocumentReference.primaryLanguage"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#code">code</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">The marked primary language for the document
+            <br/>
+            <a title="A human language" href="http://tools.ietf.org/html/bcp47">Language</a> (
+            <a title="One of the the defined codes must be used" href="terminologies.html#code">Required</a>)
+          </td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="The mime type of the source document.">mimeType</span>
+            <a name="DocumentReference.mimeType"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#code">code</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Mime type, + maybe character encoding
+            <br/>
+            <a title="The mime type of an attachment" href="http://www.rfc-editor.org/bcp/bcp13.txt">MimeType</a> (
+            <a title="One of the the defined codes must be used" href="terminologies.html#code">Required</a>)
+          </td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="An identifier that identifies that the format and content of the document conforms to additional rules beyond the base format indicated in the mimeType.">format</span>
+            <a name="DocumentReference.format"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..*</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#uri">uri</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Format/content rules for the document</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="The size of the source document this reference refers to in bytes.">size</span>
+            <a name="DocumentReference.size"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#integer">integer</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Size of the document in bytes</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="A hash of the source document to ensure that changes have not occurred.">hash</span>
+            <a name="DocumentReference.hash"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#base64Binary">base64Binary</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Base64 representation of SHA1</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="A url at which the document can be accessed.">location</span>
+            <a name="DocumentReference.location"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <span title="This element has or is affected by some invariants">I</span>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#uri">uri</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Where to access the document</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Element" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAMQfAOvGUf7ztuvPMf/78/fkl/Pbg+u8Rvjqteu2Pf3zxPz36Pz0z+vTmPzurPvuw/npofbjquvNefHVduuyN+uuMu3Oafbgjfnqvf/3zv/3xevPi+vRjP/20/bmsP///////yH5BAEAAB8ALAAAAAAQABAAAAV24CeOZGmepqeqqOgxjBZFa+19r4ftWQUAgqDgltthMshMIJAZ4jYDHsBARSAmFOJvq+g6HIdEFgcYmBWNxoNAsDjGHgBnmV5bCoUDHLBIq9sFEhIdcAYJdYASFRUQhQkLCwkOFwcdEBAXhVabE52ecDahKy0oIQA7"/> 
+            <span title="A description of a service call that can be used to retrieve the document.">service</span>
+            <a name="DocumentReference.service"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <span title="This element has or is affected by some invariants">I</span>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="element.html">Element</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">If access is not fully described by location</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4/x0ISQIM/0kGANNnY41GtlCWAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7"/> 
+            <span title="The type of the service that can be used to access the documents.">type</span>
+            <a name="DocumentReference.service.type"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#CodeableConcept">CodeableConcept</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Type of service (i.e. XDS.b)
+            <br/>
+            <a title="Document Reference Service Type" href="valueset-documentreference-service-types.html">DocumentServiceType</a> (
+            <a title="If one of the defined codes is appropriate, it must be used, or some other code may be used" href="terminologies.html#incomplete">Incomplete</a>)
+          </td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4/x0ISQIM/0kGANNnY41GtlCWAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="Where the service end-point is located.">address</span>
+            <a name="DocumentReference.service.address"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#string">string</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Where service is located (usually a URL)</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII="/>
+            <img title="Element" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAMQfAOvGUf7ztuvPMf/78/fkl/Pbg+u8Rvjqteu2Pf3zxPz36Pz0z+vTmPzurPvuw/npofbjquvNefHVduuyN+uuMu3Oafbgjfnqvf/3zv/3xevPi+vRjP/20/bmsP///////yH5BAEAAB8ALAAAAAAQABAAAAV24CeOZGmepqeqqOgxjBZFa+19r4ftWQUAgqDgltthMshMIJAZ4jYDHsBARSAmFOJvq+g6HIdEFgcYmBWNxoNAsDjGHgBnmV5bCoUDHLBIq9sFEhIdcAYJdYASFRUQhQkLCwkOFwcdEBAXhVabE52ecDahKy0oIQA7"/> 
+            <span title="A list of named parameters that is used in the service call.">parameter</span>
+            <a name="DocumentReference.service.parameter"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..*</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="element.html">Element</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Service call parameters</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAFUlEQVR42mP4//3/fzAmGjD8JxkAANN3Y41G2ceBAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="The name of a parameter.">name</span>
+            <a name="DocumentReference.service.parameter.name"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#string">string</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Parameter name in service call</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQEfT9fq3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAALElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2jNowasOgtgEAYt8nG43rdKUAAAAASUVORK5CYII="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII="/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="The value of the named parameter.">value</span>
+            <a name="DocumentReference.service.parameter.value"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#string">string</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Parameter value for the name</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAD0lEQVR42mP4TzJgIF0LANmXY523xFiMAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII="/>
+            <img title="Element" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAMQfAOvGUf7ztuvPMf/78/fkl/Pbg+u8Rvjqteu2Pf3zxPz36Pz0z+vTmPzurPvuw/npofbjquvNefHVduuyN+uuMu3Oafbgjfnqvf/3zv/3xevPi+vRjP/20/bmsP///////yH5BAEAAB8ALAAAAAAQABAAAAV24CeOZGmepqeqqOgxjBZFa+19r4ftWQUAgqDgltthMshMIJAZ4jYDHsBARSAmFOJvq+g6HIdEFgcYmBWNxoNAsDjGHgBnmV5bCoUDHLBIq9sFEhIdcAYJdYASFRUQhQkLCwkOFwcdEBAXhVabE52ecDahKy0oIQA7"/> 
+            <span title="The clinical context in which the document was prepared.">context</span>
+            <a name="DocumentReference.context"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="element.html">Element</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Clinical context of document</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAFElEQVR42mP4////9/8kAYb/JAMA1odjlXxALpEAAAAASUVORK5CYII=)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7"/> 
+            <span title="This list of codes represents the main clinical acts, such as a colonoscopy or an appendectomy, being documented. In some cases, the event is inherent in the typeCode, such as a &quot;History and Physical Report&quot; in which the procedure being documented is necessarily a &quot;History and Physical&quot; act.">event</span>
+            <a name="DocumentReference.context.event"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..*</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#CodeableConcept">CodeableConcept</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Main Clinical Acts Documented
+            <br/>
+            <a title="This list of codes represents the main clinical acts being documented" href="v3/ActCode/index.html">DocumentEventType</a> (
+            <a title="If one of the defined codes is appropriate, it must be used, or some other code may be used" href="terminologies.html#incomplete">Incomplete</a>)
+          </td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAFElEQVR42mP4////9/8kAYb/JAMA1odjlXxALpEAAAAASUVORK5CYII=)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7"/> 
+            <span title="The time period over which the service that is described by the document was provided.">period</span>
+            <a name="DocumentReference.context.period"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#Period">Period</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Time of service that is being documented</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAD0lEQVR42mP4TzJgIF0LANmXY523xFiMAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII="/>
+            <img title="Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7"/> 
+            <span title="The kind of facility where the patient was seen.">facilityType</span>
+            <a name="DocumentReference.context.facilityType"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#CodeableConcept">CodeableConcept</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Kind of facility where patient was seen
+            <br/>
+            <a title="XDS Facility Type" href="valueset-xds-facilitycodes.html">DocumentFacilityType</a> (
+            <a title="These codes are an example of the type of codes that may be used" href="terminologies.html#example">Example</a>)
+          </td>
+        </tr>
+
+      </table>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/Profile/DocumentReference"/>
+  <name value="DocumentReference"/>
+  <publisher value="HL7 FHIR Project (FHIR Management Group)"/>
+  <telecom>
+    <system value="url"/>
+    <value value="http://hl7.org/fhir"/>
+  </telecom>
+  <telecom>
+    <system value="url"/>
+    <value value="http://www.hl7.org/Special/committees/fhirmg/index.cfm"/>
+  </telecom>
+  <description value="Base Profile for DocumentReference Resource"/>
+  <status value="draft"/>
+  <date value="2014-12-12T13:17:44.755+11:00"/>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM"/>
+  </mapping>
+  <mapping>
+    <identity value="v2"/>
+    <uri value="http://hl7.org/v2"/>
+    <name value="HL7 v2"/>
+  </mapping>
+  <type value="DocumentReference"/>
+  <snapshot>
+    <element>
+      <path value="DocumentReference"/>
+      <short value="A reference to a document"/>
+      <formal value="A reference to a document."/>
+      <comments value="Usually, this is used for documents other than those defined by FHIR."/>
+      <min value="1"/>
+      <max value="1"/>
+      <constraint>
+        <key value="1"/>
+        <name value="Location"/>
+        <severity value="error"/>
+        <human value="A location or a service (or both) SHALL be provided"/>
+        <xpath value="exists(f:location) or exists(f:service)"/>
+      </constraint>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Document[classCode=&quot;DOC&quot; and moodCode=&quot;EVN&quot;]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Document[classCode=&quot;DOC&quot; and moodCode=&quot;EVN&quot;]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.id"/>
+      <short value="Logical id of this artefact"/>
+      <formal value="The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes."/>
+      <comments value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DocumentReference.meta"/>
+      <short value="Metadata about the resource"/>
+      <formal value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DocumentReference.meta.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.meta.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.meta.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.meta.versionId"/>
+      <short value="Version specific identifier"/>
+      <formal value="The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted."/>
+      <comments value="The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DocumentReference.meta.lastUpdated"/>
+      <short value="When the resource version last changed"/>
+      <formal value="When the resource last changed - e.g. when the version changed."/>
+      <comments value="This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="instant"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DocumentReference.meta.profile"/>
+      <short value="Profiles this resource claims to conform to"/>
+      <formal value="A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url."/>
+      <comments value="It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DocumentReference.meta.security"/>
+      <short value="Security Labels applied to this resource"/>
+      <formal value="Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure."/>
+      <comments value="The security labels can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DocumentReference.meta.tag"/>
+      <short value="Tags applied"/>
+      <formal value="Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource."/>
+      <comments value="The tags can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DocumentReference.implicitRules"/>
+      <short value="A set of rules under which this content was created"/>
+      <formal value="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content."/>
+      <comments value="Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DocumentReference.language"/>
+      <short value="Language of the resource content"/>
+      <formal value="The base language in which the resource is written."/>
+      <comments value="Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource
+
+Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="Language"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="A human language"/>
+        <referenceUri value="http://tools.ietf.org/html/bcp47"/>
+      </binding>
+    </element>
+    <element>
+      <path value="DocumentReference.text"/>
+      <short value="Text summary of the resource, for human interpretation"/>
+      <formal value="A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."/>
+      <comments value="Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."/>
+      <synonym value="narrative"/>
+      <synonym value="html"/>
+      <synonym value="xhtml"/>
+      <synonym value="display"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Narrative"/>
+      </type>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.contained"/>
+      <short value="Contained, inline Resources"/>
+      <formal value="These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope."/>
+      <comments value="This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."/>
+      <synonym value="inline resources"/>
+      <synonym value="anonymous resources"/>
+      <synonym value="contained resources"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Resource"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.masterIdentifier"/>
+      <short value="Master Version Specific Identifier"/>
+      <formal value="Document identifier as assigned by the source of the document. This identifier is specific to this version of the document. This unique identifier may be used elsewhere to identify this version of the document."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-12-Unique Document Number"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-12-Unique Document Number"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.identifier"/>
+      <short value="Other identifiers for the document"/>
+      <formal value="Other identifiers associated with the document, including version independent, source record and workflow related identifiers."/>
+      <comments value="Other identifiers can also include Identifiers may be Accession Numbers, Order Numbers, Referral Request 
+Identifiers, XDS Workflow Instance Identifiers."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-16-Unique Document File Name?"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id / .setId"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-16-Unique Document File Name?"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id / .setId"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.subject"/>
+      <short value="Who|what is the subject of the document"/>
+      <formal value="Who or what the document is about. The document can be about a person, (patient or healthcare practitioner), a device (I.e. machine) or even a group of subjects (such as a document about a herd of farm animals, or a set of patients that share a common exposure)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Patient"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Practitioner"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Group"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Device"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-3-Patient ID List (No standard way to define a Practitioner or Group subject in V2 MDM message)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=&quot;SBJ&quot;].role[typeCode=&quot;PAT&quot;]"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-3-Patient ID List (No standard way to define a Practitioner or Group subject in V2 MDM message)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=&quot;SBJ&quot;].role[typeCode=&quot;PAT&quot;]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.type"/>
+      <short value="What kind of document this is (LOINC if possible)"/>
+      <formal value="Specifies the particular kind of document (e.g. Patient Summary, Discharge Summary, Prescription, etc.)."/>
+      <comments value="Key metadata element describing the document, used in searching/filtering."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DocumentType"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="Type of a composition"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/doc-codes"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-2-Document Type"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./code"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-2-Document Type"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.class"/>
+      <short value="Categorization of Document"/>
+      <formal value="A categorization for the type of the document. This may be implied by or derived from the code specified in the Document Type."/>
+      <comments value="Helps humans to assess whether the document is of interest when viewing an index of documents."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DocumentClass"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="SubType of a clinical document"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/xds-typecodes"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value=".outboundRelationship[typeCode=&quot;COMP].target[classCode=&quot;LIST&quot;, moodCode=&quot;EVN&quot;].code"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=&quot;COMP].target[classCode=&quot;LIST&quot;, moodCode=&quot;EVN&quot;].code"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value=".outboundRelationship[typeCode=&quot;COMP].target[classCode=&quot;LIST&quot;, moodCode=&quot;EVN&quot;].code"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=&quot;COMP].target[classCode=&quot;LIST&quot;, moodCode=&quot;EVN&quot;].code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.author"/>
+      <short value="Who and/or what authored the document"/>
+      <formal value="Identifies who is responsible for adding the information to the document."/>
+      <comments value="Not necessarily who did the actual data entry (i.e. typist) it in or who was the source (informant)."/>
+      <min value="1"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Practitioner"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Device"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Patient"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/RelatedPerson"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-9-Originator Code/Name (No standard way to indicate a Device in V2 MDM message)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=&quot;AUT&quot;].role[classCode=&quot;ASSIGNED&quot;]"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-9-Originator Code/Name (No standard way to indicate a Device in V2 MDM message)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=&quot;AUT&quot;].role[classCode=&quot;ASSIGNED&quot;]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.custodian"/>
+      <short value="Org which maintains the document"/>
+      <formal value="Identifies the organization or group who is responsible for ongoing maintenance of and access to the document."/>
+      <comments value="Identifies the logical organization to go to find the current version, where to report issues, etc. This is different from the physical location of the document, which is the technical location of the document, which host may be delegated to the management of some other organization."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Organization"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=&quot;RCV&quot;].role[classCode=&quot;CUST&quot;].scoper[classCode=&quot;ORG&quot; and determinerCode=&quot;INST&quot;]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=&quot;RCV&quot;].role[classCode=&quot;CUST&quot;].scoper[classCode=&quot;ORG&quot; and determinerCode=&quot;INST&quot;]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.policyManager"/>
+      <short value="Manages access policies for the document"/>
+      <formal value="A reference to a domain or server that manages policies under which the document is accessed and/or made available."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A - New participation type required"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A - New participation type required"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.authenticator"/>
+      <short value="Who/What authenticated the document"/>
+      <formal value="Which person or organization authenticates that this document is valid."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Practitioner"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Organization"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-10-Assigned Document Authenticator"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=&quot;AUTHEN&quot;].role[classCode=&quot;ASSIGNED&quot;]"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-10-Assigned Document Authenticator"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=&quot;AUTHEN&quot;].role[classCode=&quot;ASSIGNED&quot;]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.created"/>
+      <short value="Document creation time"/>
+      <formal value="When the document was created."/>
+      <comments value="Creation time is used for tracking, organizing versions and searching. This is the creation time of the document, not the source material on which it is based."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-6-Origination Date/Time"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime[type=&quot;TS&quot;]"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-6-Origination Date/Time"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime[type=&quot;TS&quot;]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.indexed"/>
+      <short value="When this document reference created"/>
+      <formal value="When the document reference was created."/>
+      <comments value="Referencing/indexing time is used for tracking, organizing versions and searching."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="instant"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".availabilityTime[type=&quot;TS&quot;]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".availabilityTime[type=&quot;TS&quot;]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.status"/>
+      <short value="current | superceded | entered in error"/>
+      <formal value="The status of this document reference."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DocumentReferenceStatus"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The status of the document reference"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/document-reference-status"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-19-Document Availability Status"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="interim: .completionCode=&quot;IN&quot; &amp; ./statusCode[isNormalDatatype()]=&quot;active&quot;;
+
+final: .completionCode=&quot;AU&quot; &amp;&amp;  ./statusCode[isNormalDatatype()]=&quot;complete&quot; and not(./inboundRelationship[typeCode=&quot;SUBJ&quot; and isNormalActRelationship()]/source[subsumesCode(&quot;ActClass#CACT&quot;) and moodCode=&quot;EVN&quot; and domainMember(&quot;ReviseDocument&quot;, code) and isNormalAct()]);
+
+amended: .completionCode=&quot;AU&quot; &amp;&amp;  ./statusCode[isNormalDatatype()]=&quot;complete&quot; and ./inboundRelationship[typeCode=&quot;SUBJ&quot; and isNormalActRelationship()]/source[subsumesCode(&quot;ActClass#CACT&quot;) and moodCode=&quot;EVN&quot; and domainMember(&quot;ReviseDocument&quot;, code) and isNormalAct() and statusCode=&quot;completed&quot;];
+
+withdrawn : .completionCode=NI &amp;&amp;  ./statusCode[isNormalDatatype()]=&quot;obsolete&quot;"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-19-Document Availability Status"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="interim: .completionCode=&quot;IN&quot; &amp; ./statusCode[isNormalDatatype()]=&quot;active&quot;;
+
+final: .completionCode=&quot;AU&quot; &amp;&amp;  ./statusCode[isNormalDatatype()]=&quot;complete&quot; and not(./inboundRelationship[typeCode=&quot;SUBJ&quot; and isNormalActRelationship()]/source[subsumesCode(&quot;ActClass#CACT&quot;) and moodCode=&quot;EVN&quot; and domainMember(&quot;ReviseDocument&quot;, code) and isNormalAct()]);
+
+amended: .completionCode=&quot;AU&quot; &amp;&amp;  ./statusCode[isNormalDatatype()]=&quot;complete&quot; and ./inboundRelationship[typeCode=&quot;SUBJ&quot; and isNormalActRelationship()]/source[subsumesCode(&quot;ActClass#CACT&quot;) and moodCode=&quot;EVN&quot; and domainMember(&quot;ReviseDocument&quot;, code) and isNormalAct() and statusCode=&quot;completed&quot;];
+
+withdrawn : .completionCode=NI &amp;&amp;  ./statusCode[isNormalDatatype()]=&quot;obsolete&quot;"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.docStatus"/>
+      <short value="preliminary | final | appended | amended | entered in error"/>
+      <formal value="The status of the underlying document."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="ReferredDocumentStatus"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="Status of the underlying document"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/composition-status"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-17-Document Completion Status"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-17-Document Completion Status"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.relatesTo"/>
+      <short value="Relationships to other documents"/>
+      <formal value="Relationships that this document has with other document references that already exist."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.relatesTo.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.relatesTo.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.relatesTo.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.relatesTo.code"/>
+      <short value="replaces | transforms | signs | appends"/>
+      <formal value="The type of relationship that this document has with anther document."/>
+      <comments value="If this document appends another document, then the document cannot be fully understood without also accessing the referenced document."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DocumentRelationshipType"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The type of relationship between documents"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/document-relationship-type"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship.typeCode"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship.typeCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.relatesTo.target"/>
+      <short value="Target of the relationship"/>
+      <formal value="The target document of this relationship."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/DocumentReference"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".target[classCode=&quot;DOC&quot;, moodCode=&quot;EVN&quot;].id"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".target[classCode=&quot;DOC&quot;, moodCode=&quot;EVN&quot;].id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.description"/>
+      <short value="Human-readable description (title)"/>
+      <formal value="Human-readable description of the source document. This is sometimes known as the &quot;title&quot;."/>
+      <comments value="What the document is about, rather than a terse summary of the document. It is commonly the case that records do not have a title and are collectively referred to by the display name of Record code (e.g. a &quot;consultation&quot; or &quot;progress note&quot;)."/>
+      <requirements value="Helps humans to assess whether the document is of interest."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-25-Document Title"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=&quot;SUBJ&quot;].target.text"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-25-Document Title"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=&quot;SUBJ&quot;].target.text"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.confidentiality"/>
+      <short value="Sensitivity of source document"/>
+      <formal value="A code specifying the level of confidentiality of the XDS Document."/>
+      <comments value="The interpretation of this field, and more generally enforcement and issues related to highly sensitive documents are beyond the scope of this resource. confidentialityCode can only be understood in the context of the policies, procedures, and value set specified by the context in which the document reference is being used."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DocumentConfidentiality"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="Codes specifying the level of confidentiality of the composition"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/v3/vs/Confidentiality"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-18-Document Confidentiality Status"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".confidentialityCode"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-18-Document Confidentiality Status"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".confidentialityCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.primaryLanguage"/>
+      <short value="The marked primary language for the document"/>
+      <formal value="The primary language in which the source document is written."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="Language"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="A human language"/>
+        <referenceUri value="http://tools.ietf.org/html/bcp47"/>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".languageCode"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".languageCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.mimeType"/>
+      <short value="Mime type, + maybe character encoding"/>
+      <formal value="The mime type of the source document."/>
+      <comments value="Note: application/hl7-v3+xml for CDA. application/binary for proprietary record formats."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="MimeType"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The mime type of an attachment"/>
+        <referenceUri value="http://www.rfc-editor.org/bcp/bcp13.txt"/>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-3-Document Content Presentation"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text.mediaType"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-3-Document Content Presentation"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text.mediaType"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.format"/>
+      <short value="Format/content rules for the document"/>
+      <formal value="An identifier that identifies that the format and content of the document conforms to additional rules beyond the base format indicated in the mimeType."/>
+      <comments value="Most often used when the mime-type is text/xml."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.size"/>
+      <short value="Size of the document in bytes"/>
+      <formal value="The size of the source document this reference refers to in bytes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text.length"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text.length"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.hash"/>
+      <short value="Base64 representation of SHA1"/>
+      <formal value="A hash of the source document to ensure that changes have not occurred."/>
+      <comments value="Whether the hash must be present and/or correct depends on the document handling rules defined in the context of use."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="base64Binary"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text.integrityCheck"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text.integrityCheck"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.location"/>
+      <short value="Where to access the document"/>
+      <formal value="A url at which the document can be accessed."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="(Might include V2 TXA-16-Unique Document File Name or TXA-24-Folder Assignment)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text.reference"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="(Might include V2 TXA-16-Unique Document File Name or TXA-24-Folder Assignment)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text.reference"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.service"/>
+      <short value="If access is not fully described by location"/>
+      <formal value="A description of a service call that can be used to retrieve the document."/>
+      <comments value="If a document can be accessed by either a service or directly by a URL (i.e. an XDS repository with an MHD access point, or a DICOM network with a WADO portal) just provide the URL."/>
+      <min value="0"/>
+      <max value="1"/>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text.reference"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text.reference"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.service.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.service.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.service.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.service.type"/>
+      <short value="Type of service (i.e. XDS.b)"/>
+      <formal value="The type of the service that can be used to access the documents."/>
+      <comments value="The meaning and interpretation of the parameters depends on the service type."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DocumentServiceType"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="Document Reference Service Type"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/documentreference-service-types"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.service.address"/>
+      <short value="Where service is located (usually a URL)"/>
+      <formal value="Where the service end-point is located."/>
+      <comments value="Usually this is a URL, but for some services, the end-point is a simple network name or address that is not a valid URL."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.service.parameter"/>
+      <short value="Service call parameters"/>
+      <formal value="A list of named parameters that is used in the service call."/>
+      <comments value="The interpretation of the parameters, and how to convert them into a proper service call, is dependent on the type of the service, and needs to be specified in an implementation guide somewhere."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.service.parameter.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.service.parameter.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.service.parameter.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.service.parameter.name"/>
+      <short value="Parameter name in service call"/>
+      <formal value="The name of a parameter."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.service.parameter.value"/>
+      <short value="Parameter value for the name"/>
+      <formal value="The value of the named parameter."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.context"/>
+      <short value="Clinical context of document"/>
+      <formal value="The clinical context in which the document was prepared."/>
+      <comments value="These values are primarily added to help with searching for interesting/relevant documents."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outboundRelationship[typeCode=&quot;SUBJ&quot;].target[classCode&lt;&#39;ACT&#39;]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outboundRelationship[typeCode=&quot;SUBJ&quot;].target[classCode&lt;&#39;ACT&#39;]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.context.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.context.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.context.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.context.event"/>
+      <short value="Main Clinical Acts Documented"/>
+      <formal value="This list of codes represents the main clinical acts, such as a colonoscopy or an appendectomy, being documented. In some cases, the event is inherent in the typeCode, such as a &quot;History and Physical Report&quot; in which the procedure being documented is necessarily a &quot;History and Physical&quot; act."/>
+      <comments value="An event can further specialize the act inherent in the type, such as 
+where it is simply &quot;Procedure Report&quot; and the procedure was a &quot;colonoscopy&quot;. If one or more event codes are included, they shall not conflict with the values inherent in the class or type elements as such a conflict would create an ambiguous situation."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DocumentEventType"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="This list of codes represents the main clinical acts being documented"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/v3/vs/ActCode"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.context.period"/>
+      <short value="Time of service that is being documented"/>
+      <formal value="The time period over which the service that is described by the document was provided."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Period"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.context.facilityType"/>
+      <short value="Kind of facility where patient was seen"/>
+      <formal value="The kind of facility where the patient was seen."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DocumentFacilityType"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="XDS Facility Type"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/xds-facilitycodes"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=&quot;LOC&quot;].role[classCode=&quot;DSDLOC&quot;].code"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=&quot;LOC&quot;].role[classCode=&quot;DSDLOC&quot;].code"/>
+      </mapping>
+    </element>
+  </snapshot>
+  <differential>
+    <element>
+      <path value="DocumentReference"/>
+      <short value="A reference to a document"/>
+      <formal value="A reference to a document."/>
+      <comments value="Usually, this is used for documents other than those defined by FHIR."/>
+      <min value="1"/>
+      <max value="1"/>
+      <constraint>
+        <key value="1"/>
+        <name value="Location"/>
+        <severity value="error"/>
+        <human value="A location or a service (or both) SHALL be provided"/>
+        <xpath value="exists(f:location) or exists(f:service)"/>
+      </constraint>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Document[classCode=&quot;DOC&quot; and moodCode=&quot;EVN&quot;]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Document[classCode=&quot;DOC&quot; and moodCode=&quot;EVN&quot;]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.masterIdentifier"/>
+      <short value="Master Version Specific Identifier"/>
+      <formal value="Document identifier as assigned by the source of the document. This identifier is specific to this version of the document. This unique identifier may be used elsewhere to identify this version of the document."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-12-Unique Document Number"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-12-Unique Document Number"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.identifier"/>
+      <short value="Other identifiers for the document"/>
+      <formal value="Other identifiers associated with the document, including version independent, source record and workflow related identifiers."/>
+      <comments value="Other identifiers can also include Identifiers may be Accession Numbers, Order Numbers, Referral Request 
+Identifiers, XDS Workflow Instance Identifiers."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-16-Unique Document File Name?"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id / .setId"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-16-Unique Document File Name?"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id / .setId"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.subject"/>
+      <short value="Who|what is the subject of the document"/>
+      <formal value="Who or what the document is about. The document can be about a person, (patient or healthcare practitioner), a device (I.e. machine) or even a group of subjects (such as a document about a herd of farm animals, or a set of patients that share a common exposure)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Patient"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Practitioner"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Group"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Device"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-3-Patient ID List (No standard way to define a Practitioner or Group subject in V2 MDM message)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=&quot;SBJ&quot;].role[typeCode=&quot;PAT&quot;]"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-3-Patient ID List (No standard way to define a Practitioner or Group subject in V2 MDM message)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=&quot;SBJ&quot;].role[typeCode=&quot;PAT&quot;]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.type"/>
+      <short value="What kind of document this is (LOINC if possible)"/>
+      <formal value="Specifies the particular kind of document (e.g. Patient Summary, Discharge Summary, Prescription, etc.)."/>
+      <comments value="Key metadata element describing the document, used in searching/filtering."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DocumentType"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="Type of a composition"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/doc-codes"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-2-Document Type"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./code"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-2-Document Type"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.class"/>
+      <short value="Categorization of Document"/>
+      <formal value="A categorization for the type of the document. This may be implied by or derived from the code specified in the Document Type."/>
+      <comments value="Helps humans to assess whether the document is of interest when viewing an index of documents."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DocumentClass"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="SubType of a clinical document"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/xds-typecodes"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value=".outboundRelationship[typeCode=&quot;COMP].target[classCode=&quot;LIST&quot;, moodCode=&quot;EVN&quot;].code"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=&quot;COMP].target[classCode=&quot;LIST&quot;, moodCode=&quot;EVN&quot;].code"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value=".outboundRelationship[typeCode=&quot;COMP].target[classCode=&quot;LIST&quot;, moodCode=&quot;EVN&quot;].code"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=&quot;COMP].target[classCode=&quot;LIST&quot;, moodCode=&quot;EVN&quot;].code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.author"/>
+      <short value="Who and/or what authored the document"/>
+      <formal value="Identifies who is responsible for adding the information to the document."/>
+      <comments value="Not necessarily who did the actual data entry (i.e. typist) it in or who was the source (informant)."/>
+      <min value="1"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Practitioner"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Device"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Patient"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/RelatedPerson"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-9-Originator Code/Name (No standard way to indicate a Device in V2 MDM message)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=&quot;AUT&quot;].role[classCode=&quot;ASSIGNED&quot;]"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-9-Originator Code/Name (No standard way to indicate a Device in V2 MDM message)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=&quot;AUT&quot;].role[classCode=&quot;ASSIGNED&quot;]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.custodian"/>
+      <short value="Org which maintains the document"/>
+      <formal value="Identifies the organization or group who is responsible for ongoing maintenance of and access to the document."/>
+      <comments value="Identifies the logical organization to go to find the current version, where to report issues, etc. This is different from the physical location of the document, which is the technical location of the document, which host may be delegated to the management of some other organization."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Organization"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=&quot;RCV&quot;].role[classCode=&quot;CUST&quot;].scoper[classCode=&quot;ORG&quot; and determinerCode=&quot;INST&quot;]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=&quot;RCV&quot;].role[classCode=&quot;CUST&quot;].scoper[classCode=&quot;ORG&quot; and determinerCode=&quot;INST&quot;]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.policyManager"/>
+      <short value="Manages access policies for the document"/>
+      <formal value="A reference to a domain or server that manages policies under which the document is accessed and/or made available."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A - New participation type required"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A - New participation type required"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.authenticator"/>
+      <short value="Who/What authenticated the document"/>
+      <formal value="Which person or organization authenticates that this document is valid."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Practitioner"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Organization"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-10-Assigned Document Authenticator"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=&quot;AUTHEN&quot;].role[classCode=&quot;ASSIGNED&quot;]"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-10-Assigned Document Authenticator"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=&quot;AUTHEN&quot;].role[classCode=&quot;ASSIGNED&quot;]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.created"/>
+      <short value="Document creation time"/>
+      <formal value="When the document was created."/>
+      <comments value="Creation time is used for tracking, organizing versions and searching. This is the creation time of the document, not the source material on which it is based."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-6-Origination Date/Time"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime[type=&quot;TS&quot;]"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-6-Origination Date/Time"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime[type=&quot;TS&quot;]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.indexed"/>
+      <short value="When this document reference created"/>
+      <formal value="When the document reference was created."/>
+      <comments value="Referencing/indexing time is used for tracking, organizing versions and searching."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="instant"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".availabilityTime[type=&quot;TS&quot;]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".availabilityTime[type=&quot;TS&quot;]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.status"/>
+      <short value="current | superceded | entered in error"/>
+      <formal value="The status of this document reference."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DocumentReferenceStatus"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The status of the document reference"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/document-reference-status"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-19-Document Availability Status"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="interim: .completionCode=&quot;IN&quot; &amp; ./statusCode[isNormalDatatype()]=&quot;active&quot;;
+
+final: .completionCode=&quot;AU&quot; &amp;&amp;  ./statusCode[isNormalDatatype()]=&quot;complete&quot; and not(./inboundRelationship[typeCode=&quot;SUBJ&quot; and isNormalActRelationship()]/source[subsumesCode(&quot;ActClass#CACT&quot;) and moodCode=&quot;EVN&quot; and domainMember(&quot;ReviseDocument&quot;, code) and isNormalAct()]);
+
+amended: .completionCode=&quot;AU&quot; &amp;&amp;  ./statusCode[isNormalDatatype()]=&quot;complete&quot; and ./inboundRelationship[typeCode=&quot;SUBJ&quot; and isNormalActRelationship()]/source[subsumesCode(&quot;ActClass#CACT&quot;) and moodCode=&quot;EVN&quot; and domainMember(&quot;ReviseDocument&quot;, code) and isNormalAct() and statusCode=&quot;completed&quot;];
+
+withdrawn : .completionCode=NI &amp;&amp;  ./statusCode[isNormalDatatype()]=&quot;obsolete&quot;"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-19-Document Availability Status"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="interim: .completionCode=&quot;IN&quot; &amp; ./statusCode[isNormalDatatype()]=&quot;active&quot;;
+
+final: .completionCode=&quot;AU&quot; &amp;&amp;  ./statusCode[isNormalDatatype()]=&quot;complete&quot; and not(./inboundRelationship[typeCode=&quot;SUBJ&quot; and isNormalActRelationship()]/source[subsumesCode(&quot;ActClass#CACT&quot;) and moodCode=&quot;EVN&quot; and domainMember(&quot;ReviseDocument&quot;, code) and isNormalAct()]);
+
+amended: .completionCode=&quot;AU&quot; &amp;&amp;  ./statusCode[isNormalDatatype()]=&quot;complete&quot; and ./inboundRelationship[typeCode=&quot;SUBJ&quot; and isNormalActRelationship()]/source[subsumesCode(&quot;ActClass#CACT&quot;) and moodCode=&quot;EVN&quot; and domainMember(&quot;ReviseDocument&quot;, code) and isNormalAct() and statusCode=&quot;completed&quot;];
+
+withdrawn : .completionCode=NI &amp;&amp;  ./statusCode[isNormalDatatype()]=&quot;obsolete&quot;"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.docStatus"/>
+      <short value="preliminary | final | appended | amended | entered in error"/>
+      <formal value="The status of the underlying document."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="ReferredDocumentStatus"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="Status of the underlying document"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/composition-status"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-17-Document Completion Status"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-17-Document Completion Status"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.relatesTo"/>
+      <short value="Relationships to other documents"/>
+      <formal value="Relationships that this document has with other document references that already exist."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.relatesTo.code"/>
+      <short value="replaces | transforms | signs | appends"/>
+      <formal value="The type of relationship that this document has with anther document."/>
+      <comments value="If this document appends another document, then the document cannot be fully understood without also accessing the referenced document."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DocumentRelationshipType"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The type of relationship between documents"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/document-relationship-type"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship.typeCode"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship.typeCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.relatesTo.target"/>
+      <short value="Target of the relationship"/>
+      <formal value="The target document of this relationship."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/DocumentReference"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".target[classCode=&quot;DOC&quot;, moodCode=&quot;EVN&quot;].id"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".target[classCode=&quot;DOC&quot;, moodCode=&quot;EVN&quot;].id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.description"/>
+      <short value="Human-readable description (title)"/>
+      <formal value="Human-readable description of the source document. This is sometimes known as the &quot;title&quot;."/>
+      <comments value="What the document is about, rather than a terse summary of the document. It is commonly the case that records do not have a title and are collectively referred to by the display name of Record code (e.g. a &quot;consultation&quot; or &quot;progress note&quot;)."/>
+      <requirements value="Helps humans to assess whether the document is of interest."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-25-Document Title"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=&quot;SUBJ&quot;].target.text"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-25-Document Title"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=&quot;SUBJ&quot;].target.text"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.confidentiality"/>
+      <short value="Sensitivity of source document"/>
+      <formal value="A code specifying the level of confidentiality of the XDS Document."/>
+      <comments value="The interpretation of this field, and more generally enforcement and issues related to highly sensitive documents are beyond the scope of this resource. confidentialityCode can only be understood in the context of the policies, procedures, and value set specified by the context in which the document reference is being used."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DocumentConfidentiality"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="Codes specifying the level of confidentiality of the composition"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/v3/vs/Confidentiality"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-18-Document Confidentiality Status"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".confidentialityCode"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-18-Document Confidentiality Status"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".confidentialityCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.primaryLanguage"/>
+      <short value="The marked primary language for the document"/>
+      <formal value="The primary language in which the source document is written."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="Language"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="A human language"/>
+        <referenceUri value="http://tools.ietf.org/html/bcp47"/>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".languageCode"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".languageCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.mimeType"/>
+      <short value="Mime type, + maybe character encoding"/>
+      <formal value="The mime type of the source document."/>
+      <comments value="Note: application/hl7-v3+xml for CDA. application/binary for proprietary record formats."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="MimeType"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The mime type of an attachment"/>
+        <referenceUri value="http://www.rfc-editor.org/bcp/bcp13.txt"/>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-3-Document Content Presentation"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text.mediaType"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="TXA-3-Document Content Presentation"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text.mediaType"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.format"/>
+      <short value="Format/content rules for the document"/>
+      <formal value="An identifier that identifies that the format and content of the document conforms to additional rules beyond the base format indicated in the mimeType."/>
+      <comments value="Most often used when the mime-type is text/xml."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.size"/>
+      <short value="Size of the document in bytes"/>
+      <formal value="The size of the source document this reference refers to in bytes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="integer"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text.length"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text.length"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.hash"/>
+      <short value="Base64 representation of SHA1"/>
+      <formal value="A hash of the source document to ensure that changes have not occurred."/>
+      <comments value="Whether the hash must be present and/or correct depends on the document handling rules defined in the context of use."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="base64Binary"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text.integrityCheck"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text.integrityCheck"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.location"/>
+      <short value="Where to access the document"/>
+      <formal value="A url at which the document can be accessed."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="(Might include V2 TXA-16-Unique Document File Name or TXA-24-Folder Assignment)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text.reference"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="(Might include V2 TXA-16-Unique Document File Name or TXA-24-Folder Assignment)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text.reference"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.service"/>
+      <short value="If access is not fully described by location"/>
+      <formal value="A description of a service call that can be used to retrieve the document."/>
+      <comments value="If a document can be accessed by either a service or directly by a URL (i.e. an XDS repository with an MHD access point, or a DICOM network with a WADO portal) just provide the URL."/>
+      <min value="0"/>
+      <max value="1"/>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text.reference"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text.reference"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.service.type"/>
+      <short value="Type of service (i.e. XDS.b)"/>
+      <formal value="The type of the service that can be used to access the documents."/>
+      <comments value="The meaning and interpretation of the parameters depends on the service type."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DocumentServiceType"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="Document Reference Service Type"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/documentreference-service-types"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.service.address"/>
+      <short value="Where service is located (usually a URL)"/>
+      <formal value="Where the service end-point is located."/>
+      <comments value="Usually this is a URL, but for some services, the end-point is a simple network name or address that is not a valid URL."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.service.parameter"/>
+      <short value="Service call parameters"/>
+      <formal value="A list of named parameters that is used in the service call."/>
+      <comments value="The interpretation of the parameters, and how to convert them into a proper service call, is dependent on the type of the service, and needs to be specified in an implementation guide somewhere."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.service.parameter.name"/>
+      <short value="Parameter name in service call"/>
+      <formal value="The name of a parameter."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.service.parameter.value"/>
+      <short value="Parameter value for the name"/>
+      <formal value="The value of the named parameter."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.context"/>
+      <short value="Clinical context of document"/>
+      <formal value="The clinical context in which the document was prepared."/>
+      <comments value="These values are primarily added to help with searching for interesting/relevant documents."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outboundRelationship[typeCode=&quot;SUBJ&quot;].target[classCode&lt;&#39;ACT&#39;]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outboundRelationship[typeCode=&quot;SUBJ&quot;].target[classCode&lt;&#39;ACT&#39;]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.context.event"/>
+      <short value="Main Clinical Acts Documented"/>
+      <formal value="This list of codes represents the main clinical acts, such as a colonoscopy or an appendectomy, being documented. In some cases, the event is inherent in the typeCode, such as a &quot;History and Physical Report&quot; in which the procedure being documented is necessarily a &quot;History and Physical&quot; act."/>
+      <comments value="An event can further specialize the act inherent in the type, such as 
+where it is simply &quot;Procedure Report&quot; and the procedure was a &quot;colonoscopy&quot;. If one or more event codes are included, they shall not conflict with the values inherent in the class or type elements as such a conflict would create an ambiguous situation."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DocumentEventType"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="This list of codes represents the main clinical acts being documented"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/v3/vs/ActCode"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.context.period"/>
+      <short value="Time of service that is being documented"/>
+      <formal value="The time period over which the service that is described by the document was provided."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Period"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DocumentReference.context.facilityType"/>
+      <short value="Kind of facility where patient was seen"/>
+      <formal value="The kind of facility where the patient was seen."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DocumentFacilityType"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="XDS Facility Type"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/xds-facilitycodes"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=&quot;LOC&quot;].role[classCode=&quot;DSDLOC&quot;].code"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=&quot;LOC&quot;].role[classCode=&quot;DSDLOC&quot;].code"/>
+      </mapping>
+    </element>
+  </differential>
+</Profile>

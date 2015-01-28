@@ -1,0 +1,51 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "questionnaire-label",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/questionnaire-label",
+  "name": "E.g. \"1(a)\", \"2.5.3\"",
+  "publisher": "HL7",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://www.hl7.org"
+    }
+  ],
+  "description": "A label for a particular group or question within the questionnaire.",
+  "status": "draft",
+  "date": "2013-07-04",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "resource",
+  "context": [
+    "Questionnaire.group",
+    "Questionnaire.group.group",
+    "Questionnaire.group.question"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "E.g. \"1(a)\", \"2.5.3\"",
+      "formal": "A label for a particular group or question within the questionnaire.",
+      "comments": "These are generally unique within a questionnaire, though this is not guaranteed. Some questionnaires may have multiple questions with the same label with logic to control which gets exposed.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isSummary": false,
+      "mapping": [
+        {
+          "identity": "rim",
+          "map": "Not supported"
+        }
+      ]
+    }
+  ]
+}

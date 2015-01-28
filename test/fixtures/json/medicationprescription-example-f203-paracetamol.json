@@ -1,0 +1,53 @@
+{
+  "resourceType": "MedicationPrescription",
+  "id": "f203",
+  "dateWritten": "2013-04-04",
+  "status": "active",
+  "patient": {
+    "reference": "Patient/f201",
+    "display": "Roel"
+  },
+  "prescriber": {
+    "reference": "Practitioner/f201"
+  },
+  "encounter": {
+    "reference": "Encounter/f201",
+    "display": "Roel's encounter on April fourth 2013"
+  },
+  "reasonReference": {
+    "reference": "Condition/f201",
+    "display": "fever"
+  },
+  "medication": {
+    "reference": "Medication/f203",
+    "display": "Paracetamol"
+  },
+  "dosageInstruction": [
+    {
+      "text": "Paracetamol 3xdaags 1000mg",
+      "method": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "322236009",
+            "display": "Paracetamol 500mg tablet"
+          }
+        ]
+      },
+      "maxDosePerPeriod": {
+        "numerator": {
+          "value": 3000,
+          "units": "milligram",
+          "system": "http://snomed.info/sct",
+          "code": "258684004"
+        },
+        "denominator": {
+          "value": 24,
+          "units": "hours",
+          "system": "http://snomed.info/sct",
+          "code": "258702006"
+        }
+      }
+    }
+  ]
+}

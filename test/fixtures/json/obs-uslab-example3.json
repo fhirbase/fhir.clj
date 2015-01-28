@@ -1,0 +1,60 @@
+{
+  "resourceType": "Observation",
+  "id": "uslab-example3",
+  "text": {
+    "status": "generated",
+    "div": "<div>\n\t\t\t\n      <ul>\n\t\t\t\t\n        <li>file: obs-uslab-example3.xml</li>\n\t\t\t\t\n        <li>id: uslab-example3</li>\n\t\t\t\t\n        <li>Name: USLab Observation Example3</li>\n\t\t\t\t\n        <li>Description: USLab Other (String) Observation Profile Canonical Example: S aureus</li>\n\t\t\t\n      </ul>\n\t\t\n    </div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/uslabobservationkind": [
+    {
+      "valueCode": "result"
+    }
+  ],
+  "name": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "6463-4",
+        "display": "Bacteria identified in Unspecified specimen by Culture"
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.3.72.5.24",
+        "code": "MSCBACT",
+        "display": "Misc Culture"
+      }
+    ],
+    "text": "Miscellaneous Culture"
+  },
+  "valueString": "Moderate Growth of gram-positive cocci bacteria",
+  "interpretation": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/v2/0078",
+        "code": "A"
+      }
+    ]
+  },
+  "appliesDateTime": "2014-12-05",
+  "issued": "2014-12-06T15:42:15-08:00",
+  "status": "final",
+  "identifier": {
+    "use": "official",
+    "label": "lab test result ID",
+    "system": "http://lis.acmelabs.org/identifiers/labtestresult",
+    "value": "3456"
+  },
+  "subject": {
+    "reference": "uslab-example1",
+    "display": "Todd Lerr"
+  },
+  "specimen": {
+    "reference": "uslab-example1",
+    "display": "Blood sample"
+  },
+  "performer": [
+    {
+      "reference": "uslab-example1",
+      "display": "Dr Leonard T Bloodraw Jr"
+    }
+  ]
+}

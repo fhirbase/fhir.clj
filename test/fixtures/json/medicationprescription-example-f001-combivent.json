@@ -1,0 +1,102 @@
+{
+  "resourceType": "MedicationPrescription",
+  "id": "f001",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "http://www.bmc/portal/prescriptions",
+      "value": "order9837293"
+    }
+  ],
+  "dateWritten": "2013-05-25T19:32:52+01:00",
+  "status": "active",
+  "patient": {
+    "reference": "Patient/f001",
+    "display": "P. van den Heuvel"
+  },
+  "prescriber": {
+    "reference": "Practitioner/f006",
+    "display": "R.A. van den Berk"
+  },
+  "encounter": {
+    "reference": "Encounter/f001",
+    "display": "visit who leads to this priscription"
+  },
+  "reasonCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "13645005",
+        "display": "Chronic obstructive pulmonary disease"
+      }
+    ]
+  },
+  "medication": {
+    "reference": "Medication/f001",
+    "display": "prescribed medication"
+  },
+  "dosageInstruction": [
+    {
+      "text": "3 tot 4 maal daags 1 flacon",
+      "additionalInstructions": {
+        "text": "for use during pregnancy, contact physician"
+      },
+      "scheduledTiming": {
+        "event": [
+          {
+            "start": "2013-08-04",
+            "end": "2013-11-05"
+          }
+        ],
+        "repeat": {
+          "frequency": 3,
+          "duration": 1,
+          "units": "d"
+        }
+      },
+      "site": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "181220002",
+            "display": "Entire oral cavity"
+          }
+        ]
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "394899003",
+            "display": "oral administration of treatment"
+          }
+        ]
+      },
+      "doseQuantity": {
+        "value": 10,
+        "units": "ml",
+        "system": "http://unitsofmeasure.org",
+        "code": "ml"
+      }
+    }
+  ],
+  "dispense": {
+    "validityPeriod": {
+      "start": "2013-04-08",
+      "end": "2013-05-30"
+    },
+    "numberOfRepeatsAllowed": 20,
+    "quantity": {
+      "value": 100,
+      "units": "mcg",
+      "system": "urn:oid:2.16.840.1.113883.6.8",
+      "code": "ug"
+    },
+    "expectedSupplyDuration": {
+      "value": 40,
+      "units": "days",
+      "system": "urn:oid:2.16.840.1.113883.6.8",
+      "code": "d"
+    }
+  }
+}

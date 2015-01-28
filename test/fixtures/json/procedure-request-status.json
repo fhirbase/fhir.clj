@@ -1,0 +1,83 @@
+{
+  "resourceType": "ValueSet",
+  "id": "procedure-request-status",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 10 concepts</p><h2>ProcedureRequestStatus</h2><p>The status of the request</p><p>This value set defines its own terms in the system http://hl7.org/fhir/procedure-request-status</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>proposed<a name=\"proposed\"> </a></td><td>The request has been proposed.</td></tr><tr><td>planned<a name=\"planned\"> </a></td><td>The request has been planned.</td></tr><tr><td>requested<a name=\"requested\"> </a></td><td>The request has been placed.</td></tr><tr><td>received<a name=\"received\"> </a></td><td>The receiving system has received the request but not yet decided whether it will be performed.</td></tr><tr><td>accepted<a name=\"accepted\"> </a></td><td>The receiving system has accepted the request, but work has not yet commenced.</td></tr><tr><td>in progress<a name=\"inprogress\"> </a></td><td>The work to fulfill the request is happening.</td></tr><tr><td>completed<a name=\"completed\"> </a></td><td>The work has been complete, the report(s) released, and no further work is planned.</td></tr><tr><td>suspended<a name=\"suspended\"> </a></td><td>The request has been held by originating system/user request.</td></tr><tr><td>rejected<a name=\"rejected\"> </a></td><td>The receiving system has declined to fulfill the request.</td></tr><tr><td>aborted<a name=\"aborted\"> </a></td><td>The request was attempted, but due to some procedural error, it could not be completed.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.500"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/procedure-request-status",
+  "name": "ProcedureRequestStatus",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "The status of the request",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.495+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.500"
+      }
+    ],
+    "system": "http://hl7.org/fhir/procedure-request-status",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "proposed",
+        "definition": "The request has been proposed."
+      },
+      {
+        "code": "planned",
+        "definition": "The request has been planned."
+      },
+      {
+        "code": "requested",
+        "definition": "The request has been placed."
+      },
+      {
+        "code": "received",
+        "definition": "The receiving system has received the request but not yet decided whether it will be performed."
+      },
+      {
+        "code": "accepted",
+        "definition": "The receiving system has accepted the request, but work has not yet commenced."
+      },
+      {
+        "code": "in progress",
+        "definition": "The work to fulfill the request is happening."
+      },
+      {
+        "code": "completed",
+        "definition": "The work has been complete, the report(s) released, and no further work is planned."
+      },
+      {
+        "code": "suspended",
+        "definition": "The request has been held by originating system/user request."
+      },
+      {
+        "code": "rejected",
+        "definition": "The receiving system has declined to fulfill the request."
+      },
+      {
+        "code": "aborted",
+        "definition": "The request was attempted, but due to some procedural error, it could not be completed."
+      }
+    ]
+  }
+}

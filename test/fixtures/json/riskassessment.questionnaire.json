@@ -1,0 +1,877 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "vs2",
+      "identifier": "urn:uuid:5e7c2312-c01d-42aa-8768-b97765affe3a",
+      "name": "Type options for RiskAssessment.subject",
+      "description": "Type options for RiskAssessment.subject",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:22:24.005+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Patient",
+            "display": "Patient"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Group",
+            "display": "Group"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs3",
+      "identifier": "urn:uuid:c5106c4f-3ae4-4dbd-9953-42424aa666c1",
+      "name": "Type options for RiskAssessment.performer",
+      "description": "Type options for RiskAssessment.performer",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:22:24.005+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Practitioner",
+            "display": "Practitioner"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Device",
+            "display": "Device"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs4",
+      "identifier": "urn:uuid:2fcecae3-f176-4967-9526-e2831460f98e",
+      "name": "Type options for RiskAssessment.prediction.probability[x]",
+      "description": "Type options for RiskAssessment.prediction.probability[x]",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:22:24.005+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "decimal",
+            "display": "decimal"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Range",
+            "display": "Range"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "CodeableConcept",
+            "display": "CodeableConcept"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs5",
+      "identifier": "urn:uuid:9e7117b9-14d6-41f1-8269-7550633fc206",
+      "name": "Type options for RiskAssessment.prediction.when[x]",
+      "description": "Type options for RiskAssessment.prediction.when[x]",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:22:24.005+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Period",
+            "display": "Period"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Range",
+            "display": "Range"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (Clinical Decision Support)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "An assessment of the likely outcome(s) for a patient or other subject as well as the likelihood of each outcome."
+      }
+    ],
+    "linkId": "RiskAssessment",
+    "title": "Potential outcomes for a subject with likelihood",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "RiskAssessment.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "RiskAssessment.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "RiskAssessment.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "RiskAssessment.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "RiskAssessment.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "RiskAssessment.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "RiskAssessment.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "RiskAssessment.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "RiskAssessment.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "RiskAssessment.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "RiskAssessment.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "RiskAssessment.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "RiskAssessment.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "RiskAssessment.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "RiskAssessment.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "RiskAssessment.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "RiskAssessment.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "RiskAssessment.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "RiskAssessment.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "RiskAssessment.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "RiskAssessment.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The patient or group the risk assessment applies to."
+          }
+        ],
+        "linkId": "RiskAssessment.subject",
+        "text": "Who/what does assessment apply to?",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "RiskAssessment.subject._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs2"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "RiskAssessment.subject._Patient",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "RiskAssessment.subject._Patient.value",
+                    "text": "Patient",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "RiskAssessment.subject._Group",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Group?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "RiskAssessment.subject._Group.value",
+                    "text": "Group",
+                    "type": "reference"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The date (and possibly time) the risk assessment was performed."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "datetime"
+          }
+        ],
+        "linkId": "RiskAssessment.date",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "RiskAssessment.date.value",
+            "text": "When was assessment made?",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "For assessments or prognosis specific to a particular condition, indicates the condition being assessed."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "RiskAssessment.condition",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Condition?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "RiskAssessment.condition.value",
+            "text": "Condition assessed",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The provider or software application that performed the assessment."
+          }
+        ],
+        "linkId": "RiskAssessment.performer",
+        "text": "Who did assessment?",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "RiskAssessment.performer._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs3"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "RiskAssessment.performer._Practitioner",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "RiskAssessment.performer._Practitioner.value",
+                    "text": "Practitioner",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "RiskAssessment.performer._Device",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Device?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "RiskAssessment.performer._Device.value",
+                    "text": "Device",
+                    "type": "reference"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Business identifier assigned to the risk assessment."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Identifier"
+          }
+        ],
+        "linkId": "RiskAssessment.identifier",
+        "text": "Unique identifier for the assessment",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "RiskAssessment.identifier.label",
+            "text": "label:",
+            "type": "string"
+          },
+          {
+            "linkId": "RiskAssessment.identifier.system",
+            "text": "system:",
+            "type": "string"
+          },
+          {
+            "linkId": "RiskAssessment.identifier.value",
+            "text": "value:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The algorithm, processs or mechanism used to evaluate the risk."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "RiskAssessment.method",
+        "text": "Evaluation mechanism",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "RiskAssessment.method.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "RiskAssessment.method.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Indicates the source data considered as part of the assessment (FamilyHistory, Observations, Procedures, Conditions, etc.)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "RiskAssessment.basis",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "RiskAssessment.basis.value",
+            "text": "Information used in assessment",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Describes the expected outcome for the subject."
+          }
+        ],
+        "linkId": "RiskAssessment.prediction",
+        "title": "Outcome predicted",
+        "text": "Multiple repetitions can be used to identify the same type of outcome in different timeframes as well as different types of outcomes.",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "RiskAssessment.prediction.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "RiskAssessment.prediction.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "One of the potential outcomes for the patient (e.g. remission, death,  a particular condition)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "RiskAssessment.prediction.outcome",
+            "text": "Possible outcome for the subject",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "RiskAssessment.prediction.outcome.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "RiskAssessment.prediction.outcome.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "How likely is the outcome (in the specified timeframe). If range is used, it represents the lower and upper bounds of certainty.  E.g. 40-60%\n\nDecimal values are expressed as percentages as well (max = 100)."
+              }
+            ],
+            "linkId": "RiskAssessment.prediction.probability[x]",
+            "text": "Likelihood of specified outcome",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "RiskAssessment.prediction.probability[x]._type",
+                "text": "type",
+                "type": "choice",
+                "options": {
+                  "reference": "#vs4"
+                },
+                "group": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "decimal"
+                      }
+                    ],
+                    "linkId": "RiskAssessment.prediction.probability[x]._decimal",
+                    "question": [
+                      {
+                        "linkId": "RiskAssessment.prediction.probability[x]._decimal.value",
+                        "text": "decimal",
+                        "type": "decimal"
+                      }
+                    ]
+                  },
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "Range"
+                      }
+                    ],
+                    "linkId": "RiskAssessment.prediction.probability[x]._Range",
+                    "text": "Range",
+                    "question": [
+                      {
+                        "linkId": "RiskAssessment.prediction.probability[x]._Range.low",
+                        "text": "low:",
+                        "type": "decimal"
+                      },
+                      {
+                        "linkId": "RiskAssessment.prediction.probability[x]._Range.high",
+                        "text": "high:",
+                        "type": "decimal"
+                      },
+                      {
+                        "linkId": "RiskAssessment.prediction.probability[x]._Range.units",
+                        "text": "units:",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "CodeableConcept"
+                      }
+                    ],
+                    "linkId": "RiskAssessment.prediction.probability[x]._CodeableConcept",
+                    "text": "CodeableConcept",
+                    "question": [
+                      {
+                        "linkId": "RiskAssessment.prediction.probability[x]._CodeableConcept.coding",
+                        "text": "code:",
+                        "type": "open-choice"
+                      },
+                      {
+                        "linkId": "RiskAssessment.prediction.probability[x]._CodeableConcept.text",
+                        "text": "text:",
+                        "type": "string"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Indicates the risk for this particular subject (with their specific characteristics) divided by the risk of the population in general.  (Numbers greater than 1 = higher risk than the population, numbers less than 1 = lower risk.)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "decimal"
+              }
+            ],
+            "linkId": "RiskAssessment.prediction.relativeRisk",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "RiskAssessment.prediction.relativeRisk.value",
+                "text": "Relative likelihood",
+                "type": "decimal"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Indicates the period of time or age range of the subject to which the specified probability applies. If not specified, the risk applies \"over the subject's lifespan\"."
+              }
+            ],
+            "linkId": "RiskAssessment.prediction.when[x]",
+            "text": "Timeframe or age range",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "RiskAssessment.prediction.when[x]._type",
+                "text": "type",
+                "type": "choice",
+                "options": {
+                  "reference": "#vs5"
+                },
+                "group": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "Period"
+                      }
+                    ],
+                    "linkId": "RiskAssessment.prediction.when[x]._Period",
+                    "text": "Period",
+                    "question": [
+                      {
+                        "linkId": "RiskAssessment.prediction.when[x]._Period.low",
+                        "text": "start:",
+                        "type": "dateTime"
+                      },
+                      {
+                        "linkId": "RiskAssessment.prediction.when[x]._Period.end",
+                        "text": "end:",
+                        "type": "dateTime"
+                      }
+                    ]
+                  },
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "Range"
+                      }
+                    ],
+                    "linkId": "RiskAssessment.prediction.when[x]._Range",
+                    "text": "Range",
+                    "question": [
+                      {
+                        "linkId": "RiskAssessment.prediction.when[x]._Range.low",
+                        "text": "low:",
+                        "type": "decimal"
+                      },
+                      {
+                        "linkId": "RiskAssessment.prediction.when[x]._Range.high",
+                        "text": "high:",
+                        "type": "decimal"
+                      },
+                      {
+                        "linkId": "RiskAssessment.prediction.when[x]._Range.units",
+                        "text": "units:",
+                        "type": "string"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Additional information explaining the basis for the prediction."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "RiskAssessment.prediction.rationale",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "RiskAssessment.prediction.rationale.value",
+                "text": "Explanation of prediction",
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A description of the steps that might be taken to reduce the identified risk(s)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "RiskAssessment.mitigation",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "RiskAssessment.mitigation.value",
+            "text": "How to reduce risk",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

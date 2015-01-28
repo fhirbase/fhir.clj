@@ -1,0 +1,59 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "questionnaire-enableWhen",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/questionnaire-enableWhen",
+  "name": "Only allow data when:",
+  "publisher": "HL7",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://www.hl7.org"
+    }
+  ],
+  "description": "If present, indicates that the group or question containing the extension should only be enabled (allow an answer to be present and, in most circumstances, even be visible to the user) when the specified condition is true.",
+  "status": "draft",
+  "date": "2013-07-04",
+  "contextType": "resource",
+  "context": [
+    "Questionnaire.group",
+    "Questionnaire.group.group",
+    "Questionnaire.group.question"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Only allow data when:",
+      "formal": "If present, indicates that the group or question containing the extension should only be enabled (allow an answer to be present and, in most circumstances, even be visible to the user) when the specified condition is true.",
+      "comments": "Allows questionnaires to adapt based on answers to prior questions.  E.g. If physical gender is specified as a male, no need to capture pregnancy history.",
+      "min": 0,
+      "max": "*",
+      "isSummary": false
+    },
+    {
+      "path": "Extension.question",
+      "short": "Question that must be answered",
+      "formal": "The linkId for the question whose answer must be present in order for the \"enable\" to be triggered.",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isSummary": false
+    },
+    {
+      "path": "Extension.answer",
+      "short": "Value question must have",
+      "formal": "If present, then the specified question must match the specified answer for all components present in the enableWhen.answer.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "*"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

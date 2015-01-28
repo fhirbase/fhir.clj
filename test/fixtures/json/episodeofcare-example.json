@@ -1,0 +1,85 @@
+{
+  "resourceType": "EpisodeOfCare",
+  "id": "example",
+  "text": {
+    "status": "generated",
+    "div": "<div>\n      HACC Program for Peter James Chalmers at HL7 Healthcare 15 Sept 2014 - current\n    </div>"
+  },
+  "currentStatus": "active",
+  "statusHistory": [
+    {
+      "status": "planned",
+      "period": {
+        "start": "2014-09-01",
+        "end": "2014-09-14"
+      }
+    },
+    {
+      "status": "active",
+      "period": {
+        "start": "2014-09-15",
+        "end": "2014-09-21"
+      }
+    },
+    {
+      "status": "onhold",
+      "period": {
+        "start": "2014-09-22",
+        "end": "2014-09-24"
+      }
+    },
+    {
+      "status": "active",
+      "period": {
+        "start": "2014-09-25"
+      }
+    }
+  ],
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://example.org/EpisodeOfCare/Type",
+          "code": "HACC",
+          "display": "Home and Community Care Package"
+        }
+      ]
+    }
+  ],
+  "patient": {
+    "reference": "Patient/example"
+  },
+  "managingOrganization": {
+    "reference": "Organization/hl7"
+  },
+  "period": {
+    "start": "2014-09-01"
+  },
+  "careManager": {
+    "reference": "Practitioner/14",
+    "display": "Amanda Assigned"
+  },
+  "careTeam": [
+    {
+      "member": {
+        "reference": "Practitioner/13",
+        "display": "Henry Seven"
+      },
+      "role": [
+        {
+          "coding": [
+            {
+              "system": "http://example.org/EpisodeOfCare/Role",
+              "code": "AO",
+              "display": "Assessment Worker"
+            }
+          ]
+        }
+      ],
+      "period": {
+        "start": "2014-09-01",
+        "end": "2014-09-16"
+      }
+    }
+  ]
+}

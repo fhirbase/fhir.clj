@@ -1,0 +1,45 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "profile-template-status",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/profile-template-status",
+  "name": "Template Status Code (more authoring statuses)",
+  "publisher": "Health Level Seven, Inc. - [WG Name] WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/special/committees/FHIR"
+    }
+  ],
+  "description": "Status code taken from [HL7 template specification](http://wiki.hl7.org/images/7/7a/TemplatesDSTU-20140910b-96.pdf.zip) - allows for alignment with the template DSTU, and has more authoring status codes.",
+  "status": "draft",
+  "date": "2014-01-31",
+  "contextType": "resource",
+  "context": [
+    "Profile"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Template Status Code (more authoring statuses)",
+      "formal": "Status code taken from [HL7 template specification](http://wiki.hl7.org/images/7/7a/TemplatesDSTU-20140910b-96.pdf.zip) - allows for alignment with the template DSTU, and has more authoring status codes.",
+      "comments": "The Profile status has the codes that are relevant to end-users/developers, while this extension has the codes used by profile developers.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isSummary": false,
+      "binding": {
+        "name": "TemplateStatusCode",
+        "isExtensible": false,
+        "conformance": "required",
+        "description": "The status indicates the level of maturity of the design and may be used to manage the use of the design",
+        "referenceReference": {
+          "reference": "http://hl7.org/fhir/vs/template-status-code"
+        }
+      }
+    }
+  ]
+}

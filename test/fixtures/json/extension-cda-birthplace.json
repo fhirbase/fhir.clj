@@ -1,0 +1,50 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "cda-birthplace",
+  "meta": {
+    "lastUpdated": "2014-11-05T20:31:00Z"
+  },
+  "url": "http://hl7.org/fhir/ExtensionDefinition/cda-birthplace",
+  "name": "CDA Birthplace",
+  "publisher": "HL7 FHIR Project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "Standard Profile for CDA R2 on FHIR",
+  "status": "draft",
+  "date": "2014-11-05",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "resource",
+  "context": [
+    "Patient"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "The patient's birthplace",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "profile": "#birthplace"
+        }
+      ],
+      "mapping": [
+        {
+          "identity": "rim",
+          "map": "Role.playingEntity"
+        }
+      ]
+    }
+  ]
+}

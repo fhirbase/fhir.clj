@@ -1,0 +1,76 @@
+{
+  "resourceType": "DiagnosticOrder",
+  "id": "uslab-example1",
+  "text": {
+    "status": "generated",
+    "div": "<div>\n\t\t\t\n      <ul>\n\t\t\t\t\n        <li>file: diagnosticorder-uslab-example1.xml </li>\n\t\t\t\t\n        <li>id: uslab-example1</li>\n\t\t\t\t\n        <li>Name: USLabOrder DiagnosticOrder Example1 </li>\n\t\t\t\t\n        <li>Description: USLabOrder DiagnosticOrder Canonical Example: Childhood Blood Lead Order</li>\n\t\t\t\n      </ul>\n\t\t\n    </div>"
+  },
+  "subject": {
+    "reference": "Patient/uslab-example1",
+    "display": "Todd Lerr"
+  },
+  "orderer": {
+    "reference": "Practitioner/uslab-example1",
+    "display": "Dr Leonard T Bloodraw Jr"
+  },
+  "identifier": [
+    {
+      "use": "official",
+      "label": "Placer Order Number",
+      "system": "urn:oid:2.16.840.1.113883.3.72.5.24",
+      "value": "ORD000123A"
+    }
+  ],
+  "clinicalNotes": "Screening for blood lead",
+  "supportingInformation": [
+    {
+      "reference": "Observation/uslab-example1",
+      "display": "Prior Results Observation"
+    },
+    {
+      "reference": "Condition/uslab-example1",
+      "display": "Lead Exposure"
+    }
+  ],
+  "status": "requested",
+  "priority": "routine",
+  "event": [
+    {
+      "status": "requested",
+      "description": {
+        "coding": [
+          {
+            "code": "new-request"
+          }
+        ]
+      },
+      "dateTime": "2014-12-04T15:42:15-08:00"
+    }
+  ],
+  "item": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://loinc.org",
+            "code": "5671-3",
+            "display": "Lead [Mass/volume] in Blood"
+          },
+          {
+            "system": "urn:oid:2.16.840.1.113883.3.72.5.24",
+            "code": "BLDLD",
+            "display": "Blood Lead"
+          }
+        ],
+        "text": "Blood Lead"
+      },
+      "specimen": [
+        {
+          "reference": "Specimen/uslab-example1",
+          "display": "Whole blood"
+        }
+      ],
+      "status": "requested"
+    }
+  ]
+}

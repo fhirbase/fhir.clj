@@ -1,0 +1,72 @@
+{
+  "resourceType": "Condition",
+  "id": "f001",
+  "subject": {
+    "reference": "Patient/f001",
+    "display": "P. van de Heuvel"
+  },
+  "encounter": {
+    "reference": "Encounter/f001"
+  },
+  "asserter": {
+    "reference": "Patient/f001",
+    "display": "P. van de Heuvel"
+  },
+  "dateAsserted": "2011-10-05",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "368009",
+        "display": "Heart valve disorder"
+      }
+    ]
+  },
+  "category": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "439401001",
+        "display": "diagnosis"
+      }
+    ]
+  },
+  "status": "confirmed",
+  "severity": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "6736007",
+        "display": "Moderate"
+      }
+    ]
+  },
+  "onsetDateTime": "2011-08-05",
+  "evidence": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "426396005",
+            "display": "Cardiac chest pain"
+          }
+        ]
+      }
+    }
+  ],
+  "location": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "40768004",
+            "display": "Left thorax"
+          }
+        ]
+      },
+      "detail": "heart structure"
+    }
+  ]
+}

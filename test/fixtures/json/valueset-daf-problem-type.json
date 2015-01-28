@@ -1,0 +1,68 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-daf-problem-type",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 7 concepts</p><h2>Problem Type Value Set</h2><p>The SNOMED CT&reg; has been limited by HITSP to the value set reproduced below in Table 2-60 Problem Type Value Set Definition. This indicates the level of medical judgment used to determine the existence of a problem</p><p><b>Copyright Statement:</b> This value set includes content from SNOMED CT, which is copyright &copy; 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement</p><p>This value set includes codes defined in other code systems, using the following rules:</p><ul><li>Include these codes as defined in http://snomed.info/sct<table><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td>404684003</td><td>Finding</td><td/></tr><tr><td>409586006</td><td>Complaint</td><td/></tr><tr><td>282291009</td><td>Diagnosis</td><td/></tr><tr><td>64572001</td><td>Condition</td><td/></tr><tr><td>248536006</td><td>Functional limitation</td><td/></tr><tr><td>418799008</td><td>Symptom</td><td/></tr><tr><td>55607006</td><td>Problem</td><td/></tr></table></li></ul></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.3.88.12.3221.7.2"
+    },
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.3.88.12.3221.7.2"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/daf-problem-type",
+  "name": "Problem Type Value Set",
+  "publisher": "PHIN VADS",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "https://phinvads.cdc.gov/vads/ViewValueSet.action?id=71FDBFB5-A277-DE11-9B52-0015173D1785"
+    }
+  ],
+  "description": "The SNOMED CT® has been limited by HITSP to the value set reproduced below in Table 2-60 Problem Type Value Set Definition. This indicates the level of medical judgment used to determine the existence of a problem",
+  "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement",
+  "status": "active",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "404684003",
+            "display": "Finding"
+          },
+          {
+            "code": "409586006",
+            "display": "Complaint"
+          },
+          {
+            "code": "282291009",
+            "display": "Diagnosis"
+          },
+          {
+            "code": "64572001",
+            "display": "Condition"
+          },
+          {
+            "code": "248536006",
+            "display": "Functional limitation"
+          },
+          {
+            "code": "418799008",
+            "display": "Symptom"
+          },
+          {
+            "code": "55607006",
+            "display": "Problem"
+          }
+        ]
+      }
+    ]
+  }
+}

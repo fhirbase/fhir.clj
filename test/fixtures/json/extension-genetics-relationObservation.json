@@ -1,0 +1,50 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "genetics-relationObservation",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/genetics-relationObservation",
+  "name": "Genetic markers, ethnicity, etc.",
+  "publisher": "HL7 International - Clinical Genomics WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://www.hl7.org/Special/committees/clingenomics"
+    }
+  ],
+  "description": "Allows capturing risk-relevant observations about the relative that aren't themselves a specific health condition.  E.g. Certain ethnic ancestries that are disease-relevant, presence of particular genetic markers, etc.",
+  "status": "draft",
+  "date": "2013-10-02",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "resource",
+  "context": [
+    "FamilyHistory.relation"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Genetic markers, ethnicity, etc.",
+      "formal": "Allows capturing risk-relevant observations about the relative that aren't themselves a specific health condition.  E.g. Certain ethnic ancestries that are disease-relevant, presence of particular genetic markers, etc.",
+      "comments": "This may be extended with additional genomics-specific resources when they are ready.",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "profile": "http://hl7.org/fhir/Profile/Observation"
+        }
+      ],
+      "isSummary": false,
+      "mapping": [
+        {
+          "identity": "rim",
+          "map": "inboundRelationship[typeCode=SUBJ].source"
+        }
+      ]
+    }
+  ]
+}

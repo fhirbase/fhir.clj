@@ -1,0 +1,935 @@
+{
+  "resourceType": "Profile",
+  "id": "cqf-procedurerequest-cqf-procedurerequest",
+  "text": {
+    "status": "generated",
+    "div": "<div>to do</div>"
+  },
+  "url": "http://hl7.org/fhir/Profile/cqf-procedurerequest-cqf-procedurerequest",
+  "name": "Clinical Quality Framework (CQF) Procedure Request Profile",
+  "publisher": "Health Level Seven, Inc. - CQI WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/special/committees/CQI"
+    }
+  ],
+  "description": "Profile of Procedure Request for decision support/quality metrics. Indicates which elements must be supported by CQF rules and measure engines. : Clinical Quality Framework (CQF) Procedure Request Profile",
+  "status": "draft",
+  "date": "2014-12-01",
+  "type": "ProcedureRequest",
+  "base": "http://hl7.org/fhir/Profile/ProcedureRequest",
+  "snapshot": {
+    "element": [
+      {
+        "path": "ProcedureRequest",
+        "name": "cqf-procedurerequest",
+        "short": "Procedure Request",
+        "formal": "A request for a procedure to be performed. May be a proposal or an order.",
+        "min": 1,
+        "max": "1",
+        "isSummary": false
+      },
+      {
+        "path": "ProcedureRequest.id",
+        "short": "Logical id of this artefact",
+        "formal": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes.",
+        "comments": "The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "ProcedureRequest.meta",
+        "short": "Metadata about the resource",
+        "formal": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
+        "min": 0,
+        "max": "1",
+        "isSummary": false
+      },
+      {
+        "path": "ProcedureRequest.meta.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "ProcedureRequest.meta.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "ProcedureRequest.meta.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "ProcedureRequest.meta.versionId",
+        "short": "Version specific identifier",
+        "formal": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted.",
+        "comments": "The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "ProcedureRequest.meta.lastUpdated",
+        "short": "When the resource version last changed",
+        "formal": "When the resource last changed - e.g. when the version changed.",
+        "comments": "This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "instant"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "ProcedureRequest.meta.profile",
+        "short": "Profiles this resource claims to conform to",
+        "formal": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url.",
+        "comments": "It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "ProcedureRequest.meta.security",
+        "short": "Security Labels applied to this resource",
+        "formal": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
+        "comments": "The security labels can be updated without changing the stated version of the resource.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "ProcedureRequest.meta.tag",
+        "short": "Tags applied",
+        "formal": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
+        "comments": "The tags can be updated without changing the stated version of the resource.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "ProcedureRequest.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "formal": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
+        "comments": "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": false
+      },
+      {
+        "path": "ProcedureRequest.language",
+        "short": "Language of the resource content",
+        "formal": "The base language in which the resource is written.",
+        "comments": "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "Language",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "A human language",
+          "referenceUri": "http://tools.ietf.org/html/bcp47"
+        }
+      },
+      {
+        "path": "ProcedureRequest.text",
+        "short": "Text summary of the resource, for human interpretation",
+        "formal": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+        "comments": "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative.",
+        "synonym": [
+          "narrative",
+          "html",
+          "xhtml",
+          "display"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Narrative"
+          }
+        ],
+        "condition": [
+          "1"
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Act.text?"
+          },
+          {
+            "identity": "rim",
+            "map": "Act.text?"
+          }
+        ]
+      },
+      {
+        "path": "ProcedureRequest.contained",
+        "short": "Contained, inline Resources",
+        "formal": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+        "comments": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
+        "synonym": [
+          "inline resources",
+          "anonymous resources",
+          "contained resources"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Resource"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "ProcedureRequest.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "ProcedureRequest.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "ProcedureRequest.identifier",
+        "short": "Identifier",
+        "formal": "Identifiers assigned to this order by the order or by the receiver.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "quick",
+            "map": "ClinicalStatement.identifier"
+          },
+          {
+            "identity": "quick",
+            "map": "ClinicalStatement.identifier"
+          }
+        ]
+      },
+      {
+        "path": "ProcedureRequest.subject",
+        "short": "Subject",
+        "formal": "The patient who will receive the procedure.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Patient"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "quick",
+            "map": "ClinicalStatement.subject"
+          },
+          {
+            "identity": "quick",
+            "map": "ClinicalStatement.subject"
+          }
+        ]
+      },
+      {
+        "path": "ProcedureRequest.type",
+        "short": "Procedure Type",
+        "formal": "The specific procedure that is ordered. Use text if the exact nature of the procedure can't be coded.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "quick",
+            "map": "Procedure.procedureCode"
+          },
+          {
+            "identity": "quick",
+            "map": "Procedure.procedureCode"
+          }
+        ]
+      },
+      {
+        "path": "ProcedureRequest.bodySite",
+        "short": "Target Body Site",
+        "formal": "The site where the procedure is to be performed.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "quick",
+            "map": "Procedure.targetBodySite"
+          },
+          {
+            "identity": "quick",
+            "map": "Procedure.targetBodySite"
+          }
+        ]
+      },
+      {
+        "path": "ProcedureRequest.indication",
+        "short": "Indication",
+        "formal": "The reason why the procedure is proposed or ordered. This procedure request may be motivated by a Condition for instance.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "quick",
+            "map": "Action.indication.reason"
+          },
+          {
+            "identity": "quick",
+            "map": "Action.indication.reason"
+          }
+        ]
+      },
+      {
+        "path": "ProcedureRequest.timing[x]",
+        "short": "Timing",
+        "formal": "The timing schedule for the proposed or ordered procedure. The Schedule data type allows many different expressions, for example. \"Every 8 hours\"; \"Three times a day\"; \"1/2 an hour before breakfast for 10 days from 23-Dec 2011:\"; \"15 Oct 2013, 17 Oct 2013 and 1 Nov 2013\".",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          },
+          {
+            "code": "Timing"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "quick",
+            "map": "Procedure.procedureSchedule"
+          },
+          {
+            "identity": "quick",
+            "map": "Procedure.procedureSchedule"
+          }
+        ]
+      },
+      {
+        "path": "ProcedureRequest.encounter",
+        "short": "Encounter",
+        "formal": "The encounter within which the procedure proposal or request was created.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Encounter"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "quick",
+            "map": "ClinicalStatement.encounter"
+          },
+          {
+            "identity": "quick",
+            "map": "ClinicalStatement.encounter"
+          }
+        ]
+      },
+      {
+        "path": "ProcedureRequest.performer",
+        "short": "Performer",
+        "formal": "E.g. surgeon, anaethetist, endoscopist.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Practitioner"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Organization"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Patient"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/RelatedPerson"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "ProcedureRequest.status",
+        "short": "proposed | planned | requested | received | accepted | in progress | completed | suspended | rejected | aborted",
+        "formal": "The status of the order.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "ProcedureRequestStatus",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "The status of the request",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/procedure-request-status"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "quick",
+            "map": "Action.currentStatus"
+          },
+          {
+            "identity": "quick",
+            "map": "Action.currentStatus"
+          }
+        ]
+      },
+      {
+        "path": "ProcedureRequest.notes",
+        "short": "Notes",
+        "formal": "Any other notes associated with this proposal or order - e.g., provider instructions.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "quick",
+            "map": "ClinicalStatement.additionalText"
+          },
+          {
+            "identity": "quick",
+            "map": "ClinicalStatement.additionalText"
+          }
+        ]
+      },
+      {
+        "path": "ProcedureRequest.asNeeded[x]",
+        "short": "PRN",
+        "formal": "If a CodeableConcept is present, it indicates the pre-condition for performing the procedure.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "quick",
+            "map": "Proposal.prnReason.reason"
+          },
+          {
+            "identity": "quick",
+            "map": "Proposal.prnReason.reason"
+          }
+        ]
+      },
+      {
+        "path": "ProcedureRequest.orderedOn",
+        "short": "When Requested",
+        "formal": "The time when the request was made.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "quick",
+            "map": "Proposal.proposedAtTime"
+          },
+          {
+            "identity": "quick",
+            "map": "Proposal.proposedAtTime"
+          }
+        ]
+      },
+      {
+        "path": "ProcedureRequest.orderer",
+        "short": "Ordering Party",
+        "formal": "The healthcare professional responsible for proposing or ordering the procedure.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Practitioner"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Patient"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/RelatedPerson"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Device"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "quick",
+            "map": "ClinicalStatement.statementAuthor"
+          },
+          {
+            "identity": "quick",
+            "map": "ClinicalStatement.statementAuthor"
+          }
+        ]
+      },
+      {
+        "path": "ProcedureRequest.priority",
+        "short": "routine | urgent | stat | asap",
+        "formal": "The clinical priority associated with this order.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "ProcedureRequestPriority",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "The priority of the request",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/procedure-request-priority"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "quick",
+            "map": "Proposal.urgency"
+          },
+          {
+            "identity": "quick",
+            "map": "Proposal.urgency"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "path": "ProcedureRequest",
+        "name": "cqf-procedurerequest",
+        "min": 1,
+        "max": "1",
+        "isSummary": false
+      },
+      {
+        "path": "ProcedureRequest.subject",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Patient"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "ProcedureRequest.type",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "ProcedureRequest.bodySite",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "ProcedureRequest.indication",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "ProcedureRequest.timing[x]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          },
+          {
+            "code": "Timing"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "ProcedureRequest.encounter",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Encounter"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "ProcedureRequest.performer",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Practitioner"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Organization"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Patient"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/RelatedPerson"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "ProcedureRequest.status",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "ProcedureRequest.asNeeded[x]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          },
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "ProcedureRequest.orderedOn",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "ProcedureRequest.orderer",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Practitioner"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Patient"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/RelatedPerson"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Device"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "ProcedureRequest.priority",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      }
+    ]
+  }
+}

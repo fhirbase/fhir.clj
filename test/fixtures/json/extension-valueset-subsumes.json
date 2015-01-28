@@ -1,0 +1,30 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "valueset-subsumes",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/valueset-subsumes",
+  "name": "Codes that this concept subsumes that have already been declared elsewhere",
+  "display": "Subsumes",
+  "publisher": "HL7",
+  "description": "Refers to another code defined within the code system that is also subsumed by this code. I.e. This concept subsumes the referenced concept.  Because meaning is inferred from hierarchy as well as definition, the presence of this extension modifies the meaning of the extended concept.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "contextType": "resource",
+  "context": [
+    "ValueSet.define.concept"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Codes that this concept subsumes that have already been declared elsewhere",
+      "formal": "Refers to another code defined within the code system that is also subsumed by this code. I.e. This concept subsumes the referenced concept.  Because meaning is inferred from hierarchy as well as definition, the presence of this extension modifies the meaning of the extended concept.",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

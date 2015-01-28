@@ -1,0 +1,61 @@
+{
+  "resourceType": "Basic",
+  "id": "classModel",
+  "text": {
+    "status": "generated",
+    "div": "<div>\n      \n      <p>\n        <b>Class1</b>\n      </p>\n      \n      <ul>\n        \n        <li>Attribute1: 1..*</li>\n        \n        <li>Attribute2: 0..1</li>\n      \n      </ul>\n    \n    </div>"
+  },
+  "http://example.org/do-not-use/fhir-extensions/UMLclass": [
+    {
+      "name": [
+        {
+          "valueString": "Class1"
+        }
+      ],
+      "attribute": [
+        {
+          "name": [
+            {
+              "valueString": "attribute1"
+            }
+          ],
+          "minOccurs": [
+            {
+              "valueInteger": 1
+            }
+          ],
+          "maxOccurs": [
+            {
+              "valueCode": "*"
+            }
+          ]
+        },
+        {
+          "name": [
+            {
+              "valueString": "attribute2"
+            }
+          ],
+          "minOccurs": [
+            {
+              "valueInteger": 0
+            }
+          ],
+          "maxOccurs": [
+            {
+              "valueInteger": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://example.org/do-not-use/fhir-codes#resourceTypes",
+        "code": "UMLCLASSMODEL"
+      }
+    ]
+  }
+}

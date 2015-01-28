@@ -1,0 +1,91 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "genetics-relationParent",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/genetics-relationParent",
+  "name": "Mother(s) & Father(s) - genetic & other",
+  "publisher": "HL7 International - Clinical Genomics WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://www.hl7.org/Special/committees/clingenomics"
+    }
+  ],
+  "description": "Identifies a parent of the relative.",
+  "status": "draft",
+  "date": "2013-10-02",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "resource",
+  "context": [
+    "FamilyHistory.relation"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Mother(s) & Father(s) - genetic & other",
+      "formal": "Identifies a parent of the relative.",
+      "comments": "Some individuals may have more than two parents (e.g. genetic vs. adoptive parents).  Even non-genetic relationships can be relevant in terms of genetic exposure.",
+      "min": 0,
+      "max": "*",
+      "isSummary": false,
+      "mapping": [
+        {
+          "identity": "rim",
+          "map": "player[classCode<LIV, determinerCode=INSTANCE].scopesRole"
+        }
+      ]
+    },
+    {
+      "path": "Extension.type",
+      "short": "mother | father | adoptive mother | etc.",
+      "formal": "Distinguishes between different types of parental relationships with varying granularity to support capturing the relationship \"to the degree known\".",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isSummary": false,
+      "binding": {
+        "name": "ParentRelationshipType",
+        "isExtensible": true,
+        "conformance": "required",
+        "description": "Parental relationship types",
+        "referenceReference": {
+          "reference": "http://hl7.org/fhir/vs/parent-relationship-codes"
+        }
+      },
+      "mapping": [
+        {
+          "identity": "rim",
+          "map": "code"
+        }
+      ]
+    },
+    {
+      "path": "Extension.identifier",
+      "short": "Link to parent relative(s)",
+      "formal": "Points to the 'id' attribute on the relation who is the parent of this relation.",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isSummary": false,
+      "mapping": [
+        {
+          "identity": "rim",
+          "map": "player.id"
+        }
+      ]
+    }
+  ]
+}

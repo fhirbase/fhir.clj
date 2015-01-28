@@ -1,0 +1,37 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "us-core-religion",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/us-core-religion",
+  "name": "Patient's professed religious affiliation",
+  "publisher": "Fhir Core Team",
+  "description": "A code classifying a person's professed religion.",
+  "status": "draft",
+  "date": "2013-12-03",
+  "contextType": "resource",
+  "context": [
+    "Patient"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Patient's professed religious affiliation",
+      "formal": "A code classifying a person's professed religion.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isSummary": false,
+      "binding": {
+        "name": "Religion",
+        "isExtensible": true,
+        "description": "A code classifying a person's professed religion",
+        "referenceReference": {
+          "reference": "http://hl7.org/fhir/v3/vs/ReligiousAffiliation"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-diagnostic-order-event",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 3 concepts</p><h2>Diagnostic Order Event Codes</h2><p>Additional information about an event that occurred to a diagnostic order</p><p><b>Copyright Statement:</b> This value set includes content from SNOMED CT, which is copyright &copy; 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement</p><p>This value set includes codes defined in other code systems, using the following rules:</p><ul><li>Include these codes as defined in http://snomed.info/sct<table><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td>440622005</td><td>Specimen received (situation)</td><td/></tr><tr><td>394838008</td><td>Test request (procedure)</td><td/></tr><tr><td>26895000</td><td>Laboratory test order cancelation (procedure)</td><td/></tr></table></li></ul></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.621"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/diagnostic-order-event",
+  "name": "Diagnostic Order Event Codes",
+  "publisher": "Orders and Observations Working Group",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "Additional information about an event that occurred to a diagnostic order",
+  "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement",
+  "status": "draft",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "440622005"
+          },
+          {
+            "code": "394838008"
+          },
+          {
+            "code": "26895000"
+          }
+        ]
+      }
+    ]
+  }
+}

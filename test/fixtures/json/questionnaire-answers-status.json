@@ -1,0 +1,58 @@
+{
+  "resourceType": "ValueSet",
+  "id": "questionnaire-answers-status",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 3 concepts</p><h2>QuestionnaireAnswersStatus</h2><p>Lifecycle status of the questionnaire answers</p><p>This value set defines its own terms in the system http://hl7.org/fhir/questionnaire-answers-status</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>in progress<a name=\"inprogress\"> </a></td><td>in progress</td><td>This QuestionnaireAnswers has been partially filled out with answers, but changes or additions are still expected to be made to it.</td></tr><tr><td>completed<a name=\"completed\"> </a></td><td>completed</td><td>This QuestionnaireAnswers has been filled out with answers, and the current content is regarded as definitive.</td></tr><tr><td>amended<a name=\"amended\"> </a></td><td>amended</td><td>This QuestionnaireAnswers has been filled out with answers, then marked as complete, yet changes or additions have been made to it afterwards.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.387"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/questionnaire-answers-status",
+  "name": "QuestionnaireAnswersStatus",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Lifecycle status of the questionnaire answers",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.490+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.387"
+      }
+    ],
+    "system": "http://hl7.org/fhir/questionnaire-answers-status",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "in progress",
+        "display": "in progress",
+        "definition": "This QuestionnaireAnswers has been partially filled out with answers, but changes or additions are still expected to be made to it."
+      },
+      {
+        "code": "completed",
+        "display": "completed",
+        "definition": "This QuestionnaireAnswers has been filled out with answers, and the current content is regarded as definitive."
+      },
+      {
+        "code": "amended",
+        "display": "amended",
+        "definition": "This QuestionnaireAnswers has been filled out with answers, then marked as complete, yet changes or additions have been made to it afterwards."
+      }
+    ]
+  }
+}

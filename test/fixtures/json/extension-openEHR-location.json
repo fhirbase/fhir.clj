@@ -1,0 +1,43 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "openEHR-location",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/openEHR-location",
+  "name": "Body site of manifestations",
+  "publisher": "Health Level Seven, Inc / openEHR project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org"
+    }
+  ],
+  "description": "The anatomical location / body site(s) where the symptoms manifested.",
+  "status": "draft",
+  "date": "2014-10-09",
+  "contextType": "resource",
+  "context": [
+    "AllergyIntolerance.event"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Body site of manifestations",
+      "formal": "The anatomical location / body site(s) where the symptoms manifested.",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isSummary": false,
+      "binding": {
+        "name": "BodySite",
+        "isExtensible": true,
+        "description": "Codes describing anatomical locations. May include laterality",
+        "referenceReference": {
+          "reference": "http://hl7.org/fhir/vs/body-site"
+        }
+      }
+    }
+  ]
+}

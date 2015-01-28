@@ -1,0 +1,37 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "questionnaire-sdc-optionalDisplay",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/questionnaire-sdc-optionalDisplay",
+  "name": "Can suppress from display to user",
+  "publisher": "U.S. Office of the National Coordinator (ONC)'s Standards and Infrastructure (S&I) Structured Data Capture project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://wiki.siframework.org/Structured+Data+Capture+Initiative"
+    }
+  ],
+  "description": "If set to true, it means that the system displaying the form (or the individual encoding the form for data capture) can choose to omit the question from display to the user.",
+  "status": "draft",
+  "date": "2014-04-21",
+  "contextType": "resource",
+  "context": [
+    "Questionnaire.group",
+    "Questionnaire.group.group"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Can suppress from display to user",
+      "formal": "If set to true, it means that the system displaying the form (or the individual encoding the form for data capture) can choose to omit the question from display to the user.",
+      "comments": "If a group or question that contains other groups or questions is marked as \"optional\", all of its contents are automatically also treated as optional.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

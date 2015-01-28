@@ -1,0 +1,55 @@
+{
+  "resourceType": "ValueSet",
+  "id": "location-status",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 3 concepts</p><h2>LocationStatus</h2><p>Indicates whether the location is still in use</p><p>This value set defines its own terms in the system http://hl7.org/fhir/location-status</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>active<a name=\"active\"> </a></td><td>The location is operational.</td></tr><tr><td>suspended<a name=\"suspended\"> </a></td><td>The location is temporarily closed.</td></tr><tr><td>inactive<a name=\"inactive\"> </a></td><td>The location is no longer used.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.343"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/location-status",
+  "name": "LocationStatus",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Indicates whether the location is still in use",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.491+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.343"
+      }
+    ],
+    "system": "http://hl7.org/fhir/location-status",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "active",
+        "definition": "The location is operational."
+      },
+      {
+        "code": "suspended",
+        "definition": "The location is temporarily closed."
+      },
+      {
+        "code": "inactive",
+        "definition": "The location is no longer used."
+      }
+    ]
+  }
+}

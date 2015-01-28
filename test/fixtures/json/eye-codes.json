@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "id": "eye-codes",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 2 concepts</p><h2>VisionEyes</h2><p>A coded concept listing the eye codes.</p><p>This value set defines its own terms in the system http://hl7.org/fhir/eye-codes</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>right<a name=\"right\"> </a></td><td>right eye.</td></tr><tr><td>left<a name=\"left\"> </a></td><td>left eye.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.557"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/eye-codes",
+  "name": "VisionEyes",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "A coded concept listing the eye codes.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.495+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.557"
+      }
+    ],
+    "system": "http://hl7.org/fhir/eye-codes",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "right",
+        "definition": "right eye."
+      },
+      {
+        "code": "left",
+        "definition": "left eye."
+      }
+    ]
+  }
+}

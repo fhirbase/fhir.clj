@@ -1,0 +1,42 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "questionnaire-mimeType",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/questionnaire-mimeType",
+  "name": "Type of attachment",
+  "publisher": "HL7",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://www.hl7.org"
+    }
+  ],
+  "description": "Identifies the kind(s) of [[[Attachment]]] allowed to be sent in answer to the question.",
+  "status": "draft",
+  "date": "2013-07-04",
+  "contextType": "resource",
+  "context": [
+    "Questionnaire.group.question"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Type of attachment",
+      "formal": "Identifies the kind(s) of [[[Attachment]]] allowed to be sent in answer to the question.",
+      "comments": "This extension only has meaning if the question.type = Attachment.",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isSummary": false,
+      "binding": {
+        "name": "MimeType",
+        "isExtensible": true,
+        "description": "The mime type of an attachment",
+        "referenceUri": "http://www.rfc-editor.org/bcp/bcp13.txt"
+      }
+    }
+  ]
+}

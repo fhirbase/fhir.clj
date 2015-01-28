@@ -1,0 +1,2074 @@
+{
+  "resourceType": "Profile",
+  "id": "cqf-nutritionorder-cqf-nutritionorder",
+  "text": {
+    "status": "generated",
+    "div": "<div>to do</div>"
+  },
+  "url": "http://hl7.org/fhir/Profile/cqf-nutritionorder-cqf-nutritionorder",
+  "name": "Clinical Quality Framework (CQF) Nutrition Order Profile",
+  "publisher": "Health Level Seven, Inc. - CQI WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/special/committees/CQI"
+    }
+  ],
+  "description": "Profile of cqf-nutritionorder for decision support/quality metrics. Indicates which elements must be supported by CQF rules and measure engines. : Clinical Quality Framework (CQF) Nutrition Order Profile",
+  "status": "draft",
+  "date": "2014-11-10",
+  "type": "NutritionOrder",
+  "base": "http://hl7.org/fhir/Profile/NutritionOrder",
+  "snapshot": {
+    "element": [
+      {
+        "path": "NutritionOrder",
+        "name": "cqf-nutritionorder",
+        "short": "A request for a diet, formula or nutritional supplement",
+        "formal": "A request to supply a diet, formula feeding (enteral) or oral nutritional supplement to a patient/resident.",
+        "comments": "Referenced by an Order Request (workflow).",
+        "synonym": [
+          "Diet Order",
+          "Diet",
+          "Nutritional Supplement",
+          "Enteral Nutrition"
+        ],
+        "min": 1,
+        "max": "1",
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "ORC / ODS"
+          },
+          {
+            "identity": "v2",
+            "map": "ORC / ODS"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.id",
+        "short": "Logical id of this artefact",
+        "formal": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes.",
+        "comments": "The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.meta",
+        "short": "Metadata about the resource",
+        "formal": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
+        "min": 0,
+        "max": "1",
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.meta.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.meta.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.meta.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.meta.versionId",
+        "short": "Version specific identifier",
+        "formal": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted.",
+        "comments": "The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.meta.lastUpdated",
+        "short": "When the resource version last changed",
+        "formal": "When the resource last changed - e.g. when the version changed.",
+        "comments": "This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "instant"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.meta.profile",
+        "short": "Profiles this resource claims to conform to",
+        "formal": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url.",
+        "comments": "It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.meta.security",
+        "short": "Security Labels applied to this resource",
+        "formal": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
+        "comments": "The security labels can be updated without changing the stated version of the resource.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.meta.tag",
+        "short": "Tags applied",
+        "formal": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
+        "comments": "The tags can be updated without changing the stated version of the resource.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "formal": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
+        "comments": "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.language",
+        "short": "Language of the resource content",
+        "formal": "The base language in which the resource is written.",
+        "comments": "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "Language",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "A human language",
+          "referenceUri": "http://tools.ietf.org/html/bcp47"
+        }
+      },
+      {
+        "path": "NutritionOrder.text",
+        "short": "Text summary of the resource, for human interpretation",
+        "formal": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+        "comments": "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative.",
+        "synonym": [
+          "narrative",
+          "html",
+          "xhtml",
+          "display"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Narrative"
+          }
+        ],
+        "condition": [
+          "1"
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Act.text?"
+          },
+          {
+            "identity": "rim",
+            "map": "Act.text?"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.contained",
+        "short": "Contained, inline Resources",
+        "formal": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+        "comments": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
+        "synonym": [
+          "inline resources",
+          "anonymous resources",
+          "contained resources"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Resource"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.subject",
+        "short": "The person who requires the diet, formula or nutritional supplement",
+        "formal": "The person (patient) who needs the nutrition order for an oral diet, nutritional supplement and/or enteral or formula feeding.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Patient"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "PID"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=SBJ].role"
+          },
+          {
+            "identity": "v2",
+            "map": "PID"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=SBJ].role"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.orderer",
+        "short": "Who ordered the diet, formula or nutritional supplement",
+        "formal": "The practitioner that holds legal responsibility for ordering the diet, nutritional supplement, or formula feedings.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Practitioner"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=AUT].role"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=AUT].role"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.identifier",
+        "short": "Identifiers assigned to this order",
+        "formal": "Identifiers assigned to this order by the order sender or by the order receiver.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".id"
+          },
+          {
+            "identity": "rim",
+            "map": ".id"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.encounter",
+        "short": "The encounter associated with that this nutrition order",
+        "formal": "An encounter that provides additional information about the healthcare context in which this request is made.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Encounter"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]"
+          },
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.dateTime",
+        "short": "Date and time the nutrition order was requested",
+        "formal": "The date and time that this nutrition order was requested.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.allergyIntolerance",
+        "short": "List of the patient's food and nutrition-related allergies and intolerances",
+        "formal": "The ability to list substances that may cause allergies or intolerances which should be included in the nutrition order.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/AllergyIntolerance"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.foodPreferenceModifier",
+        "short": "Order-specific modifier about the type of food that should be given",
+        "formal": "This modifier is used to convey order-specific modifiers about the type of food that should be given. These can be derived from patient allergies, intolerances, or preferences such as Halal, Vegan or Kosher. This modifier applies to the entire nutrition order inclusive of the oral diet, nutritional supplements and enteral formula feedings.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "PatientDiet",
+          "isExtensible": true,
+          "conformance": "preferred",
+          "description": "Medical, cultural or ethical food preferences to help with catering requirements",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/encounter-diet"
+          }
+        }
+      },
+      {
+        "path": "NutritionOrder.excludeFoodModifier",
+        "short": "Order-specific modifier about the type of food that should not be given",
+        "formal": "This modifier is used to convey order-specific modifiers about the type of food that should NOT be given. These can be derived from patient allergies, intolerances, or preferences such as No Red Meat, No Soy or No Wheat or  Gluten-Free. This modifier applies to the entire nutrition order inclusive of the oral diet, nutritional supplements and enteral formula feedings.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "ExcludeFoodModifier",
+          "isExtensible": true,
+          "conformance": "example",
+          "description": "TODO",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/exclude-food-type"
+          }
+        }
+      },
+      {
+        "path": "NutritionOrder.item",
+        "short": "Set of nutrition items or components that comprise the nutrition order",
+        "formal": "Different items that combine to make a complete description of the nutrition to be provided via oral diet, nutritional supplement and/or formula order.",
+        "min": 0,
+        "max": "*",
+        "constraint": [
+          {
+            "key": "1",
+            "name": "nutrition item type",
+            "severity": "error",
+            "human": "Nutrition Order SHALL contain either Oral Diet , Supplement, or Enteral Formula class",
+            "xpath": "exists(f:oralDiet) or exists(f:supplement) or exists(f:enteralFormula)"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.scheduled[x]",
+        "short": "Frequency to offer nutrition item",
+        "formal": "The frequency at which the diet, oral supplement or enteral formula should be given.",
+        "synonym": [
+          "frequency"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Timing"
+          },
+          {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "ODS-2"
+          },
+          {
+            "identity": "v2",
+            "map": "ODS-2"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.isInEffect",
+        "short": "Indicates whether the nutrition item is  currently in effect",
+        "formal": "Indicates whether the nutrition item is  currently in effect for the patient.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet",
+        "short": "Oral diet components",
+        "formal": "Class that defines the components of an oral diet order for the patient.",
+        "min": 0,
+        "max": "1",
+        "condition": [
+          "1"
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "ODS-3"
+          },
+          {
+            "identity": "v2",
+            "map": "ODS-3"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.type",
+        "short": "Type of oral diet or diet restrictions that describe what can be consumed orally",
+        "formal": "Indicates the type of oral diet or diet restrictions that describe what can be consumed orally (i.e., take via the mouth).",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "OralDiet",
+          "isExtensible": true,
+          "conformance": "example",
+          "description": "TODO",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/diet-type"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "ODS-3"
+          },
+          {
+            "identity": "v2",
+            "map": "ODS-3"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.nutrients",
+        "short": "Required  nutrient modifications",
+        "formal": "Class that defines the details of any nutrient modifications required for the oral diet.",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.nutrients.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.nutrients.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.nutrients.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.nutrients.modifier",
+        "short": "Type of nutrient that is being modified",
+        "formal": "Identifies the type of nutrient that is being modified such as carbohydrate or sodium.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "NutrientModifier",
+          "isExtensible": true,
+          "conformance": "example",
+          "description": "TODO",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/nutrient-code"
+          }
+        }
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.nutrients.amount[x]",
+        "short": "Quantity of the specified nutrient",
+        "formal": "The quantity or range of the specified nutrient to supply.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "Range"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.texture",
+        "short": "Required  texture modifications",
+        "formal": "Class that describes any texture modifications required for the patient to safely consume various types of solid foods.",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.texture.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.texture.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.texture.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.texture.modifier",
+        "short": "Code to indicate how to alter the texture of the foods, e.g., pureed",
+        "formal": "Identifies any texture modifications (for solid foods) that should be made, e.g. easy to chew, chopped, ground, and pureed.",
+        "comments": "Coupled with the foodType (Meat).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "TextureModifier",
+          "isExtensible": true,
+          "conformance": "example",
+          "description": "TODO",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/texture-code"
+          }
+        }
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.texture.foodType",
+        "short": "Concepts that are used to identify an entity that is ingested for nutritional purposes",
+        "formal": "Indicates what specific type of food (e.g., meats) the texture modification applies to or may apply to all foods in the diet.",
+        "comments": "Coupled with the textureModifier; could be (All Foods).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "FoodType",
+          "isExtensible": true,
+          "conformance": "example",
+          "description": "TODO",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/food-type"
+          }
+        }
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.fluidConsistencyType",
+        "short": "The required consistency of fluids and liquids provided to the patient",
+        "formal": "Identifies the required consistency (e.g., honey-thick, nectar-thick, thin, thickened.) of liquids or fluids served to the patient.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "FluidConsistencyType",
+          "isExtensible": true,
+          "conformance": "example",
+          "description": "TODO",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/consistency-type"
+          }
+        }
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.instruction",
+        "short": "Instructions or additional information about the oral diet",
+        "formal": "Additional instructions or information pertaining to the oral diet.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "ODS-3"
+          },
+          {
+            "identity": "v2",
+            "map": "ODS-3"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.supplement",
+        "short": "Supplement components",
+        "formal": "Class that defines the components of a supplement order for the patient.",
+        "synonym": [
+          "frequency"
+        ],
+        "min": 0,
+        "max": "1",
+        "condition": [
+          "1"
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "ODS-2"
+          },
+          {
+            "identity": "v2",
+            "map": "ODS-2"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.supplement.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.supplement.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.supplement.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.supplement.type",
+        "short": "Type of supplement product requested",
+        "formal": "Indicates the type of nutritional supplement product required such as high protein or pediatric clear liquid supplement.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "SupplementType",
+          "isExtensible": true,
+          "conformance": "example",
+          "description": "TODO",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/supplement-type"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "NutritionalSupplementType"
+          },
+          {
+            "identity": "rim",
+            "map": "NutritionalSupplementType"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.supplement.quantity",
+        "short": "Amount of the nutritional supplement",
+        "formal": "The amount of the nutritional supplement product to provide to the patient.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.supplement.name",
+        "short": "Product or brand name of the nutritional supplement",
+        "formal": "The product or brand name of the nutritional supplement product to be provided to the patient.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula",
+        "short": "Enteral formula components",
+        "formal": "Class that defines the components of an enteral formula order for the patient.",
+        "synonym": [
+          "frequency"
+        ],
+        "min": 0,
+        "max": "1",
+        "condition": [
+          "1"
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "ODS-2"
+          },
+          {
+            "identity": "v2",
+            "map": "ODS-2"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.administrationInstructions",
+        "short": "Formula feeding instructions expressed as text",
+        "formal": "Free text formula administration or feeding instructions for cases where the instructions are too complex to code.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.baseFormulaType",
+        "short": "Type of enteral or infant formula",
+        "formal": "Indicates the type of enteral or infant formula requested such as an adult standard formula with fiber or a soy-based infant formula.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "EnteralFormulaType",
+          "isExtensible": true,
+          "conformance": "example",
+          "description": "TODO",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/entformula-type"
+          }
+        }
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.baseFormulaName",
+        "short": "Product or brand name of the enteral or infant formula",
+        "formal": "The product or brand name of the enteral or infant formula product to be provided to the patient.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.additiveType",
+        "short": "Type of modular component to add to the feeding",
+        "formal": "Indicates the type of modular component such as protein, carbohydrate, fat or fiber to be provided in addition to or mixed with the base formula.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "EnteralFormulaAdditiveType",
+          "isExtensible": true,
+          "conformance": "example",
+          "description": "TODO",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/entformula-additive"
+          }
+        }
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.additiveName",
+        "short": "Product or brand name of the modular additive",
+        "formal": "The product or brand name of the type of modular component to be added to the formula.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.caloricDensity",
+        "short": "Amount of energy per specified volume that is required",
+        "formal": "The amount of energy (Calories) that the formula should provide per specified volume, typically per mL or fluid oz.  For example, an infant may require a formula the provides 24 Calories per fluid ounce or an adult may require an enteral formula that provides 1.5 Calorie/mL.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.routeofAdministration",
+        "short": "How the formula should enter the patient's gastrointestinal tract",
+        "formal": "A coded concept specifying the route or physiological path of administration into the patient 's gastrointestinal  tract for purposes of providing the formula feeding, e.g., nasogastric tube.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "EnteralRouteOfAdministration",
+          "isExtensible": true,
+          "conformance": "preferred",
+          "description": "This value set contains concepts to support administration of formula feeding via oral or enteral feeding tubes",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/enteral-route"
+          }
+        }
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.quantity",
+        "short": "The volume of formula to provide",
+        "formal": "The volume of formula to provide to the patient per the specified administration schedule.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.rate",
+        "short": "Speed with which the formula is provided per period of time",
+        "formal": "Identifies the speed with which the formula is introduced into the subject via a feeding pump, e.g., 60 mL per hour, according to the specified schedule.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Ratio"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.rateAdjustment",
+        "short": "Change in the rate of administration over a given time",
+        "formal": "The change in the administration rate over a given time, e.g. increase by 10 mL/hour every 4 hours.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.maxVolumeToDeliver",
+        "short": "Upper limit on formula volume per unit of time",
+        "formal": "The maximum total quantity of formula that may be administered to a subject over the period of time, e.g., 1440 mL over 24 hours.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.status",
+        "short": "requested | active | inactive | held | cancelled",
+        "formal": "The workflow status of the nutrition order request, e.g., Active, Inactive, Pending, Held, Canceled, Suspended.",
+        "comments": "Typically the system placing the order sets the status to requested. There after, the order is maintained by the receiver that updates the status as the request is handled.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "NutritionOrderStatusNotCanceled",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "Value set for a NutritionOrder status which excludes Canceled code",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/nutritionorder-status-notcanceled"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".statusCode"
+          },
+          {
+            "identity": "rim",
+            "map": ".statusCode"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "path": "NutritionOrder",
+        "name": "cqf-nutritionorder",
+        "min": 1,
+        "max": "1",
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.subject",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Patient"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.orderer",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Practitioner"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.encounter",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Encounter"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.dateTime",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.allergyIntolerance",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/AllergyIntolerance"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.foodPreferenceModifier",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.excludeFoodModifier",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.scheduled[x]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Timing"
+          },
+          {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.isInEffect",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.type",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.nutrients",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.nutrients.modifier",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.nutrients.amount[x]",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          },
+          {
+            "code": "Range"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.texture",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.texture.modifier",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.texture.foodType",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.oralDiet.fluidConsistencyType",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.supplement",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.supplement.type",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.supplement.quantity",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.supplement.name",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.baseFormulaType",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.baseFormulaName",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.additiveType",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.additiveName",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.caloricDensity",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.routeofAdministration",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.quantity",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.rate",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Ratio"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.rateAdjustment",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.item.enteralFormula.maxVolumeToDeliver",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "NutritionOrder.status",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "NutritionOrderStatusNotCanceled",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "Value set for a NutritionOrder status which excludes Canceled code",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/nutritionorder-status-notcanceled"
+          }
+        }
+      }
+    ]
+  }
+}

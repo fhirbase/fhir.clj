@@ -1,0 +1,32 @@
+{
+  "resourceType": "Contract",
+  "id": "C-123",
+  "text": {
+    "status": "generated",
+    "div": "<div>A human-readable rendering of the contract</div>"
+  },
+  "subject": [
+    {
+      "reference": "http://www.somewhere.org/patient/12345"
+    }
+  ],
+  "type": {
+    "coding": [
+      {
+        "system": "http://www.hl7.org/fhir/contracttypecodes",
+        "code": "disclosure"
+      }
+    ]
+  },
+  "subtype": [
+    {
+      "coding": [
+        {
+          "system": "http://www.hl7.org/fhir/contractsubtypecodes",
+          "code": "disclosure-US"
+        }
+      ]
+    }
+  ],
+  "issued": "2014-08-17"
+}

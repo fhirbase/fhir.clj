@@ -1,0 +1,45 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "uslabobservationkind",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/uslabobservationkind",
+  "name": "Kind of observation",
+  "display": "Kind of observation",
+  "publisher": "HL7 International - Orders and Observations WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org"
+    }
+  ],
+  "description": "This extension is used to classify the kind of observation in Observation.value for laboratory reporting and to differentiate between actual test results, responses to filler questions when ordering tests and other unsolicted responses.  This may be required to drive operational functionality.",
+  "status": "draft",
+  "date": "2014-11-17",
+  "contextType": "resource",
+  "context": [
+    "Observation"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Kind of observation",
+      "formal": "This extension is used to classify the kind of observation in Observation.value for laboratory reporting and to differentiate between actual test results, responses to filler questions when ordering tests and other unsolicted responses.  This may be required to drive operational functionality.",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isSummary": false,
+      "binding": {
+        "name": "USLabObservationKind",
+        "isExtensible": true,
+        "conformance": "required",
+        "description": "Code to classify the kind of observation in Observation.value[x]",
+        "referenceReference": {
+          "reference": "http://hl7.org/fhir/vs/valueset-obs-uslab-kind"
+        }
+      }
+    }
+  ]
+}

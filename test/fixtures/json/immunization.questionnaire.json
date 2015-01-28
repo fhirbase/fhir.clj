@@ -1,0 +1,1053 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (Public Health and Emergency Response)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "Immunization event information."
+      }
+    ],
+    "linkId": "Immunization",
+    "title": "Immunization event information",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "Immunization.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Immunization.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "Immunization.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Immunization.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Immunization.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Immunization.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Immunization.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "Immunization.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Immunization.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "Immunization.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Immunization.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Immunization.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Immunization.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Immunization.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Immunization.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "Immunization.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Immunization.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "Immunization.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Immunization.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "Immunization.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "Immunization.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A unique identifier assigned to this adverse reaction record."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Identifier"
+          }
+        ],
+        "linkId": "Immunization.identifier",
+        "text": "Business identifier",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Immunization.identifier.label",
+            "text": "label:",
+            "type": "string"
+          },
+          {
+            "linkId": "Immunization.identifier.system",
+            "text": "system:",
+            "type": "string"
+          },
+          {
+            "linkId": "Immunization.identifier.value",
+            "text": "value:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Date vaccine administered or was to be administered."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "datetime"
+          }
+        ],
+        "linkId": "Immunization.date",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Immunization.date.value",
+            "text": "Vaccination administration date",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Vaccine that was administered or was to be administered."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "Immunization.vaccineType",
+        "text": "Vaccine product administered",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Immunization.vaccineType.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "Immunization.vaccineType.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The patient to whom the vaccine was to be administered."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "Immunization.subject",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "Immunization.subject.value",
+            "text": "Who was immunized?",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Indicates if the vaccination was refused."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "boolean"
+          }
+        ],
+        "linkId": "Immunization.refusedIndicator",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Immunization.refusedIndicator.value",
+            "text": "Was immunization refused?",
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "True if this administration was reported rather than directly administered. May need source of reported info (e.g. parent), but leave out for now."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "boolean"
+          }
+        ],
+        "linkId": "Immunization.reported",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Immunization.reported.value",
+            "text": "Is this a self-reported record?",
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Clinician who administered the vaccine."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "Immunization.performer",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "Immunization.performer.value",
+            "text": "Who administered vaccine?",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Clinician who ordered the vaccination. Other participants - delegate to Provenance resource."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "Immunization.requester",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "Immunization.requester.value",
+            "text": "Who ordered vaccination?",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Name of vaccine manufacturer."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "Immunization.manufacturer",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "Immunization.manufacturer.value",
+            "text": "Vaccine manufacturer",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The service delivery location where the vaccine administration occurred."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "Immunization.location",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Location?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "Immunization.location.value",
+            "text": "Where did vaccination occur?",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Lot number of the  vaccine product."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "Immunization.lotNumber",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Immunization.lotNumber.value",
+            "text": "Vaccine lot number",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Date vaccine batch expires."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "datetime"
+          }
+        ],
+        "linkId": "Immunization.expirationDate",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Immunization.expirationDate.value",
+            "text": "Vaccine expiration date",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Body site where vaccine was administered."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "Immunization.site",
+        "text": "Body site vaccine  was administered",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Immunization.site.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "Immunization.site.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The path by which the vaccine product is taken into the body."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "Immunization.route",
+        "text": "How vaccine entered body",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Immunization.route.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "Immunization.route.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The quantity of vaccine product that was administered."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Quantity"
+          }
+        ],
+        "linkId": "Immunization.doseQuantity",
+        "text": "Amount of vaccine administered",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Immunization.doseQuantity.comparator",
+            "text": "comp:",
+            "type": "choice"
+          },
+          {
+            "linkId": "Immunization.doseQuantity.value",
+            "text": "value:",
+            "type": "decimal"
+          },
+          {
+            "linkId": "Immunization.doseQuantity.units",
+            "text": "units:",
+            "type": "string"
+          },
+          {
+            "linkId": "Immunization.doseQuantity.code",
+            "text": "coded units:",
+            "type": "string"
+          },
+          {
+            "linkId": "Immunization.doseQuantity.system",
+            "text": "units system:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Reasons why a vaccine was administered or refused."
+          }
+        ],
+        "linkId": "Immunization.explanation",
+        "title": "Administration / refusal reasons",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Immunization.explanation.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Immunization.explanation.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Reasons why a vaccine was administered."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "Immunization.explanation.reason",
+            "text": "Why immunization occurred",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Immunization.explanation.reason.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "Immunization.explanation.reason.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Refusal or exemption reasons."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "Immunization.explanation.refusalReason",
+            "text": "Why immunization did not occur",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Immunization.explanation.refusalReason.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "Immunization.explanation.refusalReason.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Categorical data indicating that an adverse event is associated in time to an immunization."
+          }
+        ],
+        "linkId": "Immunization.reaction",
+        "title": "Details of a reaction that follows immunization",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Immunization.reaction.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Immunization.reaction.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Date of reaction to the immunization."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "datetime"
+              }
+            ],
+            "linkId": "Immunization.reaction.date",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Immunization.reaction.date.value",
+                "text": "When did reaction start?",
+                "type": "dateTime"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Details of the reaction."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "Immunization.reaction.detail",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Observation?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "Immunization.reaction.detail.value",
+                "text": "Additional information on reaction",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Self-reported indicator."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "boolean"
+              }
+            ],
+            "linkId": "Immunization.reaction.reported",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Immunization.reaction.reported.value",
+                "text": "Was reaction self-reported?",
+                "type": "boolean"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Contains information about the protocol(s) under which the vaccine was administered."
+          }
+        ],
+        "linkId": "Immunization.vaccinationProtocol",
+        "title": "What protocol was followed",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Immunization.vaccinationProtocol.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Immunization.vaccinationProtocol.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Nominal position in a series."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "integer"
+              }
+            ],
+            "linkId": "Immunization.vaccinationProtocol.doseSequence",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Immunization.vaccinationProtocol.doseSequence.value",
+                "text": "What dose number within series?",
+                "type": "integer"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Contains the description about the protocol under which the vaccine was administered."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Immunization.vaccinationProtocol.description",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Immunization.vaccinationProtocol.description.value",
+                "text": "Details of vaccine protocol",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Indicates the authority who published the protocol?  E.g. ACIP."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "Immunization.vaccinationProtocol.authority",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "Immunization.vaccinationProtocol.authority.value",
+                "text": "Who is responsible for protocol",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "One possible path to achieve presumed immunity against a disease - within the context of an authority."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Immunization.vaccinationProtocol.series",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Immunization.vaccinationProtocol.series.value",
+                "text": "Name of vaccine series",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The recommended number of doses to achieve immunity."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "integer"
+              }
+            ],
+            "linkId": "Immunization.vaccinationProtocol.seriesDoses",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Immunization.vaccinationProtocol.seriesDoses.value",
+                "text": "Recommended number of doses for immunity",
+                "type": "integer"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The targeted disease."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "Immunization.vaccinationProtocol.doseTarget",
+            "text": "Disease immunized against",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Immunization.vaccinationProtocol.doseTarget.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "Immunization.vaccinationProtocol.doseTarget.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Indicates if the immunization event should \"count\" against  the protocol. May need to differentiate between status declarations by a provider vs. a CDS engine."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "Immunization.vaccinationProtocol.doseStatus",
+            "text": "Does dose count towards immunity?",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Immunization.vaccinationProtocol.doseStatus.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "Immunization.vaccinationProtocol.doseStatus.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Provides an explanation as to why a immunization event should or should not count against the protocol."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "Immunization.vaccinationProtocol.doseStatusReason",
+            "text": "Why does does count/not count?",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Immunization.vaccinationProtocol.doseStatusReason.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "Immunization.vaccinationProtocol.doseStatusReason.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

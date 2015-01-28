@@ -1,0 +1,46 @@
+{
+  "resourceType": "Medication",
+  "id": "f001",
+  "name": "Combivent",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "320442002",
+        "display": "Salbutamol+ipratropium bromide 100micrograms/20micrograms inhaler"
+      }
+    ]
+  },
+  "isBrand": true,
+  "kind": "product",
+  "product": {
+    "form": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "420317006",
+          "display": "Inhaler (qualifier value)"
+        }
+      ]
+    },
+    "ingredient": [
+      {
+        "item": {
+          "reference": "Medication/f001",
+          "display": "Combivent"
+        },
+        "amount": {
+          "numerator": {
+            "value": 100,
+            "units": "ml",
+            "system": "http://unitsofmeasure.org",
+            "code": "ml"
+          },
+          "denominator": {
+            "value": 1
+          }
+        }
+      }
+    ]
+  }
+}

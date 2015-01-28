@@ -1,0 +1,36 @@
+{
+  "resourceType": "Patient",
+  "id": "proband",
+  "text": {
+    "status": "generated",
+    "div": "<div>\n      \n      <p>\n        \n        <b>Annie Proband</b>: Female, born 1966-04-04\n      </p>\n    \n    </div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/us-core-race": [
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2106-3",
+            "display": "white"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "use": "usual",
+      "label": "Computer-Stored Abulatory Records (COSTAR)",
+      "system": "urn:oid:2.16.840.1.113883.6.117",
+      "value": "999999999",
+      "assigner": {
+        "display": "Boston Massachesetts General Hospital"
+      }
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1966-04-04",
+  "deceasedBoolean": false,
+  "active": true
+}

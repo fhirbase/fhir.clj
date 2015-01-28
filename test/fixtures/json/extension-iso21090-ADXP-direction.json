@@ -1,0 +1,48 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "iso21090-ADXP-direction",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/iso21090-ADXP-direction",
+  "name": "direction",
+  "publisher": "HL7",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://www.hl7.org"
+    }
+  ],
+  "description": "Direction (e.g., N, S, W, E).",
+  "status": "draft",
+  "date": "2012-06-24",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "datatype",
+  "context": [
+    "Address"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "direction",
+      "formal": "Direction (e.g., N, S, W, E).",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isSummary": false,
+      "mapping": [
+        {
+          "identity": "rim",
+          "map": "ADXP[partType=DIR]"
+        }
+      ]
+    }
+  ]
+}

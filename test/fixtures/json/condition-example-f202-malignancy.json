@@ -1,0 +1,74 @@
+{
+  "resourceType": "Condition",
+  "id": "f202",
+  "subject": {
+    "reference": "Patient/f201",
+    "display": "Roel"
+  },
+  "dateAsserted": "2012-12-01",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "363346000",
+        "display": "Malignant neoplastic disease"
+      }
+    ]
+  },
+  "category": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/condition-category",
+        "code": "diagnose"
+      }
+    ]
+  },
+  "status": "confirmed",
+  "certainty": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "17162000",
+        "display": "Certain"
+      }
+    ]
+  },
+  "severity": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "24484000",
+        "display": "Severe"
+      }
+    ]
+  },
+  "onsetAge": {
+    "value": 52,
+    "units": "years",
+    "system": "http://snomed.info/sct",
+    "code": "258707000"
+  },
+  "evidence": [
+    {
+      "detail": [
+        {
+          "reference": "DiagnosticReport/f201",
+          "display": "Erasmus' diagnostic report of Roel's tumor"
+        }
+      ]
+    }
+  ],
+  "location": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "361355005",
+            "display": "Entire head and neck"
+          }
+        ]
+      }
+    }
+  ]
+}

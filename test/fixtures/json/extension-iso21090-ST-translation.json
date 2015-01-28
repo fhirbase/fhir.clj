@@ -1,0 +1,49 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "iso21090-ST-translation",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/iso21090-ST-translation",
+  "name": "translation",
+  "publisher": "HL7",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://www.hl7.org"
+    }
+  ],
+  "description": "An expression of the original string in an alternate language.",
+  "status": "draft",
+  "date": "2012-06-24",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "datatype",
+  "context": [
+    "string"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "translation",
+      "formal": "An expression of the original string in an alternate language.",
+      "comments": "string-translation elements should not have string-translation extensions (i.e. all translations should be expressed as siblings, not as a translation hierarchy) to simplify processing.",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isSummary": false,
+      "mapping": [
+        {
+          "identity": "rim",
+          "map": "ED.translation"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "valueset-trusted-expansion",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/valueset-trusted-expansion",
+  "name": "Reference to a trusted expansion",
+  "publisher": "HL7",
+  "description": "Indicates an authoritative source for performing value set expansions.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "contextType": "resource",
+  "context": [
+    "ValueSet"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Reference to a trusted expansion",
+      "formal": "Indicates an authoritative source for performing value set expansions.",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "resourceType": "ValueSet",
+  "id": "metric-category",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 4 concepts</p><h2>DeviceMetricCategory</h2><p>Describes the category of the metric</p><p>This value set defines its own terms in the system http://hl7.org/fhir/metric-category</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>measurement<a name=\"measurement\"> </a></td><td>DeviceObservations generated for this DeviceMetric are measured.</td></tr><tr><td>setting<a name=\"setting\"> </a></td><td>DeviceObservations generated for this DeviceMetric is a setting that will influence the behavior of the Device.</td></tr><tr><td>calculation<a name=\"calculation\"> </a></td><td>DeviceObservations generated for this DeviceMetric are calculated.</td></tr><tr><td>unspecified<a name=\"unspecified\"> </a></td><td>The category of this DeviceMetric is unspecified.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.535"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/metric-category",
+  "name": "DeviceMetricCategory",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Describes the category of the metric",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.494+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.535"
+      }
+    ],
+    "system": "http://hl7.org/fhir/metric-category",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "measurement",
+        "definition": "DeviceObservations generated for this DeviceMetric are measured."
+      },
+      {
+        "code": "setting",
+        "definition": "DeviceObservations generated for this DeviceMetric is a setting that will influence the behavior of the Device."
+      },
+      {
+        "code": "calculation",
+        "definition": "DeviceObservations generated for this DeviceMetric are calculated."
+      },
+      {
+        "code": "unspecified",
+        "definition": "The category of this DeviceMetric is unspecified."
+      }
+    ]
+  }
+}

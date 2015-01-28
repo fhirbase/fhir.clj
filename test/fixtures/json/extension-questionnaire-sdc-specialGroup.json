@@ -1,0 +1,45 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "questionnaire-sdc-specialGroup",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/questionnaire-sdc-specialGroup",
+  "name": "header | footer",
+  "publisher": "U.S. Office of the National Coordinator (ONC)'s Standards and Infrastructure (S&I) Structured Data Capture project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://wiki.siframework.org/Structured+Data+Capture+Initiative"
+    }
+  ],
+  "description": "If specified, indicates that the group should be rendered as a repeating header or footer on each \"page\" of the questionnaire.",
+  "status": "draft",
+  "date": "2014-04-21",
+  "contextType": "resource",
+  "context": [
+    "Questionnaire.group",
+    "Questionnaire.group.group"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "header | footer",
+      "formal": "If specified, indicates that the group should be rendered as a repeating header or footer on each \"page\" of the questionnaire.",
+      "comments": "When omitted, sections are presumed to be \"regular\" sections.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isSummary": false,
+      "binding": {
+        "name": "QuestionnaireGroupSpecialType",
+        "isExtensible": true,
+        "description": "If specified, indicates that the group should be rendered as a repeating header or footer on each \"page\" of the questionnaire.",
+        "referenceReference": {
+          "reference": "http://hl7.org/fhir/vs/special-type"
+        }
+      }
+    }
+  ]
+}

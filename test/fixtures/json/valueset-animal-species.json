@@ -1,0 +1,52 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-animal-species",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 3 concepts</p><h2>AnimalSpecies</h2><p>This example value set defines a set of codes that can be used to indicate species of animal patients.</p><p>This value set defines its own terms in the system http://hl7.org/fhir/animal-species</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>canislf<a name=\"canislf\"> </a></td><td>Dog</td><td>Canis lupus familiaris</td></tr><tr><td>ovisa<a name=\"ovisa\"> </a></td><td>Sheep</td><td>Ovis aries</td></tr><tr><td>serinuscd<a name=\"serinuscd\"> </a></td><td>Domestic Canary</td><td>Serinus canaria domestica</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.133"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/animal-species",
+  "name": "AnimalSpecies",
+  "publisher": "FHIR Project team",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "This example value set defines a set of codes that can be used to indicate species of animal patients.",
+  "status": "draft",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:null"
+      }
+    ],
+    "system": "http://hl7.org/fhir/animal-species",
+    "concept": [
+      {
+        "code": "canislf",
+        "display": "Dog",
+        "definition": "Canis lupus familiaris"
+      },
+      {
+        "code": "ovisa",
+        "display": "Sheep",
+        "definition": "Ovis aries"
+      },
+      {
+        "code": "serinuscd",
+        "display": "Domestic Canary",
+        "definition": "Serinus canaria domestica"
+      }
+    ]
+  }
+}

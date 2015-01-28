@@ -1,0 +1,56 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "data-absent-reason",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/data-absent-reason",
+  "name": "unknown | asked | temp | notasked | masked | unsupported | astext | error",
+  "publisher": "HL7 FHIR project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "Provides a reason why the expected value or elements in the element that is extended are missing.",
+  "status": "draft",
+  "date": "2013-12-05",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "datatype",
+  "context": [
+    "*"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "unknown | asked | temp | notasked | masked | unsupported | astext | error",
+      "formal": "Provides a reason why the expected value or elements in the element that is extended are missing.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isSummary": false,
+      "binding": {
+        "name": "DataAbsentReason",
+        "isExtensible": true,
+        "description": "Used to specify why the normally expected content of the data element is missing",
+        "referenceReference": {
+          "reference": "http://hl7.org/fhir/vs/data-absent-reason"
+        }
+      },
+      "mapping": [
+        {
+          "identity": "rim",
+          "map": "ANY.nullFlavor"
+        }
+      ]
+    }
+  ]
+}

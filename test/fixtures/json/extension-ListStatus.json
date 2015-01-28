@@ -1,0 +1,43 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "ListStatus",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/ListStatus",
+  "name": "registered | preliminary | final",
+  "publisher": "HL7 International - Orders and Observations WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org"
+    }
+  ],
+  "description": "The status of the list.",
+  "status": "draft",
+  "date": "2014-09-21",
+  "contextType": "resource",
+  "context": [
+    "List"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "registered | preliminary | final",
+      "formal": "The status of the list.",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isSummary": false,
+      "binding": {
+        "name": "ListStatusCodes",
+        "isExtensible": true,
+        "description": "Codes providing the status of a list",
+        "referenceReference": {
+          "reference": "http://hl7.org/fhir/vs/list-status"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "cda-whole-organization",
+  "meta": {
+    "lastUpdated": "2014-11-05T20:31:00Z"
+  },
+  "url": "http://hl7.org/fhir/ExtensionDefinition/cda-whole-organization",
+  "name": "CDA Organizational Parent",
+  "publisher": "HL7 FHIR Project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "Standard Profile for CDA R2 on FHIR",
+  "status": "draft",
+  "date": "2014-11-05",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "resource",
+  "context": [
+    "Organization.partOf"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "The type of the organizational relationship",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "profile": "#Organization"
+        }
+      ]
+    }
+  ]
+}

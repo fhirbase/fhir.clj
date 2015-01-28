@@ -1,0 +1,137 @@
+{
+  "resourceType": "OperationDefinition",
+  "id": "ValueSet-validate",
+  "text": {
+    "status": "generated",
+    "div": "<div><h2>Value Set based Validation</h2><p>OPERATION: validate</p><div><p>Validate that a coded value is in the set of codes allowed by a value set.</p>\n<p>If the operation is not called at the instance level, one of the in parameters identifier or valueset must be provided.</p>\n<p>One (and only one) of the in parameters (code, coding, codeableConcept) must be provided. || The outcome is an OperationOutcome with hints, warnings, or errors.</p>\n</div><p>URL: [base]/ValueSet/$validate</p><p>URL: [base]/ValueSet/[id]/$validate</p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>identifier</td><td>0..1</td><td>uri</td><td><div><p>A logical value set identifier (i.e. ValueSet.identifier). The server must know the value set (e.g. it is defined explicitly in the server's valuesets, or it is defined implicitly by some code system known to the server</p>\n</div></td></tr><tr><td>IN</td><td>valueSet</td><td>0..1</td><td>ValueSet</td><td><div><p>The value set is provided directly as part of the request. Servers may choose not to accept value sets in this fashion</p>\n</div></td></tr><tr><td>IN</td><td>code</td><td>0..1</td><td>code</td><td><div><p>The code that is to be validated. If a code is provided, a system must be provided</p>\n</div></td></tr><tr><td>IN</td><td>system</td><td>0..1</td><td>uri</td><td><div><p>The system for the code that is to be validated</p>\n</div></td></tr><tr><td>IN</td><td>version</td><td>0..1</td><td>string</td><td><div><p>The version of the system, if one was provided in the source data</p>\n</div></td></tr><tr><td>IN</td><td>display</td><td>0..1</td><td>string</td><td><div><p>The display associated with the code, if provided. If a display is provided a code must be provided. If no display is provided, the server cannot validate the display value, but may choose to return athe recommended display name in an extension in the outcome</p>\n</div></td></tr><tr><td>IN</td><td>coding</td><td>0..1</td><td>Coding</td><td><div><p>A coding to validate</p>\n</div></td></tr><tr><td>IN</td><td>codeableConcept</td><td>0..1</td><td>CodeableConcept</td><td><div><p>A full codeableConcept to validate. The server returns true if one of the coding values is in the value set, and may also validate that the codings are not in conflict with each other</p>\n</div></td></tr><tr><td>IN</td><td>date</td><td>0..1</td><td>dateTime</td><td><div><p>The date for which the validation should be checked. Normally, this is the current conditions (which is the default values) but under some circumstances, systems need to validate that a correct code was used at some point in the past. A typical example of this would be where code selection is constrained to the set of codes that were available when the patient was treated, not when the record is being edited. Note that which date is appropriate is a matter for implementation policy.</p>\n</div></td></tr><tr><td>IN</td><td>abstract</td><td>0..1</td><td>boolean</td><td><div><p>if true, then an abstract code is allowed to be used in the context of the code that is being validated. Typically, abstract codes are allowed to be used in value set specifications (e.g. any code that is subsumed by an abstract code). If false (which is the default value), then only concrete codes as defined by the value set are allowed</p>\n</div></td></tr><tr><td>OUT</td><td>result</td><td>1..1</td><td>boolean</td><td><div><p>True if the concept details supplied are valid</p>\n</div></td></tr><tr><td>OUT</td><td>message</td><td>0..1</td><td>string</td><td><div><p>Error details, if result = false. If this is provided when result = true, the message carries hints and wanrings</p>\n</div></td></tr><tr><td>OUT</td><td>display</td><td>0..1</td><td>string</td><td><div><p>A valid display for the concept if the system wishes to display this to a user</p>\n</div></td></tr></table></div>"
+  },
+  "identifier": "http://hl7.org/fhir/OperationDefinition/ValueSet-validate",
+  "title": "Value Set based Validation",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Validate that a coded value is in the set of codes allowed by a value set. \n\nIf the operation is not called at the instance level, one of the in parameters identifier or valueset must be provided.\n\nOne (and only one) of the in parameters (code, coding, codeableConcept) must be provided. || The outcome is an OperationOutcome with hints, warnings, or errors.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "kind": "operation",
+  "name": "validate",
+  "system": false,
+  "type": [
+    "ValueSet"
+  ],
+  "instance": true,
+  "parameter": [
+    {
+      "name": "identifier",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "A logical value set identifier (i.e. ValueSet.identifier). The server must know the value set (e.g. it is defined explicitly in the server's valuesets, or it is defined implicitly by some code system known to the server",
+      "type": "uri"
+    },
+    {
+      "name": "valueSet",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "The value set is provided directly as part of the request. Servers may choose not to accept value sets in this fashion",
+      "type": "ValueSet"
+    },
+    {
+      "name": "code",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "The code that is to be validated. If a code is provided, a system must be provided",
+      "type": "code"
+    },
+    {
+      "name": "system",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "The system for the code that is to be validated",
+      "type": "uri"
+    },
+    {
+      "name": "version",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "The version of the system, if one was provided in the source data",
+      "type": "string"
+    },
+    {
+      "name": "display",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "The display associated with the code, if provided. If a display is provided a code must be provided. If no display is provided, the server cannot validate the display value, but may choose to return athe recommended display name in an extension in the outcome",
+      "type": "string"
+    },
+    {
+      "name": "coding",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "A coding to validate",
+      "type": "Coding"
+    },
+    {
+      "name": "codeableConcept",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "A full codeableConcept to validate. The server returns true if one of the coding values is in the value set, and may also validate that the codings are not in conflict with each other",
+      "type": "CodeableConcept"
+    },
+    {
+      "name": "date",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "The date for which the validation should be checked. Normally, this is the current conditions (which is the default values) but under some circumstances, systems need to validate that a correct code was used at some point in the past. A typical example of this would be where code selection is constrained to the set of codes that were available when the patient was treated, not when the record is being edited. Note that which date is appropriate is a matter for implementation policy.",
+      "type": "dateTime"
+    },
+    {
+      "name": "abstract",
+      "use": "in",
+      "min": 0,
+      "max": "1",
+      "documentation": "if true, then an abstract code is allowed to be used in the context of the code that is being validated. Typically, abstract codes are allowed to be used in value set specifications (e.g. any code that is subsumed by an abstract code). If false (which is the default value), then only concrete codes as defined by the value set are allowed",
+      "type": "boolean"
+    },
+    {
+      "name": "result",
+      "use": "out",
+      "min": 1,
+      "max": "1",
+      "documentation": "True if the concept details supplied are valid",
+      "type": "boolean"
+    },
+    {
+      "name": "message",
+      "use": "out",
+      "min": 0,
+      "max": "1",
+      "documentation": "Error details, if result = false. If this is provided when result = true, the message carries hints and wanrings",
+      "type": "string"
+    },
+    {
+      "name": "display",
+      "use": "out",
+      "min": 0,
+      "max": "1",
+      "documentation": "A valid display for the concept if the system wishes to display this to a user",
+      "type": "string"
+    }
+  ]
+}

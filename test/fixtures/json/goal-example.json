@@ -1,0 +1,55 @@
+{
+  "resourceType": "Goal",
+  "id": "example",
+  "text": {
+    "status": "additional",
+    "div": "<div>\n\t\t\t\n      <p> A simple care goal for a patient to lose weight due to obesity.</p>\n\t\t\n    </div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/goal-common-target": [
+    {
+      "measure": [
+        {
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "3141-9",
+                "display": "Weight Measured"
+              }
+            ]
+          }
+        }
+      ],
+      "detail": [
+        {
+          "valueRange": {
+            "low": {
+              "value": 160,
+              "units": "lbs",
+              "system": "http://unitsofmeasure.org",
+              "code": "[lb_av]"
+            },
+            "high": {
+              "value": 180,
+              "units": "lbs",
+              "system": "http://unitsofmeasure.org",
+              "code": "[lb_av]"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "patient": {
+    "reference": "Patient/example",
+    "display": "Peter James Chalmers"
+  },
+  "description": "Target weight is 160 to 180 lbs.",
+  "status": "in progress",
+  "concern": [
+    {
+      "reference": "Condition/12345",
+      "display": "obesity"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "resourceType": "ValueSet",
+  "id": "observation-reliability",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 7 concepts</p><h2>ObservationReliability</h2><p>Codes that provide an estimate of the degree to which quality issues have impacted on the value of an observation</p><p>This value set defines its own terms in the system http://hl7.org/fhir/observation-reliability</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>ok<a name=\"ok\"> </a></td><td>The result has no reliability concerns.</td></tr><tr><td>ongoing<a name=\"ongoing\"> </a></td><td>An early estimate of value; measurement is still occurring.</td></tr><tr><td>early<a name=\"early\"> </a></td><td>An early estimate of value; processing is still occurring.</td></tr><tr><td>questionable<a name=\"questionable\"> </a></td><td>The observation value should be treated with care.</td></tr><tr><td>calibrating<a name=\"calibrating\"> </a></td><td>The result has been generated while calibration is occurring.</td></tr><tr><td>error<a name=\"error\"> </a></td><td>The observation could not be completed because of an error.</td></tr><tr><td>unknown<a name=\"unknown\"> </a></td><td>No observation  reliability value was available.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.118"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/observation-reliability",
+  "name": "ObservationReliability",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Codes that provide an estimate of the degree to which quality issues have impacted on the value of an observation",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.491+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.118"
+      }
+    ],
+    "system": "http://hl7.org/fhir/observation-reliability",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "ok",
+        "definition": "The result has no reliability concerns."
+      },
+      {
+        "code": "ongoing",
+        "definition": "An early estimate of value; measurement is still occurring."
+      },
+      {
+        "code": "early",
+        "definition": "An early estimate of value; processing is still occurring."
+      },
+      {
+        "code": "questionable",
+        "definition": "The observation value should be treated with care."
+      },
+      {
+        "code": "calibrating",
+        "definition": "The result has been generated while calibration is occurring."
+      },
+      {
+        "code": "error",
+        "definition": "The observation could not be completed because of an error."
+      },
+      {
+        "code": "unknown",
+        "definition": "No observation  reliability value was available."
+      }
+    ]
+  }
+}

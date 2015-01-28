@@ -1,0 +1,64 @@
+{
+  "resourceType": "Organization",
+  "id": "uslab-example3",
+  "text": {
+    "status": "generated",
+    "div": "<div>\n\t\t\t\n      <ul>\n\t\t\t\t\n        <li>file: org-uslab-example3.xml</li>\n\t\t\t\t\n        <li> id: uslab-example3</li>\n\t\t\t\t\n        <li> Name: USLab Organization Example3 </li>\n\t\t\t\t\n        <li>Description: USLab Performing Lab Organization Profile Canonical Example: Acme Labs</li>\n\t\t\t\n      </ul>\n\t\t\n    </div>"
+  },
+  "identifier": [
+    {
+      "use": "official",
+      "label": "CLIA",
+      "value": "01D1111111",
+      "assigner": {
+        "reference": "http://www.cms.gov/Regulations-and-Guidance/Legislation/CLIA/index.html",
+        "display": "The Centers for Medicare and Medicaid Services (CMS)  Clinical Laboratory Improvement Amendments (CLIA)"
+      }
+    }
+  ],
+  "name": "Acme Labs",
+  "address": [
+    {
+      "http://example.org/us-core-county": [
+        {
+          "http://example.org//iso21090-SC-coding": [
+            {
+              "valueCoding": {
+                "system": "https://www.census.gov/geo/reference",
+                "code": "42043"
+              }
+            }
+          ]
+        }
+      ],
+      "use": "work",
+      "line": [
+        "Firstcare Way",
+        "Building 2"
+      ],
+      "city": "Harrisburg",
+      "state": "PA",
+      "postalCode": "42043",
+      "country": "USA"
+    }
+  ],
+  "contact": [
+    {
+      "name": {
+        "family": [
+          "House"
+        ],
+        "given": [
+          "Gregory",
+          "F"
+        ],
+        "prefix": [
+          "Dr"
+        ],
+        "suffix": [
+          "PhD"
+        ]
+      }
+    }
+  ]
+}

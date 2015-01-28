@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><Observation xmlns="http://hl7.org/fhir">
+  <id value="f205"/>
+   <name>
+      <!--  Kind of observation = eGFR  -->
+      <coding>
+         <system value="http://loinc.org"/>
+         <code value="69405-9"/>
+         <display value="Glomerular filtration rate/1.73 sq M.predicted"/>
+      </coding>
+   </name>
+   <valueQuantity>
+      <!--  eGFR=54mL/min/1.73m2  -->
+      <value value="54"/>
+      <units value="mL/min/1.73m2"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mL/min/{1.73_m2}"/>
+   </valueQuantity>
+   <interpretation>
+      <coding>
+         <system value="http://hl7.org/fhir/v2/0078"/>
+         <code value="L"/>
+         <display value="low"/>
+      </coding>
+   </interpretation>
+   <issued value="2013-04-04T14:34:00+01:00"/>
+   <!--  eGFR was measured on April fourth  -->
+   <status value="final"/>
+   <!--  The observation is complete  -->
+   <reliability value="ok"/>
+   <!--  No reliability concerns  -->
+   <method>
+      <!--  Method was serum measurement  -->
+      <coding>
+         <system value="http://snomed.info/id"/>
+         <code value="117337005"/>
+         <display value="Calculated laboratory test method"/>
+      </coding>
+   </method>
+   <identifier>
+      <label value="eGFR value of Roel on April 2013 - 03720"/>
+      <system value="https://intranet.aumc.nl/labvalues"/>
+      <!--  Does not exist  -->
+      <value value="1304-03720-eGFR"/>
+   </identifier>
+   <subject>
+      <!--  It entails Roel's Glomerular rate  -->
+      <reference value="Patient/f201"/>
+      <display value="Roel"/>
+   </subject>
+   <performer>
+      <!--  by Luigi Maas  -->
+      <reference value="Practitioner/f202"/>
+      <display value="Luigi Maas"/>
+   </performer>
+   <referenceRange>
+      <low>
+         <value value="60"/>
+         <units value="mL/min/1.73m2"/>
+         <system value="http://unitsofmeasure.org"/>
+         <code value="mL/min/{1.73_m2}"/>         
+      </low>
+   </referenceRange>
+</Observation>

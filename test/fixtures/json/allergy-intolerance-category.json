@@ -1,0 +1,58 @@
+{
+  "resourceType": "ValueSet",
+  "id": "allergy-intolerance-category",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 3 concepts</p><h2>AllergyIntoleranceCategory</h2><p>Category of an identified Substance</p><p>This value set defines its own terms in the system http://hl7.org/fhir/allergy-intolerance-category</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>food<a name=\"food\"> </a></td><td>Food</td><td>Any substance consumed to provide nutritional support for the body.</td></tr><tr><td>medication<a name=\"medication\"> </a></td><td>Medication</td><td>Substances administered to achieve a physiological effect.</td></tr><tr><td>environment<a name=\"environment\"> </a></td><td>Environment</td><td>Substances that are encountered in the environment.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.481"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/allergy-intolerance-category",
+  "name": "AllergyIntoleranceCategory",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Category of an identified Substance",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.496+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.481"
+      }
+    ],
+    "system": "http://hl7.org/fhir/allergy-intolerance-category",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "food",
+        "display": "Food",
+        "definition": "Any substance consumed to provide nutritional support for the body."
+      },
+      {
+        "code": "medication",
+        "display": "Medication",
+        "definition": "Substances administered to achieve a physiological effect."
+      },
+      {
+        "code": "environment",
+        "display": "Environment",
+        "definition": "Substances that are encountered in the environment."
+      }
+    ]
+  }
+}

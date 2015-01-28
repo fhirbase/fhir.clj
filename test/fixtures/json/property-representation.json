@@ -1,0 +1,47 @@
+{
+  "resourceType": "ValueSet",
+  "id": "property-representation",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 1 concepts</p><h2>PropertyRepresentation</h2><p>How a property is represented on the wire</p><p>This value set defines its own terms in the system http://hl7.org/fhir/property-representation</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>xmlAttr<a name=\"xmlAttr\"> </a></td><td>In XML, this property is represented as an attribute not an element.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.339"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/property-representation",
+  "name": "PropertyRepresentation",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "How a property is represented on the wire",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.497+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.339"
+      }
+    ],
+    "system": "http://hl7.org/fhir/property-representation",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "xmlAttr",
+        "definition": "In XML, this property is represented as an attribute not an element."
+      }
+    ]
+  }
+}

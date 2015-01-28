@@ -1,0 +1,84 @@
+{
+  "resourceType": "CarePlan2",
+  "id": "example",
+  "text": {
+    "status": "additional",
+    "div": "<div>\n      \n      <p> A simple care plan to indicate a patient taking their weight once a day because of obesity.</p>\n    \n    </div>"
+  },
+  "contained": [
+    {
+      "resourceType": "Condition",
+      "id": "p1",
+      "subject": {
+        "reference": "Patient/example",
+        "display": "Peter James Chalmers"
+      },
+      "code": {
+        "text": "Obesity"
+      },
+      "status": "confirmed"
+    },
+    {
+      "resourceType": "Practitioner",
+      "id": "pr1",
+      "name": {
+        "family": [
+          "Dietician"
+        ],
+        "given": [
+          "Dorothy"
+        ]
+      },
+      "specialty": [
+        {
+          "text": "Dietician"
+        }
+      ]
+    }
+  ],
+  "patient": {
+    "reference": "Patient/example",
+    "display": "Peter James Chalmers"
+  },
+  "status": "active",
+  "period": {
+    "end": "2013-01-01"
+  },
+  "concern": [
+    {
+      "reference": "#p1",
+      "display": "obesity"
+    }
+  ],
+  "participant": [
+    {
+      "role": {
+        "text": "responsiblePerson"
+      },
+      "member": {
+        "reference": "Patient/example",
+        "display": "Peter James Chalmers"
+      }
+    },
+    {
+      "role": {
+        "text": "adviser"
+      },
+      "member": {
+        "reference": "#pr1",
+        "display": "Dorothy Dietitian"
+      }
+    }
+  ],
+  "goal": [
+    {
+      "reference": "Goal/12345",
+      "display": "Target weight is 80 kg."
+    }
+  ],
+  "activity": [
+    {
+      "reference": "Procedure/12345"
+    }
+  ]
+}

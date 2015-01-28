@@ -1,0 +1,67 @@
+{
+  "resourceType": "CarePlan",
+  "id": "f002",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "http://www.bmc.nl/zorgportal/identifiers/careplans",
+      "value": "CP2934"
+    }
+  ],
+  "patient": {
+    "reference": "Patient/f001",
+    "display": "P. van de Heuvel"
+  },
+  "status": "completed",
+  "period": {
+    "start": "2011-07-06",
+    "end": "2013-07-07"
+  },
+  "modified": "2011-07-07T09:30:10+01:00",
+  "concern": [
+    {
+      "reference": "Condition/f201",
+      "display": "?????"
+    }
+  ],
+  "participant": [
+    {
+      "member": {
+        "reference": "Practitioner/f003",
+        "display": "M.I.M. Versteegh"
+      }
+    }
+  ],
+  "goal": [
+    {
+      "description": "succesful surgery on lung of patient",
+      "status": "achieved",
+      "notes": "goal accomplished with minor complications"
+    }
+  ],
+  "activity": [
+    {
+      "status": "completed",
+      "prohibited": true,
+      "simple": {
+        "category": "procedure",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "359615001",
+              "display": "Partial lobectomy of lung"
+            }
+          ]
+        },
+        "scheduledString": "2011-07-07T09:30:10+01:00",
+        "performer": [
+          {
+            "reference": "Practitioner/f003",
+            "display": "M.I.M. Versteegh"
+          }
+        ]
+      }
+    }
+  ]
+}

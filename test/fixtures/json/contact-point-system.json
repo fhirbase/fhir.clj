@@ -1,0 +1,59 @@
+{
+  "resourceType": "ValueSet",
+  "id": "contact-point-system",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 4 concepts</p><h2>ContactPointSystem</h2><p>Telecommunications form for contact point</p><p>This value set defines its own terms in the system http://hl7.org/fhir/contact-point-system</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td><td><b><a href=\"v2\\0202\\index.html\">v2 Map (0202)</a></b></td></tr><tr><td>phone<a name=\"phone\"> </a></td><td>The value is a telephone number used for voice calls. Use of full international numbers starting with + is recommended to enable automatic dialing support but not required.</td><td><span title=\"equivalent\">~</span><a href=\"v2\\0202\\index.html#PH\">PH</a></td></tr><tr><td>fax<a name=\"fax\"> </a></td><td>The value is a fax machine. Use of full international numbers starting with + is recommended to enable automatic dialing support but not required.</td><td><span title=\"equivalent\">~</span><a href=\"v2\\0202\\index.html#FX\">FX</a></td></tr><tr><td>email<a name=\"email\"> </a></td><td>The value is an email address.</td><td><span title=\"narrower\">&lt;</span><a href=\"v2\\0202\\index.html#Internet\">Internet</a><i>(use mailto: protocol)</i></td></tr><tr><td>url<a name=\"url\"> </a></td><td>The value is a url. This is intended for various personal contacts including blogs, Twitter, Facebook, etc. Do not use for email addresses.</td><td><span title=\"narrower\">&lt;</span><a href=\"v2\\0202\\index.html#Internet\">Internet</a></td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.425"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/contact-point-system",
+  "name": "ContactPointSystem",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Telecommunications form for contact point",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.491+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.425"
+      }
+    ],
+    "system": "http://hl7.org/fhir/contact-point-system",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "phone",
+        "definition": "The value is a telephone number used for voice calls. Use of full international numbers starting with + is recommended to enable automatic dialing support but not required."
+      },
+      {
+        "code": "fax",
+        "definition": "The value is a fax machine. Use of full international numbers starting with + is recommended to enable automatic dialing support but not required."
+      },
+      {
+        "code": "email",
+        "definition": "The value is an email address."
+      },
+      {
+        "code": "url",
+        "definition": "The value is a url. This is intended for various personal contacts including blogs, Twitter, Facebook, etc. Do not use for email addresses."
+      }
+    ]
+  }
+}

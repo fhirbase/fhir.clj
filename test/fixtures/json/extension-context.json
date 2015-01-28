@@ -1,0 +1,59 @@
+{
+  "resourceType": "ValueSet",
+  "id": "extension-context",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 4 concepts</p><h2>ExtensionContext</h2><p>How an extension context is interpreted</p><p>This value set defines its own terms in the system http://hl7.org/fhir/extension-context</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>resource<a name=\"resource\"> </a></td><td>The context is all elements matching a particular resource element path.</td></tr><tr><td>datatype<a name=\"datatype\"> </a></td><td>The context is all nodes matching a particular data type element path (root or repeating element) or all elements referencing a particular primitive data type (expressed as the datatype name).</td></tr><tr><td>mapping<a name=\"mapping\"> </a></td><td>The context is all nodes whose mapping to a specified reference model corresponds to a particular mapping structure.  The context identifies the mapping target. The mapping should clearly identify where such an extension could be used.</td></tr><tr><td>extension<a name=\"extension\"> </a></td><td>The context is a particular extension from a particular profile.  Expressed as uri#name, where uri identifies the profile and #name identifies the extension code.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.145"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/extension-context",
+  "name": "ExtensionContext",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "How an extension context is interpreted",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.489+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.145"
+      }
+    ],
+    "system": "http://hl7.org/fhir/extension-context",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "resource",
+        "definition": "The context is all elements matching a particular resource element path."
+      },
+      {
+        "code": "datatype",
+        "definition": "The context is all nodes matching a particular data type element path (root or repeating element) or all elements referencing a particular primitive data type (expressed as the datatype name)."
+      },
+      {
+        "code": "mapping",
+        "definition": "The context is all nodes whose mapping to a specified reference model corresponds to a particular mapping structure.  The context identifies the mapping target. The mapping should clearly identify where such an extension could be used."
+      },
+      {
+        "code": "extension",
+        "definition": "The context is a particular extension from a particular profile.  Expressed as uri#name, where uri identifies the profile and #name identifies the extension code."
+      }
+    ]
+  }
+}

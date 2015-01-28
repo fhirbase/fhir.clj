@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="uslab-example1"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+			
+      <ul>
+				
+        <li>file: pract-uslab-example1.xml</li>
+				
+        <li> id: uslab-example1</li>
+				
+        <li> Name: USLab Practitioner Example1 </li>
+				
+        <li>Description: USLab Practitioner Canonical Example: Dr Leonard T Bloodraw Jr</li>
+			
+      </ul>
+		
+    </div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <label value="NPI"/>
+    <value value="4444444445"/>
+    <assigner>
+      <reference value="https://nppes.cms.hhs.gov/NPPES/"/>
+      <display value="The Centers for Medicare and Medicaid Services (CMS) National Plan and Provider Enumeration System (NPPES)"/>
+    </assigner>
+  </identifier>
+  <name>
+    <family value="Bloodraw"/>
+    <given value="Leanard"/>
+    <given value="T"/>
+    <suffix value="Jr"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="(555)7771234 ext.11"/>
+  </telecom>
+</Practitioner>

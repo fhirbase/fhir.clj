@@ -1,0 +1,55 @@
+{
+  "resourceType": "ValueSet",
+  "id": "namingsystem-status",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 3 concepts</p><h2>NamingSystemStatus</h2><p>Indicates whether the namingsystem should be used</p><p>This value set defines its own terms in the system http://hl7.org/fhir/namingsystem-status</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>proposed<a name=\"proposed\"> </a></td><td>System has been submitted but not yet approved.</td></tr><tr><td>active<a name=\"active\"> </a></td><td>System is valid for use.</td></tr><tr><td>retired<a name=\"retired\"> </a></td><td>System should no longer be used.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.475"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/namingsystem-status",
+  "name": "NamingSystemStatus",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Indicates whether the namingsystem should be used",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.488+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.475"
+      }
+    ],
+    "system": "http://hl7.org/fhir/namingsystem-status",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "proposed",
+        "definition": "System has been submitted but not yet approved."
+      },
+      {
+        "code": "active",
+        "definition": "System is valid for use."
+      },
+      {
+        "code": "retired",
+        "definition": "System should no longer be used."
+      }
+    ]
+  }
+}

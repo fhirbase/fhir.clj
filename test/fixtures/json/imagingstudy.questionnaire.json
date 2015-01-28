@@ -1,0 +1,1038 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (Imaging Integration)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "Representation of the content produced in a DICOM imaging study. A study comprises a set of Series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A Series is of only one modality (e.g., X-ray, CT, MR, ultrasound), but a Study may have multiple Series of different modalities."
+      }
+    ],
+    "linkId": "ImagingStudy",
+    "title": "A set of images produced in single study (one or more series of references images)",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "ImagingStudy.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingStudy.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "ImagingStudy.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ImagingStudy.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingStudy.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ImagingStudy.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingStudy.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "ImagingStudy.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingStudy.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "ImagingStudy.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingStudy.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "ImagingStudy.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingStudy.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "ImagingStudy.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingStudy.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "ImagingStudy.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingStudy.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "ImagingStudy.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingStudy.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "ImagingStudy.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "ImagingStudy.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Date and Time the study started."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "datetime"
+          }
+        ],
+        "linkId": "ImagingStudy.started",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingStudy.started.value",
+            "text": "When the study was started (0008,0020)+(0008,0030)",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The patient for whom the images are of."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "ImagingStudy.patient",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "ImagingStudy.patient.value",
+            "text": "Who the images are of",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Formal identifier for the study."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "ImagingStudy.uid",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingStudy.uid.value",
+            "text": "Formal identifier for the study (0020,000D)",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Accession Number."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Identifier"
+          }
+        ],
+        "linkId": "ImagingStudy.accession",
+        "text": "Accession Number (0008,0050)",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingStudy.accession.label",
+            "text": "label:",
+            "type": "string"
+          },
+          {
+            "linkId": "ImagingStudy.accession.system",
+            "text": "system:",
+            "type": "string"
+          },
+          {
+            "linkId": "ImagingStudy.accession.value",
+            "text": "value:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Other identifiers for the study."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Identifier"
+          }
+        ],
+        "linkId": "ImagingStudy.identifier",
+        "text": "Other identifiers for the study (0020,0010)",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingStudy.identifier.label",
+            "text": "label:",
+            "type": "string"
+          },
+          {
+            "linkId": "ImagingStudy.identifier.system",
+            "text": "system:",
+            "type": "string"
+          },
+          {
+            "linkId": "ImagingStudy.identifier.value",
+            "text": "value:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A list of the diagnostic orders that resulted in this imaging study being performed. The order(s) can be inferred from information such as accession numbers, but the details of this depend on local workflow management. \nNote that there is a many-many relationship between orders and studies."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "ImagingStudy.order",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/DiagnosticOrder?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "ImagingStudy.order.value",
+            "text": "Order(s) that caused this study to be performed",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A list of all the Series.ImageModality values that are actual acquisition modalities, i.e. those in the DICOM Context Group 29 (value set OID 1.2.840.10008.6.1.19)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "ImagingStudy.modalityList",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingStudy.modalityList.value",
+            "text": "modality list",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The requesting/referring physician."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "ImagingStudy.referrer",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "ImagingStudy.referrer.value",
+            "text": "Referring physician (0008,0090)",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Availability of study (online, offline or nearline)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "ImagingStudy.availability",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingStudy.availability.value",
+            "text": "availability",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "WADO-RS URI where Study is available."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "ImagingStudy.url",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingStudy.url.value",
+            "text": "Retrieve URI (0008,1190)",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Number of Series in Study."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "integer"
+          }
+        ],
+        "linkId": "ImagingStudy.numberOfSeries",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingStudy.numberOfSeries.value",
+            "text": "Number of Study Related Series (0020,1206)",
+            "type": "integer"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Number of SOP Instances in Study."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "integer"
+          }
+        ],
+        "linkId": "ImagingStudy.numberOfInstances",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingStudy.numberOfInstances.value",
+            "text": "Number of Study Related Instances (0020,1208)",
+            "type": "integer"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Diagnoses etc provided with request."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "ImagingStudy.clinicalInformation",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingStudy.clinicalInformation.value",
+            "text": "Diagnoses etc with request (0040,1002)",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Type of procedure performed."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "ImagingStudy.procedure",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingStudy.procedure.value",
+            "text": "Type of procedure performed (0008,1032)",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Who read study and interpreted the images. or is this 4008,010C?."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "ImagingStudy.interpreter",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "ImagingStudy.interpreter.value",
+            "text": "Who interpreted images (0008,1060)",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Institution-generated description or classification of the Study (component) performed."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "ImagingStudy.description",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingStudy.description.value",
+            "text": "Institution-generated description (0008,1030)",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Each study has one or more series of image instances."
+          }
+        ],
+        "linkId": "ImagingStudy.series",
+        "title": "Each study has one or more series of instances",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ImagingStudy.series.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingStudy.series.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The Numeric identifier of this series in the study."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "integer"
+              }
+            ],
+            "linkId": "ImagingStudy.series.number",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingStudy.series.number.value",
+                "text": "Numeric identifier of this series (0020,0011)",
+                "type": "integer"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The modality of this series sequence."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "code"
+              }
+            ],
+            "linkId": "ImagingStudy.series.modality",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingStudy.series.modality.value",
+                "text": "modality",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Formal identifier for this series."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ImagingStudy.series.uid",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingStudy.series.uid.value",
+                "text": "Formal identifier for this series (0020,000E)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A description of the series."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ImagingStudy.series.description",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingStudy.series.description.value",
+                "text": "A description of the series (0008,103E)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Sequence that contains attributes from the."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "integer"
+              }
+            ],
+            "linkId": "ImagingStudy.series.numberOfInstances",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingStudy.series.numberOfInstances.value",
+                "text": "Number of Series Related Instances (0020,1209)",
+                "type": "integer"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Availability of series (online, offline or nearline)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "code"
+              }
+            ],
+            "linkId": "ImagingStudy.series.availability",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingStudy.series.availability.value",
+                "text": "availability",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "WADO-RS URI where Series is available."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "ImagingStudy.series.url",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingStudy.series.url.value",
+                "text": "Retrieve URI (0008,1115 > 0008,1190)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Body part examined. See  DICOM Part 16 Annex L for the mapping from DICOM to Snomed."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "ImagingStudy.series.bodySite",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingStudy.series.bodySite.value",
+                "text": "Body part examined (Map from 0018,0015)",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The date when the series was started."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "datetime"
+              }
+            ],
+            "linkId": "ImagingStudy.series.dateTime",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingStudy.series.dateTime.value",
+                "text": "When the series started",
+                "type": "dateTime"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A single image taken from a patient."
+              }
+            ],
+            "linkId": "ImagingStudy.series.instance",
+            "title": "A single instance taken from a patient (image or other)",
+            "repeats": true,
+            "group": [
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "unique id for the element within a resource (for internal references)."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "ImagingStudy.series.instance.id",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ImagingStudy.series.instance.id.value",
+                    "text": "xml:id (or equivalent in JSON)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The number of this image in the series."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "integer"
+                  }
+                ],
+                "linkId": "ImagingStudy.series.instance.number",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ImagingStudy.series.instance.number.value",
+                    "text": "The number of this instance in the series (0020,0013)",
+                    "type": "integer"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Formal identifier for this image."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "ImagingStudy.series.instance.uid",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ImagingStudy.series.instance.uid.value",
+                    "text": "Formal identifier for this instance (0008,0018)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "DICOM Image type."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "ImagingStudy.series.instance.sopclass",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ImagingStudy.series.instance.sopclass.value",
+                    "text": "DICOM class type (0008,0016)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The type of the instance."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "ImagingStudy.series.instance.type",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ImagingStudy.series.instance.type.value",
+                    "text": "Type of instance (image etc) (0004,1430)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The description of the instance."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "ImagingStudy.series.instance.title",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ImagingStudy.series.instance.title.value",
+                    "text": "Description (0070,0080 | 0040,A043 > 0008,0104 | 0042,0010 | 0008,0008)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "WADO-RS url where image is available. Each instance may have a url and an attachment. Both represent the same information, but using different approaches. The URL is a reference to a WADO-RS service that makes the instance available."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "uri"
+                  }
+                ],
+                "linkId": "ImagingStudy.series.instance.url",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ImagingStudy.series.instance.url.value",
+                    "text": "WADO-RS service where instance is available  (0008,1199 > 0008,1190)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "A FHIR resource with content for this instance. Each instance may have a url and an attachment. Both represent the same information, but using different approaches. The attachment is a reference to a FHIR resource (Media, Document, etc)."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "ImagingStudy.series.instance.attachment",
+                "repeats": true,
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/_search?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "ImagingStudy.series.instance.attachment.value",
+                    "text": "Content for this instance",
+                    "type": "reference"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

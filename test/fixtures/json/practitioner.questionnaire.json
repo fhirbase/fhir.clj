@@ -1,0 +1,759 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (Patient Administration)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "A person who is directly or indirectly involved in the provisioning of healthcare."
+      }
+    ],
+    "linkId": "Practitioner",
+    "title": "A person with a  formal responsibility in the provisioning of healthcare or related services",
+    "text": "Note that a cab driver no longer fits the bill. You probably would be interested in the organization rather than the individual?.",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "Practitioner.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Practitioner.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "Practitioner.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Practitioner.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Practitioner.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Practitioner.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Practitioner.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "Practitioner.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Practitioner.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "Practitioner.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Practitioner.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Practitioner.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Practitioner.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Practitioner.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Practitioner.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "Practitioner.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Practitioner.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "Practitioner.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Practitioner.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "Practitioner.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "Practitioner.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "An identifier that applies to this person in this role."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Identifier"
+          }
+        ],
+        "linkId": "Practitioner.identifier",
+        "text": "A identifier for the person as this agent",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Practitioner.identifier.label",
+            "text": "label:",
+            "type": "string"
+          },
+          {
+            "linkId": "Practitioner.identifier.system",
+            "text": "system:",
+            "type": "string"
+          },
+          {
+            "linkId": "Practitioner.identifier.value",
+            "text": "value:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A name associated with the person."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Name"
+          }
+        ],
+        "linkId": "Practitioner.name",
+        "text": "A name associated with the person",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Practitioner.name.text",
+            "text": "text:",
+            "type": "string"
+          },
+          {
+            "linkId": "Practitioner.name.family",
+            "text": "family:",
+            "type": "string",
+            "repeats": true
+          },
+          {
+            "linkId": "Practitioner.name.given",
+            "text": "given:",
+            "type": "string",
+            "repeats": true
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A contact detail for the practitioner, e.g. a telephone number or an email address. Person may have multiple ways to be contacted with different uses or applicable periods. \rMay need to have options for contacting the person urgently, and also to help with identification."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "ContactPoint"
+          }
+        ],
+        "linkId": "Practitioner.telecom",
+        "text": "A contact detail for the practitioner",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Practitioner.telecom.system",
+            "text": "type:",
+            "type": "choice"
+          },
+          {
+            "linkId": "Practitioner.telecom.value",
+            "text": "value:",
+            "type": "string"
+          },
+          {
+            "linkId": "Practitioner.telecom.use",
+            "text": "use:",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The postal address where the practitioner can be found or visited or to which mail can be delivered."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Address"
+          }
+        ],
+        "linkId": "Practitioner.address",
+        "text": "Where practitioner can be found/visited",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Practitioner.address.text",
+            "text": "text:",
+            "type": "string"
+          },
+          {
+            "linkId": "Practitioner.address.line",
+            "text": "line:",
+            "type": "string",
+            "repeats": true
+          },
+          {
+            "linkId": "Practitioner.address.city",
+            "text": "city:",
+            "type": "string"
+          },
+          {
+            "linkId": "Practitioner.address.state",
+            "text": "state:",
+            "type": "string"
+          },
+          {
+            "linkId": "Practitioner.address.postalCode",
+            "text": "post code:",
+            "type": "string"
+          },
+          {
+            "linkId": "Practitioner.address.country",
+            "text": "country:",
+            "type": "string"
+          },
+          {
+            "linkId": "Practitioner.address.use",
+            "text": "use:",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "Practitioner.gender",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Practitioner.gender.value",
+            "text": "gender",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The date and time of birth for the practitioner."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "datetime"
+          }
+        ],
+        "linkId": "Practitioner.birthDate",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Practitioner.birthDate.value",
+            "text": "The date and time of birth for the practitioner",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Image of the person."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Attachment"
+          }
+        ],
+        "linkId": "Practitioner.photo",
+        "text": "Image of the person",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The organization that the practitioner represents."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "Practitioner.organization",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "Practitioner.organization.value",
+            "text": "The represented organization",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Roles which this practitioner is authorized to perform for the organization. A person may have more than one role. At least one role is required."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "Practitioner.role",
+        "text": "Roles which this practitioner may perform",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Practitioner.role.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "Practitioner.role.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Specific specialty of the practitioner."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "Practitioner.specialty",
+        "text": "Specific specialty of the practitioner",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Practitioner.specialty.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "Practitioner.specialty.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The period during which the person is authorized to act as a practitioner in these role(s) for the organization."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Period"
+          }
+        ],
+        "linkId": "Practitioner.period",
+        "text": "The period during which the practitioner is authorized to perform in these role(s)",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Practitioner.period.low",
+            "text": "start:",
+            "type": "dateTime"
+          },
+          {
+            "linkId": "Practitioner.period.end",
+            "text": "end:",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The location(s) at which this practitioner provides care."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "Practitioner.location",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Location?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "Practitioner.location.value",
+            "text": "The location(s) at which this practitioner provides care",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Qualifications obtained by training and certification."
+          }
+        ],
+        "linkId": "Practitioner.qualification",
+        "title": "Qualifications obtained by training and certification",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Practitioner.qualification.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Practitioner.qualification.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "An identifier that applies to this person's qualification in this role."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Identifier"
+              }
+            ],
+            "linkId": "Practitioner.qualification.identifier",
+            "text": "An identifier for this qualification for the practitioner",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Practitioner.qualification.identifier.label",
+                "text": "label:",
+                "type": "string"
+              },
+              {
+                "linkId": "Practitioner.qualification.identifier.system",
+                "text": "system:",
+                "type": "string"
+              },
+              {
+                "linkId": "Practitioner.qualification.identifier.value",
+                "text": "value:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Coded representation of the qualification."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "CodeableConcept"
+              }
+            ],
+            "linkId": "Practitioner.qualification.code",
+            "text": "Coded representation of the qualification",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Practitioner.qualification.code.coding",
+                "text": "code:",
+                "type": "open-choice"
+              },
+              {
+                "linkId": "Practitioner.qualification.code.text",
+                "text": "text:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Period during which the qualification is valid."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Period"
+              }
+            ],
+            "linkId": "Practitioner.qualification.period",
+            "text": "Period during which the qualification is valid",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Practitioner.qualification.period.low",
+                "text": "start:",
+                "type": "dateTime"
+              },
+              {
+                "linkId": "Practitioner.qualification.period.end",
+                "text": "end:",
+                "type": "dateTime"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Organization that regulates and issues the qualification."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "Practitioner.qualification.issuer",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "Practitioner.qualification.issuer.value",
+                "text": "Organization that regulates and issues the qualification",
+                "type": "reference"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A language the practitioner is able to use in patient communication. The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems actually code this but instead have it as free text. Hence CodeableConcept instead of code as the data type."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "Practitioner.communication",
+        "text": "A language the practitioner is able to use in patient communication",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Practitioner.communication.coding",
+            "text": "code:",
+            "type": "choice"
+          },
+          {
+            "linkId": "Practitioner.communication.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  }
+}

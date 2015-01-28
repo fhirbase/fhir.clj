@@ -1,0 +1,52 @@
+{
+  "resourceType": "SecurityEvent",
+  "id": "example-logout",
+  "event": {
+    "type": {
+      "coding": [
+        {
+          "system": "http://nema.org/dicom/dcid",
+          "code": "110114",
+          "display": "User Authentication"
+        }
+      ]
+    },
+    "subtype": [
+      {
+        "coding": [
+          {
+            "system": "http://nema.org/dicom/dcid",
+            "code": "110123",
+            "display": "Logout"
+          }
+        ]
+      }
+    ],
+    "action": "E",
+    "dateTime": "2013-06-20T23:46:41Z",
+    "outcome": "0"
+  },
+  "participant": [
+    {
+      "userId": "95",
+      "altId": "601847123",
+      "name": "Grahame Grieve",
+      "requestor": true,
+      "network": {
+        "identifier": "127.0.0.1",
+        "type": "2"
+      }
+    }
+  ],
+  "source": {
+    "site": "Cloud",
+    "identifier": "hl7connect.healthintersections.com.au",
+    "type": [
+      {
+        "system": "http://hl7.org/fhir/security-source-type",
+        "code": "3",
+        "display": "Web Server"
+      }
+    ]
+  }
+}

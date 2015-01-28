@@ -1,0 +1,49 @@
+{
+  "resourceType": "DataElement",
+  "id": "prothrombin",
+  "identifier": {
+    "label": "Prothrombin Time, PT",
+    "system": "htpp://www.CenturyHospital/Laboratory/DirectoryofServices",
+    "value": "11",
+    "period": {
+      "start": "2011-05-19"
+    },
+    "assigner": {
+      "display": "Century Hospital Laboratory"
+    }
+  },
+  "status": "active",
+  "name": "Prothrombin Time",
+  "definition": "The PT test evaluates the extrinsic and common pathways of the coagulation cascade.",
+  "comments": "Used to screen the integrity of the extrinsic and common pathways of coagulation and to monitor warfarin anticoagulation. ",
+  "requirements": "This test is orderable. A plasma specimen in a 3.2% sodium citrate blue top tube is required.",
+  "synonym": [
+    "Protime, PT"
+  ],
+  "type": "Decimal",
+  "exampleDecimal": 10.0,
+  "unitsCodeableConcept": {
+    "coding": [
+      {
+        "system": "http:/unitsofmeasure.org",
+        "version": "1.9",
+        "code": "s",
+        "display": "second",
+        "primary": true,
+        "valueSet": {
+          "reference": "http:/unitsofmeasure.org/vs",
+          "display": "UCUM"
+        }
+      }
+    ],
+    "text": "second"
+  },
+  "mapping": [
+    {
+      "uri": "http://loinc.org/",
+      "name": "LOINC",
+      "comments": "Version 2.48 or later",
+      "map": "5964-2"
+    }
+  ]
+}

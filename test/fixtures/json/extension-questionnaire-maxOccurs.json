@@ -1,0 +1,51 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "questionnaire-maxOccurs",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/questionnaire-maxOccurs",
+  "name": "Maximum repetitions",
+  "publisher": "HL7",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://www.hl7.org"
+    }
+  ],
+  "description": "The maximum number of times the group must appear or the minimum number of answers for a question - when greater than 1 and not unlimited.",
+  "status": "draft",
+  "date": "2013-07-04",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "resource",
+  "context": [
+    "Questionnaire.group",
+    "Questionnaire.group.group",
+    "Questionnaire.group.question"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Maximum repetitions",
+      "formal": "The maximum number of times the group must appear or the minimum number of answers for a question - when greater than 1 and not unlimited.",
+      "comments": "Only relevant if the element has repeats=true and there's a need to constrain the number of allowed repetitions.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "integer"
+        }
+      ],
+      "isSummary": false,
+      "mapping": [
+        {
+          "identity": "rim",
+          "map": "N/A - MIF rather than RIM level"
+        }
+      ]
+    }
+  ]
+}

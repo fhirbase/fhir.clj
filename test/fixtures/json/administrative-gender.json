@@ -1,0 +1,59 @@
+{
+  "resourceType": "ValueSet",
+  "id": "administrative-gender",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 4 concepts</p><h2>AdministrativeGender</h2><p>The gender of a person used for administrative purposes</p><p>This value set defines its own terms in the system http://hl7.org/fhir/administrative-gender</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td><td><b><a href=\"v2\\0001\\index.html\">v2 Map (0001)</a></b></td><td><b><a href=\"null\">v3 Map (AdministrativeGender)</a></b></td></tr><tr><td>male<a name=\"male\"> </a></td><td>Male</td><td><span title=\"equal\">=</span><a href=\"v2\\0001\\index.html#M\">M</a></td><td><span title=\"equal\">=</span><a href=\"#M\">M</a></td></tr><tr><td>female<a name=\"female\"> </a></td><td>Female</td><td><span title=\"equal\">=</span><a href=\"v2\\0001\\index.html#F\">F</a></td><td><span title=\"equal\">=</span><a href=\"#F\">F</a></td></tr><tr><td>other<a name=\"other\"> </a></td><td>Other</td><td><span title=\"wider\">&gt;</span><a href=\"v2\\0001\\index.html#A\">A</a><br/><span title=\"wider\">&gt;</span><a href=\"v2\\0001\\index.html#O\">O</a></td><td><span title=\"wider\">&gt;</span><a href=\"#UN\">UN</a></td></tr><tr><td>unknown<a name=\"unknown\"> </a></td><td>Unknown</td><td><span title=\"equal\">=</span><a href=\"v2\\0001\\index.html#U\">U</a></td><td><span title=\"equal\">=</span><a href=\"#UNK\">UNK</a></td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.24"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/administrative-gender",
+  "name": "AdministrativeGender",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "The gender of a person used for administrative purposes",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.490+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.24"
+      }
+    ],
+    "system": "http://hl7.org/fhir/administrative-gender",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "male",
+        "definition": "Male"
+      },
+      {
+        "code": "female",
+        "definition": "Female"
+      },
+      {
+        "code": "other",
+        "definition": "Other"
+      },
+      {
+        "code": "unknown",
+        "definition": "Unknown"
+      }
+    ]
+  }
+}

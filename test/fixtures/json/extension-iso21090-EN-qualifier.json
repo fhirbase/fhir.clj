@@ -1,0 +1,58 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "iso21090-EN-qualifier",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/iso21090-EN-qualifier",
+  "name": "LS | AC | NB | PR | HON | BR | AD | SP | MID | CL | IN",
+  "publisher": "HL7",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://www.hl7.org"
+    }
+  ],
+  "description": "A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type.",
+  "status": "draft",
+  "date": "2012-06-24",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "datatype",
+  "context": [
+    "HumanName.part"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "LS | AC | NB | PR | HON | BR | AD | SP | MID | CL | IN",
+      "formal": "A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type.",
+      "comments": "Used to indicate additional information about the name part and how it should be used.",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "code"
+        }
+      ],
+      "isSummary": false,
+      "binding": {
+        "name": "EntityNamePartQualifier",
+        "isExtensible": false,
+        "conformance": "required",
+        "description": "A set of codes each of which specifies a certain subcategory of the name part in addition to the main name part type",
+        "referenceReference": {
+          "reference": "http://hl7.org/fhir/vs/name-part-qualifier"
+        }
+      },
+      "mapping": [
+        {
+          "identity": "rim",
+          "map": "ENXP.qualifier"
+        }
+      ]
+    }
+  ]
+}

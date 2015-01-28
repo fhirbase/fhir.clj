@@ -1,0 +1,34 @@
+{
+  "resourceType": "Immunization",
+  "id": "refused",
+  "text": {
+    "status": "generated",
+    "div": "<div>Refused Immunization Example</div>"
+  },
+  "date": "2013-01-10",
+  "vaccineType": {
+    "coding": [
+      {
+        "code": "396427003"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/example"
+  },
+  "refusedIndicator": true,
+  "reported": false,
+  "explanation": {
+    "refusalReason": [
+      {
+        "coding": [
+          {
+            "system": "http://hl7.org/fhir/v3/ActReason",
+            "code": "MEDPREC",
+            "display": "medical precaution"
+          }
+        ]
+      }
+    ]
+  }
+}

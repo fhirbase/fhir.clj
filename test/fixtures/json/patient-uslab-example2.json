@@ -1,0 +1,143 @@
+{
+  "resourceType": "Patient",
+  "id": "uslab-example2",
+  "text": {
+    "status": "generated",
+    "div": "<div>\n\t\t\t\n\t\t\t\n      <ul>\n\t\t\t\t\n        <li>file: patient-uslab-example2.xml</li>\n\t\t\t\t\n        <li> id: uslab-example2</li>\n\t\t\t\t\n        <li> Name: USLab Patient Example2 </li>\n\t\t\t\t\n        <li>Description: USLab PHPatient Profile Canonical Example: Todd Lerr</li>\n\t\t\t\n      </ul>\n\t\t\n    </div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/us-core-race": [
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "2106-3"
+          }
+        ]
+      }
+    }
+  ],
+  "http://hl7.org/fhir/ExtensionDefinition/us-core-ethnicity": [
+    {
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "2135-2"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "use": "usual",
+      "system": "urn:oid:2.16.840.1.113883.3.72.5.30.2",
+      "value": "18547545"
+    }
+  ],
+  "name": [
+    {
+      "use": "official",
+      "family": [
+        "Lerr"
+      ],
+      "given": [
+        "Todd",
+        "G."
+      ],
+      "suffix": [
+        "Jr"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "(555)7259890",
+      "use": "home"
+    },
+    {
+      "system": "phone",
+      "value": "(555)7256030",
+      "use": "work"
+    }
+  ],
+  "gender": "male",
+  "birthDate": "2012-06-07",
+  "deceasedBoolean": false,
+  "address": [
+    {
+      "http://example.org/us-core-county": [
+        {
+          "http://example.org//iso21090-SC-coding": [
+            {
+              "valueCoding": {
+                "system": "https://www.census.gov/geo/reference",
+                "code": "42043"
+              }
+            }
+          ]
+        }
+      ],
+      "use": "home",
+      "line": [
+        "123 North 102nd Street",
+        "Apt 4d"
+      ],
+      "city": "Harrisburg",
+      "state": "PA",
+      "postalCode": "17102",
+      "country": "USA"
+    }
+  ],
+  "contact": [
+    {
+      "relationship": [
+        {
+          "coding": [
+            {
+              "code": "guardian"
+            }
+          ]
+        }
+      ],
+      "name": {
+        "family": [
+          "Smith"
+        ],
+        "given": [
+          "Bea",
+          "G"
+        ]
+      },
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "(555)7259890"
+        }
+      ],
+      "address": {
+        "http://example.org/us-core-county": [
+          {
+            "http://example.org//iso21090-SC-coding": [
+              {
+                "valueCoding": {
+                  "system": "https://www.census.gov/geo/reference",
+                  "code": "42043"
+                }
+              }
+            ]
+          }
+        ],
+        "use": "home",
+        "line": [
+          "123 North 102nd Street",
+          "Apt 4d"
+        ],
+        "city": "Harrisburg",
+        "state": "PA",
+        "postalCode": "17102",
+        "country": "USA"
+      }
+    }
+  ]
+}

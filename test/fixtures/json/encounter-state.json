@@ -1,0 +1,73 @@
+{
+  "resourceType": "ValueSet",
+  "id": "encounter-state",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 6 concepts</p><h2>EncounterState</h2><p>Current state of the encounter</p><p>This value set defines its own terms in the system http://hl7.org/fhir/encounter-state</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>planned<a name=\"planned\"> </a></td><td>Planned</td><td>The Encounter has not yet started.</td></tr><tr><td>arrived<a name=\"arrived\"> </a></td><td>Arrived</td><td>The Patient is present for the encounter, however is not currently meeting with a practitioner.</td></tr><tr><td>in progress<a name=\"inprogress\"> </a></td><td>In Progress</td><td>The Encounter has begun and the patient is present / the practitioner and the patient are meeting.</td></tr><tr><td>onleave<a name=\"onleave\"> </a></td><td>On Leave</td><td>The Encounter has begun, but the patient is temporarily on leave.</td></tr><tr><td>finished<a name=\"finished\"> </a></td><td>Finished</td><td>The Encounter has ended.</td></tr><tr><td>cancelled<a name=\"cancelled\"> </a></td><td>Cancelled</td><td>The Encounter has ended before it has begun.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.180"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/encounter-state",
+  "name": "EncounterState",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Current state of the encounter",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.493+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.180"
+      }
+    ],
+    "system": "http://hl7.org/fhir/encounter-state",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "planned",
+        "display": "Planned",
+        "definition": "The Encounter has not yet started."
+      },
+      {
+        "code": "arrived",
+        "display": "Arrived",
+        "definition": "The Patient is present for the encounter, however is not currently meeting with a practitioner."
+      },
+      {
+        "code": "in progress",
+        "display": "In Progress",
+        "definition": "The Encounter has begun and the patient is present / the practitioner and the patient are meeting."
+      },
+      {
+        "code": "onleave",
+        "display": "On Leave",
+        "definition": "The Encounter has begun, but the patient is temporarily on leave."
+      },
+      {
+        "code": "finished",
+        "display": "Finished",
+        "definition": "The Encounter has ended."
+      },
+      {
+        "code": "cancelled",
+        "display": "Cancelled",
+        "definition": "The Encounter has ended before it has begun."
+      }
+    ]
+  }
+}

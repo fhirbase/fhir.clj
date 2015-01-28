@@ -1,0 +1,36 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "questionnaire-sdc-endpoint",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/questionnaire-sdc-endpoint",
+  "name": "Where to send answers",
+  "publisher": "U.S. Office of the National Coordinator (ONC)'s Standards and Infrastructure (S&I) Structured Data Capture project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://wiki.siframework.org/Structured+Data+Capture+Initiative"
+    }
+  ],
+  "description": "The base URL for the server to which questionnaire answers associated with this questionnaire should be submitted.",
+  "status": "draft",
+  "date": "2014-04-21",
+  "contextType": "resource",
+  "context": [
+    "Questionnaire"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Where to send answers",
+      "formal": "The base URL for the server to which questionnaire answers associated with this questionnaire should be submitted.",
+      "comments": "Indicates that the form has been designed with an expectation that it will be submitted to the specified URI.  If multiple endpoints are specified, expectation is that answers are submitted to all endpoints.",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "valueset-category",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/valueset-category",
+  "name": "Kind of value set",
+  "publisher": "HL7",
+  "description": "Identifies the value set as belonging to a particular set.  For example \"demographics\", \"lab\", \"clinical research\", etc.  Might also be used to tie a value set to particular usage projects.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "contextType": "resource",
+  "context": [
+    "ValueSet"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Kind of value set",
+      "formal": "Identifies the value set as belonging to a particular set.  For example \"demographics\", \"lab\", \"clinical research\", etc.  Might also be used to tie a value set to particular usage projects.",
+      "comments": "The categories chosen will vary widely depending on the purpose of the value set repository.",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isSummary": false,
+      "binding": {
+        "name": "ValueSetCategory",
+        "isExtensible": true,
+        "description": "Classifications for valuesets.  Can include such concepts as \"demographics\", \"lab\", \"clinical research\".  Might also be used to tie a value set to particular usage projects"
+      }
+    }
+  ]
+}

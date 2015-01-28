@@ -1,0 +1,2060 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (Financial Management)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "A provider issued list of services and products provided, or to be provided, to a patient which is provided to an insurer for payment recovery."
+      }
+    ],
+    "linkId": "ProfessionalClaim",
+    "title": "Claim, Pre-determination or Pre-authorization",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "ProfessionalClaim.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ProfessionalClaim.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "ProfessionalClaim.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ProfessionalClaim.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ProfessionalClaim.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "ProfessionalClaim.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "ProfessionalClaim.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "ProfessionalClaim.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "ProfessionalClaim.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "ProfessionalClaim.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ProfessionalClaim.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "ProfessionalClaim.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ProfessionalClaim.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "ProfessionalClaim.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "ProfessionalClaim.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The business identifier for the instance: invoice number, claim number, pre-determination or pre-authorization number."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Identifier"
+          }
+        ],
+        "linkId": "ProfessionalClaim.identifier",
+        "text": "Claim number",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ProfessionalClaim.identifier.label",
+            "text": "label:",
+            "type": "string"
+          },
+          {
+            "linkId": "ProfessionalClaim.identifier.system",
+            "text": "system:",
+            "type": "string"
+          },
+          {
+            "linkId": "ProfessionalClaim.identifier.value",
+            "text": "value:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The version of the specification on which this instance relies. This is the version of the specification on which this instance relies."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "ProfessionalClaim.ruleset",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ProfessionalClaim.ruleset.value",
+            "text": "Current specification followed",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The version of the specification from which the original instance was created. This is the version of the specification on which the original instance relied (was create)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "ProfessionalClaim.originalRuleset",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ProfessionalClaim.originalRuleset.value",
+            "text": "Original specification followed",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The date when the enclosed suite of services were performed or completed."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "datetime"
+          }
+        ],
+        "linkId": "ProfessionalClaim.created",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ProfessionalClaim.created.value",
+            "text": "Creation date",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Insurer Identifier, typical BIN number (6 digit)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "ProfessionalClaim.target",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "ProfessionalClaim.target.value",
+            "text": "Insurer",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The provider which is responsible for the bill, claim pre-determination, pre-authorization."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "ProfessionalClaim.provider",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "ProfessionalClaim.provider.value",
+            "text": "Responsible provider",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The organization which is responsible for the bill, claim pre-determination, pre-authorization."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "ProfessionalClaim.organization",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "ProfessionalClaim.organization.value",
+            "text": "Responsible organization",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Complete (Bill or Claim), Proposed (Pre-Authorization), Exploratory (Pre-determination)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "ProfessionalClaim.use",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ProfessionalClaim.use.value",
+            "text": "use",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Immediate (STAT), best effort (NORMAL), deferred (DEFER)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "ProfessionalClaim.priority",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ProfessionalClaim.priority.value",
+            "text": "Desired processing priority",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "In the case of a Pre-Determination/Pre-Authorization the provider may request that funds in the amount of the expected Benefit be reserved ('Patient' or 'Provider') to pay for the Benefits determined on the subsequent claim(s). 'None' explicitly indicates no funds reserving is requested."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "ProfessionalClaim.fundsReserve",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ProfessionalClaim.fundsReserve.value",
+            "text": "Funds requested to be reserved",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Person who created the invoice/claim/pre-determination or pre-authorization."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "ProfessionalClaim.enterer",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "ProfessionalClaim.enterer.value",
+            "text": "Author",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Facility where the services were provided."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "ProfessionalClaim.facility",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Location?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "ProfessionalClaim.facility.value",
+            "text": "Servicing Facility",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The party to be reimbursed for the services."
+          }
+        ],
+        "linkId": "ProfessionalClaim.payee",
+        "title": "Payee",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ProfessionalClaim.payee.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.payee.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Party to be reimbursed: Subscriber, provider, other."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "ProfessionalClaim.payee.type",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.payee.type.value",
+                "text": "Party to be paid any benefits payable",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The provider who is to be reimbursed for the claim (the party to whom any benefit is assigned)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "ProfessionalClaim.payee.provider",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "ProfessionalClaim.payee.provider.value",
+                "text": "Provider who is the payee",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The organization who is to be reimbursed for the claim (the party to whom any benefit is assigned)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "ProfessionalClaim.payee.organization",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "ProfessionalClaim.payee.organization.value",
+                "text": "Organization who is the payee",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The person other than the subscriber who is to be reimbursed for the claim (the party to whom any benefit is assigned)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "ProfessionalClaim.payee.person",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "ProfessionalClaim.payee.person.value",
+                "text": "Other person who is the payee",
+                "type": "reference"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The referral resource which lists the date, practitioner, reason and other supporting information."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "ProfessionalClaim.referral",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/ReferralRequest?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "ProfessionalClaim.referral.value",
+            "text": "Treatment Referral",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Ordered list of patient diagnosis for which care is sought."
+          }
+        ],
+        "linkId": "ProfessionalClaim.diagnosis",
+        "title": "Diagnosis",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ProfessionalClaim.diagnosis.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.diagnosis.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Sequence of diagnosis."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "integer"
+              }
+            ],
+            "linkId": "ProfessionalClaim.diagnosis.sequence",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.diagnosis.sequence.value",
+                "text": "Sequence of diagnosis",
+                "type": "integer"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The diagnosis."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "ProfessionalClaim.diagnosis.diagnosis",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.diagnosis.diagnosis.value",
+                "text": "Patient's list of diagnosis",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "List of patient conditions for which care is sought."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "ProfessionalClaim.condition",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ProfessionalClaim.condition.value",
+            "text": "List of presenting Conditions",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Patient Resource."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "ProfessionalClaim.patient",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "ProfessionalClaim.patient.value",
+            "text": "The subject of the Products and Services",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Financial instrument by which payment information for health care."
+          }
+        ],
+        "linkId": "ProfessionalClaim.coverage",
+        "title": "Insurance or medical plan",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ProfessionalClaim.coverage.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.coverage.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A service line item."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "integer"
+              }
+            ],
+            "linkId": "ProfessionalClaim.coverage.sequence",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.coverage.sequence.value",
+                "text": "Service instance identifier",
+                "type": "integer"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The instance number of the Coverage which is the focus for adjudication. The Coverage against which the claim is to be adjudicated."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "boolean"
+              }
+            ],
+            "linkId": "ProfessionalClaim.coverage.focal",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.coverage.focal.value",
+                "text": "Is the focal Coverage",
+                "type": "boolean"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Reference to the program or plan identification, underwriter or payor."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "ProfessionalClaim.coverage.coverage",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Coverage?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "ProfessionalClaim.coverage.coverage.value",
+                "text": "Insurance information",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The contract number of a business agreement which describes the terms and conditions."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ProfessionalClaim.coverage.businessArrangement",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.coverage.businessArrangement.value",
+                "text": "Business agreement",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The relationship of the patient to the subscriber."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "ProfessionalClaim.coverage.relationship",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.coverage.relationship.value",
+                "text": "Patient relationship to subscriber",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of references from the Insurer to which these services pertain."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ProfessionalClaim.coverage.preauthref",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.coverage.preauthref.value",
+                "text": "Pre-Authorization/Determination Reference",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The Coverages adjudication details."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "ProfessionalClaim.coverage.claimResponse",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/ClaimResponse?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "ProfessionalClaim.coverage.claimResponse.value",
+                "text": "Adjudication results",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The style (standard) and version of the original material which was converted into this resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "ProfessionalClaim.coverage.originalRuleset",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.coverage.originalRuleset.value",
+                "text": "Original version",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Factors which may influence the applicability of coverage."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "ProfessionalClaim.exception",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ProfessionalClaim.exception.value",
+            "text": "Eligibility exceptions",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Name of school for over-aged dependants."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "ProfessionalClaim.school",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ProfessionalClaim.school.value",
+            "text": "Name of School",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Date of an accident which these services are addressing."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "datetime"
+          }
+        ],
+        "linkId": "ProfessionalClaim.accident",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ProfessionalClaim.accident.value",
+            "text": "Accident Date",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Type of accident: work, auto, etc."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "ProfessionalClaim.accidentType",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ProfessionalClaim.accidentType.value",
+            "text": "Accident Type",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A list of intervention and exception codes which may influence the adjudication of the claim."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "ProfessionalClaim.interventionException",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ProfessionalClaim.interventionException.value",
+            "text": "Intervention and exception code (Pharma)",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "First tier of goods and services."
+          }
+        ],
+        "linkId": "ProfessionalClaim.item",
+        "title": "Goods and Services",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ProfessionalClaim.item.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.item.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A service line number."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "integer"
+              }
+            ],
+            "linkId": "ProfessionalClaim.item.sequence",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.item.sequence.value",
+                "text": "Service instance",
+                "type": "integer"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The type of product or service."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "ProfessionalClaim.item.type",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.item.type.value",
+                "text": "Group or type of product or service",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The practitioner who is responsible for the services rendered to the patient."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "ProfessionalClaim.item.provider",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "ProfessionalClaim.item.provider.value",
+                "text": "Responsible practitioner",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Diagnosis applicable for this service or product line."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "integer"
+              }
+            ],
+            "linkId": "ProfessionalClaim.item.diagnosisLinkId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.item.diagnosisLinkId.value",
+                "text": "Diagnosis Link",
+                "type": "integer"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "If a grouping item then 'GROUP' otherwise it is a node therefore a code to indicate the Professional Service or Product supplied."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "ProfessionalClaim.item.service",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.item.service.value",
+                "text": "Item Code",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The date when the enclosed suite of services were performed or completed."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "datetime"
+              }
+            ],
+            "linkId": "ProfessionalClaim.item.serviceDate",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.item.serviceDate.value",
+                "text": "Date of Service",
+                "type": "dateTime"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The number of repetitions of a service or product."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Quantity"
+              }
+            ],
+            "linkId": "ProfessionalClaim.item.quantity",
+            "text": "Count of Products or Services",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.item.quantity.comparator",
+                "text": "comp:",
+                "type": "choice"
+              },
+              {
+                "linkId": "ProfessionalClaim.item.quantity.value",
+                "text": "value:",
+                "type": "decimal"
+              },
+              {
+                "linkId": "ProfessionalClaim.item.quantity.units",
+                "text": "units:",
+                "type": "string"
+              },
+              {
+                "linkId": "ProfessionalClaim.item.quantity.code",
+                "text": "coded units:",
+                "type": "string"
+              },
+              {
+                "linkId": "ProfessionalClaim.item.quantity.system",
+                "text": "units system:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "If the item is a node then this is the fee for the product or service, otherwise this is the total of the fees for the children of the group."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Money"
+              }
+            ],
+            "linkId": "ProfessionalClaim.item.unitPrice",
+            "text": "Fee, charge or cost per point",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.item.unitPrice.value",
+                "text": "value:",
+                "type": "decimal"
+              },
+              {
+                "linkId": "ProfessionalClaim.item.unitPrice.currency",
+                "text": "currency:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "decimal"
+              }
+            ],
+            "linkId": "ProfessionalClaim.item.factor",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.item.factor.value",
+                "text": "Price scaling factor",
+                "type": "decimal"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "An amount that expresses the weighting (based on difficulty, cost and/or resource intensiveness) associated with the good or service delivered. The concept of Points allows for assignment of point values for services and/or goods, such that a monetary amount can be assigned to each point."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "decimal"
+              }
+            ],
+            "linkId": "ProfessionalClaim.item.points",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.item.points.value",
+                "text": "Difficulty scaling factor",
+                "type": "decimal"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The quantity times the unit price for an additional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Money"
+              }
+            ],
+            "linkId": "ProfessionalClaim.item.net",
+            "text": "Total item cost",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.item.net.value",
+                "text": "value:",
+                "type": "decimal"
+              },
+              {
+                "linkId": "ProfessionalClaim.item.net.currency",
+                "text": "currency:",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "List of Unique Device Identifiers associated with this line item."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "ProfessionalClaim.item.udi",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.item.udi.value",
+                "text": "Unique Device Identifier",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Physical service site on the patient (limb, tooth, etc)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "ProfessionalClaim.item.bodySite",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.item.bodySite.value",
+                "text": "Service Location",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A region or surface of the site, eg. limb region or tooth surface(s)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "ProfessionalClaim.item.subsite",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.item.subsite.value",
+                "text": "Service Sub-location",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Item typification or modifiers codes, eg for Oral whether the treatment is cosmetic or associated with TMJ, or an appliance was lost or stolen."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "ProfessionalClaim.item.modifier",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ProfessionalClaim.item.modifier.value",
+                "text": "Service/Product billing modifiers",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Second tier of goods and services."
+              }
+            ],
+            "linkId": "ProfessionalClaim.item.detail",
+            "title": "Additional items",
+            "repeats": true,
+            "group": [
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "unique id for the element within a resource (for internal references)."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "ProfessionalClaim.item.detail.id",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ProfessionalClaim.item.detail.id.value",
+                    "text": "xml:id (or equivalent in JSON)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "A service line number."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "integer"
+                  }
+                ],
+                "linkId": "ProfessionalClaim.item.detail.sequence",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ProfessionalClaim.item.detail.sequence.value",
+                    "text": "Service instance",
+                    "type": "integer"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The type of product or service."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Coding"
+                  }
+                ],
+                "linkId": "ProfessionalClaim.item.detail.type",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ProfessionalClaim.item.detail.type.value",
+                    "text": "Group or type of product or service",
+                    "type": "open-choice"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "If a grouping item then 'GROUP' otherwise it is a node therefore a code to indicate the Professional Service or Product supplied."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Coding"
+                  }
+                ],
+                "linkId": "ProfessionalClaim.item.detail.service",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ProfessionalClaim.item.detail.service.value",
+                    "text": "Additional item codes",
+                    "type": "open-choice"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The number of repetitions of a service or product."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Quantity"
+                  }
+                ],
+                "linkId": "ProfessionalClaim.item.detail.quantity",
+                "text": "Count of Products or Services",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ProfessionalClaim.item.detail.quantity.comparator",
+                    "text": "comp:",
+                    "type": "choice"
+                  },
+                  {
+                    "linkId": "ProfessionalClaim.item.detail.quantity.value",
+                    "text": "value:",
+                    "type": "decimal"
+                  },
+                  {
+                    "linkId": "ProfessionalClaim.item.detail.quantity.units",
+                    "text": "units:",
+                    "type": "string"
+                  },
+                  {
+                    "linkId": "ProfessionalClaim.item.detail.quantity.code",
+                    "text": "coded units:",
+                    "type": "string"
+                  },
+                  {
+                    "linkId": "ProfessionalClaim.item.detail.quantity.system",
+                    "text": "units system:",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "If the item is a node then this is the fee for the product or service, otherwise this is the total of the fees for the children of the group."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Money"
+                  }
+                ],
+                "linkId": "ProfessionalClaim.item.detail.unitPrice",
+                "text": "Fee, charge or cost per point",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ProfessionalClaim.item.detail.unitPrice.value",
+                    "text": "value:",
+                    "type": "decimal"
+                  },
+                  {
+                    "linkId": "ProfessionalClaim.item.detail.unitPrice.currency",
+                    "text": "currency:",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "decimal"
+                  }
+                ],
+                "linkId": "ProfessionalClaim.item.detail.factor",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ProfessionalClaim.item.detail.factor.value",
+                    "text": "Price scaling factor",
+                    "type": "decimal"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "An amount that expresses the weighting (based on difficulty, cost and/or resource intensiveness) associated with the good or service delivered. The concept of Points allows for assignment of point values for services and/or goods, such that a monetary amount can be assigned to each point."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "decimal"
+                  }
+                ],
+                "linkId": "ProfessionalClaim.item.detail.points",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ProfessionalClaim.item.detail.points.value",
+                    "text": "Difficulty scaling factor",
+                    "type": "decimal"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The quantity times the unit price for an additional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Money"
+                  }
+                ],
+                "linkId": "ProfessionalClaim.item.detail.net",
+                "text": "Total additional item cost",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ProfessionalClaim.item.detail.net.value",
+                    "text": "value:",
+                    "type": "decimal"
+                  },
+                  {
+                    "linkId": "ProfessionalClaim.item.detail.net.currency",
+                    "text": "currency:",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "List of Unique Device Identifiers associated with this line item."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Coding"
+                  }
+                ],
+                "linkId": "ProfessionalClaim.item.detail.udi",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ProfessionalClaim.item.detail.udi.value",
+                    "text": "Unique Device Identifier",
+                    "type": "open-choice"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Third tier of goods and services."
+                  }
+                ],
+                "linkId": "ProfessionalClaim.item.detail.subDetail",
+                "title": "Additional items",
+                "repeats": true,
+                "group": [
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "unique id for the element within a resource (for internal references)."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "string"
+                      }
+                    ],
+                    "linkId": "ProfessionalClaim.item.detail.subDetail.id",
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "ProfessionalClaim.item.detail.subDetail.id.value",
+                        "text": "xml:id (or equivalent in JSON)",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "A service line number."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "integer"
+                      }
+                    ],
+                    "linkId": "ProfessionalClaim.item.detail.subDetail.sequence",
+                    "required": true,
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "ProfessionalClaim.item.detail.subDetail.sequence.value",
+                        "text": "Service instance",
+                        "type": "integer"
+                      }
+                    ]
+                  },
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "The type of product or service."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "Coding"
+                      }
+                    ],
+                    "linkId": "ProfessionalClaim.item.detail.subDetail.type",
+                    "required": true,
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "ProfessionalClaim.item.detail.subDetail.type.value",
+                        "text": "Type of product or service",
+                        "type": "open-choice"
+                      }
+                    ]
+                  },
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "The fee for an additional service or product or charge."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "Coding"
+                      }
+                    ],
+                    "linkId": "ProfessionalClaim.item.detail.subDetail.service",
+                    "required": true,
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "ProfessionalClaim.item.detail.subDetail.service.value",
+                        "text": "Additional item codes",
+                        "type": "open-choice"
+                      }
+                    ]
+                  },
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "The number of repetitions of a service or product."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "Quantity"
+                      }
+                    ],
+                    "linkId": "ProfessionalClaim.item.detail.subDetail.quantity",
+                    "text": "Count of Products or Services",
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "ProfessionalClaim.item.detail.subDetail.quantity.comparator",
+                        "text": "comp:",
+                        "type": "choice"
+                      },
+                      {
+                        "linkId": "ProfessionalClaim.item.detail.subDetail.quantity.value",
+                        "text": "value:",
+                        "type": "decimal"
+                      },
+                      {
+                        "linkId": "ProfessionalClaim.item.detail.subDetail.quantity.units",
+                        "text": "units:",
+                        "type": "string"
+                      },
+                      {
+                        "linkId": "ProfessionalClaim.item.detail.subDetail.quantity.code",
+                        "text": "coded units:",
+                        "type": "string"
+                      },
+                      {
+                        "linkId": "ProfessionalClaim.item.detail.subDetail.quantity.system",
+                        "text": "units system:",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "The fee for an additional service or product or charge."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "Money"
+                      }
+                    ],
+                    "linkId": "ProfessionalClaim.item.detail.subDetail.unitPrice",
+                    "text": "Fee, charge or cost per point",
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "ProfessionalClaim.item.detail.subDetail.unitPrice.value",
+                        "text": "value:",
+                        "type": "decimal"
+                      },
+                      {
+                        "linkId": "ProfessionalClaim.item.detail.subDetail.unitPrice.currency",
+                        "text": "currency:",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "decimal"
+                      }
+                    ],
+                    "linkId": "ProfessionalClaim.item.detail.subDetail.factor",
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "ProfessionalClaim.item.detail.subDetail.factor.value",
+                        "text": "Price scaling factor",
+                        "type": "decimal"
+                      }
+                    ]
+                  },
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "An amount that expresses the weighting (based on difficulty, cost and/or resource intensiveness) associated with the good or service delivered. The concept of Points allows for assignment of point values for services and/or goods, such that a monetary amount can be assigned to each point."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "decimal"
+                      }
+                    ],
+                    "linkId": "ProfessionalClaim.item.detail.subDetail.points",
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "ProfessionalClaim.item.detail.subDetail.points.value",
+                        "text": "Difficulty scaling factor",
+                        "type": "decimal"
+                      }
+                    ]
+                  },
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "The quantity times the unit price for an additional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "Money"
+                      }
+                    ],
+                    "linkId": "ProfessionalClaim.item.detail.subDetail.net",
+                    "text": "Net additional item cost",
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "ProfessionalClaim.item.detail.subDetail.net.value",
+                        "text": "value:",
+                        "type": "decimal"
+                      },
+                      {
+                        "linkId": "ProfessionalClaim.item.detail.subDetail.net.currency",
+                        "text": "currency:",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "List of Unique Device Identifiers associated with this line item."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "Coding"
+                      }
+                    ],
+                    "linkId": "ProfessionalClaim.item.detail.subDetail.udi",
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "ProfessionalClaim.item.detail.subDetail.udi.value",
+                        "text": "Unique Device Identifier",
+                        "type": "open-choice"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Code to indicate that Xrays, images, emails, documents, models or attachments are being sent in support of this submission."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "ProfessionalClaim.additionalMaterials",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ProfessionalClaim.additionalMaterials.value",
+            "text": "Additional materials, documents, etc.",
+            "type": "open-choice"
+          }
+        ]
+      }
+    ]
+  }
+}

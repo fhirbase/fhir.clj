@@ -1,0 +1,61 @@
+{
+  "resourceType": "Other",
+  "id": "classModel",
+  "text": {
+    "status": "generated",
+    "div": "<div>\n      \n      <p>\n        <b>Class1</b>\n      </p>\n      \n      <ul>\n        \n        <li>Attribute1: 1..*</li>\n        \n        <li>Attribute2: 0..1</li>\n      \n      </ul>\n    \n    </div>"
+  },
+  "http://example.org/do-not-use/fhir-extensions/UML#class": [
+    {
+      "http://example.org/do-not-use/fhir-extensions/UML#class.name": [
+        {
+          "valueString": "Class1"
+        }
+      ],
+      "http://example.org/do-not-use/fhir-extensions/UML#class.attribute": [
+        {
+          "http://example.org/do-not-use/fhir-extensions/UML#class.attribute.name": [
+            {
+              "valueString": "attribute1"
+            }
+          ],
+          "http://example.org/do-not-use/fhir-extensions/UML#class.attribute.minOccurs": [
+            {
+              "valueInteger": 1
+            }
+          ],
+          "http://example.org/do-not-use/fhir-extensions/UML#class.attribute.maxOccurs": [
+            {
+              "valueCode": "*"
+            }
+          ]
+        },
+        {
+          "http://example.org/do-not-use/fhir-extensions/UML#class.attribute.name": [
+            {
+              "valueString": "attribute2"
+            }
+          ],
+          "http://example.org/do-not-use/fhir-extensions/UML#class.attribute.minOccurs": [
+            {
+              "valueInteger": 0
+            }
+          ],
+          "http://example.org/do-not-use/fhir-extensions/UML#class.attribute.maxOccurs": [
+            {
+              "valueInteger": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "code": {
+    "coding": [
+      {
+        "system": "http://example.org/do-not-use/fhir-codes#resourceTypes",
+        "code": "UMLCLASSMODEL"
+      }
+    ]
+  }
+}

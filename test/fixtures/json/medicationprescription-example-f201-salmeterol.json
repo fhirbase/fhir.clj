@@ -1,0 +1,86 @@
+{
+  "resourceType": "MedicationPrescription",
+  "id": "f201",
+  "dateWritten": "2013-03-11",
+  "status": "active",
+  "patient": {
+    "reference": "Patient/f201",
+    "display": "Roel"
+  },
+  "prescriber": {
+    "reference": "Practitioner/f201",
+    "display": "Dokter Bonsig"
+  },
+  "reasonReference": {
+    "reference": "Condition/f201",
+    "display": "fever"
+  },
+  "medication": {
+    "reference": "Medication/f201",
+    "display": "25ug Salmeterol + 250ug Fluticasone"
+  },
+  "dosageInstruction": [
+    {
+      "text": "aerosol 25/250ug/do 120do 2x - 1 dose - daily",
+      "scheduledTiming": {
+        "event": [
+          {
+            "start": "2013-03-11",
+            "end": "2013-05-11"
+          }
+        ],
+        "repeat": {
+          "frequency": 2,
+          "duration": 1,
+          "units": "d"
+        }
+      },
+      "site": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "74262004",
+            "display": "Oral cavity"
+          }
+        ]
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "321667001",
+            "display": "Respiratory tract"
+          }
+        ]
+      },
+      "method": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "320276009",
+            "display": "Salmeterol+fluticasone 25/250ug inhaler"
+          }
+        ]
+      },
+      "doseQuantity": {
+        "value": 1,
+        "system": "http://hl7.org/fhir/v3/orderableDrugForm",
+        "code": "PUFF"
+      },
+      "maxDosePerPeriod": {
+        "numerator": {
+          "value": 2,
+          "units": "puffs",
+          "system": "http://snomed.info/sct",
+          "code": "415215001"
+        },
+        "denominator": {
+          "value": 1,
+          "units": "daily",
+          "system": "http://snomed.info/sct",
+          "code": "259032004"
+        }
+      }
+    }
+  ]
+}

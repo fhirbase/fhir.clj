@@ -1,0 +1,100 @@
+{
+  "resourceType": "Profile",
+  "id": "code",
+  "text": {
+    "status": "generated",
+    "div": "<div>to do</div>"
+  },
+  "url": "http://hl7.org/fhir/Profile/code",
+  "name": "code",
+  "publisher": "HL7 FHIR Standard",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "Base Profile for code Resource: A string which has at least one character and no leading or trailing whitespace and where there is no whitespace other than single spaces in the contents",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "type": "code",
+  "base": "http://hl7.org/fhir/Profile/Element",
+  "snapshot": {
+    "element": [
+      {
+        "path": "code",
+        "short": "Primitive Type code",
+        "formal": "A string which has at least one character and no leading or trailing whitespace and where there is no whitespace other than single spaces in the contents",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "code.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "value",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "Primitive value for code",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "xsd:string"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "path": "code",
+        "short": "Primitive Type code",
+        "formal": "A string which has at least one character and no leading or trailing whitespace and where there is no whitespace other than single spaces in the contents",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Element"
+          }
+        ]
+      },
+      {
+        "path": "value",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "Primitive value for code",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "xsd:string"
+          }
+        ]
+      }
+    ]
+  }
+}

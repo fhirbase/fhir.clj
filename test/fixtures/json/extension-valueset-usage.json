@@ -1,0 +1,51 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "valueset-usage",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/valueset-usage",
+  "name": "Who has used and how?",
+  "publisher": "HL7",
+  "description": "Consumers of the value set and the implementations, projects or standards that the author has utilized the value set in.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "contextType": "resource",
+  "context": [
+    "ValueSet"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Who has used and how?",
+      "formal": "Consumers of the value set and the implementations, projects or standards that the author has utilized the value set in.",
+      "comments": "This is likely to be a ???point in time??? view and should not be considered an authoritative listing of all uses of the value set.",
+      "min": 0,
+      "max": "*",
+      "isSummary": false
+    },
+    {
+      "path": "Extension.user",
+      "short": "A consumer of or client for the value set",
+      "formal": "This is most likely to be an organization but can be an individual. It would not be a program, that information should be recorded in the usage.use.",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isSummary": false
+    },
+    {
+      "path": "Extension.use",
+      "short": "Implementation/project/standard that uses value set",
+      "formal": "A descriptive name of the project or standard in which the value set is used.",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

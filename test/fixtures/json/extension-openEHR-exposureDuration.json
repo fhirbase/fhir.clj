@@ -1,0 +1,35 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "openEHR-exposureDuration",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/openEHR-exposureDuration",
+  "name": "Amount of time individual was exposed to Substance",
+  "publisher": "Health Level Seven, Inc / openEHR project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org"
+    }
+  ],
+  "description": "The amount of time the individual was exposed to the Substance.",
+  "status": "draft",
+  "date": "2014-10-09",
+  "contextType": "resource",
+  "context": [
+    "AllergyIntolerance.event"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Amount of time individual was exposed to Substance",
+      "formal": "The amount of time the individual was exposed to the Substance.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Duration"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

@@ -1,0 +1,1988 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Profile xmlns="http://hl7.org/fhir">
+  <id value="do-uslab-uslabdo"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">to do</div>
+  </text>
+  <url value="http://hl7.org/fhir/Profile/do-uslab-uslabdo"/>
+  <name value="US Laboratory Diagnostic Order Profile"/>
+  <publisher value="HL7 International - Orders and Observations WG"/>
+  <telecom>
+    <system value="url"/>
+    <value value="http://hl7.org"/>
+  </telecom>
+  <description value="Constraints and extensions for the US Realm laboratory ordering in ambulatory care setting : US Laboratory Diagnostic Order Profile"/>
+  <status value="draft"/>
+  <date value="2014-11-17"/>
+  <type value="DiagnosticOrder"/>
+  <base value="http://hl7.org/fhir/Profile/DiagnosticOrder"/>
+  <snapshot>
+    <element>
+      <path value="DiagnosticOrder"/>
+      <name value="USLabDO"/>
+      <short value="A request for a diagnostic service"/>
+      <formal value="A request for a diagnostic investigation service to be performed."/>
+      <synonym value="Report"/>
+      <synonym value="Test"/>
+      <synonym value="Result"/>
+      <synonym value="Results"/>
+      <synonym value="Labs"/>
+      <synonym value="Laboratory"/>
+      <synonym value="DO"/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Observation[classCode=OBS, moodCode=RQO, code&lt;&quot;diagnostic order&quot;]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Observation[classCode=OBS, moodCode=RQO, code&lt;&quot;diagnostic order&quot;]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.id"/>
+      <short value="Logical id of this artefact"/>
+      <formal value="The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes."/>
+      <comments value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.meta"/>
+      <short value="Metadata about the resource"/>
+      <formal value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.meta.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.meta.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.meta.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.meta.versionId"/>
+      <short value="Version specific identifier"/>
+      <formal value="The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted."/>
+      <comments value="The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.meta.lastUpdated"/>
+      <short value="When the resource version last changed"/>
+      <formal value="When the resource last changed - e.g. when the version changed."/>
+      <comments value="This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="instant"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.meta.profile"/>
+      <short value="Profiles this resource claims to conform to"/>
+      <formal value="A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url."/>
+      <comments value="It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.meta.security"/>
+      <short value="Security Labels applied to this resource"/>
+      <formal value="Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure."/>
+      <comments value="The security labels can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.meta.tag"/>
+      <short value="Tags applied"/>
+      <formal value="Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource."/>
+      <comments value="The tags can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.implicitRules"/>
+      <short value="A set of rules under which this content was created"/>
+      <formal value="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content."/>
+      <comments value="Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.language"/>
+      <short value="Language of the resource content"/>
+      <formal value="The base language in which the resource is written."/>
+      <comments value="Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource
+
+Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="Language"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="A human language"/>
+        <referenceUri value="http://tools.ietf.org/html/bcp47"/>
+      </binding>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.text"/>
+      <short value="Text summary of the resource, for human interpretation"/>
+      <formal value="A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."/>
+      <comments value="Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."/>
+      <synonym value="narrative"/>
+      <synonym value="html"/>
+      <synonym value="xhtml"/>
+      <synonym value="display"/>
+      <min value="1"/>
+      <max value="1"/>
+      <condition value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.contained"/>
+      <short value="Contained, inline Resources"/>
+      <formal value="These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope."/>
+      <comments value="This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."/>
+      <synonym value="inline resources"/>
+      <synonym value="anonymous resources"/>
+      <synonym value="contained resources"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Resource"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.subject"/>
+      <short value="Who and/or what test is about"/>
+      <formal value="Who or what the investigation is to be performed on. This is usually a human patient, but diagnostic tests can also be requested on animals, groups of humans or animals, devices such as dialysis machines, or even locations (typically for environmental scans)."/>
+      <requirements value="Limited to single patient per Diagnostic Order (Requisition)."/>
+      <synonym value="Patient"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Patient"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Group"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Location"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Device"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].role"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].role"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.orderer"/>
+      <short value="Who ordered the test"/>
+      <formal value="The practitioner that holds legal responsibility for ordering the investigation."/>
+      <requirements value="Limited to single orderer per Diagnostic Order (Requisition)."/>
+      <synonym value="Ordering Provider"/>
+      <synonym value="OP"/>
+      <synonym value="Submitter"/>
+      <synonym value="Placer"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Practitioner"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=AUT].role"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=AUT].role"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier"/>
+      <slicing>
+        <discriminator value="identifier.label"/>
+        <ordered value="true"/>
+        <rules value="closed"/>
+      </slicing>
+      <short value="Identifiers assigned to this order"/>
+      <formal value="Identifiers assigned to this order by the order or by the receiver."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier"/>
+      <name value="USLabDOPlacerID"/>
+      <short value="Identifiers assigned to this order"/>
+      <formal value="Identifiers assigned to this order by the order or by the receiver."/>
+      <requirements value="Limit to Globally unique IDs using a URI ( could be a URL)."/>
+      <synonym value="Placer ID"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.use"/>
+      <short value="usual | official | temp | secondary (If known)"/>
+      <formal value="The purpose of this identifier."/>
+      <comments value="This is labeled as &quot;Is Modifier&quot; because applications should not mistake a temporary id for a permanent one. Applications can assume that an identifier is permanent unless it explicitly says that it is temporary."/>
+      <requirements value="Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <fixedCode value="official"/>
+      <mustSupport value="true"/>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="IdentifierUse"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="Identifies the purpose for this identifier, if known"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/identifier-use"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.code or implied by context"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.code or implied by context"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.label"/>
+      <short value="Description of identifier"/>
+      <formal value="A text string for the identifier that can be displayed to a human so they can recognize the identifier."/>
+      <requirements value="Allows humans to make use of identifiers when the identifier system is not known."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <fixedString value="Placer Order Number"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.5"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.title or implied by context"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.5"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.title or implied by context"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.system"/>
+      <short value="Placer URI"/>
+      <formal value="Placer URI."/>
+      <requirements value="There are many sequences of identifiers.  To perform matching, we need to know what sequence we&#39;re dealing with. The system identifies a particular sequence or set of unique identifiers."/>
+      <min value="1"/>
+      <max value="1"/>
+      <exampleUri value="http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the id itself is a full uri"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.4 / EI-2-4"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.root or Role.id.root"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./IdentifierType"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.4 / EI-2-4"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.root or Role.id.root"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./IdentifierType"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.value"/>
+      <short value="Placer Identifier"/>
+      <formal value="Placer Identifier."/>
+      <comments value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986."/>
+      <min value="1"/>
+      <max value="1"/>
+      <exampleString value="123456"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.1 / EI.1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Value"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.1 / EI.1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Value"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.period"/>
+      <short value="Time period when id is/was valid for use"/>
+      <formal value="Time period during which identifier is/was valid for use."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Period"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.7 + CX.8"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.effectiveTime or implied by context"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./StartDate and ./EndDate"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.7 + CX.8"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.effectiveTime or implied by context"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./StartDate and ./EndDate"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.assigner"/>
+      <short value="Organization that issued id (may be just text)"/>
+      <formal value="Organization that issued/manages the identifier."/>
+      <comments value="The reference may be just a text description of the assigner."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Organization"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.4 / (CX.4,CX.9,CX.10)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./IdentifierIssuingAuthority"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.4 / (CX.4,CX.9,CX.10)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./IdentifierIssuingAuthority"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier"/>
+      <name value="USLabDOFillerID"/>
+      <short value="Identifiers assigned to this order"/>
+      <formal value="Identifiers assigned to this order by the order or by the receiver."/>
+      <requirements value="Limit to Globally unique IDs using a URI ( could be a URL)."/>
+      <synonym value="Filler ID"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.use"/>
+      <short value="usual | official | temp | secondary (If known)"/>
+      <formal value="The purpose of this identifier."/>
+      <comments value="This is labeled as &quot;Is Modifier&quot; because applications should not mistake a temporary id for a permanent one. Applications can assume that an identifier is permanent unless it explicitly says that it is temporary."/>
+      <requirements value="Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <fixedCode value="official"/>
+      <mustSupport value="true"/>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="IdentifierUse"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="Identifies the purpose for this identifier, if known"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/identifier-use"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.code or implied by context"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.code or implied by context"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.label"/>
+      <short value="Description of identifier"/>
+      <formal value="A text string for the identifier that can be displayed to a human so they can recognize the identifier."/>
+      <requirements value="Allows humans to make use of identifiers when the identifier system is not known."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <fixedString value="Filler Order Number"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.5"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.title or implied by context"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.5"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.title or implied by context"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.system"/>
+      <short value="Filler URI"/>
+      <formal value="Filler URI."/>
+      <requirements value="There are many sequences of identifiers.  To perform matching, we need to know what sequence we&#39;re dealing with. The system identifies a particular sequence or set of unique identifiers."/>
+      <min value="1"/>
+      <max value="1"/>
+      <exampleUri value="http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the id itself is a full uri"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.4 / EI-2-4"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.root or Role.id.root"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./IdentifierType"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.4 / EI-2-4"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.root or Role.id.root"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./IdentifierType"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.value"/>
+      <short value="Filler Identifier"/>
+      <formal value="Filler Identifier."/>
+      <comments value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986."/>
+      <min value="1"/>
+      <max value="1"/>
+      <exampleString value="123456"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.1 / EI.1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Value"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.1 / EI.1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Value"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.period"/>
+      <short value="Time period when id is/was valid for use"/>
+      <formal value="Time period during which identifier is/was valid for use."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Period"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.7 + CX.8"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.effectiveTime or implied by context"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./StartDate and ./EndDate"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.7 + CX.8"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.effectiveTime or implied by context"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./StartDate and ./EndDate"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.assigner"/>
+      <short value="Organization that issued id (may be just text)"/>
+      <formal value="Organization that issued/manages the identifier."/>
+      <comments value="The reference may be just a text description of the assigner."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Organization"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.4 / (CX.4,CX.9,CX.10)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./IdentifierIssuingAuthority"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.4 / (CX.4,CX.9,CX.10)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./IdentifierIssuingAuthority"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.encounter"/>
+      <short value="The encounter that this diagnostic order is associated with"/>
+      <formal value="An encounter that provides additional information about the healthcare context in which this request is made."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Encounter"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.clinicalNotes"/>
+      <short value="Explanation/Justification for test"/>
+      <formal value="An explanation or justification for why this diagnostic investigation is being requested."/>
+      <comments value="This may be used to decide how the diagnostic investigation will be performed, or even if it will be performed at all."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".reasonCode.originalText"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".reasonCode.originalText"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.supportingInformation"/>
+      <short value="Supporting observations or conditions for this request"/>
+      <formal value="Additional clinical information about the patient or specimen that may influence test interpretations."/>
+      <comments value="AOES are captured in the USLabObservation resource and Reasons for the testing in USLabCondition."/>
+      <requirements value="AOES are captured in the USLabObservation resource and Reasons for the testing in USLabCondition."/>
+      <synonym value="AOE"/>
+      <synonym value="Reason for Study"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Observation"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Condition"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBR-13"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBR-13"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.specimen"/>
+      <short value="If the whole order relates to specific specimens"/>
+      <formal value="One or more specimens that the diagnostic investigation is about."/>
+      <comments value="Many investigation requests will create a need for specimens, but the request itself is not actually about the specimens. This is provided for when the diagnostic investigation is requested on already existing specimens."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Specimen"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SPC].role"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SPC].role"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.status"/>
+      <short value="requested | received | accepted | in progress | review | completed | suspended | rejected | failed"/>
+      <formal value="The status of the order."/>
+      <comments value="Typically the system placing the order sets the status to requested. Thereafter, the order is maintained by the receiver that updates the status as the request is handled."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DiagnosticOrderStatus"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The status of a diagnostic order"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/diagnostic-order-status"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode
+also influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode
+also influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.priority"/>
+      <short value="routine | urgent | stat | asap"/>
+      <formal value="The clinical priority associated with this order."/>
+      <comments value="The Order resource also has a priority. Generally, these should be the same, but they can be different, for instance in the case where the clinician indicates that the order is urgent, but the subsequent workflow process overrule this priority for some reason. The effective default value is &quot;normal&quot;."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DiagnosticOrderPriority"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The clinical priority of a diagnostic order"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/diagnostic-order-priority"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".priorityCode"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".priorityCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event"/>
+      <short value="A list of events of interest in the lifecycle"/>
+      <formal value="A summary of the events of interest that have occurred as the request is processed. E.g. when the order was made, various processing steps (specimens received), when it was completed."/>
+      <comments value="This is not the same as an audit trail - it is a view of the important things that happened in the past. Typically, there would only be one entry for any given status, and systems may not record all the status events."/>
+      <min value="1"/>
+      <max value="*"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=FLFS].source"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=FLFS].source"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event.status"/>
+      <short value="requested | received | accepted | in progress | review | completed | suspended | rejected | failed"/>
+      <formal value="The status for the event."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DiagnosticOrderStatus"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The status of a diagnostic order"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/diagnostic-order-status"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode
+also influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode
+also influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event.description"/>
+      <short value="More information about the event and its context"/>
+      <formal value="Additional information about the event that occurred - e.g. if the status remained unchanged."/>
+      <comments value="These codes capture the Use cases for LOI."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="USLABDOEvent"/>
+        <isExtensible value="true"/>
+        <conformance value="required"/>
+        <description value="Information about an event that occurred to a diagnostic order that corresponds to the USLabOrder Use Cases"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/do-uslab-event"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event.dateTime"/>
+      <short value="The date at which the event happened"/>
+      <formal value="The date/time at which the event occurred."/>
+      <requirements value="Minimum Precision to Day."/>
+      <min value="1"/>
+      <max value="1"/>
+      <constraint>
+        <key value="2"/>
+        <name value="datetime to Day"/>
+        <severity value="error"/>
+        <human value="Datetime must be at least to day."/>
+        <xpath value="f:matches(dateTime,/\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)/)"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event.actor"/>
+      <short value="Who recorded or did this"/>
+      <formal value="The person who was responsible for performing or recording the action."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Practitioner"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Device"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[AUT or PFM]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[AUT or PFM]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item"/>
+      <short value="The items the orderer requested"/>
+      <formal value="The specific diagnostic investigations that are requested as part of this request. Sometimes, there can only be one item per request, but in most contexts, more than one investigation can be requested."/>
+      <comments value="There would always be at least one item in normal usage, but this is optional so that a workflow can quote order details without having to list the items."/>
+      <min value="1"/>
+      <max value="*"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=COMP].target[classCode=OBS, moodCode=OBS]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".outboundRelationship[typeCode=COMP].target[classCode=OBS, moodCode=OBS]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.code"/>
+      <short value="US Realm Laboratory Report Order Code"/>
+      <formal value="The laboratory test, panel or battery that was ordered."/>
+      <comments value="Use the appropriate LOINC or local code as provided by laboratory.   FHIR Value set resources binding to each laboratory&#39;s compendium of service is done at implementation usign the FHIR Value set resources or some other mechanism."/>
+      <requirements value="Requires at least a code, code system an d display text."/>
+      <min value="1"/>
+      <max value="1"/>
+      <constraint>
+        <key value="1"/>
+        <name value="LOINC or Local"/>
+        <severity value="error"/>
+        <human value="Must have a LOINC or a Local code or both."/>
+        <xpath value="exists(f:coding)"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DiagnosticRequests"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="Codes for tests/services that can be performed by diagnostic services"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/diagnostic-requests"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBX-4"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBX-4"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.specimen"/>
+      <short value="If this item relates to specific specimens"/>
+      <formal value="If the item is related to a specific specimen."/>
+      <comments value="New specimen(s) related to the item event go here and not in DO.specimen."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Specimen"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SPC].role"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SPC].role"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.bodySite"/>
+      <short value="Location of requested test (if applicable)"/>
+      <formal value="Anatomical location where the request test should be performed."/>
+      <synonym value="location"/>
+      <min value="0"/>
+      <max value="0"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="BodySite"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="Codes describing anatomical locations. May include laterality"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/body-site"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value="targetSiteCode"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="targetSiteCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.status"/>
+      <short value="requested | received | accepted | in progress | review | completed | suspended | rejected | failed"/>
+      <formal value="The status of this individual item within the order."/>
+      <comments value="Typically the system placing the order sets the status to requested. There after, the order is maintained by the receiver that updates the status as the request is handled."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="DiagnosticOrderStatus"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The status of a diagnostic order"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/diagnostic-order-status"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode
+also influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".statusCode
+also influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.event"/>
+      <short value="Events specific to this item"/>
+      <formal value="A summary of the events of interest that have occurred as this item of the request is processed."/>
+      <min value="0"/>
+      <max value="*"/>
+      <nameReference value="event"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=FLFS].source"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=FLFS].source"/>
+      </mapping>
+    </element>
+  </snapshot>
+  <differential>
+    <element>
+      <path value="DiagnosticOrder"/>
+      <name value="USLabDO"/>
+      <synonym value="DO"/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.extension"/>
+      <slicing>
+        <discriminator value="url"/>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.extension"/>
+      <name value="USLabCC"/>
+      <short value="Copy to provider,organization, or patient"/>
+      <formal value="Copy to provider,organization, or patient."/>
+      <synonym value="CC"/>
+      <synonym value="Copy to"/>
+      <synonym value="Result Copies To"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/uslabcc-practitioner"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.extension.valueReference"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/pract-uslab-uslabpract"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.text"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.text.status"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <fixedCode value="generated"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.subject"/>
+      <requirements value="Limited to single patient per Diagnostic Order (Requisition)."/>
+      <synonym value="Patient"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/patient-uslab-uslabpatient"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/patient-uslab-uslabphpatient"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.orderer"/>
+      <requirements value="Limited to single orderer per Diagnostic Order (Requisition)."/>
+      <synonym value="Ordering Provider"/>
+      <synonym value="OP"/>
+      <synonym value="Submitter"/>
+      <synonym value="Placer"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/pract-uslab-uslabphpract"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/pract-uslab-uslabpract"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier"/>
+      <slicing>
+        <discriminator value="identifier.label"/>
+        <ordered value="true"/>
+        <rules value="closed"/>
+      </slicing>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier"/>
+      <name value="USLabDOPlacerID"/>
+      <requirements value="Limit to Globally unique IDs using a URI ( could be a URL)."/>
+      <synonym value="Placer ID"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.use"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <fixedCode value="official"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.label"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <fixedString value="Placer Order Number"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.system"/>
+      <short value="Placer URI"/>
+      <formal value="Placer URI."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.value"/>
+      <short value="Placer Identifier"/>
+      <formal value="Placer Identifier."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier"/>
+      <name value="USLabDOFillerID"/>
+      <requirements value="Limit to Globally unique IDs using a URI ( could be a URL)."/>
+      <synonym value="Filler ID"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.use"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <fixedCode value="official"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.label"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <fixedString value="Filler Order Number"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.system"/>
+      <short value="Filler URI"/>
+      <formal value="Filler URI."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.identifier.value"/>
+      <short value="Filler Identifier"/>
+      <formal value="Filler Identifier."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.clinicalNotes"/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.supportingInformation"/>
+      <comments value="AOES are captured in the USLabObservation resource and Reasons for the testing in USLabCondition."/>
+      <requirements value="AOES are captured in the USLabObservation resource and Reasons for the testing in USLabCondition."/>
+      <synonym value="AOE"/>
+      <synonym value="Reason for Study"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/obs-uslab-uslabobscode"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/obs-uslab-uslabobsquantity"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/obs-uslab-uslabobsother"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/obs-uslab-uslabobsratio"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/cond-uslab-uslabcond"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.specimen"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/spec-uslab-uslabspec"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.status"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.priority"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event"/>
+      <min value="1"/>
+      <max value="*"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event.description"/>
+      <comments value="These codes capture the Use cases for LOI."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="USLABDOEvent"/>
+        <isExtensible value="true"/>
+        <conformance value="required"/>
+        <description value="Information about an event that occurred to a diagnostic order that corresponds to the USLabOrder Use Cases"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/do-uslab-event"/>
+        </referenceReference>
+      </binding>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event.description.coding"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event.description.coding.code"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.event.dateTime"/>
+      <requirements value="Minimum Precision to Day."/>
+      <min value="1"/>
+      <max value="1"/>
+      <condition value="2"/>
+      <constraint>
+        <key value="2"/>
+        <name value="datetime to Day"/>
+        <severity value="error"/>
+        <human value="Datetime must be at least to day."/>
+        <xpath value="f:matches(dateTime,/\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d([+-][0-2]\d:[0-5]\d|Z)/)"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item"/>
+      <min value="1"/>
+      <max value="*"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.code"/>
+      <short value="US Realm Laboratory Report Order Code"/>
+      <formal value="The laboratory test, panel or battery that was ordered."/>
+      <comments value="Use the appropriate LOINC or local code as provided by laboratory.   FHIR Value set resources binding to each laboratory&#39;s compendium of service is done at implementation usign the FHIR Value set resources or some other mechanism."/>
+      <requirements value="Requires at least a code, code system an d display text."/>
+      <min value="1"/>
+      <max value="1"/>
+      <condition value="1"/>
+      <constraint>
+        <key value="1"/>
+        <name value="LOINC or Local"/>
+        <severity value="error"/>
+        <human value="Must have a LOINC or a Local code or both."/>
+        <xpath value="exists(f:coding)"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.code.text"/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.coding"/>
+      <slicing>
+        <discriminator value="system"/>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.coding"/>
+      <name value="USLabLOINCCoding"/>
+      <short value="LOINC coding if available"/>
+      <formal value="LOINC coding if available."/>
+      <synonym value="LOINC code"/>
+      <min value="0"/>
+      <max value="1"/>
+      <condition value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.coding.system"/>
+      <short value="LOINC Coding System"/>
+      <formal value="LOINC Coding System."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="http://loinc.org"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.coding.code"/>
+      <short value="LOINC"/>
+      <formal value="Logical Observation Identifiers Names and Codes (LOINC) is a database and universal standard for identifying medical laboratory observations."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.coding.display"/>
+      <short value="LOINC Display Name"/>
+      <formal value="The LOINC  &#39;long common name&#39; is preferred although the LOINC &#39;short name&#39; or the LOINC &#39;fully-specified name can also be used.  ( http://lionc.org.terms-of-use)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.coding"/>
+      <name value="USLabLocalCoding"/>
+      <synonym value="Local"/>
+      <min value="0"/>
+      <max value="1"/>
+      <condition value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.coding.system"/>
+      <short value="Local Coding System"/>
+      <formal value="This is defined locally."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.coding.code"/>
+      <short value="Local Code"/>
+      <formal value="Local Code."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.coding.display"/>
+      <short value="local Code Display name"/>
+      <formal value="This is defined locally."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.specimen"/>
+      <comments value="New specimen(s) related to the item event go here and not in DO.specimen."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/spec-uslab-uslabspec"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.bodySite"/>
+      <min value="0"/>
+      <max value="0"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="DiagnosticOrder.item.status"/>
+      <comments value="Typically the system placing the order sets the status to requested. There after, the order is maintained by the receiver that updates the status as the request is handled."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</Profile>

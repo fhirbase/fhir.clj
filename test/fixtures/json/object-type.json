@@ -1,0 +1,59 @@
+{
+  "resourceType": "ValueSet",
+  "id": "object-type",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 4 concepts</p><h2>SecurityEventObjectType</h2><p>Code for the participant object type being audited</p><p>This value set defines its own terms in the system http://hl7.org/fhir/object-type</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>1<a name=\"1\"> </a></td><td>Person.</td></tr><tr><td>2<a name=\"2\"> </a></td><td>System Object.</td></tr><tr><td>3<a name=\"3\"> </a></td><td>Organization.</td></tr><tr><td>4<a name=\"4\"> </a></td><td>Other.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.166"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/object-type",
+  "name": "SecurityEventObjectType",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Code for the participant object type being audited",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.492+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.166"
+      }
+    ],
+    "system": "http://hl7.org/fhir/object-type",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "1",
+        "definition": "Person."
+      },
+      {
+        "code": "2",
+        "definition": "System Object."
+      },
+      {
+        "code": "3",
+        "definition": "Organization."
+      },
+      {
+        "code": "4",
+        "definition": "Other."
+      }
+    ]
+  }
+}

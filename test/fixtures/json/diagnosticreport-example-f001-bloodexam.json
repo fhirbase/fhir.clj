@@ -1,0 +1,112 @@
+{
+  "resourceType": "DiagnosticReport",
+  "id": "f001",
+  "contained": [
+    {
+      "resourceType": "DiagnosticOrder",
+      "id": "req",
+      "subject": {
+        "reference": "Patient/f001",
+        "display": "P. van den Heuvel"
+      },
+      "orderer": {
+        "reference": "Practitioner/f001",
+        "display": "E.van den Broek"
+      },
+      "identifier": [
+        {
+          "use": "official",
+          "system": "http://www.bmc.nl/zorgportal/identifiers/labresults",
+          "value": "L2381"
+        }
+      ],
+      "encounter": {
+        "reference": "Encounter/f001"
+      },
+      "clinicalNotes": "patient almost fainted during procedure",
+      "item": [
+        {
+          "code": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "58410-2",
+                "display": "Complete blood count (hemogram) panel - Blood by Automated count"
+              }
+            ]
+          },
+          "bodySite": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "14975008",
+                "display": "Forearm structure"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "name": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "58410-2",
+        "display": "Complete blood count (hemogram) panel - Blood by Automated count"
+      }
+    ]
+  },
+  "status": "final",
+  "issued": "2013-05-15T19:32:52+01:00",
+  "subject": {
+    "reference": "Patient/f001",
+    "display": "P. van den Heuvel"
+  },
+  "performer": {
+    "reference": "Organization/f001",
+    "display": "Burgers University Medical Centre"
+  },
+  "identifier": {
+    "use": "official",
+    "system": "http://www.bmc.nl/zorgportal/identifiers/reports",
+    "value": "nr1239044"
+  },
+  "requestDetail": [
+    {
+      "reference": "#req"
+    }
+  ],
+  "serviceCategory": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "252275004",
+        "display": "Haematology test"
+      },
+      {
+        "system": "http://hl7.org/fhir/v2/0074",
+        "code": "HM"
+      }
+    ]
+  },
+  "diagnosticDateTime": "2013-04-02",
+  "result": [
+    {
+      "reference": "Observation/f001"
+    },
+    {
+      "reference": "Observation/f002"
+    },
+    {
+      "reference": "Observation/f003"
+    },
+    {
+      "reference": "Observation/f004"
+    },
+    {
+      "reference": "Observation/f005"
+    }
+  ],
+  "conclusion": "Core lab"
+}

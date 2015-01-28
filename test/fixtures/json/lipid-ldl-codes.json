@@ -1,0 +1,50 @@
+{
+  "resourceType": "ValueSet",
+  "id": "lipid-ldl-codes",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 2 concepts</p><h2>LDLCodes</h2><p>LDL Cholesterol codes - measured or calculated</p><p><b>Copyright Statement:</b> This content from LOINC??LOINC?? is copyright ?? 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use</p><p>This value set includes codes defined in other code systems, using the following rules:</p><ul><li>Include these codes as defined in http://loinc.org<table><tr><td><b>Code</b></td><td><b>Display</b></td></tr><tr><td>18262-6</td><td>LDL Cholesterol (Calc)</td><td/></tr><tr><td>13457-7</td><td>LDL Cholesterol (Assay)</td><td/></tr></table></li></ul></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.444"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/lipid-ldl-codes",
+  "name": "LDLCodes",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "LDL Cholesterol codes - measured or calculated",
+  "copyright": "This content from LOINC??LOINC?? is copyright ?? 1995 Regenstrief Institute, Inc. and the LOINC Committee, and available at no cost under the license at http://loinc.org/terms-of-use",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.491+11:00",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "18262-6",
+            "display": "LDL Cholesterol (Calc)"
+          },
+          {
+            "code": "13457-7",
+            "display": "LDL Cholesterol (Assay)"
+          }
+        ]
+      }
+    ]
+  }
+}

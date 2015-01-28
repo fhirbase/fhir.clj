@@ -1,0 +1,55 @@
+{
+  "resourceType": "ValueSet",
+  "id": "namingsystem-type",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 3 concepts</p><h2>NamingSystemType</h2><p>Identifies the purpose of the namingsystem</p><p>This value set defines its own terms in the system http://hl7.org/fhir/namingsystem-type</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>codesystem<a name=\"codesystem\"> </a></td><td>The namingsystem is used to define concepts and symbols to represent those concepts.  E.g. UCUM, LOINC, NDC code, local lab codes, etc.</td></tr><tr><td>identifier<a name=\"identifier\"> </a></td><td>The namingsystem is used to manage identifiers (e.g. license numbers, order numbers, etc.).</td></tr><tr><td>root<a name=\"root\"> </a></td><td>The namingsystem is used as the root for other identifiers and namingsystems.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.474"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/namingsystem-type",
+  "name": "NamingSystemType",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Identifies the purpose of the namingsystem",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.489+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.474"
+      }
+    ],
+    "system": "http://hl7.org/fhir/namingsystem-type",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "codesystem",
+        "definition": "The namingsystem is used to define concepts and symbols to represent those concepts.  E.g. UCUM, LOINC, NDC code, local lab codes, etc."
+      },
+      {
+        "code": "identifier",
+        "definition": "The namingsystem is used to manage identifiers (e.g. license numbers, order numbers, etc.)."
+      },
+      {
+        "code": "root",
+        "definition": "The namingsystem is used as the root for other identifiers and namingsystems."
+      }
+    ]
+  }
+}

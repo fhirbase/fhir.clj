@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CarePlan2 xmlns="http://hl7.org/fhir">
+  <id value="example"/>
+  <text>
+    <status value="additional"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      
+      <p> A simple care plan to indicate a patient taking their weight once a day because of obesity.</p>
+    
+    </div>
+  </text>
+  <contained>
+    <Condition>
+      <id value="p1"/>
+      <subject>
+        <reference value="Patient/example"/>
+        <display value="Peter James Chalmers"/>
+      </subject>
+      <code>
+        <text value="Obesity"/>
+      </code>
+      <status value="confirmed"/>
+    </Condition>
+  </contained>
+  <contained>
+    <Practitioner>
+      <id value="pr1"/>
+      <name>
+        <family value="Dietician"/>
+        <given value="Dorothy"/>
+      </name>
+      <specialty>
+        <text value="Dietician"/>
+      </specialty>
+    </Practitioner>
+  </contained>
+  <patient>
+    <reference value="Patient/example"/>
+    <display value="Peter James Chalmers"/>
+  </patient>
+  <status value="active"/>
+  <period>
+    <end value="2013-01-01"/>
+  </period>
+  <concern>
+    <reference value="#p1"/>
+    <display value="obesity"/>
+  </concern>
+  <participant>
+    <role>
+      <text value="responsiblePerson"/>
+    </role>
+    <member>
+      <reference value="Patient/example"/>
+      <display value="Peter James Chalmers"/>
+    </member>
+  </participant>
+  <participant>
+    <role>
+      <text value="adviser"/>
+    </role>
+    <member>
+      <reference value="#pr1"/>
+      <display value="Dorothy Dietitian"/>
+    </member>
+  </participant>
+  <goal>
+    <reference value="Goal/12345"/>
+    <display value="Target weight is 80 kg."/>
+  </goal>
+  <activity>
+    <reference value="Procedure/12345"/>
+  </activity>
+</CarePlan2>

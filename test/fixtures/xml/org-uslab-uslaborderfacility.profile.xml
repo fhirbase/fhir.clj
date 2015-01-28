@@ -1,0 +1,1434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Profile xmlns="http://hl7.org/fhir">
+  <id value="org-uslab-uslaborderfacility"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">to do</div>
+  </text>
+  <url value="http://hl7.org/fhir/Profile/org-uslab-uslaborderfacility"/>
+  <name value="US Laboratory Organization Profile"/>
+  <publisher value="HL7 International - Orders and Observations WG"/>
+  <telecom>
+    <system value="url"/>
+    <value value="http://hl7.org"/>
+  </telecom>
+  <description value="Orderer&#39;s Organization ( clinic, hospital,etc )"/>
+  <status value="draft"/>
+  <date value="2014-11-17"/>
+  <type value="Organization"/>
+  <base value="http://hl7.org/fhir/Profile/Organization"/>
+  <snapshot>
+    <element>
+      <path value="Organization"/>
+      <name value="USLabOrderFacility"/>
+      <short value="Orderer&#39;s Organization ( clinic, hospital,etc )"/>
+      <formal value="This is the organization associated with the orderer."/>
+      <comments value="When reporting laboratory results to public health, information about the orderer&#39;s organization is needed  to perform appropriate case follow up."/>
+      <synonym value="Ordering Facility"/>
+      <min value="1"/>
+      <max value="1"/>
+      <constraint>
+        <key value="1"/>
+        <name value="AtLeastANameOrId"/>
+        <severity value="error"/>
+        <human value="The organization SHALL at least have a name or an id, and possibly more than one"/>
+        <xpath value="count(f:identifier | f:name) &gt; 0"/>
+      </constraint>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="(also see master files messages)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Organization(classCode=ORG, determinerCode=INST)"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="Organization"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="(also see master files messages)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Organization(classCode=ORG, determinerCode=INST)"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="Organization"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.id"/>
+      <short value="Logical id of this artefact"/>
+      <formal value="The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes."/>
+      <comments value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.meta"/>
+      <short value="Metadata about the resource"/>
+      <formal value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.meta.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.meta.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.meta.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.meta.versionId"/>
+      <short value="Version specific identifier"/>
+      <formal value="The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted."/>
+      <comments value="The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.meta.lastUpdated"/>
+      <short value="When the resource version last changed"/>
+      <formal value="When the resource last changed - e.g. when the version changed."/>
+      <comments value="This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="instant"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.meta.profile"/>
+      <short value="Profiles this resource claims to conform to"/>
+      <formal value="A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url."/>
+      <comments value="It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.meta.security"/>
+      <short value="Security Labels applied to this resource"/>
+      <formal value="Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure."/>
+      <comments value="The security labels can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.meta.tag"/>
+      <short value="Tags applied"/>
+      <formal value="Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource."/>
+      <comments value="The tags can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.implicitRules"/>
+      <short value="A set of rules under which this content was created"/>
+      <formal value="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content."/>
+      <comments value="Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.language"/>
+      <short value="Language of the resource content"/>
+      <formal value="The base language in which the resource is written."/>
+      <comments value="Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource
+
+Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="Language"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="A human language"/>
+        <referenceUri value="http://tools.ietf.org/html/bcp47"/>
+      </binding>
+    </element>
+    <element>
+      <path value="Organization.text"/>
+      <short value="Text summary of the resource, for human interpretation"/>
+      <formal value="A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."/>
+      <comments value="Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."/>
+      <synonym value="narrative"/>
+      <synonym value="html"/>
+      <synonym value="xhtml"/>
+      <synonym value="display"/>
+      <min value="1"/>
+      <max value="1"/>
+      <condition value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.contained"/>
+      <short value="Contained, inline Resources"/>
+      <formal value="These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope."/>
+      <comments value="This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."/>
+      <synonym value="inline resources"/>
+      <synonym value="anonymous resources"/>
+      <synonym value="contained resources"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Resource"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.identifier"/>
+      <slicing>
+        <discriminator value="label"/>
+        <ordered value="true"/>
+        <rules value="openAtEnd"/>
+      </slicing>
+      <short value="Identifies this organization  across multiple systems"/>
+      <formal value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
+      <requirements value="Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization."/>
+      <min value="0"/>
+      <max value="*"/>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XON.10 Organization Identifier / XON.3 ID Number"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".scopes[Role](classCode=IDENT)"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Identifiers"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XON.10 Organization Identifier / XON.3 ID Number"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".scopes[Role](classCode=IDENT)"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Identifiers"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.identifier"/>
+      <name value="USlabOrderFacilityNPI"/>
+      <short value="Identifies this organization  across multiple systems"/>
+      <formal value="Identifier for the organization that is used to identify the organization across multiple disparate systems."/>
+      <comments value="The first identifier shall be the NPI facility ID."/>
+      <requirements value="Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <patternIdentifier>
+        <use value="official"/>
+        <label value="NPI"/>
+        <assigner>
+          <reference value="https://nppes.cms.hhs.gov/NPPES/"/>
+          <display value="The Centers for Medicare and Medicaid Services (CMS)  National Plan and Provider Enumeration System (NPPES"/>
+        </assigner>
+      </patternIdentifier>
+      <condition value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XON.10 Organization Identifier / XON.3 ID Number"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".scopes[Role](classCode=IDENT)"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Identifiers"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XON.10 Organization Identifier / XON.3 ID Number"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".scopes[Role](classCode=IDENT)"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Identifiers"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.identifier.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.identifier.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.identifier.use"/>
+      <short value="usual | official | temp | secondary (If known)"/>
+      <formal value="The purpose of this identifier."/>
+      <comments value="This is labeled as &quot;Is Modifier&quot; because applications should not mistake a temporary id for a permanent one. Applications can assume that an identifier is permanent unless it explicitly says that it is temporary."/>
+      <requirements value="Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="IdentifierUse"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="Identifies the purpose for this identifier, if known"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/identifier-use"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.code or implied by context"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.code or implied by context"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.identifier.label"/>
+      <short value="Description of identifier"/>
+      <formal value="A text string for the identifier that can be displayed to a human so they can recognize the identifier."/>
+      <requirements value="Allows humans to make use of identifiers when the identifier system is not known."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.5"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.title or implied by context"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.5"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.title or implied by context"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.identifier.system"/>
+      <short value="The namespace for the identifier"/>
+      <formal value="Establishes the namespace in which set of possible id values is unique."/>
+      <requirements value="There are many sequences of identifiers.  To perform matching, we need to know what sequence we&#39;re dealing with. The system identifies a particular sequence or set of unique identifiers."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <exampleUri value="http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the id itself is a full uri"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.4 / EI-2-4"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.root or Role.id.root"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./IdentifierType"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.4 / EI-2-4"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.root or Role.id.root"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./IdentifierType"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.identifier.value"/>
+      <short value="NPI  organization Identifier"/>
+      <formal value="NPI  organization Identifier."/>
+      <comments value="If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986."/>
+      <min value="1"/>
+      <max value="1"/>
+      <exampleString value="123456"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.1 / EI.1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Value"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.1 / EI.1"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Value"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.identifier.period"/>
+      <short value="Time period when id is/was valid for use"/>
+      <formal value="Time period during which identifier is/was valid for use."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Period"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.7 + CX.8"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.effectiveTime or implied by context"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./StartDate and ./EndDate"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.7 + CX.8"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role.effectiveTime or implied by context"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./StartDate and ./EndDate"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.identifier.assigner"/>
+      <short value="Organization that issued id (may be just text)"/>
+      <formal value="Organization that issued/manages the identifier."/>
+      <comments value="The reference may be just a text description of the assigner."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Organization"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.4 / (CX.4,CX.9,CX.10)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./IdentifierIssuingAuthority"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="CX.4 / (CX.4,CX.9,CX.10)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./IdentifierIssuingAuthority"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.name"/>
+      <short value="Name used for the organization"/>
+      <formal value="A name associated with the organization."/>
+      <requirements value="Need to use the name as the label of the organization."/>
+      <min value="0"/>
+      <max value="*"/>
+      <condition value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XON.1 Organization Name"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".name"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value=".PreferredName/Name"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="XON.1 Organization Name"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".name"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value=".PreferredName/Name"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.type"/>
+      <short value="Kind of organization"/>
+      <formal value="The kind of organization that this is."/>
+      <comments value="Organizations can be corporations, wards, sections, clinical teams, government departments, etc. Note that code is generally a classifier of the type of organization; in many applications, codes are used to identity a particular organization (say, ward) as opposed to another of the same type - these are identifiers, not codes."/>
+      <requirements value="Need to be able to track the kind of organization that this is - different organization types have different uses."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="OrganizationType"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="Used to categorize the organization"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/organization-type"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="No equivalent in v2"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="No equivalent in v2"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.telecom"/>
+      <short value="A contact detail for the organization"/>
+      <formal value="A contact detail for the organization."/>
+      <comments value="The use code home is not to be used. Note that these contacts are not the contact details of people who are employed by or represent the organization, but official contacts for the organization itself."/>
+      <requirements value="Human contact for the organization."/>
+      <min value="1"/>
+      <max value="*"/>
+      <condition value="3"/>
+      <constraint>
+        <key value="3"/>
+        <name value="NoHomeUseTelecom"/>
+        <severity value="error"/>
+        <human value="The telecom of an organization can never be of use &#39;home&#39;"/>
+        <xpath value="count(f:use[@value=&#39;home&#39;]) = 0"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="No authoritative equivalent in V2.x"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".telecom"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./ContactPoints"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="No authoritative equivalent in V2.x"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".telecom"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./ContactPoints"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.address"/>
+      <short value="An address for the organization"/>
+      <formal value="An address for the organization."/>
+      <comments value="Organization may have multiple addresses with different uses or applicable periods. The use code home is not to be used."/>
+      <requirements value="May need to keep track of the organization&#39;s addresses for contacting, billing or reporting requirements."/>
+      <min value="1"/>
+      <max value="*"/>
+      <condition value="2"/>
+      <constraint>
+        <key value="2"/>
+        <name value="NoHomeUseAddress"/>
+        <severity value="error"/>
+        <human value="An address of an organization can never be of use &#39;home&#39;"/>
+        <xpath value="count(f:use[@value=&#39;home&#39;]) = 0"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="No authoritative equivalent in V2.x; some V2.x segments such as OBX might provide a serialized instance value"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".address"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./PrimaryAddress and ./OtherAddresses"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="No authoritative equivalent in V2.x; some V2.x segments such as OBX might provide a serialized instance value"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".address"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./PrimaryAddress and ./OtherAddresses"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.partOf"/>
+      <short value="The organization of which this organization forms a part"/>
+      <formal value="The organization of which this organization forms a part."/>
+      <requirements value="Need to be able to track the hierarchy of organizations within an organization."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Organization"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="No equivalent in V2.x"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".playedBy[classCode=Part].scoper"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="No equivalent in V2.x"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".playedBy[classCode=Part].scoper"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.contact"/>
+      <short value="Contact for the organization for a certain purpose"/>
+      <formal value="Contact for the organization for a certain purpose."/>
+      <requirements value="Need to keep track of assigned contact points within bigger organization."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".contactParty"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".contactParty"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.contact.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.contact.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.contact.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.contact.purpose"/>
+      <short value="The type of contact"/>
+      <formal value="Indicates a purpose for which the contact can be reached."/>
+      <requirements value="Need to distinguish between multiple contact persons."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="ContactPartyType"/>
+        <isExtensible value="true"/>
+        <conformance value="preferred"/>
+        <description value="The purpose for which you would contact a contact party"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/contactentity-type"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./type"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./type"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.contact.name"/>
+      <short value="A name associated with the contact"/>
+      <formal value="A name associated with the contact."/>
+      <requirements value="Need to be able to track the person by name."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="HumanName"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-5, PID-9"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./name"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-5, PID-9"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./name"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.contact.telecom"/>
+      <short value="Contact details (telephone, email, etc)  for a contact"/>
+      <formal value="A contact detail (e.g. a telephone number or an email address) by which the party may be contacted."/>
+      <requirements value="People have (primary) ways to contact them in some way such as phone, email."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="ContactPoint"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-13, PID-14"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./telecom"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-13, PID-14"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./telecom"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.contact.address"/>
+      <short value="Visiting or postal addresses for the contact"/>
+      <formal value="Visiting or postal addresses for the contact."/>
+      <requirements value="May need to keep track of a contact party&#39;s address for contacting, billing or reporting requirements."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Address"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-11"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./addr"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-11"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./addr"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.contact.gender"/>
+      <short value="male | female | other | unknown"/>
+      <formal value="Administrative Gender - the gender that the person is considered to have for administration and record keeping purposes."/>
+      <requirements value="Needed to address the person correctly."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="AdministrativeGender"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="The gender of a person used for administrative purposes"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/administrative-gender"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-8"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./administrativeGender"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-8"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./administrativeGender"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.location"/>
+      <short value="Location(s) the organization uses to provide services"/>
+      <formal value="Location(s) the organization uses to provide services."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Location"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".scopedBy[classCode=LocatedEntity].scoper"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Sites"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".scopedBy[classCode=LocatedEntity].scoper"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Sites"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Organization.active"/>
+      <short value="Whether the organization&#39;s record is still in active use"/>
+      <formal value="Whether the organization&#39;s record is still in active use."/>
+      <comments value="Default is true."/>
+      <requirements value="Need a flag to indicate a record is no longer to be used and should generally be hidden for the user in the UI."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="boolean"/>
+      </type>
+      <defaultValueBoolean value="true"/>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="No equivalent in V2.x"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".status"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Status (however this concept in ServD more covers why the organization is active or not, could be delisted, deregistered, not operational yet) this could alternatively be derived from ./StartDate and ./EndDate and given a context date."/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="No equivalent in V2.x"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".status"/>
+      </mapping>
+      <mapping>
+        <identity value="servd"/>
+        <map value="./Status (however this concept in ServD more covers why the organization is active or not, could be delisted, deregistered, not operational yet) this could alternatively be derived from ./StartDate and ./EndDate and given a context date."/>
+      </mapping>
+    </element>
+  </snapshot>
+  <differential>
+    <element>
+      <path value="Organization"/>
+      <name value="USLabOrderFacility"/>
+      <short value="Orderer&#39;s Organization ( clinic, hospital,etc )"/>
+      <formal value="This is the organization associated with the orderer."/>
+      <comments value="When reporting laboratory results to public health, information about the orderer&#39;s organization is needed  to perform appropriate case follow up."/>
+      <synonym value="Ordering Facility"/>
+      <min value="1"/>
+      <max value="1"/>
+      <constraint>
+        <key value="1"/>
+        <name value="NameandorID"/>
+        <severity value="error"/>
+        <human value="Shall have Organization.name and/or Organization.identifier."/>
+        <xpath value="exists(f:name) or exists(f:identifier)"/>
+      </constraint>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.text"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.text.status"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <fixedCode value="generated"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.identifier"/>
+      <slicing>
+        <discriminator value="label"/>
+        <ordered value="true"/>
+        <rules value="openAtEnd"/>
+      </slicing>
+    </element>
+    <element>
+      <path value="Organization.identifier"/>
+      <name value="USlabOrderFacilityNPI"/>
+      <comments value="The first identifier shall be the NPI facility ID."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <patternIdentifier>
+        <use value="official"/>
+        <label value="NPI"/>
+        <assigner>
+          <reference value="https://nppes.cms.hhs.gov/NPPES/"/>
+          <display value="The Centers for Medicare and Medicaid Services (CMS)  National Plan and Provider Enumeration System (NPPES"/>
+        </assigner>
+      </patternIdentifier>
+      <condition value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.identifier.value"/>
+      <short value="NPI  organization Identifier"/>
+      <formal value="NPI  organization Identifier."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.name"/>
+      <min value="0"/>
+      <max value="*"/>
+      <condition value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.telecom"/>
+      <min value="1"/>
+      <max value="*"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.telecom.system"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.telecom.value"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.address"/>
+      <min value="1"/>
+      <max value="*"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.address.extension"/>
+      <slicing>
+        <discriminator value="url"/>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element>
+      <path value="Organization.address.extension"/>
+      <name value="USLabCounty"/>
+      <short value="County/Parish FIPS codes"/>
+      <formal value="County/Parish FIPS codes."/>
+      <requirements value="County/Parish Code SHALL use FIPS 6-4  ( INCITS 31:2009)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/us-core-county"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.address.extension.extension"/>
+      <slicing>
+        <discriminator value="url"/>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element>
+      <path value="Organization.address.extension.extension"/>
+      <name value="USLabCountycodes"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/ExtensionDefinition/iso21090-SC-coding"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="USFIPSCounty"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="FIPS codes for US counties and county equivalent entities"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/fips-county"/>
+        </referenceReference>
+      </binding>
+    </element>
+    <element>
+      <path value="Organization.address.extension.extension.system"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.address.extension.extension.code"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.address.use"/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.address.line"/>
+      <min value="0"/>
+      <max value="2"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.address.city"/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.address.state"/>
+      <requirements value="State SHALL be the two letter USPS alphabetic codes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="USPSState"/>
+        <isExtensible value="true"/>
+        <conformance value="required"/>
+        <description value="Two letter USPS alphabetic codes."/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/usps-state"/>
+        </referenceReference>
+      </binding>
+    </element>
+    <element>
+      <path value="Organization.address.zip"/>
+      <short value="US Zip Codes"/>
+      <formal value="US Zip Codes."/>
+      <requirements value="Zip or Postal Code SHALL be formatted as 99999[-9999] for US Zip or ZIP +4 codes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <condition value="2"/>
+      <constraint>
+        <key value="2"/>
+        <name value="Regex for Zip"/>
+        <severity value="error"/>
+        <human value="(Zip or Postal Code) SHALL be formatted as 99999[-9999] for US Zip or ZIP +4 codes or as A9A9A9 for Canadian postal codes."/>
+        <xpath value="f:matches(issued,[0-9]{5}(-[0-9]{4}){0,1} )"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Organization.address.country"/>
+      <short value="ISO 3166 3 letter Country Code"/>
+      <formal value="ISO 3166 3 letter Country Code."/>
+      <requirements value="Country SHALL be ISO 3166 3 letter codes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="USLabCountry"/>
+        <isExtensible value="true"/>
+        <conformance value="required"/>
+        <description value="ISO 3 letter codes"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/uslab-country-codes"/>
+        </referenceReference>
+      </binding>
+    </element>
+  </differential>
+</Profile>

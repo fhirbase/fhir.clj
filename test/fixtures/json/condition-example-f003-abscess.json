@@ -1,0 +1,71 @@
+{
+  "resourceType": "Condition",
+  "id": "f003",
+  "subject": {
+    "reference": "Patient/f001",
+    "display": "P. van de Heuvel"
+  },
+  "encounter": {
+    "reference": "Encounter/f003"
+  },
+  "asserter": {
+    "reference": "Patient/f001",
+    "display": "P. van de Heuvel"
+  },
+  "dateAsserted": "2012-02-20",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "18099001",
+        "display": "Retropharyngeal abscess"
+      }
+    ]
+  },
+  "category": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "439401001",
+        "display": "diagnosis"
+      }
+    ]
+  },
+  "status": "confirmed",
+  "severity": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "371923003",
+        "display": "Mild to moderate"
+      }
+    ]
+  },
+  "onsetDateTime": "2012-02-27",
+  "evidence": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "169068008",
+            "display": "CT of neck"
+          }
+        ]
+      }
+    }
+  ],
+  "location": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "280193007",
+            "display": "Entire retropharyngeal area"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "id": "RS-link",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 2 concepts</p><h2>RemittanceOutcome</h2><p>The outcome of the processing.</p><p>This value set defines its own terms in the system http://hl7.org/fhir/RS-link</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>complete<a name=\"complete\"> </a></td><td>The processing completed without errors.</td></tr><tr><td>error<a name=\"error\"> </a></td><td>The processing identified with errors.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.467"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/RS-link",
+  "name": "RemittanceOutcome",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "The outcome of the processing.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.490+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.467"
+      }
+    ],
+    "system": "http://hl7.org/fhir/RS-link",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "complete",
+        "definition": "The processing completed without errors."
+      },
+      {
+        "code": "error",
+        "definition": "The processing identified with errors."
+      }
+    ]
+  }
+}

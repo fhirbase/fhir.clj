@@ -1,0 +1,1711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Profile xmlns="http://hl7.org/fhir">
+  <id value="spec-uslab-uslabspec"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">to do</div>
+  </text>
+  <url value="http://hl7.org/fhir/Profile/spec-uslab-uslabspec"/>
+  <name value="US Laboratory Specimen Profile"/>
+  <publisher value="HL7 International - Orders and Observations WG"/>
+  <telecom>
+    <system value="url"/>
+    <value value="http://hl7.org"/>
+  </telecom>
+  <description value="USLab Specimen Resource"/>
+  <status value="draft"/>
+  <date value="2014-11-17"/>
+  <type value="Specimen"/>
+  <base value="http://hl7.org/fhir/Profile/Specimen"/>
+  <snapshot>
+    <element>
+      <path value="Specimen"/>
+      <name value="USLabSpec"/>
+      <short value="USLab Specimen Resource"/>
+      <formal value="Specimen resource defined for the USLab Implementation Guides."/>
+      <synonym value="Sample"/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role[classCode=SPEC]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Role[classCode=SPEC]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.id"/>
+      <short value="Logical id of this artefact"/>
+      <formal value="The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes."/>
+      <comments value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.meta"/>
+      <short value="Metadata about the resource"/>
+      <formal value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.meta.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.meta.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.meta.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.meta.versionId"/>
+      <short value="Version specific identifier"/>
+      <formal value="The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted."/>
+      <comments value="The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.meta.lastUpdated"/>
+      <short value="When the resource version last changed"/>
+      <formal value="When the resource last changed - e.g. when the version changed."/>
+      <comments value="This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="instant"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.meta.profile"/>
+      <short value="Profiles this resource claims to conform to"/>
+      <formal value="A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url."/>
+      <comments value="It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.meta.security"/>
+      <short value="Security Labels applied to this resource"/>
+      <formal value="Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure."/>
+      <comments value="The security labels can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.meta.tag"/>
+      <short value="Tags applied"/>
+      <formal value="Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource."/>
+      <comments value="The tags can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.implicitRules"/>
+      <short value="A set of rules under which this content was created"/>
+      <formal value="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content."/>
+      <comments value="Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.language"/>
+      <short value="Language of the resource content"/>
+      <formal value="The base language in which the resource is written."/>
+      <comments value="Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource
+
+Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="Language"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="A human language"/>
+        <referenceUri value="http://tools.ietf.org/html/bcp47"/>
+      </binding>
+    </element>
+    <element>
+      <path value="Specimen.text"/>
+      <short value="Text summary of the resource, for human interpretation"/>
+      <formal value="A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."/>
+      <comments value="Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."/>
+      <synonym value="narrative"/>
+      <synonym value="html"/>
+      <synonym value="xhtml"/>
+      <synonym value="display"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Narrative"/>
+      </type>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.contained"/>
+      <short value="Contained, inline Resources"/>
+      <formal value="These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope."/>
+      <comments value="This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."/>
+      <synonym value="inline resources"/>
+      <synonym value="anonymous resources"/>
+      <synonym value="contained resources"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Resource"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.identifier"/>
+      <slicing>
+        <discriminator value="identifier.label"/>
+        <ordered value="true"/>
+        <rules value="openAtEnd"/>
+      </slicing>
+      <short value="External Identifier"/>
+      <formal value="Id for specimen."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM-2"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM-2"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.identifier"/>
+      <name value="USLabPlacerSID"/>
+      <short value="External Identifier"/>
+      <formal value="Id for specimen."/>
+      <comments value="In the test ordering workflow this would be the orderer&#39;s specimen identifer(Placer Specimen ID).  In the context of the lab test reporting workflow, this could be both the orderer&#39;s specimen identifer and the laboratory assigned specimen identifier (Filler Specimen ID)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM-2"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM-2"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.type"/>
+      <short value="Kind of material that forms the specimen"/>
+      <formal value="Kind of material that forms the specimen."/>
+      <comments value="The type can change the way that a specimen is handled, and drives what kind of analyses can properly be performed on the specimen. It is frequently used in diagnostic work flow decision making systems."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="SpecimenType"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="The type of the specimen."/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/v2/vs/0487"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM-4 and possibly SPM-5"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM-4 and possibly SPM-5"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.source"/>
+      <short value="Parent of specimen"/>
+      <formal value="Parent specimen from which the focal specimen was a component."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".scoper (if parent)
+.player.scopesRole[classCode=SPEC].player (if child)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".scoper (if parent)
+.player.scopesRole[classCode=SPEC].player (if child)"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.source.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.source.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.source.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.source.relationship"/>
+      <short value="parent | child"/>
+      <formal value="Whether this relationship is to a parent or to a child."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="HierarchicalRelationshipType"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="Type indicating if this is a parent or child relationship"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/hierarchical-relationship-type"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="not explicit in v2.x SPM segment, but can be
+derived as child,if SPM-3 Specimen parent ID is filled in"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="as above"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="not explicit in v2.x SPM segment, but can be
+derived as child,if SPM-3 Specimen parent ID is filled in"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="as above"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.source.target"/>
+      <short value="The subject of the relationship"/>
+      <formal value="The specimen resource that is the target of this relationship."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Specimen"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="[self]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="[self]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.subject"/>
+      <short value="Patient"/>
+      <formal value="Patient."/>
+      <requirements value="Must know the subject context."/>
+      <synonym value="Patient"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Patient"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Group"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Device"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Substance"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".scoper
+
+or
+
+.scoper.playsRole"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".scoper
+
+or
+
+.scoper.playsRole"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.accessionIdentifier"/>
+      <short value="Identifier assigned by the lab"/>
+      <formal value="The identifier assigned by the lab when accessioning specimen(s). This is not necessarily the same as the specimen identifier, depending on local lab procedures."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM-30 (v2.7+)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].act[classCode=ACSN, moodCode=EVN].id"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM-30 (v2.7+)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].act[classCode=ACSN, moodCode=EVN].id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.receivedTime"/>
+      <short value="The time when specimen was received for processing"/>
+      <formal value="Time when specimen was received for processing or testing."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM-18"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].act[code=SPCREC, moodCode=EVN].effectiveTime"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM-18"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].act[code=SPCREC, moodCode=EVN].effectiveTime"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.collection"/>
+      <short value="Collection details"/>
+      <formal value="Details concerning the specimen collection."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].act[classCode=SPECCOLLECT, moodCode=EVN]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].act[classCode=SPECCOLLECT, moodCode=EVN]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.collection.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.collection.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.collection.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.collection.collector"/>
+      <short value="Who collected the specimen"/>
+      <formal value="Person who collected the specimen."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Practitioner"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=PFM].role"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=PFM].role"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.collection.comment"/>
+      <short value="Collector comments"/>
+      <formal value="To communicate any details or issues encountered during the specimen collection procedure."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=&quot;annotation&quot;].value"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=&quot;annotation&quot;].value"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.collection.collected[x]"/>
+      <short value="Collection time"/>
+      <formal value="Time when specimen was collected from subject - the physiologically relevant time."/>
+      <requirements value="Minimum precision is to the day."/>
+      <min value="1"/>
+      <max value="1"/>
+      <constraint>
+        <key value="2"/>
+        <name value="datetime to day"/>
+        <severity value="error"/>
+        <human value="Datetime must be at least to the day."/>
+        <xpath value="f:matches(.,/\d{4}-[01]\d-[0-3])/)"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM-17"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM-17"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.collection.quantity"/>
+      <short value="The quantity of specimen collected"/>
+      <formal value="The quantity of specimen collected; for instance the volume of a blood sample, or the physical measurement of an anatomic pathology sample."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM-12"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].role[classCode=SPEC].player.quantity"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM-12"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].role[classCode=SPEC].player.quantity"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.collection.method"/>
+      <short value="Technique used to perform collection"/>
+      <formal value="A coded value specifying the technique that is used to perform the procedure."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="SpecimenCollectionMethod"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="The  technique that is used to perform the procedure"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/specimen-collection-method"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM-7"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".methodCode"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM-7"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".methodCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.collection.sourceSite"/>
+      <short value="Anatomical collection site"/>
+      <formal value="Anatomical location from which the specimen was collected (if subject is a patient). This element is not used for environmental specimens."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="BodySite"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="Codes describing anatomical locations. May include laterality"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/body-site"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM-8 and SPM-9"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".approachSiteCode"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM-8 and SPM-9"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".approachSiteCode"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.treatment"/>
+      <short value="Treatment and processing step details"/>
+      <formal value="Details concerning treatment and processing steps for the specimen."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].act[code=SPCTRT, moodCode=EVN]"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].act[code=SPCTRT, moodCode=EVN]"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.treatment.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.treatment.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.treatment.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.treatment.description"/>
+      <short value="Textual description of procedure"/>
+      <formal value="Textual description of procedure."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".text"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.treatment.procedure"/>
+      <short value="Indicates the treatment or processing step  applied to the specimen"/>
+      <formal value="A coded value specifying the procedure used to process the specimen."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="SpecimenTreatmentProcedure"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="Type indicating the technique used to process the specimen"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/specimen-treatment-procedure"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.treatment.additive"/>
+      <short value="Material used in the processing step"/>
+      <formal value="Material used in the processing step."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Substance"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM-6"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=CSM].role[classCode=ADTV].code"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM-6"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=CSM].role[classCode=ADTV].code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.container"/>
+      <short value="Direct container of specimen (tube/slide, etc)"/>
+      <formal value="The container holding the specimen.  The recursive nature of containers; i.e. blood in tube in tray in rack is not addressed here."/>
+      <min value="0"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".player.scopingRole[classCode=CONT].scoper"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".player.scopingRole[classCode=CONT].scoper"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.container.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.container.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.container.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.container.identifier"/>
+      <short value="Id for the container"/>
+      <formal value="Id for container. There may be multiple; a manufacturer&#39;s bar code, lab assigned identifier, etc. The container ID may differ from the specimen id in some circumstances."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SAC-3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SAC-3"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.container.description"/>
+      <short value="Textual description of the container"/>
+      <formal value="Textual description of the container."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".desc"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".desc"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.container.type"/>
+      <short value="Kind of container directly associated with specimen"/>
+      <formal value="The type of container associated with the specimen (e.g. slide, aliquot, etc)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="SpecimenContainerType"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="Type of specimen container"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/specimen-container-type"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM-27"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM-27"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".code"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.container.capacity"/>
+      <short value="Container volume or size"/>
+      <formal value="The capacity (volume or other measure) the container may contain."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="one of: SAC 16, SAC17 and SAC 20, or SAC 21 and SAC 20"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".quantity"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="one of: SAC 16, SAC17 and SAC 20, or SAC 21 and SAC 20"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".quantity"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.container.specimenQuantity"/>
+      <short value="Quantity of specimen within container"/>
+      <formal value="The quantity of specimen in the container; may be volume, dimensions, or other appropriate measurements, depending on the specimen type."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Quantity"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SAC-23 (value) SAC-24 (units"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".playedRole[classCode=CONT].quantity"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SAC-23 (value) SAC-24 (units"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".playedRole[classCode=CONT].quantity"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="Specimen.container.additive[x]"/>
+      <short value="Additive associated with container"/>
+      <formal value="Introduced substance to preserve, maintain or enhance the specimen. examples: Formalin, Citrate, EDTA."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Substance"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="SpecimenContainerAdditive"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="Substance added to specimen container"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/v2/vs/0371"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SAC-27"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".scopesRole[classCode=ADTV].player"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SAC-27"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".scopesRole[classCode=ADTV].player"/>
+      </mapping>
+    </element>
+  </snapshot>
+  <differential>
+    <element>
+      <path value="Specimen"/>
+      <name value="USLabSpec"/>
+      <short value="USLab Specimen Resource"/>
+      <formal value="Specimen resource defined for the USLab Implementation Guides."/>
+      <synonym value="Sample"/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.identifier"/>
+      <slicing>
+        <discriminator value="identifier.label"/>
+        <ordered value="true"/>
+        <rules value="openAtEnd"/>
+      </slicing>
+    </element>
+    <element>
+      <path value="Specimen.identifier"/>
+      <name value="USLabPlacerSID"/>
+      <comments value="In the test ordering workflow this would be the orderer&#39;s specimen identifer(Placer Specimen ID).  In the context of the lab test reporting workflow, this could be both the orderer&#39;s specimen identifer and the laboratory assigned specimen identifier (Filler Specimen ID)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.identifier.use"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <fixedCode value="official"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.identifier.label"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <fixedString value="Placer Specimen ID"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.identifier.system"/>
+      <short value="Placer URI"/>
+      <formal value="Placer URI."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.identifier.value"/>
+      <short value="Placer Identifier"/>
+      <formal value="Placer Identifier."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.type"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.type.coding"/>
+      <slicing>
+        <discriminator value="system"/>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element>
+      <path value="Specimen.type.coding"/>
+      <name value="USLabSNOMEDCTCoding"/>
+      <short value="SNOMED-CT coding if available"/>
+      <formal value="SNOMED-CT coding if available."/>
+      <synonym value="Snomed Code"/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="USLabSpecimenType"/>
+        <isExtensible value="true"/>
+        <conformance value="required"/>
+        <description value="Codes to describe the Specimen"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/spec-uslab-type"/>
+        </referenceReference>
+      </binding>
+    </element>
+    <element>
+      <path value="Specimen.type.coding.system"/>
+      <short value="SNOMED-CT Coding System"/>
+      <formal value="SNOMED-CT Coding System."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="http://snomed.info/sct"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.type.coding.code"/>
+      <short value="SNOMED-CT"/>
+      <formal value="SNOMED Clinical Terms is a systematically organized computer processable collection of medical terms providing codes, terms, synonyms and definitions used in clinical documentation and reporting."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.type.coding.display"/>
+      <short value="SNOMED-CT Display Name"/>
+      <formal value="The SNOMED-CT  &#39;preferred name&#39; is preferred although any  SNOMED-CT  &#39;synonym&#39;  can also be used.  ( ihtsdo.org/snomed-ct/)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.type.coding"/>
+      <name value="USLabLocalCoding"/>
+      <synonym value="Local"/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.type.coding.system"/>
+      <short value="Local Coding System"/>
+      <formal value="This is defined locally."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.type.coding.code"/>
+      <short value="Local Code"/>
+      <formal value="Local Code."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.type.coding.display"/>
+      <short value="local Code Display name"/>
+      <formal value="This is defined locally."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.type.text"/>
+      <short value="Display text"/>
+      <formal value="This is the laboratory defined display text for the actual test result, if different from the code display names."/>
+      <requirements value="Used when the laboratory define how the display text if different from the code display text."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.subject"/>
+      <short value="Patient"/>
+      <formal value="Patient."/>
+      <synonym value="Patient"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/patient-uslab-uslabpatient"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/patient-uslab-uslabphpatient"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.accession"/>
+      <requirements value="For Laboratory reporting this element is required."/>
+      <synonym value="Filler ID"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.accession.use"/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <fixedCode value="official"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.accession.system"/>
+      <short value="Filler URI"/>
+      <formal value="Filler URI."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.accession.value"/>
+      <short value="Filler Identifier"/>
+      <formal value="Filler Identifier."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.collection"/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.collection.collected[x]"/>
+      <requirements value="Minimum precision is to the day."/>
+      <min value="1"/>
+      <max value="1"/>
+      <condition value="2"/>
+      <constraint>
+        <key value="2"/>
+        <name value="datetime to day"/>
+        <severity value="error"/>
+        <human value="Datetime must be at least to the day."/>
+        <xpath value="f:matches(.,/\d{4}-[01]\d-[0-3])/)"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.collection.sourceSite"/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="Specimen.collection.sourceSite.coding"/>
+      <slicing>
+        <discriminator value="system"/>
+        <rules value="open"/>
+      </slicing>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/ExtensionDefinition/profile-display-hint">
+        <valueString value="Specimen.type.coding"/>
+      </extension>
+      <path value="Specimen.collection.sourceSite.coding"/>
+      <name value="USLabSNOMEDCTCoding"/>
+      <short value="SNOMED-CT coding if available"/>
+      <formal value="SNOMED-CT coding if available."/>
+      <synonym value="Snomed Code"/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+      <binding>
+        <name value="USLabSpecimenBodySite"/>
+        <isExtensible value="true"/>
+        <conformance value="required"/>
+        <description value="Codes to describe the Specimen Collection Body site"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/body-site"/>
+        </referenceReference>
+      </binding>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/ExtensionDefinition/profile-display-hint">
+        <valueString value="Specimen.type.coding.system"/>
+      </extension>
+      <path value="Specimen.collection.sourceSite.coding.system"/>
+      <short value="SNOMED-CT Coding System"/>
+      <formal value="SNOMED-CT Coding System."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <fixedUri value="http://snomed.info/sct"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/ExtensionDefinition/profile-display-hint">
+        <valueString value="Specimen.type.coding.code"/>
+      </extension>
+      <path value="Specimen.collection.sourceSite.coding.code"/>
+      <short value="SNOMED-CT"/>
+      <formal value="SNOMED Clinical Terms is a systematically organized computer processable collection of medical terms providing codes, terms, synonyms and definitions used in clinical documentation and reporting."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/ExtensionDefinition/profile-display-hint">
+        <valueString value="Specimen.type.coding.display"/>
+      </extension>
+      <path value="Specimen.collection.sourceSite.coding.display"/>
+      <short value="SNOMED-CT Display Name"/>
+      <formal value="The SNOMED-CT  &#39;preferred name&#39; is preferred although any  SNOMED-CT  &#39;synonym&#39;  can also be used.  ( ihtsdo.org/snomed-ct/)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/ExtensionDefinition/profile-display-hint">
+        <valueString value="Specimen.type.coding"/>
+      </extension>
+      <path value="Specimen.collection.sourceSite.coding"/>
+      <name value="USLabLocalCoding"/>
+      <synonym value="Local"/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/ExtensionDefinition/profile-display-hint">
+        <valueString value="Specimen.type.coding.system"/>
+      </extension>
+      <path value="Specimen.collection.sourceSite.coding.system"/>
+      <short value="Local Coding System"/>
+      <formal value="This is defined locally."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/ExtensionDefinition/profile-display-hint">
+        <valueString value="Specimen.type.coding.code"/>
+      </extension>
+      <path value="Specimen.collection.sourceSite.coding.code"/>
+      <short value="Local Code"/>
+      <formal value="Local Code."/>
+      <min value="1"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/ExtensionDefinition/profile-display-hint">
+        <valueString value="Specimen.type.coding.display"/>
+      </extension>
+      <path value="Specimen.collection.sourceSite.coding.display"/>
+      <short value="local Code Display name"/>
+      <formal value="This is defined locally."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <extension url="http://hl7.org/fhir/ExtensionDefinition/profile-display-hint">
+        <valueString value="Specimen.type.text"/>
+      </extension>
+      <path value="Specimen.collection.sourceSite.text"/>
+      <short value="Display text"/>
+      <formal value="This is the laboratory defined display text for the actual test result, if different from the code display names."/>
+      <requirements value="Used when the laboratory define how the display text if different from the code display text."/>
+      <min value="0"/>
+      <max value="1"/>
+      <mustSupport value="true"/>
+      <isSummary value="false"/>
+    </element>
+  </differential>
+</Profile>

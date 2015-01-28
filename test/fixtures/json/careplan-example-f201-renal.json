@@ -1,0 +1,103 @@
+{
+  "resourceType": "CarePlan",
+  "id": "f201",
+  "patient": {
+    "reference": "Patient/f201",
+    "display": "Roel"
+  },
+  "status": "planned",
+  "period": {
+    "start": "2013-03-11",
+    "end": "2013-03-13"
+  },
+  "modified": "2013-03-11",
+  "concern": [
+    {
+      "reference": "Condition/f204",
+      "display": "Roel's renal insufficiency"
+    }
+  ],
+  "participant": [
+    {
+      "role": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "425268008",
+            "display": "Review of care plan"
+          }
+        ]
+      },
+      "member": {
+        "reference": "Practitioner/f201",
+        "display": "Dokter Bronsig"
+      }
+    },
+    {
+      "role": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "229774002",
+            "display": "Carer"
+          }
+        ]
+      },
+      "member": {
+        "reference": "Practitioner/f204",
+        "display": "Nurse Carla Espinosa"
+      }
+    }
+  ],
+  "goal": [
+    {
+      "description": "Re-established renal function with at least healthy nutrients.",
+      "status": "achieved"
+    }
+  ],
+  "activity": [
+    {
+      "status": "completed",
+      "prohibited": false,
+      "simple": {
+        "category": "diet",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "284093001",
+              "display": "Potassium supplementation"
+            }
+          ]
+        },
+        "scheduledString": "daily",
+        "product": {
+          "reference": "Substance/f203",
+          "display": "Potassium"
+        },
+        "dailyAmount": {
+          "value": 80,
+          "units": "mmol",
+          "system": "http://snomed.info/sct",
+          "code": "258718000"
+        }
+      }
+    },
+    {
+      "status": "completed",
+      "prohibited": false,
+      "simple": {
+        "category": "observation",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "306005",
+              "display": "Echography of kidney"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

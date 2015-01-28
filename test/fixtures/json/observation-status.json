@@ -1,0 +1,68 @@
+{
+  "resourceType": "ValueSet",
+  "id": "observation-status",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 6 concepts</p><h2>ObservationStatus</h2><p>Codes providing the status of an observation</p><p>This value set defines its own terms in the system http://hl7.org/fhir/observation-status</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>registered<a name=\"registered\"> </a></td><td>Registered</td><td>The existence of the observation is registered, but there is no result yet available.</td></tr><tr><td>preliminary<a name=\"preliminary\"> </a></td><td/><td>This is an initial or interim observation: data may be incomplete or unverified.</td></tr><tr><td>final<a name=\"final\"> </a></td><td/><td>The observation is complete and verified by an authorized person.</td></tr><tr><td>amended<a name=\"amended\"> </a></td><td/><td>The observation has been modified subsequent to being Final, and is complete and verified by an authorized person.</td></tr><tr><td>cancelled<a name=\"cancelled\"> </a></td><td/><td>The observation is unavailable because the measurement was not started or not completed (also sometimes called &quot;aborted&quot;).</td></tr><tr><td>entered in error<a name=\"enteredinerror\"> </a></td><td/><td>The observation has been withdrawn following previous Final release.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.7"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/observation-status",
+  "name": "ObservationStatus",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Codes providing the status of an observation",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.491+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.7"
+      }
+    ],
+    "system": "http://hl7.org/fhir/observation-status",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "registered",
+        "display": "Registered",
+        "definition": "The existence of the observation is registered, but there is no result yet available."
+      },
+      {
+        "code": "preliminary",
+        "definition": "This is an initial or interim observation: data may be incomplete or unverified."
+      },
+      {
+        "code": "final",
+        "definition": "The observation is complete and verified by an authorized person."
+      },
+      {
+        "code": "amended",
+        "definition": "The observation has been modified subsequent to being Final, and is complete and verified by an authorized person."
+      },
+      {
+        "code": "cancelled",
+        "definition": "The observation is unavailable because the measurement was not started or not completed (also sometimes called \"aborted\")."
+      },
+      {
+        "code": "entered in error",
+        "definition": "The observation has been withdrawn following previous Final release."
+      }
+    ]
+  }
+}

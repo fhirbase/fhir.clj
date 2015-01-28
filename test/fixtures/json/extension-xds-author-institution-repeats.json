@@ -1,0 +1,36 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "xds-author-institution-repeats",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/xds-author-institution-repeats",
+  "name": "Additional Institutions",
+  "publisher": "HL7",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://www.hl7.org"
+    }
+  ],
+  "description": "XDS allows multiple institutions for an author, but the Practitioner only allows one. If there a multiple institutions in an XDS record, use this extension for the additional ones.",
+  "status": "draft",
+  "date": "2012-06-24",
+  "contextType": "resource",
+  "context": [
+    "Practitioner"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Additional Institutions",
+      "formal": "XDS allows multiple institutions for an author, but the Practitioner only allows one. If there a multiple institutions in an XDS record, use this extension for the additional ones.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "profile": "http://hl7.org/fhir/Profile/Organization"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

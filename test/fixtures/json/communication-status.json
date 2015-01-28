@@ -1,0 +1,63 @@
+{
+  "resourceType": "ValueSet",
+  "id": "communication-status",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 5 concepts</p><h2>CommunicationStatus</h2><p>The status of the communication</p><p>This value set defines its own terms in the system http://hl7.org/fhir/communication-status</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>in progress<a name=\"inprogress\"> </a></td><td>The communication transmission is ongoing.</td></tr><tr><td>completed<a name=\"completed\"> </a></td><td>The message transmission is complete, i.e., delivered to the recipient's destination.</td></tr><tr><td>suspended<a name=\"suspended\"> </a></td><td>The communication transmission has been held by originating system/user request.</td></tr><tr><td>rejected<a name=\"rejected\"> </a></td><td>The receiving system has declined to accept the message.</td></tr><tr><td>failed<a name=\"failed\"> </a></td><td>There was a failure in transmitting the message out.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.539"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/communication-status",
+  "name": "CommunicationStatus",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "The status of the communication",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.494+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.539"
+      }
+    ],
+    "system": "http://hl7.org/fhir/communication-status",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "in progress",
+        "definition": "The communication transmission is ongoing."
+      },
+      {
+        "code": "completed",
+        "definition": "The message transmission is complete, i.e., delivered to the recipient's destination."
+      },
+      {
+        "code": "suspended",
+        "definition": "The communication transmission has been held by originating system/user request."
+      },
+      {
+        "code": "rejected",
+        "definition": "The receiving system has declined to accept the message."
+      },
+      {
+        "code": "failed",
+        "definition": "There was a failure in transmitting the message out."
+      }
+    ]
+  }
+}

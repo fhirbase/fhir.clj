@@ -1,0 +1,982 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (FHIR Management Group)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "A formal computable definition of an operation (on the RESTful interface) or a named query (using the search interaction)."
+      }
+    ],
+    "linkId": "OperationDefinition",
+    "title": "Definition of an operation or a named query",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "OperationDefinition.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OperationDefinition.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "OperationDefinition.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "OperationDefinition.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OperationDefinition.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "OperationDefinition.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OperationDefinition.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "OperationDefinition.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OperationDefinition.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "OperationDefinition.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OperationDefinition.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "OperationDefinition.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OperationDefinition.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "OperationDefinition.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OperationDefinition.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "OperationDefinition.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OperationDefinition.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "OperationDefinition.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OperationDefinition.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "OperationDefinition.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "OperationDefinition.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The identifier that is used to identify this operation definition when it is referenced in a specification, model, design or an instance (should be globally unique OID, UUID, or URI)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "OperationDefinition.identifier",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OperationDefinition.identifier.value",
+            "text": "Logical id to reference this operation definition",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The identifier that is used to identify this version of the profile when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the profile author manually and the value should be a timestamp."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "OperationDefinition.version",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OperationDefinition.version.value",
+            "text": "Logical id for this version of the operation definition",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A free text natural language name identifying the Profile. Not expected to be globally unique."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "OperationDefinition.title",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OperationDefinition.title.value",
+            "text": "Informal name for this profile",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Details of the individual or organization who accepts responsibility for publishing the profile. Usually an organization, but may be an individual. This item SHOULD be populated unless the information is available from context."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "OperationDefinition.publisher",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OperationDefinition.publisher.value",
+            "text": "Name of the publisher (Organization or individual)",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Contact details to assist a user in finding and communicating with the publisher. May be a web site, an email address, a telephone number (tel:), etc."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "ContactPoint"
+          }
+        ],
+        "linkId": "OperationDefinition.telecom",
+        "text": "Contact information of the publisher",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OperationDefinition.telecom.system",
+            "text": "type:",
+            "type": "choice"
+          },
+          {
+            "linkId": "OperationDefinition.telecom.value",
+            "text": "value:",
+            "type": "string"
+          },
+          {
+            "linkId": "OperationDefinition.telecom.use",
+            "text": "use:",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A free text natural language description of the profile and its use. This field can be used for things such as why the profile was written, comments about misuse, instructions for clinical use and interpretation, literature references, examples from the paper world, etc.  It is *not* a rendering of the profile as conveyed in Profile.text. This item SHOULD be populated unless the information is available from context."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "OperationDefinition.description",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OperationDefinition.description.value",
+            "text": "Natural language description of the operation",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A set of terms from external terminologies that may be used to assist with indexing and searching of templates."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Coding"
+          }
+        ],
+        "linkId": "OperationDefinition.code",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OperationDefinition.code.value",
+            "text": "Assist with indexing and finding",
+            "type": "open-choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The status of the profile."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "OperationDefinition.status",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OperationDefinition.status.value",
+            "text": "status",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "This profile was authored for testing purposes (or education/evaluation/marketing), and is not intended to be used for genuine usage."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "boolean"
+          }
+        ],
+        "linkId": "OperationDefinition.experimental",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OperationDefinition.experimental.value",
+            "text": "If for testing purposes, not real usage",
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The date that this version of the profile was published."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "datetime"
+          }
+        ],
+        "linkId": "OperationDefinition.date",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OperationDefinition.date.value",
+            "text": "Date for this version of the operation definition",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Whether this is operation or named query. Named queries are invoked differently, and have different capabilities."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "OperationDefinition.kind",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OperationDefinition.kind.value",
+            "text": "kind",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The name used to invoke the operation."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "OperationDefinition.name",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OperationDefinition.name.value",
+            "text": "name",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Additional information about how to use this operation or named query."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "OperationDefinition.notes",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OperationDefinition.notes.value",
+            "text": "Additional information about use",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Indicates that this operation definition is a constraining profile on the base. A constrained profile can make optional parameters required or not used and clarify documentation."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "OperationDefinition.base",
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/OperationDefinition?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "OperationDefinition.base.value",
+            "text": "Marks this as a profile of the base",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Indicates whether this operation or named query can be invoked at the system level (e.g. without needing to choose a resource type for the context)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "boolean"
+          }
+        ],
+        "linkId": "OperationDefinition.system",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OperationDefinition.system.value",
+            "text": "Invoke at the system level?",
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Indicates whether this operation or named query can be invoked at the resource type level for any given resource type level (e.g. without needing to choose a resource type for the context)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "OperationDefinition.type",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OperationDefinition.type.value",
+            "text": "type",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Indicates whether this operation can be invoked on a particular instance of one of the given types."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "boolean"
+          }
+        ],
+        "linkId": "OperationDefinition.instance",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "OperationDefinition.instance.value",
+            "text": "Invoke on an instance?",
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The parameters for the operation/query."
+          }
+        ],
+        "linkId": "OperationDefinition.parameter",
+        "title": "Parameters for the operation/query",
+        "text": "Query Definitions only have one output parameter, named \"result\". This may not be described, but can be to allow a profile to be defined.",
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "OperationDefinition.parameter.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OperationDefinition.parameter.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The name of used to identify the parameter. This name must be a token (start with a letter in a..z, and only contain letters, numerals, and underscore."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "code"
+              }
+            ],
+            "linkId": "OperationDefinition.parameter.name",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OperationDefinition.parameter.name.value",
+                "text": "name",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Whether this is an input or an output parameter. If a parameter name is used for both an input and an output parameter, the parameter should be defined twice."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "code"
+              }
+            ],
+            "linkId": "OperationDefinition.parameter.use",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OperationDefinition.parameter.use.value",
+                "text": "use",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The minimum number of times this parameter SHALL appear in the request or response."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "integer"
+              }
+            ],
+            "linkId": "OperationDefinition.parameter.min",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OperationDefinition.parameter.min.value",
+                "text": "Minimum Cardinality",
+                "type": "integer"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The maximum number of times this element is permitted to appear in the request or response."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "OperationDefinition.parameter.max",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OperationDefinition.parameter.max.value",
+                "text": "Maximum Cardinality (a number or *)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Describes the meaning or use of this parameter."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "OperationDefinition.parameter.documentation",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OperationDefinition.parameter.documentation.value",
+                "text": "Description of meaning/use",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The type for this parameter. if there is no stated parameter, then the parameter is a \"Tuple\" type and must have at least one part defined."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "code"
+              }
+            ],
+            "linkId": "OperationDefinition.parameter.type",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "OperationDefinition.parameter.type.value",
+                "text": "type",
+                "type": "choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A profile the specifies the rules that this parameter must conform to."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Reference"
+              }
+            ],
+            "linkId": "OperationDefinition.parameter.profile",
+            "repeats": true,
+            "question": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                  {
+                    "valueString": "/Profile?subject=$subj&patient=$subj&encounter=$encounter"
+                  }
+                ],
+                "linkId": "OperationDefinition.parameter.profile.value",
+                "text": "Profile on the type",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The parts of a Tuple Parameter."
+              }
+            ],
+            "linkId": "OperationDefinition.parameter.part",
+            "title": "Parts of a Tuple Parameter",
+            "text": "Query Definitions only have one output parameter, named \"result\". This may not be described, but can be to allow a profile to be defined.",
+            "repeats": true,
+            "group": [
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "unique id for the element within a resource (for internal references)."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "OperationDefinition.parameter.part.id",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "OperationDefinition.parameter.part.id.value",
+                    "text": "xml:id (or equivalent in JSON)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The name of used to identify the parameter. This name must be a token (start with a letter in a..z, and only contain letters, numerals, and underscore."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "code"
+                  }
+                ],
+                "linkId": "OperationDefinition.parameter.part.name",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "OperationDefinition.parameter.part.name.value",
+                    "text": "name",
+                    "type": "choice"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The minimum number of times this parameter SHALL appear in the request or response."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "integer"
+                  }
+                ],
+                "linkId": "OperationDefinition.parameter.part.min",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "OperationDefinition.parameter.part.min.value",
+                    "text": "Minimum Cardinality",
+                    "type": "integer"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The maximum number of times this element is permitted to appear in the request or response."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "OperationDefinition.parameter.part.max",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "OperationDefinition.parameter.part.max.value",
+                    "text": "Maximum Cardinality (a number or *)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Describes the meaning or use of this parameter."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "OperationDefinition.parameter.part.documentation",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "OperationDefinition.parameter.part.documentation.value",
+                    "text": "Description of meaning/use",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The type for this parameter."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "code"
+                  }
+                ],
+                "linkId": "OperationDefinition.parameter.part.type",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "OperationDefinition.parameter.part.type.value",
+                    "text": "type",
+                    "type": "choice"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "A profile the specifies the rules that this parameter must conform to."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "OperationDefinition.parameter.part.profile",
+                "repeats": true,
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Profile?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "OperationDefinition.parameter.part.profile.value",
+                    "text": "Profile on the type",
+                    "type": "reference"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

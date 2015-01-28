@@ -1,0 +1,1789 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Profile xmlns="http://hl7.org/fhir">
+  <id value="ImagingObjectSelection"/>
+  <meta>
+    <lastUpdated value="2014-12-12T13:17:44.755+11:00"/>
+  </meta>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <table style="border: 0px; font-size: 11px; font-family: verdana; vertical-align: top;" cellpadding="0" border="0" cellspacing="0">
+        <tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;">
+          <th style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Name</th>
+          <th style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Flags</th>
+          <th style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Card.</th>
+          <th style="width: 100px" class="heirarchy">Type</th>
+          <th style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Description &amp; Constraints
+            <span style="float: right">
+              <a title="Legend for this format" href="formats.html#table">
+                <img alt="doco" src="help16.png"/>
+              </a>
+            </span>
+          </th>
+        </tr>
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img title="Resource" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAJBSURBVDjLhdKxa5NBGMfx713yvkmbJnaoFiSF4mJTh06Kg4OgiyCCRXCof4YIdXdxFhQVHPo3OFSoUx0FySQttaVKYq2NbdO8ed/L3fM4JG3tYPvAcfBw9+HHPWdUlf/V0tLSqKo+EpEHInJFRIohhDUR+RBCeDM7O7ua55QSkRfVanVufHyckZERrLV0Op2Zra2tmXq9fg+YsmcAdyYnJykUCke9OI6ZmJgghHAZ4KwE3ntPs9mkVCohIjQaDWq1GiEEAM5KoHEcY62lVCrRarUoFotUKpUjIL/y/uqXYmV62ph/LSVrr30P4bEFcM4B0Ov1jk547/uAUTs1ceNdZIwB7V/GGHz6+9LXxY96eDiEgHMOY8xJAK8p4grZz5cElwNbwZgyxYu3EFM01lriOCZJEqIoIooiALIsGwA9Y1UcwcWoKNLdpLu9zvbnBWqNBhuvn5EDUmB0EH/1E2TZw5U+YLQovkun+Ytsaw1xCbnCOap334LC7s4Oe/ttvA+ICLmhMXRxDufczUECS37oAuevPwUEVFFp4/eXkXSdYc2IopSepnjtUh5/wg9gfn6+OQBUNaRIUkfDHhraSLoBKqikIF3yHJDLHaAkFOLciVHnyVAVj/S2Ub/XRyQD9aAZKgkaOohvo6ENgykcA07VEFDfQv1uf4W9Y8y30bCPhg4qKZJtMnjTPqBO/vhkZ7h3EJeRslWNQMqgY2jIAIfa/m5sIKSpqpPsGEiz599e3b+GchtD+bSvjQJm2SG6cNj6C+QmaxAek5tyAAAAAElFTkSuQmCC"/> 
+            <span title="A set of DICOM SOP Instances of a patient, selected for some application purpose, e.g., quality assurance, teaching, conference, consulting, etc.  Objects selected can be from different studies, but must be of the same patient.">ImagingObjectSelection</span>
+            <a name="ImagingObjectSelection"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="domainresource.html">DomainResource</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Key Object Selection</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="Instance UID of the DICOM KOS SOP Instances represenetd in this resource.">uid</span>
+            <a name="ImagingObjectSelection.uid"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#oid">oid</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Instance UID</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Reference to another Resource" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC"/> 
+            <span title="A patient resource reference which is the patient subject of all DICOM SOP Instances in this key object selection.">patient</span>
+            <a name="ImagingObjectSelection.patient"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="patient.html">Patient</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Patient of the selected objects</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAOZ/APrkusOiYvvfqbiXWaV2G+jGhdq1b8GgYf3v1frw3vTUlsWkZNewbcSjY/DQkad4Hb6dXv3u0f3v1ObEgfPTlerJiP3w1v79+e7OkPrfrfnjuNOtZPrpydaxa+/YrvvdpP779ZxvFPvnwKKBQaFyF/369M2vdaqHRPz58/HNh/vowufFhfroxO3OkPrluv779tK0e6JzGProwvrow9m4eOnIifPTlPDPkP78+Naxaf3v0/zowfXRi+bFhLWUVv379/rnwPvszv3rye3LiPvnv+3MjPDasKiIS/789/3x2f747eXDg+7Mifvu0tu7f+/QkfDTnPXWmPrjsvrjtPbPgrqZW+/QlPz48K2EMv36866OUPvowat8Ivvgq/Pbrvzgq/PguvrgrqN0Gda2evfYm9+7d/rpw9q6e/LSku/Rl/XVl/LSlfrkt+zVqe7Wqv3x1/bNffbOf59wFdS6if3u0vrqyP3owPvepfXQivDQkO/PkKh9K7STVf779P///////yH5BAEAAH8ALAAAAAAQABAAAAfNgH+Cg36FfoOIhH4JBxBghYl/hQkNAV0IVT5GkJKLCwtQaSsSdx9aR26Gcwt2IkQaNRI6dBERIzCFDSgWSW8WCDkbBnoOQ3uFARc/JQJfCAZlT0x4ZFyFBxdNQT9ZCBNWKQoKUQ+FEDgcdTIAV14YDmg2CgSFA0hmQC5TLE4VRTdrKJAoxOeFCzZSwsw4U6BCizwUQhQyEaAPiAwCVNCY0FCNnA6GPAwYoETIFgY9loiRA4dToTYnsOxg8CBGHE6ICvEYQ4AKzkidfgoKBAA7"/> 
+            <span title="The reason for, or significance of, the selection of objects referenced in the resource.">title</span>
+            <a name="ImagingObjectSelection.title"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#CodeableConcept">CodeableConcept</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Reason for selection
+            <br/>
+            <a title="The document title code of key object selection" href="kos-title.html">KOStitle</a> (
+            <a title="These codes are an example of the type of codes that may be used" href="terminologies.html#example">Example</a>)
+          </td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="Text description of the DICOM SOP instances selected in the key object selection. This should be aligned with the content of the title element, and can provide further explanation of the SOP instances in the selection.">description</span>
+            <a name="ImagingObjectSelection.description"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#string">string</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Description text</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Reference to another Resource" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAadEVYdFNvZnR3YXJlAFBhaW50Lk5FVCB2My41LjEwMPRyoQAAAFxJREFUOE/NjEEOACEIA/0o/38GGw+agoXYeNnDJDCUDnd/gkoFKhWozJiZI3gLwY6rAgxhsPKTPUzycTl8lAryMyMsVQG6TFi6cHULyz8KOjC7OIQKlQpU3uPjAwhX2CCcGsgOAAAAAElFTkSuQmCC"/> 
+            <span title="Author of key object selection. It can be a human authtor or a device which made the decision of the SOP instances selected. For example, a radiologist selected a set of imaging SOP instances to attached in a diagnostic report, and a CAD application may author a selection to describe SOP instances it used to generate a detection conclusion.">author</span>
+            <a name="ImagingObjectSelection.author"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="practitioner.html">Practitioner</a> | 
+            <a href="device.html">Device</a> | 
+            <a href="organization.html">Organization</a> | 
+            <a href="patient.html">Patient</a> | 
+            <a href="relatedperson.html">RelatedPerson</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Author (human or machine)</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAEklEQVR42mP4//0/iYDhP8kAANZ3Y5Ucw2ZoAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="Date and time when the key object selection was authored. Note that this is the date and time the DICOM SOP instances in the selection were selected (selection decision making). It is different from the creation date and time of the selection resource.">authoringTime</span>
+            <a name="ImagingObjectSelection.authoringTime"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#dateTime">dateTime</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Authoring time of the selection</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAD0lEQVR42mP4TzJgIF0LANmXY523xFiMAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII="/>
+            <img title="Element" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAMQfAOvGUf7ztuvPMf/78/fkl/Pbg+u8Rvjqteu2Pf3zxPz36Pz0z+vTmPzurPvuw/npofbjquvNefHVduuyN+uuMu3Oafbgjfnqvf/3zv/3xevPi+vRjP/20/bmsP///////yH5BAEAAB8ALAAAAAAQABAAAAV24CeOZGmepqeqqOgxjBZFa+19r4ftWQUAgqDgltthMshMIJAZ4jYDHsBARSAmFOJvq+g6HIdEFgcYmBWNxoNAsDjGHgBnmV5bCoUDHLBIq9sFEhIdcAYJdYASFRUQhQkLCwkOFwcdEBAXhVabE52ecDahKy0oIQA7"/> 
+            <span title="Study identity and locating information of the DICOM SOP instances in the selection.">study</span>
+            <a name="ImagingObjectSelection.study"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..*</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="element.html">Element</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Study identity of the selected instances</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAFElEQVR42mP4////9/8kAYb/JAMA1odjlXxALpEAAAAASUVORK5CYII=)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="Study instance uid of the SOP instances in the selection.">uid</span>
+            <a name="ImagingObjectSelection.study.uid"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#oid">oid</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Study instance uid</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAFElEQVR42mP4////9/8kAYb/JAMA1odjlXxALpEAAAAASUVORK5CYII=)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="The DICOM Application Entity Title where the study can be retrieved.
+Note that this AE Title is provided to retrieve all SOP instances of the study, not only those in the selection.">retrieveAETitle</span>
+            <a name="ImagingObjectSelection.study.retrieveAETitle"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#id">id</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">AE Title where may be retrieved</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAFElEQVR42mP4////9/8kAYb/JAMA1odjlXxALpEAAAAASUVORK5CYII=)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="WADO-RS URL to retrieve the study. Note that this URL retrieves all SOP instances of the study, not only those in the selection.">retrieveUrl</span>
+            <a name="ImagingObjectSelection.study.retrieveUrl"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#uri">uri</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Retrieve URL</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAD0lEQVR42mP4TzJgIF0LANmXY523xFiMAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII="/>
+            <img title="Element" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAMQfAOvGUf7ztuvPMf/78/fkl/Pbg+u8Rvjqteu2Pf3zxPz36Pz0z+vTmPzurPvuw/npofbjquvNefHVduuyN+uuMu3Oafbgjfnqvf/3zv/3xevPi+vRjP/20/bmsP///////yH5BAEAAB8ALAAAAAAQABAAAAV24CeOZGmepqeqqOgxjBZFa+19r4ftWQUAgqDgltthMshMIJAZ4jYDHsBARSAmFOJvq+g6HIdEFgcYmBWNxoNAsDjGHgBnmV5bCoUDHLBIq9sFEhIdcAYJdYASFRUQhQkLCwkOFwcdEBAXhVabE52ecDahKy0oIQA7"/> 
+            <span title="Series indetity and locating information of the DICOM SOP instances in the selection.">series</span>
+            <a name="ImagingObjectSelection.study.series"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..*</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="element.html">Element</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Series identity of the selected instances</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAE0lEQVR42mP4DwLf/5MAGP6TDADWl2OVL6gPrgAAAABJRU5ErkJggg==)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="Series instance uid of the SOP instances in the selection.">uid</span>
+            <a name="ImagingObjectSelection.study.series.uid"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#oid">oid</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Series instance uid</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAE0lEQVR42mP4DwLf/5MAGP6TDADWl2OVL6gPrgAAAABJRU5ErkJggg==)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="The DICOM Application Entity Title where the series can be retrieved.
+Note that this AE Title is provided to retrieve all SOP instances of the series not only those in the selection.">retrieveAETitle</span>
+            <a name="ImagingObjectSelection.study.series.retrieveAETitle"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#id">id</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">AE Title where may be retrieved</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAE0lEQVR42mP4DwLf/5MAGP6TDADWl2OVL6gPrgAAAABJRU5ErkJggg==)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="WADO-RS URL to retrieve the series Note that this URL retrieves all SOP instances of the series not only those in the selection.">retrieveUrl</span>
+            <a name="ImagingObjectSelection.study.series.retrieveUrl"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#uri">uri</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Retrieve URL</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAD0lEQVR42mP4TzJgIF0LANmXY523xFiMAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII="/>
+            <img title="Element" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,R0lGODlhEAAQAMQfAOvGUf7ztuvPMf/78/fkl/Pbg+u8Rvjqteu2Pf3zxPz36Pz0z+vTmPzurPvuw/npofbjquvNefHVduuyN+uuMu3Oafbgjfnqvf/3zv/3xevPi+vRjP/20/bmsP///////yH5BAEAAB8ALAAAAAAQABAAAAV24CeOZGmepqeqqOgxjBZFa+19r4ftWQUAgqDgltthMshMIJAZ4jYDHsBARSAmFOJvq+g6HIdEFgcYmBWNxoNAsDjGHgBnmV5bCoUDHLBIq9sFEhIdcAYJdYASFRUQhQkLCwkOFwcdEBAXhVabE52ecDahKy0oIQA7"/> 
+            <span title="Identity and locating information of the selected DICOM SOP instances.">instance</span>
+            <a name="ImagingObjectSelection.study.series.instance"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <span title="This element has or is affected by some invariants">I</span>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..*</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="element.html">Element</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">The selected instance
+            <br/>
+            <span title="1" style="font-style: italic">SHALL at least provide retrieve URL or retrieve AE Title</span>
+          </td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAE0lEQVR42mP4DwHf/xMNGP6TDADWp2OV9b1xygAAAABJRU5ErkJggg==)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="SOP class uid of the selected instance.">sopClass</span>
+            <a name="ImagingObjectSelection.study.series.instance.sopClass"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#oid">oid</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">SOP class uid of instance</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAE0lEQVR42mP4DwHf/xMNGP6TDADWp2OV9b1xygAAAABJRU5ErkJggg==)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="SOP Instance uid of the selected instance.">uid</span>
+            <a name="ImagingObjectSelection.study.series.instance.uid"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy"/>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">1..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#oid">oid</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Uid of the selected instance</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAE0lEQVR42mP4DwHf/xMNGP6TDADWp2OV9b1xygAAAABJRU5ErkJggg==)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQUUvGn2UQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASY6G0qgNA2kDAHnCJyR4Ta2WAAAAAElFTkSuQmCC"/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="The DICOM Application Entity Title where the DICOM SOP instance can be retrieved.">retrieveAETitle</span>
+            <a name="ImagingObjectSelection.study.series.instance.retrieveAETitle"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <span title="This element has or is affected by some invariants">I</span>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#id">id</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">AE Title where may be retrieved</td>
+        </tr>
+
+        <tr style="border: 0px; padding:0px; vertical-align: top; background-color: white;">
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAACAQAAAABeHbedAAAAD0lEQVR42mP4TzJgIF0LANmXY523xFiMAAAAAElFTkSuQmCC)" class="heirarchy">
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAIAAACOpGH9AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFTQr3mcuFgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAEklEQVQI12P4//8/EwMDA7UxAAidAygBXEHpAAAAAElFTkSuQmCC"/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQA2FH5D8AAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAHElEQVQ4y2P8//8/AymAiYFEMKphVMOohuGlAQDw8gMpyiAhRwAAAABJRU5ErkJggg=="/>
+            <img alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAIAAABGyIsrAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBDQcJ7Vn4CgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMklEQVQ4y2P8//8/AwZgZGTEKs7AwIBTAhdgwm4MIyMuDaM2oNmASVLPhlENoxpI1wAA9XMVKngLMyMAAAAASUVORK5CYII="/>
+            <img title="Primitive Data Type" style="background-color: white;" alt="." class="heirarchy" src="data: image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gYBFzI0BrFQCwAAAERJREFUOMtj/P//PwMlgImBQjDwBrCcOnWKokBgYWBgYDCU+06W5i8MUggvnH/EOVJjAW4AuQHJ+O75LYqikXE0LzAAALePEntTkEoSAAAAAElFTkSuQmCC"/> 
+            <span title="WADO-RS URL to retrieve the DICOM SOP Instance.">retrieveUrl</span>
+            <a name="ImagingObjectSelection.study.series.instance.retrieveUrl"> </a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <span title="This element has or is affected by some invariants">I</span>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">0..1</td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">
+            <a href="datatypes.html#uri">uri</a>
+          </td>
+          <td style="vertical-align: top; text-align : left; padding:0px 4px 0px 4px" class="heirarchy">Retrieve URL</td>
+        </tr>
+
+      </table>
+    </div>
+  </text>
+  <url value="http://hl7.org/fhir/Profile/ImagingObjectSelection"/>
+  <name value="ImagingObjectSelection"/>
+  <publisher value="HL7 FHIR Project"/>
+  <telecom>
+    <system value="url"/>
+    <value value="http://hl7.org/fhir"/>
+  </telecom>
+  <description value="Base Profile for ImagingObjectSelection Resource"/>
+  <status value="draft"/>
+  <date value="2014-12-12T13:17:44.755+11:00"/>
+  <mapping>
+    <identity value="dicom"/>
+    <uri value="http://nema.org/dicom"/>
+    <name value="DICOM"/>
+  </mapping>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM"/>
+  </mapping>
+  <type value="ImagingObjectSelection"/>
+  <snapshot>
+    <element>
+      <path value="ImagingObjectSelection"/>
+      <short value="Key Object Selection"/>
+      <formal value="A set of DICOM SOP Instances of a patient, selected for some application purpose, e.g., quality assurance, teaching, conference, consulting, etc.  Objects selected can be from different studies, but must be of the same patient."/>
+      <requirements value="A FHIR representation of DICOM Key Object Selection (KOS) SOP Instances enables access to a set of selected DICOM SOP Instances."/>
+      <synonym value="ImageManifest
+KeyImageNote"/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="Key Object Selection SOP Class (1.2.840.10008.5.1.4.1.1.88.59)"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="Key Object Selection SOP Class (1.2.840.10008.5.1.4.1.1.88.59)"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.id"/>
+      <short value="Logical id of this artefact"/>
+      <formal value="The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes."/>
+      <comments value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.meta"/>
+      <short value="Metadata about the resource"/>
+      <formal value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."/>
+      <min value="0"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.meta.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.meta.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.meta.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.meta.versionId"/>
+      <short value="Version specific identifier"/>
+      <formal value="The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted."/>
+      <comments value="The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.meta.lastUpdated"/>
+      <short value="When the resource version last changed"/>
+      <formal value="When the resource last changed - e.g. when the version changed."/>
+      <comments value="This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="instant"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.meta.profile"/>
+      <short value="Profiles this resource claims to conform to"/>
+      <formal value="A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url."/>
+      <comments value="It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.meta.security"/>
+      <short value="Security Labels applied to this resource"/>
+      <formal value="Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure."/>
+      <comments value="The security labels can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.meta.tag"/>
+      <short value="Tags applied"/>
+      <formal value="Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource."/>
+      <comments value="The tags can be updated without changing the stated version of the resource."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.implicitRules"/>
+      <short value="A set of rules under which this content was created"/>
+      <formal value="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content."/>
+      <comments value="Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isModifier value="true"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.language"/>
+      <short value="Language of the resource content"/>
+      <formal value="The base language in which the resource is written."/>
+      <comments value="Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource
+
+Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="code"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="Language"/>
+        <isExtensible value="false"/>
+        <conformance value="required"/>
+        <description value="A human language"/>
+        <referenceUri value="http://tools.ietf.org/html/bcp47"/>
+      </binding>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.text"/>
+      <short value="Text summary of the resource, for human interpretation"/>
+      <formal value="A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."/>
+      <comments value="Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."/>
+      <synonym value="narrative"/>
+      <synonym value="html"/>
+      <synonym value="xhtml"/>
+      <synonym value="display"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Narrative"/>
+      </type>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.contained"/>
+      <short value="Contained, inline Resources"/>
+      <formal value="These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope."/>
+      <comments value="This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."/>
+      <synonym value="inline resources"/>
+      <synonym value="anonymous resources"/>
+      <synonym value="contained resources"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Resource"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.uid"/>
+      <short value="Instance UID"/>
+      <formal value="Instance UID of the DICOM KOS SOP Instances represenetd in this resource."/>
+      <requirements value="DICOM SOP Instance is always assigned with a unique identifier (UID)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="oid"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0018) - SOP Instance UID (of the Key Object Selection SOP Class)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0018) - SOP Instance UID (of the Key Object Selection SOP Class)"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.patient"/>
+      <short value="Patient of the selected objects"/>
+      <formal value="A patient resource reference which is the patient subject of all DICOM SOP Instances in this key object selection."/>
+      <comments value="SOP instances selected in the key object selection can be from different studies, but must be of the same patient."/>
+      <requirements value="SOP Instances in key object selection must be from the same patient."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Patient"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0010,0010) - Patient Name
+(0010,0020) - Patient ID
+(0010,0021) - Issuer of Patient ID"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].role"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].role"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0010,0010) - Patient Name
+(0010,0020) - Patient ID
+(0010,0021) - Issuer of Patient ID"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.title"/>
+      <short value="Reason for selection"/>
+      <formal value="The reason for, or significance of, the selection of objects referenced in the resource."/>
+      <comments value="Coded concept of kind of the key object selection. Value set is defined in the DICOM standard CID-7010.
+
+http://medical.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_7010.html."/>
+      <requirements value="Need to represent the application purpose that the SOP instances in key object selection are selected for."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="KOStitle"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="The document title code of key object selection"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/kos-title"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0040,A043) - Concept Name Code Sequence in the SR root item"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0040,A043) - Concept Name Code Sequence in the SR root item"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.description"/>
+      <short value="Description text"/>
+      <formal value="Text description of the DICOM SOP instances selected in the key object selection. This should be aligned with the content of the title element, and can provide further explanation of the SOP instances in the selection."/>
+      <comments value="Free text narrative description of the key object selection."/>
+      <requirements value="Need to provide a narrative description of the SOP instances in the selection."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0040,A160) - Text Value
+SR content item immediately under the root item, concept name code = (113012, DCM, &quot;Key Object Description&quot;)"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0040,A160) - Text Value
+SR content item immediately under the root item, concept name code = (113012, DCM, &quot;Key Object Description&quot;)"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.author"/>
+      <short value="Author (human or machine)"/>
+      <formal value="Author of key object selection. It can be a human authtor or a device which made the decision of the SOP instances selected. For example, a radiologist selected a set of imaging SOP instances to attached in a diagnostic report, and a CAD application may author a selection to describe SOP instances it used to generate a detection conclusion."/>
+      <comments value="Author of the key object selection. This can be a human author or a device author. Human author is represented with the HumanName type. Device author is represented with a reference to the Device resource."/>
+      <requirements value="Track the selection decision maker."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Practitioner"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Device"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Organization"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Patient"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/RelatedPerson"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0040,A730) - Content Sequence
+TID 1002 - Observer Context"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0040,A730) - Content Sequence
+TID 1002 - Observer Context"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.authoringTime"/>
+      <short value="Authoring time of the selection"/>
+      <formal value="Date and time when the key object selection was authored. Note that this is the date and time the DICOM SOP instances in the selection were selected (selection decision making). It is different from the creation date and time of the selection resource."/>
+      <comments value="Authoring time."/>
+      <requirements value="Date and time when the selection was made can be important to understand the content of selection."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0040,A032) - Observation Date Time"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0040,A032) - Observation Date Time"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study"/>
+      <short value="Study identity of the selected instances"/>
+      <formal value="Study identity and locating information of the DICOM SOP instances in the selection."/>
+      <comments value="Study component represents the study level identity and locator information of the DICOM SOP instances in the selection. It is the top level identity of the hierachical identification of the instances."/>
+      <requirements value="DICOM SOP instances are identified through the UIDs of the study - series - instance hierarchy. In addition, the locator at the study level provide a means of retrieving the entire study."/>
+      <min value="1"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.uid"/>
+      <short value="Study instance uid"/>
+      <formal value="Study instance uid of the SOP instances in the selection."/>
+      <requirements value="Study instance uid is required to fully identify the DICOM SOP instances in the selection."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="oid"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0020,000D) - Study Instance UID"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0020,000D) - Study Instance UID"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.retrieveAETitle"/>
+      <short value="AE Title where may be retrieved"/>
+      <formal value="The DICOM Application Entity Title where the study can be retrieved.
+Note that this AE Title is provided to retrieve all SOP instances of the study, not only those in the selection."/>
+      <comments value="Study level locator information is optional. If provided, this is the AE Title which supportd retrieval of the entire study, though only a subset of these are selected in the selection."/>
+      <requirements value="Application Entity Title enables retrieval of the entire study using DICOM upper layer protocol."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0054) Retrieve AE Title"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0054) Retrieve AE Title"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.retrieveUrl"/>
+      <short value="Retrieve URL"/>
+      <formal value="WADO-RS URL to retrieve the study. Note that this URL retrieves all SOP instances of the study, not only those in the selection."/>
+      <comments value="Study level locator information is optional. If provided, this is the URL to retrieve the entire study with WADO-RS interaction, though only a subset of these are selected in the selection."/>
+      <requirements value="WADO-RS URL enables retrieval of the entire study using DICOM WADO-RS API."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,1190) - Retrieve URL"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,1190) - Retrieve URL"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series"/>
+      <short value="Series identity of the selected instances"/>
+      <formal value="Series indetity and locating information of the DICOM SOP instances in the selection."/>
+      <comments value="Series component represents the series level indentity and locator information of the DICOM SOP instances in the selection."/>
+      <requirements value="DICOM SOP instances are identified through the UIDs of the study - series - instance hierarchy. In addition, the locator at the series level provide a means of retrieving the entire series."/>
+      <min value="1"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series.uid"/>
+      <short value="Series instance uid"/>
+      <formal value="Series instance uid of the SOP instances in the selection."/>
+      <requirements value="Series instance uid is required to fully identify the DICOM SOP instances in the selection."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="oid"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0020,000E) - Series Instance UID"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0020,000E) - Series Instance UID"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series.retrieveAETitle"/>
+      <short value="AE Title where may be retrieved"/>
+      <formal value="The DICOM Application Entity Title where the series can be retrieved.
+Note that this AE Title is provided to retrieve all SOP instances of the series not only those in the selection."/>
+      <comments value="Series level locator information is optional. If provided, this is the AE Title which supports retrieval of the entire series, though only a subset of these are selected in the selection."/>
+      <requirements value="Application Entity Title enables retrieval of the entire series using DICOM upper layer protocol."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0054) Retrieve AE Title"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0054) Retrieve AE Title"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series.retrieveUrl"/>
+      <short value="Retrieve URL"/>
+      <formal value="WADO-RS URL to retrieve the series Note that this URL retrieves all SOP instances of the series not only those in the selection."/>
+      <comments value="Series level locator information is optional. If provided, this is the URL to retrieve the entire series with WADO-RS interaction, though only a subset of these are selected in the selection."/>
+      <requirements value="WADO-RS URL enables retrieval of the entire series using DICOM WADO-RS API."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,1190) - Retrieve URL"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,1190) - Retrieve URL"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series.instance"/>
+      <short value="The selected instance"/>
+      <formal value="Identity and locating information of the selected DICOM SOP instances."/>
+      <comments value="SOP Instance component identify the instance selected in the selection, along with the study and series identities to form the DICOM identity hierachy."/>
+      <requirements value="DICOM SOP instances are identified through the UIDs of the study - series - instance hierarchy. This is the instance level identity of the instance in the selection."/>
+      <min value="1"/>
+      <max value="*"/>
+      <constraint>
+        <key value="1"/>
+        <name value="InstanceLocatorInformation"/>
+        <severity value="error"/>
+        <human value="SHALL at least provide retrieve URL or retrieve AE Title"/>
+        <xpath value="f:retrieveAETitle or f:retrieveUrl"/>
+      </constraint>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series.instance.id"/>
+      <representation value="xmlAttr"/>
+      <short value="xml:id (or equivalent in JSON)"/>
+      <formal value="unique id for the element within a resource (for internal references)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series.instance.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series.instance.modifierExtension"/>
+      <short value="Extensions that cannot be ignored"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <synonym value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series.instance.sopClass"/>
+      <short value="SOP class uid of instance"/>
+      <formal value="SOP class uid of the selected instance."/>
+      <comments value="SOP class uid provides the type of the selected instances, e.g., CT image, Gray scale softcopy presentation state, ECG waveform, etc."/>
+      <requirements value="DICOM SOP instance can be an imaging or other data object. The SOP class uid provide the accurate information about what type the instance is."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="oid"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0016) SOP Class UID"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0016) SOP Class UID"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series.instance.uid"/>
+      <short value="Uid of the selected instance"/>
+      <formal value="SOP Instance uid of the selected instance."/>
+      <comments value="SOP instance uid identifies the instance."/>
+      <requirements value="SOP instance uid is required to fully identify the DICOM SOP instance in the selection."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="oid"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0018) - SOP Instance UID"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0018) - SOP Instance UID"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series.instance.retrieveAETitle"/>
+      <short value="AE Title where may be retrieved"/>
+      <formal value="The DICOM Application Entity Title where the DICOM SOP instance can be retrieved."/>
+      <comments value="Instance level locator information is required. Either AE Title or URL or both must be provided."/>
+      <requirements value="Application Entity Title enables retrieval of the SOP instance using DICOM upper layer protocol."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0054) Retrieve AE Title"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0054) Retrieve AE Title"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series.instance.retrieveUrl"/>
+      <short value="Retrieve URL"/>
+      <formal value="WADO-RS URL to retrieve the DICOM SOP Instance."/>
+      <comments value="Instance level locator information is required. Either AE Title or URL or both must be provided."/>
+      <requirements value="WADO-RS URL enables retrieval of the SOP instance using DICOM WADO-RS API."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,1190) - Retrieve URL"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,1190) - Retrieve URL"/>
+      </mapping>
+    </element>
+  </snapshot>
+  <differential>
+    <element>
+      <path value="ImagingObjectSelection"/>
+      <short value="Key Object Selection"/>
+      <formal value="A set of DICOM SOP Instances of a patient, selected for some application purpose, e.g., quality assurance, teaching, conference, consulting, etc.  Objects selected can be from different studies, but must be of the same patient."/>
+      <requirements value="A FHIR representation of DICOM Key Object Selection (KOS) SOP Instances enables access to a set of selected DICOM SOP Instances."/>
+      <synonym value="ImageManifest
+KeyImageNote"/>
+      <min value="1"/>
+      <max value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="Key Object Selection SOP Class (1.2.840.10008.5.1.4.1.1.88.59)"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="Key Object Selection SOP Class (1.2.840.10008.5.1.4.1.1.88.59)"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.uid"/>
+      <short value="Instance UID"/>
+      <formal value="Instance UID of the DICOM KOS SOP Instances represenetd in this resource."/>
+      <requirements value="DICOM SOP Instance is always assigned with a unique identifier (UID)."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="oid"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0018) - SOP Instance UID (of the Key Object Selection SOP Class)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".id"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0018) - SOP Instance UID (of the Key Object Selection SOP Class)"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.patient"/>
+      <short value="Patient of the selected objects"/>
+      <formal value="A patient resource reference which is the patient subject of all DICOM SOP Instances in this key object selection."/>
+      <comments value="SOP instances selected in the key object selection can be from different studies, but must be of the same patient."/>
+      <requirements value="SOP Instances in key object selection must be from the same patient."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Patient"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0010,0010) - Patient Name
+(0010,0020) - Patient ID
+(0010,0021) - Issuer of Patient ID"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].role"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=SBJ].role"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0010,0010) - Patient Name
+(0010,0020) - Patient ID
+(0010,0021) - Issuer of Patient ID"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.title"/>
+      <short value="Reason for selection"/>
+      <formal value="The reason for, or significance of, the selection of objects referenced in the resource."/>
+      <comments value="Coded concept of kind of the key object selection. Value set is defined in the DICOM standard CID-7010.
+
+http://medical.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_7010.html."/>
+      <requirements value="Need to represent the application purpose that the SOP instances in key object selection are selected for."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="false"/>
+      <binding>
+        <name value="KOStitle"/>
+        <isExtensible value="true"/>
+        <conformance value="example"/>
+        <description value="The document title code of key object selection"/>
+        <referenceReference>
+          <reference value="http://hl7.org/fhir/vs/kos-title"/>
+        </referenceReference>
+      </binding>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0040,A043) - Concept Name Code Sequence in the SR root item"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0040,A043) - Concept Name Code Sequence in the SR root item"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.description"/>
+      <short value="Description text"/>
+      <formal value="Text description of the DICOM SOP instances selected in the key object selection. This should be aligned with the content of the title element, and can provide further explanation of the SOP instances in the selection."/>
+      <comments value="Free text narrative description of the key object selection."/>
+      <requirements value="Need to provide a narrative description of the SOP instances in the selection."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="string"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0040,A160) - Text Value
+SR content item immediately under the root item, concept name code = (113012, DCM, &quot;Key Object Description&quot;)"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0040,A160) - Text Value
+SR content item immediately under the root item, concept name code = (113012, DCM, &quot;Key Object Description&quot;)"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.author"/>
+      <short value="Author (human or machine)"/>
+      <formal value="Author of key object selection. It can be a human authtor or a device which made the decision of the SOP instances selected. For example, a radiologist selected a set of imaging SOP instances to attached in a diagnostic report, and a CAD application may author a selection to describe SOP instances it used to generate a detection conclusion."/>
+      <comments value="Author of the key object selection. This can be a human author or a device author. Human author is represented with the HumanName type. Device author is represented with a reference to the Device resource."/>
+      <requirements value="Track the selection decision maker."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Practitioner"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Device"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Organization"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/Patient"/>
+      </type>
+      <type>
+        <code value="Reference"/>
+        <profile value="http://hl7.org/fhir/Profile/RelatedPerson"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0040,A730) - Content Sequence
+TID 1002 - Observer Context"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0040,A730) - Content Sequence
+TID 1002 - Observer Context"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.authoringTime"/>
+      <short value="Authoring time of the selection"/>
+      <formal value="Date and time when the key object selection was authored. Note that this is the date and time the DICOM SOP instances in the selection were selected (selection decision making). It is different from the creation date and time of the selection resource."/>
+      <comments value="Authoring time."/>
+      <requirements value="Date and time when the selection was made can be important to understand the content of selection."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0040,A032) - Observation Date Time"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".effectiveTime"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0040,A032) - Observation Date Time"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study"/>
+      <short value="Study identity of the selected instances"/>
+      <formal value="Study identity and locating information of the DICOM SOP instances in the selection."/>
+      <comments value="Study component represents the study level identity and locator information of the DICOM SOP instances in the selection. It is the top level identity of the hierachical identification of the instances."/>
+      <requirements value="DICOM SOP instances are identified through the UIDs of the study - series - instance hierarchy. In addition, the locator at the study level provide a means of retrieving the entire study."/>
+      <min value="1"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.uid"/>
+      <short value="Study instance uid"/>
+      <formal value="Study instance uid of the SOP instances in the selection."/>
+      <requirements value="Study instance uid is required to fully identify the DICOM SOP instances in the selection."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="oid"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0020,000D) - Study Instance UID"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0020,000D) - Study Instance UID"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.retrieveAETitle"/>
+      <short value="AE Title where may be retrieved"/>
+      <formal value="The DICOM Application Entity Title where the study can be retrieved.
+Note that this AE Title is provided to retrieve all SOP instances of the study, not only those in the selection."/>
+      <comments value="Study level locator information is optional. If provided, this is the AE Title which supportd retrieval of the entire study, though only a subset of these are selected in the selection."/>
+      <requirements value="Application Entity Title enables retrieval of the entire study using DICOM upper layer protocol."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0054) Retrieve AE Title"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0054) Retrieve AE Title"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.retrieveUrl"/>
+      <short value="Retrieve URL"/>
+      <formal value="WADO-RS URL to retrieve the study. Note that this URL retrieves all SOP instances of the study, not only those in the selection."/>
+      <comments value="Study level locator information is optional. If provided, this is the URL to retrieve the entire study with WADO-RS interaction, though only a subset of these are selected in the selection."/>
+      <requirements value="WADO-RS URL enables retrieval of the entire study using DICOM WADO-RS API."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,1190) - Retrieve URL"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,1190) - Retrieve URL"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series"/>
+      <short value="Series identity of the selected instances"/>
+      <formal value="Series indetity and locating information of the DICOM SOP instances in the selection."/>
+      <comments value="Series component represents the series level indentity and locator information of the DICOM SOP instances in the selection."/>
+      <requirements value="DICOM SOP instances are identified through the UIDs of the study - series - instance hierarchy. In addition, the locator at the series level provide a means of retrieving the entire series."/>
+      <min value="1"/>
+      <max value="*"/>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series.uid"/>
+      <short value="Series instance uid"/>
+      <formal value="Series instance uid of the SOP instances in the selection."/>
+      <requirements value="Series instance uid is required to fully identify the DICOM SOP instances in the selection."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="oid"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0020,000E) - Series Instance UID"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0020,000E) - Series Instance UID"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series.retrieveAETitle"/>
+      <short value="AE Title where may be retrieved"/>
+      <formal value="The DICOM Application Entity Title where the series can be retrieved.
+Note that this AE Title is provided to retrieve all SOP instances of the series not only those in the selection."/>
+      <comments value="Series level locator information is optional. If provided, this is the AE Title which supports retrieval of the entire series, though only a subset of these are selected in the selection."/>
+      <requirements value="Application Entity Title enables retrieval of the entire series using DICOM upper layer protocol."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0054) Retrieve AE Title"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0054) Retrieve AE Title"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series.retrieveUrl"/>
+      <short value="Retrieve URL"/>
+      <formal value="WADO-RS URL to retrieve the series Note that this URL retrieves all SOP instances of the series not only those in the selection."/>
+      <comments value="Series level locator information is optional. If provided, this is the URL to retrieve the entire series with WADO-RS interaction, though only a subset of these are selected in the selection."/>
+      <requirements value="WADO-RS URL enables retrieval of the entire series using DICOM WADO-RS API."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,1190) - Retrieve URL"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,1190) - Retrieve URL"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series.instance"/>
+      <short value="The selected instance"/>
+      <formal value="Identity and locating information of the selected DICOM SOP instances."/>
+      <comments value="SOP Instance component identify the instance selected in the selection, along with the study and series identities to form the DICOM identity hierachy."/>
+      <requirements value="DICOM SOP instances are identified through the UIDs of the study - series - instance hierarchy. This is the instance level identity of the instance in the selection."/>
+      <min value="1"/>
+      <max value="*"/>
+      <constraint>
+        <key value="1"/>
+        <name value="InstanceLocatorInformation"/>
+        <severity value="error"/>
+        <human value="SHALL at least provide retrieve URL or retrieve AE Title"/>
+        <xpath value="f:retrieveAETitle or f:retrieveUrl"/>
+      </constraint>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series.instance.sopClass"/>
+      <short value="SOP class uid of instance"/>
+      <formal value="SOP class uid of the selected instance."/>
+      <comments value="SOP class uid provides the type of the selected instances, e.g., CT image, Gray scale softcopy presentation state, ECG waveform, etc."/>
+      <requirements value="DICOM SOP instance can be an imaging or other data object. The SOP class uid provide the accurate information about what type the instance is."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="oid"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0016) SOP Class UID"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0016) SOP Class UID"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series.instance.uid"/>
+      <short value="Uid of the selected instance"/>
+      <formal value="SOP Instance uid of the selected instance."/>
+      <comments value="SOP instance uid identifies the instance."/>
+      <requirements value="SOP instance uid is required to fully identify the DICOM SOP instance in the selection."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="oid"/>
+      </type>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0018) - SOP Instance UID"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0018) - SOP Instance UID"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series.instance.retrieveAETitle"/>
+      <short value="AE Title where may be retrieved"/>
+      <formal value="The DICOM Application Entity Title where the DICOM SOP instance can be retrieved."/>
+      <comments value="Instance level locator information is required. Either AE Title or URL or both must be provided."/>
+      <requirements value="Application Entity Title enables retrieval of the SOP instance using DICOM upper layer protocol."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="id"/>
+      </type>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0054) Retrieve AE Title"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,0054) Retrieve AE Title"/>
+      </mapping>
+    </element>
+    <element>
+      <path value="ImagingObjectSelection.study.series.instance.retrieveUrl"/>
+      <short value="Retrieve URL"/>
+      <formal value="WADO-RS URL to retrieve the DICOM SOP Instance."/>
+      <comments value="Instance level locator information is required. Either AE Title or URL or both must be provided."/>
+      <requirements value="WADO-RS URL enables retrieval of the SOP instance using DICOM WADO-RS API."/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="uri"/>
+      </type>
+      <condition value="1"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,1190) - Retrieve URL"/>
+      </mapping>
+      <mapping>
+        <identity value="dicom"/>
+        <map value="(0008,1190) - Retrieve URL"/>
+      </mapping>
+    </element>
+  </differential>
+</Profile>

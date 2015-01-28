@@ -1,0 +1,36 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "ObservationNegationIndicator",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/ObservationNegationIndicator",
+  "name": "Observation Negation Indicator",
+  "display": "Observation Negation Indicator",
+  "publisher": "HL7 International - Orders and Observations WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org"
+    }
+  ],
+  "description": "This  modifier extension is used indicate negation of the entire observation.  ie the observation result \"A\"  is negated to \"not A\".",
+  "status": "draft",
+  "date": "2014-09-21",
+  "contextType": "resource",
+  "context": [
+    "Observation"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Observation Negation Indicator",
+      "formal": "This  modifier extension is used indicate negation of the entire observation.  ie the observation result \"A\"  is negated to \"not A\".",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

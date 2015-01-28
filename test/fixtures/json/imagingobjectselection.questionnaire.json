@@ -1,0 +1,844 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "vs2",
+      "identifier": "urn:uuid:f182d401-bbc6-4952-a4f7-90d620c99de3",
+      "name": "Type options for ImagingObjectSelection.author",
+      "description": "Type options for ImagingObjectSelection.author",
+      "status": "active",
+      "expansion": {
+        "timestamp": "2014-12-12T13:20:30.335+11:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Practitioner",
+            "display": "Practitioner"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Device",
+            "display": "Device"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Organization",
+            "display": "Organization"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Patient",
+            "display": "Patient"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "RelatedPerson",
+            "display": "RelatedPerson"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "A set of DICOM SOP Instances of a patient, selected for some application purpose, e.g., quality assurance, teaching, conference, consulting, etc.  Objects selected can be from different studies, but must be of the same patient."
+      }
+    ],
+    "linkId": "ImagingObjectSelection",
+    "title": "Key Object Selection",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "ImagingObjectSelection.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingObjectSelection.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "ImagingObjectSelection.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ImagingObjectSelection.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingObjectSelection.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ImagingObjectSelection.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingObjectSelection.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "ImagingObjectSelection.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingObjectSelection.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "ImagingObjectSelection.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingObjectSelection.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "ImagingObjectSelection.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingObjectSelection.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "ImagingObjectSelection.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingObjectSelection.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "ImagingObjectSelection.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingObjectSelection.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "ImagingObjectSelection.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingObjectSelection.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "ImagingObjectSelection.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "ImagingObjectSelection.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Instance UID of the DICOM KOS SOP Instances represenetd in this resource."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "ImagingObjectSelection.uid",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingObjectSelection.uid.value",
+            "text": "Instance UID",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A patient resource reference which is the patient subject of all DICOM SOP Instances in this key object selection. SOP instances selected in the key object selection can be from different studies, but must be of the same patient."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Reference"
+          }
+        ],
+        "linkId": "ImagingObjectSelection.patient",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+              {
+                "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+              }
+            ],
+            "linkId": "ImagingObjectSelection.patient.value",
+            "text": "Patient of the selected objects",
+            "type": "reference"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The reason for, or significance of, the selection of objects referenced in the resource. Coded concept of kind of the key object selection. Value set is defined in the DICOM standard CID-7010.\n\nhttp://medical.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_7010.html."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "CodeableConcept"
+          }
+        ],
+        "linkId": "ImagingObjectSelection.title",
+        "text": "Reason for selection",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingObjectSelection.title.coding",
+            "text": "code:",
+            "type": "open-choice"
+          },
+          {
+            "linkId": "ImagingObjectSelection.title.text",
+            "text": "text:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Text description of the DICOM SOP instances selected in the key object selection. This should be aligned with the content of the title element, and can provide further explanation of the SOP instances in the selection. Free text narrative description of the key object selection."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "ImagingObjectSelection.description",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingObjectSelection.description.value",
+            "text": "Description text",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Author of key object selection. It can be a human authtor or a device which made the decision of the SOP instances selected. For example, a radiologist selected a set of imaging SOP instances to attached in a diagnostic report, and a CAD application may author a selection to describe SOP instances it used to generate a detection conclusion. Author of the key object selection. This can be a human author or a device author. Human author is represented with the HumanName type. Device author is represented with a reference to the Device resource."
+          }
+        ],
+        "linkId": "ImagingObjectSelection.author",
+        "text": "Author (human or machine)",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingObjectSelection.author._type",
+            "text": "type",
+            "type": "choice",
+            "options": {
+              "reference": "#vs2"
+            },
+            "group": [
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "ImagingObjectSelection.author._Practitioner",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Practitioner?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "ImagingObjectSelection.author._Practitioner.value",
+                    "text": "Practitioner",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "ImagingObjectSelection.author._Device",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Device?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "ImagingObjectSelection.author._Device.value",
+                    "text": "Device",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "ImagingObjectSelection.author._Organization",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Organization?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "ImagingObjectSelection.author._Organization.value",
+                    "text": "Organization",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "ImagingObjectSelection.author._Patient",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/Patient?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "ImagingObjectSelection.author._Patient.value",
+                    "text": "Patient",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "ImagingObjectSelection.author._RelatedPerson",
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/RelatedPerson?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "ImagingObjectSelection.author._RelatedPerson.value",
+                    "text": "RelatedPerson",
+                    "type": "reference"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Date and time when the key object selection was authored. Note that this is the date and time the DICOM SOP instances in the selection were selected (selection decision making). It is different from the creation date and time of the selection resource. Authoring time."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "datetime"
+          }
+        ],
+        "linkId": "ImagingObjectSelection.authoringTime",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "ImagingObjectSelection.authoringTime.value",
+            "text": "Authoring time of the selection",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Study identity and locating information of the DICOM SOP instances in the selection."
+          }
+        ],
+        "linkId": "ImagingObjectSelection.study",
+        "title": "Study identity of the selected instances",
+        "text": "Study component represents the study level identity and locator information of the DICOM SOP instances in the selection. It is the top level identity of the hierachical identification of the instances.",
+        "required": true,
+        "repeats": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ImagingObjectSelection.study.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingObjectSelection.study.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Study instance uid of the SOP instances in the selection."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ImagingObjectSelection.study.uid",
+            "required": true,
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingObjectSelection.study.uid.value",
+                "text": "Study instance uid",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The DICOM Application Entity Title where the study can be retrieved.\nNote that this AE Title is provided to retrieve all SOP instances of the study, not only those in the selection. Study level locator information is optional. If provided, this is the AE Title which supportd retrieval of the entire study, though only a subset of these are selected in the selection."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "ImagingObjectSelection.study.retrieveAETitle",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingObjectSelection.study.retrieveAETitle.value",
+                "text": "AE Title where may be retrieved",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "WADO-RS URL to retrieve the study. Note that this URL retrieves all SOP instances of the study, not only those in the selection. Study level locator information is optional. If provided, this is the URL to retrieve the entire study with WADO-RS interaction, though only a subset of these are selected in the selection."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "ImagingObjectSelection.study.retrieveUrl",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "ImagingObjectSelection.study.retrieveUrl.value",
+                "text": "Retrieve URL",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Series indetity and locating information of the DICOM SOP instances in the selection."
+              }
+            ],
+            "linkId": "ImagingObjectSelection.study.series",
+            "title": "Series identity of the selected instances",
+            "text": "Series component represents the series level indentity and locator information of the DICOM SOP instances in the selection.",
+            "required": true,
+            "repeats": true,
+            "group": [
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "unique id for the element within a resource (for internal references)."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "ImagingObjectSelection.study.series.id",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ImagingObjectSelection.study.series.id.value",
+                    "text": "xml:id (or equivalent in JSON)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Series instance uid of the SOP instances in the selection."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "ImagingObjectSelection.study.series.uid",
+                "required": true,
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ImagingObjectSelection.study.series.uid.value",
+                    "text": "Series instance uid",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The DICOM Application Entity Title where the series can be retrieved.\nNote that this AE Title is provided to retrieve all SOP instances of the series not only those in the selection. Series level locator information is optional. If provided, this is the AE Title which supports retrieval of the entire series, though only a subset of these are selected in the selection."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "ImagingObjectSelection.study.series.retrieveAETitle",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ImagingObjectSelection.study.series.retrieveAETitle.value",
+                    "text": "AE Title where may be retrieved",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "WADO-RS URL to retrieve the series Note that this URL retrieves all SOP instances of the series not only those in the selection. Series level locator information is optional. If provided, this is the URL to retrieve the entire series with WADO-RS interaction, though only a subset of these are selected in the selection."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "uri"
+                  }
+                ],
+                "linkId": "ImagingObjectSelection.study.series.retrieveUrl",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "ImagingObjectSelection.study.series.retrieveUrl.value",
+                    "text": "Retrieve URL",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Identity and locating information of the selected DICOM SOP instances."
+                  }
+                ],
+                "linkId": "ImagingObjectSelection.study.series.instance",
+                "title": "The selected instance",
+                "text": "SOP Instance component identify the instance selected in the selection, along with the study and series identities to form the DICOM identity hierachy.",
+                "required": true,
+                "repeats": true,
+                "group": [
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "unique id for the element within a resource (for internal references)."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "string"
+                      }
+                    ],
+                    "linkId": "ImagingObjectSelection.study.series.instance.id",
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "ImagingObjectSelection.study.series.instance.id.value",
+                        "text": "xml:id (or equivalent in JSON)",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "SOP class uid of the selected instance. SOP class uid provides the type of the selected instances, e.g., CT image, Gray scale softcopy presentation state, ECG waveform, etc."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "string"
+                      }
+                    ],
+                    "linkId": "ImagingObjectSelection.study.series.instance.sopClass",
+                    "required": true,
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "ImagingObjectSelection.study.series.instance.sopClass.value",
+                        "text": "SOP class uid of instance",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "SOP Instance uid of the selected instance. SOP instance uid identifies the instance."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "string"
+                      }
+                    ],
+                    "linkId": "ImagingObjectSelection.study.series.instance.uid",
+                    "required": true,
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "ImagingObjectSelection.study.series.instance.uid.value",
+                        "text": "Uid of the selected instance",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "The DICOM Application Entity Title where the DICOM SOP instance can be retrieved. Instance level locator information is required. Either AE Title or URL or both must be provided."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "string"
+                      }
+                    ],
+                    "linkId": "ImagingObjectSelection.study.series.instance.retrieveAETitle",
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "ImagingObjectSelection.study.series.instance.retrieveAETitle.value",
+                        "text": "AE Title where may be retrieved",
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  {
+                    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                      {
+                        "valueString": "WADO-RS URL to retrieve the DICOM SOP Instance. Instance level locator information is required. Either AE Title or URL or both must be provided."
+                      }
+                    ],
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                      {
+                        "valueString": "uri"
+                      }
+                    ],
+                    "linkId": "ImagingObjectSelection.study.series.instance.retrieveUrl",
+                    "repeats": true,
+                    "question": [
+                      {
+                        "linkId": "ImagingObjectSelection.study.series.instance.retrieveUrl.value",
+                        "text": "Retrieve URL",
+                        "type": "string"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

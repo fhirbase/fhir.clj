@@ -1,0 +1,30 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "valueset-expirationDate",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/valueset-expirationDate",
+  "name": "When the value set version should no longer be used",
+  "publisher": "HL7",
+  "description": "The date when the value set version is no longer expected to be used to create new content. This is the first date-time when the value set version becomes Inactive, so this value MUST present on all Inactive value set versions. The start Date_time is expected to be as of 0001 UTC of the Expiration Date.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "contextType": "resource",
+  "context": [
+    "ValueSet"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "When the value set version should no longer be used",
+      "formal": "The date when the value set version is no longer expected to be used to create new content. This is the first date-time when the value set version becomes Inactive, so this value MUST present on all Inactive value set versions. The start Date_time is expected to be as of 0001 UTC of the Expiration Date.",
+      "comments": "Upon reaching the Expiration Date, the value set Activity Status should be consdiered as inactive. An Inactive value set version may no longer be used to create new content, but it may be used to evaluate content created prior to the Expiration Date.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "date"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

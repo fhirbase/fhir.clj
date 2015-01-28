@@ -1,0 +1,44 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "indirectTarget",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/indirectTarget",
+  "name": "target if different from the subject.",
+  "publisher": "HL7 FHIR project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "This extension is used when you want to identify the target whose characteristics (direct or indirect) are described by the observation if different from the Observation.subject.  For example,  the .indirectTarget may be a fetus, or a donor.",
+  "status": "draft",
+  "date": "2013-12-05",
+  "contextType": "resource",
+  "context": [
+    "Observation"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "target if different from the subject.",
+      "formal": "This extension is used when you want to identify the target whose characteristics (direct or indirect) are described by the observation if different from the Observation.subject.  For example,  the .indirectTarget may be a fetus, or a donor.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Reference",
+          "profile": "http://hl7.org/fhir/Profile/Patient"
+        },
+        {
+          "code": "Reference",
+          "profile": "http://hl7.org/fhir/Profile/Group"
+        },
+        {
+          "code": "Reference",
+          "profile": "http://hl7.org/fhir/Profile/Location"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

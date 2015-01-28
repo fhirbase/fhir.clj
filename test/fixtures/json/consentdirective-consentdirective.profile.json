@@ -1,0 +1,1567 @@
+{
+  "resourceType": "Profile",
+  "id": "consentdirective-consentdirective",
+  "text": {
+    "status": "generated",
+    "div": "<div>to do</div>"
+  },
+  "url": "http://hl7.org/fhir/Profile/consentdirective-consentdirective",
+  "name": "Consent Directive",
+  "publisher": "Health Level Seven, Inc. - CBCC and Security WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/special/committees/Security"
+    }
+  ],
+  "description": "Profile of Contract resource for use with Patient Privacy Consent Directive. : Consent Directive",
+  "status": "draft",
+  "date": "2014-01-31",
+  "type": "Contract",
+  "base": "http://hl7.org/fhir/Profile/Contract",
+  "snapshot": {
+    "element": [
+      {
+        "path": "Contract",
+        "name": "ConsentDirective",
+        "short": "A formal agreement between parties regarding the conduct of business, exchange of information or other matters.",
+        "formal": "A formal agreement between parties regarding the conduct of business, exchange of information or other matters.",
+        "min": 1,
+        "max": "1",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.id",
+        "short": "Logical id of this artefact",
+        "formal": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes.",
+        "comments": "The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.meta",
+        "short": "Metadata about the resource",
+        "formal": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
+        "min": 0,
+        "max": "1",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.meta.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "Contract.meta.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "Contract.meta.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "Contract.meta.versionId",
+        "short": "Version specific identifier",
+        "formal": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted.",
+        "comments": "The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.meta.lastUpdated",
+        "short": "When the resource version last changed",
+        "formal": "When the resource last changed - e.g. when the version changed.",
+        "comments": "This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "instant"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.meta.profile",
+        "short": "Profiles this resource claims to conform to",
+        "formal": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url.",
+        "comments": "It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.meta.security",
+        "short": "Security Labels applied to this resource",
+        "formal": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
+        "comments": "The security labels can be updated without changing the stated version of the resource.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.meta.tag",
+        "short": "Tags applied",
+        "formal": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
+        "comments": "The tags can be updated without changing the stated version of the resource.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "formal": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
+        "comments": "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": false
+      },
+      {
+        "path": "Contract.language",
+        "short": "Language of the resource content",
+        "formal": "The base language in which the resource is written.",
+        "comments": "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "Language",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "A human language",
+          "referenceUri": "http://tools.ietf.org/html/bcp47"
+        }
+      },
+      {
+        "path": "Contract.text",
+        "short": "Text summary of the resource, for human interpretation",
+        "formal": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+        "comments": "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative.",
+        "synonym": [
+          "narrative",
+          "html",
+          "xhtml",
+          "display"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Narrative"
+          }
+        ],
+        "condition": [
+          "1"
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Act.text?"
+          },
+          {
+            "identity": "rim",
+            "map": "Act.text?"
+          }
+        ]
+      },
+      {
+        "path": "Contract.contained",
+        "short": "Contained, inline Resources",
+        "formal": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+        "comments": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
+        "synonym": [
+          "inline resources",
+          "anonymous resources",
+          "contained resources"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Resource"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "Contract.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "Contract.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "Contract.identifier",
+        "short": "Unique Identifier of this Consent Directive.",
+        "formal": "Unique Identifier of this Consent Directive.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.subject",
+        "short": "Subject of this Consent Directive (The Patient).",
+        "formal": "Subject of this Consent Directive (The Patient).",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Any"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.authority",
+        "short": "Authority by which this Consent Directive is obtained.",
+        "formal": "Authority by which this Consent Directive is obtained.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Organization"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.domain",
+        "short": "Organizational Domain for which this Consent Directive applies.",
+        "formal": "Organizational Domain for which this Consent Directive applies.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Location"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.type",
+        "short": "Type of Consent Directive (I presume this is going to be a fixed value?).",
+        "formal": "Type of Consent Directive (I presume this is going to be a fixed value?).",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "ContractType",
+          "isExtensible": true,
+          "conformance": "example",
+          "description": "List of overall contract codes",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/contract-type"
+          }
+        }
+      },
+      {
+        "path": "Contract.subtype",
+        "short": "Subtype of the Consent Directive.",
+        "formal": "Subtype of the Consent Directive.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "ContractSubtype",
+          "isExtensible": true,
+          "conformance": "example",
+          "description": "Detailed codes within the above",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/contract-subtype"
+          }
+        }
+      },
+      {
+        "path": "Contract.issued",
+        "short": "When the Consent Directive was issued.",
+        "formal": "When the Consent Directive was issued.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.applies",
+        "short": "Effective time of the Consent Directive.",
+        "formal": "Effective time of the Consent Directive.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.quantity",
+        "short": "Count of Products or Services",
+        "formal": "The number of repetitions of a service or product.",
+        "min": 0,
+        "max": "0",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.unitPrice",
+        "short": "Fee, charge or cost per point",
+        "formal": "The unit price product.",
+        "min": 0,
+        "max": "0",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.factor",
+        "short": "Price scaling factor",
+        "formal": "A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.",
+        "min": 0,
+        "max": "0",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.points",
+        "short": "Difficulty scaling factor",
+        "formal": "An amount that expresses the weighting (based on difficulty, cost and/or resource intensiveness) associated with the good or service delivered. The concept of Points allows for assignment of point values for services and/or goods, such that a monetary amount can be assigned to each point.",
+        "min": 0,
+        "max": "0",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.net",
+        "short": "Total item cost",
+        "formal": "The quantity times the unit price for an additional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied.",
+        "min": 0,
+        "max": "0",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.author",
+        "short": "Author of the Consent Directive.",
+        "formal": "Author of the Consent Directive.",
+        "min": 0,
+        "max": "*",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.grantor",
+        "short": "Consenter, Deegator, or Substitute Decision Maker.",
+        "formal": "Consenter, Deegator, or Substitute Decision Maker.",
+        "min": 1,
+        "max": "*",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.grantee",
+        "short": "Consent Directive Grantee or Grantor Delegate (isn't a grantor delegate by definition the grantee?).",
+        "formal": "Consent Directive Grantee or Grantor Delegate (isn't a grantor delegate by definition the grantee?).",
+        "min": 1,
+        "max": "*",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.witness",
+        "short": "Witness to the Consent Directive.",
+        "formal": "Witness to the Consent Directive.",
+        "min": 0,
+        "max": "*",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.executor",
+        "short": "Enforcing agent of the Consent Directive.",
+        "formal": "Enforcing agent of the Consent Directive.",
+        "min": 0,
+        "max": "*",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.notary",
+        "short": "Notary Public that witness the consent directive (How is this not just a type of witness?).",
+        "formal": "Notary Public that witness the consent directive (How is this not just a type of witness?).",
+        "min": 0,
+        "max": "*",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.signer",
+        "short": "Digital signature across the consent.",
+        "formal": "Digital signature across the consent.",
+        "min": 0,
+        "max": "*",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.signer.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "Contract.signer.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "Contract.signer.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "Contract.signer.type",
+        "short": "Type  of digital signature, duplicate of type of digital signature found within the signature block.",
+        "formal": "Type  of digital signature, duplicate of type of digital signature found within the signature block.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "ContractSignerType",
+          "isExtensible": true,
+          "conformance": "example",
+          "description": "List of parties who may be signing",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/contract-signer-type"
+          }
+        }
+      },
+      {
+        "path": "Contract.signer.signature",
+        "short": "The Digital-Signature block in base64 encoding of the XML-Signature format.",
+        "formal": "The Digital-Signature block in base64 encoding of the XML-Signature format.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term",
+        "short": "The terms of the consent directive.",
+        "formal": "The terms of the consent directive.",
+        "min": 0,
+        "max": "*",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "Contract.term.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "Contract.term.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "Contract.term.identifier",
+        "short": "The identifier of this term of the consent directive.",
+        "formal": "The identifier of this term of the consent directive.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term.type",
+        "short": "The consent directive term type.",
+        "formal": "The consent directive term type.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "ContractTermType",
+          "isExtensible": true,
+          "conformance": "example",
+          "description": "Detailed codes for the types of contract provisions",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/contract-term-type"
+          }
+        }
+      },
+      {
+        "path": "Contract.term.subtype",
+        "short": "The consent directive term sub-type.",
+        "formal": "The consent directive term sub-type.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "ContractTermSubType",
+          "isExtensible": true,
+          "conformance": "example",
+          "description": "Detailed codes for the subtypes of contract provisions",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/contract-term-subtype"
+          }
+        }
+      },
+      {
+        "path": "Contract.term.subject",
+        "short": "The consent directive term subject.",
+        "formal": "The consent directive term subject.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Any"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term.text",
+        "short": "The consent directive term in a human readable  text.",
+        "formal": "The consent directive term in a human readable  text.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term.issued",
+        "short": "The consent directive term date issued.",
+        "formal": "The consent directive term date issued.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term.applies",
+        "short": "The effective date over which the consent directive term applies.",
+        "formal": "The effective date over which the consent directive term applies.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term.quantity",
+        "short": "Count of Products or Services",
+        "formal": "The number of repetitions of a service or product.",
+        "min": 0,
+        "max": "0",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term.unitPrice",
+        "short": "Fee, charge or cost per point",
+        "formal": "The unit price product.",
+        "min": 0,
+        "max": "0",
+        "type": [
+          {
+            "code": "Money"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term.factor",
+        "short": "Price scaling factor",
+        "formal": "A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount.",
+        "min": 0,
+        "max": "0",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term.points",
+        "short": "Difficulty scaling factor",
+        "formal": "An amount that expresses the weighting (based on difficulty, cost and/or resource intensiveness) associated with the good or service delivered. The concept of Points allows for assignment of point values for services and/or goods, such that a monetary amount can be assigned to each point.",
+        "min": 0,
+        "max": "0",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term.net",
+        "short": "Total item cost",
+        "formal": "The quantity times the unit price for an additional service or product or charge. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points = net Amount. Quantity, factor and points are assumed to be 1 if not supplied.",
+        "min": 0,
+        "max": "0",
+        "type": [
+          {
+            "code": "Money"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.binding",
+        "short": "The legally binding text of the consent directive.",
+        "formal": "The legally binding text of the consent directive.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.bindingDateTime",
+        "short": "The date that the legally binding text was created.",
+        "formal": "The date that the legally binding text was created.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.friendly",
+        "short": "The patient friendly text that represents the meaning of the consent directive.",
+        "formal": "The patient friendly text that represents the meaning of the consent directive.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.friendlyDateTime",
+        "short": "The date that the patient friendly text was created.",
+        "formal": "The date that the patient friendly text was created.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.legal",
+        "short": "The legal language of the consent directive.",
+        "formal": "The legal language of the consent directive.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.legalDateTime",
+        "short": "The date that the legal text was created.",
+        "formal": "The date that the legal text was created.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.rule",
+        "short": "Computer processable rules that represent the consent directive meaning.",
+        "formal": "Computer processable rules that represent the consent directive meaning.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.ruleDateTime",
+        "short": "The date that the computer processable rules were published.",
+        "formal": "The date that the computer processable rules were published.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isSummary": false
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "path": "Contract",
+        "name": "ConsentDirective",
+        "min": 1,
+        "max": "1",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.identifier",
+        "short": "Unique Identifier of this Consent Directive.",
+        "formal": "Unique Identifier of this Consent Directive.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.subject",
+        "short": "Subject of this Consent Directive (The Patient).",
+        "formal": "Subject of this Consent Directive (The Patient).",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Any"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.authority",
+        "short": "Authority by which this Consent Directive is obtained.",
+        "formal": "Authority by which this Consent Directive is obtained.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Organization"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.domain",
+        "short": "Organizational Domain for which this Consent Directive applies.",
+        "formal": "Organizational Domain for which this Consent Directive applies.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Location"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.type",
+        "short": "Type of Consent Directive (I presume this is going to be a fixed value?).",
+        "formal": "Type of Consent Directive (I presume this is going to be a fixed value?).",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.subtype",
+        "short": "Subtype of the Consent Directive.",
+        "formal": "Subtype of the Consent Directive.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.issued",
+        "short": "When the Consent Directive was issued.",
+        "formal": "When the Consent Directive was issued.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.applies",
+        "short": "Effective time of the Consent Directive.",
+        "formal": "Effective time of the Consent Directive.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.quantity",
+        "min": 0,
+        "max": "0",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.unitPrice",
+        "min": 0,
+        "max": "0",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.factor",
+        "min": 0,
+        "max": "0",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.points",
+        "min": 0,
+        "max": "0",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.net",
+        "min": 0,
+        "max": "0",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.author",
+        "short": "Author of the Consent Directive.",
+        "formal": "Author of the Consent Directive.",
+        "min": 0,
+        "max": "*",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.grantor",
+        "short": "Consenter, Deegator, or Substitute Decision Maker.",
+        "formal": "Consenter, Deegator, or Substitute Decision Maker.",
+        "min": 1,
+        "max": "*",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.grantee",
+        "short": "Consent Directive Grantee or Grantor Delegate (isn't a grantor delegate by definition the grantee?).",
+        "formal": "Consent Directive Grantee or Grantor Delegate (isn't a grantor delegate by definition the grantee?).",
+        "min": 1,
+        "max": "*",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.witness",
+        "short": "Witness to the Consent Directive.",
+        "formal": "Witness to the Consent Directive.",
+        "min": 0,
+        "max": "*",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.executor",
+        "short": "Enforcing agent of the Consent Directive.",
+        "formal": "Enforcing agent of the Consent Directive.",
+        "min": 0,
+        "max": "*",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.notary",
+        "short": "Notary Public that witness the consent directive (How is this not just a type of witness?).",
+        "formal": "Notary Public that witness the consent directive (How is this not just a type of witness?).",
+        "min": 0,
+        "max": "*",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.signer",
+        "short": "Digital signature across the consent.",
+        "formal": "Digital signature across the consent.",
+        "min": 0,
+        "max": "*",
+        "isSummary": false
+      },
+      {
+        "path": "Contract.signer.type",
+        "short": "Type  of digital signature, duplicate of type of digital signature found within the signature block.",
+        "formal": "Type  of digital signature, duplicate of type of digital signature found within the signature block.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.signer.signature",
+        "short": "The Digital-Signature block in base64 encoding of the XML-Signature format.",
+        "formal": "The Digital-Signature block in base64 encoding of the XML-Signature format.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term",
+        "short": "The terms of the consent directive.",
+        "formal": "The terms of the consent directive.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Terms"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term.identifier",
+        "short": "The identifier of this term of the consent directive.",
+        "formal": "The identifier of this term of the consent directive.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term.type",
+        "short": "The consent directive term type.",
+        "formal": "The consent directive term type.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term.subtype",
+        "short": "The consent directive term sub-type.",
+        "formal": "The consent directive term sub-type.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term.subject",
+        "short": "The consent directive term subject.",
+        "formal": "The consent directive term subject.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Any"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term.text",
+        "short": "The consent directive term in a human readable  text.",
+        "formal": "The consent directive term in a human readable  text.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term.issued",
+        "short": "The consent directive term date issued.",
+        "formal": "The consent directive term date issued.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term.applies",
+        "short": "The effective date over which the consent directive term applies.",
+        "formal": "The effective date over which the consent directive term applies.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term.quantity",
+        "min": 0,
+        "max": "0",
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term.unitPrice",
+        "min": 0,
+        "max": "0",
+        "type": [
+          {
+            "code": "Money"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term.factor",
+        "min": 0,
+        "max": "0",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term.points",
+        "min": 0,
+        "max": "0",
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.term.net",
+        "min": 0,
+        "max": "0",
+        "type": [
+          {
+            "code": "Money"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.binding",
+        "short": "The legally binding text of the consent directive.",
+        "formal": "The legally binding text of the consent directive.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.bindingDateTime",
+        "short": "The date that the legally binding text was created.",
+        "formal": "The date that the legally binding text was created.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.friendly",
+        "short": "The patient friendly text that represents the meaning of the consent directive.",
+        "formal": "The patient friendly text that represents the meaning of the consent directive.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.friendlyDateTime",
+        "short": "The date that the patient friendly text was created.",
+        "formal": "The date that the patient friendly text was created.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.legal",
+        "short": "The legal language of the consent directive.",
+        "formal": "The legal language of the consent directive.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.legalDateTime",
+        "short": "The date that the legal text was created.",
+        "formal": "The date that the legal text was created.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.rule",
+        "short": "Computer processable rules that represent the consent directive meaning.",
+        "formal": "Computer processable rules that represent the consent directive meaning.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "Contract.ruleDateTime",
+        "short": "The date that the computer processable rules were published.",
+        "formal": "The date that the computer processable rules were published.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "isSummary": false
+      }
+    ]
+  }
+}

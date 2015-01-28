@@ -1,0 +1,63 @@
+{
+  "resourceType": "Medication",
+  "id": "f201",
+  "name": "Salmeterol/fluticason",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "411106009",
+        "display": "25ug Flutacisone + 250ug Salmeterol"
+      }
+    ]
+  },
+  "isBrand": false,
+  "kind": "product",
+  "product": {
+    "form": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "421606006",
+          "display": "Aerosol spray"
+        }
+      ]
+    },
+    "ingredient": [
+      {
+        "item": {
+          "display": "flutacisone"
+        },
+        "amount": {
+          "numerator": {
+            "value": 25,
+            "system": "http://unitsofmeasure.org",
+            "code": "ug"
+          },
+          "denominator": {
+            "value": 1,
+            "system": "http://hl7.org/fhir/v3/orderableDrugForm",
+            "code": "PUFF"
+          }
+        }
+      },
+      {
+        "item": {
+          "display": "salmeterol"
+        },
+        "amount": {
+          "numerator": {
+            "value": 250,
+            "system": "http://unitsofmeasure.org",
+            "code": "ug"
+          },
+          "denominator": {
+            "value": 1,
+            "system": "http://hl7.org/fhir/v3/orderableDrugForm",
+            "code": "PUFF"
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "id": "location-mode",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 2 concepts</p><h2>LocationMode</h2><p>Indicates whether a resource instance represents a specific location or a class of locations</p><p>This value set defines its own terms in the system http://hl7.org/fhir/location-mode</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>instance<a name=\"instance\"> </a></td><td>The Location resource represents a specific instance of a Location.</td></tr><tr><td>kind<a name=\"kind\"> </a></td><td>The Location represents a class of Locations.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.337"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/location-mode",
+  "name": "LocationMode",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Indicates whether a resource instance represents a specific location or a class of locations",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.495+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.337"
+      }
+    ],
+    "system": "http://hl7.org/fhir/location-mode",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "instance",
+        "definition": "The Location resource represents a specific instance of a Location."
+      },
+      {
+        "code": "kind",
+        "definition": "The Location represents a class of Locations."
+      }
+    ]
+  }
+}

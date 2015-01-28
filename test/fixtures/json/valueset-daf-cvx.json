@@ -1,0 +1,37 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-daf-cvx",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set does not contain a fixed number of concepts</p><h2>Vaccine Administered Value Set</h2><p>This identifies the vaccine substance administered - CVX codes</p><p>This value set includes codes defined in other code systems, using the following rules:</p><ul><li>Include all codes defined in http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx</li></ul></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "2.16.840.1.113883.3.88.12.80.22"
+    },
+    {
+      "valueUri": "2.16.840.1.113883.3.88.12.80.22"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/daf-cvx",
+  "name": "Vaccine Administered Value Set",
+  "publisher": "HL7 FHIR",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "This identifies the vaccine substance administered - CVX codes",
+  "status": "active",
+  "compose": {
+    "include": [
+      {
+        "system": "http://www2a.cdc.gov/vaccines/iis/iisstandards/vaccines.asp?rpt=cvx"
+      }
+    ]
+  }
+}

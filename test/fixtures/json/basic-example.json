@@ -1,0 +1,68 @@
+{
+  "resourceType": "Basic",
+  "id": "referral",
+  "text": {
+    "status": "generated",
+    "div": "<div>\n      \n      <p>\n        <b>Patient:</b>Roel\n      </p>\n      \n      <p>\n        <b>Requestor:</b>Dokter Bronsig\n      </p>\n      \n      <p>\n        <b>Type:</b>Consultation\n      </p>\n      \n      <p>\n        <b>Target Date:</b>April 1 - April 31\n      </p>\n      \n      <p>COMPLETED</p>\n      \n      <b>The patient had fever peaks over the last couple of days. He is worried about these peaks.</b>\n    \n    </div>"
+  },
+  "http://example.org/do-not-use/fhir-extensions/referral#requestingPractitioner": [
+    {
+      "valueReference": {
+        "reference": "Practitioner/f201",
+        "display": "Dokter Bronsig"
+      }
+    }
+  ],
+  "http://example.org/do-not-use/fhir-extensions/referral#notes": [
+    {
+      "valueString": "The patient had fever peaks over the last couple of days. He is worried about these peaks."
+    }
+  ],
+  "http://example.org/do-not-use/fhir-extensions/referral#fulfillingEncounter": [
+    {
+      "valueReference": {
+        "reference": "Encounter/f201"
+      }
+    }
+  ],
+  "modifier": {
+    "http://example.org/do-not-use/fhir-extensions/referral#referredForService": [
+      {
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "11429006",
+              "display": "Consultation"
+            }
+          ]
+        }
+      }
+    ],
+    "http://example.org/do-not-use/fhir-extensions/referral#targetDate": [
+      {
+        "valuePeriod": {
+          "start": "2013-04-01",
+          "end": "2013-04-15"
+        }
+      }
+    ],
+    "http://example.org/do-not-use/fhir-extensions/referral#status": [
+      {
+        "valueCode": "complete"
+      }
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/basic-resource-type",
+        "code": "REFERRAL"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/f201",
+    "display": "Roel"
+  }
+}

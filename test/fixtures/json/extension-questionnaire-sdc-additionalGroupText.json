@@ -1,0 +1,65 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "questionnaire-sdc-additionalGroupText",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/questionnaire-sdc-additionalGroupText",
+  "name": "Extra text to display for group",
+  "publisher": "U.S. Office of the National Coordinator (ONC)'s Standards and Infrastructure (S&I) Structured Data Capture project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://wiki.siframework.org/Structured+Data+Capture+Initiative"
+    }
+  ],
+  "description": "Additional text to display at the group level along with guidance as to what sort of text it is.",
+  "status": "draft",
+  "date": "2014-04-21",
+  "contextType": "resource",
+  "context": [
+    "Questionnaire.group"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Extra text to display for group",
+      "formal": "Additional text to display at the group level along with guidance as to what sort of text it is.",
+      "min": 0,
+      "max": "*",
+      "isSummary": false
+    },
+    {
+      "path": "Extension.value",
+      "short": "Text for display",
+      "formal": "The additional text to display.",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isSummary": false
+    },
+    {
+      "path": "Extension.type",
+      "short": "Kind of text for display",
+      "formal": "Categorizes the type of additional group text.  E.g. \"Tool tip\", \"Help\", \"Trailing text\", etc.",
+      "comments": "The type of text may provide guidance for how/when to display the information.",
+      "min": 1,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isSummary": false,
+      "binding": {
+        "name": "QuestionnaireGroupTextType",
+        "isExtensible": true,
+        "description": "Categorizes the type of additional group text.  E.g. \"Tool tip\", \"Help\", \"Trailing text\", etc.",
+        "referenceReference": {
+          "reference": "http://hl7.org/fhir/vs/questionnaire-text-type"
+        }
+      }
+    }
+  ]
+}

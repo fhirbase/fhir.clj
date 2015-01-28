@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Profile xmlns="http://hl7.org/fhir">
+  <id value="uri"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">to do</div>
+  </text>
+  <url value="http://hl7.org/fhir/Profile/uri"/>
+  <name value="uri"/>
+  <publisher value="HL7 FHIR Standard"/>
+  <telecom>
+    <system value="url"/>
+    <value value="http://hl7.org/fhir"/>
+  </telecom>
+  <description value="Base Profile for uri Resource: String of characters used to identify a name or a resource"/>
+  <status value="draft"/>
+  <date value="2014-12-12T13:17:44.755+11:00"/>
+  <type value="uri"/>
+  <base value="http://hl7.org/fhir/Profile/Element"/>
+  <snapshot>
+    <element>
+      <path value="uri"/>
+      <short value="Primitive Type uri"/>
+      <formal value="String of characters used to identify a name or a resource"/>
+      <comments value="see http://en.wikipedia.org/wiki/Uniform_resource_identifier"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="uri.extension"/>
+      <short value="Additional Content defined by implementations"/>
+      <formal value="May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comments value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <synonym value="extensions"/>
+      <synonym value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <isSummary value="false"/>
+    </element>
+    <element>
+      <path value="value"/>
+      <representation value="xmlAttr"/>
+      <short value="Primitive value for uri"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="xsd:anyURI"/>
+      </type>
+    </element>
+  </snapshot>
+  <differential>
+    <element>
+      <path value="uri"/>
+      <short value="Primitive Type uri"/>
+      <formal value="String of characters used to identify a name or a resource"/>
+      <comments value="see http://en.wikipedia.org/wiki/Uniform_resource_identifier"/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="Element"/>
+      </type>
+    </element>
+    <element>
+      <path value="value"/>
+      <representation value="xmlAttr"/>
+      <short value="Primitive value for uri"/>
+      <min value="0"/>
+      <max value="1"/>
+      <type>
+        <code value="xsd:anyURI"/>
+      </type>
+    </element>
+  </differential>
+</Profile>

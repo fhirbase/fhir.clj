@@ -1,0 +1,2297 @@
+{
+  "resourceType": "Profile",
+  "id": "do-uslab-uslabdo",
+  "text": {
+    "status": "generated",
+    "div": "<div>to do</div>"
+  },
+  "url": "http://hl7.org/fhir/Profile/do-uslab-uslabdo",
+  "name": "US Laboratory Diagnostic Order Profile",
+  "publisher": "HL7 International - Orders and Observations WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org"
+    }
+  ],
+  "description": "Constraints and extensions for the US Realm laboratory ordering in ambulatory care setting : US Laboratory Diagnostic Order Profile",
+  "status": "draft",
+  "date": "2014-11-17",
+  "type": "DiagnosticOrder",
+  "base": "http://hl7.org/fhir/Profile/DiagnosticOrder",
+  "snapshot": {
+    "element": [
+      {
+        "path": "DiagnosticOrder",
+        "name": "USLabDO",
+        "short": "A request for a diagnostic service",
+        "formal": "A request for a diagnostic investigation service to be performed.",
+        "synonym": [
+          "Report",
+          "Test",
+          "Result",
+          "Results",
+          "Labs",
+          "Laboratory",
+          "DO"
+        ],
+        "min": 1,
+        "max": "1",
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Observation[classCode=OBS, moodCode=RQO, code<\"diagnostic order\"]"
+          },
+          {
+            "identity": "rim",
+            "map": "Observation[classCode=OBS, moodCode=RQO, code<\"diagnostic order\"]"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.id",
+        "short": "Logical id of this artefact",
+        "formal": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes.",
+        "comments": "The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.meta",
+        "short": "Metadata about the resource",
+        "formal": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource.",
+        "min": 0,
+        "max": "1",
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.meta.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.meta.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.meta.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.meta.versionId",
+        "short": "Version specific identifier",
+        "formal": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted.",
+        "comments": "The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.meta.lastUpdated",
+        "short": "When the resource version last changed",
+        "formal": "When the resource last changed - e.g. when the version changed.",
+        "comments": "This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "instant"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.meta.profile",
+        "short": "Profiles this resource claims to conform to",
+        "formal": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url.",
+        "comments": "It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.meta.security",
+        "short": "Security Labels applied to this resource",
+        "formal": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure.",
+        "comments": "The security labels can be updated without changing the stated version of the resource.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.meta.tag",
+        "short": "Tags applied",
+        "formal": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource.",
+        "comments": "The tags can be updated without changing the stated version of the resource.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Coding"
+          }
+        ],
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.implicitRules",
+        "short": "A set of rules under which this content was created",
+        "formal": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content.",
+        "comments": "Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "isModifier": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.language",
+        "short": "Language of the resource content",
+        "formal": "The base language in which the resource is written.",
+        "comments": "Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "Language",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "A human language",
+          "referenceUri": "http://tools.ietf.org/html/bcp47"
+        }
+      },
+      {
+        "path": "DiagnosticOrder.text",
+        "short": "Text summary of the resource, for human interpretation",
+        "formal": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.",
+        "comments": "Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative.",
+        "synonym": [
+          "narrative",
+          "html",
+          "xhtml",
+          "display"
+        ],
+        "min": 1,
+        "max": "1",
+        "condition": [
+          "1"
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "Act.text?"
+          },
+          {
+            "identity": "rim",
+            "map": "Act.text?"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.contained",
+        "short": "Contained, inline Resources",
+        "formal": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope.",
+        "comments": "This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again.",
+        "synonym": [
+          "inline resources",
+          "anonymous resources",
+          "contained resources"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Resource"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the resource. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the resource, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.subject",
+        "short": "Who and/or what test is about",
+        "formal": "Who or what the investigation is to be performed on. This is usually a human patient, but diagnostic tests can also be requested on animals, groups of humans or animals, devices such as dialysis machines, or even locations (typically for environmental scans).",
+        "requirements": "Limited to single patient per Diagnostic Order (Requisition).",
+        "synonym": [
+          "Patient"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Patient"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Group"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Location"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Device"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=SBJ].role"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=SBJ].role"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.orderer",
+        "short": "Who ordered the test",
+        "formal": "The practitioner that holds legal responsibility for ordering the investigation.",
+        "requirements": "Limited to single orderer per Diagnostic Order (Requisition).",
+        "synonym": [
+          "Ordering Provider",
+          "OP",
+          "Submitter",
+          "Placer"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Practitioner"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=AUT].role"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=AUT].role"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.identifier",
+        "slicing": {
+          "discriminator": [
+            "identifier.label"
+          ],
+          "ordered": true,
+          "rules": "closed"
+        },
+        "short": "Identifiers assigned to this order",
+        "formal": "Identifiers assigned to this order by the order or by the receiver.",
+        "min": 0,
+        "max": "*",
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".id"
+          },
+          {
+            "identity": "rim",
+            "map": ".id"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.identifier",
+        "name": "USLabDOPlacerID",
+        "short": "Identifiers assigned to this order",
+        "formal": "Identifiers assigned to this order by the order or by the receiver.",
+        "requirements": "Limit to Globally unique IDs using a URI ( could be a URL).",
+        "synonym": [
+          "Placer ID"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".id"
+          },
+          {
+            "identity": "rim",
+            "map": ".id"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.identifier.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.identifier.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.identifier.use",
+        "short": "usual | official | temp | secondary (If known)",
+        "formal": "The purpose of this identifier.",
+        "comments": "This is labeled as \"Is Modifier\" because applications should not mistake a temporary id for a permanent one. Applications can assume that an identifier is permanent unless it explicitly says that it is temporary.",
+        "requirements": "Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "official",
+        "mustSupport": true,
+        "isModifier": true,
+        "isSummary": false,
+        "binding": {
+          "name": "IdentifierUse",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "Identifies the purpose for this identifier, if known",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/identifier-use"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "Role.code or implied by context"
+          },
+          {
+            "identity": "v2",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "Role.code or implied by context"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.identifier.label",
+        "short": "Description of identifier",
+        "formal": "A text string for the identifier that can be displayed to a human so they can recognize the identifier.",
+        "requirements": "Allows humans to make use of identifiers when the identifier system is not known.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "fixedString": "Placer Order Number",
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "CX.5"
+          },
+          {
+            "identity": "rim",
+            "map": "Role.title or implied by context"
+          },
+          {
+            "identity": "v2",
+            "map": "CX.5"
+          },
+          {
+            "identity": "rim",
+            "map": "Role.title or implied by context"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.identifier.system",
+        "short": "Placer URI",
+        "formal": "Placer URI.",
+        "requirements": "There are many sequences of identifiers.  To perform matching, we need to know what sequence we're dealing with. The system identifies a particular sequence or set of unique identifiers.",
+        "min": 1,
+        "max": "1",
+        "exampleUri": "http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the id itself is a full uri",
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "CX.4 / EI-2-4"
+          },
+          {
+            "identity": "rim",
+            "map": "II.root or Role.id.root"
+          },
+          {
+            "identity": "servd",
+            "map": "./IdentifierType"
+          },
+          {
+            "identity": "v2",
+            "map": "CX.4 / EI-2-4"
+          },
+          {
+            "identity": "rim",
+            "map": "II.root or Role.id.root"
+          },
+          {
+            "identity": "servd",
+            "map": "./IdentifierType"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.identifier.value",
+        "short": "Placer Identifier",
+        "formal": "Placer Identifier.",
+        "comments": "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.",
+        "min": 1,
+        "max": "1",
+        "exampleString": "123456",
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "CX.1 / EI.1"
+          },
+          {
+            "identity": "rim",
+            "map": "II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)"
+          },
+          {
+            "identity": "servd",
+            "map": "./Value"
+          },
+          {
+            "identity": "v2",
+            "map": "CX.1 / EI.1"
+          },
+          {
+            "identity": "rim",
+            "map": "II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)"
+          },
+          {
+            "identity": "servd",
+            "map": "./Value"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.identifier.period",
+        "short": "Time period when id is/was valid for use",
+        "formal": "Time period during which identifier is/was valid for use.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "CX.7 + CX.8"
+          },
+          {
+            "identity": "rim",
+            "map": "Role.effectiveTime or implied by context"
+          },
+          {
+            "identity": "servd",
+            "map": "./StartDate and ./EndDate"
+          },
+          {
+            "identity": "v2",
+            "map": "CX.7 + CX.8"
+          },
+          {
+            "identity": "rim",
+            "map": "Role.effectiveTime or implied by context"
+          },
+          {
+            "identity": "servd",
+            "map": "./StartDate and ./EndDate"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.identifier.assigner",
+        "short": "Organization that issued id (may be just text)",
+        "formal": "Organization that issued/manages the identifier.",
+        "comments": "The reference may be just a text description of the assigner.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Organization"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "CX.4 / (CX.4,CX.9,CX.10)"
+          },
+          {
+            "identity": "rim",
+            "map": "II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper"
+          },
+          {
+            "identity": "servd",
+            "map": "./IdentifierIssuingAuthority"
+          },
+          {
+            "identity": "v2",
+            "map": "CX.4 / (CX.4,CX.9,CX.10)"
+          },
+          {
+            "identity": "rim",
+            "map": "II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper"
+          },
+          {
+            "identity": "servd",
+            "map": "./IdentifierIssuingAuthority"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.identifier",
+        "name": "USLabDOFillerID",
+        "short": "Identifiers assigned to this order",
+        "formal": "Identifiers assigned to this order by the order or by the receiver.",
+        "requirements": "Limit to Globally unique IDs using a URI ( could be a URL).",
+        "synonym": [
+          "Filler ID"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".id"
+          },
+          {
+            "identity": "rim",
+            "map": ".id"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.identifier.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.identifier.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.identifier.use",
+        "short": "usual | official | temp | secondary (If known)",
+        "formal": "The purpose of this identifier.",
+        "comments": "This is labeled as \"Is Modifier\" because applications should not mistake a temporary id for a permanent one. Applications can assume that an identifier is permanent unless it explicitly says that it is temporary.",
+        "requirements": "Allows the appropriate identifier for a particular context of use to be selected from among a set of identifiers.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "official",
+        "mustSupport": true,
+        "isModifier": true,
+        "isSummary": false,
+        "binding": {
+          "name": "IdentifierUse",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "Identifies the purpose for this identifier, if known",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/identifier-use"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "Role.code or implied by context"
+          },
+          {
+            "identity": "v2",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "Role.code or implied by context"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.identifier.label",
+        "short": "Description of identifier",
+        "formal": "A text string for the identifier that can be displayed to a human so they can recognize the identifier.",
+        "requirements": "Allows humans to make use of identifiers when the identifier system is not known.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "fixedString": "Filler Order Number",
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "CX.5"
+          },
+          {
+            "identity": "rim",
+            "map": "Role.title or implied by context"
+          },
+          {
+            "identity": "v2",
+            "map": "CX.5"
+          },
+          {
+            "identity": "rim",
+            "map": "Role.title or implied by context"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.identifier.system",
+        "short": "Filler URI",
+        "formal": "Filler URI.",
+        "requirements": "There are many sequences of identifiers.  To perform matching, we need to know what sequence we're dealing with. The system identifies a particular sequence or set of unique identifiers.",
+        "min": 1,
+        "max": "1",
+        "exampleUri": "http://www.acme.com/identifiers/patient or urn:ietf:rfc:3986 if the id itself is a full uri",
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "CX.4 / EI-2-4"
+          },
+          {
+            "identity": "rim",
+            "map": "II.root or Role.id.root"
+          },
+          {
+            "identity": "servd",
+            "map": "./IdentifierType"
+          },
+          {
+            "identity": "v2",
+            "map": "CX.4 / EI-2-4"
+          },
+          {
+            "identity": "rim",
+            "map": "II.root or Role.id.root"
+          },
+          {
+            "identity": "servd",
+            "map": "./IdentifierType"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.identifier.value",
+        "short": "Filler Identifier",
+        "formal": "Filler Identifier.",
+        "comments": "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.",
+        "min": 1,
+        "max": "1",
+        "exampleString": "123456",
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "CX.1 / EI.1"
+          },
+          {
+            "identity": "rim",
+            "map": "II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)"
+          },
+          {
+            "identity": "servd",
+            "map": "./Value"
+          },
+          {
+            "identity": "v2",
+            "map": "CX.1 / EI.1"
+          },
+          {
+            "identity": "rim",
+            "map": "II.extension or II.root if system indicates OID or GUID (Or Role.id.extension or root)"
+          },
+          {
+            "identity": "servd",
+            "map": "./Value"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.identifier.period",
+        "short": "Time period when id is/was valid for use",
+        "formal": "Time period during which identifier is/was valid for use.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Period"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "CX.7 + CX.8"
+          },
+          {
+            "identity": "rim",
+            "map": "Role.effectiveTime or implied by context"
+          },
+          {
+            "identity": "servd",
+            "map": "./StartDate and ./EndDate"
+          },
+          {
+            "identity": "v2",
+            "map": "CX.7 + CX.8"
+          },
+          {
+            "identity": "rim",
+            "map": "Role.effectiveTime or implied by context"
+          },
+          {
+            "identity": "servd",
+            "map": "./StartDate and ./EndDate"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.identifier.assigner",
+        "short": "Organization that issued id (may be just text)",
+        "formal": "Organization that issued/manages the identifier.",
+        "comments": "The reference may be just a text description of the assigner.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Organization"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "CX.4 / (CX.4,CX.9,CX.10)"
+          },
+          {
+            "identity": "rim",
+            "map": "II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper"
+          },
+          {
+            "identity": "servd",
+            "map": "./IdentifierIssuingAuthority"
+          },
+          {
+            "identity": "v2",
+            "map": "CX.4 / (CX.4,CX.9,CX.10)"
+          },
+          {
+            "identity": "rim",
+            "map": "II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper"
+          },
+          {
+            "identity": "servd",
+            "map": "./IdentifierIssuingAuthority"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.encounter",
+        "short": "The encounter that this diagnostic order is associated with",
+        "formal": "An encounter that provides additional information about the healthcare context in which this request is made.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Encounter"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]"
+          },
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.clinicalNotes",
+        "short": "Explanation/Justification for test",
+        "formal": "An explanation or justification for why this diagnostic investigation is being requested.",
+        "comments": "This may be used to decide how the diagnostic investigation will be performed, or even if it will be performed at all.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".reasonCode.originalText"
+          },
+          {
+            "identity": "rim",
+            "map": ".reasonCode.originalText"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.supportingInformation",
+        "short": "Supporting observations or conditions for this request",
+        "formal": "Additional clinical information about the patient or specimen that may influence test interpretations.",
+        "comments": "AOES are captured in the USLabObservation resource and Reasons for the testing in USLabCondition.",
+        "requirements": "AOES are captured in the USLabObservation resource and Reasons for the testing in USLabCondition.",
+        "synonym": [
+          "AOE",
+          "Reason for Study"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Observation"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Condition"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBR-13"
+          },
+          {
+            "identity": "v2",
+            "map": "OBR-13"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.specimen",
+        "short": "If the whole order relates to specific specimens",
+        "formal": "One or more specimens that the diagnostic investigation is about.",
+        "comments": "Many investigation requests will create a need for specimens, but the request itself is not actually about the specimens. This is provided for when the diagnostic investigation is requested on already existing specimens.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Specimen"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=SPC].role"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=SPC].role"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.status",
+        "short": "requested | received | accepted | in progress | review | completed | suspended | rejected | failed",
+        "formal": "The status of the order.",
+        "comments": "Typically the system placing the order sets the status to requested. Thereafter, the order is maintained by the receiver that updates the status as the request is handled.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "DiagnosticOrderStatus",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "The status of a diagnostic order",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/diagnostic-order-status"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".statusCode\nalso influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"
+          },
+          {
+            "identity": "rim",
+            "map": ".statusCode\nalso influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.priority",
+        "short": "routine | urgent | stat | asap",
+        "formal": "The clinical priority associated with this order.",
+        "comments": "The Order resource also has a priority. Generally, these should be the same, but they can be different, for instance in the case where the clinician indicates that the order is urgent, but the subsequent workflow process overrule this priority for some reason. The effective default value is \"normal\".",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "DiagnosticOrderPriority",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "The clinical priority of a diagnostic order",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/diagnostic-order-priority"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".priorityCode"
+          },
+          {
+            "identity": "rim",
+            "map": ".priorityCode"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.event",
+        "short": "A list of events of interest in the lifecycle",
+        "formal": "A summary of the events of interest that have occurred as the request is processed. E.g. when the order was made, various processing steps (specimens received), when it was completed.",
+        "comments": "This is not the same as an audit trail - it is a view of the important things that happened in the past. Typically, there would only be one entry for any given status, and systems may not record all the status events.",
+        "min": 1,
+        "max": "*",
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship[typeCode=FLFS].source"
+          },
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship[typeCode=FLFS].source"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.event.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.event.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.event.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.event.status",
+        "short": "requested | received | accepted | in progress | review | completed | suspended | rejected | failed",
+        "formal": "The status for the event.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "isSummary": false,
+        "binding": {
+          "name": "DiagnosticOrderStatus",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "The status of a diagnostic order",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/diagnostic-order-status"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".statusCode\nalso influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"
+          },
+          {
+            "identity": "rim",
+            "map": ".statusCode\nalso influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.event.description",
+        "short": "More information about the event and its context",
+        "formal": "Additional information about the event that occurred - e.g. if the status remained unchanged.",
+        "comments": "These codes capture the Use cases for LOI.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "USLABDOEvent",
+          "isExtensible": true,
+          "conformance": "required",
+          "description": "Information about an event that occurred to a diagnostic order that corresponds to the USLabOrder Use Cases",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/do-uslab-event"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".text"
+          },
+          {
+            "identity": "rim",
+            "map": ".text"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.event.dateTime",
+        "short": "The date at which the event happened",
+        "formal": "The date/time at which the event occurred.",
+        "requirements": "Minimum Precision to Day.",
+        "min": 1,
+        "max": "1",
+        "constraint": [
+          {
+            "key": "2",
+            "name": "datetime to Day",
+            "severity": "error",
+            "human": "Datetime must be at least to day.",
+            "xpath": "f:matches(dateTime,/\\d{4}-[01]\\d-[0-3]\\dT[0-2]\\d:[0-5]\\d([+-][0-2]\\d:[0-5]\\d|Z)/)"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".effectiveTime"
+          },
+          {
+            "identity": "rim",
+            "map": ".effectiveTime"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.event.actor",
+        "short": "Who recorded or did this",
+        "formal": "The person who was responsible for performing or recording the action.",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Practitioner"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Device"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".participation[AUT or PFM]"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[AUT or PFM]"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item",
+        "short": "The items the orderer requested",
+        "formal": "The specific diagnostic investigations that are requested as part of this request. Sometimes, there can only be one item per request, but in most contexts, more than one investigation can be requested.",
+        "comments": "There would always be at least one item in normal usage, but this is optional so that a workflow can quote order details without having to list the items.",
+        "min": 1,
+        "max": "*",
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".outboundRelationship[typeCode=COMP].target[classCode=OBS, moodCode=OBS]"
+          },
+          {
+            "identity": "rim",
+            "map": ".outboundRelationship[typeCode=COMP].target[classCode=OBS, moodCode=OBS]"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item.id",
+        "representation": [
+          "xmlAttr"
+        ],
+        "short": "xml:id (or equivalent in JSON)",
+        "formal": "unique id for the element within a resource (for internal references).",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "id"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item.extension",
+        "short": "Additional Content defined by implementations",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element. In order to make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "n/a"
+          },
+          {
+            "identity": "rim",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item.modifierExtension",
+        "short": "Extensions that cannot be ignored",
+        "formal": "May be used to represent additional information that is not part of the basic definition of the element, and that modifies the understanding of the element that contains it. Usually modifier elements provide negation or qualification. In order to make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.",
+        "comments": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "synonym": [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension"
+          }
+        ],
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "N/A"
+          },
+          {
+            "identity": "rim",
+            "map": "N/A"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item.code",
+        "short": "US Realm Laboratory Report Order Code",
+        "formal": "The laboratory test, panel or battery that was ordered.",
+        "comments": "Use the appropriate LOINC or local code as provided by laboratory.   FHIR Value set resources binding to each laboratory's compendium of service is done at implementation usign the FHIR Value set resources or some other mechanism.",
+        "requirements": "Requires at least a code, code system an d display text.",
+        "min": 1,
+        "max": "1",
+        "constraint": [
+          {
+            "key": "1",
+            "name": "LOINC or Local",
+            "severity": "error",
+            "human": "Must have a LOINC or a Local code or both.",
+            "xpath": "exists(f:coding)"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "DiagnosticRequests",
+          "isExtensible": true,
+          "conformance": "preferred",
+          "description": "Codes for tests/services that can be performed by diagnostic services",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/diagnostic-requests"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "OBX-4"
+          },
+          {
+            "identity": "rim",
+            "map": ".code"
+          },
+          {
+            "identity": "v2",
+            "map": "OBX-4"
+          },
+          {
+            "identity": "rim",
+            "map": ".code"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item.specimen",
+        "short": "If this item relates to specific specimens",
+        "formal": "If the item is related to a specific specimen.",
+        "comments": "New specimen(s) related to the item event go here and not in DO.specimen.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/Specimen"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=SPC].role"
+          },
+          {
+            "identity": "rim",
+            "map": ".participation[typeCode=SPC].role"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item.bodySite",
+        "short": "Location of requested test (if applicable)",
+        "formal": "Anatomical location where the request test should be performed.",
+        "synonym": [
+          "location"
+        ],
+        "min": 0,
+        "max": "0",
+        "isSummary": false,
+        "binding": {
+          "name": "BodySite",
+          "isExtensible": true,
+          "conformance": "example",
+          "description": "Codes describing anatomical locations. May include laterality",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/body-site"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": "targetSiteCode"
+          },
+          {
+            "identity": "rim",
+            "map": "targetSiteCode"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item.status",
+        "short": "requested | received | accepted | in progress | review | completed | suspended | rejected | failed",
+        "formal": "The status of this individual item within the order.",
+        "comments": "Typically the system placing the order sets the status to requested. There after, the order is maintained by the receiver that updates the status as the request is handled.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "DiagnosticOrderStatus",
+          "isExtensible": false,
+          "conformance": "required",
+          "description": "The status of a diagnostic order",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/diagnostic-order-status"
+          }
+        },
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".statusCode\nalso influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"
+          },
+          {
+            "identity": "rim",
+            "map": ".statusCode\nalso influenced by whether a ControlAct fulfillment requeste exists, whether a promise exists, status of the review component, whether a fulfilling observation exists, whether a refusal exists"
+          }
+        ]
+      },
+      {
+        "path": "DiagnosticOrder.item.event",
+        "short": "Events specific to this item",
+        "formal": "A summary of the events of interest that have occurred as this item of the request is processed.",
+        "min": 0,
+        "max": "*",
+        "nameReference": "event",
+        "isSummary": false,
+        "mapping": [
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship[typeCode=FLFS].source"
+          },
+          {
+            "identity": "rim",
+            "map": ".inboundRelationship[typeCode=FLFS].source"
+          }
+        ]
+      }
+    ]
+  },
+  "differential": {
+    "element": [
+      {
+        "path": "DiagnosticOrder",
+        "name": "USLabDO",
+        "synonym": [
+          "DO"
+        ],
+        "min": 1,
+        "max": "1",
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.extension",
+        "slicing": {
+          "discriminator": [
+            "url"
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "path": "DiagnosticOrder.extension",
+        "name": "USLabCC",
+        "short": "Copy to provider,organization, or patient",
+        "formal": "Copy to provider,organization, or patient.",
+        "synonym": [
+          "CC",
+          "Copy to",
+          "Result Copies To"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": "http://hl7.org/fhir/ExtensionDefinition/uslabcc-practitioner"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.extension.valueReference",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/pract-uslab-uslabpract"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.text",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.text.status",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "generated",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.subject",
+        "requirements": "Limited to single patient per Diagnostic Order (Requisition).",
+        "synonym": [
+          "Patient"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/patient-uslab-uslabpatient"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/patient-uslab-uslabphpatient"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.orderer",
+        "requirements": "Limited to single orderer per Diagnostic Order (Requisition).",
+        "synonym": [
+          "Ordering Provider",
+          "OP",
+          "Submitter",
+          "Placer"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/pract-uslab-uslabphpract"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/pract-uslab-uslabpract"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.identifier",
+        "slicing": {
+          "discriminator": [
+            "identifier.label"
+          ],
+          "ordered": true,
+          "rules": "closed"
+        }
+      },
+      {
+        "path": "DiagnosticOrder.identifier",
+        "name": "USLabDOPlacerID",
+        "requirements": "Limit to Globally unique IDs using a URI ( could be a URL).",
+        "synonym": [
+          "Placer ID"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.identifier.use",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "official",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.identifier.label",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "fixedString": "Placer Order Number",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.identifier.system",
+        "short": "Placer URI",
+        "formal": "Placer URI.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.identifier.value",
+        "short": "Placer Identifier",
+        "formal": "Placer Identifier.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.identifier",
+        "name": "USLabDOFillerID",
+        "requirements": "Limit to Globally unique IDs using a URI ( could be a URL).",
+        "synonym": [
+          "Filler ID"
+        ],
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Identifier"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.identifier.use",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "fixedCode": "official",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.identifier.label",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "fixedString": "Filler Order Number",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.identifier.system",
+        "short": "Filler URI",
+        "formal": "Filler URI.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.identifier.value",
+        "short": "Filler Identifier",
+        "formal": "Filler Identifier.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.clinicalNotes",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.supportingInformation",
+        "comments": "AOES are captured in the USLabObservation resource and Reasons for the testing in USLabCondition.",
+        "requirements": "AOES are captured in the USLabObservation resource and Reasons for the testing in USLabCondition.",
+        "synonym": [
+          "AOE",
+          "Reason for Study"
+        ],
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/obs-uslab-uslabobscode"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/obs-uslab-uslabobsquantity"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/obs-uslab-uslabobsother"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/obs-uslab-uslabobsratio"
+          },
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/cond-uslab-uslabcond"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.specimen",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/spec-uslab-uslabspec"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.status",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.priority",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.event",
+        "min": 1,
+        "max": "*",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.event.description",
+        "comments": "These codes capture the Use cases for LOI.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false,
+        "binding": {
+          "name": "USLABDOEvent",
+          "isExtensible": true,
+          "conformance": "required",
+          "description": "Information about an event that occurred to a diagnostic order that corresponds to the USLabOrder Use Cases",
+          "referenceReference": {
+            "reference": "http://hl7.org/fhir/vs/do-uslab-event"
+          }
+        }
+      },
+      {
+        "path": "DiagnosticOrder.event.description.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.event.description.coding.code",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.event.dateTime",
+        "requirements": "Minimum Precision to Day.",
+        "min": 1,
+        "max": "1",
+        "condition": [
+          "2"
+        ],
+        "constraint": [
+          {
+            "key": "2",
+            "name": "datetime to Day",
+            "severity": "error",
+            "human": "Datetime must be at least to day.",
+            "xpath": "f:matches(dateTime,/\\d{4}-[01]\\d-[0-3]\\dT[0-2]\\d:[0-5]\\d([+-][0-2]\\d:[0-5]\\d|Z)/)"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.item",
+        "min": 1,
+        "max": "*",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.item.code",
+        "short": "US Realm Laboratory Report Order Code",
+        "formal": "The laboratory test, panel or battery that was ordered.",
+        "comments": "Use the appropriate LOINC or local code as provided by laboratory.   FHIR Value set resources binding to each laboratory's compendium of service is done at implementation usign the FHIR Value set resources or some other mechanism.",
+        "requirements": "Requires at least a code, code system an d display text.",
+        "min": 1,
+        "max": "1",
+        "condition": [
+          "1"
+        ],
+        "constraint": [
+          {
+            "key": "1",
+            "name": "LOINC or Local",
+            "severity": "error",
+            "human": "Must have a LOINC or a Local code or both.",
+            "xpath": "exists(f:coding)"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.item.code.text",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.item.coding",
+        "slicing": {
+          "discriminator": [
+            "system"
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "path": "DiagnosticOrder.item.coding",
+        "name": "USLabLOINCCoding",
+        "short": "LOINC coding if available",
+        "formal": "LOINC coding if available.",
+        "synonym": [
+          "LOINC code"
+        ],
+        "min": 0,
+        "max": "1",
+        "condition": [
+          "1"
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.item.coding.system",
+        "short": "LOINC Coding System",
+        "formal": "LOINC Coding System.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "fixedUri": "http://loinc.org",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.item.coding.code",
+        "short": "LOINC",
+        "formal": "Logical Observation Identifiers Names and Codes (LOINC) is a database and universal standard for identifying medical laboratory observations.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.item.coding.display",
+        "short": "LOINC Display Name",
+        "formal": "The LOINC  'long common name' is preferred although the LOINC 'short name' or the LOINC 'fully-specified name can also be used.  ( http://lionc.org.terms-of-use).",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.item.coding",
+        "name": "USLabLocalCoding",
+        "synonym": [
+          "Local"
+        ],
+        "min": 0,
+        "max": "1",
+        "condition": [
+          "1"
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.item.coding.system",
+        "short": "Local Coding System",
+        "formal": "This is defined locally.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.item.coding.code",
+        "short": "Local Code",
+        "formal": "Local Code.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.item.coding.display",
+        "short": "local Code Display name",
+        "formal": "This is defined locally.",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.item.specimen",
+        "comments": "New specimen(s) related to the item event go here and not in DO.specimen.",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "profile": "http://hl7.org/fhir/Profile/spec-uslab-uslabspec"
+          }
+        ],
+        "mustSupport": true,
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.item.bodySite",
+        "min": 0,
+        "max": "0",
+        "isSummary": false
+      },
+      {
+        "path": "DiagnosticOrder.item.status",
+        "comments": "Typically the system placing the order sets the status to requested. There after, the order is maintained by the receiver that updates the status as the request is handled.",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "isSummary": false
+      }
+    ]
+  }
+}

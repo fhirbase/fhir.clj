@@ -1,0 +1,48 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "questionnaire-defaultAsFixed",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/questionnaire-defaultAsFixed",
+  "name": "Treat default as fixed value?",
+  "publisher": "HL7",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://www.hl7.org"
+    }
+  ],
+  "description": "If true, the default value is set as a fixed \"answer\" for the question.",
+  "status": "draft",
+  "date": "2013-07-04",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "resource",
+  "context": [
+    "Questionnaire.group.question"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Treat default as fixed value?",
+      "formal": "If true, the default value is set as a fixed \"answer\" for the question.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "boolean"
+        }
+      ],
+      "isSummary": false,
+      "mapping": [
+        {
+          "identity": "rim",
+          "map": "N/A - MIF rather than RIM level"
+        }
+      ]
+    }
+  ]
+}

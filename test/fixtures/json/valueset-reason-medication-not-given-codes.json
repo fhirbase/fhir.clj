@@ -1,0 +1,58 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-reason-medication-not-given-codes",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div>\n      <p>The value set to instantiate this attribute should be drawn from a terminologically robust code system that consists of or \n        contains concepts to support the medication process.</p>\n    </div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.93"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/reason-medication-not-given-codes",
+  "name": "Reason Medication Not Given Codes",
+  "publisher": "FHIR Project team",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    }
+  ],
+  "description": "This value set is provided as an exemplar",
+  "status": "draft",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:null"
+      }
+    ],
+    "system": "http://hl7.org/fhir/reason-medication-not-given",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "a",
+        "display": "None",
+        "definition": "No reason known"
+      },
+      {
+        "code": "b",
+        "display": "Away",
+        "definition": "The patient was not available when the dose was scheduled"
+      },
+      {
+        "code": "c",
+        "display": "Asleep",
+        "definition": "The patient was asleep when the dose was scheduled"
+      },
+      {
+        "code": "d",
+        "display": "Vomit",
+        "definition": "The patient was given the medication and immediately vomited it back"
+      }
+    ]
+  }
+}

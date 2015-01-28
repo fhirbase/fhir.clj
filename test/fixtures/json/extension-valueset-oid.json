@@ -1,0 +1,30 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "valueset-oid",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/valueset-oid",
+  "name": "OID assigned to the value set or code system",
+  "publisher": "HL7",
+  "description": "The OID assigned to the value set or code system by the author.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "contextType": "resource",
+  "context": [
+    "ValueSet",
+    "ValueSet.define"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "OID assigned to the value set or code system",
+      "formal": "The OID assigned to the value set or code system by the author.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "uri"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

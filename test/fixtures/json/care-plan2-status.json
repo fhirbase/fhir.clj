@@ -1,0 +1,55 @@
+{
+  "resourceType": "ValueSet",
+  "id": "care-plan2-status",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 3 concepts</p><h2>CarePlan2Status</h2><p>Indicates whether the plan is currently being acted upon, represents future intentions or is now just historical record.</p><p>This value set defines its own terms in the system http://hl7.org/fhir/care-plan2-status</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>planned<a name=\"planned\"> </a></td><td>The plan is in development or awaiting use but is not yet intended to be acted upon.</td></tr><tr><td>active<a name=\"active\"> </a></td><td>The plan is intended to be followed and used as part of patient care.</td></tr><tr><td>completed<a name=\"completed\"> </a></td><td>The plan is no longer in use and is not expected to be followed or used in patient care.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.545"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/care-plan2-status",
+  "name": "CarePlan2Status",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Indicates whether the plan is currently being acted upon, represents future intentions or is now just historical record.",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.490+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.545"
+      }
+    ],
+    "system": "http://hl7.org/fhir/care-plan2-status",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "planned",
+        "definition": "The plan is in development or awaiting use but is not yet intended to be acted upon."
+      },
+      {
+        "code": "active",
+        "definition": "The plan is intended to be followed and used as part of patient care."
+      },
+      {
+        "code": "completed",
+        "definition": "The plan is no longer in use and is not expected to be followed or used in patient care."
+      }
+    ]
+  }
+}

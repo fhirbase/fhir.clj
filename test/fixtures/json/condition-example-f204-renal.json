@@ -1,0 +1,82 @@
+{
+  "resourceType": "Condition",
+  "id": "f204",
+  "subject": {
+    "reference": "Patient/f201",
+    "display": "Roel"
+  },
+  "encounter": {
+    "reference": "Encounter/f203",
+    "display": "Roel's encounter on March eleventh"
+  },
+  "asserter": {
+    "reference": "Practitioner/f201"
+  },
+  "dateAsserted": "2013-03-11",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "36225005",
+        "display": "Acute renal insufficiency specified as due to procedure"
+      }
+    ]
+  },
+  "category": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "55607006",
+        "display": "Problem"
+      },
+      {
+        "system": "http://hl7.org/fhir/condition-category",
+        "code": "condition"
+      }
+    ]
+  },
+  "status": "working",
+  "severity": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "24484000",
+        "display": "Severe"
+      }
+    ]
+  },
+  "onsetDateTime": "2013-03-11",
+  "abatementDate": "2013-03-20",
+  "stage": {
+    "summary": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "14803004",
+          "display": "Temporary"
+        }
+      ]
+    }
+  },
+  "location": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "181414000",
+            "display": "Kidney"
+          }
+        ]
+      }
+    }
+  ],
+  "dueTo": [
+    {
+      "target": {
+        "reference": "Procedure/f201",
+        "display": "TPF chemotherapy for the sphenoid bone"
+      }
+    }
+  ]
+}

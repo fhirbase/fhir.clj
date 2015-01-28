@@ -1,0 +1,58 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "securityevent-ehrs-rle-location",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/securityevent-ehrs-rle-location",
+  "name": "Where the activity occurred, if relevant",
+  "publisher": "Health Level Seven, Inc. - EHR WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/special/committees/ehr.html"
+    }
+  ],
+  "description": "The phyiscal location of the event (e.g. Building, room, etc.).",
+  "status": "draft",
+  "date": "2014-12-04",
+  "mapping": [
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM"
+    }
+  ],
+  "contextType": "resource",
+  "context": [
+    "SecurityEvent.event"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Where the activity occurred, if relevant",
+      "formal": "The phyiscal location of the event (e.g. Building, room, etc.).",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "Resource",
+          "profile": "http://hl7.org/fhir/Profile/Location"
+        }
+      ],
+      "isSummary": false,
+      "mapping": [
+        {
+          "identity": "v2",
+          "map": "N/A"
+        },
+        {
+          "identity": "rim",
+          "map": ".participant[typeCode=LOC].role"
+        }
+      ]
+    }
+  ]
+}

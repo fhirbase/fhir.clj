@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="uslab-example3"/>
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+			
+      <ul>
+				
+        <li>file: pract-uslab-example3.xml</li>
+				
+        <li> id: uslab-example3</li>
+				
+        <li> Name: USLab Practitioner Example3 </li>
+				
+        <li>Description: USLab Practitioner Canonical Example: Dr Gregory House</li>
+			
+      </ul>
+		
+    </div>
+  </text>
+  <identifier>
+    <use value="official"/>
+    <label value="NPI"/>
+    <value value="1234567893"/>
+    <assigner>
+      <reference value="https://nppes.cms.hhs.gov/NPPES/"/>
+      <display value="The Centers for Medicare and Medicaid Services (CMS) National Plan and Provider Enumeration System (NPPES)"/>
+    </assigner>
+  </identifier>
+  <name>
+    <family value="House"/>
+    <given value="Gregory"/>
+    <given value="F"/>
+    <suffix value="PhD"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="555 777 1234 11"/>
+  </telecom>
+</Practitioner>

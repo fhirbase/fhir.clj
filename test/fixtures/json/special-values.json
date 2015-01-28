@@ -1,0 +1,73 @@
+{
+  "resourceType": "ValueSet",
+  "id": "special-values",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 6 concepts</p><h2>SpecialValues</h2><p>A set of generally useful codes defined so they can be included in value sets</p><p>This value set defines its own terms in the system http://hl7.org/fhir/special-values</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td>true<a name=\"true\"> </a></td><td>true</td><td>Boolean true</td></tr><tr><td>false<a name=\"false\"> </a></td><td>false</td><td>Boolean false</td></tr><tr><td>trace<a name=\"trace\"> </a></td><td>Trace Amount Detected</td><td>The content is greater than zero, but too small to be quantified</td></tr><tr><td>sufficient<a name=\"sufficient\"> </a></td><td>Sufficient Quantity</td><td>The specific quantity is not known, but is known to be non-zero and is not specified because it makes up the bulk of the material</td></tr><tr><td>withdrawn<a name=\"withdrawn\"> </a></td><td>Value Withdrawn</td><td>The value is no longer available</td></tr><tr><td>nil known<a name=\"nilknown\"> </a></td><td>Nil Known</td><td>The are no known applicable values in this context</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.10"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/special-values",
+  "name": "SpecialValues",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "A set of generally useful codes defined so they can be included in value sets",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.490+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.10"
+      }
+    ],
+    "system": "http://hl7.org/fhir/special-values",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "true",
+        "display": "true",
+        "definition": "Boolean true"
+      },
+      {
+        "code": "false",
+        "display": "false",
+        "definition": "Boolean false"
+      },
+      {
+        "code": "trace",
+        "display": "Trace Amount Detected",
+        "definition": "The content is greater than zero, but too small to be quantified"
+      },
+      {
+        "code": "sufficient",
+        "display": "Sufficient Quantity",
+        "definition": "The specific quantity is not known, but is known to be non-zero and is not specified because it makes up the bulk of the material"
+      },
+      {
+        "code": "withdrawn",
+        "display": "Value Withdrawn",
+        "definition": "The value is no longer available"
+      },
+      {
+        "code": "nil known",
+        "display": "Nil Known",
+        "definition": "The are no known applicable values in this context"
+      }
+    ]
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "resourceType": "ValueSet",
+  "id": "identifier-use",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 4 concepts</p><h2>IdentifierUse</h2><p>Identifies the purpose for this identifier, if known</p><p>This value set defines its own terms in the system http://hl7.org/fhir/identifier-use</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>usual<a name=\"usual\"> </a></td><td>the identifier recommended for display and use in real-world interactions.</td></tr><tr><td>official<a name=\"official\"> </a></td><td>the identifier considered to be most trusted for the identification of this item.</td></tr><tr><td>temp<a name=\"temp\"> </a></td><td>A temporary identifier.</td></tr><tr><td>secondary<a name=\"secondary\"> </a></td><td>An identifier that was assigned in secondary use - it serves to identify the object in a relative context, but cannot be consistently assigned to the same object again in a different context.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.13"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/identifier-use",
+  "name": "IdentifierUse",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Identifies the purpose for this identifier, if known",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.489+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.13"
+      }
+    ],
+    "system": "http://hl7.org/fhir/identifier-use",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "usual",
+        "definition": "the identifier recommended for display and use in real-world interactions."
+      },
+      {
+        "code": "official",
+        "definition": "the identifier considered to be most trusted for the identification of this item."
+      },
+      {
+        "code": "temp",
+        "definition": "A temporary identifier."
+      },
+      {
+        "code": "secondary",
+        "definition": "An identifier that was assigned in secondary use - it serves to identify the object in a relative context, but cannot be consistently assigned to the same object again in a different context."
+      }
+    ]
+  }
+}

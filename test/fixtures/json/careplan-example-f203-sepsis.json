@@ -1,0 +1,76 @@
+{
+  "resourceType": "CarePlan",
+  "id": "f203",
+  "patient": {
+    "reference": "Patient/f201",
+    "display": "Roel"
+  },
+  "status": "completed",
+  "period": {
+    "start": "2013-04-14",
+    "end": "2013-04-21"
+  },
+  "modified": "2013-03-11",
+  "concern": [
+    {
+      "reference": "Condition/f203",
+      "display": "Roel's sepsis"
+    }
+  ],
+  "participant": [
+    {
+      "role": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "425268008",
+            "display": "Review of care plan"
+          }
+        ]
+      },
+      "member": {
+        "reference": "Practitioner/f201",
+        "display": "Dokter Bronsig"
+      }
+    },
+    {
+      "role": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "278110001",
+            "display": "Radiographic imaging"
+          }
+        ]
+      },
+      "member": {
+        "reference": "Practitioner/f202",
+        "display": "Luigi Maas"
+      }
+    }
+  ],
+  "goal": [
+    {
+      "description": "Check whether further treatment of sepsis/pulmonary abcess is required",
+      "status": "cancelled"
+    }
+  ],
+  "activity": [
+    {
+      "status": "not started",
+      "prohibited": false,
+      "simple": {
+        "category": "observation",
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "241541005",
+              "display": "High resolution computed tomography of lungs"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "openEHR-test",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/openEHR-test",
+  "name": "Observations that confirm or refute",
+  "publisher": "Health Level Seven, Inc / openEHR project",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org"
+    }
+  ],
+  "description": "Observations that confirm or refute the risk and/or the substance.",
+  "status": "draft",
+  "date": "2014-10-09",
+  "contextType": "resource",
+  "context": [
+    "AllergyIntolerance"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Observations that confirm or refute",
+      "formal": "Observations that confirm or refute the risk and/or the substance.",
+      "min": 0,
+      "max": "*",
+      "type": [
+        {
+          "code": "Reference",
+          "profile": "http://hl7.org/fhir/Profile/Observation"
+        },
+        {
+          "code": "Reference",
+          "profile": "http://hl7.org/fhir/Profile/DiagnosticReport"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

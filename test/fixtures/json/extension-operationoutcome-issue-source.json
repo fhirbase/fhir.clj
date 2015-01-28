@@ -1,0 +1,36 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "operationoutcome-issue-source",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/operationoutcome-issue-source",
+  "name": "Source of a validation message",
+  "display": "Source of Issue",
+  "publisher": "Health Level Seven, Inc. - [WG Name] WG",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/special/committees/FHIR"
+    }
+  ],
+  "description": "Helps a user track down the source of the problem.",
+  "status": "draft",
+  "date": "2014-01-31",
+  "contextType": "resource",
+  "context": [
+    "OperationOutcome.issue"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "Source of a validation message",
+      "formal": "Helps a user track down the source of the problem.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "string"
+        }
+      ],
+      "isSummary": false
+    }
+  ]
+}

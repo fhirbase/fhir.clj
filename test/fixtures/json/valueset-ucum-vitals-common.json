@@ -1,0 +1,64 @@
+{
+  "resourceType": "ValueSet",
+  "id": "valueset-ucum-vitals-common",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div>\n      <h2>Common UCUM units for recording Vital Signs</h2>\n      <p>Commonly encountered UCUM units for recording Vital Signs. Suggested units for the value set: http://hl7.org/fhir/vs/observation-CCDAVitalSignResult</p>\n      <p>\n        <b>Copyright Statement:</b> UCUM is Copyright &copy; 1999-2013 Regenstrief Institute, Inc. and The UCUM Organization, Indianapolis, IN. All rights reserved. See http://unitsofmeasure.org/trac//wiki/TermsOfUse for details\n      </p>\n      <p>This value set includes codes defined in other code systems, using the following rules:</p>\n      <ul>\n        <li>Include these codes as defined in http://unitsofmeasure.org\n          <table>\n            <tr>\n              <td>\n                <b>Code</b>\n              </td>\n              <td>\n                <b>Display</b>\n              </td>\n            </tr>\n            <tr>\n              <td>%</td>\n              <td>percent</td>\n              <td/>\n            </tr>\n            <tr>\n              <td>cm</td>\n              <td>centimeter</td>\n              <td/>\n            </tr>\n            <tr>\n              <td>/kg</td>\n              <td>per kilogram</td>\n              <td/>\n            </tr>\n            <tr>\n              <td>Cel</td>\n              <td>degree Celsius</td>\n              <td/>\n            </tr>\n            <tr>\n              <td>mm[Hg]</td>\n              <td>millimeter of mercury</td>\n              <td/>\n            </tr>\n            <tr>\n              <td>/min</td>\n              <td>per minute</td>\n              <td/>\n            </tr>\n            <tr>\n              <td>kg/m2</td>\n              <td>kilogram / (meter ^ 2)</td>\n              <td/>\n            </tr>\n            <tr>\n              <td>/m2</td>\n              <td>per square meter</td>\n              <td/>\n            </tr>\n          </table>\n        </li>\n      </ul>\n    </div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.521"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/ucum-vitals-common",
+  "name": "Common UCUM units",
+  "publisher": "FHIR Project",
+  "description": "Common UCUM units for recording Vital Signs",
+  "copyright": "UCUM is Copyright © 1999-2013 Regenstrief Institute, Inc. and The UCUM Organization, Indianapolis, IN. All rights reserved. See http://unitsofmeasure.org/trac//wiki/TermsOfUse for details",
+  "status": "draft",
+  "extensible": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://unitsofmeasure.org",
+        "concept": [
+          {
+            "code": "%",
+            "display": "percent"
+          },
+          {
+            "code": "cm",
+            "display": "centimeter"
+          },
+          {
+            "code": "kg",
+            "display": "kilogram"
+          },
+          {
+            "code": "Cel",
+            "display": "degree Celsius"
+          },
+          {
+            "code": "mm[Hg]",
+            "display": "millimeter of mercury"
+          },
+          {
+            "code": "/min",
+            "display": "per minute"
+          },
+          {
+            "code": "kg/m2",
+            "display": "kilogram / (meter ^ 2)"
+          },
+          {
+            "code": "m2",
+            "display": "square meter"
+          }
+        ]
+      }
+    ]
+  }
+}

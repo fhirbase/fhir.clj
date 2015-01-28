@@ -1,0 +1,37 @@
+{
+  "resourceType": "ExtensionDefinition",
+  "id": "us-core-race",
+  "url": "http://hl7.org/fhir/ExtensionDefinition/us-core-race",
+  "name": "A category of humans sharing history, origin or nationality",
+  "publisher": "Fhir Core Team",
+  "description": "A code classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.",
+  "status": "draft",
+  "date": "2013-12-03",
+  "contextType": "resource",
+  "context": [
+    "Patient"
+  ],
+  "element": [
+    {
+      "path": "Extension",
+      "short": "A category of humans sharing history, origin or nationality",
+      "formal": "A code classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.",
+      "min": 0,
+      "max": "1",
+      "type": [
+        {
+          "code": "CodeableConcept"
+        }
+      ],
+      "isSummary": false,
+      "binding": {
+        "name": "Race",
+        "isExtensible": true,
+        "description": "A code classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality.",
+        "referenceReference": {
+          "reference": "http://hl7.org/fhir/v3/vs/Race"
+        }
+      }
+    }
+  ]
+}

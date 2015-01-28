@@ -1,0 +1,726 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "qs1",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986"
+    }
+  ],
+  "status": "draft",
+  "date": "2014-12-12T13:17:44.755+11:00",
+  "publisher": "HL7 FHIR Project (Patient Care)",
+  "group": {
+    "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+      {
+        "valueString": "A structured set of questions intended to guide the collection of answers. The questions are ordered and grouped into coherent subsets, corresponding to the structure of the grouping of the underlying questions."
+      }
+    ],
+    "linkId": "Questionnaire",
+    "title": "A structured set of questions",
+    "required": true,
+    "group": [
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The logical id of the resource, as used in the url for the resoure. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation. Bundles always have an id, though it is usually a generated UUID."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "Questionnaire.id",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Questionnaire.id.value",
+            "text": "Logical id of this artefact",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content may not always be associated with version changes to the resource."
+          }
+        ],
+        "linkId": "Questionnaire.meta",
+        "title": "Metadata about the resource",
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Questionnaire.meta.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Questionnaire.meta.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The version specific identifier, as it appears in the version portion of the url. This values changes when the resource is created, updated, or deleted. The server assigns this value, and ignores what the client specifies, except in the case that the server is imposing version integrity on updates/deletes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Questionnaire.meta.versionId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Questionnaire.meta.versionId.value",
+                "text": "Version specific identifier",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "When the resource last changed - e.g. when the version changed. This value is always populated except when the resource is first being created. The server / resource manager sets this value; what a client provides is irrelevant."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "instant"
+              }
+            ],
+            "linkId": "Questionnaire.meta.lastUpdated",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Questionnaire.meta.lastUpdated.value",
+                "text": "When the resource version last changed",
+                "type": "instant"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A list of profiles that this resource claims to conform to. The URL is a reference to Profile.url. It is up to the server and/or other infrastruture of policy to determine whether/how these claims are verified and/or updated over tiem."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "uri"
+              }
+            ],
+            "linkId": "Questionnaire.meta.profile",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Questionnaire.meta.profile.value",
+                "text": "Profiles this resource claims to conform to",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Security labels applied to this resource. These tags connect specific resources to the overall security policy and infrastructure. The security labels can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Questionnaire.meta.security",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Questionnaire.meta.security.value",
+                "text": "Security Labels applied to this resource",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Tags applied to this resource. Tags are intended to to be used to identify and relate resources to process and workflow, and applications are not required to consider the tags when interpreting the meaning of a resource. The tags can be updated without changing the stated version of the resource."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Questionnaire.meta.tag",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Questionnaire.meta.tag.value",
+                "text": "Tags applied",
+                "type": "open-choice"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element as much as possible."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "uri"
+          }
+        ],
+        "linkId": "Questionnaire.implicitRules",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Questionnaire.implicitRules.value",
+            "text": "A set of rules under which this content was created",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The base language in which the resource is written. Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource\n\nNot all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "Questionnaire.language",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Questionnaire.language.value",
+            "text": "language",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A human-readable narrative that contains a summary of the resource, and may be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative."
+          }
+        ],
+        "linkId": "Questionnaire.text",
+        "text": "Text summary of the resource, for human interpretation",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again."
+          }
+        ],
+        "linkId": "Questionnaire.contained",
+        "text": "Contained, inline Resources",
+        "repeats": true
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "This records identifiers associated with this question set that are defined by business processed and/ or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation)."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "Identifier"
+          }
+        ],
+        "linkId": "Questionnaire.identifier",
+        "text": "External Ids for this questionnaire",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Questionnaire.identifier.label",
+            "text": "label:",
+            "type": "string"
+          },
+          {
+            "linkId": "Questionnaire.identifier.system",
+            "text": "system:",
+            "type": "string"
+          },
+          {
+            "linkId": "Questionnaire.identifier.value",
+            "text": "value:",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The version number assigned by the publisher for business reasons.  It may remain the same when the resource is updated."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "Questionnaire.version",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Questionnaire.version.value",
+            "text": "Logical id for this version of Questionnaire",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The lifecycle status of the questionnaire as a whole."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "code"
+          }
+        ],
+        "linkId": "Questionnaire.status",
+        "required": true,
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Questionnaire.status.value",
+            "text": "status",
+            "type": "choice"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "The date that this questionnaire was last changed."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "datetime"
+          }
+        ],
+        "linkId": "Questionnaire.date",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Questionnaire.date.value",
+            "text": "Date this version was authored",
+            "type": "dateTime"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "Organization responsible for developing and maintaining the questionnaire."
+          }
+        ],
+        "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+          {
+            "valueString": "string"
+          }
+        ],
+        "linkId": "Questionnaire.publisher",
+        "repeats": true,
+        "question": [
+          {
+            "linkId": "Questionnaire.publisher.value",
+            "text": "Organization who designed the questionnaire",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+          {
+            "valueString": "A collection of related questions (or further groupings of questions)."
+          }
+        ],
+        "linkId": "Questionnaire.group",
+        "title": "Grouped questions",
+        "text": "The Questionnaire itself has one \"root\" group with the actual contents of the Questionnaire.  Information on this root group applies to the questionnaire as a whole.",
+        "required": true,
+        "group": [
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "unique id for the element within a resource (for internal references)."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Questionnaire.group.id",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Questionnaire.group.id.value",
+                "text": "xml:id (or equivalent in JSON)",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "An identifier that is unique within the questionnaire allowing linkage to the equivalent group in a QuestionnaireAnswers resource. May be omitted if there is no expectation to link answers back to a questionnaire.  This *can* be a meaningful id (e.g. a LOINC code) but is not intended to have any meaning.  GUIDs or sequential numbers are appropriate here."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Questionnaire.group.linkId",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Questionnaire.group.linkId.value",
+                "text": "To link questionnaire with questionnaire answers",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "The human-readable name for this section of the questionnaire. The title of the \"root\" group is the title for the questionnaire."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Questionnaire.group.title",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Questionnaire.group.title.value",
+                "text": "Name to be displayed for group",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Identifies a how this group of questions is known in a particular terminology such as LOINC. The code(s) for the \"root\" group apply to the questionnaire as a whole."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "Coding"
+              }
+            ],
+            "linkId": "Questionnaire.group.concept",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Questionnaire.group.concept.value",
+                "text": "Concept that represents this section on a questionnaire",
+                "type": "open-choice"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Additional text for the group, used for display purposes."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "string"
+              }
+            ],
+            "linkId": "Questionnaire.group.text",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Questionnaire.group.text.value",
+                "text": "Additional text for the group",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "If true, indicates that the group must be present and have required questions within it answered.  If false, the group may be skipped when answering the questionnaire."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "boolean"
+              }
+            ],
+            "linkId": "Questionnaire.group.required",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Questionnaire.group.required.value",
+                "text": "Must group be included in data results?",
+                "type": "boolean"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Whether the group may occur multiple times in the instance, containing multiple sets of answers. When *repeats* is not specified, false is assumed."
+              }
+            ],
+            "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+              {
+                "valueString": "boolean"
+              }
+            ],
+            "linkId": "Questionnaire.group.repeats",
+            "repeats": true,
+            "question": [
+              {
+                "linkId": "Questionnaire.group.repeats.value",
+                "text": "Whether the group may repeat",
+                "type": "boolean"
+              }
+            ]
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "A sub-group within a group. The ordering of groups within this group is relevant."
+              }
+            ],
+            "linkId": "Questionnaire.group.group",
+            "title": "Nested questionnaire group",
+            "repeats": true
+          },
+          {
+            "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+              {
+                "valueString": "Set of questions within this group. The order of questions within the group is relevant."
+              }
+            ],
+            "linkId": "Questionnaire.group.question",
+            "title": "Questions in this group",
+            "repeats": true,
+            "group": [
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "unique id for the element within a resource (for internal references)."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "Questionnaire.group.question.id",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "Questionnaire.group.question.id.value",
+                    "text": "xml:id (or equivalent in JSON)",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "An identifier that is unique within the questionnaire allowing linkage to the equivalent group in a [[[QuestionnaireAnswers]]] resource. May be omitted if there is no expectation to link answers back to a questionnaire.  This *can* be a meaningful id (e.g. a LOINC code) but is not intended to have any meaning.  GUIDs or sequential numbers are appropriate here."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "Questionnaire.group.question.linkId",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "Questionnaire.group.question.linkId.value",
+                    "text": "To link questionnaire with questionnaire answers",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Identifies a how this question is known in a particular terminology such as LOINC."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Coding"
+                  }
+                ],
+                "linkId": "Questionnaire.group.question.concept",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "Questionnaire.group.question.concept.value",
+                    "text": "Concept that represents this question on a questionnaire",
+                    "type": "open-choice"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Text of the question as it is shown to the user."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "string"
+                  }
+                ],
+                "linkId": "Questionnaire.group.question.text",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "Questionnaire.group.question.text.value",
+                    "text": "Text of the question as it is shown to the user",
+                    "type": "string"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "The expected format of the answer, e.g. the type of input (string, integer) or whether a (multiple) choice is expected. Additional constraints on the type of answer can be conveyed by extensions."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "code"
+                  }
+                ],
+                "linkId": "Questionnaire.group.question.type",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "Questionnaire.group.question.type.value",
+                    "text": "type",
+                    "type": "choice"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "If true, indicates that the group must be present and have required questions within it answered.  If false, the group may be skipped when answering the questionnaire."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "boolean"
+                  }
+                ],
+                "linkId": "Questionnaire.group.question.required",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "Questionnaire.group.question.required.value",
+                    "text": "Must group be included in data results?",
+                    "type": "boolean"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Whether the group may occur multiple times in the instance, containing multiple sets of answers. When *repeats* is not specified, false is assumed."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "boolean"
+                  }
+                ],
+                "linkId": "Questionnaire.group.question.repeats",
+                "repeats": true,
+                "question": [
+                  {
+                    "linkId": "Questionnaire.group.question.repeats.value",
+                    "text": "Whether the group may repeat",
+                    "type": "boolean"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Reference to a valueset containing the possible options."
+                  }
+                ],
+                "http://www.healthintersections.com.au/fhir/Profile/metadata#type": [
+                  {
+                    "valueString": "Reference"
+                  }
+                ],
+                "linkId": "Questionnaire.group.question.options",
+                "repeats": true,
+                "question": [
+                  {
+                    "http://www.healthintersections.com.au/fhir/Profile/metadata#reference": [
+                      {
+                        "valueString": "/ValueSet?subject=$subj&patient=$subj&encounter=$encounter"
+                      }
+                    ],
+                    "linkId": "Questionnaire.group.question.options.value",
+                    "text": "Valueset containing the possible options",
+                    "type": "reference"
+                  }
+                ]
+              },
+              {
+                "http://hl7.org/fhir/Profile/questionnaire-extensions#flyover": [
+                  {
+                    "valueString": "Nested group, containing nested question for this question. The order of groups within the question is relevant."
+                  }
+                ],
+                "linkId": "Questionnaire.group.question.group",
+                "title": "Nested questionnaire group",
+                "repeats": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

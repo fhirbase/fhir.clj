@@ -1,0 +1,83 @@
+{
+  "resourceType": "Condition",
+  "id": "f002",
+  "subject": {
+    "reference": "Patient/f001",
+    "display": "P. van de Heuvel"
+  },
+  "encounter": {
+    "reference": "Encounter/f002"
+  },
+  "asserter": {
+    "reference": "Patient/f001",
+    "display": "P. van de Heuvel"
+  },
+  "dateAsserted": "2012-06-03",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "254637007",
+        "display": "NSCLC - Non-small cell lung cancer"
+      }
+    ]
+  },
+  "category": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "439401001",
+        "display": "diagnosis"
+      }
+    ]
+  },
+  "status": "confirmed",
+  "severity": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "24484000",
+        "display": "Severe"
+      }
+    ]
+  },
+  "onsetDateTime": "2011-05-05",
+  "stage": {
+    "summary": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "258219007",
+          "display": "stage II"
+        }
+      ]
+    }
+  },
+  "evidence": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "169069000",
+            "display": "CT of thorax"
+          }
+        ]
+      }
+    }
+  ],
+  "location": [
+    {
+      "code": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "51185008",
+            "display": "Thorax"
+          }
+        ]
+      },
+      "detail": "lung"
+    }
+  ]
+}

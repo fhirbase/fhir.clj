@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "id": "medication-kind",
+  "meta": {
+    "lastUpdated": "2014-12-12T13:17:44.755+11:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div><p>This value set contains 2 concepts</p><h2>MedicationKind</h2><p>Whether the medication is a product or a package</p><p>This value set defines its own terms in the system http://hl7.org/fhir/medication-kind</p><table class=\"codes\"><tr><td><b>Code</b></td><td><b>Definition</b></td></tr><tr><td>product<a name=\"product\"> </a></td><td>The medication is a product.</td></tr><tr><td>package<a name=\"package\"> </a></td><td>The medication is a package - a contained group of one of more products.</td></tr></table></div>"
+  },
+  "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+    {
+      "valueUri": "urn:oid:2.16.840.1.113883.4.642.2.110"
+    }
+  ],
+  "identifier": "http://hl7.org/fhir/vs/medication-kind",
+  "name": "MedicationKind",
+  "publisher": "HL7 (FHIR Project)",
+  "telecom": [
+    {
+      "system": "url",
+      "value": "http://hl7.org/fhir"
+    },
+    {
+      "system": "email",
+      "value": "fhir@lists.hl7.org"
+    }
+  ],
+  "description": "Whether the medication is a product or a package",
+  "status": "draft",
+  "date": "2014-12-12T13:17:56.494+11:00",
+  "define": {
+    "http://hl7.org/fhir/ExtensionDefinition/valueset-oid": [
+      {
+        "valueUri": "urn:oid:2.16.840.1.113883.4.642.1.110"
+      }
+    ],
+    "system": "http://hl7.org/fhir/medication-kind",
+    "caseSensitive": true,
+    "concept": [
+      {
+        "code": "product",
+        "definition": "The medication is a product."
+      },
+      {
+        "code": "package",
+        "definition": "The medication is a package - a contained group of one of more products."
+      }
+    ]
+  }
+}
