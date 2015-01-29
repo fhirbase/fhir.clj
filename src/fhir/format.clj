@@ -18,15 +18,16 @@
 (defn xml-resource-tag [res cnt]
   (let [res-nm (:resourceType res)]
     (apply xml/element res-nm
-                 {:xmlns "http://hl7.org/fhir"}
-                 cnt)))
+           {:xmlns "http://hl7.org/fhir"}
+           cnt)))
 
 (declare xml-resource-content)
 
 (defn xml-element-tag [-key -meta -val]
   (cond
     (map? -val)
-    (apply xml/element -key (xml-resource-content -val))
+    (do
+      (apply xml/element -key {} (xml-resource-content -val)))
     :else
     (xml/element -key {:value -val})))
 
@@ -60,17 +61,21 @@
     (.writeEndDocument writer)
     (.toString sw)))
 
-(emit-xml (xml/parse-str "<div>&amp;</div>"))
 
 (defn parse-xml [s]
-  #_(cx/parse (stream s))
-  (xml/parse-str s))
+  (-> (cstr/replace s #"&nbsp;" "&#160;")
+      (xml/parse-str)))
+
 
 (defn gen-xml [e]
   (emit-xml e))
 
 (defn normalize-string [s]
   (cstr/replace s #"\s" " "))
+
+(defn to-html-str [xml]
+  (gen-xml
+    (assoc-in xml [:attrs :xmlns] "http://www.w3.org/1999/xhtml")))
 
 (defn coerce-primitive [-meta value]
   (if-let [tp (get-in -meta [:$attrs :type 0])]
@@ -87,20 +92,13 @@
 (defn is-collection? [-meta]
   (= "*" (get-in -meta [:$attrs :max])))
 
-(defn clj-xml-to-str [xml]
-  (gen-xml (assoc-in xml [:attrs :xmlns] "http://www.w3.org/1999/xhtml")))
 
-(clj-xml-to-str (parse-xml "<div>&amp;</div>"))
 
 (fu/TODO "too much trnasformations")
 (defn normalize-xml [s]
-  ; (println  "normalize" s)
   (when s
-    (-> s
-        (cstr/replace #"&\s" "&amp;")
-        (parse-xml)
-        (clj-xml-to-str)
-        (cstr/replace #"\s+" " "))))
+    (-> (parse-xml s)
+        (to-html-str))))
 
 (declare coerce-resource)
 
@@ -138,7 +136,7 @@
         (cond
           ;; fix text html
           (= (:tag node) :div)
-          (assoc acc :div (clj-xml-to-str node))
+          (assoc acc :div (to-html-str node))
 
           ;; handle bundle nested resources
           (is-resource-key? (:tag node))

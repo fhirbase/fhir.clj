@@ -32,6 +32,11 @@
 (deftest from-xml
   (is (= pt2 (ff/from-xml pt2-xml))))
 
+;; just test for &nbsp
+
+(deftest test-npsp-problem
+  (is (try-expr "ups"
+                (ff/parse-xml "<div>&amp; &nbsp;</div>"))))
 
 (def bndl (ff/from-xml "<Bundle xmlns=\"http://hl7.org/fhir\"> <entry> <resource> <MedicationPrescription> <id value=\"3123\"/> </MedicationPrescription> </resource> </entry> </Bundle>"))
 
