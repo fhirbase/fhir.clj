@@ -16,14 +16,14 @@
                  :family ["shuba" "duba"]
                  :given ["giv1" "giv2"]}]})
 
-(def pt-xml (slurp "test/fhir/pt.xml"))
+(def pt-xml (slurp "test/fixtures/pt.xml"))
 
 (deftest text-to-xml
   (is (= (ff/parse-xml (ff/to-xml pt))
          (ff/parse-xml pt-xml))))
 
-(def pt2 (ff/from-json (slurp "test/fhir/patient-example-f001-pieter.json")))
-(def pt2-xml (slurp "test/fhir/patient-example-f001-pieter.xml"))
+(def pt2 (ff/from-json (slurp "test/fixtures/patient-example-f001-pieter.json")))
+(def pt2-xml (slurp "test/fixtures/patient-example-f001-pieter.xml"))
 
 (deftest to-xml
   (is (= (ff/parse-xml (ff/to-xml pt2))
@@ -51,8 +51,8 @@
            s))))
 
 
-(def bndl-json (ff/from-json (slurp "test/fhir/bundle-example.json")))
-(def bndl-xml  (ff/from-xml  (slurp "test/fhir/bundle-example.xml")))
+(def bndl-json (ff/from-json (slurp "test/fixtures/bundle-example.json")))
+(def bndl-xml  (ff/from-xml  (slurp "test/fixtures/bundle-example.xml")))
 
 (fu/resources-diff bndl-json bndl-xml)
 
