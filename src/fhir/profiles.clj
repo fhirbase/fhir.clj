@@ -45,7 +45,7 @@
 (def all-datatype-codes
   (mapv
     (fn [x]
-      (get-in x [:resource :snapshot :element 0 :path]))
+      (keyword (get-in x [:resource :snapshot :element 0 :path])))
     (:entry types)))
 
 (defn expand-types [e]
@@ -120,11 +120,10 @@
           (get k)))
     profiles))
 
-
-
 (defn- get-type [m]
   (get-in m [:$attrs :type 0]))
 
+(fu/TODO "Handle bundles")
 (defn find-meta
   "Looking meta information from profiles for path"
   [[y & ys]]
@@ -143,3 +142,7 @@
         (get-type obj) (find-meta (concat [(get-type obj) x] xs))
         ;; meta information not found
         :else nil))))
+
+(comment
+  (find-meta [:Bundle :entry :resource])
+  (find-meta [:Resource]))

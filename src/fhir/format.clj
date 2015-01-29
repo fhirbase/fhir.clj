@@ -2,6 +2,7 @@
   (:require [fhir.core :as fc]
             [clojure.xml :as cx]
             [fhir.profiles :as fp]
+            [fhir.utils :as fu]
             [clojure.edn :as ce]
             [clojure.stacktrace :as cs]
             [clojure.string :as cstr]
@@ -57,6 +58,7 @@
       (cond
         (= tp :boolean) (ce/read-string value)
         (= tp :integer) (int (ce/read-string value))
+        (= tp :decimal) (ce/read-string value)
         (= tp :string) (normalize-string value)
         :else value)
       value)
@@ -76,21 +78,28 @@
     (vector? res) (mapv #(coerce-resource % pth) res)
     :else (coerce-primitive (fp/find-meta pth) res)))
 
+(fu/TODO "fix convertion of extensins into xml")
 (defn from-xml-recur [content]
   (reduce
     (fn [acc node]
       ;; fix text html
       (if (= (:tag node) :div)
         (assoc acc :div
-          (with-out-str (cx/emit-element (assoc-in node [:attrs :xmlns] "http://www.w3.org/1999/xhtml"))))
+               (with-out-str (cx/emit-element (assoc-in node [:attrs :xmlns] "http://www.w3.org/1999/xhtml"))))
         (let [attr (:tag node)
+              ;; fix diff in extension representation
+              attr-key (if (= attr :extension)
+                         (keyword (get-in node [:attrs :url]))
+                         attr)
               prev-value (get acc attr)
               value (if (:content node)
                       (from-xml-recur (:content node))
                       (get-in node [:attrs :value]))]
-          (update-in acc [attr]
+          (update-in acc [attr-key]
                      (fn [v]
                        (cond
+                         ;; fix diff in extension representation
+                         (= attr :extension) [value]
                          (nil? v) value
                          (vector? v) (conj v value)
                          :else [v value]))))))
