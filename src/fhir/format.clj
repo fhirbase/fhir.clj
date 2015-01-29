@@ -64,9 +64,11 @@
 
 (defn parse-xml [s]
   (-> (cstr/replace s #"&nbsp;" "&#160;")
+      (cstr/replace #"&(trade|copy|sect|reg);" "$1")
       (xml/parse-str)))
 
 
+(cstr/replace "&aa;" #"&(aa);" "$1")
 (defn gen-xml [e]
   (emit-xml e))
 

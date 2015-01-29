@@ -36,7 +36,9 @@
 
 (deftest test-npsp-problem
   (is (try-expr "ups"
-                (ff/parse-xml "<div>&amp; &nbsp;</div>"))))
+                (ff/parse-xml "<div>&amp; &nbsp; &trade;</div>")
+
+                )))
 
 (def bndl (ff/from-xml "<Bundle xmlns=\"http://hl7.org/fhir\"> <entry> <resource> <MedicationPrescription> <id value=\"3123\"/> </MedicationPrescription> </resource> </entry> </Bundle>"))
 
