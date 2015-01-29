@@ -2,22 +2,74 @@
   (:require
     [clojure.string :as cs]
     [clojure.set :as cset]
+    [clojure.data.xml :as xml]
     [cheshire.core :as json]))
+
+(def todos (atom #{}))
+(defmacro TODO [s]
+  `(swap! todos conj {:ns *ns* :text ~s :line ~(:line (meta &form))}))
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;;; json
 
 (defn read-json [pth]
   (-> (slurp pth)
       (json/parse-string  keyword)))
 
+(defn to-json [m]
+  (json/generate-string m))
+
+(defn from-json [s]
+  (json/parse-string s keyword))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;;; string
+
 (defn camelize [^String s]
   (str (cs/upper-case (subs s 0 1)) (subs s 1 (.length s))))
 
-(def todos (atom #{}))
+(defn unencode-html-entities [s]
+  (-> (cs/replace s #"&nbsp;" "&#160;")
+      (cs/replace #"&(trade|copy|sect|reg);" "$1")))
 
-(defmacro TODO [s]
-  `(swap! todos conj {:ns *ns* :text ~s :line ~(:line (meta &form))}))
 
 (defn normalize-string [s]
   (cs/replace s #"\s" ""))
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;;; xml
+
+
+;; hack to emit element without xml header
+(defn emit-xml [e & {:as opts}]
+  (let  [^java.io.StringWriter sw (java.io.StringWriter.)
+         ^javax.xml.stream.XMLStreamWriter writer  (-> (javax.xml.stream.XMLOutputFactory/newInstance)
+                                                       (.createXMLStreamWriter sw))]
+    (when  (instance? java.io.OutputStreamWriter sw)
+      (xml/check-stream-encoding sw  (or  (:encoding opts) "UTF-8")))
+    (doseq  [event  (xml/flatten-elements  [e])]
+      (xml/emit-event event writer))
+    (.writeEndDocument writer)
+    (.toString sw)))
+
+(defn parse-xml [s]
+  (-> (unencode-html-entities s)
+      (xml/parse-str)))
+
+(defn emit-html [xml]
+  (emit-xml
+    (assoc-in xml [:attrs :xmlns]
+              "http://www.w3.org/1999/xhtml")))
+
+(TODO "too much trnasformations")
+(defn normalize-xml-str [s]
+  (when s
+    (-> (parse-xml s)
+        (emit-html))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;;; collections
 
 (defn mapmap
   "just map hashmap into hashmap (assoc acc k (f k v))"
@@ -27,9 +79,17 @@
       (assoc acc k (f k v)))
     {} m))
 
+(defn all-keys [& xs]
+  (-> (set (mapcat keys xs))
+      (disj :$attrs)))
+
 (comment "example"
          (= (mapmap str {:a 1 :b 2})
             {:a "a1" :b "b2"}))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;
+;;; debug
 
 (defn resources-diff
   ([a b] (resources-diff a b []))

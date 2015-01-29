@@ -10,10 +10,8 @@
   (->> (cs/split (:path x) #"\.")
        (mapv keyword)))
 
-
 (defn get-res-name [entry]
   (keyword (get-in entry [:resource :snapshot :element 0 :path])))
-
 
 (defn get-elems [prof] (get-in prof [:snapshot :element]))
 
@@ -44,8 +42,7 @@
 
 (def all-datatype-codes
   (mapv
-    (fn [x]
-      (keyword (get-in x [:resource :snapshot :element 0 :path])))
+    #(keyword (get-in % [:resource :snapshot :element 0 :path]))
     (:entry types)))
 
 (defn expand-types [e]
@@ -95,8 +92,7 @@
       (if-let [nm (:name el)]
         (assoc acc nm (:path el))
         acc))
-    {}
-    els))
+    {} els))
 
 (def nameRefs
   (mreduce
@@ -105,8 +101,7 @@
           get-elems
           process-elems
           expand-poly-types
-          find-names
-          ))
+          find-names))
     profiles))
 
 (def idx
@@ -146,3 +141,4 @@
 (comment
   (find-meta [:Bundle :entry :resource])
   (find-meta [:Resource]))
+

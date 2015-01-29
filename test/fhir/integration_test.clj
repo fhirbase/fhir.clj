@@ -2,8 +2,6 @@
   (:require [clojure.test :refer :all]
             [me.raynes.fs :as fs]
             [clojure.data :as cd]
-            [clojure.string :as cstr]
-            [clojure.set :as cs]
             [fhir.utils :as fu]
             [fhir.format :as ff]))
 
@@ -17,7 +15,6 @@
 (deftest integration-test
   (doseq  [f (fs/glob "test/fixtures/xml/*.xml")]
     (let [json-file (str "test/fixtures/json/" (fs/base-name f ".xml") ".json")]
-      (println json-file)
       (if (fs/exists? json-file)
         (let [from-xml (-> (ff/from-xml (slurp (.getAbsolutePath f)))
                            (dissoc :text))

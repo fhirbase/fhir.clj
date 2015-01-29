@@ -5,79 +5,20 @@
             [fhir.profiles :as fp]
             [fhir.utils :as fu]
             [clojure.edn :as ce]
-            [clojure.stacktrace :as cs]
-            [clojure.string :as cstr]
+            [clojure.string :as cs]
             [cheshire.core :as json]
             [clojure.zip :as cz]))
 
-(defn parse [st])
 
-(defn stream [s]
-  (java.io.ByteArrayInputStream. (.getBytes s)))
-
-(defn xml-resource-tag [res cnt]
-  (let [res-nm (:resourceType res)]
-    (apply xml/element res-nm
-           {:xmlns "http://hl7.org/fhir"}
-           cnt)))
-
-(declare xml-resource-content)
-
-(defn xml-element-tag [-key -meta -val]
-  (cond
-    (map? -val)
-    (do
-      (apply xml/element -key {} (xml-resource-content -val)))
-    :else
-    (xml/element -key {:value -val})))
-
-(defn sort-by-ord [[k [m v]]]
+(defn by-ord [[k [m v]]]
   (or (get-in m [:$attrs :ord]) (:ord m)))
 
 (defn remove-empty [[k [m v]]]
   (not (nil? v)))
 
-(defn xml-resource-content [el]
-  (->>
-    (filter remove-empty el)
-    (sort-by sort-by-ord )
-    (reduce (fn [acc [k [m v]]]
-              (if (vector? v)
-                (into
-                  acc (mapv (fn [v]  (xml-element-tag k m v)) v))
-                (conj
-                  acc (xml-element-tag k m v)))) [])
-    (filter identity)))
-
-;; hack to fix
-(defn emit-xml [e & {:as opts}]
-  (let  [^java.io.StringWriter sw (java.io.StringWriter.)
-         ^javax.xml.stream.XMLStreamWriter writer  (-> (javax.xml.stream.XMLOutputFactory/newInstance)
-                                                       (.createXMLStreamWriter sw))]
-    (when  (instance? java.io.OutputStreamWriter stream)
-      (xml/check-stream-encoding stream  (or  (:encoding opts) "UTF-8")))
-    (doseq  [event  (xml/flatten-elements  [e])]
-      (xml/emit-event event writer))
-    (.writeEndDocument writer)
-    (.toString sw)))
-
-
-(defn parse-xml [s]
-  (-> (cstr/replace s #"&nbsp;" "&#160;")
-      (cstr/replace #"&(trade|copy|sect|reg);" "$1")
-      (xml/parse-str)))
-
-
-(cstr/replace "&aa;" #"&(aa);" "$1")
-(defn gen-xml [e]
-  (emit-xml e))
-
+;;TODO: remove used?
 (defn normalize-string [s]
-  (cstr/replace s #"\s" " "))
-
-(defn to-html-str [xml]
-  (gen-xml
-    (assoc-in xml [:attrs :xmlns] "http://www.w3.org/1999/xhtml")))
+  (cs/replace s #"\s" " "))
 
 (defn coerce-primitive [-meta value]
   (if-let [tp (get-in -meta [:$attrs :type 0])]
@@ -86,21 +27,13 @@
         (= tp :boolean) (ce/read-string value)
         (= tp :integer) (int (ce/read-string value))
         (= tp :decimal) (ce/read-string value)
-        (= tp :string) (normalize-string value)
+        ;;(= tp :string)  (normalize-string value)
         :else value)
       value)
     value))
 
 (defn is-collection? [-meta]
   (= "*" (get-in -meta [:$attrs :max])))
-
-
-
-(fu/TODO "too much trnasformations")
-(defn normalize-xml [s]
-  (when s
-    (-> (parse-xml s)
-        (to-html-str))))
 
 (declare coerce-resource)
 
@@ -109,7 +42,7 @@
         mult  (is-collection? -meta)]
     (cond
       ;; normalize xml string for equality
-      (= (last pth) :div) (normalize-xml v)
+      (= (last pth) :div) (fu/normalize-xml-str v)
       ;; fix collections
       (and mult (not (vector? v))) [(coerce-resource v pth)]
       :else (coerce-resource v pth))))
@@ -138,7 +71,7 @@
         (cond
           ;; fix text html
           (= (:tag node) :div)
-          (assoc acc :div (to-html-str node))
+          (assoc acc :div (fu/emit-html node))
 
           ;; handle bundle nested resources
           (is-resource-key? (:tag node))
@@ -166,21 +99,54 @@
                            :else [v value]))))))
       (reduce {} content)))
 
+(defn xml-resource-tag [res cnt]
+  (let [res-nm (:resourceType res)]
+    (apply xml/element res-nm
+           {:xmlns "http://hl7.org/fhir"}
+           cnt)))
+
+(declare xml-resource-content)
+
+(defn xml-element-tag [-key -meta -val]
+  (cond
+    (map? -val) (apply xml/element -key {}
+                       (xml-resource-content -val))
+    :else       (xml/element -key {:value -val})))
+
+(defn xml-resource-content [el]
+  (->>
+    (filter remove-empty el)
+    (sort-by by-ord )
+    (reduce (fn [acc [k [m v]]]
+              (if (vector? v)
+                (into
+                  acc (mapv (fn [v]  (xml-element-tag k m v)) v))
+                (conj
+                  acc (xml-element-tag k m v)))) [])
+    (filter identity)))
 
 ;;; PUBLIC API
 
-(defn to-json [res]
-  (json/generate-string res))
-
 (defn from-json [s]
-  (-> (json/parse-string s keyword)
+  {:pre (string? s)}
+  (-> (fu/from-json s)
       (coerce-resource)))
 
 (defn from-xml [s]
-  (let [xml (parse-xml s)
+  {:pre (string? s)}
+  (let [xml (fu/parse-xml s)
         res-nm (:tag xml)
         res    (from-xml-recur (:content xml))]
     (coerce-resource (assoc res :resourceType (name res-nm)))))
+
+(defn parse [fmt s]
+  {:pre (contains? #{:json :xml} fmt)}
+  (cond
+    (= fmt :xml) (from-xml s)
+    (= fmt :json) (from-json s)))
+
+(defn to-json [res]
+  (fu/to-json res))
 
 ;; could this be done without zip meta
 (defn to-xml [res]
@@ -188,4 +154,10 @@
         zres (fc/zip-meta res)
         content (xml-resource-content (get-in zres [(keyword res-nm)]))
         xml-data  (xml-resource-tag res content)]
-    (gen-xml xml-data)))
+    (fu/emit-xml xml-data)))
+
+(defn generate [fmt res]
+  {:pre (contains? #{:json :xml} fmt)}
+  (cond
+    (= fmt :xml) (to-xml res)
+    (= fmt :json) (to-json res)))

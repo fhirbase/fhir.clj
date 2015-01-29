@@ -1,8 +1,6 @@
 (ns fhir.format-test
   (:require [clojure.test :refer :all]
             [fhir.utils :as fu]
-            [fhir.core :as fc]
-            [clojure.data :as cd]
             [fhir.format :as ff]))
 
 (def pt {:resourceType "Patient"
@@ -19,15 +17,15 @@
 (def pt-xml (slurp "test/fixtures/pt.xml"))
 
 (deftest text-to-xml
-  (is (= (ff/parse-xml (ff/to-xml pt))
-         (ff/parse-xml pt-xml))))
+  (is (= (fu/parse-xml (ff/to-xml pt))
+         (fu/parse-xml pt-xml))))
 
 (def pt2 (ff/from-json (slurp "test/fixtures/patient-example-f001-pieter.json")))
 (def pt2-xml (slurp "test/fixtures/patient-example-f001-pieter.xml"))
 
 (deftest to-xml
-  (is (= (ff/parse-xml (ff/to-xml pt2))
-         (ff/parse-xml pt2-xml))))
+  (is (= (fu/parse-xml (ff/to-xml pt2))
+         (fu/parse-xml pt2-xml))))
 
 (deftest from-xml
   (is (= pt2 (ff/from-xml pt2-xml))))
@@ -35,10 +33,7 @@
 ;; just test for &nbsp
 
 (deftest test-npsp-problem
-  (is (try-expr "ups"
-                (ff/parse-xml "<div>&amp; &nbsp; &trade;</div>")
-
-                )))
+  (is (fu/parse-xml "<div>&amp; &nbsp; &trade;</div>")))
 
 (def bndl (ff/from-xml "<Bundle xmlns=\"http://hl7.org/fhir\"> <entry> <resource> <MedicationPrescription> <id value=\"3123\"/> </MedicationPrescription> </resource> </entry> </Bundle>"))
 
@@ -49,7 +44,7 @@
 
 (deftest xml-parse-gen-test
   (let [s "<div>&amp;</div>"]
-    (is (= (ff/emit-xml (ff/parse-xml s))
+    (is (= (fu/emit-xml (fu/parse-xml s))
            s))))
 
 
@@ -64,13 +59,6 @@
   (is (= bndl-json bndl-xml)))
 
 (comment
-  (cd/diff
-    (ff/parse-xml (ff/to-xml pt2))
-    (ff/parse-xml pt2-xml))
-  (cd/diff
-    pt2 (ff/from-xml pt2-xml))
   (ff/from-xml pt2-xml)
   (spit "/tmp/ups.xml" (ff/to-xml pt2))
-  (get-in (fc/zip-meta pt2) [:Patient :maritalStatus])
-  (get-in (fc/zip-meta pt2) [:Patient :gender])
   (println (ff/to-xml pt)))
