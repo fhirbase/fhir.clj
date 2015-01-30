@@ -51,7 +51,7 @@
   ([idx res]
    (if-let [res-nm (:resourceType res)]
      (coerce-resource idx res [(keyword res-nm)])
-     (println "WARN: Ups enter coerce-resource without resourceType")))
+     (throw (Exception. "WARN: Ups enter coerce-resource without resourceType"))))
   ([idx res pth]
    (if (and (:resourceType res) (not= pth [(keyword (:resourceType res))]))
      (coerce-resource idx res)
