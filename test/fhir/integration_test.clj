@@ -3,23 +3,29 @@
             [me.raynes.fs :as fs]
             [clojure.data :as cd]
             [fhir.utils :as fu]
+            [fhir.profiles :as fp]
             [fhir.format :as ff]))
+
+(def idx
+  (fp/index-profiles
+    (fu/read-json "profiles/profiles-resources.json")
+    (fu/read-json "profiles/profiles-types.json")))
 
 
 (deftest problems-with-name-refs
   (is (=
-       (dissoc (ff/from-json (slurp "test/fixtures/json/dateTime.profile.json")) :text)
-       (dissoc (ff/from-xml (slurp "test/fixtures/xml/dateTime.profile.xml")) :text))))
+       (ff/from-json idx (slurp "test/fixtures/json/dateTime.profile.json"))
+       (ff/from-xml idx (slurp "test/fixtures/xml/dateTime.profile.xml")))))
 
 
 (deftest integration-test
   (doseq  [f (fs/glob "test/fixtures/xml/*.xml")]
     (let [json-file (str "test/fixtures/json/" (fs/base-name f ".xml") ".json")]
       (if (fs/exists? json-file)
-        (let [from-xml (-> (ff/from-xml (slurp (.getAbsolutePath f)))
+        (let [from-xml (-> (ff/from-xml idx (slurp (.getAbsolutePath f)))
                            (dissoc :text))
-              from-json (-> (ff/from-json (slurp json-file))
+              from-json (-> (ff/from-json  idx (slurp json-file))
                             (dissoc :text))]
-          (if-not (= from-xml from-json)
-            (println json-file)
-            (fu/resources-diff from-xml from-json)))))))
+          (when-not (= from-xml from-json)
+            (println "json/xml are not equal" json-file)
+            #_(fu/resources-diff from-xml from-json)))))))

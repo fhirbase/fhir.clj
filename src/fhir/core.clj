@@ -1,41 +1,44 @@
 (ns fhir.core
   (:require
-    [clojure.set :as cset]
+    [fhir.format :as ff]
     [fhir.utils :as fu]
     [fhir.profiles :as fp]))
 
-(defn- reduce-recur
-  "walk resource recursively and collect accumulator by (f acc path value meta-info)"
-  [obj pth f acc]
-  (let [-meta (fp/find-meta pth)
-        acc (f acc pth obj -meta)
-        reduce-map #(reduce-recur (get obj %2) (conj pth %2) f %1)
-        reduce-vec #(reduce-recur %2 pth f %1)]
-    (cond
-      (map? obj)    (reduce reduce-map acc (fu/all-keys -meta obj))
-      (vector? obj) (reduce reduce-vec acc obj)
-      :else acc)))
+(def re-xml #"(?m)^<.*>")
+(def re-json #"(?m)^[{].*")
 
-(defn reduce-resource [obj f]
-  (let [init-pth [(keyword (:resourceType obj))]]
-    (reduce-recur (dissoc obj :resourceType) init-pth  f [])))
+(defn index? [x]
+  (map? x))
 
-(defn zip-meta-recur [obj pth]
-  (let [-meta (fp/find-meta pth)
-        -attrs (:$attrs -meta)
-        reduce-map (fn [acc k]
-                     (let [epth (conj pth k)
-                           v (get obj k)
-                           emeta (fp/find-meta epth)]
-                       (assoc acc k [emeta (zip-meta-recur v epth)])))]
-    (cond
-      (map? obj) (let [all-keys (fu/all-keys -meta obj)]
-                   (reduce reduce-map {} all-keys))
-      (vector? obj) (mapv #(zip-meta-recur % pth) obj)
-      :else obj)))
+(defn index
+  "prs - list of pathes to json profiles"
+  [& prs]
+  (->> (map (fn [pth] (fu/read-json pth)) prs)
+       (apply fp/index-profiles)))
 
-(defn zip-meta [obj]
-  (let [res-nm (keyword (:resourceType obj))
-        init-path [res-nm]
-        obj (dissoc obj :resourceType)]
-    {res-nm (zip-meta-recur obj init-path)}))
+(defn parse
+  ([idx x]
+   {:pre (fp/index? idx)}
+   (cond
+     (re-seq re-xml x) (parse idx :xml x)
+     (re-seq re-json x) (parse idx :json x)
+     :else (throw (Exception. "Don't know how to parse: " (pr-str x)))))
+  ([idx fmt s]
+   {:pre [(fp/index? idx)
+          (contains? #{:json :xml} fmt)]}
+   (cond
+     (= fmt :xml) (ff/from-xml idx s)
+     (= fmt :json) (ff/from-json idx s))))
+
+(defn resource [idx res]
+  {:pre [(fp/index? idx)
+         (map? res)]}
+  (ff/coerce-resource idx res))
+
+(defn generate [idx fmt res]
+  {:pre [(fp/index? idx)
+         (contains? #{:json :xml} fmt)
+         (map? res)]}
+  (cond
+    (= fmt :xml) (ff/to-xml idx res)
+    (= fmt :json) (ff/to-json idx res)))

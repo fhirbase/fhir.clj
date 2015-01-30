@@ -2,6 +2,7 @@
   (:require
     [clojure.string :as cs]
     [clojure.set :as cset]
+    [clojure.java.io :as io]
     [clojure.data.xml :as xml]
     [cheshire.core :as json]))
 
@@ -13,7 +14,8 @@
 ;;; json
 
 (defn read-json [pth]
-  (-> (slurp pth)
+  (-> (.getPath (io/resource pth))
+      (slurp)
       (json/parse-string  keyword)))
 
 (defn to-json [m]

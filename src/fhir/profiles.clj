@@ -3,9 +3,6 @@
     [clojure.string :as cs]
     [fhir.utils :as fu]))
 
-(def resources (fu/read-json "profiles/profiles-resources.json"))
-(def types     (fu/read-json "profiles/profiles-types.json"))
-
 (defn get-path [x]
   (->> (cs/split (:path x) #"\.")
        (mapv keyword)))
@@ -40,25 +37,20 @@
         prefix (first (cs/split nm #"\[x]" ))]
     (conj (apply vector (butlast (:path e))) (keyword (str prefix (fu/camelize (name tp)))))))
 
-(def all-datatype-codes
-  (mapv
-    #(keyword (get-in % [:resource :snapshot :element 0 :path]))
-    (:entry types)))
-
-(defn expand-types [e]
+(defn expand-types [types-list e]
   (let
     [types (:type e)
      types (if (= types [:*])
-             all-datatype-codes
+             types-list
              types)]
     (mapv
       (fn [tp] (merge e {:path (poly-fixed-path e tp) :type [tp]}))
       types)))
 
-(defn expand-poly-types [els]
+(defn expand-poly-types [types-list els]
   (reduce (fn [a e]
             (if (poly-type? e)
-              (concat a (expand-types e))
+              (concat a (expand-types types-list e))
               (conj a e)))
           [] els))
 
@@ -71,20 +63,10 @@
             mt  (merge (select-keys x [:min :max :type :ord :nameReference]) {:path pt})
             acc (update-in acc pt (fn [a]  (merge (or a {}) {:$attrs mt})))]
         (recur xs acc))
-      acc)))
+      (first (vals acc)))))
 
 (defn mreduce [f m]
   (reduce (fn [a [k v]] (assoc a k (f k v))) {} m))
-
-
-(def profiles
-  (-> (let [prfs (concat
-                   (:entry types)
-                   (:entry resources))]
-        (reduce
-          #(assoc %1 (get-res-name %2) (:resource %2))
-          {} prfs))
-      (dissoc nil)))
 
 (defn find-names [els]
   (reduce
@@ -94,51 +76,63 @@
         acc))
     {} els))
 
-(def nameRefs
-  (mreduce
-    (fn [k v]
-      (-> v
-          get-elems
-          process-elems
-          expand-poly-types
-          find-names))
-    profiles))
+(defn concat-prfs [profiles]
+  (mapcat :entry profiles))
 
-(def idx
-  (mreduce
-    (fn [k v]
-      (-> v
-          get-elems
-          process-elems
-          expand-poly-types
-          make-nested
-          (get k)))
-    profiles))
+(defn dd [xs] (println xs) xs)
+
+(defn index? [x]
+  (= (set (keys x)) #{:idx :nameRefs :types}))
+
+(defn index-profiles [& profiles]
+  (let [prfs (-> (reduce #(assoc %1 (get-res-name %2) (:resource %2)) {} (concat-prfs profiles))
+                 (dissoc nil))
+        ;;TODO get types from metadata
+        types-list    [:integer :dateTime :code :date :decimal :uri :id :base64Binary :time :oid :string :boolean :uuid :instant :Period :Coding :Range :Quantity :Attachment :Ratio
+                       :SampledData :Reference :CodeableConcept :Identifier :Extension :BackboneElement :Element :Narrative :ElementDefinition :Timing :Address :HumanName :ContactPoint :Quantity :Quantity :Quantity :Quantity :Quantity]]
+    {:idx      (mreduce
+                 (fn [k v]
+                   (->> v get-elems process-elems (expand-poly-types types-list) make-nested))
+                 prfs)
+
+     :nameRefs (mreduce
+                 (fn [k v]
+                   (->> v get-elems process-elems (expand-poly-types types-list) find-names))
+                 prfs)
+     :types types-list}))
+
 
 (defn- get-type [m]
   (get-in m [:$attrs :type 0]))
 
 (fu/TODO "Handle bundles")
 (defn find-meta
-  "Looking meta information from profiles for path"
-  [[y & ys]]
+  "Looking meta information from profiles for path
+  firt parameter is index built with (index-profiles profiles)"
+  [idx [y & ys]]
   (let [res-nm y]
-    (loop [[x & xs] ys obj (get idx y)]
+    (loop [[x & xs] ys obj (get-in idx [:idx y])]
       (cond
         ;;handle name ref
         (get-in obj [:$attrs :nameReference])
         (let [nm-ref  (get-in obj [:$attrs :nameReference])
-              ref-pth (get-in nameRefs [res-nm nm-ref])]
-          (find-meta (concat ref-pth [x] (or xs []))))
+              ref-pth (get-in idx [:nameRefs res-nm nm-ref])]
+          (find-meta idx (concat ref-pth [x] (or xs []))))
         ;; found
         (nil? x)  obj
         (and (map? obj) (contains? obj x)) (recur xs (get obj x))
         ;; if no next key look for type and switch to complex type search
-        (get-type obj) (find-meta (concat [(get-type obj) x] xs))
+        (get-type obj) (find-meta idx (concat [(get-type obj) x] xs))
         ;; meta information not found
         :else nil))))
 
 (comment
-  (find-meta [:Bundle :entry :resource])
-  (find-meta [:Resource]))
+  (def fidx
+    (index-profiles
+      (fu/read-json "profiles/profiles-resources.json")
+      (fu/read-json "profiles/profiles-types.json")))
+  (require '[clojure.tools.namespace.repl :as nst])
+  (nst/refresh)
 
+  (find-meta fidx [:Bundle :entry :resource])
+  (find-meta fidx [:Patient :name]))

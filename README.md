@@ -9,6 +9,7 @@ FHIR client implementation in clojure.
 
 ## Roadmap
 
+* not hardcoded profiles, could be added dynamicly
 * parse & serialize FHIR formats
 * validate resources against profiles
 * datatypes coersing (clj-time, ooid)
@@ -21,20 +22,26 @@ FHIR client implementation in clojure.
 
 (require '[fhir.core :as fhir])
 
+;; create profile index
+(def idx
+  (fc/index
+     "profiles/profiles-resources.json"
+     "profiles/profiles-types.json"))
+
 (def pt
-  (fhir/parse "
+  (fhir/parse idx "
    {\"resourceType\": \"Patient\",
     \"name\": [{\"text\":\"Smith\"}],
     \"active\": true}
   "))
 
-(fhir/validate pt)
+(fhir/validate idx pt)
 ;;=> [errors]
 
-(fhir/serialize pt :xml)
+(fhir/generate idx pt :xml)
 ;;=> <Patient> <name><text value="Smith"/></name><active value="true"></Patient>
 
-(fhir/resource {:resourceType "Patient" :name {:text "Smith" :family "Eric"}})
+(fhir/resource idx {:resourceType "Patient" :name {:text "Smith" :family "Eric"}})
 ;;=> {:resourceType "Patient" :name [{:text "Smith" :family ["Eric"]}]}
 
 ```

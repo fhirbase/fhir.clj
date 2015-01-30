@@ -1,7 +1,13 @@
 (ns fhir.format-test
   (:require [clojure.test :refer :all]
             [fhir.utils :as fu]
+            [fhir.profiles :as fp]
             [fhir.format :as ff]))
+
+(def idx
+  (fp/index-profiles
+    (fu/read-json "profiles/profiles-resources.json")
+    (fu/read-json "profiles/profiles-types.json")))
 
 (def pt {:resourceType "Patient"
          :id "myid"
@@ -17,25 +23,25 @@
 (def pt-xml (slurp "test/fixtures/pt.xml"))
 
 (deftest text-to-xml
-  (is (= (fu/parse-xml (ff/to-xml pt))
+  (is (= (fu/parse-xml (ff/to-xml idx pt))
          (fu/parse-xml pt-xml))))
 
-(def pt2 (ff/from-json (slurp "test/fixtures/patient-example-f001-pieter.json")))
+(def pt2 (ff/from-json idx (slurp "test/fixtures/patient-example-f001-pieter.json")))
 (def pt2-xml (slurp "test/fixtures/patient-example-f001-pieter.xml"))
 
 (deftest to-xml
-  (is (= (fu/parse-xml (ff/to-xml pt2))
+  (is (= (fu/parse-xml (ff/to-xml idx pt2))
          (fu/parse-xml pt2-xml))))
 
 (deftest from-xml
-  (is (= pt2 (ff/from-xml pt2-xml))))
+  (is (= pt2 (ff/from-xml idx pt2-xml))))
 
 ;; just test for &nbsp
 
 (deftest test-npsp-problem
   (is (fu/parse-xml "<div>&amp; &nbsp; &trade;</div>")))
 
-(def bndl (ff/from-xml "<Bundle xmlns=\"http://hl7.org/fhir\"> <entry> <resource> <MedicationPrescription> <id value=\"3123\"/> </MedicationPrescription> </resource> </entry> </Bundle>"))
+(def bndl (ff/from-xml idx "<Bundle xmlns=\"http://hl7.org/fhir\"> <entry> <resource> <MedicationPrescription> <id value=\"3123\"/> </MedicationPrescription> </resource> </entry> </Bundle>"))
 
 (deftest bundle-from-xml
   (is (= (get-in bndl [:entry 0 :resource :resourceType])
@@ -48,8 +54,8 @@
            s))))
 
 
-(def bndl-json (ff/from-json (slurp "test/fixtures/bundle-example.json")))
-(def bndl-xml  (ff/from-xml  (slurp "test/fixtures/bundle-example.xml")))
+(def bndl-json (ff/from-json idx (slurp "test/fixtures/bundle-example.json")))
+(def bndl-xml  (ff/from-xml  idx (slurp "test/fixtures/bundle-example.xml")))
 
 (fu/resources-diff bndl-json bndl-xml)
 

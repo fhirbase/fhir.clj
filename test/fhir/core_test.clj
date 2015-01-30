@@ -1,38 +1,18 @@
 (ns fhir.core-test
   (:require [clojure.test :refer :all]
-            [fhir.utils :as fu]
             [fhir.core :as fc]))
+(def idx
+  (fc/index
+     "profiles/profiles-resources.json"
+     "profiles/profiles-types.json"))
 
-(defn required? [mt]
-  (= (get-in mt [:$attrs :min]) 1))
+(deftest core-test
+  (def pt-json (fc/parse idx "{\"resourceType\": \"Patient\", \"name\":[{\"text\":\"Goga\"}]}"))
+  (def pt-xml (fc/parse idx "<Patient><name><text value=\"Goga\"/></name></Patient>"))
+  (def pt-clj (fc/resource idx {:resourceType "Patient" :name {:text "Goga"}}))
+  (is
+    (= pt-json pt-xml pt-clj))
 
-(def pt {:resourceType "Patient"
-         :name [{:text "Ups"}]
-         :unexpected "Hi"
-         :link [{}] })
-
-(defn validate [acc pth v mt]
-  (cond (nil? mt)             (conj acc [:unexpected-element pth v])
-        (and (nil? v)
-             (required? mt))  (conj acc [:missed-element pth])
-        :else  acc))
-
-(deftest reduce-resource
-  (testing "resource-reduce"
-    (is
-      (= 3 (count (fc/reduce-resource pt validate))))))
-
-(def ptm (fc/zip-meta {:resourceType "Patient" :name {:text "My name" :family ["a" "b"]}}))
-
-(deftest zip-meta
-  (testing "zip-meta"
-    (is
-      (is (= 27 (count (get-in ptm [:Patient])))))))
-
-(comment
-  ;;example
-  (def pt (fu/read-json "examples/pt.json"))
-  (fc/reduce-resource pt validate)
-  (def ptm (fc/zip-meta {:resourceType "Patient" :name {:text "My name" :family ["a" "b"]}}))
-  (sort-by #(:ord (first %))
-    (map (fn [[k [m v]]] [m v] ) (second (:Patient ptm)))))
+  (is
+    (= pt-json
+       (fc/parse idx (fc/generate idx :json pt-json)))))
