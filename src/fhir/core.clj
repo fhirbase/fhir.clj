@@ -2,6 +2,7 @@
   (:require
     [fhir.format :as ff]
     [fhir.utils :as fu]
+    [fhir.meta :as fm]
     [fhir.profiles :as fp]))
 
 (def re-xml #"(?m)^<.*>")
@@ -29,6 +30,12 @@
    (cond
      (= fmt :xml) (ff/from-xml idx s)
      (= fmt :json) (ff/from-json idx s))))
+
+(defn validate
+  "validate resource and return issues for OperationOutcomme"
+  ([idx res]
+   {:pre [(fp/index? idx) (map? res)]}
+   (fm/validate idx res)))
 
 (defn resource [idx res]
   {:pre [(fp/index? idx)

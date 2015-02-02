@@ -14,5 +14,9 @@
     (= pt-json pt-xml pt-clj))
 
   (is
+    (empty?
+      (fc/validate idx pt-clj)))
+
+  (is
     (= pt-json
        (fc/parse idx (fc/generate idx :json pt-json)))))

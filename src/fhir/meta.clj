@@ -1,6 +1,7 @@
 (ns fhir.meta
   (:require
     [clojure.set :as cset]
+    [clojure.string :as cstr]
     [fhir.utils :as fu]
     [fhir.profiles :as fp]))
 
@@ -39,3 +40,25 @@
         init-path [res-nm]
         obj (dissoc obj :resourceType)]
     {res-nm (zip-meta-recur idx obj init-path)}))
+
+(defn required? [mt]
+  (= (get-in mt [:$attrs :min]) 1))
+
+(defn pth-to-str [pth]
+  (cstr/join "." (map name pth)))
+
+(defn validate-fn [acc pth v mt]
+  (cond (nil? mt)             (conj acc {:severity "warning"
+                                         :type {:system "http://hl7.org/fhir/issue-type" :code "structure"}
+                                         :details "Unexpected element"
+                                         :location (pth-to-str pth)})
+        (and (nil? v)
+             (required? mt))  (conj acc
+                                    {:severity "error"
+                                     :type {:system "http://hl7.org/fhir/issue-type" :code "required"}
+                                     :details "Missed element"
+                                     :location (pth-to-str pth) })
+        :else  acc))
+
+(defn validate [idx res]
+  (reduce-resource idx res validate-fn))

@@ -36,7 +36,7 @@ FHIR client implementation in clojure.
   "))
 
 (fhir/validate idx pt)
-;;=> [errors]
+;;=> collection of OperationOutcome.issue
 
 (fhir/generate idx pt :xml)
 ;;=> <Patient> <name><text value="Smith"/></name><active value="true"></Patient>
