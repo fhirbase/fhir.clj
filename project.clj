@@ -9,6 +9,7 @@
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [org.clojure/tools.namespace "0.2.8"]
                  [clj-time "0.9.0"]
+                 [http-kit "2.1.16"]
                  ;;[org.apache.commons/commons-lang3 "3.0"]
                  [me.raynes/fs "1.4.6"]
                  [org.clojure/data.xml "0.0.8"]
