@@ -1,4 +1,4 @@
-(defproject fhir "0.1.0-SNAPSHOT"
+(defproject fhir "0.1.1"
   :description "FHIR client in clojure"
   :url "https://github.com/fhirbase/fhir.clj"
   :license {:name "Eclipse Public License"
