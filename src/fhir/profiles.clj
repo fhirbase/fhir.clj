@@ -122,7 +122,8 @@
         (nil? x)  obj
         (and (map? obj) (contains? obj x)) (recur xs (get obj x))
         ;; if no next key look for type and switch to complex type search
-        (get-type obj) (find-meta idx (concat [(get-type obj) x] xs))
+        (let [tp (get-type obj)] ;; guard from stack overflow
+          (and tp (not= tp res-nm))) (find-meta idx (concat [(get-type obj) x] xs))
         ;; meta information not found
         :else nil))))
 

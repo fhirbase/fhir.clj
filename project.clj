@@ -1,9 +1,10 @@
-(defproject fhir "0.1.0-SNAPSHOT"
+(defproject fhir "0.1.1"
   :description "FHIR client in clojure"
   :url "https://github.com/fhirbase/fhir.clj"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :resource-paths ["resources"]
+  :repositories  [["clojars"  {:url "https://clojars.org/repo" :sign-releases false}]]
   :plugins  [[lein-cljfmt "0.1.3"]
              [jonase/eastwood "0.2.1"]]
   :dependencies [[org.clojure/clojure "1.6.0"]
