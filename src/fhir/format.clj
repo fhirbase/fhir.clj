@@ -44,6 +44,7 @@
       ;; normalize xml string for equality
       (= (last pth) :div) (fu/normalize-xml-str v)
       ;; fix collections
+      (and mult (nil? v)) []
       (and mult (not (vector? v))) [(coerce-resource idx v pth)]
       :else (coerce-resource idx v pth))))
 
