@@ -14,7 +14,7 @@
 ;;; json
 
 (defn read-json [pth]
-  (-> (.getPath (io/resource pth))
+  (-> (io/resource pth)
       (slurp)
       (json/parse-string  keyword)))
 
